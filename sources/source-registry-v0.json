@@ -1,0 +1,167 @@
+{
+  "registry_id": "source-registry-v0",
+  "date": "2026-04-11",
+  "scope": "public source anchors for Curing Blood Cancer artifacts",
+  "records": [
+    {
+      "source_id": "acs_blood_cancer_overview",
+      "owner": "American Cancer Society",
+      "source_type": "public overview",
+      "url": "https://www.cancer.org/cancer/types/blood-cancer.html",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["leukemia", "lymphoma", "myeloma"],
+      "claim_uses": ["overview"],
+      "claim_limits": ["Not a treatment guideline, trial registry, or primary evidence source."]
+    },
+    {
+      "source_id": "nci_pdq_myeloma_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["plasma-cell neoplasms", "multiple myeloma"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Not a formal guideline or patient-specific recommendation."]
+    },
+    {
+      "source_id": "nci_pdq_aml_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/leukemia/hp/adult-aml-treatment-pdq",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["adult acute myeloid leukemia"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Not a formal guideline or patient-specific recommendation."]
+    },
+    {
+      "source_id": "nci_pdq_all_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/leukemia/hp/adult-all-treatment-pdq",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["adult acute lymphoblastic leukemia"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Not a formal guideline or patient-specific recommendation."]
+    },
+    {
+      "source_id": "nci_pdq_cll_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/leukemia/hp/cll-treatment-pdq",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["chronic lymphocytic leukemia"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Not a formal guideline or patient-specific recommendation."]
+    },
+    {
+      "source_id": "nci_pdq_cml_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/leukemia/hp/cml-treatment-pdq",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["chronic myeloid leukemia"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Not a formal guideline or patient-specific recommendation."]
+    },
+    {
+      "source_id": "nci_pdq_hodgkin_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/lymphoma/hp/adult-hodgkin-treatment-pdq",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["adult Hodgkin lymphoma"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Not a formal guideline or patient-specific recommendation."]
+    },
+    {
+      "source_id": "nci_pdq_nhl_indolent_b_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/lymphoma/hp/indolent-b-cell-lymphoma-treatment-pdq",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["indolent B-cell non-Hodgkin lymphoma"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Does not cover every NHL subtype by itself."]
+    },
+    {
+      "source_id": "nci_pdq_nhl_aggressive_b_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/lymphoma/hp/aggressive-b-cell-lymphoma-treatment-pdq",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["aggressive B-cell non-Hodgkin lymphoma"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Does not cover every NHL subtype by itself."]
+    },
+    {
+      "source_id": "nci_pdq_nhl_peripheral_t_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/lymphoma/hp/peripheral-t-cell-lymphoma-pdq",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["peripheral T-cell non-Hodgkin lymphoma"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Does not cover every NHL subtype by itself."]
+    },
+    {
+      "source_id": "nci_pdq_mds_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/myeloproliferative/hp/myelodysplastic-treatment-pdq",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["myelodysplastic syndromes"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Not a formal guideline or patient-specific recommendation."]
+    },
+    {
+      "source_id": "nci_pdq_mpn_hp",
+      "owner": "National Cancer Institute",
+      "source_type": "health-professional PDQ summary",
+      "url": "https://www.cancer.gov/types/myeloproliferative/hp/myeloproliferative-neoplasms-treatment",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["myeloproliferative neoplasms"],
+      "claim_uses": ["clinical-summary"],
+      "claim_limits": ["Not a formal guideline or patient-specific recommendation."]
+    },
+    {
+      "source_id": "clinicaltrials_gov",
+      "owner": "U.S. National Library of Medicine",
+      "source_type": "trial registry",
+      "url": "https://clinicaltrials.gov/",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["all registered blood-cancer studies"],
+      "claim_uses": ["trial-search"],
+      "claim_limits": ["Trial listings do not prove availability, eligibility, safety, or efficacy."]
+    },
+    {
+      "source_id": "pubmed",
+      "owner": "U.S. National Library of Medicine",
+      "source_type": "literature index",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["all blood-cancer subtypes"],
+      "claim_uses": ["literature-search"],
+      "claim_limits": ["Indexing a paper does not validate study quality or clinical actionability."]
+    },
+    {
+      "source_id": "fda_drugs_at_fda",
+      "owner": "U.S. Food and Drug Administration",
+      "source_type": "regulatory database",
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["approved drugs and therapeutic biologics"],
+      "claim_uses": ["regulatory-status"],
+      "claim_limits": ["Approval status is not patient-specific appropriateness or comparative effectiveness."]
+    },
+    {
+      "source_id": "seer_cancer_stat_facts",
+      "owner": "National Cancer Institute SEER Program",
+      "source_type": "cancer statistics",
+      "url": "https://seer.cancer.gov/statfacts/",
+      "accessed": "2026-04-11",
+      "blood_cancer_scope": ["selected blood-cancer statistics pages"],
+      "claim_uses": ["statistics"],
+      "claim_limits": ["Population statistics do not predict individual outcome."]
+    }
+  ]
+}

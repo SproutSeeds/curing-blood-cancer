@@ -57,4 +57,5 @@ subtypes.
 - `governance/`: contribution, safety, and publication rules
 - `protocols/`: reusable research and review workflows
 - `schemas/`: structured data contracts
+- `sources/`: stable public source registries
 - `tools/`: scripts and tool prototypes

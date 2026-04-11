@@ -20,6 +20,9 @@ what public tooling can help more people contribute responsibly.
 
 ## Source Anchors
 
+Canonical source IDs for these and future artifacts live in
+[Source Registry v0](../sources/source-registry-v0.md).
+
 - American Cancer Society, blood-cancer overview:
   https://www.cancer.org/cancer/types/blood-cancer.html
 - NCI, plasma cell neoplasms / multiple myeloma PDQ:

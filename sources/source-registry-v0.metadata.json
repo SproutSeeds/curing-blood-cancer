@@ -1,0 +1,52 @@
+{
+  "artifact_id": "source-registry-v0",
+  "title": "Source Registry v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "leukemia",
+    "lymphoma",
+    "multiple myeloma and plasma-cell disorders",
+    "myelodysplastic syndromes",
+    "myeloproliferative neoplasms"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "American Cancer Society blood-cancer overview",
+      "url": "https://www.cancer.org/cancer/types/blood-cancer.html",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI PDQ cancer type health-professional summaries",
+      "url": "https://www.cancer.gov/types",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "Drugs@FDA",
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI SEER Cancer Stat Facts",
+      "url": "https://seer.cancer.gov/statfacts/",
+      "accessed": "2026-04-11"
+    }
+  ],
+  "limitations": [
+    "Public source registry, not medical advice.",
+    "Does not rank sources or replace appraisal of primary evidence.",
+    "Does not establish patient-specific actionability.",
+    "Requires periodic URL and update-date review."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/curing-blood-cancer-source-registry-v0.md"
+}
