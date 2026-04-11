@@ -1,13 +1,13 @@
-# Blood Cancer Public
+# Curing Blood Cancer
 
 ## Scope
 
-This file governs `/Volumes/Code_2TB/code/blood-cancer-public`.
+This file governs `/Volumes/Code_2TB/code/curing-blood-cancer`.
 
 ## Role
 
-This is the public downstream repo for sanitized blood-cancer artifacts from
-the private lab. It should be useful to the broader public, researchers,
+This is the public downstream repo for sanitized Curing Blood Cancer artifacts
+from the private lab. It should be useful to the broader public, researchers,
 patients, advocates, and builders.
 
 ## Boundary

@@ -1,16 +1,16 @@
-# Blood Cancer Public
+# Curing Blood Cancer
 
 Public artifacts for blood-cancer cure and vaccine discovery tooling.
 
 This repo exists to make complex biomedical evidence easier to inspect,
 combine, question, and reuse. It is the public downstream surface for work
-prepared in the private lab repo at `../blood-cancer-lab-private`.
+prepared in the private lab repo at `../curing-blood-cancer-lab`.
 
 ## Mission
 
-Build in public toward practical tools that help people define blood-cancer
-cure and vaccine hypotheses from transparent sources, structured data, and
-reproducible methods.
+Build in public toward practical tools that help people define, compare, and
+pursue blood-cancer cures and vaccines from transparent sources, structured
+data, and reproducible methods.
 
 ## What Belongs Here
 

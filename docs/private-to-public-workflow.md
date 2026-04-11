@@ -1,12 +1,12 @@
 # Private To Public Workflow
 
-The private blood-cancer lab repo is the upstream workspace. This repo is the
-public downstream surface.
+The private Curing Blood Cancer lab repo is the upstream workspace. This repo
+is the public downstream surface.
 
 ## Workflow
 
-1. Create or revise work in `../blood-cancer-lab-private`.
-2. Move candidate material into `../blood-cancer-lab-private/export-candidates/`.
+1. Create or revise work in `../curing-blood-cancer-lab`.
+2. Move candidate material into `../curing-blood-cancer-lab/export-candidates/`.
 3. Run the private publication gate.
 4. Rewrite the artifact so it stands alone publicly.
 5. Add provenance, blood-cancer subtype scope, and uncertainty.
