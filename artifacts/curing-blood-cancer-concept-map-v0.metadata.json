@@ -1,0 +1,77 @@
+{
+  "artifact_id": "curing-blood-cancer-concept-map-v0",
+  "title": "Curing Blood Cancer Concept Map v0",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "leukemia",
+    "lymphoma",
+    "multiple myeloma and plasma-cell disorders",
+    "myelodysplastic syndromes",
+    "myeloproliferative neoplasms"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "American Cancer Society blood-cancer overview",
+      "url": "https://www.cancer.org/cancer/types/blood-cancer.html",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI plasma cell neoplasms / multiple myeloma PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI adult acute myeloid leukemia PDQ",
+      "url": "https://www.cancer.gov/types/leukemia/hp/adult-aml-treatment-pdq",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI adult acute lymphoblastic leukemia PDQ",
+      "url": "https://www.cancer.gov/types/leukemia/hp/adult-all-treatment-pdq",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI chronic lymphocytic leukemia PDQ",
+      "url": "https://www.cancer.gov/types/leukemia/hp/cll-treatment-pdq",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI chronic myelogenous leukemia PDQ",
+      "url": "https://www.cancer.gov/types/leukemia/hp/cml-treatment-pdq",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI adult Hodgkin lymphoma PDQ",
+      "url": "https://www.cancer.gov/types/lymphoma/hp/adult-hodgkin-treatment-pdq",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI adult non-Hodgkin lymphoma PDQ",
+      "url": "https://www.cancer.gov/types/lymphoma/hp/adult-nhl-treatment-pdq",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI myelodysplastic syndromes PDQ",
+      "url": "https://www.cancer.gov/types/myeloproliferative/hp/myelodysplastic-treatment-pdq",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "NCI chronic myeloproliferative neoplasms PDQ",
+      "url": "https://www.cancer.gov/types/myeloproliferative/hp/myeloproliferative-neoplasms-treatment",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/",
+      "accessed": "2026-04-11"
+    }
+  ],
+  "limitations": [
+    "Public research scaffold, not medical advice.",
+    "Does not diagnose, rank treatments, or recommend trials.",
+    "Does not apply to any individual patient.",
+    "Needs expert review before use as an educational anchor."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/curing-blood-cancer-concept-map-v0.md"
+}
