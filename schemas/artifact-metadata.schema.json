@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/cure-lab/artifact-metadata.schema.json",
+  "title": "Cure Lab Artifact Metadata",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "title",
+    "artifact_class",
+    "claim_level",
+    "sources",
+    "limitations"
+  ],
+  "properties": {
+    "artifact_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "artifact_class": {
+      "type": "string",
+      "enum": ["note", "protocol", "schema", "dataset", "tool", "map"]
+    },
+    "disease_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "claim_level": {
+      "type": "string",
+      "enum": ["fact", "derived", "hypothesis", "open-question", "do-not-use-clinically"]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "url"],
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "accessed": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "private_upstream": {
+      "type": "string",
+      "description": "Optional non-sensitive pointer to the private upstream artifact."
+    }
+  },
+  "additionalProperties": false
+}
