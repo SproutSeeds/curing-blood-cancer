@@ -1,20 +1,20 @@
-# Cure Lab Public
+# Blood Cancer Public
 
-Public artifacts for cure and vaccine discovery tooling.
+Public artifacts for blood-cancer cure and vaccine discovery tooling.
 
 This repo exists to make complex biomedical evidence easier to inspect,
 combine, question, and reuse. It is the public downstream surface for work
-prepared in the private lab repo at `../cure-lab-private`.
+prepared in the private lab repo at `../blood-cancer-lab-private`.
 
 ## Mission
 
-Build in public toward practical tools that help people define cure and
-vaccine hypotheses from transparent sources, structured data, and reproducible
-methods.
+Build in public toward practical tools that help people define blood-cancer
+cure and vaccine hypotheses from transparent sources, structured data, and
+reproducible methods.
 
 ## What Belongs Here
 
-- source-backed disease and mechanism maps
+- source-backed blood-cancer subtype and mechanism maps
 - data provenance templates
 - evidence-level schemas
 - public-domain or redistributable derived datasets
@@ -32,11 +32,21 @@ methods.
 - patient-specific clinical recommendations
 - unsupported claims that a cure or vaccine has been found
 
-## First Domain
+## Disease Scope
 
-The first concrete testbed is blood cancer, beginning with multiple myeloma and
-related plasma-cell disorders. The tooling should generalize beyond one disease
-area over time.
+- leukemia
+- lymphoma
+- multiple myeloma and related plasma-cell disorders
+- myelodysplastic syndromes
+- myeloproliferative neoplasms
+- adjacent marrow, immune, and hematopoietic stem-cell biology when it informs
+  blood-cancer cure or vaccine work
+
+## First Focus
+
+The first concrete focus is multiple myeloma and related plasma-cell disorders,
+with artifacts designed so the public surface can expand across blood-cancer
+subtypes.
 
 ## Repository Map
 

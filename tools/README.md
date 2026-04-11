@@ -5,6 +5,7 @@ Public scripts, packages, and prototypes live here.
 Tools should favor:
 
 - transparent inputs
+- blood-cancer-specific scope
 - source provenance
 - reproducible transforms
 - readable outputs

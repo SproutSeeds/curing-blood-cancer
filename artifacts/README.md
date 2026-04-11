@@ -6,6 +6,7 @@ Each artifact should include:
 
 - purpose
 - audience
+- blood-cancer subtype scope
 - sources
 - limitations
 - claim labels

@@ -2,8 +2,8 @@
 
 ## Purpose
 
-Create a public, reusable way to organize blood-cancer cure/vaccine research
-questions without making patient-specific clinical recommendations.
+Create a public, reusable way to organize blood-cancer cure and vaccine
+research questions without making patient-specific clinical recommendations.
 
 ## First Pass
 
@@ -19,4 +19,4 @@ questions without making patient-specific clinical recommendations.
 - blood-cancer concept map
 - multiple-myeloma treatment-class taxonomy
 - clinical-trial query template
-- cure/vaccine claim evidence schema
+- blood-cancer cure/vaccine claim evidence schema
