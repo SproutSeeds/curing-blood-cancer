@@ -1,0 +1,33 @@
+{
+  "artifact_id": "clinicaltrials-gov-query-protocol-v0",
+  "title": "ClinicalTrials.gov Query Protocol v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "all blood-cancer subtypes"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "ClinicalTrials.gov Data API",
+      "url": "https://clinicaltrials.gov/data-api/about-api",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "ClinicalTrials.gov API version endpoint",
+      "url": "https://clinicaltrials.gov/api/v2/version",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "Public trial-search protocol, not medical advice.",
+    "Does not establish trial availability, eligibility, safety, or efficacy.",
+    "Search results can change as registry records are updated.",
+    "Requires manual review before use in public claims."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/clinicaltrials-gov-query-protocol-v0.md"
+}

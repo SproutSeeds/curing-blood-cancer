@@ -1,0 +1,51 @@
+{
+  "protocol_id": "clinicaltrials-gov-query-protocol-v0",
+  "date": "2026-04-14",
+  "scope": "blood-cancer trial discovery and provenance capture",
+  "source_ids": [
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2"
+  ],
+  "api": {
+    "studies_endpoint": "https://clinicaltrials.gov/api/v2/studies",
+    "version_endpoint": "https://clinicaltrials.gov/api/v2/version",
+    "verified_api_version": "2.0.5",
+    "verified_data_timestamp": "2026-04-13T13:00:05",
+    "verified_on": "2026-04-14"
+  },
+  "minimum_query_inputs": [
+    "condition",
+    "recruitment_status"
+  ],
+  "recommended_query_inputs": [
+    "intervention_or_class",
+    "location",
+    "source_taxonomy_class",
+    "intended_use"
+  ],
+  "recommended_api_parameters": [
+    "query.cond",
+    "query.intr",
+    "query.locn",
+    "filter.overallStatus",
+    "countTotal",
+    "pageSize"
+  ],
+  "status_policy": {
+    "RECRUITING": "Enrollment-discovery searches; still requires site verification.",
+    "NOT_YET_RECRUITING": "Near-future landscape searches; still requires site verification.",
+    "ACTIVE_NOT_RECRUITING": "Landscape or comparator searches, not enrollment discovery.",
+    "COMPLETED": "Evidence/history searches, not enrollment discovery.",
+    "TERMINATED": "Failure-mode or historical searches; record carefully.",
+    "WITHDRAWN": "Failure-mode or historical searches; record carefully.",
+    "SUSPENDED": "Failure-mode or historical searches; record carefully."
+  },
+  "limits": [
+    "A trial listing is not proof that a trial is open at a specific site.",
+    "A trial listing is not proof that a person is eligible.",
+    "A trial listing is not proof of safety or efficacy.",
+    "Search counts can change as ClinicalTrials.gov records are updated.",
+    "Query strings can miss studies that use different disease or intervention wording.",
+    "ClinicalTrials.gov is a registry, not a substitute for source-paper review or clinician judgment."
+  ]
+}

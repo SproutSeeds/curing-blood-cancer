@@ -1,0 +1,42 @@
+{
+  "query_record_id": "",
+  "protocol_id": "clinicaltrials-gov-query-protocol-v0",
+  "run_date": "",
+  "source_ids": [
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2"
+  ],
+  "intended_use": "enrollment-discovery | landscape-review | evidence-history | source-monitoring",
+  "blood_cancer_scope": [],
+  "taxonomy_class_ids": [],
+  "query_inputs": {
+    "condition": "",
+    "intervention_or_class": "",
+    "recruitment_status": [],
+    "location": "",
+    "age_group": "",
+    "phase": ""
+  },
+  "urls": {
+    "web_search_url": "",
+    "api_studies_url": "",
+    "api_version_url": "https://clinicaltrials.gov/api/v2/version"
+  },
+  "api_provenance": {
+    "api_version": "",
+    "data_timestamp": "",
+    "total_count": null,
+    "page_size": null
+  },
+  "review": {
+    "manual_reviewed": false,
+    "review_notes": [],
+    "known_misses_or_query_risks": [],
+    "limits": [
+      "Not medical advice.",
+      "Does not establish trial availability.",
+      "Does not establish eligibility.",
+      "Does not establish safety or efficacy."
+    ]
+  }
+}

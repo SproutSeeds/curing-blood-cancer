@@ -134,6 +134,16 @@
       "claim_limits": ["Trial listings do not prove availability, eligibility, safety, or efficacy."]
     },
     {
+      "source_id": "clinicaltrials_gov_api_v2",
+      "owner": "U.S. National Library of Medicine",
+      "source_type": "trial registry API",
+      "url": "https://clinicaltrials.gov/data-api/about-api",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["all registered blood-cancer studies"],
+      "claim_uses": ["trial-search", "data-reuse"],
+      "claim_limits": ["API output is a registry snapshot; trial details, status, eligibility, and site availability still require verification."]
+    },
+    {
       "source_id": "pubmed",
       "owner": "U.S. National Library of Medicine",
       "source_type": "literature index",

@@ -42,6 +42,7 @@ as a claim by itself.
 | `nci_pdq_mds_hp` | National Cancer Institute | health-professional PDQ summary | myelodysplastic syndromes | `clinical-summary` | Not a formal guideline or patient-specific recommendation. |
 | `nci_pdq_mpn_hp` | National Cancer Institute | health-professional PDQ summary | myeloproliferative neoplasms | `clinical-summary` | Not a formal guideline or patient-specific recommendation. |
 | `clinicaltrials_gov` | U.S. National Library of Medicine | trial registry | all blood-cancer subtypes with registered studies | `trial-search` | Trial listings do not prove availability, eligibility, safety, or efficacy. |
+| `clinicaltrials_gov_api_v2` | U.S. National Library of Medicine | trial registry API | all blood-cancer subtypes with registered studies | `trial-search`, `data-reuse` | API output is a registry snapshot; trial details, status, eligibility, and site availability still require verification. |
 | `pubmed` | U.S. National Library of Medicine | literature index | all blood-cancer subtypes | `literature-search` | Indexing a paper does not validate study quality or clinical actionability. |
 | `fda_drugs_at_fda` | U.S. Food and Drug Administration | regulatory database | approved drugs and therapeutic biologics | `regulatory-status` | Approval status is not patient-specific appropriateness or comparative effectiveness. |
 | `seer_cancer_stat_facts` | National Cancer Institute SEER Program | cancer statistics | selected blood-cancer statistics pages | `statistics` | Population statistics do not predict individual outcome. |
@@ -63,6 +64,7 @@ as a claim by itself.
 | `nci_pdq_mds_hp` | https://www.cancer.gov/types/myeloproliferative/hp/myelodysplastic-treatment-pdq | 2026-04-11 |
 | `nci_pdq_mpn_hp` | https://www.cancer.gov/types/myeloproliferative/hp/myeloproliferative-neoplasms-treatment | 2026-04-11 |
 | `clinicaltrials_gov` | https://clinicaltrials.gov/ | 2026-04-11 |
+| `clinicaltrials_gov_api_v2` | https://clinicaltrials.gov/data-api/about-api | 2026-04-14 |
 | `pubmed` | https://pubmed.ncbi.nlm.nih.gov/ | 2026-04-11 |
 | `fda_drugs_at_fda` | https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database | 2026-04-11 |
 | `seer_cancer_stat_facts` | https://seer.cancer.gov/statfacts/ | 2026-04-11 |
