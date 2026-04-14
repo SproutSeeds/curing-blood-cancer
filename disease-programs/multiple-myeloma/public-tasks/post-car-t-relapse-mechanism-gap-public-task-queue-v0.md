@@ -22,11 +22,11 @@ Coverage Report into contribution-ready public source-extraction tasks.
 
 ## Ready Tasks
 
-| Task ID | Priority | Status | Issue Form | Linked Gap | Mechanism Bucket |
+| Task ID | Priority | Status | GitHub Issue | Linked Gap | Mechanism Bucket |
 | --- | --- | --- | --- | --- | --- |
-| `car-t-fitness-second-source-extraction-task-v0` | high | ready | source extraction | `non-antigen-loss-relapse-buckets-gap-v0` | `car-t-fitness-exhaustion-persistence-v0` |
-| `plasma-cell-identity-first-extraction-task-v0` | high | ready | source extraction | `non-antigen-loss-relapse-buckets-gap-v0` | `plasma-cell-identity-or-lineage-state-escape-v0` |
-| `disease-burden-site-risk-context-first-extraction-task-v0` | medium | ready | source extraction | `non-antigen-loss-relapse-buckets-gap-v0` | `disease-burden-site-risk-context-v0` |
+| `car-t-fitness-second-source-extraction-task-v0` | high | ready | [#15](https://github.com/SproutSeeds/curing-blood-cancer/issues/15) | `non-antigen-loss-relapse-buckets-gap-v0` | `car-t-fitness-exhaustion-persistence-v0` |
+| `plasma-cell-identity-first-extraction-task-v0` | high | ready | [#14](https://github.com/SproutSeeds/curing-blood-cancer/issues/14) | `non-antigen-loss-relapse-buckets-gap-v0` | `plasma-cell-identity-or-lineage-state-escape-v0` |
+| `disease-burden-site-risk-context-first-extraction-task-v0` | medium | ready | [#16](https://github.com/SproutSeeds/curing-blood-cancer/issues/16) | `non-antigen-loss-relapse-buckets-gap-v0` | `disease-burden-site-risk-context-v0` |
 
 ## Issue Drafts
 
@@ -80,6 +80,5 @@ Candidate public source anchors:
 
 ## Next Work
 
-- Open or assign public issues from these task drafts.
-- Add one source-specific extraction at a time.
+- Work the linked public issues one source-specific extraction at a time.
 - Refresh the coverage report after each accepted extraction.

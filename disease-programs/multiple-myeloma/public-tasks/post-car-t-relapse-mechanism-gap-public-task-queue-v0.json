@@ -51,6 +51,7 @@
         "pubmed_yue_2025_bcma_resistance"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/car-t-fitness-second-source-extraction-task-v0.md",
+      "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/15",
       "public_deliverables": [
         "A source-specific mechanism extraction for a public source that maps CAR T fitness, exhaustion, expansion, or persistence signals to the existing mechanism group.",
         "A short note distinguishing review-level mechanism framing from source-specific extraction facts.",
@@ -104,6 +105,7 @@
         "pubmed_yue_2025_bcma_resistance"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/plasma-cell-identity-first-extraction-task-v0.md",
+      "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/14",
       "public_deliverables": [
         "A first source-specific extraction for plasma-cell identity, lineage-state escape, or target-linked phenotype change after anti-BCMA therapy.",
         "Explicit handling of peer-review status, model context, sample pairing, and measurement method.",
@@ -156,6 +158,7 @@
         "pubmed_tedder_bhutani_2025_bcma_resistance"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/disease-burden-site-risk-context-first-extraction-task-v0.md",
+      "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/16",
       "public_deliverables": [
         "A first public extraction that captures disease-burden, disease-site, high-risk, prior-therapy, and eligibility-context fields for relapse-mechanism interpretation.",
         "A field note separating context variables from direct biological relapse mechanisms.",
