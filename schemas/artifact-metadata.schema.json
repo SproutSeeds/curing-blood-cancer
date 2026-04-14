@@ -20,7 +20,7 @@
     },
     "artifact_class": {
       "type": "string",
-      "enum": ["note", "protocol", "schema", "dataset", "tool", "map"]
+      "enum": ["note", "protocol", "schema", "dataset", "tool", "map", "taxonomy"]
     },
     "blood_cancer_scope": {
       "type": "array",

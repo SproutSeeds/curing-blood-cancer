@@ -1,0 +1,39 @@
+{
+  "artifact_id": "multiple-myeloma-treatment-class-taxonomy-v0",
+  "title": "Multiple Myeloma Treatment-Class Taxonomy v0",
+  "artifact_class": "taxonomy",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "NCI plasma cell neoplasms / multiple myeloma PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-13"
+    },
+    {
+      "label": "Drugs@FDA",
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database",
+      "accessed": "2026-04-13"
+    },
+    {
+      "label": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/",
+      "accessed": "2026-04-13"
+    },
+    {
+      "label": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "accessed": "2026-04-13"
+    }
+  ],
+  "limitations": [
+    "Public research taxonomy, not medical advice.",
+    "Does not sequence therapies or rank treatments.",
+    "Does not establish patient-specific actionability.",
+    "Regulatory and trial status can change and must be verified."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/multiple-myeloma-treatment-class-taxonomy-v0.md"
+}

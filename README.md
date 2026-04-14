@@ -58,4 +58,5 @@ subtypes.
 - `protocols/`: reusable research and review workflows
 - `schemas/`: structured data contracts
 - `sources/`: stable public source registries
+- `taxonomies/`: stable classification systems for artifacts and tools
 - `tools/`: scripts and tool prototypes

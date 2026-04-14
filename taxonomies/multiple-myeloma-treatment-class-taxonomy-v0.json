@@ -1,0 +1,188 @@
+{
+  "taxonomy_id": "multiple-myeloma-treatment-class-taxonomy-v0",
+  "date": "2026-04-13",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease"
+  ],
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "fda_drugs_at_fda",
+    "clinicaltrials_gov",
+    "pubmed"
+  ],
+  "classes": [
+    {
+      "class_id": "myeloma_class_proteasome_inhibitor",
+      "label": "Proteasome inhibitors",
+      "examples": ["bortezomib", "carfilzomib", "ixazomib"],
+      "organizing_logic": "Disrupt protein degradation stress pathways in myeloma cells.",
+      "cure_oriented_question": "Which combinations and disease states convert deep response into durable treatment-free control?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp", "fda_drugs_at_fda"],
+      "claim_limits": ["Class membership does not imply suitability, sequence, or superiority."]
+    },
+    {
+      "class_id": "myeloma_class_immunomodulatory_agent",
+      "label": "Immunomodulatory agents",
+      "examples": ["lenalidomide", "pomalidomide", "thalidomide"],
+      "organizing_logic": "Immune and tumor-microenvironment modulation with direct anti-myeloma effects.",
+      "cure_oriented_question": "Which maintenance or combination strategies suppress residual disease without unacceptable toxicity?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp", "fda_drugs_at_fda"],
+      "claim_limits": ["Examples are not recommendations and require regulatory/status checks."]
+    },
+    {
+      "class_id": "myeloma_class_corticosteroid",
+      "label": "Corticosteroids",
+      "examples": ["dexamethasone", "prednisone"],
+      "organizing_logic": "Broad anti-inflammatory and anti-myeloma effects; commonly used in combinations.",
+      "cure_oriented_question": "Can steroid exposure be reduced while preserving durable control in defined subgroups?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp"],
+      "claim_limits": ["Supportive/combinational role varies by regimen and patient context."]
+    },
+    {
+      "class_id": "myeloma_class_alkylator_or_cytotoxic",
+      "label": "Alkylators and cytotoxic chemotherapy",
+      "examples": ["melphalan", "cyclophosphamide", "doxorubicin-based regimens"],
+      "organizing_logic": "Direct cytotoxic damage to dividing or vulnerable malignant cells.",
+      "cure_oriented_question": "Where do older cytotoxic approaches remain essential relative to targeted and immune therapies?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp", "fda_drugs_at_fda"],
+      "claim_limits": ["Toxicity, transplant context, and patient fitness matter; not a sequence recommendation."]
+    },
+    {
+      "class_id": "myeloma_class_anti_cd38_antibody",
+      "label": "Anti-CD38 monoclonal antibodies",
+      "examples": ["daratumumab", "isatuximab"],
+      "organizing_logic": "Antibody targeting of CD38-expressing plasma cells with immune-mediated effects.",
+      "cure_oriented_question": "Which anti-CD38 combinations best deepen measurable residual disease negativity and durability?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp", "fda_drugs_at_fda"],
+      "claim_limits": ["Class target does not determine individual eligibility or comparative benefit."]
+    },
+    {
+      "class_id": "myeloma_class_other_monoclonal_antibody",
+      "label": "Other monoclonal antibodies",
+      "examples": ["elotuzumab"],
+      "organizing_logic": "Antibody approaches outside anti-CD38, such as immune-cell engagement through other targets.",
+      "cure_oriented_question": "Which non-CD38 antibody targets matter for relapse biology or combination design?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp", "fda_drugs_at_fda"],
+      "claim_limits": ["Non-exhaustive and target-specific; not all antibodies share mechanism or evidence."]
+    },
+    {
+      "class_id": "myeloma_class_bispecific_antibody",
+      "label": "Bispecific antibodies",
+      "examples": ["teclistamab", "elranatamab", "talquetamab"],
+      "organizing_logic": "Redirect T cells or other immune activity toward myeloma-associated targets such as BCMA or GPRC5D.",
+      "cure_oriented_question": "How can immune redirection produce durable control while managing relapse, antigen escape, infection risk, and T-cell fitness?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp", "fda_drugs_at_fda", "clinicaltrials_gov"],
+      "claim_limits": ["Trial and approval status must be checked by product, date, country, and disease state."]
+    },
+    {
+      "class_id": "myeloma_class_car_t_cell_therapy",
+      "label": "CAR T-cell therapy",
+      "examples": ["idecabtagene vicleucel", "ciltacabtagene autoleucel"],
+      "organizing_logic": "Patient T cells engineered to recognize myeloma-associated targets, commonly BCMA in current products.",
+      "cure_oriented_question": "What determines long-term remission after CAR T: target persistence, T-cell fitness, tumor burden, antigen escape, or consolidation?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp", "fda_drugs_at_fda", "clinicaltrials_gov"],
+      "claim_limits": ["Product-specific indications, safety monitoring, access, and eligibility vary."]
+    },
+    {
+      "class_id": "myeloma_class_antibody_drug_conjugate",
+      "label": "Antibody-drug conjugates",
+      "examples": ["belantamab mafodotin as a BCMA-directed example"],
+      "organizing_logic": "Antibody targeting paired with a cytotoxic payload.",
+      "cure_oriented_question": "Can targeted payload delivery be made durable and safe enough to complement cellular or bispecific approaches?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp", "fda_drugs_at_fda", "clinicaltrials_gov"],
+      "claim_limits": ["Regulatory status can change; always verify current approval and availability."]
+    },
+    {
+      "class_id": "myeloma_class_nuclear_export_inhibitor",
+      "label": "Nuclear export inhibitors",
+      "examples": ["selinexor"],
+      "organizing_logic": "Target nuclear export biology to alter cancer-cell survival programs.",
+      "cure_oriented_question": "Which molecular contexts predict benefit from nuclear export disruption?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp", "fda_drugs_at_fda"],
+      "claim_limits": ["Class is not broadly interchangeable with immune or proteasome strategies."]
+    },
+    {
+      "class_id": "myeloma_class_special_context_targeted_agent",
+      "label": "Special-context targeted agents",
+      "examples": ["venetoclax in biomarker-defined contexts"],
+      "organizing_logic": "Target a vulnerability in selected molecular contexts rather than all myeloma.",
+      "cure_oriented_question": "Can subtype-specific vulnerabilities create cure-like control for molecularly defined myeloma groups?",
+      "claim_label": ["derived", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp", "pubmed", "clinicaltrials_gov"],
+      "claim_limits": ["Biomarker context and regulatory status must be checked; not a general myeloma recommendation."]
+    },
+    {
+      "class_id": "myeloma_class_autologous_stem_cell_transplant",
+      "label": "Autologous stem-cell transplant strategy",
+      "examples": ["high-dose therapy followed by autologous stem-cell rescue"],
+      "organizing_logic": "Intensive consolidation strategy used in selected eligible patients.",
+      "cure_oriented_question": "Which patients need transplant for durable control, and which can reach similar durability through modern immune combinations?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp"],
+      "claim_limits": ["Eligibility and timing are clinical decisions, not taxonomy decisions."]
+    },
+    {
+      "class_id": "myeloma_class_radiation_local_control",
+      "label": "Radiation / local control",
+      "examples": ["radiation for selected plasmacytoma or symptomatic local disease contexts"],
+      "organizing_logic": "Local disease control rather than systemic myeloma eradication.",
+      "cure_oriented_question": "Where does local control intersect with systemic cure-oriented strategies?",
+      "claim_label": ["fact", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp"],
+      "claim_limits": ["Local therapy does not substitute for systemic disease assessment."]
+    },
+    {
+      "class_id": "myeloma_class_supportive_care_bone_renal_infection",
+      "label": "Supportive and complication-directed care",
+      "examples": ["bone-strengthening agents", "renal support", "infection prevention", "transfusion support"],
+      "organizing_logic": "Prevent or manage organ damage and treatment complications.",
+      "cure_oriented_question": "Which supportive-care improvements enable patients to safely receive curative-intent or durability-focused therapy?",
+      "claim_label": ["derived", "open-question"],
+      "source_ids": ["nci_pdq_myeloma_hp"],
+      "claim_limits": ["Supportive care is essential but is not itself a cure claim."]
+    },
+    {
+      "class_id": "myeloma_class_vaccine_or_immunoprevention_research",
+      "label": "Vaccine and immunoprevention research",
+      "examples": ["trial-specific vaccine or immune-priming approaches"],
+      "organizing_logic": "Research lane for training or reshaping immunity against myeloma-associated antigens or precursors.",
+      "cure_oriented_question": "Can vaccines prevent progression from precursor states or prevent relapse after deep response?",
+      "claim_label": ["hypothesis", "open-question"],
+      "source_ids": ["clinicaltrials_gov", "pubmed"],
+      "claim_limits": ["Research category only; not an established standard treatment class in this taxonomy."]
+    }
+  ],
+  "measurement_layers": [
+    {
+      "measurement_id": "myeloma_measure_mrd",
+      "label": "measurable residual disease",
+      "why_it_matters": "Cure-oriented claims need sensitive persistence/relapse measurements."
+    },
+    {
+      "measurement_id": "myeloma_measure_cytogenetics_molecular",
+      "label": "cytogenetics and molecular risk",
+      "why_it_matters": "Subgroups may differ in depth, durability, relapse pattern, and intervention fit."
+    },
+    {
+      "measurement_id": "myeloma_measure_organ_function",
+      "label": "renal, marrow, immune, bone, and infection status",
+      "why_it_matters": "Organ context shapes feasibility and safety of treatment strategies."
+    },
+    {
+      "measurement_id": "myeloma_measure_prior_exposure",
+      "label": "prior therapy exposure and resistance",
+      "why_it_matters": "Relapse biology and prior class exposure constrain future options and trial fit."
+    }
+  ]
+}
