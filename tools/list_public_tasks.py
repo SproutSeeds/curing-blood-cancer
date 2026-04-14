@@ -71,6 +71,8 @@ def print_text(records: list[tuple[Path, dict[str, Any]]], args: argparse.Namesp
             print(f"      issue_form: {task.get('suggested_issue_form', '')}")
             print(f"      linked_gaps: {', '.join(values(task, 'linked_gap_ids'))}")
             print(f"      issue_draft: {task.get('issue_draft_path', '')}")
+            if task.get("github_issue_url"):
+                print(f"      github_issue: {task.get('github_issue_url', '')}")
             print(f"      {task.get('task_title', '')}")
         print()
 

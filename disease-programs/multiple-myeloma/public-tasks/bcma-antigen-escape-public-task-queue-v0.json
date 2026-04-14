@@ -49,6 +49,7 @@
         "pubmed_antigen_escape_bcma_directed_2024"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/bcma-target-status-denominator-extraction-task-v0.md",
+      "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/4",
       "public_deliverables": [
         "A source extraction update or new extraction record that captures numerator, denominator, product, prior BCMA exposure, assay timing, and relapse state.",
         "A short note stating which frequency claims remain unsupported."
@@ -103,6 +104,7 @@
         "pubmed_di_meo_2025_sema4a_low_bcma"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/bcma-measurement-context-field-audit-task-v0.md",
+      "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/3",
       "public_deliverables": [
         "A list of required measurement-context fields for BCMA target-status and antigen-density extractions.",
         "A proposed schema or extraction-template update if new required fields are needed."
@@ -153,6 +155,7 @@
         "pubmed_di_meo_2025_sema4a_low_bcma"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/sema4a-translation-safety-extraction-task-v0.md",
+      "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/2",
       "public_deliverables": [
         "A revised or follow-on extraction separating tumor antigen density, normal-tissue reactivity, model context, clinical translation status, and trial-registry status.",
         "A clear statement of what clinical efficacy and safety claims remain unsupported."
@@ -205,6 +208,7 @@
         "pubmed_ledergor_2024_cd4_car_t_exhaustion"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/non-antigen-loss-bucket-coverage-task-v0.md",
+      "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/6",
       "public_deliverables": [
         "A mechanism-bucket coverage note or tool output that counts extraction records and signals by mechanism bucket.",
         "A list of candidate source records for under-covered non-antigen-loss buckets."
@@ -266,6 +270,7 @@
         "pubmed_ledergor_2024_cd4_car_t_exhaustion"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/bcma-claim-set-expert-review-task-v0.md",
+      "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/5",
       "public_deliverables": [
         "Expert review notes mapped to claim IDs, gap IDs, measurement terms, and source IDs.",
         "Proposed wording changes or status changes for claims that overreach."
