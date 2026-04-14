@@ -20,6 +20,7 @@ from urllib.parse import urlparse
 
 SKIP_SCHEMA_VALIDATION = {
     "schemas/evidence-claim-template-v0.json",
+    "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-extraction-template-v0.json",
 }
 
 
@@ -45,12 +46,15 @@ class Validator:
         source_ids = self.collect_source_ids()
         taxonomy_ids = self.collect_taxonomy_ids()
         query_record_ids = self.collect_query_record_ids()
+        mechanism_group_ids = self.collect_mechanism_group_ids()
 
         self.validate_evidence_claims()
+        self.validate_mechanism_extractions()
         self.validate_mechanism_maps()
         self.validate_opportunity_maps()
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
+        self.validate_mechanism_group_references(mechanism_group_ids)
         self.validate_query_record_references(query_record_ids)
         self.validate_query_records()
 
@@ -140,6 +144,27 @@ class Validator:
             ids.add(query_id)
         return ids
 
+    def collect_mechanism_group_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict):
+                continue
+            groups = doc.get("mechanism_groups")
+            if not isinstance(groups, list):
+                continue
+            for index, group in enumerate(groups):
+                if not isinstance(group, dict):
+                    self.add_error(path, f"mechanism_groups[{index}] must be an object")
+                    continue
+                mechanism_id = group.get("mechanism_id")
+                if not isinstance(mechanism_id, str) or not mechanism_id:
+                    self.add_error(path, f"mechanism_groups[{index}] missing mechanism_id")
+                    continue
+                if mechanism_id in ids:
+                    self.add_error(path, f"duplicate mechanism_id: {mechanism_id}")
+                ids.add(mechanism_id)
+        return ids
+
     def validate_evidence_claims(self) -> None:
         schema_path = self.root / "schemas" / "evidence-claim.schema.json"
         schema = self.json_docs.get(schema_path)
@@ -151,6 +176,43 @@ class Validator:
                 continue
             if isinstance(doc, dict) and {"claim_id", "claim_text"}.issubset(doc):
                 self.validate_against_schema(path, doc, schema)
+
+    def validate_mechanism_extractions(self) -> None:
+        schema_path = self.root / "schemas" / "mechanism-extraction.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if self.rel(path).as_posix() in SKIP_SCHEMA_VALIDATION:
+                continue
+            if not isinstance(doc, dict) or "extraction_record_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            extraction_id = doc.get("extraction_record_id")
+            if isinstance(extraction_id, str):
+                if extraction_id in seen_ids:
+                    self.add_error(path, f"duplicate extraction_record_id: {extraction_id}")
+                seen_ids.add(extraction_id)
+            self.validate_extraction_signal_ids(path, doc)
+
+    def validate_extraction_signal_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        signals = doc.get("extracted_signals")
+        if not isinstance(signals, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, signal in enumerate(signals):
+            if not isinstance(signal, dict):
+                continue
+            signal_id = signal.get("signal_id")
+            if not isinstance(signal_id, str):
+                continue
+            if signal_id in seen_ids:
+                self.add_error(path, f"extracted_signals[{index}] duplicate signal_id: {signal_id}")
+            seen_ids.add(signal_id)
 
     def validate_mechanism_maps(self) -> None:
         schema_path = self.root / "schemas" / "mechanism-map.schema.json"
@@ -259,6 +321,27 @@ class Validator:
                         self.add_error(path, f"{location} contains a non-string taxonomy id")
                     elif value not in known_ids:
                         self.add_error(path, f"{location} references unknown taxonomy class_id: {value}")
+
+    def validate_mechanism_group_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.rel(path).as_posix() in SKIP_SCHEMA_VALIDATION:
+                continue
+            if self.is_json_schema(doc):
+                continue
+            for location, values in self.find_key(doc, "mechanism_group_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string mechanism id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown mechanism_id: {value}")
+            for location, value in self.find_key(doc, "mechanism_group_id"):
+                if not isinstance(value, str):
+                    self.add_error(path, f"{location} must be a string")
+                elif value not in known_ids:
+                    self.add_error(path, f"{location} references unknown mechanism_id: {value}")
 
     def validate_query_record_references(self, known_ids: set[str]) -> None:
         for path, doc in self.json_docs.items():

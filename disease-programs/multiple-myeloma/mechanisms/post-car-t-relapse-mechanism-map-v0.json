@@ -215,6 +215,10 @@
   ],
   "next_artifacts": [
     {
+      "artifact_id": "post-car-t-relapse-extraction-guide-v0",
+      "purpose": "Explain how contributors convert papers and trial records into structured mechanism extractions."
+    },
+    {
       "artifact_id": "post-car-t-relapse-extraction-template-v0",
       "purpose": "Convert the mechanism buckets into a reusable extraction table for papers and trial records."
     },
@@ -237,4 +241,3 @@
     ]
   }
 }
-

@@ -1,0 +1,127 @@
+{
+  "extraction_record_id": "ledergor-2024-cd4-car-t-exhaustion-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "post-car-t-relapse-mechanism-map-v0",
+  "source_ids": [
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_car_t_cell_therapy"
+  ],
+  "mechanism_group_ids": [
+    "car-t-fitness-exhaustion-persistence-v0",
+    "measurement-and-follow-up-gaps-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed research article",
+    "title": "CD4+ CAR T-cell exhaustion associated with early relapse of multiple myeloma after BCMA CAR T-cell therapy.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
+    "doi": "10.1182/bloodadvances.2023012416",
+    "pmid": "38574299",
+    "accessed": "2026-04-14",
+    "publication_year": 2024,
+    "study_context": "Multiple myeloma after BCMA CAR T-cell therapy; PubMed abstract and metadata used for this v0 public extraction."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "car-t-persistence-durable-response-signal-v0",
+      "mechanism_group_id": "car-t-fitness-exhaustion-persistence-v0",
+      "signal_summary": "The source reports greater CAR T-cell persistence in patients with durable response than in patients with transient response.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "CAR T-cell persistence",
+        "response durability",
+        "transient versus durable clinical response group",
+        "time after infusion"
+      ],
+      "limitations": [
+        "This extraction uses public abstract and metadata, not full paper-level reanalysis.",
+        "Association does not establish persistence as the only or sufficient cause of durable response.",
+        "Product, patient, and disease-state details require full-text review."
+      ]
+    },
+    {
+      "signal_id": "cd4-cytotoxic-exhaustion-early-relapse-signal-v0",
+      "mechanism_group_id": "car-t-fitness-exhaustion-persistence-v0",
+      "signal_summary": "The source reports increased cytotoxic CD4+ CAR T cells with exhaustion markers in short-lived response contexts.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "CD4+ CAR T-cell frequency",
+        "cytotoxic CD4+ CAR T-cell phenotype",
+        "HAVCR2",
+        "TIGIT",
+        "early expansion after infusion",
+        "short-lived response"
+      ],
+      "limitations": [
+        "Marker association does not by itself prove causality.",
+        "The public extraction does not reproduce single-cell analyses.",
+        "The signal should be reviewed with full methods and cohort context."
+      ]
+    },
+    {
+      "signal_id": "myeloma-niche-monocyte-dysfunction-signal-v0",
+      "mechanism_group_id": "car-t-fitness-exhaustion-persistence-v0",
+      "signal_summary": "The source reports enrichment of nonclassical monocytes in the myeloma niche and proposes CAR T-cell dysfunction mechanisms involving transforming growth factor beta.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "nonclassical monocyte enrichment",
+        "myeloma niche context",
+        "transforming growth factor beta",
+        "CAR T-cell dysfunction"
+      ],
+      "limitations": [
+        "The v0 extraction records the proposed mechanism signal without quantifying effect size.",
+        "Microenvironment signals may interact with product, disease, and patient context.",
+        "Requires expert review before being used in educational summaries."
+      ]
+    },
+    {
+      "signal_id": "public-abstract-measurement-gap-signal-v0",
+      "mechanism_group_id": "measurement-and-follow-up-gaps-v0",
+      "signal_summary": "The public abstract exposes several measurement concepts but not enough detail to standardize extraction without full-text review.",
+      "evidence_level": "expert-review-needed",
+      "direction": "supports",
+      "measurement_fields": [
+        "cohort details",
+        "sampling time points",
+        "single-cell analysis methods",
+        "response definitions",
+        "relapse timing",
+        "product context"
+      ],
+      "limitations": [
+        "Public abstract and metadata are not enough for a complete structured evidence review.",
+        "Full text and methods are needed before quantitative comparison with other sources."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "CAR T-cell persistence and exhaustion-related T-cell states belong in the post-CAR T relapse mechanism extraction template.",
+      "Public extractions should capture immune-cell phenotype, persistence, and measurement timing fields.",
+      "Microenvironment-linked immune dysfunction should be tracked as a candidate signal under CAR T fitness and persistence until a dedicated bucket is warranted."
+    ],
+    "what_this_does_not_support": [
+      "It does not prove that CD4+ CAR T-cell exhaustion is the only relapse mechanism.",
+      "It does not estimate relapse frequency across all BCMA CAR T products.",
+      "It does not recommend treatment sequencing or trial selection.",
+      "It does not establish patient-specific prognosis."
+    ]
+  },
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from PubMed ESummary and EFetch metadata/abstract for PMID 38574299.",
+      "This example demonstrates extraction shape and should be expanded after full-text expert review."
+    ]
+  }
+}
+

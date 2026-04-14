@@ -1,0 +1,42 @@
+{
+  "extraction_record_id": "",
+  "date": "YYYY-MM-DD",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "post-car-t-relapse-mechanism-map-v0",
+  "source_ids": [],
+  "taxonomy_class_ids": [],
+  "mechanism_group_ids": [],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "",
+    "title": "",
+    "url": "",
+    "doi": "",
+    "pmid": "",
+    "accessed": "YYYY-MM-DD",
+    "publication_year": 0,
+    "study_context": ""
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "",
+      "mechanism_group_id": "",
+      "signal_summary": "",
+      "evidence_level": "source-summary",
+      "direction": "unclear",
+      "measurement_fields": [],
+      "limitations": []
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [],
+    "what_this_does_not_support": []
+  },
+  "review": {
+    "created": "YYYY-MM-DD",
+    "last_reviewed": "YYYY-MM-DD",
+    "review_status": "draft",
+    "review_notes": []
+  }
+}
+

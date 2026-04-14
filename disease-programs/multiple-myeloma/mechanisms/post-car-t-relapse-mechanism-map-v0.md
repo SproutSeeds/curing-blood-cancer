@@ -43,9 +43,10 @@ This map turns that problem into public extraction fields.
 
 ## Next Public Artifacts
 
-1. `post-car-t-relapse-extraction-template-v0`
-2. `bcma-antigen-escape-claim-set-v0`
-3. `mrd-and-relapse-measurement-glossary-v0`
+1. `post-car-t-relapse-extraction-guide-v0`
+2. `post-car-t-relapse-extraction-template-v0`
+3. `bcma-antigen-escape-claim-set-v0`
+4. `mrd-and-relapse-measurement-glossary-v0`
 
 ## Source Anchors
 
@@ -61,4 +62,3 @@ This v0 map uses the public source registry records:
 - `clinicaltrials_gov`
 - `clinicaltrials_gov_api_v2`
 - `fda_drugs_at_fda`
-

@@ -9,6 +9,7 @@ without weakening the repo's safety boundaries.
 
 - [Artifact Metadata Schema](./artifact-metadata.schema.json)
 - [Evidence Claim Schema v0](./evidence-claim.schema.json)
+- [Mechanism Extraction Schema](./mechanism-extraction.schema.json)
 - [Mechanism Map Schema](./mechanism-map.schema.json)
 - [Opportunity Map Schema](./opportunity-map.schema.json)
 

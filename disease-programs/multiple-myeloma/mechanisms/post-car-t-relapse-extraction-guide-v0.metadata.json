@@ -1,0 +1,32 @@
+{
+  "artifact_id": "post-car-t-relapse-extraction-guide-v0",
+  "title": "Post-CAR T Relapse Extraction Guide v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-targeted CAR T-cell therapy",
+    "post-CAR T relapse"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "Post-CAR T Relapse Mechanism Map v0",
+      "url": "post-car-t-relapse-mechanism-map-v0.md",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: CD4 CAR T exhaustion",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "Research workflow only.",
+    "Not medical advice.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Requires expert review before educational or clinical interpretation."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/post-car-t-relapse-extraction-template-v0.md"
+}
+
