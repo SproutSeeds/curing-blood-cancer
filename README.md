@@ -72,8 +72,9 @@ Run the public artifact validator:
 make validate
 ```
 
-The validator checks JSON parsing, evidence-claim schema conformance, source ID
-references, taxonomy ID references, and query-record links.
+The validator checks JSON parsing, evidence-claim schema conformance,
+mechanism maps, mechanism extractions, source ID references, taxonomy ID
+references, and query-record links.
 
 You can also call the validator directly:
 

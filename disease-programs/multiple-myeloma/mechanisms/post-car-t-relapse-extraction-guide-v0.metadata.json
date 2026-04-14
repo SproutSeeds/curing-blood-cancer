@@ -18,6 +18,21 @@
       "label": "PubMed literature anchor: CD4 CAR T exhaustion",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
       "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: BCMA antigen escape",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38728378/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: BCMA resistance review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40710330/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: SEMA4A / low BCMA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41072416/",
+      "accessed": "2026-04-14"
     }
   ],
   "limitations": [
@@ -29,4 +44,3 @@
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/post-car-t-relapse-extraction-template-v0.md"
 }
-

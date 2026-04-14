@@ -70,4 +70,6 @@ Before publishing an extraction, ask:
 
 - Template: `post-car-t-relapse-extraction-template-v0.json`
 - Example: `extractions/ledergor-2024-cd4-car-t-exhaustion-v0.json`
-
+- Example: `extractions/firestone-2024-bcma-antigen-escape-v0.json`
+- Example: `extractions/tedder-bhutani-2025-bcma-resistance-review-v0.json`
+- Example: `extractions/di-meo-2025-sema4a-low-bcma-v0.json`

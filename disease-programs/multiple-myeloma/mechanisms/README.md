@@ -21,3 +21,9 @@ Initial focus:
 - [Post-CAR T Relapse Extraction Guide v0](post-car-t-relapse-extraction-guide-v0.md)
 - [Extraction Template v0](post-car-t-relapse-extraction-template-v0.json)
 - [Example Extraction: Ledergor 2024](extractions/ledergor-2024-cd4-car-t-exhaustion-v0.json)
+
+List extraction signals by mechanism bucket:
+
+```bash
+make list-mechanism-extractions
+```
