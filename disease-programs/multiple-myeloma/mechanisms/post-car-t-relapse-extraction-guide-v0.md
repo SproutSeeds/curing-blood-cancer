@@ -54,6 +54,10 @@ Initial buckets:
   numerator, denominator, denominator basis, product context, prior target
   exposure, assay method, specimen source, assay timing, response or relapse
   state, and what frequency claims remain unsupported.
+- For alternate-target extraction records, separate tumor target density from
+  normal-tissue context, model context, preclinical activity, clinical
+  translation status, trial-registry or protocol context, and explicit
+  efficacy and safety claim boundaries.
 - Do not turn association into causation without explicit support.
 - Do not compare products unless the source was designed for that comparison.
 - Do not use an extraction as treatment, sequencing, trial, or eligibility

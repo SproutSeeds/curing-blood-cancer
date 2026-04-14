@@ -134,7 +134,7 @@
       "task_title": "Separate SEMA4A target biology from translation and safety evidence",
       "task_type": "source-extraction-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "alternate-target-clinical-translation-gap-v0"
@@ -166,11 +166,14 @@
       "acceptance_checks": [
         "Preclinical activity is not labeled as clinical efficacy.",
         "Normal-tissue reactivity is kept separate from tumor target density.",
-        "make validate passes."
+        "Trial-readiness claims include registry or protocol context when available.",
+        "make validate passes.",
+        "Completed in public follow-up PR for issue #2."
       ],
       "what_not_to_infer": [
         "Do not infer that SEMA4A-directed CAR T therapy works in patients.",
-        "Do not recommend alternate-target interventions."
+        "Do not recommend alternate-target interventions.",
+        "Do not establish clinical safety from preclinical or normal-tissue screening context."
       ],
       "safety_boundary": [
         "No patient-specific interpretation.",
