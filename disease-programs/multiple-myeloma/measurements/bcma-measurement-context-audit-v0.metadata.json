@@ -1,0 +1,34 @@
+{
+  "artifact_id": "bcma-measurement-context-audit-v0",
+  "title": "BCMA Measurement Context Audit v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-directed therapy",
+    "post-BCMA relapse",
+    "post-CAR T relapse",
+    "measurement context"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Firestone et al. 2024, Blood, PMID 38728378",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38728378/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "Di Meo et al. 2025, Cancer Cell, PMID 41072416",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41072416/",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "This audit flags measurement-context completeness; it does not judge clinical actionability.",
+    "Captured or partially captured context does not make a measurement sufficient for diagnosis, treatment selection, or trial selection.",
+    "The audit is based on current public extraction and claim artifacts plus public source records available on the stated date.",
+    "The Di Meo 2025 full methods were not extracted into this v0 public audit, so method details should be treated as incomplete unless verified from an accessible source.",
+    "The audit does not compare target-status or antigen-density results across studies.",
+    "The audit does not estimate BCMA antigen-loss or low-density frequency."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/bcma-measurement-context-audit-v0.md"
+}

@@ -1,0 +1,366 @@
+{
+  "audit_id": "bcma-measurement-context-audit-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "title": "BCMA Measurement Context Audit v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-directed therapy",
+    "post-BCMA relapse",
+    "post-CAR T relapse",
+    "measurement context"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_ids": [
+    "pubmed_antigen_escape_bcma_directed_2024",
+    "pubmed_di_meo_2025_sema4a_low_bcma"
+  ],
+  "claim_set_ids": [
+    "bcma-antigen-escape-claim-set-v0"
+  ],
+  "linked_claim_ids": [
+    "bcma-target-presence-should-be-extracted-v0",
+    "low-bcma-density-supports-alternate-target-research-tracking-v0"
+  ],
+  "extraction_record_ids": [
+    "firestone-2024-bcma-antigen-escape-v0",
+    "di-meo-2025-sema4a-low-bcma-v0"
+  ],
+  "extraction_signal_ids": [
+    "prior-bcma-therapy-target-loss-nonresponse-signal-v0",
+    "soluble-bcma-target-absence-measurement-signal-v0",
+    "low-bcma-post-car-t-relapse-target-need-signal-v0",
+    "sema4a-high-when-bcma-low-signal-v0"
+  ],
+  "measurement_term_ids": [
+    "bone-marrow-target-status",
+    "soluble-bcma",
+    "antigen-density",
+    "relapse-or-disease-progression"
+  ],
+  "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/3",
+  "required_fields": [
+    {
+      "field_id": "assay_method",
+      "field_label": "Assay method",
+      "why_required": "A target-status or antigen-density statement changes meaning when the assay platform, staining method, sequencing method, or quantitative method changes."
+    },
+    {
+      "field_id": "specimen_source",
+      "field_label": "Specimen source",
+      "why_required": "Bone marrow, plasmacytoma, blood, model, and normal-tissue measurements are not interchangeable."
+    },
+    {
+      "field_id": "threshold_or_scoring_method",
+      "field_label": "Threshold, scoring method, or detection limit",
+      "why_required": "Low, negative, absent, detectable, and molecules-per-cell statements need source-defined scoring or detection context before comparison."
+    },
+    {
+      "field_id": "timepoint_relative_to_therapy",
+      "field_label": "Time point relative to therapy",
+      "why_required": "Pre-treatment, relapse, progression, post-exposure, and paired samples support different interpretations."
+    },
+    {
+      "field_id": "paired_measurements",
+      "field_label": "Paired measurements",
+      "why_required": "A paired pre/post or blood/marrow context can support a different statement than an unpaired measurement."
+    },
+    {
+      "field_id": "relapse_or_progression_definition",
+      "field_label": "Relapse or progression definition",
+      "why_required": "A measurement near relapse or progression should preserve how the source defines that disease state."
+    },
+    {
+      "field_id": "missing_context_notes",
+      "field_label": "Missing-context notes",
+      "why_required": "Public artifacts should tell readers which context is absent before any later claim uses the measurement."
+    }
+  ],
+  "records": [
+    {
+      "audit_record_id": "firestone-target-loss-signal-measurement-context-v0",
+      "record_type": "extraction-signal",
+      "record_path": "disease-programs/multiple-myeloma/mechanisms/extractions/firestone-2024-bcma-antigen-escape-v0.json",
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "tnfrsf17-loss-is-trackable-escape-signal-v0"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "extraction_signal_ids": [
+        "prior-bcma-therapy-target-loss-nonresponse-signal-v0"
+      ],
+      "measurement_focus": [
+        "BCMA target loss before teclistamab",
+        "bone marrow or plasmacytoma BCMA expression",
+        "response state after teclistamab"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "relapse-or-disease-progression"
+      ],
+      "field_status": {
+        "assay_method": "captured",
+        "specimen_source": "captured",
+        "threshold_or_scoring_method": "partially-captured",
+        "timepoint_relative_to_therapy": "captured",
+        "paired_measurements": "captured",
+        "relapse_or_progression_definition": "partially-captured",
+        "missing_context_notes": "captured"
+      },
+      "missing_context_notes": [
+        "The v0 extraction captures immunohistochemistry, specimen source, pre-teclistamab timing, and paired pre-initial-BCMA-therapy context.",
+        "It does not preserve a detailed IHC scoring threshold, sample adequacy rule, or full response-assessment method.",
+        "It preserves 3 of 50 as source-cohort target-assessment denominator context, not as a general frequency estimate."
+      ],
+      "action_needed": [
+        "Keep denominator_context fields attached to target-status signals.",
+        "Do not compare this target-status signal to antigen-density signals without scoring and timing context."
+      ],
+      "does_not_support": [
+        "Does not recommend target testing, treatment selection, or sequencing.",
+        "Does not estimate BCMA loss frequency across all BCMA-directed therapy recipients."
+      ]
+    },
+    {
+      "audit_record_id": "firestone-soluble-bcma-signal-measurement-context-v0",
+      "record_type": "extraction-signal",
+      "record_path": "disease-programs/multiple-myeloma/mechanisms/extractions/firestone-2024-bcma-antigen-escape-v0.json",
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "extraction_signal_ids": [
+        "soluble-bcma-target-absence-measurement-signal-v0"
+      ],
+      "measurement_focus": [
+        "Peripheral blood soluble BCMA",
+        "paired marrow BCMA expression"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "measurement_term_ids": [
+        "soluble-bcma",
+        "bone-marrow-target-status"
+      ],
+      "field_status": {
+        "assay_method": "missing",
+        "specimen_source": "partially-captured",
+        "threshold_or_scoring_method": "missing",
+        "timepoint_relative_to_therapy": "partially-captured",
+        "paired_measurements": "captured",
+        "relapse_or_progression_definition": "missing",
+        "missing_context_notes": "captured"
+      },
+      "missing_context_notes": [
+        "The v0 extraction captures peripheral blood and marrow pairing but does not preserve the soluble-BCMA assay method, dilution, threshold, detection limit, or relapse/progression definition.",
+        "The measurement should remain candidate context rather than a standalone rule."
+      ],
+      "action_needed": [
+        "Add assay method, detection-limit, and timing fields before soluble BCMA is compared across sources.",
+        "Keep soluble BCMA separate from marrow target-status interpretation."
+      ],
+      "does_not_support": [
+        "Does not support patient-specific soluble-BCMA interpretation.",
+        "Does not support using soluble BCMA as a standalone diagnostic or treatment-selection rule."
+      ]
+    },
+    {
+      "audit_record_id": "di-meo-low-bcma-signal-measurement-context-v0",
+      "record_type": "extraction-signal",
+      "record_path": "disease-programs/multiple-myeloma/mechanisms/extractions/di-meo-2025-sema4a-low-bcma-v0.json",
+      "linked_claim_ids": [
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-sema4a-low-bcma-v0"
+      ],
+      "extraction_signal_ids": [
+        "low-bcma-post-car-t-relapse-target-need-signal-v0"
+      ],
+      "measurement_focus": [
+        "Low-to-negative BCMA expression after BCMA CAR T relapse",
+        "alternate-target research need"
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "measurement_term_ids": [
+        "antigen-density",
+        "relapse-or-disease-progression"
+      ],
+      "field_status": {
+        "assay_method": "missing",
+        "specimen_source": "missing",
+        "threshold_or_scoring_method": "missing",
+        "timepoint_relative_to_therapy": "partially-captured",
+        "paired_measurements": "missing",
+        "relapse_or_progression_definition": "partially-captured",
+        "missing_context_notes": "captured"
+      },
+      "missing_context_notes": [
+        "The v0 extraction captures post-BCMA CAR T relapse framing but not the assay method, specimen source, threshold, scoring method, paired measurement context, or source-defined relapse definition.",
+        "The v0 public audit uses the current public extraction and public source record, so method details remain incomplete unless verified from an accessible source."
+      ],
+      "action_needed": [
+        "Do not use this low-BCMA signal for cross-source comparison until assay and specimen context are extracted.",
+        "Separate low-BCMA target context from any claim about SEMA4A-directed intervention efficacy."
+      ],
+      "does_not_support": [
+        "Does not infer patient-level actionability from low BCMA expression.",
+        "Does not recommend alternate-target intervention."
+      ]
+    },
+    {
+      "audit_record_id": "di-meo-sema4a-density-signal-measurement-context-v0",
+      "record_type": "extraction-signal",
+      "record_path": "disease-programs/multiple-myeloma/mechanisms/extractions/di-meo-2025-sema4a-low-bcma-v0.json",
+      "linked_claim_ids": [
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-sema4a-low-bcma-v0"
+      ],
+      "extraction_signal_ids": [
+        "sema4a-high-when-bcma-low-signal-v0"
+      ],
+      "measurement_focus": [
+        "SEMA4A antigen density",
+        "BCMA antigen density",
+        "paired target-density comparison"
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "measurement_term_ids": [
+        "antigen-density"
+      ],
+      "field_status": {
+        "assay_method": "missing",
+        "specimen_source": "missing",
+        "threshold_or_scoring_method": "partially-captured",
+        "timepoint_relative_to_therapy": "partially-captured",
+        "paired_measurements": "partially-captured",
+        "relapse_or_progression_definition": "missing",
+        "missing_context_notes": "captured"
+      },
+      "missing_context_notes": [
+        "The v0 extraction captures molecules-per-cell and paired target-density comparison language but not the assay platform, specimen source, source-defined threshold, cohort denominator, or relapse/progression definition.",
+        "Target density and normal-tissue reactivity must stay separated from clinical efficacy or safety claims."
+      ],
+      "action_needed": [
+        "Extract assay platform, cohort denominator, specimen source, and normal-tissue comparison context before any structured comparison.",
+        "Keep translational/preclinical evidence level visible."
+      ],
+      "does_not_support": [
+        "Does not prove SEMA4A-directed CAR T therapy works in patients.",
+        "Does not establish clinical safety."
+      ]
+    },
+    {
+      "audit_record_id": "bcma-target-presence-claim-measurement-context-v0",
+      "record_type": "claim",
+      "record_path": "disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.json",
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "measurement_focus": [
+        "BCMA target presence claim",
+        "assay type and specimen context as required extraction fields"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "soluble-bcma",
+        "relapse-or-disease-progression"
+      ],
+      "field_status": {
+        "assay_method": "partially-captured",
+        "specimen_source": "partially-captured",
+        "threshold_or_scoring_method": "missing",
+        "timepoint_relative_to_therapy": "partially-captured",
+        "paired_measurements": "partially-captured",
+        "relapse_or_progression_definition": "missing",
+        "missing_context_notes": "captured"
+      },
+      "missing_context_notes": [
+        "The claim correctly says assay type, specimen context, and prior BCMA exposure should be extracted, but the claim text itself is not a full measurement record.",
+        "The linked extraction record must carry the detailed measurement context before the claim is reused."
+      ],
+      "action_needed": [
+        "Keep this claim tied to extraction records that preserve denominator and measurement context.",
+        "Do not let a measurement term alone stand in for assay and specimen detail."
+      ],
+      "does_not_support": [
+        "Does not support clinical target verification guidance.",
+        "Does not support selecting a BCMA-directed therapy."
+      ]
+    },
+    {
+      "audit_record_id": "low-bcma-density-claim-measurement-context-v0",
+      "record_type": "claim",
+      "record_path": "disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.json",
+      "linked_claim_ids": [
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-sema4a-low-bcma-v0"
+      ],
+      "measurement_focus": [
+        "Low BCMA density claim",
+        "alternate-target research tracking"
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "measurement_term_ids": [
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
+      ],
+      "field_status": {
+        "assay_method": "missing",
+        "specimen_source": "missing",
+        "threshold_or_scoring_method": "partially-captured",
+        "timepoint_relative_to_therapy": "partially-captured",
+        "paired_measurements": "missing",
+        "relapse_or_progression_definition": "missing",
+        "missing_context_notes": "captured"
+      },
+      "missing_context_notes": [
+        "The claim remains an open-question research-tracking claim and lacks full assay, specimen, threshold, paired-measurement, and relapse-definition context.",
+        "Normal-tissue reactivity and target density are linked measurement terms but do not establish clinical safety or efficacy."
+      ],
+      "action_needed": [
+        "Keep the claim at open-question status until source methods and translation status are extracted.",
+        "Do not compare SEMA4A and BCMA density across sources without assay context."
+      ],
+      "does_not_support": [
+        "Does not claim SEMA4A-directed CAR T works in patients.",
+        "Does not recommend testing, treatment, or trial participation."
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created for public issue #3.",
+      "Audits current public extraction and claim records for measurement-context completeness.",
+      "Does not convert measurement context into medical advice, product comparison, or frequency estimate."
+    ]
+  }
+}

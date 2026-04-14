@@ -49,6 +49,7 @@ class Validator:
         query_record_ids = self.collect_query_record_ids()
         mechanism_group_ids = self.collect_mechanism_group_ids()
         extraction_record_ids = self.collect_extraction_record_ids()
+        extraction_signal_ids = self.collect_extraction_signal_ids()
         measurement_term_ids = self.collect_measurement_term_ids()
         claim_set_ids = self.collect_claim_set_ids()
         claim_ids = self.collect_claim_ids()
@@ -61,6 +62,7 @@ class Validator:
         self.validate_evidence_gap_registers()
         self.validate_public_task_queues()
         self.validate_mechanism_extractions()
+        self.validate_measurement_context_audits()
         self.validate_measurement_glossaries()
         self.validate_mechanism_maps()
         self.validate_opportunity_maps()
@@ -68,6 +70,7 @@ class Validator:
         self.validate_taxonomy_references(taxonomy_ids)
         self.validate_mechanism_group_references(mechanism_group_ids)
         self.validate_extraction_record_references(extraction_record_ids)
+        self.validate_extraction_signal_references(extraction_signal_ids)
         self.validate_measurement_term_references(measurement_term_ids)
         self.validate_claim_set_references(claim_set_ids)
         self.validate_claim_references(claim_ids)
@@ -226,6 +229,32 @@ class Validator:
             if extraction_id in ids:
                 self.add_error(path, f"duplicate extraction_record_id: {extraction_id}")
             ids.add(extraction_id)
+        return ids
+
+    def collect_extraction_signal_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "extraction_record_id" not in doc:
+                continue
+            signals = doc.get("extracted_signals")
+            if not isinstance(signals, list):
+                continue
+            for index, signal in enumerate(signals):
+                if not isinstance(signal, dict):
+                    self.add_error(path, f"extracted_signals[{index}] must be an object")
+                    continue
+                signal_id = signal.get("signal_id")
+                if not signal_id:
+                    if path.name.endswith("template-v0.json"):
+                        continue
+                    self.add_error(path, f"extracted_signals[{index}] missing signal_id")
+                    continue
+                if not isinstance(signal_id, str):
+                    self.add_error(path, f"extracted_signals[{index}].signal_id must be a string")
+                    continue
+                if signal_id in ids:
+                    self.add_error(path, f"duplicate extraction signal_id: {signal_id}")
+                ids.add(signal_id)
         return ids
 
     def collect_measurement_term_ids(self) -> set[str]:
@@ -603,6 +632,63 @@ class Validator:
                     if not isinstance(value, str) or not value.strip():
                         self.add_error(path, f"extracted_signals[{index}].denominator_context.{key} must be non-empty")
 
+    def validate_measurement_context_audits(self) -> None:
+        schema_path = self.root / "schemas" / "measurement-context-audit.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_audits: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "audit_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            audit_id = doc.get("audit_id")
+            if isinstance(audit_id, str):
+                if audit_id in seen_audits:
+                    self.add_error(path, f"duplicate audit_id: {audit_id}")
+                seen_audits.add(audit_id)
+            self.validate_measurement_context_audit_records(path, doc)
+
+    def validate_measurement_context_audit_records(self, path: Path, doc: dict[str, Any]) -> None:
+        required_fields = doc.get("required_fields")
+        if isinstance(required_fields, list):
+            seen_fields: set[str] = set()
+            for index, field in enumerate(required_fields):
+                if not isinstance(field, dict):
+                    continue
+                field_id = field.get("field_id")
+                if not isinstance(field_id, str):
+                    continue
+                if field_id in seen_fields:
+                    self.add_error(path, f"required_fields[{index}] duplicate field_id: {field_id}")
+                seen_fields.add(field_id)
+
+        records = doc.get("records")
+        if not isinstance(records, list):
+            return
+
+        seen_records: set[str] = set()
+        for index, record in enumerate(records):
+            if not isinstance(record, dict):
+                continue
+            record_id = record.get("audit_record_id")
+            if isinstance(record_id, str):
+                if record_id in seen_records:
+                    self.add_error(path, f"records[{index}] duplicate audit_record_id: {record_id}")
+                seen_records.add(record_id)
+            record_path = record.get("record_path")
+            if isinstance(record_path, str) and not (self.root / record_path).exists():
+                self.add_error(path, f"records[{index}].record_path does not exist: {record_path}")
+
+            field_status = record.get("field_status")
+            notes = record.get("missing_context_notes")
+            if isinstance(field_status, dict) and isinstance(notes, list):
+                has_gap = any(value in {"missing", "partially-captured"} for value in field_status.values())
+                if has_gap and not notes:
+                    self.add_error(path, f"records[{index}] has missing or partial fields without notes")
+
     def validate_measurement_glossaries(self) -> None:
         schema_path = self.root / "schemas" / "measurement-glossary.schema.json"
         schema = self.json_docs.get(schema_path)
@@ -794,6 +880,24 @@ class Validator:
                         self.add_error(path, f"{location} contains a non-string extraction record id")
                     elif value not in known_ids:
                         self.add_error(path, f"{location} references unknown extraction_record_id: {value}")
+
+    def validate_extraction_signal_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.rel(path).as_posix() in SKIP_SCHEMA_VALIDATION:
+                continue
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "extraction_record_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "extraction_signal_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string extraction signal id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown signal_id: {value}")
 
     def validate_measurement_term_references(self, known_ids: set[str]) -> None:
         for path, doc in self.json_docs.items():
