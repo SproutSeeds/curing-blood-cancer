@@ -15,6 +15,7 @@ Initial focus:
 | Map | Status | Boundary |
 | --- | --- | --- |
 | [Post-CAR T Relapse Mechanism Map v0](post-car-t-relapse-mechanism-map-v0.md) | source-checked v0 | research artifact, not medical advice |
+| [Post-CAR T Relapse Mechanism Coverage Report v0](post-car-t-relapse-mechanism-coverage-v0.md) | source-checked v0 | coverage counts, not mechanism rankings |
 
 ## Extraction Workflow
 
@@ -26,4 +27,10 @@ List extraction signals by mechanism bucket:
 
 ```bash
 make list-mechanism-extractions
+```
+
+List extraction coverage by mechanism bucket:
+
+```bash
+make list-mechanism-coverage
 ```
