@@ -179,6 +179,22 @@
       "limitation_count": 7
     },
     {
+      "artifact_id": "post-car-t-relapse-mechanism-gap-public-task-queue-v0",
+      "title": "Post-CAR T Relapse Mechanism Gap Public Task Queue v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-targeted CAR T-cell therapy",
+        "post-CAR T relapse",
+        "mechanism extraction coverage"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-tasks/post-car-t-relapse-mechanism-gap-public-task-queue-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/post-car-t-relapse-mechanism-gap-public-task-queue-v0.metadata.json",
+      "source_count": 3,
+      "limitation_count": 7
+    },
+    {
       "artifact_id": "bcma-antigen-escape-public-task-queue-v0",
       "title": "BCMA Antigen Escape Public Task Queue v0",
       "artifact_class": "dataset",

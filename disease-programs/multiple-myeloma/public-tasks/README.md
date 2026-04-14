@@ -10,6 +10,7 @@ private repo context.
 ## Current Task Queues
 
 - [BCMA Antigen Escape Public Task Queue v0](bcma-antigen-escape-public-task-queue-v0.md)
+- [Post-CAR T Relapse Mechanism Gap Public Task Queue v0](post-car-t-relapse-mechanism-gap-public-task-queue-v0.md)
 
 ## Boundary
 

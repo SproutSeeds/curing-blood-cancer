@@ -43,9 +43,11 @@ research directions deserve structured public tracking.
 - [BCMA Antigen Escape Claim Set v0](evidence-claims/bcma-antigen-escape-claim-set-v0.md)
 - [BCMA Antigen Escape Evidence Gap Register v0](evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md)
 - [BCMA Antigen Escape Public Task Queue v0](public-tasks/bcma-antigen-escape-public-task-queue-v0.md)
+- [Post-CAR T Relapse Mechanism Gap Public Task Queue v0](public-tasks/post-car-t-relapse-mechanism-gap-public-task-queue-v0.md)
 - [MRD And Relapse Measurement Glossary v0](measurements/mrd-and-relapse-measurement-glossary-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
+- [Post-CAR T Relapse Mechanism Coverage Report v0](mechanisms/post-car-t-relapse-mechanism-coverage-v0.md)
 - [BCMA Claim Set Expert Review Packet v0](reviews/bcma-claim-set-expert-review-packet-v0.md)
 
 ## Source Anchors
