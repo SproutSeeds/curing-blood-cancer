@@ -1,0 +1,76 @@
+name: Evidence Gap Task
+description: Turn a public evidence gap into a concrete contribution task.
+title: "[evidence gap]: "
+labels:
+  - evidence-gap
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Stewarded by [frg.earth](https://frg.earth/).
+
+        Use this for public research tasks only. Do not include patient-identifying data, private records, portal exports, credentials, restricted data, patient-specific medical interpretation, treatment recommendations, trial recommendations, or unsupported cure claims.
+  - type: input
+    id: gap_id
+    attributes:
+      label: Gap ID
+      description: Stable gap ID from an evidence gap register.
+      placeholder: bcma-escape-frequency-denominator-gap-v0
+    validations:
+      required: true
+  - type: input
+    id: linked_claim_ids
+    attributes:
+      label: Linked Claim IDs
+      description: Comma-separated claim IDs connected to this task.
+      placeholder: bcma-target-presence-should-be-extracted-v0
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Public Task
+      description: What should be added, extracted, reviewed, or clarified?
+      placeholder: Add full-paper extraction fields for cohort denominator, product context, target assay timing, and relapse state.
+    validations:
+      required: true
+  - type: textarea
+    id: public_sources
+    attributes:
+      label: Public Sources
+      description: Source IDs, PMIDs, URLs, registry IDs, or regulatory anchors.
+      placeholder: |
+        source_ids:
+        - pubmed_antigen_escape_bcma_directed_2024
+    validations:
+      required: true
+  - type: textarea
+    id: confidence_gain
+    attributes:
+      label: What Would Improve Confidence
+      description: What evidence or review would make the current public claim stronger?
+    validations:
+      required: true
+  - type: textarea
+    id: not_supported
+    attributes:
+      label: What This Does Not Support
+      description: Name what readers must not infer from this task.
+      placeholder: This does not estimate mechanism frequency or recommend therapy sequencing.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety Check
+      options:
+        - label: This issue contains no patient-identifying data.
+          required: true
+        - label: This issue contains no private records, portal exports, credentials, or restricted data.
+          required: true
+        - label: This issue is not asking for patient-specific medical advice.
+          required: true
+        - label: This issue does not make a diagnostic, treatment, or trial recommendation.
+          required: true
+        - label: This issue does not claim that a cure or vaccine has been found.
+          required: true

@@ -95,3 +95,10 @@ List evidence gaps and their linked claims:
 ```bash
 make list-evidence-gaps
 ```
+
+## Contributing
+
+Use [CONTRIBUTING.md](CONTRIBUTING.md) and the GitHub issue forms for evidence
+gap tasks, source extraction tasks, and expert review tasks. Contributions must
+preserve source IDs, disease scope, measurement context, uncertainty, and the
+public safety boundary.

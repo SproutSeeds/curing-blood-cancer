@@ -1,0 +1,77 @@
+name: Source Extraction Task
+description: Request a structured extraction from a public source.
+title: "[source extraction]: "
+labels:
+  - source-extraction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Stewarded by [frg.earth](https://frg.earth/).
+
+        Use this for public, citable sources only. Do not include patient-identifying data, private records, portal exports, credentials, restricted data, patient-specific medical interpretation, treatment recommendations, trial recommendations, or unsupported cure claims.
+  - type: input
+    id: source_id
+    attributes:
+      label: Source ID
+      description: Existing or proposed source registry ID.
+      placeholder: pubmed_antigen_escape_bcma_directed_2024
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL, PMID, Registry ID, Or DOI
+      placeholder: https://pubmed.ncbi.nlm.nih.gov/38728378/
+    validations:
+      required: true
+  - type: input
+    id: disease_scope
+    attributes:
+      label: Blood-Cancer Scope
+      placeholder: multiple myeloma; post-BCMA relapse
+    validations:
+      required: true
+  - type: textarea
+    id: extraction_goal
+    attributes:
+      label: Extraction Goal
+      description: What fields should be extracted from this source?
+      placeholder: Extract target status, assay method, specimen source, timing, prior BCMA exposure, and relapse context.
+    validations:
+      required: true
+  - type: input
+    id: mechanism_group_ids
+    attributes:
+      label: Mechanism Group IDs
+      description: Comma-separated mechanism IDs if known.
+      placeholder: bcma-antigen-loss-or-low-density-v0
+  - type: input
+    id: measurement_term_ids
+    attributes:
+      label: Measurement Term IDs
+      description: Comma-separated measurement terms if known.
+      placeholder: bone-marrow-target-status, antigen-density
+  - type: textarea
+    id: limits
+    attributes:
+      label: What This Source Does Not Support
+      description: State the source limits.
+      placeholder: This source does not provide patient-specific guidance or prove clinical efficacy for an alternate target.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety Check
+      options:
+        - label: This issue contains no patient-identifying data.
+          required: true
+        - label: This issue contains no private records, portal exports, credentials, or restricted data.
+          required: true
+        - label: This issue is not asking for patient-specific medical advice.
+          required: true
+        - label: This issue does not make a diagnostic, treatment, or trial recommendation.
+          required: true
+        - label: This issue does not claim that a cure or vaccine has been found.
+          required: true
