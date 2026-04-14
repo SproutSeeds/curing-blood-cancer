@@ -43,7 +43,7 @@
           },
           "url": {
             "type": "string",
-            "format": "uri"
+            "format": "uri-reference"
           },
           "accessed": {
             "type": "string",

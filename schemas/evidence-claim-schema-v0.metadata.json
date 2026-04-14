@@ -1,0 +1,27 @@
+{
+  "artifact_id": "evidence-claim-schema-v0",
+  "title": "Evidence Claim Schema v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "all blood-cancer subtypes"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "Curing Blood Cancer source registry",
+      "url": "../sources/source-registry-v0.md",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "Curing Blood Cancer artifact metadata schema",
+      "url": "./artifact-metadata.schema.json",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "Schema validation does not prove a claim is true.",
+    "Schema validation does not make a claim clinical advice.",
+    "Evidence levels require human review and may change."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/evidence-claim-schema-v0.md"
+}

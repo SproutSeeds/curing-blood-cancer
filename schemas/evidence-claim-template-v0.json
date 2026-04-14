@@ -1,0 +1,41 @@
+{
+  "claim_id": "replace-with-stable-claim-id-v0",
+  "claim_text": "",
+  "claim_kind": "open-question",
+  "claim_status": "open-question",
+  "blood_cancer_scope": [
+    {
+      "subtype": "",
+      "disease_state": "",
+      "population_scope": "",
+      "excluded_scope": []
+    }
+  ],
+  "evidence_level": "expert-review-needed",
+  "source_ids": [],
+  "supporting_urls": [],
+  "taxonomy_class_ids": [],
+  "trial_query_record_ids": [],
+  "mechanism": {
+    "summary": "",
+    "targets_or_pathways": [],
+    "measurement_dependencies": []
+  },
+  "clinical_use_boundary": "research-use-only",
+  "uncertainty": {
+    "summary": "",
+    "known_unknowns": [],
+    "possible_failure_modes": []
+  },
+  "limitations": [
+    "Not medical advice.",
+    "Not a diagnosis.",
+    "Not a treatment or trial recommendation."
+  ],
+  "review": {
+    "created": "",
+    "last_reviewed": "",
+    "review_status": "draft",
+    "review_notes": []
+  }
+}
