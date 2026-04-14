@@ -1,0 +1,58 @@
+{
+  "artifact_id": "post-car-t-relapse-mechanism-map-v0",
+  "title": "Post-CAR T Relapse Mechanism Map v0",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-targeted CAR T-cell therapy",
+    "post-CAR T relapse"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "NCI plasma cell neoplasms / multiple myeloma PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: BCMA resistance review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40710330/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: CD4 CAR T exhaustion",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: antigen escape after BCMA-directed therapy",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38728378/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: BCMA immunotherapy resistance review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39818472/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: SEMA4A and low BCMA antigen density",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41072416/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: plasma-cell identity escape",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41415462/",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not estimate mechanism frequency.",
+    "Requires expert review before use as an educational anchor."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/post-car-t-relapse-mechanism-map-v0.md"
+}
+

@@ -47,6 +47,7 @@ class Validator:
         query_record_ids = self.collect_query_record_ids()
 
         self.validate_evidence_claims()
+        self.validate_mechanism_maps()
         self.validate_opportunity_maps()
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
@@ -150,6 +151,33 @@ class Validator:
                 continue
             if isinstance(doc, dict) and {"claim_id", "claim_text"}.issubset(doc):
                 self.validate_against_schema(path, doc, schema)
+
+    def validate_mechanism_maps(self) -> None:
+        schema_path = self.root / "schemas" / "mechanism-map.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or not {"map_id", "mechanism_groups"}.issubset(doc):
+                continue
+            self.validate_against_schema(path, doc, schema)
+            self.validate_mechanism_group_ids(path, doc)
+
+    def validate_mechanism_group_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        mechanism_groups = doc.get("mechanism_groups")
+        if not isinstance(mechanism_groups, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, group in enumerate(mechanism_groups):
+            if not isinstance(group, dict):
+                continue
+            mechanism_id = group.get("mechanism_id")
+            if not isinstance(mechanism_id, str):
+                continue
+            if mechanism_id in seen_ids:
+                self.add_error(path, f"mechanism_groups[{index}] duplicate mechanism_id: {mechanism_id}")
+            seen_ids.add(mechanism_id)
 
     def validate_opportunity_maps(self) -> None:
         schema_path = self.root / "schemas" / "opportunity-map.schema.json"

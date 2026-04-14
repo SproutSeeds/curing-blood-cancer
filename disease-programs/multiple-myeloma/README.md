@@ -32,6 +32,12 @@ research directions deserve structured public tracking.
 - `trial-maps/`: trial-query outputs and derived public trial landscapes
 - `opportunity-map-v0.json`: first scored map of research/tooling opportunities
 
+## Active Artifacts
+
+- [Cure Wedge v0](cure-wedge-durable-mrd-negative-remission-v0.md)
+- [Opportunity Map v0](opportunity-map-v0.json)
+- [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
+
 ## Source Anchors
 
 - `nci_pdq_myeloma_hp`

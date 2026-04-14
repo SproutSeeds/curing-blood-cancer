@@ -1,0 +1,240 @@
+{
+  "map_id": "post-car-t-relapse-mechanism-map-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "cure_wedge": "durable MRD-negative remission and relapse prevention",
+  "clinical_use_boundary": "research-use-only",
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "pubmed_tedder_bhutani_2025_bcma_resistance",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+    "pubmed_antigen_escape_bcma_directed_2024",
+    "pubmed_yue_2025_bcma_resistance",
+    "pubmed_di_meo_2025_sema4a_low_bcma",
+    "pubmed_plasma_cell_identity_escape_2025",
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2",
+    "fda_drugs_at_fda"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_car_t_cell_therapy",
+    "myeloma_class_bispecific_antibody",
+    "myeloma_class_vaccine_or_immunoprevention_research"
+  ],
+  "mechanism_groups": [
+    {
+      "mechanism_id": "bcma-antigen-loss-or-low-density-v0",
+      "label": "BCMA antigen loss, low density, or target alteration",
+      "evidence_level": "source-summary",
+      "relapse_role": "Tumor-intrinsic target escape hypothesis after BCMA-directed immune pressure.",
+      "why_it_matters": "BCMA-directed CAR T cells depend on enough recognizable target; relapse with lower or altered target expression can make single-target control less durable.",
+      "what_to_extract": [
+        "BCMA expression before therapy",
+        "BCMA expression at relapse",
+        "assay type and specimen source",
+        "genetic or transcript evidence of target alteration",
+        "soluble BCMA or shedding context when available",
+        "prior BCMA-directed therapy exposure"
+      ],
+      "public_measurements": [
+        "flow cytometry or immunohistochemistry target expression",
+        "sequencing evidence for TNFRSF17 or related target-context changes",
+        "time from infusion to relapse",
+        "post-relapse target status"
+      ],
+      "source_ids": [
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_yue_2025_bcma_resistance",
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "limitations": [
+        "Does not quantify frequency across products or disease states.",
+        "Target status depends on assay timing, specimen source, and method.",
+        "Alternate-target hypotheses do not establish clinical efficacy."
+      ]
+    },
+    {
+      "mechanism_id": "car-t-fitness-exhaustion-persistence-v0",
+      "label": "CAR T fitness, exhaustion, expansion, or persistence",
+      "evidence_level": "source-summary",
+      "relapse_role": "Therapeutic-cell limitation hypothesis when engineered T cells do not expand, persist, traffic, or remain functional enough for durable control.",
+      "why_it_matters": "A deep response may still relapse if the anti-myeloma T-cell state cannot maintain immune surveillance.",
+      "what_to_extract": [
+        "CAR T expansion kinetics",
+        "CAR T persistence duration",
+        "T-cell phenotype and exhaustion markers",
+        "CD4 and CD8 composition where available",
+        "manufacturing or product-context variables",
+        "lymphodepletion and bridging context"
+      ],
+      "public_measurements": [
+        "CAR transgene persistence",
+        "single-cell or flow-cytometry immune phenotype",
+        "cytokine and activation markers where available",
+        "relapse timing relative to expansion and persistence"
+      ],
+      "source_ids": [
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_yue_2025_bcma_resistance"
+      ],
+      "limitations": [
+        "Immune phenotype associations are not automatically causal.",
+        "Product, manufacturing, disease-state, and patient context may confound interpretation.",
+        "Public summaries often omit enough raw immune-state detail for reproducible scoring."
+      ]
+    },
+    {
+      "mechanism_id": "plasma-cell-identity-or-lineage-state-escape-v0",
+      "label": "Plasma-cell identity or lineage-state escape",
+      "evidence_level": "mechanistic-preclinical",
+      "relapse_role": "Tumor-state adaptation hypothesis in which malignant cells alter plasma-cell identity or target-linked phenotype under immune pressure.",
+      "why_it_matters": "Durable remission may require tracking whether relapse preserves, loses, or rewires the cellular identity that the therapy expects to find.",
+      "what_to_extract": [
+        "plasma-cell marker changes",
+        "BCMA-retained versus BCMA-low relapse state",
+        "transcriptional state",
+        "clonal evolution evidence",
+        "paired pre-treatment and relapse samples"
+      ],
+      "public_measurements": [
+        "single-cell transcriptomics",
+        "surface marker panels",
+        "paired genomic or transcriptomic profiling",
+        "pathology and marrow report fields when publicly available"
+      ],
+      "source_ids": [
+        "pubmed_plasma_cell_identity_escape_2025",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_yue_2025_bcma_resistance"
+      ],
+      "limitations": [
+        "Mechanistic and translational evidence needs clinical validation.",
+        "Identity-state labels may not be consistent across papers.",
+        "Not a claim that a specific alternate target is clinically superior."
+      ]
+    },
+    {
+      "mechanism_id": "disease-burden-site-risk-context-v0",
+      "label": "Disease burden, site, and high-risk context",
+      "evidence_level": "source-summary",
+      "relapse_role": "Context hypothesis in which baseline disease burden, extramedullary disease, high-risk biology, or prior exposure shapes response depth and relapse timing.",
+      "why_it_matters": "Cure-oriented maps should not compare relapse mechanisms without disease-state and risk context.",
+      "what_to_extract": [
+        "baseline tumor burden",
+        "extramedullary disease status",
+        "cytogenetic or molecular risk",
+        "prior lines of therapy",
+        "prior BCMA-directed exposure",
+        "refractory class history"
+      ],
+      "public_measurements": [
+        "trial eligibility and baseline-characteristic fields",
+        "cytogenetic-risk definitions",
+        "prior therapy classes",
+        "disease site and imaging context"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "pubmed_tedder_bhutani_2025_bcma_resistance"
+      ],
+      "limitations": [
+        "Context variables can predict relapse without being the direct biological cause.",
+        "Trial registries may not expose enough baseline detail for mechanism inference.",
+        "Patient-specific risk interpretation requires clinician review."
+      ]
+    },
+    {
+      "mechanism_id": "sequential-or-dual-target-immune-pressure-v0",
+      "label": "Sequential or dual-target immune pressure",
+      "evidence_level": "registry-record",
+      "relapse_role": "Intervention-design hypothesis where prior target exposure and next-target design may change the risk of escape.",
+      "why_it_matters": "The program needs to track whether future strategies test alternate targets, dual targeting, or sequencing after BCMA-directed therapy.",
+      "what_to_extract": [
+        "target or targets",
+        "single-target versus dual-target design",
+        "prior BCMA-directed exposure allowed or required",
+        "post-CAR T relapse eligibility",
+        "response and relapse endpoint definitions",
+        "safety and immune-reconstitution constraints"
+      ],
+      "public_measurements": [
+        "ClinicalTrials.gov intervention fields",
+        "trial eligibility criteria",
+        "target labels",
+        "outcome measures",
+        "recruitment status and locations"
+      ],
+      "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "fda_drugs_at_fda",
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "limitations": [
+        "Trial listings do not prove efficacy, availability, or suitability.",
+        "Regulatory status and eligibility change over time.",
+        "Target novelty is not the same as cure potential."
+      ]
+    },
+    {
+      "mechanism_id": "measurement-and-follow-up-gaps-v0",
+      "label": "Measurement and follow-up gaps",
+      "evidence_level": "expert-review-needed",
+      "relapse_role": "Interpretation-risk bucket where inconsistent MRD, imaging, sampling, and follow-up methods make relapse mechanisms hard to compare.",
+      "why_it_matters": "A public cure-oriented map must distinguish true biology from missing, late, or incompatible measurements.",
+      "what_to_extract": [
+        "MRD method and threshold",
+        "sample type and timing",
+        "imaging method",
+        "relapse definition",
+        "follow-up duration",
+        "paired pre-treatment and relapse data availability"
+      ],
+      "public_measurements": [
+        "MRD assay metadata",
+        "bone marrow sampling time points",
+        "imaging schedule",
+        "trial outcome definitions",
+        "published follow-up duration"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "pubmed",
+        "clinicaltrials_gov"
+      ],
+      "limitations": [
+        "This bucket flags evidence-quality risk rather than a specific biological mechanism.",
+        "Mechanism rankings should be deferred until extraction fields are complete.",
+        "Expert review is needed to standardize measurement assumptions."
+      ]
+    }
+  ],
+  "next_artifacts": [
+    {
+      "artifact_id": "post-car-t-relapse-extraction-template-v0",
+      "purpose": "Convert the mechanism buckets into a reusable extraction table for papers and trial records."
+    },
+    {
+      "artifact_id": "bcma-antigen-escape-claim-set-v0",
+      "purpose": "Separate BCMA loss, low antigen density, soluble BCMA, and alternate-target hypotheses into source-backed evidence claims."
+    },
+    {
+      "artifact_id": "mrd-and-relapse-measurement-glossary-v0",
+      "purpose": "Define measurement terms needed before comparing durable remission claims."
+    }
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built as the first concrete follow-on artifact from opportunity `post-car-t-relapse-mechanism-map-v0`.",
+      "Mechanism buckets are intentionally qualitative until source-specific extraction is available."
+    ]
+  }
+}
+

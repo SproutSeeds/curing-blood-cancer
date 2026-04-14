@@ -10,3 +10,8 @@ Initial focus:
 - measurable residual disease persistence
 - immune reconstitution and infection-risk constraints
 
+## Maps
+
+| Map | Status | Boundary |
+| --- | --- | --- |
+| [Post-CAR T Relapse Mechanism Map v0](post-car-t-relapse-mechanism-map-v0.md) | source-checked v0 | research artifact, not medical advice |

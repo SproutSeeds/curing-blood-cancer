@@ -1,7 +1,7 @@
 # Source Registry v0
 
 - registry id: `source-registry-v0`
-- date: `2026-04-11`
+- date: `2026-04-14`
 - scope: public source anchors for Curing Blood Cancer artifacts
 - status: initial registry
 
@@ -21,6 +21,7 @@ as a claim by itself.
 | `clinical-summary` | Useful for condition and treatment context, especially when written for clinicians. |
 | `trial-search` | Useful for finding or filtering trial records. |
 | `literature-search` | Useful for locating publications, not for replacing study appraisal. |
+| `mechanism-map` | Useful for organizing biological resistance, relapse, or response mechanisms. |
 | `regulatory-status` | Useful for checking drug or product approval status. |
 | `statistics` | Useful for incidence, mortality, survival, or registry-level population context. |
 | `data-reuse` | Useful for public or redistributable data workflows. |
@@ -43,6 +44,12 @@ as a claim by itself.
 | `nci_pdq_mpn_hp` | National Cancer Institute | health-professional PDQ summary | myeloproliferative neoplasms | `clinical-summary` | Not a formal guideline or patient-specific recommendation. |
 | `clinicaltrials_gov` | U.S. National Library of Medicine | trial registry | all blood-cancer subtypes with registered studies | `trial-search` | Trial listings do not prove availability, eligibility, safety, or efficacy. |
 | `clinicaltrials_gov_api_v2` | U.S. National Library of Medicine | trial registry API | all blood-cancer subtypes with registered studies | `trial-search`, `data-reuse` | API output is a registry snapshot; trial details, status, eligibility, and site availability still require verification. |
+| `pubmed_tedder_bhutani_2025_bcma_resistance` | PubMed-indexed literature | review article | multiple myeloma, BCMA-targeted CAR T-cell therapy, BCMA-targeted bispecific antibodies | `literature-search`, `mechanism-map` | Review article; use for mechanism framing, not patient-specific treatment selection. |
+| `pubmed_ledergor_2024_cd4_car_t_exhaustion` | PubMed-indexed literature | research article | multiple myeloma, BCMA-targeted CAR T-cell therapy, T-cell exhaustion | `literature-search`, `mechanism-map` | Study context and cohort details require paper-level appraisal before strong claims. |
+| `pubmed_antigen_escape_bcma_directed_2024` | PubMed-indexed literature | research article | multiple myeloma, BCMA-directed therapy, antigen escape | `literature-search`, `mechanism-map` | Mechanism observations should not be generalized beyond the studied context without review. |
+| `pubmed_yue_2025_bcma_resistance` | PubMed-indexed literature | review article | multiple myeloma, BCMA-targeted immunotherapy, resistance mechanisms | `literature-search`, `mechanism-map` | Review article; mechanism categories require source-specific extraction before quantitative use. |
+| `pubmed_di_meo_2025_sema4a_low_bcma` | PubMed-indexed literature | research article | multiple myeloma, BCMA-low relapse, candidate alternate target | `literature-search`, `mechanism-map` | Preclinical and translational findings do not establish clinical efficacy. |
+| `pubmed_plasma_cell_identity_escape_2025` | PubMed-indexed literature | research article | multiple myeloma, anti-BCMA T-cell redirecting therapy, plasma-cell identity escape | `literature-search`, `mechanism-map` | Mechanism findings require source-specific appraisal and should not be treated as clinical guidance. |
 | `pubmed` | U.S. National Library of Medicine | literature index | all blood-cancer subtypes | `literature-search` | Indexing a paper does not validate study quality or clinical actionability. |
 | `fda_drugs_at_fda` | U.S. Food and Drug Administration | regulatory database | approved drugs and therapeutic biologics | `regulatory-status` | Approval status is not patient-specific appropriateness or comparative effectiveness. |
 | `seer_cancer_stat_facts` | National Cancer Institute SEER Program | cancer statistics | selected blood-cancer statistics pages | `statistics` | Population statistics do not predict individual outcome. |
@@ -65,6 +72,12 @@ as a claim by itself.
 | `nci_pdq_mpn_hp` | https://www.cancer.gov/types/myeloproliferative/hp/myeloproliferative-neoplasms-treatment | 2026-04-11 |
 | `clinicaltrials_gov` | https://clinicaltrials.gov/ | 2026-04-11 |
 | `clinicaltrials_gov_api_v2` | https://clinicaltrials.gov/data-api/about-api | 2026-04-14 |
+| `pubmed_tedder_bhutani_2025_bcma_resistance` | https://pubmed.ncbi.nlm.nih.gov/40710330/ | 2026-04-14 |
+| `pubmed_ledergor_2024_cd4_car_t_exhaustion` | https://pubmed.ncbi.nlm.nih.gov/38574299/ | 2026-04-14 |
+| `pubmed_antigen_escape_bcma_directed_2024` | https://pubmed.ncbi.nlm.nih.gov/38728378/ | 2026-04-14 |
+| `pubmed_yue_2025_bcma_resistance` | https://pubmed.ncbi.nlm.nih.gov/39818472/ | 2026-04-14 |
+| `pubmed_di_meo_2025_sema4a_low_bcma` | https://pubmed.ncbi.nlm.nih.gov/41072416/ | 2026-04-14 |
+| `pubmed_plasma_cell_identity_escape_2025` | https://pubmed.ncbi.nlm.nih.gov/41415462/ | 2026-04-14 |
 | `pubmed` | https://pubmed.ncbi.nlm.nih.gov/ | 2026-04-11 |
 | `fda_drugs_at_fda` | https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database | 2026-04-11 |
 | `seer_cancer_stat_facts` | https://seer.cancer.gov/statfacts/ | 2026-04-11 |
