@@ -57,3 +57,27 @@ Optional arguments can be passed through `ARGS`:
 ```bash
 make list-mechanism-extractions ARGS="--mechanism-id bcma-antigen-loss-or-low-density-v0"
 ```
+
+### Mechanism Coverage Listing
+
+Run:
+
+```bash
+python3 tools/list_mechanism_coverage.py
+```
+
+Or:
+
+```bash
+make list-mechanism-coverage
+```
+
+The coverage tool counts public extraction records and signals by mechanism
+bucket. Its counts are artifact-coverage metrics only, not mechanism-frequency,
+evidence-strength, or biological-importance rankings.
+
+Show only buckets that need more extraction:
+
+```bash
+make list-mechanism-coverage ARGS="--under-covered"
+```

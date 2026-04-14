@@ -1,0 +1,39 @@
+{
+  "artifact_id": "post-car-t-relapse-mechanism-coverage-v0",
+  "title": "Post-CAR T Relapse Mechanism Coverage Report v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-targeted CAR T-cell therapy",
+    "post-CAR T relapse",
+    "mechanism extraction coverage"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Post-CAR T Relapse Mechanism Map v0",
+      "url": "post-car-t-relapse-mechanism-map-v0.md",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "Mechanism extraction records",
+      "url": "extractions/README.md",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "BCMA Antigen Escape Evidence Gap Register v0",
+      "url": "../evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Coverage counts are not mechanism-frequency estimates.",
+    "Coverage counts are not biological-importance rankings."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/bcma-antigen-escape-public-task-queue-v0.md"
+}

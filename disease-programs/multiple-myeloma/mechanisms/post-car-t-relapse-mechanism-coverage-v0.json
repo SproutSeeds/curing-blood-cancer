@@ -1,0 +1,269 @@
+{
+  "coverage_report_id": "post-car-t-relapse-mechanism-coverage-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "title": "Post-CAR T Relapse Mechanism Coverage Report v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-targeted CAR T-cell therapy",
+    "post-CAR T relapse",
+    "mechanism extraction coverage"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "parent_map_id": "post-car-t-relapse-mechanism-map-v0",
+  "gap_register_ids": [
+    "bcma-antigen-escape-evidence-gap-register-v0"
+  ],
+  "linked_gap_ids": [
+    "non-antigen-loss-relapse-buckets-gap-v0"
+  ],
+  "linked_claim_ids": [
+    "bcma-resistance-is-multifactorial-v0"
+  ],
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "pubmed_tedder_bhutani_2025_bcma_resistance",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+    "pubmed_antigen_escape_bcma_directed_2024",
+    "pubmed_yue_2025_bcma_resistance",
+    "pubmed_di_meo_2025_sema4a_low_bcma",
+    "pubmed_plasma_cell_identity_escape_2025",
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2",
+    "fda_drugs_at_fda",
+    "pubmed"
+  ],
+  "extraction_record_ids": [
+    "di-meo-2025-sema4a-low-bcma-v0",
+    "firestone-2024-bcma-antigen-escape-v0",
+    "ledergor-2024-cd4-car-t-exhaustion-v0",
+    "tedder-bhutani-2025-bcma-resistance-review-v0"
+  ],
+  "coverage_basis": {
+    "map_path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-map-v0.json",
+    "extractions_path": "disease-programs/multiple-myeloma/mechanisms/extractions",
+    "counting_method": "Counts public extraction records and extracted signals by mechanism_group_id in the current public repository.",
+    "coverage_status_rule": "Zero records means needs-first-extraction; one record means needs-second-source-extraction; two or more records means covered-for-v0-navigation. These are artifact-coverage statuses, not biological rankings."
+  },
+  "mechanism_coverage": [
+    {
+      "mechanism_group_id": "bcma-antigen-loss-or-low-density-v0",
+      "label": "BCMA antigen loss, low density, or target alteration",
+      "signal_count": 3,
+      "extraction_record_count": 2,
+      "covered_source_count": 2,
+      "coverage_status": "covered-for-v0-navigation",
+      "under_coverage_flag": false,
+      "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_yue_2025_bcma_resistance"
+      ],
+      "covered_source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-sema4a-low-bcma-v0",
+        "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "extraction_signal_ids": [
+        "low-bcma-post-car-t-relapse-target-need-signal-v0",
+        "prior-bcma-therapy-target-loss-nonresponse-signal-v0",
+        "tnfrsf17-biallelic-loss-target-alteration-signal-v0"
+      ],
+      "next_extraction_need": "Use current BCMA antigen-loss coverage for navigation only; do not rank biological importance from counts.",
+      "coverage_notes": [
+        "This bucket has the cleanest structured coverage today, but that does not mean antigen escape is dominant.",
+        "Review and source-specific extraction are still needed before any mechanism-frequency claim."
+      ]
+    },
+    {
+      "mechanism_group_id": "car-t-fitness-exhaustion-persistence-v0",
+      "label": "CAR T fitness, exhaustion, expansion, or persistence",
+      "signal_count": 3,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_yue_2025_bcma_resistance"
+      ],
+      "covered_source_ids": [
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "extraction_record_ids": [
+        "ledergor-2024-cd4-car-t-exhaustion-v0"
+      ],
+      "extraction_signal_ids": [
+        "car-t-persistence-durable-response-signal-v0",
+        "cd4-cytotoxic-exhaustion-early-relapse-signal-v0",
+        "myeloma-niche-monocyte-dysfunction-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for CAR T fitness, exhaustion, expansion, or persistence before comparison.",
+      "coverage_notes": [
+        "This bucket has source-specific coverage from Ledergor 2024 but remains single-source in the public artifact set.",
+        "Tedder/Bhutani 2025 and Yue 2025 are public candidate source anchors for broader resistance-mechanism extraction."
+      ]
+    },
+    {
+      "mechanism_group_id": "plasma-cell-identity-or-lineage-state-escape-v0",
+      "label": "Plasma-cell identity or lineage-state escape",
+      "signal_count": 0,
+      "extraction_record_count": 0,
+      "covered_source_count": 0,
+      "coverage_status": "needs-first-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "No extracted signals currently map to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_plasma_cell_identity_escape_2025",
+        "pubmed_yue_2025_bcma_resistance"
+      ],
+      "covered_source_ids": [],
+      "extraction_record_ids": [],
+      "extraction_signal_ids": [],
+      "next_extraction_need": "Add the first source-specific extraction for plasma-cell identity or lineage-state escape.",
+      "coverage_notes": [
+        "Zero extracted signals means the public repo needs extraction coverage, not that the mechanism is unimportant.",
+        "The current mechanism map already lists public source anchors for this bucket."
+      ]
+    },
+    {
+      "mechanism_group_id": "disease-burden-site-risk-context-v0",
+      "label": "Disease burden, site, and high-risk context",
+      "signal_count": 0,
+      "extraction_record_count": 0,
+      "covered_source_count": 0,
+      "coverage_status": "needs-first-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "No extracted signals currently map to this mechanism bucket.",
+      "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "pubmed_tedder_bhutani_2025_bcma_resistance"
+      ],
+      "covered_source_ids": [],
+      "extraction_record_ids": [],
+      "extraction_signal_ids": [],
+      "next_extraction_need": "Add the first source-specific extraction for disease burden, site, and high-risk context.",
+      "coverage_notes": [
+        "This bucket should capture context variables before any relapse-mechanism comparison is attempted.",
+        "Trial-registry and NCI PDQ source anchors are useful for extraction-field design, not patient-specific risk interpretation."
+      ]
+    },
+    {
+      "mechanism_group_id": "sequential-or-dual-target-immune-pressure-v0",
+      "label": "Sequential or dual-target immune pressure",
+      "signal_count": 5,
+      "extraction_record_count": 3,
+      "covered_source_count": 3,
+      "coverage_status": "covered-for-v0-navigation",
+      "under_coverage_flag": false,
+      "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
+      "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "fda_drugs_at_fda",
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_tedder_bhutani_2025_bcma_resistance"
+      ],
+      "covered_source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_tedder_bhutani_2025_bcma_resistance"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-sema4a-low-bcma-v0",
+        "firestone-2024-bcma-antigen-escape-v0",
+        "tedder-bhutani-2025-bcma-resistance-review-v0"
+      ],
+      "extraction_signal_ids": [
+        "resistance-overcoming-strategies-catalog-signal-v0",
+        "sema4a-car-t-preclinical-activity-signal-v0",
+        "sema4a-high-when-bcma-low-signal-v0",
+        "sequencing-prior-bcma-exposure-signal-v0",
+        "sequential-bcma-target-verification-signal-v0"
+      ],
+      "next_extraction_need": "Use current sequential or dual-target coverage for navigation only; do not rank biological importance from counts.",
+      "coverage_notes": [
+        "Current coverage supports navigation across sequencing and alternate-target questions.",
+        "ClinicalTrials.gov and FDA source anchors still require separate trial and regulatory extraction before stronger claims."
+      ]
+    },
+    {
+      "mechanism_group_id": "measurement-and-follow-up-gaps-v0",
+      "label": "Measurement and follow-up gaps",
+      "signal_count": 5,
+      "extraction_record_count": 4,
+      "covered_source_count": 4,
+      "coverage_status": "covered-for-v0-navigation",
+      "under_coverage_flag": false,
+      "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
+      "source_ids": [
+        "clinicaltrials_gov",
+        "nci_pdq_myeloma_hp",
+        "pubmed",
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+        "pubmed_tedder_bhutani_2025_bcma_resistance"
+      ],
+      "covered_source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+        "pubmed_tedder_bhutani_2025_bcma_resistance"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-sema4a-low-bcma-v0",
+        "firestone-2024-bcma-antigen-escape-v0",
+        "ledergor-2024-cd4-car-t-exhaustion-v0",
+        "tedder-bhutani-2025-bcma-resistance-review-v0"
+      ],
+      "extraction_signal_ids": [
+        "alternate-target-safety-fields-signal-v0",
+        "durability-profiling-need-signal-v0",
+        "multifactorial-bcma-resistance-categories-signal-v0",
+        "public-abstract-measurement-gap-signal-v0",
+        "soluble-bcma-target-absence-measurement-signal-v0"
+      ],
+      "next_extraction_need": "Use current measurement and follow-up gap coverage for navigation only; do not rank biological importance from counts.",
+      "coverage_notes": [
+        "This bucket is an interpretation-risk bucket rather than a specific biological mechanism.",
+        "More complete measurement fields are needed before cross-source comparison."
+      ]
+    }
+  ],
+  "summary": {
+    "mechanism_bucket_count": 6,
+    "extraction_record_count": 4,
+    "extraction_signal_count": 16,
+    "needs_first_extraction_count": 2,
+    "needs_second_source_extraction_count": 1
+  },
+  "interpretation_boundary": [
+    "Coverage counts are public artifact coverage metrics only.",
+    "Coverage counts are not evidence-strength rankings.",
+    "Coverage counts are not mechanism-frequency estimates.",
+    "Coverage counts are not biological-importance rankings.",
+    "Under-covered means more extraction is needed before comparison; it does not mean low priority or low importance.",
+    "This report is not medical advice, diagnostic guidance, treatment guidance, trial guidance, or a cure claim."
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from the public mechanism map and current public mechanism extraction records.",
+      "Created for issue #6 to separate artifact coverage imbalance from biological importance."
+    ]
+  }
+}

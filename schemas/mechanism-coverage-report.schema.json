@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/curing-blood-cancer/mechanism-coverage-report.schema.json",
+  "title": "Curing Blood Cancer Mechanism Coverage Report",
+  "type": "object",
+  "required": [
+    "coverage_report_id",
+    "date",
+    "disease_program",
+    "title",
+    "blood_cancer_scope",
+    "clinical_use_boundary",
+    "parent_map_id",
+    "gap_register_ids",
+    "linked_gap_ids",
+    "linked_claim_ids",
+    "source_ids",
+    "extraction_record_ids",
+    "coverage_basis",
+    "mechanism_coverage",
+    "summary",
+    "interpretation_boundary",
+    "review"
+  ],
+  "properties": {
+    "coverage_report_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-v[0-9]+$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "disease_program": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blood_cancer_scope": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "clinical_use_boundary": {
+      "type": "string",
+      "enum": [
+        "not-medical-advice",
+        "not-diagnostic",
+        "not-treatment-recommendation",
+        "not-trial-recommendation",
+        "research-use-only",
+        "requires-clinician-review"
+      ]
+    },
+    "parent_map_id": {
+      "type": "string"
+    },
+    "gap_register_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "linked_gap_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "linked_claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "extraction_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "coverage_basis": {
+      "type": "object",
+      "required": [
+        "map_path",
+        "extractions_path",
+        "counting_method",
+        "coverage_status_rule"
+      ],
+      "properties": {
+        "map_path": {
+          "type": "string"
+        },
+        "extractions_path": {
+          "type": "string"
+        },
+        "counting_method": {
+          "type": "string"
+        },
+        "coverage_status_rule": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "mechanism_coverage": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "mechanism_group_id",
+          "label",
+          "signal_count",
+          "extraction_record_count",
+          "covered_source_count",
+          "coverage_status",
+          "under_coverage_flag",
+          "under_coverage_reason",
+          "source_ids",
+          "covered_source_ids",
+          "extraction_record_ids",
+          "extraction_signal_ids",
+          "next_extraction_need",
+          "coverage_notes"
+        ],
+        "properties": {
+          "mechanism_group_id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "signal_count": {
+            "type": "integer"
+          },
+          "extraction_record_count": {
+            "type": "integer"
+          },
+          "covered_source_count": {
+            "type": "integer"
+          },
+          "coverage_status": {
+            "type": "string",
+            "enum": [
+              "needs-first-extraction",
+              "needs-second-source-extraction",
+              "covered-for-v0-navigation"
+            ]
+          },
+          "under_coverage_flag": {
+            "type": "boolean"
+          },
+          "under_coverage_reason": {
+            "type": "string"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "covered_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "extraction_record_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "extraction_signal_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "next_extraction_need": {
+            "type": "string"
+          },
+          "coverage_notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "mechanism_bucket_count",
+        "extraction_record_count",
+        "extraction_signal_count",
+        "needs_first_extraction_count",
+        "needs_second_source_extraction_count"
+      ],
+      "properties": {
+        "mechanism_bucket_count": {
+          "type": "integer"
+        },
+        "extraction_record_count": {
+          "type": "integer"
+        },
+        "extraction_signal_count": {
+          "type": "integer"
+        },
+        "needs_first_extraction_count": {
+          "type": "integer"
+        },
+        "needs_second_source_extraction_count": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "interpretation_boundary": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "created",
+        "last_reviewed",
+        "review_status"
+      ],
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date"
+        },
+        "last_reviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "source-checked",
+            "expert-review-needed",
+            "expert-reviewed",
+            "deprecated"
+          ]
+        },
+        "review_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

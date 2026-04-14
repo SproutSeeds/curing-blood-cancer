@@ -65,6 +65,7 @@ class Validator:
         self.validate_measurement_context_audits()
         self.validate_measurement_glossaries()
         self.validate_mechanism_maps()
+        self.validate_mechanism_coverage_reports()
         self.validate_opportunity_maps()
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
@@ -829,6 +830,67 @@ class Validator:
             if mechanism_id in seen_ids:
                 self.add_error(path, f"mechanism_groups[{index}] duplicate mechanism_id: {mechanism_id}")
             seen_ids.add(mechanism_id)
+
+    def validate_mechanism_coverage_reports(self) -> None:
+        schema_path = self.root / "schemas" / "mechanism-coverage-report.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_reports: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "coverage_report_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            report_id = doc.get("coverage_report_id")
+            if isinstance(report_id, str):
+                if report_id in seen_reports:
+                    self.add_error(path, f"duplicate coverage_report_id: {report_id}")
+                seen_reports.add(report_id)
+            self.validate_mechanism_coverage_rows(path, doc)
+
+    def validate_mechanism_coverage_rows(self, path: Path, doc: dict[str, Any]) -> None:
+        boundary = " ".join(item for item in doc.get("interpretation_boundary", []) if isinstance(item, str)).lower()
+        if "biological" not in boundary or "not" not in boundary:
+            self.add_error(path, "interpretation_boundary must state that coverage counts are not biological rankings")
+
+        rows = doc.get("mechanism_coverage")
+        if not isinstance(rows, list):
+            return
+
+        seen_mechanisms: set[str] = set()
+        for index, row in enumerate(rows):
+            if not isinstance(row, dict):
+                continue
+
+            mechanism_id = row.get("mechanism_group_id")
+            if isinstance(mechanism_id, str):
+                if mechanism_id in seen_mechanisms:
+                    self.add_error(path, f"mechanism_coverage[{index}] duplicate mechanism_group_id: {mechanism_id}")
+                seen_mechanisms.add(mechanism_id)
+
+            signal_ids = row.get("extraction_signal_ids")
+            if isinstance(signal_ids, list) and isinstance(row.get("signal_count"), int):
+                if row["signal_count"] != len(set(signal_ids)):
+                    self.add_error(path, f"mechanism_coverage[{index}].signal_count does not match extraction_signal_ids")
+
+            record_ids = row.get("extraction_record_ids")
+            if isinstance(record_ids, list) and isinstance(row.get("extraction_record_count"), int):
+                if row["extraction_record_count"] != len(set(record_ids)):
+                    self.add_error(path, f"mechanism_coverage[{index}].extraction_record_count does not match extraction_record_ids")
+
+            covered_source_ids = row.get("covered_source_ids")
+            if isinstance(covered_source_ids, list) and isinstance(row.get("covered_source_count"), int):
+                if row["covered_source_count"] != len(set(covered_source_ids)):
+                    self.add_error(path, f"mechanism_coverage[{index}].covered_source_count does not match covered_source_ids")
+
+            status = row.get("coverage_status")
+            under_flag = row.get("under_coverage_flag")
+            if status in {"needs-first-extraction", "needs-second-source-extraction"} and under_flag is not True:
+                self.add_error(path, f"mechanism_coverage[{index}] needs status must set under_coverage_flag true")
+            if status == "covered-for-v0-navigation" and under_flag is not False:
+                self.add_error(path, f"mechanism_coverage[{index}] covered status must set under_coverage_flag false")
 
     def validate_opportunity_maps(self) -> None:
         schema_path = self.root / "schemas" / "opportunity-map.schema.json"

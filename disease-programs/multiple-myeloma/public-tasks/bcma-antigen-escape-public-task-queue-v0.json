@@ -188,7 +188,7 @@
       "task_title": "Balance non-antigen-loss relapse mechanism extraction coverage",
       "task_type": "evidence-gap-task",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "evidence-gap-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0"
@@ -222,11 +222,14 @@
       "acceptance_checks": [
         "Coverage metrics are not interpreted as biological importance.",
         "Under-covered buckets are clearly separated from low-priority buckets.",
-        "make validate passes."
+        "Candidate source records are public and citable.",
+        "make validate passes.",
+        "Completed in public follow-up PR for issue #6."
       ],
       "what_not_to_infer": [
         "Do not infer that antigen escape is dominant because it has cleaner structured artifacts.",
-        "Do not rank mechanism buckets without balanced extraction coverage."
+        "Do not rank mechanism buckets without balanced extraction coverage.",
+        "Do not treat coverage status as biological priority."
       ],
       "safety_boundary": [
         "No patient-specific interpretation.",
