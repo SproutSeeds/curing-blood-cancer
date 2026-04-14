@@ -36,6 +36,7 @@ research directions deserve structured public tracking.
 
 - [Cure Wedge v0](cure-wedge-durable-mrd-negative-remission-v0.md)
 - [Opportunity Map v0](opportunity-map-v0.json)
+- [BCMA Antigen Escape Claim Set v0](evidence-claims/bcma-antigen-escape-claim-set-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
 

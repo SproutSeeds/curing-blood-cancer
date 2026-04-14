@@ -47,7 +47,9 @@ class Validator:
         taxonomy_ids = self.collect_taxonomy_ids()
         query_record_ids = self.collect_query_record_ids()
         mechanism_group_ids = self.collect_mechanism_group_ids()
+        extraction_record_ids = self.collect_extraction_record_ids()
 
+        self.validate_claim_sets()
         self.validate_evidence_claims()
         self.validate_mechanism_extractions()
         self.validate_mechanism_maps()
@@ -55,6 +57,7 @@ class Validator:
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
         self.validate_mechanism_group_references(mechanism_group_ids)
+        self.validate_extraction_record_references(extraction_record_ids)
         self.validate_query_record_references(query_record_ids)
         self.validate_query_records()
 
@@ -165,6 +168,60 @@ class Validator:
                 ids.add(mechanism_id)
         return ids
 
+    def collect_extraction_record_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "extraction_record_id" not in doc:
+                continue
+            extraction_id = doc.get("extraction_record_id")
+            if not extraction_id:
+                if path.name.endswith("template-v0.json"):
+                    continue
+                self.add_error(path, "extraction_record_id must be non-empty")
+                continue
+            if not isinstance(extraction_id, str):
+                self.add_error(path, "extraction_record_id must be a string")
+                continue
+            if extraction_id in ids:
+                self.add_error(path, f"duplicate extraction_record_id: {extraction_id}")
+            ids.add(extraction_id)
+        return ids
+
+    def validate_claim_sets(self) -> None:
+        schema_path = self.root / "schemas" / "claim-set.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_sets: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "claim_set_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            claim_set_id = doc.get("claim_set_id")
+            if isinstance(claim_set_id, str):
+                if claim_set_id in seen_sets:
+                    self.add_error(path, f"duplicate claim_set_id: {claim_set_id}")
+                seen_sets.add(claim_set_id)
+            self.validate_claim_set_claim_ids(path, doc)
+
+    def validate_claim_set_claim_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        claims = doc.get("claims")
+        if not isinstance(claims, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, claim in enumerate(claims):
+            if not isinstance(claim, dict):
+                continue
+            claim_id = claim.get("claim_id")
+            if not isinstance(claim_id, str):
+                continue
+            if claim_id in seen_ids:
+                self.add_error(path, f"claims[{index}] duplicate claim_id: {claim_id}")
+            seen_ids.add(claim_id)
+
     def validate_evidence_claims(self) -> None:
         schema_path = self.root / "schemas" / "evidence-claim.schema.json"
         schema = self.json_docs.get(schema_path)
@@ -183,7 +240,6 @@ class Validator:
         if not isinstance(schema, dict):
             return
 
-        seen_ids: set[str] = set()
         for path, doc in self.json_docs.items():
             if self.rel(path).as_posix() in SKIP_SCHEMA_VALIDATION:
                 continue
@@ -191,11 +247,6 @@ class Validator:
                 continue
             self.validate_against_schema(path, doc, schema)
 
-            extraction_id = doc.get("extraction_record_id")
-            if isinstance(extraction_id, str):
-                if extraction_id in seen_ids:
-                    self.add_error(path, f"duplicate extraction_record_id: {extraction_id}")
-                seen_ids.add(extraction_id)
             self.validate_extraction_signal_ids(path, doc)
 
     def validate_extraction_signal_ids(self, path: Path, doc: dict[str, Any]) -> None:
@@ -342,6 +393,24 @@ class Validator:
                     self.add_error(path, f"{location} must be a string")
                 elif value not in known_ids:
                     self.add_error(path, f"{location} references unknown mechanism_id: {value}")
+
+    def validate_extraction_record_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.rel(path).as_posix() in SKIP_SCHEMA_VALIDATION:
+                continue
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "extraction_record_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "extraction_record_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string extraction record id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown extraction_record_id: {value}")
 
     def validate_query_record_references(self, known_ids: set[str]) -> None:
         for path, doc in self.json_docs.items():
