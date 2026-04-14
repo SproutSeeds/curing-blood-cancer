@@ -34,6 +34,13 @@
     "tedder-bhutani-2025-bcma-resistance-review-v0",
     "ledergor-2024-cd4-car-t-exhaustion-v0"
   ],
+  "measurement_term_ids": [
+    "bone-marrow-target-status",
+    "soluble-bcma",
+    "antigen-density",
+    "normal-tissue-reactivity-screen",
+    "relapse-or-disease-progression"
+  ],
   "claims": [
     {
       "claim_id": "bcma-target-presence-should-be-extracted-v0",
@@ -51,6 +58,11 @@
       ],
       "extraction_record_ids": [
         "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "soluble-bcma",
+        "relapse-or-disease-progression"
       ],
       "supports": [
         "Adding target-status fields to post-BCMA relapse extraction records.",
@@ -81,6 +93,10 @@
       "extraction_record_ids": [
         "firestone-2024-bcma-antigen-escape-v0"
       ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "relapse-or-disease-progression"
+      ],
       "supports": [
         "Tracking TNFRSF17 status as a target-alteration field in BCMA relapse maps.",
         "Separating target-alteration evidence from broader low-antigen-density observations."
@@ -110,6 +126,11 @@
       ],
       "extraction_record_ids": [
         "di-meo-2025-sema4a-low-bcma-v0"
+      ],
+      "measurement_term_ids": [
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
       ],
       "supports": [
         "Creating alternate-target research fields that preserve target density, normal-tissue reactivity, model context, and clinical translation status.",
@@ -144,6 +165,9 @@
       "extraction_record_ids": [
         "tedder-bhutani-2025-bcma-resistance-review-v0",
         "ledergor-2024-cd4-car-t-exhaustion-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression"
       ],
       "supports": [
         "Keeping the post-CAR T relapse map multi-bucket rather than reducing relapse to antigen loss alone.",

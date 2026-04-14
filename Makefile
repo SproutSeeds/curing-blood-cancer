@@ -1,9 +1,10 @@
-.PHONY: help validate list-artifacts list-mechanism-extractions
+.PHONY: help validate list-artifacts list-claim-sets list-mechanism-extractions
 
 help:
 	@printf '%s\n' 'Available targets:'
 	@printf '  %-28s %s\n' 'validate' 'Run public artifact integrity checks'
 	@printf '  %-28s %s\n' 'list-artifacts' 'List tracked public artifact files'
+	@printf '  %-28s %s\n' 'list-claim-sets' 'List claim sets with measurement links'
 	@printf '  %-28s %s\n' 'list-mechanism-extractions' 'List mechanism extraction signals by bucket'
 
 validate:
@@ -11,6 +12,9 @@ validate:
 
 list-artifacts:
 	@git ls-files '*.md' '*.json' '*.py' | sort
+
+list-claim-sets:
+	python3 tools/list_claim_sets.py $(ARGS)
 
 list-mechanism-extractions:
 	python3 tools/list_mechanism_extractions.py $(ARGS)

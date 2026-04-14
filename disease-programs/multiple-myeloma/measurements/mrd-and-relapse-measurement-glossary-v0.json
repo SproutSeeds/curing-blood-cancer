@@ -14,7 +14,9 @@
     "nci_pdq_myeloma_hp",
     "pubmed_kumar_2016_imwg_mrd_response_criteria",
     "pubmed_munshi_2017_mrd_survival_meta_analysis",
-    "pubmed_soh_2022_mrd_flow_harmonization"
+    "pubmed_soh_2022_mrd_flow_harmonization",
+    "pubmed_antigen_escape_bcma_directed_2024",
+    "pubmed_di_meo_2025_sema4a_low_bcma"
   ],
   "terms": [
     {
@@ -397,6 +399,118 @@
       ],
       "limitations": [
         "Relapse and progression definitions vary by source, study context, and available measurements."
+      ]
+    },
+    {
+      "term_id": "bone-marrow-target-status",
+      "label": "Bone marrow target status",
+      "term_kind": "specimen-context",
+      "definition": "A source-reported assessment of target expression or target absence in bone marrow plasma cells or tumor sample context.",
+      "measurement_context": [
+        "Record target name, specimen source, assay method, timing, prior target exposure, and response context.",
+        "For BCMA-directed therapy maps, separate marrow target status from soluble biomarker and sequencing signals."
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "related_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "soluble-bcma"
+      ],
+      "use_in_public_artifacts": [
+        "Use when a relapse map depends on whether a target was present, low, or absent in a specimen.",
+        "Require source-stated assay and specimen context before comparing sequential anti-target strategies."
+      ],
+      "what_not_to_infer": [
+        "Do not treat one marrow target-status result as a full-body disease map.",
+        "Do not use target status alone as treatment guidance."
+      ],
+      "limitations": [
+        "Assay method, specimen adequacy, disease patchiness, and timing can change interpretation."
+      ]
+    },
+    {
+      "term_id": "antigen-density",
+      "label": "Antigen density",
+      "term_kind": "assay-context",
+      "definition": "A source-reported quantitative or semiquantitative target-abundance measurement on tumor cells or model systems.",
+      "measurement_context": [
+        "Record target name, density unit or scoring method, specimen or model context, and comparator target when available.",
+        "Use separate fields for tumor expression and normal-tissue expression."
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "related_term_ids": [
+        "bone-marrow-target-status",
+        "normal-tissue-reactivity-screen"
+      ],
+      "use_in_public_artifacts": [
+        "Use for alternate-target research maps where target abundance is part of the evidence.",
+        "Preserve whether the evidence is clinical, translational, or preclinical."
+      ],
+      "what_not_to_infer": [
+        "Do not infer clinical efficacy from target density.",
+        "Do not infer safety from tumor expression without normal-tissue context."
+      ],
+      "limitations": [
+        "Target-density methods and thresholds may not be comparable across sources."
+      ]
+    },
+    {
+      "term_id": "soluble-bcma",
+      "label": "Soluble BCMA",
+      "term_kind": "assay-context",
+      "definition": "A source-reported blood measurement of soluble BCMA used as candidate context for BCMA target biology.",
+      "measurement_context": [
+        "Record blood assay, timing, paired marrow target status, and therapy sequence when available.",
+        "Use as a candidate measurement field rather than a standalone rule."
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "related_term_ids": [
+        "bone-marrow-target-status",
+        "relapse-or-disease-progression"
+      ],
+      "use_in_public_artifacts": [
+        "Use when a public extraction preserves soluble BCMA alongside marrow BCMA expression.",
+        "Flag missing paired specimen context."
+      ],
+      "what_not_to_infer": [
+        "Do not use soluble BCMA alone for patient-specific interpretation.",
+        "Do not assume soluble BCMA substitutes for direct target assessment."
+      ],
+      "limitations": [
+        "Assay thresholds, timing, and paired marrow context require source-specific review."
+      ]
+    },
+    {
+      "term_id": "normal-tissue-reactivity-screen",
+      "label": "Normal-tissue reactivity screen",
+      "term_kind": "assay-context",
+      "definition": "A source-reported safety-context assay or screen that assesses candidate target reactivity outside tumor cells.",
+      "measurement_context": [
+        "Record target, model system, tissue panel, assay method, and clinical translation status.",
+        "Use especially when alternate-target immunotherapy evidence is preclinical."
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "related_term_ids": [
+        "antigen-density"
+      ],
+      "use_in_public_artifacts": [
+        "Use as a minimum measurement dependency for alternate-target claims.",
+        "Keep tumor-target expression separate from normal-tissue safety context."
+      ],
+      "what_not_to_infer": [
+        "Do not treat a preclinical screen as proof of patient safety.",
+        "Do not infer clinical readiness without protocol and regulatory context."
+      ],
+      "limitations": [
+        "Preclinical safety-context assays do not replace clinical safety evidence."
       ]
     }
   ],

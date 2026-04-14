@@ -24,6 +24,17 @@ claims are attempted.
 - [`tedder-bhutani-2025-bcma-resistance-review-v0`](../mechanisms/extractions/tedder-bhutani-2025-bcma-resistance-review-v0.json): BCMA resistance as a multifactorial review frame.
 - [`ledergor-2024-cd4-car-t-exhaustion-v0`](../mechanisms/extractions/ledergor-2024-cd4-car-t-exhaustion-v0.json): CAR T persistence and exhaustion context.
 
+## Measurement Dependencies
+
+This claim set references measurement terms from
+[`mrd-and-relapse-measurement-glossary-v0`](../measurements/mrd-and-relapse-measurement-glossary-v0.md):
+
+- `bone-marrow-target-status`
+- `soluble-bcma`
+- `antigen-density`
+- `normal-tissue-reactivity-screen`
+- `relapse-or-disease-progression`
+
 ## Claims
 
 ### Target Presence Should Be Extracted

@@ -28,6 +28,8 @@ and follow-up duration are visible.
 - `pubmed_kumar_2016_imwg_mrd_response_criteria`
 - `pubmed_munshi_2017_mrd_survival_meta_analysis`
 - `pubmed_soh_2022_mrd_flow_harmonization`
+- `pubmed_antigen_escape_bcma_directed_2024`
+- `pubmed_di_meo_2025_sema4a_low_bcma`
 
 ## Core Terms
 
@@ -46,6 +48,10 @@ and follow-up duration are visible.
 | Progression-free survival | Use as a trial or study endpoint with follow-up context. | Do not interpret as patient-specific prognosis. |
 | Overall survival | Use as a study endpoint with population and follow-up context. | Do not infer individual survival. |
 | Relapse or disease progression | Record the source definition and measurement trigger. | Do not compare relapse claims unless definitions align. |
+| Bone marrow target status | Record target name, specimen source, assay method, timing, prior target exposure, and response context. | Do not use target status alone as treatment guidance. |
+| Antigen density | Record target name, density unit or scoring method, specimen or model context, and comparator target. | Do not infer clinical efficacy from target density. |
+| Soluble BCMA | Record blood assay, timing, paired marrow target status, and therapy sequence. | Do not use soluble BCMA alone for patient-specific interpretation. |
+| Normal-tissue reactivity screen | Record target, model system, tissue panel, assay method, and clinical translation status. | Do not treat a preclinical screen as proof of patient safety. |
 
 ## Minimum Fields For Future Artifacts
 
@@ -59,6 +65,7 @@ and follow-up duration are visible.
 - population and disease-state scope
 - follow-up duration
 - source IDs
+- measurement-term IDs when a claim set depends on these terms
 
 ## Structured Data
 

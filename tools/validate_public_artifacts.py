@@ -48,6 +48,7 @@ class Validator:
         query_record_ids = self.collect_query_record_ids()
         mechanism_group_ids = self.collect_mechanism_group_ids()
         extraction_record_ids = self.collect_extraction_record_ids()
+        measurement_term_ids = self.collect_measurement_term_ids()
 
         self.validate_claim_sets()
         self.validate_evidence_claims()
@@ -59,6 +60,7 @@ class Validator:
         self.validate_taxonomy_references(taxonomy_ids)
         self.validate_mechanism_group_references(mechanism_group_ids)
         self.validate_extraction_record_references(extraction_record_ids)
+        self.validate_measurement_term_references(measurement_term_ids)
         self.validate_query_record_references(query_record_ids)
         self.validate_query_records()
 
@@ -186,6 +188,27 @@ class Validator:
             if extraction_id in ids:
                 self.add_error(path, f"duplicate extraction_record_id: {extraction_id}")
             ids.add(extraction_id)
+        return ids
+
+    def collect_measurement_term_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "glossary_id" not in doc:
+                continue
+            terms = doc.get("terms")
+            if not isinstance(terms, list):
+                continue
+            for index, term in enumerate(terms):
+                if not isinstance(term, dict):
+                    self.add_error(path, f"terms[{index}] must be an object")
+                    continue
+                term_id = term.get("term_id")
+                if not isinstance(term_id, str) or not term_id:
+                    self.add_error(path, f"terms[{index}] missing term_id")
+                    continue
+                if term_id in ids:
+                    self.add_error(path, f"duplicate measurement term_id: {term_id}")
+                ids.add(term_id)
         return ids
 
     def validate_claim_sets(self) -> None:
@@ -457,6 +480,22 @@ class Validator:
                         self.add_error(path, f"{location} contains a non-string extraction record id")
                     elif value not in known_ids:
                         self.add_error(path, f"{location} references unknown extraction_record_id: {value}")
+
+    def validate_measurement_term_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "glossary_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "measurement_term_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string measurement term id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown measurement term_id: {value}")
 
     def validate_query_record_references(self, known_ids: set[str]) -> None:
         for path, doc in self.json_docs.items():
