@@ -73,10 +73,11 @@ make validate
 ```
 
 The validator checks JSON parsing, claim-set, evidence-claim, and evidence-gap
-schema conformance, artifact metadata, artifact catalogs, measurement
-glossaries, mechanism maps, mechanism extractions, source ID references,
-taxonomy ID references, mechanism-group links, extraction-record links,
-measurement-term links, claim links, public-task links, and query-record links.
+schema conformance, artifact metadata, artifact catalogs, measurement context
+audits, measurement glossaries, mechanism maps, mechanism extractions, source ID
+references, taxonomy ID references, mechanism-group links,
+extraction-record links, measurement-term links, claim links, public-task links,
+and query-record links.
 
 You can also call the validator directly:
 

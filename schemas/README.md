@@ -14,6 +14,7 @@ without weakening the repo's safety boundaries.
 - [Evidence Gap Register Schema](./evidence-gap-register.schema.json)
 - [Mechanism Extraction Schema](./mechanism-extraction.schema.json)
 - [Mechanism Map Schema](./mechanism-map.schema.json)
+- [Measurement Context Audit Schema](./measurement-context-audit.schema.json)
 - [Measurement Glossary Schema](./measurement-glossary.schema.json)
 - [Opportunity Map Schema](./opportunity-map.schema.json)
 - [Public Task Queue Schema](./public-task-queue.schema.json)

@@ -99,6 +99,23 @@
       "limitation_count": 7
     },
     {
+      "artifact_id": "bcma-measurement-context-audit-v0",
+      "title": "BCMA Measurement Context Audit v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-directed therapy",
+        "post-BCMA relapse",
+        "post-CAR T relapse",
+        "measurement context"
+      ],
+      "path": "disease-programs/multiple-myeloma/measurements/bcma-measurement-context-audit-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/measurements/bcma-measurement-context-audit-v0.metadata.json",
+      "source_count": 2,
+      "limitation_count": 6
+    },
+    {
       "artifact_id": "post-car-t-relapse-extraction-guide-v0",
       "title": "Post-CAR T Relapse Extraction Guide v0",
       "artifact_class": "protocol",

@@ -77,7 +77,7 @@
       "task_title": "Audit BCMA claim records for missing measurement context fields",
       "task_type": "evidence-gap-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "evidence-gap-task.yml",
       "linked_gap_ids": [
         "bcma-measurement-context-completeness-gap-v0"
@@ -108,12 +108,14 @@
       "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/3",
       "public_deliverables": [
         "A list of required measurement-context fields for BCMA target-status and antigen-density extractions.",
-        "A proposed schema or extraction-template update if new required fields are needed."
+        "A proposed schema or extraction-template update if new required fields are needed.",
+        "BCMA Measurement Context Audit v0."
       ],
       "acceptance_checks": [
         "Missing assay method, specimen source, threshold or scoring method, timing, and paired-measurement context are explicitly flagged.",
         "No measurement term is treated as sufficient evidence by itself.",
-        "make validate passes."
+        "make validate passes.",
+        "Completed in public follow-up PR for issue #3."
       ],
       "what_not_to_infer": [
         "Do not compare target status or antigen density across sources without method context.",
