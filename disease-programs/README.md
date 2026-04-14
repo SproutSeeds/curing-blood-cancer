@@ -1,5 +1,7 @@
 # Disease Programs
 
+Stewarded by [frg.earth](https://frg.earth/).
+
 Disease programs are focused lanes inside the broader Curing Blood Cancer
 initiative.
 
@@ -20,4 +22,3 @@ scientifically narrow enough to build useful artifacts.
 | Program | Status | First Wedge |
 | --- | --- | --- |
 | [Multiple Myeloma](multiple-myeloma/README.md) | active v0 | Durable MRD-negative remission and relapse prevention |
-

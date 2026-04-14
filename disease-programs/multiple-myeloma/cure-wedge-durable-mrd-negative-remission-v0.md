@@ -1,5 +1,7 @@
 # Cure Wedge v0: Durable MRD-Negative Remission in Multiple Myeloma
 
+Stewarded by [frg.earth](https://frg.earth/).
+
 - disease program: `multiple-myeloma`
 - wedge status: `active-v0`
 - claim level: `open-question`
@@ -91,4 +93,3 @@ Excluded:
 This wedge can organize public research work, but it cannot determine medical
 care. Any clinical interpretation requires qualified clinician review and
 current source verification.
-

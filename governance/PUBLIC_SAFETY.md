@@ -4,6 +4,8 @@ This repo is for public blood-cancer research tooling and education. It is not
 a medical device, clinician, diagnostic service, or treatment recommendation
 engine.
 
+Stewardship mark: [frg.earth](https://frg.earth/).
+
 ## Safety Rules
 
 - Do not publish patient-specific advice.

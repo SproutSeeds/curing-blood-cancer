@@ -1,5 +1,7 @@
 # Multiple Myeloma Disease Program
 
+Stewarded by [frg.earth](https://frg.earth/).
+
 Multiple myeloma is the first disease program inside Curing Blood Cancer.
 
 The goal is not to claim a cure. The goal is to build public tools that make
@@ -37,4 +39,3 @@ research directions deserve structured public tracking.
 - `clinicaltrials_gov_api_v2`
 - `pubmed`
 - `fda_drugs_at_fda`
-

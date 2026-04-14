@@ -2,6 +2,8 @@
 
 Public artifacts for blood-cancer cure and vaccine discovery tooling.
 
+Stewarded by [frg.earth](https://frg.earth/).
+
 This repo exists to make complex biomedical evidence easier to inspect,
 combine, question, and reuse. It is the public downstream surface for work
 prepared in the private lab repo at `../curing-blood-cancer-lab`.
