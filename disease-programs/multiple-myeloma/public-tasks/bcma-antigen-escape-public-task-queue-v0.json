@@ -244,7 +244,7 @@
       "task_title": "Expert review the BCMA claim set and evidence gap register",
       "task_type": "expert-review-task",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "expert-review-task.yml",
       "linked_gap_ids": [
         "expert-review-readiness-gap-v0"
@@ -281,17 +281,20 @@
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/bcma-claim-set-expert-review-task-v0.md",
       "github_issue_url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/5",
       "public_deliverables": [
-        "Expert review notes mapped to claim IDs, gap IDs, measurement terms, and source IDs.",
+        "An expert-review packet mapped to claim IDs, gap IDs, source IDs, measurement term IDs, and extraction record IDs.",
         "Proposed wording changes or status changes for claims that overreach."
       ],
       "acceptance_checks": [
-        "Review separates source-checked from expert-reviewed status.",
-        "Review does not become patient-facing advice.",
-        "make validate passes if structured artifacts are edited."
+        "Review packet separates source-checked from expert-reviewed status.",
+        "Review packet does not become patient-facing advice.",
+        "Wording changes weaken or clarify claims when evidence is incomplete.",
+        "make validate passes if structured artifacts are edited.",
+        "Completed in public follow-up PR for issue #5 as review infrastructure; target artifacts remain expert-review-needed."
       ],
       "what_not_to_infer": [
         "Do not treat source-checked as expert-reviewed.",
-        "Do not turn review comments into clinical guidance."
+        "Do not turn review comments into clinical guidance.",
+        "Do not label target artifacts expert-reviewed until qualified reviewer comments are complete."
       ],
       "safety_boundary": [
         "No patient-specific interpretation.",

@@ -83,6 +83,23 @@
       "limitation_count": 8
     },
     {
+      "artifact_id": "bcma-claim-set-expert-review-packet-v0",
+      "title": "BCMA Claim Set Expert Review Packet v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-directed therapy",
+        "post-BCMA relapse",
+        "post-CAR T relapse",
+        "expert review readiness"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/bcma-claim-set-expert-review-packet-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/bcma-claim-set-expert-review-packet-v0.metadata.json",
+      "source_count": 4,
+      "limitation_count": 7
+    },
+    {
       "artifact_id": "mrd-and-relapse-measurement-glossary-v0",
       "title": "MRD And Relapse Measurement Glossary v0",
       "artifact_class": "dataset",

@@ -22,7 +22,7 @@ contribution-ready public tasks.
 | `bcma-measurement-context-field-audit-task-v0` | high | done | evidence gap | [#3](https://github.com/SproutSeeds/curing-blood-cancer/issues/3) | `bcma-measurement-context-completeness-gap-v0` |
 | `sema4a-translation-safety-extraction-task-v0` | high | done | source extraction | [#2](https://github.com/SproutSeeds/curing-blood-cancer/issues/2) | `alternate-target-clinical-translation-gap-v0` |
 | `non-antigen-loss-bucket-coverage-task-v0` | medium | done | evidence gap | [#6](https://github.com/SproutSeeds/curing-blood-cancer/issues/6) | `non-antigen-loss-relapse-buckets-gap-v0` |
-| `bcma-claim-set-expert-review-task-v0` | medium | ready | expert review | [#5](https://github.com/SproutSeeds/curing-blood-cancer/issues/5) | `expert-review-readiness-gap-v0` |
+| `bcma-claim-set-expert-review-task-v0` | medium | done | expert review | [#5](https://github.com/SproutSeeds/curing-blood-cancer/issues/5) | `expert-review-readiness-gap-v0` |
 
 ## Issue Drafts
 

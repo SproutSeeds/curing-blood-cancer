@@ -1,4 +1,4 @@
-.PHONY: help validate list-artifacts list-public-artifacts list-claim-sets list-evidence-gaps list-mechanism-extractions list-mechanism-coverage list-public-tasks
+.PHONY: help validate list-artifacts list-public-artifacts list-claim-sets list-evidence-gaps list-mechanism-extractions list-mechanism-coverage list-public-tasks list-review-packets
 
 help:
 	@printf '%s\n' 'Available targets:'
@@ -10,6 +10,7 @@ help:
 	@printf '  %-28s %s\n' 'list-mechanism-extractions' 'List mechanism extraction signals by bucket'
 	@printf '  %-28s %s\n' 'list-mechanism-coverage' 'List extraction coverage by mechanism bucket'
 	@printf '  %-28s %s\n' 'list-public-tasks' 'List contribution-ready public tasks'
+	@printf '  %-28s %s\n' 'list-review-packets' 'List expert-review packets and review items'
 
 validate:
 	python3 tools/validate_public_artifacts.py
@@ -34,3 +35,6 @@ list-mechanism-coverage:
 
 list-public-tasks:
 	python3 tools/list_public_tasks.py $(ARGS)
+
+list-review-packets:
+	python3 tools/list_review_packets.py $(ARGS)

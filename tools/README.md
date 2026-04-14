@@ -81,3 +81,27 @@ Show only buckets that need more extraction:
 ```bash
 make list-mechanism-coverage ARGS="--under-covered"
 ```
+
+### Expert Review Packet Listing
+
+Run:
+
+```bash
+python3 tools/list_review_packets.py
+```
+
+Or:
+
+```bash
+make list-review-packets
+```
+
+The review-packet tool lists expert-review packets and their review items by
+claim ID, gap ID, and review status. Review packets are readiness artifacts;
+they do not make source-checked claims expert-reviewed.
+
+Show review items for one claim:
+
+```bash
+make list-review-packets ARGS="--claim-id bcma-resistance-is-multifactorial-v0"
+```
