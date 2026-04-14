@@ -1,0 +1,45 @@
+{
+  "artifact_id": "bcma-claim-set-expert-review-packet-v0",
+  "title": "BCMA Claim Set Expert Review Packet v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-directed therapy",
+    "post-BCMA relapse",
+    "post-CAR T relapse",
+    "expert review readiness"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "BCMA Antigen Escape Claim Set v0",
+      "url": "../evidence-claims/bcma-antigen-escape-claim-set-v0.md",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "BCMA Antigen Escape Evidence Gap Register v0",
+      "url": "../evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "BCMA Measurement Context Audit v0",
+      "url": "../measurements/bcma-measurement-context-audit-v0.md",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "Post-CAR T Relapse Mechanism Coverage Report v0",
+      "url": "../mechanisms/post-car-t-relapse-mechanism-coverage-v0.md",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "Review packet only.",
+    "Not completed expert review.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not claim cure-like durability."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/bcma-antigen-escape-public-task-queue-v0.md"
+}

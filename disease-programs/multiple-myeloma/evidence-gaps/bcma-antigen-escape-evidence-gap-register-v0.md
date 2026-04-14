@@ -66,8 +66,10 @@ The current artifacts are source-checked public organization artifacts. They
 need expert review before becoming educational anchors or evidence-strength
 summaries.
 
-Next public work: create a reviewer checklist for claim-level scope,
-measurement assumptions, source quality, and public-language safety.
+Next public work: use the
+[`bcma-claim-set-expert-review-packet-v0`](../reviews/bcma-claim-set-expert-review-packet-v0.md)
+to collect qualified review notes for claim-level scope, measurement
+assumptions, source quality, and public-language safety.
 
 ## Structured Data
 
@@ -76,7 +78,7 @@ measurement assumptions, source quality, and public-language safety.
 
 ## Next Work
 
-- Add a claim-review checklist artifact.
+- Complete qualified review using the claim-review packet.
 - Add full-text extraction tasks for sources already anchored in the source
   registry.
 - Add a public issue template that converts each gap into a contributor task.

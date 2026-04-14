@@ -61,6 +61,7 @@ class Validator:
         self.validate_evidence_claims()
         self.validate_evidence_gap_registers()
         self.validate_public_task_queues()
+        self.validate_expert_review_packets()
         self.validate_mechanism_extractions()
         self.validate_measurement_context_audits()
         self.validate_measurement_glossaries()
@@ -547,6 +548,71 @@ class Validator:
                 if issue_url in seen_issue_urls:
                     self.add_error(path, f"tasks[{index}] duplicate github_issue_url: {issue_url}")
                 seen_issue_urls.add(issue_url)
+
+    def validate_expert_review_packets(self) -> None:
+        schema_path = self.root / "schemas" / "expert-review-packet.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_packets: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "review_packet_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            packet_id = doc.get("review_packet_id")
+            if isinstance(packet_id, str):
+                if packet_id in seen_packets:
+                    self.add_error(path, f"duplicate review_packet_id: {packet_id}")
+                seen_packets.add(packet_id)
+            self.validate_expert_review_packet_items(path, doc)
+
+    def validate_expert_review_packet_items(self, path: Path, doc: dict[str, Any]) -> None:
+        status_boundary = " ".join(
+            item for item in doc.get("review_status_boundary", []) if isinstance(item, str)
+        ).lower()
+        if "source-checked" not in status_boundary or "expert-reviewed" not in status_boundary:
+            self.add_error(path, "review_status_boundary must separate source-checked from expert-reviewed status")
+
+        completion_gate = " ".join(item for item in doc.get("completion_gate", []) if isinstance(item, str)).lower()
+        if "qualified" not in completion_gate or "reviewer" not in completion_gate:
+            self.add_error(path, "completion_gate must require qualified reviewer completion")
+
+        review = doc.get("review")
+        review_status = review.get("review_status") if isinstance(review, dict) else None
+        items = doc.get("review_items")
+        if not isinstance(items, list):
+            return
+
+        seen_items: set[str] = set()
+        has_needs_expert_review = False
+        for index, item in enumerate(items):
+            if not isinstance(item, dict):
+                continue
+
+            item_id = item.get("review_item_id")
+            if isinstance(item_id, str):
+                if item_id in seen_items:
+                    self.add_error(path, f"review_items[{index}] duplicate review_item_id: {item_id}")
+                seen_items.add(item_id)
+
+            if item.get("current_public_status") == "expert-review-needed":
+                has_needs_expert_review = True
+
+            for key in ("linked_claim_ids", "linked_gap_ids", "source_ids"):
+                values = item.get(key)
+                if not isinstance(values, list) or not values:
+                    self.add_error(path, f"review_items[{index}].{key} must map to at least one ID")
+
+            safety_boundary = " ".join(
+                value for value in item.get("safety_boundary", []) if isinstance(value, str)
+            ).lower()
+            if "not" not in safety_boundary or "recommendation" not in safety_boundary:
+                self.add_error(path, f"review_items[{index}].safety_boundary must preserve no-recommendation language")
+
+        if has_needs_expert_review and review_status == "expert-reviewed":
+            self.add_error(path, "packet cannot be expert-reviewed while review items still need expert review")
 
     def validate_evidence_claims(self) -> None:
         schema_path = self.root / "schemas" / "evidence-claim.schema.json"

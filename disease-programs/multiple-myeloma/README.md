@@ -32,6 +32,7 @@ research directions deserve structured public tracking.
 - `mechanisms/`: mechanism maps and relapse-biology notes
 - `measurements/`: MRD, response, relapse, and endpoint definitions
 - `public-tasks/`: contribution-ready tasks derived from evidence gaps
+- `reviews/`: public expert-review packets and review-readiness protocols
 - `trial-maps/`: trial-query outputs and derived public trial landscapes
 - `opportunity-map-v0.json`: first scored map of research/tooling opportunities
 
@@ -45,6 +46,7 @@ research directions deserve structured public tracking.
 - [MRD And Relapse Measurement Glossary v0](measurements/mrd-and-relapse-measurement-glossary-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
+- [BCMA Claim Set Expert Review Packet v0](reviews/bcma-claim-set-expert-review-packet-v0.md)
 
 ## Source Anchors
 

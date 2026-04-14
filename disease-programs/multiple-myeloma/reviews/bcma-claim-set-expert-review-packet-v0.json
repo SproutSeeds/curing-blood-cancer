@@ -1,0 +1,322 @@
+{
+  "review_packet_id": "bcma-claim-set-expert-review-packet-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "title": "BCMA Claim Set Expert Review Packet v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-directed therapy",
+    "post-BCMA relapse",
+    "post-CAR T relapse",
+    "expert review readiness"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "review_scope": [
+    "claim scope",
+    "measurement assumptions",
+    "source quality",
+    "translational and preclinical boundaries",
+    "safety language",
+    "public readability",
+    "unsupported inference"
+  ],
+  "target_artifacts": [
+    {
+      "artifact_id": "bcma-antigen-escape-claim-set-v0",
+      "path": "disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.md",
+      "current_review_status": "source-checked",
+      "review_goal": "Review claim scope, evidence level, measurement assumptions, safety language, and unsupported inference."
+    },
+    {
+      "artifact_id": "bcma-antigen-escape-evidence-gap-register-v0",
+      "path": "disease-programs/multiple-myeloma/evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "current_review_status": "source-checked",
+      "review_goal": "Review whether gaps and next actions are the right public work queue for the current evidence."
+    },
+    {
+      "artifact_id": "bcma-measurement-context-audit-v0",
+      "path": "disease-programs/multiple-myeloma/measurements/bcma-measurement-context-audit-v0.md",
+      "current_review_status": "source-checked",
+      "review_goal": "Review whether the measurement-context fields are sufficient before stronger claims are attempted."
+    },
+    {
+      "artifact_id": "post-car-t-relapse-mechanism-coverage-v0",
+      "path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-coverage-v0.md",
+      "current_review_status": "source-checked",
+      "review_goal": "Review whether coverage gaps are framed as artifact gaps rather than mechanism rankings."
+    }
+  ],
+  "claim_set_ids": [
+    "bcma-antigen-escape-claim-set-v0"
+  ],
+  "gap_register_ids": [
+    "bcma-antigen-escape-evidence-gap-register-v0"
+  ],
+  "linked_gap_ids": [
+    "bcma-escape-frequency-denominator-gap-v0",
+    "bcma-measurement-context-completeness-gap-v0",
+    "alternate-target-clinical-translation-gap-v0",
+    "non-antigen-loss-relapse-buckets-gap-v0",
+    "expert-review-readiness-gap-v0"
+  ],
+  "linked_claim_ids": [
+    "bcma-target-presence-should-be-extracted-v0",
+    "tnfrsf17-loss-is-trackable-escape-signal-v0",
+    "low-bcma-density-supports-alternate-target-research-tracking-v0",
+    "bcma-resistance-is-multifactorial-v0"
+  ],
+  "source_ids": [
+    "pubmed_antigen_escape_bcma_directed_2024",
+    "pubmed_di_meo_2025_sema4a_low_bcma",
+    "pubmed_tedder_bhutani_2025_bcma_resistance",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+  ],
+  "measurement_term_ids": [
+    "bone-marrow-target-status",
+    "soluble-bcma",
+    "antigen-density",
+    "normal-tissue-reactivity-screen",
+    "relapse-or-disease-progression"
+  ],
+  "extraction_record_ids": [
+    "firestone-2024-bcma-antigen-escape-v0",
+    "di-meo-2025-sema4a-low-bcma-v0",
+    "tedder-bhutani-2025-bcma-resistance-review-v0",
+    "ledergor-2024-cd4-car-t-exhaustion-v0"
+  ],
+  "review_status_boundary": [
+    "The target artifacts are source-checked public organization artifacts.",
+    "This packet does not make the target artifacts expert-reviewed.",
+    "Expert-reviewed status requires completed comments from qualified reviewers and a follow-up artifact update."
+  ],
+  "review_items": [
+    {
+      "review_item_id": "target-status-claim-scope-review-v0",
+      "review_focus": "claim-scope",
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0"
+      ],
+      "linked_gap_ids": [
+        "bcma-escape-frequency-denominator-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "soluble-bcma",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "review_questions": [
+        "Is the claim limited to public research extraction fields rather than patient-level interpretation?",
+        "Are assay method, specimen source, timing, paired-measurement context, and denominator fields sufficient before the claim is strengthened?",
+        "Should any wording be weakened before this claim is used in an educational layer?"
+      ],
+      "required_reviewer_roles": [
+        "multiple myeloma clinician or translational scientist",
+        "clinical assay or pathology reviewer"
+      ],
+      "current_public_status": "expert-review-needed",
+      "reviewer_action_needed": "Confirm or revise the claim boundary and minimum measurement fields before any public education summary uses this claim.",
+      "claim_language_action": "weaken-or-clarify",
+      "safety_boundary": [
+        "Not a diagnostic recommendation.",
+        "Not a treatment recommendation.",
+        "Not a trial recommendation."
+      ]
+    },
+    {
+      "review_item_id": "tnfrsf17-loss-biomarker-review-v0",
+      "review_focus": "measurement-assumptions",
+      "linked_claim_ids": [
+        "tnfrsf17-loss-is-trackable-escape-signal-v0"
+      ],
+      "linked_gap_ids": [
+        "bcma-escape-frequency-denominator-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "review_questions": [
+        "Is the TNFRSF17 wording properly limited to a trackable source-specific signal?",
+        "What assay, specimen, and paired-sample context is required before any stronger biomarker claim?",
+        "Does the claim avoid implying a mechanism frequency or product-specific rate?"
+      ],
+      "required_reviewer_roles": [
+        "myeloma genomics or biomarker reviewer",
+        "clinical assay or pathology reviewer"
+      ],
+      "current_public_status": "expert-review-needed",
+      "reviewer_action_needed": "Review whether the biomarker language should stay source-specific or be weakened further.",
+      "claim_language_action": "weaken-or-clarify",
+      "safety_boundary": [
+        "Not a testing recommendation.",
+        "Not a diagnostic recommendation.",
+        "Not a treatment recommendation."
+      ]
+    },
+    {
+      "review_item_id": "sema4a-translation-boundary-review-v0",
+      "review_focus": "translation-boundary",
+      "linked_claim_ids": [
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "linked_gap_ids": [
+        "alternate-target-clinical-translation-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "measurement_term_ids": [
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-sema4a-low-bcma-v0"
+      ],
+      "review_questions": [
+        "Does the claim keep target biology separate from clinical efficacy?",
+        "Does the extraction preserve normal-tissue reactivity and safety context without claiming clinical safety?",
+        "Is the trial-registry boundary clear enough for public readers?"
+      ],
+      "required_reviewer_roles": [
+        "CAR T or cell-therapy translational scientist",
+        "immunotherapy safety reviewer"
+      ],
+      "current_public_status": "expert-review-needed",
+      "reviewer_action_needed": "Confirm that SEMA4A remains an alternate-target research signal only until clinical and safety evidence supports stronger language.",
+      "claim_language_action": "keep-boundary",
+      "safety_boundary": [
+        "Not a treatment recommendation.",
+        "Not a trial recommendation.",
+        "Not a clinical safety claim."
+      ]
+    },
+    {
+      "review_item_id": "multifactorial-resistance-scope-review-v0",
+      "review_focus": "unsupported-inference",
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "source_ids": [
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "tedder-bhutani-2025-bcma-resistance-review-v0",
+        "ledergor-2024-cd4-car-t-exhaustion-v0"
+      ],
+      "review_questions": [
+        "Does the claim appropriately prevent antigen-escape over-weighting without ranking mechanisms?",
+        "Which non-antigen-loss buckets need first or second source extraction before comparison?",
+        "Does the current language avoid implying that any resistance-overcoming strategy improves survival?"
+      ],
+      "required_reviewer_roles": [
+        "multiple myeloma clinician or translational scientist",
+        "CAR T immune-state or tumor-microenvironment reviewer"
+      ],
+      "current_public_status": "expert-review-needed",
+      "reviewer_action_needed": "Review whether the multifactorial framing is accurate, readable, and appropriately bounded.",
+      "claim_language_action": "keep-boundary",
+      "safety_boundary": [
+        "Not a treatment recommendation.",
+        "Not a trial recommendation.",
+        "Not a mechanism ranking."
+      ]
+    },
+    {
+      "review_item_id": "public-language-safety-review-v0",
+      "review_focus": "public-readability",
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "tnfrsf17-loss-is-trackable-escape-signal-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0",
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "soluble-bcma",
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0",
+        "di-meo-2025-sema4a-low-bcma-v0",
+        "tedder-bhutani-2025-bcma-resistance-review-v0",
+        "ledergor-2024-cd4-car-t-exhaustion-v0"
+      ],
+      "review_questions": [
+        "Would a patient, advocate, or builder mistake any claim for medical guidance?",
+        "Are source-checked, expert-review-needed, and expert-reviewed statuses visually and textually distinct?",
+        "Are all unsupported cure, treatment, trial, diagnostic, frequency, and safety inferences blocked?"
+      ],
+      "required_reviewer_roles": [
+        "patient-facing science communicator",
+        "multiple myeloma clinician or translational scientist"
+      ],
+      "current_public_status": "expert-review-needed",
+      "reviewer_action_needed": "Review public language before any patient-facing explainer or evidence-strength summary is created.",
+      "claim_language_action": "needs-expert-decision",
+      "safety_boundary": [
+        "Not medical advice.",
+        "Not a diagnostic recommendation.",
+        "Not a treatment or trial recommendation."
+      ]
+    }
+  ],
+  "completion_gate": [
+    "At least one qualified reviewer must complete each review item before any target artifact is labeled expert-reviewed.",
+    "Reviewer comments must be mapped back to claim IDs, gap IDs, source IDs, measurement term IDs, and extraction record IDs.",
+    "Any claim-strength increase requires explicit reviewer support and a follow-up pull request.",
+    "Any incomplete evidence should weaken or clarify public wording rather than strengthen it."
+  ],
+  "interpretation_boundary": [
+    "This packet is review infrastructure, not completed expert review.",
+    "This packet is not medical advice, diagnostic guidance, treatment guidance, trial guidance, or a cure claim.",
+    "This packet does not make patient-specific recommendations.",
+    "This packet does not upgrade source-checked claims to expert-reviewed claims."
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "expert-review-needed",
+    "review_notes": [
+      "Created for public issue #5.",
+      "Separates review readiness from completed expert review."
+    ]
+  }
+}

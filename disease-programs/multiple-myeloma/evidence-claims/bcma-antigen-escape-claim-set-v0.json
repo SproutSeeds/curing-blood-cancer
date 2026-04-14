@@ -44,7 +44,7 @@
   "claims": [
     {
       "claim_id": "bcma-target-presence-should-be-extracted-v0",
-      "claim_text": "BCMA target presence, absence, assay type, specimen context, and prior BCMA-directed exposure should be extracted before public maps interpret sequential anti-BCMA strategies.",
+      "claim_text": "BCMA target presence, absence, assay type, specimen context, and prior BCMA-directed exposure should be preserved in public research extraction records before maps interpret sequential anti-BCMA strategy context.",
       "claim_kind": "mechanism",
       "claim_status": "derived",
       "evidence_level": "observational-study",
@@ -79,7 +79,7 @@
     },
     {
       "claim_id": "tnfrsf17-loss-is-trackable-escape-signal-v0",
-      "claim_text": "TNFRSF17 alteration or loss is a source-supported BCMA antigen escape signal to track, especially when paired pre-treatment and relapse samples are available.",
+      "claim_text": "TNFRSF17 alteration or loss is a source-supported BCMA antigen escape field to track within source-specific relapse extractions, especially when paired pre-treatment and relapse samples are available.",
       "claim_kind": "biomarker",
       "claim_status": "derived",
       "evidence_level": "observational-study",
@@ -112,7 +112,7 @@
     },
     {
       "claim_id": "low-bcma-density-supports-alternate-target-research-tracking-v0",
-      "claim_text": "Low-to-negative BCMA expression after BCMA CAR T relapse supports tracking alternate-target research signals, including SEMA4A in the cited translational and preclinical source.",
+      "claim_text": "Low-to-negative BCMA expression after BCMA CAR T relapse is a source-backed reason to track alternate-target research signals, including SEMA4A in the cited translational and preclinical source.",
       "claim_kind": "open-question",
       "claim_status": "open-question",
       "evidence_level": "mechanistic-preclinical",
@@ -147,7 +147,7 @@
     },
     {
       "claim_id": "bcma-resistance-is-multifactorial-v0",
-      "claim_text": "BCMA antigen escape should not be treated as the only relapse mechanism; public maps should continue to track tumor-intrinsic, immune-cell, microenvironment, sequencing, disease-context, and measurement factors.",
+      "claim_text": "BCMA antigen escape should not be treated as the only public relapse-mechanism hypothesis; public maps should continue to track tumor-intrinsic, immune-cell, microenvironment, sequencing, disease-context, and measurement factors.",
       "claim_kind": "mechanism",
       "claim_status": "derived",
       "evidence_level": "source-summary",
@@ -190,7 +190,8 @@
     "review_status": "source-checked",
     "review_notes": [
       "Promoted from four public extraction records under post-car-t-relapse-mechanism-map-v0.",
-      "Claim set is a public evidence-organization artifact, not a clinical summary or treatment guide."
+      "Claim set is a public evidence-organization artifact, not a clinical summary or treatment guide.",
+      "Issue #5 created bcma-claim-set-expert-review-packet-v0; this claim set remains source-checked and is not expert-reviewed."
     ]
   }
 }
