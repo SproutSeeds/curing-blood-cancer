@@ -60,3 +60,14 @@ subtypes.
 - `sources/`: stable public source registries
 - `taxonomies/`: stable classification systems for artifacts and tools
 - `tools/`: scripts and tool prototypes
+
+## Validation
+
+Run the public artifact validator:
+
+```bash
+python3 tools/validate_public_artifacts.py
+```
+
+The validator checks JSON parsing, evidence-claim schema conformance, source ID
+references, taxonomy ID references, and query-record links.
