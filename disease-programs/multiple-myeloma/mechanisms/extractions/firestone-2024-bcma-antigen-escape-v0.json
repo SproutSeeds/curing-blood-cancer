@@ -25,7 +25,7 @@
     "pmid": "38728378",
     "accessed": "2026-04-14",
     "publication_year": 2024,
-    "study_context": "Relapsed/refractory multiple myeloma treated with a BCMA-directed bispecific antibody, including patients with prior BCMA-directed therapy exposure; PubMed abstract and metadata used for this v0 public extraction."
+    "study_context": "Relapsed/refractory multiple myeloma treated with commercial teclistamab, including patients with prior BCMA-directed therapy exposure; PubMed abstract and PMC full-text study design/results sections used for this v0 public extraction."
   },
   "extracted_signals": [
     {
@@ -37,13 +37,36 @@
       "measurement_fields": [
         "prior BCMA-directed therapy exposure",
         "bone marrow plasma-cell BCMA expression",
+        "target-status numerator",
+        "target-status denominator",
+        "denominator basis",
+        "product or class context",
         "immunohistochemistry",
+        "specimen source",
+        "target-assay timing",
+        "relapse or response state",
         "teclistamab response status",
         "anti-BCMA response after prior BCMA therapy"
       ],
+      "denominator_context": {
+        "population_denominator": 50,
+        "numerator_observed": 3,
+        "denominator_basis": "Patients with pre-teclistamab plasma-cell BCMA expression available in bone marrow or plasmacytoma biopsy samples.",
+        "cohort_context": "The source included 72 relapsed/refractory multiple myeloma patients treated with commercial teclistamab; 50 had pretreatment BCMA-expression assessment.",
+        "product_or_class_context": "Subsequent teclistamab treatment; the three BCMA-expression-loss cases previously received non-teclistamab anti-BCMA-directed therapies, including belantamab mafodotin and anti-BCMA CAR T-cell therapy in the reported case narratives.",
+        "prior_bcma_exposure_context": "The source reports 30 of 72 patients had prior BCMA-directed therapy exposure overall; the three BCMA-expression-loss cases had prior non-teclistamab anti-BCMA-directed therapy.",
+        "assay_method": "Immunohistochemistry for BCMA and CD138 on formalin-fixed paraffin-embedded biopsy samples.",
+        "specimen_source": "Bone marrow or plasmacytoma biopsy samples assessed for malignant plasma-cell BCMA expression.",
+        "target_assay_timing": "Pretreatment assessment before teclistamab; the three expression-loss cases also had BCMA expression present before earlier non-teclistamab BCMA-directed therapy.",
+        "relapse_or_response_state": "The three BCMA-expression-loss cases subsequently had no response to teclistamab; one also had no response to ciltacabtagene autoleucel.",
+        "paired_measurement_context": "The article reports paired pre-initial-BCMA-therapy and pre-teclistamab biopsy contrast for the three BCMA-expression-loss cases.",
+        "frequency_claim_support": "source-cohort-count-only",
+        "frequency_claim_boundary": "The 3 of 50 source-cohort target-assessment count may be preserved as denominator context, but it should not be generalized across BCMA-directed products, prior-exposure subgroups, relapse states, or all BCMA-directed therapy recipients without additional source-specific denominators."
+      },
       "limitations": [
-        "Small mechanism-positive subset in the public abstract.",
-        "This extraction does not estimate frequency across all BCMA-directed products.",
+        "Small mechanism-positive subset in one source cohort.",
+        "This extraction preserves a source-cohort target-assessment denominator but does not estimate frequency across all BCMA-directed products.",
+        "The prior-BCMA-exposed denominator within the target-assessed subset is not extracted as a separate denominator in this v0 record.",
         "Treatment response interpretation requires full paper and clinical context."
       ]
     },
@@ -107,10 +130,11 @@
     "what_this_supports": [
       "BCMA antigen loss or low expression should be tracked as a concrete post-BCMA relapse mechanism bucket.",
       "TNFRSF17 alteration, immunohistochemistry target status, and soluble BCMA belong in extraction fields.",
+      "When a source reports target-status numerator and denominator fields, public records should preserve the source-cohort denominator basis before any frequency claim is considered.",
       "Sequential BCMA-directed therapy records should preserve prior BCMA exposure and target-verification context."
     ],
     "what_this_does_not_support": [
-      "It does not estimate antigen-loss frequency across all multiple myeloma relapse after CAR T.",
+      "It does not estimate antigen-loss frequency across all multiple myeloma relapse after BCMA-directed therapy; the 3 of 50 source-cohort target-assessment count is not a general rate.",
       "It does not recommend teclistamab, CAR T, belantamab, or any treatment sequence.",
       "It does not determine patient-specific eligibility or prognosis.",
       "It does not establish that BCMA loss is the only shared resistance mechanism."
@@ -121,9 +145,9 @@
     "last_reviewed": "2026-04-14",
     "review_status": "source-checked",
     "review_notes": [
-      "Built from PubMed ESummary and EFetch metadata/abstract for PMID 38728378.",
-      "Mechanism statements should be converted into evidence claims only after full-text review."
+      "Built from PubMed ESummary/EFetch metadata and PMC full-text study design/results sections for PMID 38728378.",
+      "Updated to preserve numerator, denominator, denominator basis, assay method, specimen source, timing, prior BCMA exposure, and response-state context for issue #4.",
+      "Mechanism statements should be converted into frequency claims only after additional source-specific denominators and expert review."
     ]
   }
 }
-
