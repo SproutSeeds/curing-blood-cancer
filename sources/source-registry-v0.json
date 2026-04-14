@@ -196,12 +196,12 @@
     {
       "source_id": "pubmed_plasma_cell_identity_escape_2025",
       "owner": "PubMed-indexed literature",
-      "source_type": "research article",
+      "source_type": "preprint record",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41415462/",
       "accessed": "2026-04-14",
       "blood_cancer_scope": ["multiple myeloma", "anti-BCMA T-cell redirecting therapy", "plasma-cell identity escape"],
       "claim_uses": ["literature-search", "mechanism-map"],
-      "claim_limits": ["Mechanism findings require source-specific appraisal and should not be treated as clinical guidance."]
+      "claim_limits": ["Preprint; not peer reviewed at access date. Mechanism findings require source-specific appraisal and should not be treated as clinical guidance."]
     },
     {
       "source_id": "pubmed",

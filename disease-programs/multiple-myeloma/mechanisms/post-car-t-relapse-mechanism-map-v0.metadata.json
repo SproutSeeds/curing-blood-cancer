@@ -40,7 +40,7 @@
       "accessed": "2026-04-14"
     },
     {
-      "label": "PubMed literature anchor: plasma-cell identity escape",
+      "label": "PubMed preprint anchor: plasma-cell identity escape",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41415462/",
       "accessed": "2026-04-14"
     }
@@ -55,4 +55,3 @@
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/post-car-t-relapse-mechanism-map-v0.md"
 }
-
