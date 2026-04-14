@@ -66,8 +66,14 @@ subtypes.
 Run the public artifact validator:
 
 ```bash
-python3 tools/validate_public_artifacts.py
+make validate
 ```
 
 The validator checks JSON parsing, evidence-claim schema conformance, source ID
 references, taxonomy ID references, and query-record links.
+
+You can also call the validator directly:
+
+```bash
+python3 tools/validate_public_artifacts.py
+```
