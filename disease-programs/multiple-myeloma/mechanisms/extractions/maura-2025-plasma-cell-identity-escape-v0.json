@@ -137,7 +137,8 @@
     "review_notes": [
       "Built from NCBI EFetch PubMed XML for PMID 41415462 and the linked PMC preprint page PMCID PMC12710967.",
       "Preserves preprint status and separates observational human signals from mechanistic preclinical mouse-model support.",
-      "Created to complete public issue #14 as first-extraction coverage for plasma-cell identity or lineage-state escape."
+      "Created to complete public issue #14 as first-extraction coverage for plasma-cell identity or lineage-state escape.",
+      "The public extraction surface is stewarded by frg.earth; scientific claims remain source-scoped to the cited public records."
     ]
   }
 }
