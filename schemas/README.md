@@ -8,7 +8,15 @@ without weakening the repo's safety boundaries.
 ## Current Schemas
 
 - [Artifact Metadata Schema](./artifact-metadata.schema.json)
+- [Artifact Catalog Schema](./artifact-catalog.schema.json)
+- [Claim Set Schema](./claim-set.schema.json)
 - [Evidence Claim Schema v0](./evidence-claim.schema.json)
+- [Evidence Gap Register Schema](./evidence-gap-register.schema.json)
+- [Mechanism Extraction Schema](./mechanism-extraction.schema.json)
+- [Mechanism Map Schema](./mechanism-map.schema.json)
+- [Measurement Glossary Schema](./measurement-glossary.schema.json)
+- [Opportunity Map Schema](./opportunity-map.schema.json)
+- [Public Task Queue Schema](./public-task-queue.schema.json)
 
 ## Templates And Examples
 

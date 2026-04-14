@@ -1,0 +1,196 @@
+{
+  "claim_set_id": "bcma-antigen-escape-claim-set-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "claim_set_title": "BCMA Antigen Escape Claim Set v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-directed therapy",
+    "post-BCMA relapse",
+    "post-CAR T relapse"
+  ],
+  "parent_map_id": "post-car-t-relapse-mechanism-map-v0",
+  "clinical_use_boundary": "research-use-only",
+  "source_ids": [
+    "pubmed_antigen_escape_bcma_directed_2024",
+    "pubmed_di_meo_2025_sema4a_low_bcma",
+    "pubmed_tedder_bhutani_2025_bcma_resistance",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_car_t_cell_therapy",
+    "myeloma_class_bispecific_antibody",
+    "myeloma_class_antibody_drug_conjugate"
+  ],
+  "mechanism_group_ids": [
+    "bcma-antigen-loss-or-low-density-v0",
+    "sequential-or-dual-target-immune-pressure-v0",
+    "measurement-and-follow-up-gaps-v0",
+    "car-t-fitness-exhaustion-persistence-v0"
+  ],
+  "extraction_record_ids": [
+    "firestone-2024-bcma-antigen-escape-v0",
+    "di-meo-2025-sema4a-low-bcma-v0",
+    "tedder-bhutani-2025-bcma-resistance-review-v0",
+    "ledergor-2024-cd4-car-t-exhaustion-v0"
+  ],
+  "measurement_term_ids": [
+    "bone-marrow-target-status",
+    "soluble-bcma",
+    "antigen-density",
+    "normal-tissue-reactivity-screen",
+    "relapse-or-disease-progression"
+  ],
+  "claims": [
+    {
+      "claim_id": "bcma-target-presence-should-be-extracted-v0",
+      "claim_text": "BCMA target presence, absence, assay type, specimen context, and prior BCMA-directed exposure should be extracted before public maps interpret sequential anti-BCMA strategies.",
+      "claim_kind": "mechanism",
+      "claim_status": "derived",
+      "evidence_level": "observational-study",
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "soluble-bcma",
+        "relapse-or-disease-progression"
+      ],
+      "supports": [
+        "Adding target-status fields to post-BCMA relapse extraction records.",
+        "Preserving prior BCMA-directed exposure and target-verification context in sequential therapy maps."
+      ],
+      "does_not_support": [
+        "Choosing, ranking, or sequencing treatment.",
+        "Using soluble BCMA or marrow BCMA status as a standalone patient-specific rule."
+      ],
+      "limitations": [
+        "The v0 public claim is built from extracted public abstract and metadata fields.",
+        "Assay method, timing, specimen source, and full clinical context need expert review."
+      ]
+    },
+    {
+      "claim_id": "tnfrsf17-loss-is-trackable-escape-signal-v0",
+      "claim_text": "TNFRSF17 alteration or loss is a source-supported BCMA antigen escape signal to track, especially when paired pre-treatment and relapse samples are available.",
+      "claim_kind": "biomarker",
+      "claim_status": "derived",
+      "evidence_level": "observational-study",
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "relapse-or-disease-progression"
+      ],
+      "supports": [
+        "Tracking TNFRSF17 status as a target-alteration field in BCMA relapse maps.",
+        "Separating target-alteration evidence from broader low-antigen-density observations."
+      ],
+      "does_not_support": [
+        "Estimating TNFRSF17-loss frequency across all BCMA-directed products or disease states.",
+        "Treating one target-alteration signal as proof that antigen escape explains every relapse."
+      ],
+      "limitations": [
+        "The source extraction records a small mechanism-positive subset and one genetic observation from the public abstract.",
+        "Frequency, assay reproducibility, and product-specific context require fuller review."
+      ]
+    },
+    {
+      "claim_id": "low-bcma-density-supports-alternate-target-research-tracking-v0",
+      "claim_text": "Low-to-negative BCMA expression after BCMA CAR T relapse supports tracking alternate-target research signals, including SEMA4A in the cited translational and preclinical source.",
+      "claim_kind": "open-question",
+      "claim_status": "open-question",
+      "evidence_level": "mechanistic-preclinical",
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-sema4a-low-bcma-v0"
+      ],
+      "measurement_term_ids": [
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
+      ],
+      "supports": [
+        "Creating alternate-target research fields that preserve target density, normal-tissue reactivity, model context, and clinical translation status.",
+        "Tracking SEMA4A as a candidate alternate-target signal in post-BCMA relapse maps."
+      ],
+      "does_not_support": [
+        "Claiming SEMA4A-directed CAR T therapy works in patients.",
+        "Recommending a SEMA4A-directed trial or any alternate-target intervention."
+      ],
+      "limitations": [
+        "The public extraction is translational and preclinical.",
+        "Target expression and preclinical activity are not the same as clinical efficacy or safety."
+      ]
+    },
+    {
+      "claim_id": "bcma-resistance-is-multifactorial-v0",
+      "claim_text": "BCMA antigen escape should not be treated as the only relapse mechanism; public maps should continue to track tumor-intrinsic, immune-cell, microenvironment, sequencing, disease-context, and measurement factors.",
+      "claim_kind": "mechanism",
+      "claim_status": "derived",
+      "evidence_level": "source-summary",
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "car-t-fitness-exhaustion-persistence-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "source_ids": [
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "extraction_record_ids": [
+        "tedder-bhutani-2025-bcma-resistance-review-v0",
+        "ledergor-2024-cd4-car-t-exhaustion-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression"
+      ],
+      "supports": [
+        "Keeping the post-CAR T relapse map multi-bucket rather than reducing relapse to antigen loss alone.",
+        "Preserving immune profiling, genomic profiling, sequencing, persistence, exhaustion, microenvironment, and measurement fields for later review."
+      ],
+      "does_not_support": [
+        "Proving any resistance-overcoming strategy improves survival.",
+        "Ranking BCMA-directed CAR T-cell therapy, bispecific antibodies, or other intervention classes.",
+        "Making a cure claim."
+      ],
+      "limitations": [
+        "Review framing and observational immune-state signals require source-by-source extraction before scoring.",
+        "Mechanism categories may overlap and can be confounded by product, disease state, prior therapy, and measurement timing."
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Promoted from four public extraction records under post-car-t-relapse-mechanism-map-v0.",
+      "Claim set is a public evidence-organization artifact, not a clinical summary or treatment guide."
+    ]
+  }
+}

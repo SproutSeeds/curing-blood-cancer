@@ -1,0 +1,214 @@
+{
+  "catalog_id": "public-artifact-catalog-v0",
+  "date": "2026-04-14",
+  "title": "Public Artifact Catalog v0",
+  "clinical_use_boundary": "research-use-only",
+  "generated_from": "*.metadata.json files tracked in the public repo",
+  "entries": [
+    {
+      "artifact_id": "curing-blood-cancer-concept-map-v0",
+      "title": "Curing Blood Cancer Concept Map v0",
+      "artifact_class": "map",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "leukemia",
+        "lymphoma",
+        "multiple myeloma and plasma-cell disorders",
+        "myelodysplastic syndromes",
+        "myeloproliferative neoplasms"
+      ],
+      "path": "artifacts/curing-blood-cancer-concept-map-v0.md",
+      "metadata_path": "artifacts/curing-blood-cancer-concept-map-v0.metadata.json",
+      "source_count": 11,
+      "limitation_count": 4
+    },
+    {
+      "artifact_id": "public-artifact-catalog-v0",
+      "title": "Public Artifact Catalog v0",
+      "artifact_class": "dataset",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "all blood-cancer subtypes",
+        "multiple myeloma and plasma-cell disorders"
+      ],
+      "path": "artifacts/public-artifact-catalog-v0.md",
+      "metadata_path": "artifacts/public-artifact-catalog-v0.metadata.json",
+      "source_count": 1,
+      "limitation_count": 4
+    },
+    {
+      "artifact_id": "multiple-myeloma-durable-mrd-negative-remission-wedge-v0",
+      "title": "Multiple Myeloma Durable MRD-Negative Remission Cure Wedge v0",
+      "artifact_class": "map",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease"
+      ],
+      "path": "disease-programs/multiple-myeloma/cure-wedge-durable-mrd-negative-remission-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/cure-wedge-durable-mrd-negative-remission-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 5
+    },
+    {
+      "artifact_id": "bcma-antigen-escape-claim-set-v0",
+      "title": "BCMA Antigen Escape Claim Set v0",
+      "artifact_class": "dataset",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-directed therapy",
+        "post-BCMA relapse",
+        "post-CAR T relapse"
+      ],
+      "path": "disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.metadata.json",
+      "source_count": 4,
+      "limitation_count": 8
+    },
+    {
+      "artifact_id": "bcma-antigen-escape-evidence-gap-register-v0",
+      "title": "BCMA Antigen Escape Evidence Gap Register v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-directed therapy",
+        "post-BCMA relapse",
+        "post-CAR T relapse"
+      ],
+      "path": "disease-programs/multiple-myeloma/evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.metadata.json",
+      "source_count": 4,
+      "limitation_count": 8
+    },
+    {
+      "artifact_id": "mrd-and-relapse-measurement-glossary-v0",
+      "title": "MRD And Relapse Measurement Glossary v0",
+      "artifact_class": "dataset",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "response assessment",
+        "relapse assessment"
+      ],
+      "path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.metadata.json",
+      "source_count": 6,
+      "limitation_count": 7
+    },
+    {
+      "artifact_id": "post-car-t-relapse-extraction-guide-v0",
+      "title": "Post-CAR T Relapse Extraction Guide v0",
+      "artifact_class": "protocol",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-targeted CAR T-cell therapy",
+        "post-CAR T relapse"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-extraction-guide-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-extraction-guide-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 5
+    },
+    {
+      "artifact_id": "post-car-t-relapse-mechanism-map-v0",
+      "title": "Post-CAR T Relapse Mechanism Map v0",
+      "artifact_class": "map",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-targeted CAR T-cell therapy",
+        "post-CAR T relapse"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-map-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-map-v0.metadata.json",
+      "source_count": 7,
+      "limitation_count": 6
+    },
+    {
+      "artifact_id": "bcma-antigen-escape-public-task-queue-v0",
+      "title": "BCMA Antigen Escape Public Task Queue v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-directed therapy",
+        "post-BCMA relapse",
+        "post-CAR T relapse"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-tasks/bcma-antigen-escape-public-task-queue-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/bcma-antigen-escape-public-task-queue-v0.metadata.json",
+      "source_count": 2,
+      "limitation_count": 7
+    },
+    {
+      "artifact_id": "clinicaltrials-gov-query-protocol-v0",
+      "title": "ClinicalTrials.gov Query Protocol v0",
+      "artifact_class": "protocol",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "all blood-cancer subtypes"
+      ],
+      "path": "protocols/clinicaltrials-gov-query-protocol-v0.md",
+      "metadata_path": "protocols/clinicaltrials-gov-query-protocol-v0.metadata.json",
+      "source_count": 3,
+      "limitation_count": 4
+    },
+    {
+      "artifact_id": "evidence-claim-schema-v0",
+      "title": "Evidence Claim Schema v0",
+      "artifact_class": "schema",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "all blood-cancer subtypes"
+      ],
+      "path": "schemas/evidence-claim-schema-v0.md",
+      "metadata_path": "schemas/evidence-claim-schema-v0.metadata.json",
+      "source_count": 2,
+      "limitation_count": 3
+    },
+    {
+      "artifact_id": "source-registry-v0",
+      "title": "Source Registry v0",
+      "artifact_class": "dataset",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "leukemia",
+        "lymphoma",
+        "multiple myeloma and plasma-cell disorders",
+        "myelodysplastic syndromes",
+        "myeloproliferative neoplasms"
+      ],
+      "path": "sources/source-registry-v0.md",
+      "metadata_path": "sources/source-registry-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 4
+    },
+    {
+      "artifact_id": "multiple-myeloma-treatment-class-taxonomy-v0",
+      "title": "Multiple Myeloma Treatment-Class Taxonomy v0",
+      "artifact_class": "taxonomy",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease"
+      ],
+      "path": "taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.md",
+      "metadata_path": "taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.metadata.json",
+      "source_count": 4,
+      "limitation_count": 4
+    }
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Generated from public artifact metadata files.",
+      "Reviewed for public-safe navigation scope and research-use-only boundary."
+    ]
+  }
+}

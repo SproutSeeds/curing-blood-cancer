@@ -1,0 +1,45 @@
+{
+  "artifact_id": "bcma-antigen-escape-claim-set-v0",
+  "title": "BCMA Antigen Escape Claim Set v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-directed therapy",
+    "post-BCMA relapse",
+    "post-CAR T relapse"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "PubMed literature anchor: antigen escape after BCMA-directed therapy",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38728378/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: SEMA4A and low BCMA antigen density",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41072416/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: BCMA resistance review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40710330/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: CD4 CAR T exhaustion",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not estimate mechanism frequency.",
+    "Does not establish clinical efficacy for any intervention.",
+    "Requires expert review before use as an educational anchor."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/bcma-antigen-escape-claim-set-v0.md"
+}

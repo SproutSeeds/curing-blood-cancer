@@ -1,0 +1,71 @@
+name: Expert Review Task
+description: Request review of public artifact scope, evidence, or safety language.
+title: "[expert review]: "
+labels:
+  - expert-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Stewarded by [frg.earth](https://frg.earth/).
+
+        Expert review should tighten public artifacts. It should not provide patient-specific medical advice, diagnosis, treatment recommendations, trial recommendations, or unsupported cure claims.
+  - type: input
+    id: artifact
+    attributes:
+      label: Artifact To Review
+      description: Path, claim ID, gap ID, extraction record ID, or measurement term ID.
+      placeholder: disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.md
+    validations:
+      required: true
+  - type: dropdown
+    id: review_lens
+    attributes:
+      label: Review Lens
+      options:
+        - clinical safety language
+        - source quality
+        - assay or measurement context
+        - mechanism biology
+        - translational or preclinical boundary
+        - patient-facing readability
+        - schema or data model
+    validations:
+      required: true
+  - type: textarea
+    id: review_findings
+    attributes:
+      label: Review Findings
+      description: Concrete issues, corrections, missing context, or wording changes.
+    validations:
+      required: true
+  - type: textarea
+    id: source_support
+    attributes:
+      label: Source Support
+      description: Source IDs, PMIDs, URLs, registry IDs, or regulatory anchors for the review.
+    validations:
+      required: true
+  - type: textarea
+    id: not_supported
+    attributes:
+      label: What This Review Does Not Support
+      description: State what readers must not infer from this review.
+      placeholder: This review does not recommend treatment, testing, or trial participation.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety Check
+      options:
+        - label: This issue contains no patient-identifying data.
+          required: true
+        - label: This issue contains no private records, portal exports, credentials, or restricted data.
+          required: true
+        - label: This issue is not patient-specific medical advice.
+          required: true
+        - label: This issue does not make a diagnostic, treatment, or trial recommendation.
+          required: true
+        - label: This issue does not claim that a cure or vaccine has been found.
+          required: true

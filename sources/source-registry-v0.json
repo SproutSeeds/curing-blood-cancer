@@ -1,6 +1,6 @@
 {
   "registry_id": "source-registry-v0",
-  "date": "2026-04-11",
+  "date": "2026-04-14",
   "scope": "public source anchors for Curing Blood Cancer artifacts",
   "records": [
     {
@@ -142,6 +142,96 @@
       "blood_cancer_scope": ["all registered blood-cancer studies"],
       "claim_uses": ["trial-search", "data-reuse"],
       "claim_limits": ["API output is a registry snapshot; trial details, status, eligibility, and site availability still require verification."]
+    },
+    {
+      "source_id": "pubmed_kumar_2016_imwg_mrd_response_criteria",
+      "owner": "PubMed-indexed literature",
+      "source_type": "consensus statement",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27511158/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "response criteria", "minimal residual disease"],
+      "claim_uses": ["literature-search", "measurement-standard"],
+      "claim_limits": ["Consensus criteria; use for public measurement definitions, not patient-specific interpretation."]
+    },
+    {
+      "source_id": "pubmed_munshi_2017_mrd_survival_meta_analysis",
+      "owner": "PubMed-indexed literature",
+      "source_type": "meta-analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27632282/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "minimal residual disease", "survival outcomes"],
+      "claim_uses": ["literature-search", "measurement-standard"],
+      "claim_limits": ["Outcome association does not provide patient-specific prognosis or prove a treatment strategy."]
+    },
+    {
+      "source_id": "pubmed_soh_2022_mrd_flow_harmonization",
+      "owner": "PubMed-indexed literature",
+      "source_type": "research article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35005838/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "measurable residual disease", "flow cytometry"],
+      "claim_uses": ["literature-search", "measurement-standard", "data-reuse"],
+      "claim_limits": ["Flow-cytometry harmonization source; does not replace local laboratory validation or clinical interpretation."]
+    },
+    {
+      "source_id": "pubmed_tedder_bhutani_2025_bcma_resistance",
+      "owner": "PubMed-indexed literature",
+      "source_type": "review article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40710330/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "BCMA-targeted CAR T-cell therapy", "BCMA-targeted bispecific antibodies"],
+      "claim_uses": ["literature-search", "mechanism-map"],
+      "claim_limits": ["Review article; use for mechanism framing, not patient-specific treatment selection."]
+    },
+    {
+      "source_id": "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+      "owner": "PubMed-indexed literature",
+      "source_type": "research article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "BCMA-targeted CAR T-cell therapy", "T-cell exhaustion"],
+      "claim_uses": ["literature-search", "mechanism-map"],
+      "claim_limits": ["Study context and cohort details require paper-level appraisal before strong claims."]
+    },
+    {
+      "source_id": "pubmed_antigen_escape_bcma_directed_2024",
+      "owner": "PubMed-indexed literature",
+      "source_type": "research article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38728378/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "BCMA-directed therapy", "antigen escape"],
+      "claim_uses": ["literature-search", "mechanism-map"],
+      "claim_limits": ["Mechanism observations should not be generalized beyond the studied context without review."]
+    },
+    {
+      "source_id": "pubmed_yue_2025_bcma_resistance",
+      "owner": "PubMed-indexed literature",
+      "source_type": "review article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39818472/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "BCMA-targeted immunotherapy", "resistance mechanisms"],
+      "claim_uses": ["literature-search", "mechanism-map"],
+      "claim_limits": ["Review article; mechanism categories require source-specific extraction before quantitative use."]
+    },
+    {
+      "source_id": "pubmed_di_meo_2025_sema4a_low_bcma",
+      "owner": "PubMed-indexed literature",
+      "source_type": "research article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41072416/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "BCMA-low relapse", "candidate alternate target"],
+      "claim_uses": ["literature-search", "mechanism-map"],
+      "claim_limits": ["Preclinical and translational findings do not establish clinical efficacy."]
+    },
+    {
+      "source_id": "pubmed_plasma_cell_identity_escape_2025",
+      "owner": "PubMed-indexed literature",
+      "source_type": "preprint record",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41415462/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "anti-BCMA T-cell redirecting therapy", "plasma-cell identity escape"],
+      "claim_uses": ["literature-search", "mechanism-map"],
+      "claim_limits": ["Preprint; not peer reviewed at access date. Mechanism findings require source-specific appraisal and should not be treated as clinical guidance."]
     },
     {
       "source_id": "pubmed",

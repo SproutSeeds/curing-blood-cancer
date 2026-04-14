@@ -1,0 +1,20 @@
+# Multiple Myeloma Measurements
+
+Stewarded by [frg.earth](https://frg.earth/).
+
+This directory holds public measurement definitions and endpoint guardrails for
+the multiple myeloma disease program.
+
+## Current Artifacts
+
+- [MRD and Relapse Measurement Glossary v0](mrd-and-relapse-measurement-glossary-v0.md)
+
+## Boundary
+
+- Research artifacts only.
+- Not medical advice.
+- Not diagnostic guidance.
+- Not a treatment recommendation.
+- Not a trial recommendation.
+- Measurement terms must preserve source IDs, assay context, specimen context,
+  time point, sensitivity threshold, and uncertainty when available.

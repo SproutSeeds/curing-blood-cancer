@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/curing-blood-cancer/opportunity-map.schema.json",
+  "title": "Curing Blood Cancer Opportunity Map",
+  "type": "object",
+  "required": [
+    "map_id",
+    "date",
+    "disease_program",
+    "cure_wedge",
+    "clinical_use_boundary",
+    "scoring_rubric",
+    "opportunities",
+    "review"
+  ],
+  "properties": {
+    "map_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-v[0-9]+$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "disease_program": {
+      "type": "string"
+    },
+    "cure_wedge": {
+      "type": "string"
+    },
+    "clinical_use_boundary": {
+      "type": "string",
+      "enum": [
+        "not-medical-advice",
+        "not-treatment-recommendation",
+        "not-trial-recommendation",
+        "research-use-only",
+        "requires-clinician-review"
+      ]
+    },
+    "scoring_rubric": {
+      "type": "object",
+      "required": ["scale", "dimensions", "score_total_interpretation"],
+      "properties": {
+        "scale": {
+          "type": "string"
+        },
+        "dimensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "score_total_interpretation": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "opportunities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "rank",
+          "opportunity_id",
+          "title",
+          "question",
+          "why_it_matters",
+          "artifact_next_step",
+          "source_ids",
+          "evidence_level",
+          "scores",
+          "score_total",
+          "limitations"
+        ],
+        "properties": {
+          "rank": {
+            "type": "integer"
+          },
+          "opportunity_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-v[0-9]+$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "question": {
+            "type": "string"
+          },
+          "why_it_matters": {
+            "type": "string"
+          },
+          "artifact_next_step": {
+            "type": "string"
+          },
+          "source_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "taxonomy_class_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "evidence_level": {
+            "type": "string",
+            "enum": [
+              "source-summary",
+              "registry-record",
+              "regulatory-record",
+              "observational-study",
+              "clinical-trial",
+              "systematic-review",
+              "mechanistic-preclinical",
+              "expert-review-needed",
+              "hypothesis-only"
+            ]
+          },
+          "scores": {
+            "type": "object",
+            "required": [
+              "unmet_need",
+              "evidence_signal",
+              "tractability",
+              "measurement_readiness",
+              "public_data_readiness",
+              "patient_safety_boundary"
+            ],
+            "properties": {
+              "unmet_need": {
+                "type": "integer"
+              },
+              "evidence_signal": {
+                "type": "integer"
+              },
+              "tractability": {
+                "type": "integer"
+              },
+              "measurement_readiness": {
+                "type": "integer"
+              },
+              "public_data_readiness": {
+                "type": "integer"
+              },
+              "patient_safety_boundary": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": false
+          },
+          "score_total": {
+            "type": "integer"
+          },
+          "limitations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": ["created", "last_reviewed", "review_status"],
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date"
+        },
+        "last_reviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "source-checked",
+            "expert-review-needed",
+            "expert-reviewed",
+            "deprecated"
+          ]
+        },
+        "review_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
+

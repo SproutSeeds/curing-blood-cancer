@@ -2,6 +2,8 @@
 
 Public artifacts for blood-cancer cure and vaccine discovery tooling.
 
+Stewarded by [frg.earth](https://frg.earth/).
+
 This repo exists to make complex biomedical evidence easier to inspect,
 combine, question, and reuse. It is the public downstream surface for work
 prepared in the private lab repo at `../curing-blood-cancer-lab`.
@@ -44,14 +46,15 @@ data, and reproducible methods.
 
 ## First Focus
 
-The first concrete focus is multiple myeloma and related plasma-cell disorders,
-with artifacts designed so the public surface can expand across blood-cancer
-subtypes.
+The first concrete focus is [multiple myeloma and related plasma-cell
+disorders](disease-programs/multiple-myeloma/README.md), with artifacts
+designed so the public surface can expand across blood-cancer subtypes.
 
 ## Repository Map
 
 - `artifacts/`: public maps, taxonomies, and explanatory outputs
 - `datasets/`: redistributable data products and manifests
+- `disease-programs/`: focused blood-cancer disease lanes
 - `docs/`: public documentation and workflow notes
 - `examples/`: small worked examples
 - `governance/`: contribution, safety, and publication rules
@@ -69,11 +72,45 @@ Run the public artifact validator:
 make validate
 ```
 
-The validator checks JSON parsing, evidence-claim schema conformance, source ID
-references, taxonomy ID references, and query-record links.
+The validator checks JSON parsing, claim-set, evidence-claim, and evidence-gap
+schema conformance, artifact metadata, artifact catalogs, measurement
+glossaries, mechanism maps, mechanism extractions, source ID references,
+taxonomy ID references, mechanism-group links, extraction-record links,
+measurement-term links, claim links, public-task links, and query-record links.
 
 You can also call the validator directly:
 
 ```bash
 python3 tools/validate_public_artifacts.py
 ```
+
+List public artifact metadata records:
+
+```bash
+make list-public-artifacts
+```
+
+List structured claim sets and their measurement dependencies:
+
+```bash
+make list-claim-sets
+```
+
+List evidence gaps and their linked claims:
+
+```bash
+make list-evidence-gaps
+```
+
+List contribution-ready public tasks:
+
+```bash
+make list-public-tasks
+```
+
+## Contributing
+
+Use [CONTRIBUTING.md](CONTRIBUTING.md) and the GitHub issue forms for evidence
+gap tasks, source extraction tasks, and expert review tasks. Contributions must
+preserve source IDs, disease scope, measurement context, uncertainty, and the
+public safety boundary.

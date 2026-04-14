@@ -20,6 +20,7 @@ from urllib.parse import urlparse
 
 SKIP_SCHEMA_VALIDATION = {
     "schemas/evidence-claim-template-v0.json",
+    "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-extraction-template-v0.json",
 }
 
 
@@ -43,12 +44,35 @@ class Validator:
             return 1
 
         source_ids = self.collect_source_ids()
+        artifact_metadata = self.validate_artifact_metadata()
         taxonomy_ids = self.collect_taxonomy_ids()
         query_record_ids = self.collect_query_record_ids()
+        mechanism_group_ids = self.collect_mechanism_group_ids()
+        extraction_record_ids = self.collect_extraction_record_ids()
+        measurement_term_ids = self.collect_measurement_term_ids()
+        claim_set_ids = self.collect_claim_set_ids()
+        claim_ids = self.collect_claim_ids()
+        gap_register_ids = self.collect_gap_register_ids()
+        gap_ids = self.collect_gap_ids()
 
+        self.validate_claim_sets()
+        self.validate_artifact_catalogs(artifact_metadata)
         self.validate_evidence_claims()
+        self.validate_evidence_gap_registers()
+        self.validate_public_task_queues()
+        self.validate_mechanism_extractions()
+        self.validate_measurement_glossaries()
+        self.validate_mechanism_maps()
+        self.validate_opportunity_maps()
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
+        self.validate_mechanism_group_references(mechanism_group_ids)
+        self.validate_extraction_record_references(extraction_record_ids)
+        self.validate_measurement_term_references(measurement_term_ids)
+        self.validate_claim_set_references(claim_set_ids)
+        self.validate_claim_references(claim_ids)
+        self.validate_gap_register_references(gap_register_ids)
+        self.validate_gap_references(gap_ids)
         self.validate_query_record_references(query_record_ids)
         self.validate_query_records()
 
@@ -98,6 +122,32 @@ class Validator:
             ids.add(source_id)
         return ids
 
+    def validate_artifact_metadata(self) -> dict[str, tuple[Path, dict[str, Any]]]:
+        schema_path = self.root / "schemas" / "artifact-metadata.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            self.add_error(schema_path, "missing artifact metadata schema")
+            return {}
+
+        metadata_by_id: dict[str, tuple[Path, dict[str, Any]]] = {}
+        for path, doc in self.json_docs.items():
+            if not self.is_artifact_metadata_path(path):
+                continue
+            if not isinstance(doc, dict):
+                self.add_error(path, "artifact metadata must be an object")
+                continue
+
+            self.validate_against_schema(path, doc, schema)
+            artifact_id = doc.get("artifact_id")
+            if not isinstance(artifact_id, str) or not artifact_id:
+                self.add_error(path, "artifact_id must be a non-empty string")
+                continue
+            if artifact_id in metadata_by_id:
+                self.add_error(path, f"duplicate artifact_id: {artifact_id}")
+                continue
+            metadata_by_id[artifact_id] = (path, doc)
+        return metadata_by_id
+
     def collect_taxonomy_ids(self) -> set[str]:
         ids: set[str] = set()
         for path, doc in self.json_docs.items():
@@ -138,6 +188,325 @@ class Validator:
             ids.add(query_id)
         return ids
 
+    def collect_mechanism_group_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict):
+                continue
+            groups = doc.get("mechanism_groups")
+            if not isinstance(groups, list):
+                continue
+            for index, group in enumerate(groups):
+                if not isinstance(group, dict):
+                    self.add_error(path, f"mechanism_groups[{index}] must be an object")
+                    continue
+                mechanism_id = group.get("mechanism_id")
+                if not isinstance(mechanism_id, str) or not mechanism_id:
+                    self.add_error(path, f"mechanism_groups[{index}] missing mechanism_id")
+                    continue
+                if mechanism_id in ids:
+                    self.add_error(path, f"duplicate mechanism_id: {mechanism_id}")
+                ids.add(mechanism_id)
+        return ids
+
+    def collect_extraction_record_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "extraction_record_id" not in doc:
+                continue
+            extraction_id = doc.get("extraction_record_id")
+            if not extraction_id:
+                if path.name.endswith("template-v0.json"):
+                    continue
+                self.add_error(path, "extraction_record_id must be non-empty")
+                continue
+            if not isinstance(extraction_id, str):
+                self.add_error(path, "extraction_record_id must be a string")
+                continue
+            if extraction_id in ids:
+                self.add_error(path, f"duplicate extraction_record_id: {extraction_id}")
+            ids.add(extraction_id)
+        return ids
+
+    def collect_measurement_term_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "glossary_id" not in doc:
+                continue
+            terms = doc.get("terms")
+            if not isinstance(terms, list):
+                continue
+            for index, term in enumerate(terms):
+                if not isinstance(term, dict):
+                    self.add_error(path, f"terms[{index}] must be an object")
+                    continue
+                term_id = term.get("term_id")
+                if not isinstance(term_id, str) or not term_id:
+                    self.add_error(path, f"terms[{index}] missing term_id")
+                    continue
+                if term_id in ids:
+                    self.add_error(path, f"duplicate measurement term_id: {term_id}")
+                ids.add(term_id)
+        return ids
+
+    def collect_claim_set_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "claim_set_id" not in doc:
+                continue
+            claim_set_id = doc.get("claim_set_id")
+            if not isinstance(claim_set_id, str) or not claim_set_id:
+                self.add_error(path, "claim_set_id must be a non-empty string")
+                continue
+            if claim_set_id in ids:
+                self.add_error(path, f"duplicate claim_set_id: {claim_set_id}")
+            ids.add(claim_set_id)
+        return ids
+
+    def collect_claim_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if "schemas" in path.parts or "examples" in path.parts:
+                continue
+            if not isinstance(doc, dict):
+                continue
+            if "claim_set_id" in doc:
+                claims = doc.get("claims")
+                if not isinstance(claims, list):
+                    continue
+                for index, claim in enumerate(claims):
+                    if not isinstance(claim, dict):
+                        self.add_error(path, f"claims[{index}] must be an object")
+                        continue
+                    claim_id = claim.get("claim_id")
+                    if not isinstance(claim_id, str) or not claim_id:
+                        self.add_error(path, f"claims[{index}] missing claim_id")
+                        continue
+                    if claim_id in ids:
+                        self.add_error(path, f"duplicate claim_id: {claim_id}")
+                    ids.add(claim_id)
+            elif {"claim_id", "claim_text"}.issubset(doc):
+                claim_id = doc.get("claim_id")
+                if not isinstance(claim_id, str) or not claim_id:
+                    self.add_error(path, "claim_id must be a non-empty string")
+                    continue
+                if claim_id in ids:
+                    self.add_error(path, f"duplicate claim_id: {claim_id}")
+                ids.add(claim_id)
+        return ids
+
+    def collect_gap_register_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "gap_register_id" not in doc:
+                continue
+            register_id = doc.get("gap_register_id")
+            if not isinstance(register_id, str) or not register_id:
+                self.add_error(path, "gap_register_id must be a non-empty string")
+                continue
+            if register_id in ids:
+                self.add_error(path, f"duplicate gap_register_id: {register_id}")
+            ids.add(register_id)
+        return ids
+
+    def collect_gap_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "gap_register_id" not in doc:
+                continue
+            gaps = doc.get("gaps")
+            if not isinstance(gaps, list):
+                continue
+            for index, gap in enumerate(gaps):
+                if not isinstance(gap, dict):
+                    self.add_error(path, f"gaps[{index}] must be an object")
+                    continue
+                gap_id = gap.get("gap_id")
+                if not isinstance(gap_id, str) or not gap_id:
+                    self.add_error(path, f"gaps[{index}] missing gap_id")
+                    continue
+                if gap_id in ids:
+                    self.add_error(path, f"duplicate gap_id: {gap_id}")
+                ids.add(gap_id)
+        return ids
+
+    def validate_claim_sets(self) -> None:
+        schema_path = self.root / "schemas" / "claim-set.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "claim_set_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            self.validate_claim_set_claim_ids(path, doc)
+
+    def validate_claim_set_claim_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        claims = doc.get("claims")
+        if not isinstance(claims, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, claim in enumerate(claims):
+            if not isinstance(claim, dict):
+                continue
+            claim_id = claim.get("claim_id")
+            if not isinstance(claim_id, str):
+                continue
+            if claim_id in seen_ids:
+                self.add_error(path, f"claims[{index}] duplicate claim_id: {claim_id}")
+            seen_ids.add(claim_id)
+
+    def validate_artifact_catalogs(self, metadata_by_id: dict[str, tuple[Path, dict[str, Any]]]) -> None:
+        schema_path = self.root / "schemas" / "artifact-catalog.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_catalogs: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "catalog_id" not in doc:
+                continue
+
+            self.validate_against_schema(path, doc, schema)
+            catalog_id = doc.get("catalog_id")
+            if isinstance(catalog_id, str):
+                if catalog_id in seen_catalogs:
+                    self.add_error(path, f"duplicate catalog_id: {catalog_id}")
+                seen_catalogs.add(catalog_id)
+
+            entries = doc.get("entries")
+            if not isinstance(entries, list):
+                continue
+
+            entry_ids: set[str] = set()
+            for index, entry in enumerate(entries):
+                if not isinstance(entry, dict):
+                    continue
+                artifact_id = entry.get("artifact_id")
+                if not isinstance(artifact_id, str) or not artifact_id:
+                    continue
+                if artifact_id in entry_ids:
+                    self.add_error(path, f"entries[{index}] duplicate artifact_id: {artifact_id}")
+                entry_ids.add(artifact_id)
+
+                metadata_record = metadata_by_id.get(artifact_id)
+                if metadata_record is None:
+                    self.add_error(path, f"entries[{index}] references unknown artifact_id: {artifact_id}")
+                    continue
+                self.validate_artifact_catalog_entry(path, index, entry, metadata_record)
+
+            if doc.get("generated_from") == "*.metadata.json files tracked in the public repo":
+                missing = sorted(set(metadata_by_id) - entry_ids)
+                for artifact_id in missing:
+                    self.add_error(path, f"catalog missing artifact_id from metadata: {artifact_id}")
+
+    def validate_artifact_catalog_entry(
+        self,
+        path: Path,
+        index: int,
+        entry: dict[str, Any],
+        metadata_record: tuple[Path, dict[str, Any]],
+    ) -> None:
+        metadata_path, metadata = metadata_record
+        metadata_rel = self.rel(metadata_path).as_posix()
+        expected = {
+            "title": metadata.get("title"),
+            "artifact_class": metadata.get("artifact_class"),
+            "claim_level": metadata.get("claim_level"),
+            "metadata_path": metadata_rel,
+            "source_count": len(metadata.get("sources", [])) if isinstance(metadata.get("sources"), list) else 0,
+            "limitation_count": (
+                len(metadata.get("limitations", [])) if isinstance(metadata.get("limitations"), list) else 0
+            ),
+        }
+        if isinstance(metadata.get("blood_cancer_scope"), list):
+            expected["blood_cancer_scope"] = metadata.get("blood_cancer_scope")
+
+        for key, expected_value in expected.items():
+            if entry.get(key) != expected_value:
+                self.add_error(
+                    path,
+                    f"entries[{index}].{key} is {entry.get(key)!r}, expected {expected_value!r}",
+                )
+
+        for key in ("path", "metadata_path"):
+            value = entry.get(key)
+            if isinstance(value, str) and not (self.root / value).exists():
+                self.add_error(path, f"entries[{index}].{key} does not exist: {value}")
+
+    def validate_evidence_gap_registers(self) -> None:
+        schema_path = self.root / "schemas" / "evidence-gap-register.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_registers: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "gap_register_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            register_id = doc.get("gap_register_id")
+            if isinstance(register_id, str):
+                if register_id in seen_registers:
+                    self.add_error(path, f"duplicate gap_register_id: {register_id}")
+                seen_registers.add(register_id)
+            self.validate_gap_ids(path, doc)
+
+    def validate_gap_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        gaps = doc.get("gaps")
+        if not isinstance(gaps, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, gap in enumerate(gaps):
+            if not isinstance(gap, dict):
+                continue
+            gap_id = gap.get("gap_id")
+            if not isinstance(gap_id, str):
+                continue
+            if gap_id in seen_ids:
+                self.add_error(path, f"gaps[{index}] duplicate gap_id: {gap_id}")
+            seen_ids.add(gap_id)
+
+    def validate_public_task_queues(self) -> None:
+        schema_path = self.root / "schemas" / "public-task-queue.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_queues: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "task_queue_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            queue_id = doc.get("task_queue_id")
+            if isinstance(queue_id, str):
+                if queue_id in seen_queues:
+                    self.add_error(path, f"duplicate task_queue_id: {queue_id}")
+                seen_queues.add(queue_id)
+            self.validate_public_task_ids(path, doc)
+
+    def validate_public_task_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        tasks = doc.get("tasks")
+        if not isinstance(tasks, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, task in enumerate(tasks):
+            if not isinstance(task, dict):
+                continue
+            task_id = task.get("task_id")
+            if not isinstance(task_id, str):
+                continue
+            if task_id in seen_ids:
+                self.add_error(path, f"tasks[{index}] duplicate task_id: {task_id}")
+            seen_ids.add(task_id)
+
     def validate_evidence_claims(self) -> None:
         schema_path = self.root / "schemas" / "evidence-claim.schema.json"
         schema = self.json_docs.get(schema_path)
@@ -149,6 +518,162 @@ class Validator:
                 continue
             if isinstance(doc, dict) and {"claim_id", "claim_text"}.issubset(doc):
                 self.validate_against_schema(path, doc, schema)
+
+    def validate_mechanism_extractions(self) -> None:
+        schema_path = self.root / "schemas" / "mechanism-extraction.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        for path, doc in self.json_docs.items():
+            if self.rel(path).as_posix() in SKIP_SCHEMA_VALIDATION:
+                continue
+            if not isinstance(doc, dict) or "extraction_record_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            self.validate_extraction_signal_ids(path, doc)
+
+    def validate_extraction_signal_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        signals = doc.get("extracted_signals")
+        if not isinstance(signals, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, signal in enumerate(signals):
+            if not isinstance(signal, dict):
+                continue
+            signal_id = signal.get("signal_id")
+            if not isinstance(signal_id, str):
+                continue
+            if signal_id in seen_ids:
+                self.add_error(path, f"extracted_signals[{index}] duplicate signal_id: {signal_id}")
+            seen_ids.add(signal_id)
+
+    def validate_measurement_glossaries(self) -> None:
+        schema_path = self.root / "schemas" / "measurement-glossary.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_glossaries: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "glossary_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            glossary_id = doc.get("glossary_id")
+            if isinstance(glossary_id, str):
+                if glossary_id in seen_glossaries:
+                    self.add_error(path, f"duplicate glossary_id: {glossary_id}")
+                seen_glossaries.add(glossary_id)
+            self.validate_measurement_term_ids(path, doc)
+
+    def validate_measurement_term_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        terms = doc.get("terms")
+        if not isinstance(terms, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, term in enumerate(terms):
+            if not isinstance(term, dict):
+                continue
+            term_id = term.get("term_id")
+            if not isinstance(term_id, str):
+                continue
+            if term_id in seen_ids:
+                self.add_error(path, f"terms[{index}] duplicate term_id: {term_id}")
+            seen_ids.add(term_id)
+
+        for index, term in enumerate(terms):
+            if not isinstance(term, dict):
+                continue
+            related = term.get("related_term_ids")
+            if not isinstance(related, list):
+                continue
+            for value in related:
+                if isinstance(value, str) and value not in seen_ids:
+                    self.add_error(path, f"terms[{index}].related_term_ids references unknown term_id: {value}")
+
+    def validate_mechanism_maps(self) -> None:
+        schema_path = self.root / "schemas" / "mechanism-map.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or not {"map_id", "mechanism_groups"}.issubset(doc):
+                continue
+            self.validate_against_schema(path, doc, schema)
+            self.validate_mechanism_group_ids(path, doc)
+
+    def validate_mechanism_group_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        mechanism_groups = doc.get("mechanism_groups")
+        if not isinstance(mechanism_groups, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, group in enumerate(mechanism_groups):
+            if not isinstance(group, dict):
+                continue
+            mechanism_id = group.get("mechanism_id")
+            if not isinstance(mechanism_id, str):
+                continue
+            if mechanism_id in seen_ids:
+                self.add_error(path, f"mechanism_groups[{index}] duplicate mechanism_id: {mechanism_id}")
+            seen_ids.add(mechanism_id)
+
+    def validate_opportunity_maps(self) -> None:
+        schema_path = self.root / "schemas" / "opportunity-map.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or not {"map_id", "opportunities"}.issubset(doc):
+                continue
+            self.validate_against_schema(path, doc, schema)
+            self.validate_opportunity_scores(path, doc)
+
+    def validate_opportunity_scores(self, path: Path, doc: dict[str, Any]) -> None:
+        opportunities = doc.get("opportunities")
+        if not isinstance(opportunities, list):
+            return
+
+        seen_ids: set[str] = set()
+        seen_ranks: set[int] = set()
+        for index, opportunity in enumerate(opportunities):
+            if not isinstance(opportunity, dict):
+                continue
+
+            opportunity_id = opportunity.get("opportunity_id")
+            if isinstance(opportunity_id, str):
+                if opportunity_id in seen_ids:
+                    self.add_error(path, f"opportunities[{index}] duplicate opportunity_id: {opportunity_id}")
+                seen_ids.add(opportunity_id)
+
+            rank = opportunity.get("rank")
+            if isinstance(rank, int):
+                if rank <= 0:
+                    self.add_error(path, f"opportunities[{index}].rank must be positive")
+                if rank in seen_ranks:
+                    self.add_error(path, f"opportunities[{index}] duplicate rank: {rank}")
+                seen_ranks.add(rank)
+
+            scores = opportunity.get("scores")
+            score_total = opportunity.get("score_total")
+            if not isinstance(scores, dict):
+                continue
+            calculated = 0
+            for key, value in scores.items():
+                if not isinstance(value, int):
+                    continue
+                if value < 0 or value > 5:
+                    self.add_error(path, f"opportunities[{index}].scores.{key} must be between 0 and 5")
+                calculated += value
+            if isinstance(score_total, int) and score_total != calculated:
+                self.add_error(
+                    path,
+                    f"opportunities[{index}].score_total is {score_total}, expected {calculated}",
+                )
 
     def validate_source_references(self, known_ids: set[str]) -> None:
         for path, doc in self.json_docs.items():
@@ -177,6 +702,125 @@ class Validator:
                         self.add_error(path, f"{location} contains a non-string taxonomy id")
                     elif value not in known_ids:
                         self.add_error(path, f"{location} references unknown taxonomy class_id: {value}")
+
+    def validate_mechanism_group_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.rel(path).as_posix() in SKIP_SCHEMA_VALIDATION:
+                continue
+            if self.is_json_schema(doc):
+                continue
+            for location, values in self.find_key(doc, "mechanism_group_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string mechanism id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown mechanism_id: {value}")
+            for location, value in self.find_key(doc, "mechanism_group_id"):
+                if not isinstance(value, str):
+                    self.add_error(path, f"{location} must be a string")
+                elif value not in known_ids:
+                    self.add_error(path, f"{location} references unknown mechanism_id: {value}")
+
+    def validate_extraction_record_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.rel(path).as_posix() in SKIP_SCHEMA_VALIDATION:
+                continue
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "extraction_record_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "extraction_record_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string extraction record id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown extraction_record_id: {value}")
+
+    def validate_measurement_term_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "glossary_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "measurement_term_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string measurement term id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown measurement term_id: {value}")
+
+    def validate_claim_set_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "claim_set_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "claim_set_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string claim set id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown claim_set_id: {value}")
+
+    def validate_claim_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "claim_set_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "linked_claim_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string claim id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown claim_id: {value}")
+
+    def validate_gap_register_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "gap_register_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "gap_register_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string gap register id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown gap_register_id: {value}")
+
+    def validate_gap_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "gap_register_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "linked_gap_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string gap id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown gap_id: {value}")
 
     def validate_query_record_references(self, known_ids: set[str]) -> None:
         for path, doc in self.json_docs.items():
@@ -313,6 +957,9 @@ class Validator:
 
     def is_json_schema(self, value: Any) -> bool:
         return isinstance(value, dict) and "$schema" in value and "properties" in value
+
+    def is_artifact_metadata_path(self, path: Path) -> bool:
+        return path.name.endswith(".metadata.json")
 
     def report(self) -> None:
         if self.errors:

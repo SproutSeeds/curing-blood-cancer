@@ -1,0 +1,190 @@
+{
+  "map_id": "multiple-myeloma-opportunity-map-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "cure_wedge": "durable MRD-negative remission and relapse prevention",
+  "clinical_use_boundary": "research-use-only",
+  "scoring_rubric": {
+    "scale": "0 to 5 per dimension; higher means stronger public-research priority, not clinical superiority",
+    "dimensions": [
+      "unmet_need",
+      "evidence_signal",
+      "tractability",
+      "measurement_readiness",
+      "public_data_readiness",
+      "patient_safety_boundary"
+    ],
+    "score_total_interpretation": "Used only to order public tooling and review work; not a treatment, trial, or investment recommendation."
+  },
+  "opportunities": [
+    {
+      "rank": 1,
+      "opportunity_id": "post-car-t-relapse-mechanism-map-v0",
+      "title": "Map relapse mechanisms after CAR T-cell therapy",
+      "question": "When myeloma relapses after deep CAR T response, how often do public sources implicate target loss, T-cell fitness, tumor burden, disease location, or prior exposure?",
+      "why_it_matters": "Durability depends on understanding why deep responses fail.",
+      "artifact_next_step": "Create a public mechanism table separating antigen escape, immune exhaustion, disease burden, and site-specific relapse hypotheses.",
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "pubmed",
+        "fda_drugs_at_fda"
+      ],
+      "taxonomy_class_ids": [
+        "myeloma_class_car_t_cell_therapy",
+        "myeloma_class_bispecific_antibody"
+      ],
+      "evidence_level": "source-summary",
+      "scores": {
+        "unmet_need": 5,
+        "evidence_signal": 4,
+        "tractability": 4,
+        "measurement_readiness": 4,
+        "public_data_readiness": 4,
+        "patient_safety_boundary": 5
+      },
+      "score_total": 26,
+      "limitations": [
+        "Mechanism frequency cannot be inferred from source summaries alone.",
+        "Product-specific and disease-state-specific evidence must stay separated."
+      ]
+    },
+    {
+      "rank": 2,
+      "opportunity_id": "mrd-guided-durability-map-v0",
+      "title": "Map MRD-guided durability evidence",
+      "question": "Which public sources connect measurable residual disease negativity, sustained response, relapse timing, and survival endpoints in defined myeloma settings?",
+      "why_it_matters": "Cure-oriented work needs measurement anchors before it can compare interventions.",
+      "artifact_next_step": "Build an MRD endpoint glossary and claim set with source-backed definitions and uncertainty.",
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "pubmed"
+      ],
+      "taxonomy_class_ids": [
+        "myeloma_class_anti_cd38_antibody",
+        "myeloma_class_autologous_stem_cell_transplant",
+        "myeloma_class_immunomodulatory_agent"
+      ],
+      "evidence_level": "source-summary",
+      "scores": {
+        "unmet_need": 5,
+        "evidence_signal": 4,
+        "tractability": 4,
+        "measurement_readiness": 5,
+        "public_data_readiness": 3,
+        "patient_safety_boundary": 5
+      },
+      "score_total": 26,
+      "limitations": [
+        "MRD methods, thresholds, timing, and sample context are not interchangeable.",
+        "Endpoint association is not the same as intervention causality."
+      ]
+    },
+    {
+      "rank": 3,
+      "opportunity_id": "dual-antigen-immune-redirection-v0",
+      "title": "Track dual-antigen and sequential immune-redirection strategies",
+      "question": "Which trials and papers test whether targeting more than one myeloma-associated antigen can reduce escape after BCMA-directed therapy?",
+      "why_it_matters": "Antigen escape is a plausible relapse pathway after single-target immune pressure.",
+      "artifact_next_step": "Create a trial landscape for BCMA, GPRC5D, FcRH5, and other immune-redirection target combinations.",
+      "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "pubmed",
+        "fda_drugs_at_fda"
+      ],
+      "taxonomy_class_ids": [
+        "myeloma_class_car_t_cell_therapy",
+        "myeloma_class_bispecific_antibody"
+      ],
+      "evidence_level": "registry-record",
+      "scores": {
+        "unmet_need": 4,
+        "evidence_signal": 3,
+        "tractability": 4,
+        "measurement_readiness": 3,
+        "public_data_readiness": 5,
+        "patient_safety_boundary": 4
+      },
+      "score_total": 23,
+      "limitations": [
+        "Trial listings do not prove efficacy or availability.",
+        "Target combinations may carry different toxicity and eligibility boundaries."
+      ]
+    },
+    {
+      "rank": 4,
+      "opportunity_id": "immune-reconstitution-infection-risk-map-v0",
+      "title": "Map immune reconstitution and infection-risk constraints",
+      "question": "How do immune recovery, infection risk, and supportive care shape the feasibility of deep-response strategies?",
+      "why_it_matters": "Durability-focused therapy is only useful if patients can safely receive and recover from it.",
+      "artifact_next_step": "Create a source-backed supportive-care constraint map for immune therapies and intensive strategies.",
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "pubmed",
+        "fda_drugs_at_fda"
+      ],
+      "taxonomy_class_ids": [
+        "myeloma_class_supportive_care_bone_renal_infection",
+        "myeloma_class_car_t_cell_therapy",
+        "myeloma_class_bispecific_antibody"
+      ],
+      "evidence_level": "source-summary",
+      "scores": {
+        "unmet_need": 4,
+        "evidence_signal": 3,
+        "tractability": 3,
+        "measurement_readiness": 3,
+        "public_data_readiness": 3,
+        "patient_safety_boundary": 5
+      },
+      "score_total": 21,
+      "limitations": [
+        "Supportive-care needs are patient-specific.",
+        "Public summaries are not enough to make clinical safety decisions."
+      ]
+    },
+    {
+      "rank": 5,
+      "opportunity_id": "vaccine-relapse-prevention-research-map-v0",
+      "title": "Track vaccine and immune-priming research for relapse prevention",
+      "question": "Where do public trials or papers explore vaccine, immune-priming, or immunoprevention strategies for precursor states or post-response relapse prevention?",
+      "why_it_matters": "A cure/vaccine initiative needs a careful lane for immunoprevention without overstating maturity.",
+      "artifact_next_step": "Build a trial and literature map that separates precursor-state prevention from post-treatment relapse-prevention hypotheses.",
+      "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "pubmed"
+      ],
+      "taxonomy_class_ids": [
+        "myeloma_class_vaccine_or_immunoprevention_research"
+      ],
+      "evidence_level": "hypothesis-only",
+      "scores": {
+        "unmet_need": 4,
+        "evidence_signal": 2,
+        "tractability": 3,
+        "measurement_readiness": 2,
+        "public_data_readiness": 4,
+        "patient_safety_boundary": 4
+      },
+      "score_total": 19,
+      "limitations": [
+        "Research category only.",
+        "Does not imply an established myeloma vaccine or prevention strategy.",
+        "Requires careful separation of precursor disease, remission, and relapsed disease settings."
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Initial opportunity scores are a prioritization scaffold for public tooling work, not clinical rankings.",
+      "Scores should be revised after expert review and source-specific extraction."
+    ]
+  }
+}
+

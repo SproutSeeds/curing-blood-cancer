@@ -1,0 +1,46 @@
+{
+  "artifact_id": "multiple-myeloma-durable-mrd-negative-remission-wedge-v0",
+  "title": "Multiple Myeloma Durable MRD-Negative Remission Cure Wedge v0",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "NCI plasma cell neoplasms / multiple myeloma PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "ClinicalTrials.gov API v2",
+      "url": "https://clinicaltrials.gov/data-api/about-api",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "FDA Drugs@FDA",
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/multiple-myeloma-durable-remission-program-v0.md"
+}
+

@@ -1,0 +1,526 @@
+{
+  "glossary_id": "mrd-and-relapse-measurement-glossary-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD And Relapse Measurement Glossary v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "response assessment",
+    "relapse assessment"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "pubmed_kumar_2016_imwg_mrd_response_criteria",
+    "pubmed_munshi_2017_mrd_survival_meta_analysis",
+    "pubmed_soh_2022_mrd_flow_harmonization",
+    "pubmed_antigen_escape_bcma_directed_2024",
+    "pubmed_di_meo_2025_sema4a_low_bcma"
+  ],
+  "terms": [
+    {
+      "term_id": "measurable-residual-disease",
+      "label": "Measurable residual disease",
+      "term_kind": "measurement-boundary",
+      "definition": "A sensitive measurement frame for residual myeloma after treatment response, also called minimal residual disease in many sources.",
+      "measurement_context": [
+        "Requires method, specimen, threshold, and timing before comparison.",
+        "May refer to marrow-based assays, imaging-linked response categories, or study-specific endpoint definitions."
+      ],
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_munshi_2017_mrd_survival_meta_analysis"
+      ],
+      "related_term_ids": [
+        "mrd-negativity",
+        "mrd-sensitivity-threshold",
+        "bone-marrow-mrd"
+      ],
+      "use_in_public_artifacts": [
+        "Use as the umbrella term for highly sensitive residual disease measurement.",
+        "Record the source's exact terminology when it uses minimal residual disease instead."
+      ],
+      "what_not_to_infer": [
+        "Do not treat MRD status as a cure claim.",
+        "Do not treat an MRD label as comparable across studies without method context."
+      ],
+      "limitations": [
+        "MRD meaning depends on assay, threshold, specimen quality, timing, and disease distribution."
+      ]
+    },
+    {
+      "term_id": "mrd-negativity",
+      "label": "MRD negativity",
+      "term_kind": "response-category",
+      "definition": "A source-defined state in which residual clonal plasma cells are not detected by a specified MRD method at a specified threshold and time point.",
+      "measurement_context": [
+        "Pair with assay method, sensitivity threshold, specimen source, time point, and response category.",
+        "The IMWG consensus criteria include marrow MRD categories with a minimum sensitivity of 10^-5 or better."
+      ],
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_munshi_2017_mrd_survival_meta_analysis"
+      ],
+      "related_term_ids": [
+        "mrd-sensitivity-threshold",
+        "flow-cytometry-mrd",
+        "sequencing-mrd",
+        "sustained-mrd-negativity"
+      ],
+      "use_in_public_artifacts": [
+        "Use only with the method and threshold that produced the result.",
+        "Separate single time-point negativity from sustained negativity."
+      ],
+      "what_not_to_infer": [
+        "Do not read negative as no disease exists anywhere.",
+        "Do not claim cure from MRD negativity alone."
+      ],
+      "limitations": [
+        "Sampling and assay sensitivity can produce false reassurance if context is missing."
+      ]
+    },
+    {
+      "term_id": "mrd-sensitivity-threshold",
+      "label": "MRD sensitivity threshold",
+      "term_kind": "assay-context",
+      "definition": "The stated detection sensitivity or limit used to interpret an MRD result, such as 10^-5 when the source specifies it.",
+      "measurement_context": [
+        "Record the threshold separately from the method name.",
+        "Thresholds should be source-stated, not inferred from a general assay family."
+      ],
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_soh_2022_mrd_flow_harmonization"
+      ],
+      "related_term_ids": [
+        "mrd-negativity",
+        "flow-cytometry-mrd",
+        "sequencing-mrd"
+      ],
+      "use_in_public_artifacts": [
+        "Use for comparing whether two MRD claims were measured at similar depth.",
+        "Flag MRD claims with missing or ambiguous threshold."
+      ],
+      "what_not_to_infer": [
+        "Do not assume every study used 10^-5.",
+        "Do not assume a lower numerical detection limit makes results clinically interchangeable."
+      ],
+      "limitations": [
+        "Laboratory validation, sample quality, and analysis approach still matter even when thresholds match."
+      ]
+    },
+    {
+      "term_id": "bone-marrow-mrd",
+      "label": "Bone marrow MRD",
+      "term_kind": "specimen-context",
+      "definition": "MRD assessment performed on a bone marrow aspirate or related marrow sample.",
+      "measurement_context": [
+        "Record aspirate source, adequacy, method, threshold, and timing.",
+        "Interpret with caution when disease may be patchy or extramedullary."
+      ],
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_soh_2022_mrd_flow_harmonization"
+      ],
+      "related_term_ids": [
+        "flow-cytometry-mrd",
+        "sequencing-mrd",
+        "imaging-plus-mrd"
+      ],
+      "use_in_public_artifacts": [
+        "Use as the specimen context for marrow-based flow or sequencing MRD claims.",
+        "Capture sample timing relative to therapy."
+      ],
+      "what_not_to_infer": [
+        "Do not assume marrow MRD captures every disease site.",
+        "Do not compare marrow MRD with imaging endpoints without saying they measure different contexts."
+      ],
+      "limitations": [
+        "Marrow sampling can miss spatially uneven disease or extramedullary disease."
+      ]
+    },
+    {
+      "term_id": "flow-cytometry-mrd",
+      "label": "Flow cytometry MRD",
+      "term_kind": "assay-context",
+      "definition": "MRD assessment using flow cytometry to identify phenotypically aberrant clonal plasma cells.",
+      "measurement_context": [
+        "Record whether next-generation flow or another validated method was used.",
+        "Record analysis approach, sensitivity, and sample adequacy when available."
+      ],
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_soh_2022_mrd_flow_harmonization"
+      ],
+      "related_term_ids": [
+        "mrd-sensitivity-threshold",
+        "bone-marrow-mrd"
+      ],
+      "use_in_public_artifacts": [
+        "Use for flow-based MRD claims and extraction fields.",
+        "Prefer source-stated method details before cross-study comparison."
+      ],
+      "what_not_to_infer": [
+        "Do not compare flow results across studies without harmonization context.",
+        "Do not assume a generic flow label identifies the exact sensitivity."
+      ],
+      "limitations": [
+        "Panel design, acquisition depth, analysis strategy, and specimen quality affect interpretation."
+      ]
+    },
+    {
+      "term_id": "sequencing-mrd",
+      "label": "Sequencing MRD",
+      "term_kind": "assay-context",
+      "definition": "MRD assessment using sequencing-based detection of clonal plasma-cell markers in a sample.",
+      "measurement_context": [
+        "Record platform or validated equivalent and the stated sensitivity threshold.",
+        "Record specimen and timing alongside the sequencing result."
+      ],
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria"
+      ],
+      "related_term_ids": [
+        "mrd-sensitivity-threshold",
+        "bone-marrow-mrd"
+      ],
+      "use_in_public_artifacts": [
+        "Use for sequencing-based MRD claims and extraction fields.",
+        "Separate sequencing MRD from flow MRD unless a source explicitly compares them."
+      ],
+      "what_not_to_infer": [
+        "Do not treat sequencing and flow as interchangeable without context.",
+        "Do not infer clinical actionability from platform name alone."
+      ],
+      "limitations": [
+        "Sequencing results depend on assay validation, baseline clone identification, sample quality, and threshold."
+      ]
+    },
+    {
+      "term_id": "imaging-plus-mrd",
+      "label": "Imaging plus MRD",
+      "term_kind": "response-category",
+      "definition": "A response-assessment context that combines marrow MRD negativity with imaging response criteria.",
+      "measurement_context": [
+        "Record imaging modality, baseline or prior imaging context, and marrow MRD method.",
+        "Use when the source explicitly combines marrow MRD and imaging response."
+      ],
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "nci_pdq_myeloma_hp"
+      ],
+      "related_term_ids": [
+        "bone-marrow-mrd",
+        "mrd-negativity"
+      ],
+      "use_in_public_artifacts": [
+        "Use to separate marrow-only MRD claims from marrow plus imaging response claims.",
+        "Flag missing imaging context in relapse or durable-remission comparisons."
+      ],
+      "what_not_to_infer": [
+        "Do not use marrow MRD alone to rule out extramedullary disease.",
+        "Do not assume imaging methods are comparable without source details."
+      ],
+      "limitations": [
+        "Imaging interpretation depends on modality, timing, baseline lesions, and response criteria."
+      ]
+    },
+    {
+      "term_id": "sustained-mrd-negativity",
+      "label": "Sustained MRD negativity",
+      "term_kind": "time-window",
+      "definition": "MRD negativity confirmed over a specified interval rather than at a single time point.",
+      "measurement_context": [
+        "The IMWG consensus criteria define sustained MRD negativity using confirmation at least 1 year apart.",
+        "Record the exact duration and whether later evaluations extend the duration claim."
+      ],
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria"
+      ],
+      "related_term_ids": [
+        "mrd-negativity",
+        "progression-free-survival"
+      ],
+      "use_in_public_artifacts": [
+        "Use only when repeat MRD-negative assessments and interval are source-supported.",
+        "Keep this distinct from a single MRD-negative assessment."
+      ],
+      "what_not_to_infer": [
+        "Do not collapse one MRD-negative time point into sustained negativity.",
+        "Do not claim cure from sustained MRD negativity without stronger evidence and review."
+      ],
+      "limitations": [
+        "Sustained status depends on repeat testing, time interval, and continued follow-up."
+      ]
+    },
+    {
+      "term_id": "complete-response",
+      "label": "Complete response",
+      "term_kind": "response-category",
+      "definition": "A conventional response category defined by the source's multiple myeloma response criteria.",
+      "measurement_context": [
+        "Record the exact criteria set used by the source.",
+        "Keep separate from MRD-negative categories."
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "pubmed_kumar_2016_imwg_mrd_response_criteria"
+      ],
+      "related_term_ids": [
+        "mrd-negativity",
+        "stringent-complete-response"
+      ],
+      "use_in_public_artifacts": [
+        "Use for source-defined response category extraction.",
+        "Treat as a prerequisite or context only when the source criteria say so."
+      ],
+      "what_not_to_infer": [
+        "Do not equate complete response with MRD negativity.",
+        "Do not equate complete response with cure."
+      ],
+      "limitations": [
+        "Response category meaning depends on the criteria version, assay context, and disease-state setting."
+      ]
+    },
+    {
+      "term_id": "stringent-complete-response",
+      "label": "Stringent complete response",
+      "term_kind": "response-category",
+      "definition": "A source-defined response category that adds stricter criteria beyond complete response.",
+      "measurement_context": [
+        "Record the source's criteria version and fields used.",
+        "Keep separate from MRD negativity unless the source explicitly links them."
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "pubmed_kumar_2016_imwg_mrd_response_criteria"
+      ],
+      "related_term_ids": [
+        "complete-response",
+        "mrd-negativity"
+      ],
+      "use_in_public_artifacts": [
+        "Use when a source reports stringent complete response as a response category.",
+        "Record whether MRD was assessed separately."
+      ],
+      "what_not_to_infer": [
+        "Do not treat stringent complete response as deeper than MRD without MRD data.",
+        "Do not claim cure from stringent complete response."
+      ],
+      "limitations": [
+        "Different sources may report response categories without enough measurement detail for direct comparison."
+      ]
+    },
+    {
+      "term_id": "progression-free-survival",
+      "label": "Progression-free survival",
+      "term_kind": "endpoint",
+      "definition": "A study endpoint measuring time until disease progression or death according to the source's endpoint definition.",
+      "measurement_context": [
+        "Record population, disease state, line of therapy, follow-up duration, and censoring context when available.",
+        "Use alongside MRD status only when the source reports their association or endpoint analysis."
+      ],
+      "source_ids": [
+        "pubmed_munshi_2017_mrd_survival_meta_analysis",
+        "nci_pdq_myeloma_hp"
+      ],
+      "related_term_ids": [
+        "mrd-negativity",
+        "overall-survival",
+        "relapse-or-disease-progression"
+      ],
+      "use_in_public_artifacts": [
+        "Use as a study-level endpoint for public evidence claims.",
+        "Preserve follow-up and disease-state scope."
+      ],
+      "what_not_to_infer": [
+        "Do not interpret as patient-specific prognosis.",
+        "Do not compare progression-free survival across studies without population and follow-up context."
+      ],
+      "limitations": [
+        "Endpoint definitions, censoring, and follow-up duration can change interpretation."
+      ]
+    },
+    {
+      "term_id": "overall-survival",
+      "label": "Overall survival",
+      "term_kind": "endpoint",
+      "definition": "A study endpoint measuring survival according to the source's endpoint definition and follow-up.",
+      "measurement_context": [
+        "Record population, disease state, follow-up duration, and analysis context.",
+        "Use with MRD associations only when the source reports the relationship."
+      ],
+      "source_ids": [
+        "pubmed_munshi_2017_mrd_survival_meta_analysis",
+        "nci_pdq_myeloma_hp"
+      ],
+      "related_term_ids": [
+        "progression-free-survival",
+        "mrd-negativity"
+      ],
+      "use_in_public_artifacts": [
+        "Use as a population-level study endpoint.",
+        "Keep endpoint context visible in any claim set."
+      ],
+      "what_not_to_infer": [
+        "Do not infer individual survival.",
+        "Do not treat association with MRD status as proof that changing treatment based on MRD improves survival."
+      ],
+      "limitations": [
+        "Overall survival can be affected by many later therapies and non-study factors."
+      ]
+    },
+    {
+      "term_id": "relapse-or-disease-progression",
+      "label": "Relapse or disease progression",
+      "term_kind": "endpoint",
+      "definition": "A source-defined event in which disease returns or progresses after response or during follow-up.",
+      "measurement_context": [
+        "Record the source's progression or relapse definition.",
+        "Record biomarker, imaging, clinical, or endpoint triggers when available."
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "pubmed_kumar_2016_imwg_mrd_response_criteria"
+      ],
+      "related_term_ids": [
+        "progression-free-survival",
+        "imaging-plus-mrd",
+        "bone-marrow-mrd"
+      ],
+      "use_in_public_artifacts": [
+        "Use when mapping relapse events, progression endpoints, or post-response failure.",
+        "Require source-defined event criteria before comparing relapse claims."
+      ],
+      "what_not_to_infer": [
+        "Do not compare relapse claims across studies unless event definitions align.",
+        "Do not treat any one measurement trigger as sufficient for patient-specific interpretation."
+      ],
+      "limitations": [
+        "Relapse and progression definitions vary by source, study context, and available measurements."
+      ]
+    },
+    {
+      "term_id": "bone-marrow-target-status",
+      "label": "Bone marrow target status",
+      "term_kind": "specimen-context",
+      "definition": "A source-reported assessment of target expression or target absence in bone marrow plasma cells or tumor sample context.",
+      "measurement_context": [
+        "Record target name, specimen source, assay method, timing, prior target exposure, and response context.",
+        "For BCMA-directed therapy maps, separate marrow target status from soluble biomarker and sequencing signals."
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "related_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "soluble-bcma"
+      ],
+      "use_in_public_artifacts": [
+        "Use when a relapse map depends on whether a target was present, low, or absent in a specimen.",
+        "Require source-stated assay and specimen context before comparing sequential anti-target strategies."
+      ],
+      "what_not_to_infer": [
+        "Do not treat one marrow target-status result as a full-body disease map.",
+        "Do not use target status alone as treatment guidance."
+      ],
+      "limitations": [
+        "Assay method, specimen adequacy, disease patchiness, and timing can change interpretation."
+      ]
+    },
+    {
+      "term_id": "antigen-density",
+      "label": "Antigen density",
+      "term_kind": "assay-context",
+      "definition": "A source-reported quantitative or semiquantitative target-abundance measurement on tumor cells or model systems.",
+      "measurement_context": [
+        "Record target name, density unit or scoring method, specimen or model context, and comparator target when available.",
+        "Use separate fields for tumor expression and normal-tissue expression."
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "related_term_ids": [
+        "bone-marrow-target-status",
+        "normal-tissue-reactivity-screen"
+      ],
+      "use_in_public_artifacts": [
+        "Use for alternate-target research maps where target abundance is part of the evidence.",
+        "Preserve whether the evidence is clinical, translational, or preclinical."
+      ],
+      "what_not_to_infer": [
+        "Do not infer clinical efficacy from target density.",
+        "Do not infer safety from tumor expression without normal-tissue context."
+      ],
+      "limitations": [
+        "Target-density methods and thresholds may not be comparable across sources."
+      ]
+    },
+    {
+      "term_id": "soluble-bcma",
+      "label": "Soluble BCMA",
+      "term_kind": "assay-context",
+      "definition": "A source-reported blood measurement of soluble BCMA used as candidate context for BCMA target biology.",
+      "measurement_context": [
+        "Record blood assay, timing, paired marrow target status, and therapy sequence when available.",
+        "Use as a candidate measurement field rather than a standalone rule."
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "related_term_ids": [
+        "bone-marrow-target-status",
+        "relapse-or-disease-progression"
+      ],
+      "use_in_public_artifacts": [
+        "Use when a public extraction preserves soluble BCMA alongside marrow BCMA expression.",
+        "Flag missing paired specimen context."
+      ],
+      "what_not_to_infer": [
+        "Do not use soluble BCMA alone for patient-specific interpretation.",
+        "Do not assume soluble BCMA substitutes for direct target assessment."
+      ],
+      "limitations": [
+        "Assay thresholds, timing, and paired marrow context require source-specific review."
+      ]
+    },
+    {
+      "term_id": "normal-tissue-reactivity-screen",
+      "label": "Normal-tissue reactivity screen",
+      "term_kind": "assay-context",
+      "definition": "A source-reported safety-context assay or screen that assesses candidate target reactivity outside tumor cells.",
+      "measurement_context": [
+        "Record target, model system, tissue panel, assay method, and clinical translation status.",
+        "Use especially when alternate-target immunotherapy evidence is preclinical."
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "related_term_ids": [
+        "antigen-density"
+      ],
+      "use_in_public_artifacts": [
+        "Use as a minimum measurement dependency for alternate-target claims.",
+        "Keep tumor-target expression separate from normal-tissue safety context."
+      ],
+      "what_not_to_infer": [
+        "Do not treat a preclinical screen as proof of patient safety.",
+        "Do not infer clinical readiness without protocol and regulatory context."
+      ],
+      "limitations": [
+        "Preclinical safety-context assays do not replace clinical safety evidence."
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from NCI PDQ context plus PubMed-indexed IMWG response criteria, MRD survival meta-analysis, and flow-cytometry harmonization sources.",
+      "Designed as a public measurement guardrail for later durable-remission, relapse, and claim-set artifacts."
+    ]
+  }
+}

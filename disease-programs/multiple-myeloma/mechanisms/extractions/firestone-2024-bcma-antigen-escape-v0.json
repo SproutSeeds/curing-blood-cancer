@@ -1,0 +1,129 @@
+{
+  "extraction_record_id": "firestone-2024-bcma-antigen-escape-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "post-car-t-relapse-mechanism-map-v0",
+  "source_ids": [
+    "pubmed_antigen_escape_bcma_directed_2024"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_bispecific_antibody",
+    "myeloma_class_car_t_cell_therapy",
+    "myeloma_class_antibody_drug_conjugate"
+  ],
+  "mechanism_group_ids": [
+    "bcma-antigen-loss-or-low-density-v0",
+    "sequential-or-dual-target-immune-pressure-v0",
+    "measurement-and-follow-up-gaps-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed research article",
+    "title": "Antigen escape as a shared mechanism of resistance to BCMA-directed therapies in multiple myeloma.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38728378/",
+    "doi": "10.1182/blood.2023023557",
+    "pmid": "38728378",
+    "accessed": "2026-04-14",
+    "publication_year": 2024,
+    "study_context": "Relapsed/refractory multiple myeloma treated with a BCMA-directed bispecific antibody, including patients with prior BCMA-directed therapy exposure; PubMed abstract and metadata used for this v0 public extraction."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "prior-bcma-therapy-target-loss-nonresponse-signal-v0",
+      "mechanism_group_id": "bcma-antigen-loss-or-low-density-v0",
+      "signal_summary": "The source reports prior therapy-mediated loss of plasma-cell BCMA expression before teclistamab in three patients, with no observed response in those cases.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "prior BCMA-directed therapy exposure",
+        "bone marrow plasma-cell BCMA expression",
+        "immunohistochemistry",
+        "teclistamab response status",
+        "anti-BCMA response after prior BCMA therapy"
+      ],
+      "limitations": [
+        "Small mechanism-positive subset in the public abstract.",
+        "This extraction does not estimate frequency across all BCMA-directed products.",
+        "Treatment response interpretation requires full paper and clinical context."
+      ]
+    },
+    {
+      "signal_id": "tnfrsf17-biallelic-loss-target-alteration-signal-v0",
+      "mechanism_group_id": "bcma-antigen-loss-or-low-density-v0",
+      "signal_summary": "The source reports whole-exome sequencing evidence of biallelic TNFRSF17 loss in one tumor DNA sample after belantamab mafodotin exposure.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "whole-exome sequencing",
+        "TNFRSF17 status",
+        "tumor DNA",
+        "prior belantamab mafodotin exposure",
+        "BCMA-directed therapy sequence"
+      ],
+      "limitations": [
+        "Single-patient genetic observation in the public abstract.",
+        "Does not prove the same alteration is common across relapse settings.",
+        "Needs full-text review before use in a claim set."
+      ]
+    },
+    {
+      "signal_id": "soluble-bcma-target-absence-measurement-signal-v0",
+      "mechanism_group_id": "measurement-and-follow-up-gaps-v0",
+      "signal_summary": "The source reports low-to-undetectable peripheral blood soluble BCMA levels correlated with absent BCMA expression by bone marrow plasma cells.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "peripheral blood soluble BCMA",
+        "bone marrow plasma-cell BCMA expression",
+        "paired blood and marrow assessment",
+        "assay timing"
+      ],
+      "limitations": [
+        "Correlation is not sufficient for clinical decision-making by itself.",
+        "Assay thresholds and timing require full-methods extraction.",
+        "Public tooling should record soluble BCMA as a candidate measurement, not as a standalone rule."
+      ]
+    },
+    {
+      "signal_id": "sequential-bcma-target-verification-signal-v0",
+      "mechanism_group_id": "sequential-or-dual-target-immune-pressure-v0",
+      "signal_summary": "The source frames BCMA antigen verification as important before subsequent anti-BCMA treatment after prior BCMA-directed exposure.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "prior target exposure",
+        "target verification before next therapy",
+        "sequential BCMA-directed treatment",
+        "response after sequential therapy"
+      ],
+      "limitations": [
+        "This is not a treatment sequencing recommendation.",
+        "Applicability depends on therapy, disease state, assay availability, and clinician review.",
+        "The extraction only supports adding target-verification fields to public evidence maps."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "BCMA antigen loss or low expression should be tracked as a concrete post-BCMA relapse mechanism bucket.",
+      "TNFRSF17 alteration, immunohistochemistry target status, and soluble BCMA belong in extraction fields.",
+      "Sequential BCMA-directed therapy records should preserve prior BCMA exposure and target-verification context."
+    ],
+    "what_this_does_not_support": [
+      "It does not estimate antigen-loss frequency across all multiple myeloma relapse after CAR T.",
+      "It does not recommend teclistamab, CAR T, belantamab, or any treatment sequence.",
+      "It does not determine patient-specific eligibility or prognosis.",
+      "It does not establish that BCMA loss is the only shared resistance mechanism."
+    ]
+  },
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from PubMed ESummary and EFetch metadata/abstract for PMID 38728378.",
+      "Mechanism statements should be converted into evidence claims only after full-text review."
+    ]
+  }
+}
+
