@@ -1,0 +1,34 @@
+{
+  "artifact_id": "bcma-antigen-escape-public-task-queue-v0",
+  "title": "BCMA Antigen Escape Public Task Queue v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-directed therapy",
+    "post-BCMA relapse",
+    "post-CAR T relapse"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "BCMA Antigen Escape Evidence Gap Register v0",
+      "url": "../evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "BCMA Antigen Escape Claim Set v0",
+      "url": "../evidence-claims/bcma-antigen-escape-claim-set-v0.md",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not rank evidence strength for patient decisions.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/bcma-antigen-escape-public-task-queue-v0.md"
+}

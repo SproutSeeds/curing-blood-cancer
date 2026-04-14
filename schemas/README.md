@@ -15,6 +15,7 @@ without weakening the repo's safety boundaries.
 - [Mechanism Map Schema](./mechanism-map.schema.json)
 - [Measurement Glossary Schema](./measurement-glossary.schema.json)
 - [Opportunity Map Schema](./opportunity-map.schema.json)
+- [Public Task Queue Schema](./public-task-queue.schema.json)
 
 ## Templates And Examples
 

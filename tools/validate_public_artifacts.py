@@ -51,10 +51,13 @@ class Validator:
         measurement_term_ids = self.collect_measurement_term_ids()
         claim_set_ids = self.collect_claim_set_ids()
         claim_ids = self.collect_claim_ids()
+        gap_register_ids = self.collect_gap_register_ids()
+        gap_ids = self.collect_gap_ids()
 
         self.validate_claim_sets()
         self.validate_evidence_claims()
         self.validate_evidence_gap_registers()
+        self.validate_public_task_queues()
         self.validate_mechanism_extractions()
         self.validate_measurement_glossaries()
         self.validate_mechanism_maps()
@@ -66,6 +69,8 @@ class Validator:
         self.validate_measurement_term_references(measurement_term_ids)
         self.validate_claim_set_references(claim_set_ids)
         self.validate_claim_references(claim_ids)
+        self.validate_gap_register_references(gap_register_ids)
+        self.validate_gap_references(gap_ids)
         self.validate_query_record_references(query_record_ids)
         self.validate_query_records()
 
@@ -262,6 +267,41 @@ class Validator:
                 ids.add(claim_id)
         return ids
 
+    def collect_gap_register_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "gap_register_id" not in doc:
+                continue
+            register_id = doc.get("gap_register_id")
+            if not isinstance(register_id, str) or not register_id:
+                self.add_error(path, "gap_register_id must be a non-empty string")
+                continue
+            if register_id in ids:
+                self.add_error(path, f"duplicate gap_register_id: {register_id}")
+            ids.add(register_id)
+        return ids
+
+    def collect_gap_ids(self) -> set[str]:
+        ids: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "gap_register_id" not in doc:
+                continue
+            gaps = doc.get("gaps")
+            if not isinstance(gaps, list):
+                continue
+            for index, gap in enumerate(gaps):
+                if not isinstance(gap, dict):
+                    self.add_error(path, f"gaps[{index}] must be an object")
+                    continue
+                gap_id = gap.get("gap_id")
+                if not isinstance(gap_id, str) or not gap_id:
+                    self.add_error(path, f"gaps[{index}] missing gap_id")
+                    continue
+                if gap_id in ids:
+                    self.add_error(path, f"duplicate gap_id: {gap_id}")
+                ids.add(gap_id)
+        return ids
+
     def validate_claim_sets(self) -> None:
         schema_path = self.root / "schemas" / "claim-set.schema.json"
         schema = self.json_docs.get(schema_path)
@@ -325,6 +365,41 @@ class Validator:
             if gap_id in seen_ids:
                 self.add_error(path, f"gaps[{index}] duplicate gap_id: {gap_id}")
             seen_ids.add(gap_id)
+
+    def validate_public_task_queues(self) -> None:
+        schema_path = self.root / "schemas" / "public-task-queue.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_queues: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "task_queue_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            queue_id = doc.get("task_queue_id")
+            if isinstance(queue_id, str):
+                if queue_id in seen_queues:
+                    self.add_error(path, f"duplicate task_queue_id: {queue_id}")
+                seen_queues.add(queue_id)
+            self.validate_public_task_ids(path, doc)
+
+    def validate_public_task_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        tasks = doc.get("tasks")
+        if not isinstance(tasks, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, task in enumerate(tasks):
+            if not isinstance(task, dict):
+                continue
+            task_id = task.get("task_id")
+            if not isinstance(task_id, str):
+                continue
+            if task_id in seen_ids:
+                self.add_error(path, f"tasks[{index}] duplicate task_id: {task_id}")
+            seen_ids.add(task_id)
 
     def validate_evidence_claims(self) -> None:
         schema_path = self.root / "schemas" / "evidence-claim.schema.json"
@@ -608,6 +683,38 @@ class Validator:
                         self.add_error(path, f"{location} contains a non-string claim id")
                     elif value not in known_ids:
                         self.add_error(path, f"{location} references unknown claim_id: {value}")
+
+    def validate_gap_register_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "gap_register_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "gap_register_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string gap register id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown gap_register_id: {value}")
+
+    def validate_gap_references(self, known_ids: set[str]) -> None:
+        for path, doc in self.json_docs.items():
+            if self.is_json_schema(doc):
+                continue
+            if isinstance(doc, dict) and "gap_register_id" in doc:
+                continue
+            for location, values in self.find_key(doc, "linked_gap_ids"):
+                if not isinstance(values, list):
+                    self.add_error(path, f"{location} must be an array")
+                    continue
+                for value in values:
+                    if not isinstance(value, str):
+                        self.add_error(path, f"{location} contains a non-string gap id")
+                    elif value not in known_ids:
+                        self.add_error(path, f"{location} references unknown gap_id: {value}")
 
     def validate_query_record_references(self, known_ids: set[str]) -> None:
         for path, doc in self.json_docs.items():

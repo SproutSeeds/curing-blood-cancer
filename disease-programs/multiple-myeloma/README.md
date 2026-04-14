@@ -31,6 +31,7 @@ research directions deserve structured public tracking.
 - `evidence-gaps/`: public work queues for missing evidence and review needs
 - `mechanisms/`: mechanism maps and relapse-biology notes
 - `measurements/`: MRD, response, relapse, and endpoint definitions
+- `public-tasks/`: contribution-ready tasks derived from evidence gaps
 - `trial-maps/`: trial-query outputs and derived public trial landscapes
 - `opportunity-map-v0.json`: first scored map of research/tooling opportunities
 
@@ -40,6 +41,7 @@ research directions deserve structured public tracking.
 - [Opportunity Map v0](opportunity-map-v0.json)
 - [BCMA Antigen Escape Claim Set v0](evidence-claims/bcma-antigen-escape-claim-set-v0.md)
 - [BCMA Antigen Escape Evidence Gap Register v0](evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md)
+- [BCMA Antigen Escape Public Task Queue v0](public-tasks/bcma-antigen-escape-public-task-queue-v0.md)
 - [MRD And Relapse Measurement Glossary v0](measurements/mrd-and-relapse-measurement-glossary-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)

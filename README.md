@@ -76,7 +76,7 @@ The validator checks JSON parsing, claim-set, evidence-claim, and evidence-gap
 schema conformance, measurement glossaries, mechanism maps, mechanism
 extractions, source ID references, taxonomy ID references, mechanism-group
 links, extraction-record links, measurement-term links, claim links, and
-query-record links.
+public-task links, and query-record links.
 
 You can also call the validator directly:
 
@@ -94,6 +94,12 @@ List evidence gaps and their linked claims:
 
 ```bash
 make list-evidence-gaps
+```
+
+List contribution-ready public tasks:
+
+```bash
+make list-public-tasks
 ```
 
 ## Contributing

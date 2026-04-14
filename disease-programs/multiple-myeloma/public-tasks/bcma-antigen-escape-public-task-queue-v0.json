@@ -1,0 +1,300 @@
+{
+  "task_queue_id": "bcma-antigen-escape-public-task-queue-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "title": "BCMA Antigen Escape Public Task Queue v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-directed therapy",
+    "post-BCMA relapse",
+    "post-CAR T relapse"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "gap_register_ids": [
+    "bcma-antigen-escape-evidence-gap-register-v0"
+  ],
+  "source_ids": [
+    "pubmed_antigen_escape_bcma_directed_2024",
+    "pubmed_di_meo_2025_sema4a_low_bcma",
+    "pubmed_tedder_bhutani_2025_bcma_resistance",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+  ],
+  "tasks": [
+    {
+      "task_id": "bcma-target-status-denominator-extraction-task-v0",
+      "task_title": "Extract BCMA target-status denominators from source records",
+      "task_type": "source-extraction-task",
+      "priority": "high",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "bcma-escape-frequency-denominator-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "tnfrsf17-loss-is-trackable-escape-signal-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "sequential-or-dual-target-immune-pressure-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/bcma-target-status-denominator-extraction-task-v0.md",
+      "public_deliverables": [
+        "A source extraction update or new extraction record that captures numerator, denominator, product, prior BCMA exposure, assay timing, and relapse state.",
+        "A short note stating which frequency claims remain unsupported."
+      ],
+      "acceptance_checks": [
+        "Updated JSON passes make validate.",
+        "Extraction record keeps source_ids, mechanism_group_ids, measurement_term_ids, and clinical_use_boundary.",
+        "No mechanism-frequency estimate is added unless denominator context is explicit."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that BCMA antigen escape is common or rare from this task alone.",
+        "Do not compare products or recommend therapy sequencing."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "bcma-measurement-context-field-audit-task-v0",
+      "task_title": "Audit BCMA claim records for missing measurement context fields",
+      "task_type": "evidence-gap-task",
+      "priority": "high",
+      "status": "ready",
+      "suggested_issue_form": "evidence-gap-task.yml",
+      "linked_gap_ids": [
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "bcma-antigen-loss-or-low-density-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "soluble-bcma",
+        "antigen-density",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0",
+        "di-meo-2025-sema4a-low-bcma-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/bcma-measurement-context-field-audit-task-v0.md",
+      "public_deliverables": [
+        "A list of required measurement-context fields for BCMA target-status and antigen-density extractions.",
+        "A proposed schema or extraction-template update if new required fields are needed."
+      ],
+      "acceptance_checks": [
+        "Missing assay method, specimen source, threshold or scoring method, timing, and paired-measurement context are explicitly flagged.",
+        "No measurement term is treated as sufficient evidence by itself.",
+        "make validate passes."
+      ],
+      "what_not_to_infer": [
+        "Do not compare target status or antigen density across sources without method context.",
+        "Do not infer patient-level actionability from missing-context flags."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "sema4a-translation-safety-extraction-task-v0",
+      "task_title": "Separate SEMA4A target biology from translation and safety evidence",
+      "task_type": "source-extraction-task",
+      "priority": "high",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "alternate-target-clinical-translation-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-sema4a-low-bcma-v0"
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/sema4a-translation-safety-extraction-task-v0.md",
+      "public_deliverables": [
+        "A revised or follow-on extraction separating tumor antigen density, normal-tissue reactivity, model context, clinical translation status, and trial-registry status.",
+        "A clear statement of what clinical efficacy and safety claims remain unsupported."
+      ],
+      "acceptance_checks": [
+        "Preclinical activity is not labeled as clinical efficacy.",
+        "Normal-tissue reactivity is kept separate from tumor target density.",
+        "make validate passes."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that SEMA4A-directed CAR T therapy works in patients.",
+        "Do not recommend alternate-target interventions."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "non-antigen-loss-bucket-coverage-task-v0",
+      "task_title": "Balance non-antigen-loss relapse mechanism extraction coverage",
+      "task_type": "evidence-gap-task",
+      "priority": "medium",
+      "status": "ready",
+      "suggested_issue_form": "evidence-gap-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "mechanism_group_ids": [
+        "car-t-fitness-exhaustion-persistence-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "tedder-bhutani-2025-bcma-resistance-review-v0",
+        "ledergor-2024-cd4-car-t-exhaustion-v0"
+      ],
+      "source_ids": [
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/non-antigen-loss-bucket-coverage-task-v0.md",
+      "public_deliverables": [
+        "A mechanism-bucket coverage note or tool output that counts extraction records and signals by mechanism bucket.",
+        "A list of candidate source records for under-covered non-antigen-loss buckets."
+      ],
+      "acceptance_checks": [
+        "Coverage metrics are not interpreted as biological importance.",
+        "Under-covered buckets are clearly separated from low-priority buckets.",
+        "make validate passes."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that antigen escape is dominant because it has cleaner structured artifacts.",
+        "Do not rank mechanism buckets without balanced extraction coverage."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "bcma-claim-set-expert-review-task-v0",
+      "task_title": "Expert review the BCMA claim set and evidence gap register",
+      "task_type": "expert-review-task",
+      "priority": "medium",
+      "status": "ready",
+      "suggested_issue_form": "expert-review-task.yml",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "tnfrsf17-loss-is-trackable-escape-signal-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0",
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "soluble-bcma",
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0",
+        "di-meo-2025-sema4a-low-bcma-v0",
+        "tedder-bhutani-2025-bcma-resistance-review-v0",
+        "ledergor-2024-cd4-car-t-exhaustion-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/bcma-claim-set-expert-review-task-v0.md",
+      "public_deliverables": [
+        "Expert review notes mapped to claim IDs, gap IDs, measurement terms, and source IDs.",
+        "Proposed wording changes or status changes for claims that overreach."
+      ],
+      "acceptance_checks": [
+        "Review separates source-checked from expert-reviewed status.",
+        "Review does not become patient-facing advice.",
+        "make validate passes if structured artifacts are edited."
+      ],
+      "what_not_to_infer": [
+        "Do not treat source-checked as expert-reviewed.",
+        "Do not turn review comments into clinical guidance."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from bcma-antigen-escape-evidence-gap-register-v0 and the public contributor intake kit.",
+      "Designed as issue-ready public work, not as evidence ranking or medical guidance."
+    ]
+  }
+}
