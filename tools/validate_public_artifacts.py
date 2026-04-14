@@ -497,6 +497,7 @@ class Validator:
             return
 
         seen_ids: set[str] = set()
+        seen_issue_urls: set[str] = set()
         for index, task in enumerate(tasks):
             if not isinstance(task, dict):
                 continue
@@ -506,6 +507,16 @@ class Validator:
             if task_id in seen_ids:
                 self.add_error(path, f"tasks[{index}] duplicate task_id: {task_id}")
             seen_ids.add(task_id)
+
+            issue_draft_path = task.get("issue_draft_path")
+            if isinstance(issue_draft_path, str) and not (self.root / issue_draft_path).exists():
+                self.add_error(path, f"tasks[{index}].issue_draft_path does not exist: {issue_draft_path}")
+
+            issue_url = task.get("github_issue_url")
+            if isinstance(issue_url, str):
+                if issue_url in seen_issue_urls:
+                    self.add_error(path, f"tasks[{index}] duplicate github_issue_url: {issue_url}")
+                seen_issue_urls.add(issue_url)
 
     def validate_evidence_claims(self) -> None:
         schema_path = self.root / "schemas" / "evidence-claim.schema.json"

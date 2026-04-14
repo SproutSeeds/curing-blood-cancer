@@ -16,13 +16,13 @@ contribution-ready public tasks.
 
 ## Ready Tasks
 
-| Task ID | Priority | Issue Form | Linked Gap |
-| --- | --- | --- | --- |
-| `bcma-target-status-denominator-extraction-task-v0` | high | source extraction | `bcma-escape-frequency-denominator-gap-v0` |
-| `bcma-measurement-context-field-audit-task-v0` | high | evidence gap | `bcma-measurement-context-completeness-gap-v0` |
-| `sema4a-translation-safety-extraction-task-v0` | high | source extraction | `alternate-target-clinical-translation-gap-v0` |
-| `non-antigen-loss-bucket-coverage-task-v0` | medium | evidence gap | `non-antigen-loss-relapse-buckets-gap-v0` |
-| `bcma-claim-set-expert-review-task-v0` | medium | expert review | `expert-review-readiness-gap-v0` |
+| Task ID | Priority | Issue Form | GitHub Issue | Linked Gap |
+| --- | --- | --- | --- | --- |
+| `bcma-target-status-denominator-extraction-task-v0` | high | source extraction | [#4](https://github.com/SproutSeeds/curing-blood-cancer/issues/4) | `bcma-escape-frequency-denominator-gap-v0` |
+| `bcma-measurement-context-field-audit-task-v0` | high | evidence gap | [#3](https://github.com/SproutSeeds/curing-blood-cancer/issues/3) | `bcma-measurement-context-completeness-gap-v0` |
+| `sema4a-translation-safety-extraction-task-v0` | high | source extraction | [#2](https://github.com/SproutSeeds/curing-blood-cancer/issues/2) | `alternate-target-clinical-translation-gap-v0` |
+| `non-antigen-loss-bucket-coverage-task-v0` | medium | evidence gap | [#6](https://github.com/SproutSeeds/curing-blood-cancer/issues/6) | `non-antigen-loss-relapse-buckets-gap-v0` |
+| `bcma-claim-set-expert-review-task-v0` | medium | expert review | [#5](https://github.com/SproutSeeds/curing-blood-cancer/issues/5) | `expert-review-readiness-gap-v0` |
 
 ## Issue Drafts
 
@@ -39,7 +39,4 @@ contribution-ready public tasks.
 
 ## Next Work
 
-- Open public GitHub issues from these drafts after the contributor intake kit
-  is merged.
-- Add issue URLs back into the structured task queue once issues exist.
 - Add task queues for MRD endpoint definitions and non-BCMA relapse mechanisms.
