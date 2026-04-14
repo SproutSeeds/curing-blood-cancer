@@ -37,6 +37,7 @@
     "di-meo-2025-sema4a-low-bcma-v0",
     "firestone-2024-bcma-antigen-escape-v0",
     "ledergor-2024-cd4-car-t-exhaustion-v0",
+    "maura-2025-plasma-cell-identity-escape-v0",
     "tedder-bhutani-2025-bcma-resistance-review-v0"
   ],
   "coverage_basis": {
@@ -49,29 +50,33 @@
     {
       "mechanism_group_id": "bcma-antigen-loss-or-low-density-v0",
       "label": "BCMA antigen loss, low density, or target alteration",
-      "signal_count": 3,
-      "extraction_record_count": 2,
-      "covered_source_count": 2,
+      "signal_count": 4,
+      "extraction_record_count": 3,
+      "covered_source_count": 3,
       "coverage_status": "covered-for-v0-navigation",
       "under_coverage_flag": false,
       "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
       "source_ids": [
         "pubmed_antigen_escape_bcma_directed_2024",
         "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_plasma_cell_identity_escape_2025",
         "pubmed_tedder_bhutani_2025_bcma_resistance",
         "pubmed_yue_2025_bcma_resistance"
       ],
       "covered_source_ids": [
         "pubmed_antigen_escape_bcma_directed_2024",
-        "pubmed_di_meo_2025_sema4a_low_bcma"
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_plasma_cell_identity_escape_2025"
       ],
       "extraction_record_ids": [
         "di-meo-2025-sema4a-low-bcma-v0",
-        "firestone-2024-bcma-antigen-escape-v0"
+        "firestone-2024-bcma-antigen-escape-v0",
+        "maura-2025-plasma-cell-identity-escape-v0"
       ],
       "extraction_signal_ids": [
         "low-bcma-post-car-t-relapse-target-need-signal-v0",
         "prior-bcma-therapy-target-loss-nonresponse-signal-v0",
+        "reduced-tnfrsf17-identity-escape-signal-v0",
         "tnfrsf17-biallelic-loss-target-alteration-signal-v0"
       ],
       "next_extraction_need": "Use current BCMA antigen-loss coverage for navigation only; do not rank biological importance from counts.",
@@ -114,24 +119,31 @@
     {
       "mechanism_group_id": "plasma-cell-identity-or-lineage-state-escape-v0",
       "label": "Plasma-cell identity or lineage-state escape",
-      "signal_count": 0,
-      "extraction_record_count": 0,
-      "covered_source_count": 0,
-      "coverage_status": "needs-first-extraction",
+      "signal_count": 2,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
       "under_coverage_flag": true,
-      "under_coverage_reason": "No extracted signals currently map to this mechanism bucket.",
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
       "source_ids": [
         "pubmed_di_meo_2025_sema4a_low_bcma",
         "pubmed_plasma_cell_identity_escape_2025",
         "pubmed_yue_2025_bcma_resistance"
       ],
-      "covered_source_ids": [],
-      "extraction_record_ids": [],
-      "extraction_signal_ids": [],
-      "next_extraction_need": "Add the first source-specific extraction for plasma-cell identity or lineage-state escape.",
+      "covered_source_ids": [
+        "pubmed_plasma_cell_identity_escape_2025"
+      ],
+      "extraction_record_ids": [
+        "maura-2025-plasma-cell-identity-escape-v0"
+      ],
+      "extraction_signal_ids": [
+        "mouse-model-identity-escape-validation-signal-v0",
+        "plasma-cell-identity-escape-refractory-signature-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for plasma-cell identity or lineage-state escape before comparison.",
       "coverage_notes": [
-        "Zero extracted signals means the public repo needs extraction coverage, not that the mechanism is unimportant.",
-        "The current mechanism map already lists public source anchors for this bucket."
+        "First-extraction coverage now exists from the Maura 2025 preprint source record.",
+        "This bucket remains single-source and preprint-linked; add another source before cross-source comparison."
       ]
     },
     {
@@ -201,9 +213,9 @@
     {
       "mechanism_group_id": "measurement-and-follow-up-gaps-v0",
       "label": "Measurement and follow-up gaps",
-      "signal_count": 5,
-      "extraction_record_count": 4,
-      "covered_source_count": 4,
+      "signal_count": 6,
+      "extraction_record_count": 5,
+      "covered_source_count": 5,
       "coverage_status": "covered-for-v0-navigation",
       "under_coverage_flag": false,
       "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
@@ -214,23 +226,27 @@
         "pubmed_antigen_escape_bcma_directed_2024",
         "pubmed_di_meo_2025_sema4a_low_bcma",
         "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+        "pubmed_plasma_cell_identity_escape_2025",
         "pubmed_tedder_bhutani_2025_bcma_resistance"
       ],
       "covered_source_ids": [
         "pubmed_antigen_escape_bcma_directed_2024",
         "pubmed_di_meo_2025_sema4a_low_bcma",
         "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+        "pubmed_plasma_cell_identity_escape_2025",
         "pubmed_tedder_bhutani_2025_bcma_resistance"
       ],
       "extraction_record_ids": [
         "di-meo-2025-sema4a-low-bcma-v0",
         "firestone-2024-bcma-antigen-escape-v0",
         "ledergor-2024-cd4-car-t-exhaustion-v0",
+        "maura-2025-plasma-cell-identity-escape-v0",
         "tedder-bhutani-2025-bcma-resistance-review-v0"
       ],
       "extraction_signal_ids": [
         "alternate-target-safety-fields-signal-v0",
         "durability-profiling-need-signal-v0",
+        "identity-escape-measurement-field-signal-v0",
         "multifactorial-bcma-resistance-categories-signal-v0",
         "public-abstract-measurement-gap-signal-v0",
         "soluble-bcma-target-absence-measurement-signal-v0"
@@ -244,10 +260,10 @@
   ],
   "summary": {
     "mechanism_bucket_count": 6,
-    "extraction_record_count": 4,
-    "extraction_signal_count": 16,
-    "needs_first_extraction_count": 2,
-    "needs_second_source_extraction_count": 1
+    "extraction_record_count": 5,
+    "extraction_signal_count": 20,
+    "needs_first_extraction_count": 1,
+    "needs_second_source_extraction_count": 2
   },
   "interpretation_boundary": [
     "Coverage counts are public artifact coverage metrics only.",
@@ -263,7 +279,8 @@
     "review_status": "source-checked",
     "review_notes": [
       "Built from the public mechanism map and current public mechanism extraction records.",
-      "Created for issue #6 to separate artifact coverage imbalance from biological importance."
+      "Created for issue #6 to separate artifact coverage imbalance from biological importance.",
+      "Issue #14 adds first-extraction coverage for plasma-cell identity or lineage-state escape."
     ]
   }
 }

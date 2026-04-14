@@ -14,7 +14,8 @@
     "pubmed_antigen_escape_bcma_directed_2024",
     "pubmed_di_meo_2025_sema4a_low_bcma",
     "pubmed_tedder_bhutani_2025_bcma_resistance",
-    "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+    "pubmed_plasma_cell_identity_escape_2025"
   ],
   "claim_set_ids": [
     "bcma-antigen-escape-claim-set-v0"
@@ -24,6 +25,7 @@
     "sequential-or-dual-target-immune-pressure-v0",
     "measurement-and-follow-up-gaps-v0",
     "car-t-fitness-exhaustion-persistence-v0",
+    "plasma-cell-identity-or-lineage-state-escape-v0",
     "disease-burden-site-risk-context-v0"
   ],
   "measurement_term_ids": [
@@ -37,7 +39,8 @@
     "firestone-2024-bcma-antigen-escape-v0",
     "di-meo-2025-sema4a-low-bcma-v0",
     "tedder-bhutani-2025-bcma-resistance-review-v0",
-    "ledergor-2024-cd4-car-t-exhaustion-v0"
+    "ledergor-2024-cd4-car-t-exhaustion-v0",
+    "maura-2025-plasma-cell-identity-escape-v0"
   ],
   "gaps": [
     {
@@ -177,6 +180,7 @@
       ],
       "mechanism_group_ids": [
         "car-t-fitness-exhaustion-persistence-v0",
+        "plasma-cell-identity-or-lineage-state-escape-v0",
         "disease-burden-site-risk-context-v0",
         "sequential-or-dual-target-immune-pressure-v0",
         "measurement-and-follow-up-gaps-v0"
@@ -186,18 +190,20 @@
       ],
       "extraction_record_ids": [
         "tedder-bhutani-2025-bcma-resistance-review-v0",
-        "ledergor-2024-cd4-car-t-exhaustion-v0"
+        "ledergor-2024-cd4-car-t-exhaustion-v0",
+        "maura-2025-plasma-cell-identity-escape-v0"
       ],
       "source_ids": [
         "pubmed_tedder_bhutani_2025_bcma_resistance",
-        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+        "pubmed_plasma_cell_identity_escape_2025"
       ],
       "public_next_actions": [
-        "Add source-specific extraction records for immune fitness, persistence, microenvironment, sequencing, and disease-burden context.",
-        "Create a balanced mechanism coverage report that counts extraction records and signals by mechanism bucket."
+        "Add additional source-specific extraction records for immune fitness, persistence, microenvironment, sequencing, plasma-cell identity, and disease-burden context.",
+        "Keep the mechanism coverage report current as each bucket moves from no extraction to first extraction to second-source coverage."
       ],
       "what_would_improve_confidence": [
-        "Full-text extraction across multiple non-antigen-loss sources.",
+        "Full-text extraction across multiple non-antigen-loss sources, including second-source extraction for plasma-cell identity or lineage-state escape.",
         "Mechanism-bucket coverage metrics before any prioritization claim."
       ],
       "what_not_to_infer": [

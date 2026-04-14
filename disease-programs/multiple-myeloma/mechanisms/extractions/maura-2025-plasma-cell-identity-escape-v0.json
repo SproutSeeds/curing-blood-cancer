@@ -1,0 +1,143 @@
+{
+  "extraction_record_id": "maura-2025-plasma-cell-identity-escape-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "post-car-t-relapse-mechanism-map-v0",
+  "source_ids": [
+    "pubmed_plasma_cell_identity_escape_2025"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_bispecific_antibody",
+    "myeloma_class_car_t_cell_therapy"
+  ],
+  "mechanism_group_ids": [
+    "plasma-cell-identity-or-lineage-state-escape-v0",
+    "bcma-antigen-loss-or-low-density-v0",
+    "measurement-and-follow-up-gaps-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed/PMC-indexed preprint",
+    "title": "Plasma cell identity escape drives resistance to anti-BCMA T-cell-redirecting therapy in multiple myeloma.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41415462/",
+    "doi": "10.64898/2025.12.08.692978",
+    "pmid": "41415462",
+    "accessed": "2026-04-14",
+    "publication_year": 2025,
+    "study_context": "bioRxiv preprint indexed by PubMed and PMC; public abstract and full-text page describe WGS/WES, scRNA-seq, and preclinical mouse-model analyses in relapsed/refractory multiple myeloma after anti-BCMA CART and TCE therapy."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "plasma-cell-identity-escape-refractory-signature-signal-v0",
+      "mechanism_group_id": "plasma-cell-identity-or-lineage-state-escape-v0",
+      "signal_summary": "The source defines plasma cell identity escape as a refractory-disease profile combining high genomic complexity or proliferation with reduced plasma-cell transcriptional programs in anti-BCMA CART/TCE-treated multiple myeloma cohorts.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "anti-BCMA CART/TCE-treated relapsed or refractory multiple myeloma cohort",
+        "whole-genome sequencing",
+        "whole-exome sequencing",
+        "genomic complexity",
+        "primary refractoriness",
+        "plasma cell identity gene alterations",
+        "plasma-cell transcriptional program",
+        "progression-free survival context"
+      ],
+      "limitations": [
+        "The public source is a preprint and needs expert review before use in public explanatory summaries.",
+        "The extraction records an association and source-defined entity; it does not establish patient-specific prognosis.",
+        "Cohort composition, response definitions, and model details require full paper-level appraisal before cross-source comparison."
+      ]
+    },
+    {
+      "signal_id": "reduced-tnfrsf17-identity-escape-signal-v0",
+      "mechanism_group_id": "bcma-antigen-loss-or-low-density-v0",
+      "signal_summary": "The source links refractory single-cell profiles to reduced TNFRSF17 expression and reduced plasma-cell-associated transcriptional programs, making BCMA expression a target-linked field inside the identity-escape extraction.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "single-cell RNA sequencing",
+        "TNFRSF17 expression",
+        "BCMA expression context",
+        "refractory versus durable-response group",
+        "plasma-cell-associated transcriptional program",
+        "target-linked phenotype state"
+      ],
+      "limitations": [
+        "Reduced TNFRSF17 transcript expression is not the same as a standardized clinical surface-antigen assay.",
+        "This signal should not be used as a standalone test recommendation.",
+        "The source does not support a general BCMA-loss frequency estimate from this extraction alone."
+      ]
+    },
+    {
+      "signal_id": "mouse-model-identity-escape-validation-signal-v0",
+      "mechanism_group_id": "plasma-cell-identity-or-lineage-state-escape-v0",
+      "signal_summary": "The source reports preclinical mouse-model support for the association between reduced plasma-cell identity, lower Tnfrsf17 expression, and less sensitive anti-BCMA TCE response contexts.",
+      "evidence_level": "mechanistic-preclinical",
+      "direction": "supports",
+      "measurement_fields": [
+        "Trp53 model context",
+        "VkMYC mouse model context",
+        "Tnfrsf17 expression",
+        "plasma-cell gene expression signature",
+        "anti-BCMA TCE response",
+        "preclinical model validation"
+      ],
+      "limitations": [
+        "Mouse-model support is mechanistic and preclinical; it is not clinical efficacy or safety evidence.",
+        "Mouse model responses should not be converted into patient treatment recommendations.",
+        "The source supports mechanism tracking, not clinical actionability."
+      ]
+    },
+    {
+      "signal_id": "identity-escape-measurement-field-signal-v0",
+      "mechanism_group_id": "measurement-and-follow-up-gaps-v0",
+      "signal_summary": "The source shows that identity-escape extraction needs paired measurement fields spanning therapy class, sample timing, sequencing modality, response group, transcriptomic state, BCMA/TNFRSF17 context, and model context.",
+      "evidence_level": "expert-review-needed",
+      "direction": "supports",
+      "measurement_fields": [
+        "preprint status",
+        "CART versus TCE therapy class",
+        "pre-treatment versus progression sample timing",
+        "paired sample availability",
+        "whole-genome sequencing",
+        "whole-exome sequencing",
+        "single-cell RNA sequencing",
+        "response group definition",
+        "TNFRSF17 expression",
+        "plasma-cell signature",
+        "mouse model context"
+      ],
+      "limitations": [
+        "Measurement fields need expert review before they become a cross-study harmonization standard.",
+        "The extraction does not harmonize identity-state labels across sources.",
+        "Coverage status remains an artifact metric, not evidence strength or biological priority."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "Plasma-cell identity or lineage-state escape now has a first public source-specific extraction record.",
+      "Source-specific identity-escape tracking should preserve genomic complexity, proliferation, plasma-cell transcriptional program, TNFRSF17/BCMA expression, therapy class, response group, sample timing, and model context.",
+      "Reduced TNFRSF17 expression is a target-linked field that should be kept separate from standardized clinical target-status testing.",
+      "Preclinical mouse-model support can be tracked as mechanistic evidence, not as clinical efficacy or safety evidence."
+    ],
+    "what_this_does_not_support": [
+      "It does not prove that plasma cell identity escape is frequent across all post-BCMA relapse.",
+      "It does not establish a patient-specific test, prognosis, treatment choice, or trial recommendation.",
+      "It does not establish clinical efficacy for an alternate target or alternate intervention.",
+      "It does not replace expert review of the preprint, cohort definitions, sequencing methods, or model systems.",
+      "It does not claim that multiple myeloma has been cured."
+    ]
+  },
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from NCBI EFetch PubMed XML for PMID 41415462 and the linked PMC preprint page PMCID PMC12710967.",
+      "Preserves preprint status and separates observational human signals from mechanistic preclinical mouse-model support.",
+      "Created to complete public issue #14 as first-extraction coverage for plasma-cell identity or lineage-state escape."
+    ]
+  }
+}
