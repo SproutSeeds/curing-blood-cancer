@@ -29,6 +29,7 @@ research directions deserve structured public tracking.
 
 - `evidence-claims/`: structured claims that carry provenance and uncertainty
 - `mechanisms/`: mechanism maps and relapse-biology notes
+- `measurements/`: MRD, response, relapse, and endpoint definitions
 - `trial-maps/`: trial-query outputs and derived public trial landscapes
 - `opportunity-map-v0.json`: first scored map of research/tooling opportunities
 
@@ -37,6 +38,7 @@ research directions deserve structured public tracking.
 - [Cure Wedge v0](cure-wedge-durable-mrd-negative-remission-v0.md)
 - [Opportunity Map v0](opportunity-map-v0.json)
 - [BCMA Antigen Escape Claim Set v0](evidence-claims/bcma-antigen-escape-claim-set-v0.md)
+- [MRD And Relapse Measurement Glossary v0](measurements/mrd-and-relapse-measurement-glossary-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
 

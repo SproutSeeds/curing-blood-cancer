@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/curing-blood-cancer/measurement-glossary.schema.json",
+  "title": "Curing Blood Cancer Measurement Glossary",
+  "type": "object",
+  "required": [
+    "glossary_id",
+    "date",
+    "disease_program",
+    "title",
+    "blood_cancer_scope",
+    "clinical_use_boundary",
+    "source_ids",
+    "terms",
+    "review"
+  ],
+  "properties": {
+    "glossary_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-v[0-9]+$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "disease_program": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blood_cancer_scope": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "clinical_use_boundary": {
+      "type": "string",
+      "enum": [
+        "not-medical-advice",
+        "not-diagnostic",
+        "not-treatment-recommendation",
+        "not-trial-recommendation",
+        "research-use-only",
+        "requires-clinician-review"
+      ]
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "terms": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "term_id",
+          "label",
+          "term_kind",
+          "definition",
+          "measurement_context",
+          "source_ids",
+          "use_in_public_artifacts",
+          "what_not_to_infer",
+          "limitations"
+        ],
+        "properties": {
+          "term_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "term_kind": {
+            "type": "string",
+            "enum": [
+              "assay-context",
+              "endpoint",
+              "measurement-boundary",
+              "response-category",
+              "specimen-context",
+              "time-window"
+            ]
+          },
+          "definition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "measurement_context": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "related_term_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "use_in_public_artifacts": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "what_not_to_infer": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": ["created", "last_reviewed", "review_status"],
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date"
+        },
+        "last_reviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "source-checked",
+            "expert-review-needed",
+            "expert-reviewed",
+            "deprecated"
+          ]
+        },
+        "review_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -144,6 +144,36 @@
       "claim_limits": ["API output is a registry snapshot; trial details, status, eligibility, and site availability still require verification."]
     },
     {
+      "source_id": "pubmed_kumar_2016_imwg_mrd_response_criteria",
+      "owner": "PubMed-indexed literature",
+      "source_type": "consensus statement",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27511158/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "response criteria", "minimal residual disease"],
+      "claim_uses": ["literature-search", "measurement-standard"],
+      "claim_limits": ["Consensus criteria; use for public measurement definitions, not patient-specific interpretation."]
+    },
+    {
+      "source_id": "pubmed_munshi_2017_mrd_survival_meta_analysis",
+      "owner": "PubMed-indexed literature",
+      "source_type": "meta-analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27632282/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "minimal residual disease", "survival outcomes"],
+      "claim_uses": ["literature-search", "measurement-standard"],
+      "claim_limits": ["Outcome association does not provide patient-specific prognosis or prove a treatment strategy."]
+    },
+    {
+      "source_id": "pubmed_soh_2022_mrd_flow_harmonization",
+      "owner": "PubMed-indexed literature",
+      "source_type": "research article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35005838/",
+      "accessed": "2026-04-14",
+      "blood_cancer_scope": ["multiple myeloma", "measurable residual disease", "flow cytometry"],
+      "claim_uses": ["literature-search", "measurement-standard", "data-reuse"],
+      "claim_limits": ["Flow-cytometry harmonization source; does not replace local laboratory validation or clinical interpretation."]
+    },
+    {
       "source_id": "pubmed_tedder_bhutani_2025_bcma_resistance",
       "owner": "PubMed-indexed literature",
       "source_type": "review article",

@@ -25,6 +25,7 @@ as a claim by itself.
 | `regulatory-status` | Useful for checking drug or product approval status. |
 | `statistics` | Useful for incidence, mortality, survival, or registry-level population context. |
 | `data-reuse` | Useful for public or redistributable data workflows. |
+| `measurement-standard` | Useful for response, MRD, assay, and endpoint definitions. |
 
 ## Records
 
@@ -44,6 +45,9 @@ as a claim by itself.
 | `nci_pdq_mpn_hp` | National Cancer Institute | health-professional PDQ summary | myeloproliferative neoplasms | `clinical-summary` | Not a formal guideline or patient-specific recommendation. |
 | `clinicaltrials_gov` | U.S. National Library of Medicine | trial registry | all blood-cancer subtypes with registered studies | `trial-search` | Trial listings do not prove availability, eligibility, safety, or efficacy. |
 | `clinicaltrials_gov_api_v2` | U.S. National Library of Medicine | trial registry API | all blood-cancer subtypes with registered studies | `trial-search`, `data-reuse` | API output is a registry snapshot; trial details, status, eligibility, and site availability still require verification. |
+| `pubmed_kumar_2016_imwg_mrd_response_criteria` | PubMed-indexed literature | consensus statement | multiple myeloma, response criteria, minimal residual disease | `literature-search`, `measurement-standard` | Consensus criteria; use for public measurement definitions, not patient-specific interpretation. |
+| `pubmed_munshi_2017_mrd_survival_meta_analysis` | PubMed-indexed literature | meta-analysis | multiple myeloma, minimal residual disease, survival outcomes | `literature-search`, `measurement-standard` | Outcome association does not provide patient-specific prognosis or prove a treatment strategy. |
+| `pubmed_soh_2022_mrd_flow_harmonization` | PubMed-indexed literature | research article | multiple myeloma, measurable residual disease, flow cytometry | `literature-search`, `measurement-standard`, `data-reuse` | Flow-cytometry harmonization source; does not replace local laboratory validation or clinical interpretation. |
 | `pubmed_tedder_bhutani_2025_bcma_resistance` | PubMed-indexed literature | review article | multiple myeloma, BCMA-targeted CAR T-cell therapy, BCMA-targeted bispecific antibodies | `literature-search`, `mechanism-map` | Review article; use for mechanism framing, not patient-specific treatment selection. |
 | `pubmed_ledergor_2024_cd4_car_t_exhaustion` | PubMed-indexed literature | research article | multiple myeloma, BCMA-targeted CAR T-cell therapy, T-cell exhaustion | `literature-search`, `mechanism-map` | Study context and cohort details require paper-level appraisal before strong claims. |
 | `pubmed_antigen_escape_bcma_directed_2024` | PubMed-indexed literature | research article | multiple myeloma, BCMA-directed therapy, antigen escape | `literature-search`, `mechanism-map` | Mechanism observations should not be generalized beyond the studied context without review. |
@@ -72,6 +76,9 @@ as a claim by itself.
 | `nci_pdq_mpn_hp` | https://www.cancer.gov/types/myeloproliferative/hp/myeloproliferative-neoplasms-treatment | 2026-04-11 |
 | `clinicaltrials_gov` | https://clinicaltrials.gov/ | 2026-04-11 |
 | `clinicaltrials_gov_api_v2` | https://clinicaltrials.gov/data-api/about-api | 2026-04-14 |
+| `pubmed_kumar_2016_imwg_mrd_response_criteria` | https://pubmed.ncbi.nlm.nih.gov/27511158/ | 2026-04-14 |
+| `pubmed_munshi_2017_mrd_survival_meta_analysis` | https://pubmed.ncbi.nlm.nih.gov/27632282/ | 2026-04-14 |
+| `pubmed_soh_2022_mrd_flow_harmonization` | https://pubmed.ncbi.nlm.nih.gov/35005838/ | 2026-04-14 |
 | `pubmed_tedder_bhutani_2025_bcma_resistance` | https://pubmed.ncbi.nlm.nih.gov/40710330/ | 2026-04-14 |
 | `pubmed_ledergor_2024_cd4_car_t_exhaustion` | https://pubmed.ncbi.nlm.nih.gov/38574299/ | 2026-04-14 |
 | `pubmed_antigen_escape_bcma_directed_2024` | https://pubmed.ncbi.nlm.nih.gov/38728378/ | 2026-04-14 |

@@ -52,6 +52,7 @@ class Validator:
         self.validate_claim_sets()
         self.validate_evidence_claims()
         self.validate_mechanism_extractions()
+        self.validate_measurement_glossaries()
         self.validate_mechanism_maps()
         self.validate_opportunity_maps()
         self.validate_source_references(source_ids)
@@ -264,6 +265,51 @@ class Validator:
             if signal_id in seen_ids:
                 self.add_error(path, f"extracted_signals[{index}] duplicate signal_id: {signal_id}")
             seen_ids.add(signal_id)
+
+    def validate_measurement_glossaries(self) -> None:
+        schema_path = self.root / "schemas" / "measurement-glossary.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_glossaries: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "glossary_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            glossary_id = doc.get("glossary_id")
+            if isinstance(glossary_id, str):
+                if glossary_id in seen_glossaries:
+                    self.add_error(path, f"duplicate glossary_id: {glossary_id}")
+                seen_glossaries.add(glossary_id)
+            self.validate_measurement_term_ids(path, doc)
+
+    def validate_measurement_term_ids(self, path: Path, doc: dict[str, Any]) -> None:
+        terms = doc.get("terms")
+        if not isinstance(terms, list):
+            return
+
+        seen_ids: set[str] = set()
+        for index, term in enumerate(terms):
+            if not isinstance(term, dict):
+                continue
+            term_id = term.get("term_id")
+            if not isinstance(term_id, str):
+                continue
+            if term_id in seen_ids:
+                self.add_error(path, f"terms[{index}] duplicate term_id: {term_id}")
+            seen_ids.add(term_id)
+
+        for index, term in enumerate(terms):
+            if not isinstance(term, dict):
+                continue
+            related = term.get("related_term_ids")
+            if not isinstance(related, list):
+                continue
+            for value in related:
+                if isinstance(value, str) and value not in seen_ids:
+                    self.add_error(path, f"terms[{index}].related_term_ids references unknown term_id: {value}")
 
     def validate_mechanism_maps(self) -> None:
         schema_path = self.root / "schemas" / "mechanism-map.schema.json"

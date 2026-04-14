@@ -1,0 +1,44 @@
+{
+  "artifact_id": "mrd-and-relapse-measurement-glossary-v0",
+  "title": "MRD And Relapse Measurement Glossary v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "response assessment",
+    "relapse assessment"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "NCI plasma cell neoplasms / multiple myeloma PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: IMWG response and MRD criteria",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27511158/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: MRD and survival meta-analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27632282/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: MRD flow cytometry harmonization",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35005838/",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not establish clinical actionability for any MRD result.",
+    "Requires expert review before use as an educational anchor."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-and-relapse-measurement-glossary-v0.md"
+}

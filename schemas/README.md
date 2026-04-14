@@ -12,6 +12,7 @@ without weakening the repo's safety boundaries.
 - [Evidence Claim Schema v0](./evidence-claim.schema.json)
 - [Mechanism Extraction Schema](./mechanism-extraction.schema.json)
 - [Mechanism Map Schema](./mechanism-map.schema.json)
+- [Measurement Glossary Schema](./measurement-glossary.schema.json)
 - [Opportunity Map Schema](./opportunity-map.schema.json)
 
 ## Templates And Examples
