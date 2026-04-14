@@ -81,7 +81,7 @@
       "task_title": "Add the first public extraction for plasma-cell identity or lineage-state escape",
       "task_type": "source-extraction-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0"
@@ -99,6 +99,9 @@
         "antigen-density",
         "relapse-or-disease-progression"
       ],
+      "extraction_record_ids": [
+        "maura-2025-plasma-cell-identity-escape-v0"
+      ],
       "source_ids": [
         "pubmed_plasma_cell_identity_escape_2025",
         "pubmed_di_meo_2025_sema4a_low_bcma",
@@ -115,7 +118,8 @@
         "Preprint or preclinical status is preserved when present in the source record.",
         "Identity-state labels are kept source-specific and are not harmonized across studies without an explicit mapping note.",
         "BCMA-low, BCMA-retained, and alternate-target signals are separated when the source supports separation.",
-        "make validate passes after the extraction and coverage update."
+        "make validate passes after the extraction and coverage update.",
+        "Completed in public follow-up PR for issue #14."
       ],
       "what_not_to_infer": [
         "Do not infer clinical efficacy for any alternate target from identity-state evidence alone.",

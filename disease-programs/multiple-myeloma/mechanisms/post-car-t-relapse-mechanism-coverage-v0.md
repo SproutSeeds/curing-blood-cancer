@@ -31,23 +31,17 @@ structured artifacts for the most biologically important bucket.
 
 | Mechanism Bucket | Signals | Extraction Records | Status | Next Extraction Need |
 | --- | ---: | ---: | --- | --- |
-| BCMA antigen loss, low density, or target alteration | 3 | 2 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
+| BCMA antigen loss, low density, or target alteration | 4 | 3 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
 | CAR T fitness, exhaustion, expansion, or persistence | 3 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
-| Plasma-cell identity or lineage-state escape | 0 | 0 | needs-first-extraction | Add the first source-specific extraction. |
+| Plasma-cell identity or lineage-state escape | 2 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
 | Disease burden, site, and high-risk context | 0 | 0 | needs-first-extraction | Add the first source-specific extraction. |
 | Sequential or dual-target immune pressure | 5 | 3 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
-| Measurement and follow-up gaps | 5 | 4 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
+| Measurement and follow-up gaps | 6 | 5 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
 
 ## Under-Covered Buckets
 
 ### Needs First Extraction
 
-- `plasma-cell-identity-or-lineage-state-escape-v0`
-  - public source anchors: `pubmed_plasma_cell_identity_escape_2025`,
-    `pubmed_yue_2025_bcma_resistance`,
-    `pubmed_di_meo_2025_sema4a_low_bcma`
-  - next step: create a source-specific extraction that separates identity or
-    lineage-state evidence from alternate-target intervention claims
 - `disease-burden-site-risk-context-v0`
   - public source anchors: `nci_pdq_myeloma_hp`, `clinicaltrials_gov`,
     `clinicaltrials_gov_api_v2`,
@@ -64,6 +58,14 @@ structured artifacts for the most biologically important bucket.
     `pubmed_yue_2025_bcma_resistance`
   - next step: add at least one additional source-specific extraction before
     comparing immune fitness, exhaustion, persistence, or expansion signals
+- `plasma-cell-identity-or-lineage-state-escape-v0`
+  - current public extraction:
+    `maura-2025-plasma-cell-identity-escape-v0`
+  - public source anchors for expansion:
+    `pubmed_yue_2025_bcma_resistance`,
+    `pubmed_di_meo_2025_sema4a_low_bcma`
+  - next step: add at least one additional source-specific extraction before
+    comparing identity or lineage-state evidence across sources
 
 ## Reproduce
 
@@ -89,4 +91,3 @@ Structured data:
 
 - JSON: [`post-car-t-relapse-mechanism-coverage-v0.json`](post-car-t-relapse-mechanism-coverage-v0.json)
 - Metadata: [`post-car-t-relapse-mechanism-coverage-v0.metadata.json`](post-car-t-relapse-mechanism-coverage-v0.metadata.json)
-

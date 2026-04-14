@@ -54,11 +54,13 @@ reactivity, model context, trial-readiness, and clinical safety evidence.
 ### Multifactorial Resistance
 
 BCMA antigen escape should not collapse the relapse map into one mechanism.
-Immune-cell fitness, microenvironment, disease context, therapy sequencing, and
-measurement gaps still need source-by-source extraction.
+Immune-cell fitness, plasma-cell identity, microenvironment, disease context,
+therapy sequencing, and measurement gaps still need source-by-source
+extraction.
 
-Next public work: add extraction records that populate the non-antigen-loss
-buckets with the same rigor as target-status records.
+Next public work: add second-source coverage for plasma-cell identity and CAR T
+fitness buckets, and add first-extraction coverage for disease-burden,
+disease-site, and high-risk context.
 
 ### Expert Review
 

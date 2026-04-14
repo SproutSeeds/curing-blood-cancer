@@ -25,7 +25,7 @@ Coverage Report into contribution-ready public source-extraction tasks.
 | Task ID | Priority | Status | GitHub Issue | Linked Gap | Mechanism Bucket |
 | --- | --- | --- | --- | --- | --- |
 | `car-t-fitness-second-source-extraction-task-v0` | high | ready | [#15](https://github.com/SproutSeeds/curing-blood-cancer/issues/15) | `non-antigen-loss-relapse-buckets-gap-v0` | `car-t-fitness-exhaustion-persistence-v0` |
-| `plasma-cell-identity-first-extraction-task-v0` | high | ready | [#14](https://github.com/SproutSeeds/curing-blood-cancer/issues/14) | `non-antigen-loss-relapse-buckets-gap-v0` | `plasma-cell-identity-or-lineage-state-escape-v0` |
+| `plasma-cell-identity-first-extraction-task-v0` | high | done | [#14](https://github.com/SproutSeeds/curing-blood-cancer/issues/14) | `non-antigen-loss-relapse-buckets-gap-v0` | `plasma-cell-identity-or-lineage-state-escape-v0` |
 | `disease-burden-site-risk-context-first-extraction-task-v0` | medium | ready | [#16](https://github.com/SproutSeeds/curing-blood-cancer/issues/16) | `non-antigen-loss-relapse-buckets-gap-v0` | `disease-burden-site-risk-context-v0` |
 
 ## Issue Drafts
@@ -49,14 +49,12 @@ Candidate public source anchors:
 
 ### Plasma-Cell Identity Or Lineage-State Escape
 
-The coverage report currently has no extracted signals for this bucket. The
-next task adds the first source-specific extraction and preserves peer-review
-status, model context, sample pairing, measurement method, and target-state
-scope.
+The coverage report now has first-extraction coverage from
+`maura-2025-plasma-cell-identity-escape-v0`. The next step is a second
+source-specific extraction before any cross-source comparison.
 
 Candidate public source anchors:
 
-- `pubmed_plasma_cell_identity_escape_2025`
 - `pubmed_di_meo_2025_sema4a_low_bcma`
 - `pubmed_yue_2025_bcma_resistance`
 
