@@ -1,0 +1,272 @@
+{
+  "gap_register_id": "bcma-antigen-escape-evidence-gap-register-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "title": "BCMA Antigen Escape Evidence Gap Register v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "BCMA-directed therapy",
+    "post-BCMA relapse",
+    "post-CAR T relapse"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_ids": [
+    "pubmed_antigen_escape_bcma_directed_2024",
+    "pubmed_di_meo_2025_sema4a_low_bcma",
+    "pubmed_tedder_bhutani_2025_bcma_resistance",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+  ],
+  "claim_set_ids": [
+    "bcma-antigen-escape-claim-set-v0"
+  ],
+  "mechanism_group_ids": [
+    "bcma-antigen-loss-or-low-density-v0",
+    "sequential-or-dual-target-immune-pressure-v0",
+    "measurement-and-follow-up-gaps-v0",
+    "car-t-fitness-exhaustion-persistence-v0",
+    "disease-burden-site-risk-context-v0"
+  ],
+  "measurement_term_ids": [
+    "bone-marrow-target-status",
+    "soluble-bcma",
+    "antigen-density",
+    "normal-tissue-reactivity-screen",
+    "relapse-or-disease-progression"
+  ],
+  "extraction_record_ids": [
+    "firestone-2024-bcma-antigen-escape-v0",
+    "di-meo-2025-sema4a-low-bcma-v0",
+    "tedder-bhutani-2025-bcma-resistance-review-v0",
+    "ledergor-2024-cd4-car-t-exhaustion-v0"
+  ],
+  "gaps": [
+    {
+      "gap_id": "bcma-escape-frequency-denominator-gap-v0",
+      "gap_type": "mechanism-frequency",
+      "priority": "high",
+      "gap_statement": "The current public artifacts identify BCMA antigen loss, low density, and target alteration as mechanisms to track, but they do not estimate frequency across BCMA-directed products, disease states, or treatment sequences.",
+      "why_it_matters": "Without denominators and product context, a public map can name a mechanism but cannot say how common it is or compare it across relapse settings.",
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "tnfrsf17-loss-is-trackable-escape-signal-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "sequential-or-dual-target-immune-pressure-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "public_next_actions": [
+        "Add full-paper extraction fields for cohort denominator, product, prior BCMA exposure, target-assay timing, and relapse state.",
+        "Create a frequency-ready extraction checklist before any mechanism-rate claim is attempted."
+      ],
+      "what_would_improve_confidence": [
+        "Multiple source-specific extractions with numerator, denominator, assay method, specimen context, and therapy sequence.",
+        "Expert review of whether source populations are comparable enough for any pooled summary."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that BCMA antigen escape is common or rare from the current public record.",
+        "Do not compare frequencies across therapies without aligned methods and populations."
+      ],
+      "limitations": [
+        "This is a gap statement, not a frequency estimate.",
+        "The current public extraction uses public abstract and metadata context."
+      ]
+    },
+    {
+      "gap_id": "bcma-measurement-context-completeness-gap-v0",
+      "gap_type": "measurement-context",
+      "priority": "high",
+      "gap_statement": "The claim set depends on target status, soluble BCMA, antigen density, and relapse definitions, but many public summaries do not expose enough assay, specimen, threshold, and time-point detail for stronger interpretation.",
+      "why_it_matters": "A target-status claim can change meaning when the assay method, specimen source, sample adequacy, timing, or paired measurement context changes.",
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "bcma-antigen-loss-or-low-density-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "soluble-bcma",
+        "antigen-density",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0",
+        "di-meo-2025-sema4a-low-bcma-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "public_next_actions": [
+        "Add required extraction fields for assay method, specimen source, threshold or scoring method, timing, paired measurements, and missing-context notes.",
+        "Update listing tools to flag claim records with measurement terms but missing measurement detail fields when those fields exist."
+      ],
+      "what_would_improve_confidence": [
+        "Full-text extraction of measurement methods and source-specific assay limitations.",
+        "Expert review of which measurement fields are minimum viable for public comparison."
+      ],
+      "what_not_to_infer": [
+        "Do not treat a named measurement term as sufficient evidence by itself.",
+        "Do not compare target status or antigen density across sources without method context."
+      ],
+      "limitations": [
+        "The glossary defines terms; it does not guarantee that source records contain enough measurement detail."
+      ]
+    },
+    {
+      "gap_id": "alternate-target-clinical-translation-gap-v0",
+      "gap_type": "translation-safety",
+      "priority": "high",
+      "gap_statement": "The SEMA4A-linked claim supports alternate-target research tracking, but the current public artifact does not establish clinical efficacy, patient safety, or trial suitability.",
+      "why_it_matters": "Alternate-target hypotheses can look promising from antigen density and preclinical activity, but public artifacts must separate target biology from patient-level benefit and safety.",
+      "linked_claim_ids": [
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-sema4a-low-bcma-v0"
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "public_next_actions": [
+        "Split alternate-target extraction fields into tumor target density, normal-tissue reactivity, model context, clinical translation status, and trial-registry status.",
+        "Add a target-specific evidence table only after source records support more than one SEMA4A-linked extraction."
+      ],
+      "what_would_improve_confidence": [
+        "Additional translational sources, trial registry records, and expert review of safety-context fields.",
+        "Clear separation of preclinical activity from clinical outcome evidence."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that SEMA4A-directed CAR T therapy works in patients.",
+        "Do not recommend alternate-target interventions from this public artifact."
+      ],
+      "limitations": [
+        "The current claim is explicitly preclinical and translational.",
+        "Clinical actionability requires clinical evidence and review outside this artifact."
+      ]
+    },
+    {
+      "gap_id": "non-antigen-loss-relapse-buckets-gap-v0",
+      "gap_type": "source-extraction",
+      "priority": "medium",
+      "gap_statement": "The current claim set warns that BCMA resistance is multifactorial, but the non-antigen-loss buckets need more source-specific extractions before they can be compared.",
+      "why_it_matters": "A cure-oriented relapse map should avoid over-weighting the mechanism with the most structured public extraction while under-extracting immune fitness, microenvironment, sequencing, and disease-context signals.",
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "mechanism_group_ids": [
+        "car-t-fitness-exhaustion-persistence-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "tedder-bhutani-2025-bcma-resistance-review-v0",
+        "ledergor-2024-cd4-car-t-exhaustion-v0"
+      ],
+      "source_ids": [
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "public_next_actions": [
+        "Add source-specific extraction records for immune fitness, persistence, microenvironment, sequencing, and disease-burden context.",
+        "Create a balanced mechanism coverage report that counts extraction records and signals by mechanism bucket."
+      ],
+      "what_would_improve_confidence": [
+        "Full-text extraction across multiple non-antigen-loss sources.",
+        "Mechanism-bucket coverage metrics before any prioritization claim."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that antigen escape is the dominant relapse mechanism because it currently has cleaner structured artifacts.",
+        "Do not rank mechanism buckets without balanced extraction coverage."
+      ],
+      "limitations": [
+        "This gap identifies coverage imbalance in the public artifact set, not biological importance."
+      ]
+    },
+    {
+      "gap_id": "expert-review-readiness-gap-v0",
+      "gap_type": "expert-review",
+      "priority": "medium",
+      "gap_statement": "The current claim set and gap register are source-checked public organization artifacts, but they are not expert-reviewed educational summaries.",
+      "why_it_matters": "Expert review is needed before these artifacts are used to teach, score evidence strength, or guide broader public interpretation.",
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "tnfrsf17-loss-is-trackable-escape-signal-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0",
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "soluble-bcma",
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "firestone-2024-bcma-antigen-escape-v0",
+        "di-meo-2025-sema4a-low-bcma-v0",
+        "tedder-bhutani-2025-bcma-resistance-review-v0",
+        "ledergor-2024-cd4-car-t-exhaustion-v0"
+      ],
+      "source_ids": [
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "public_next_actions": [
+        "Add a public expert-review checklist for claim scope, measurement assumptions, source quality, and safety language.",
+        "Track review status separately from source-check status."
+      ],
+      "what_would_improve_confidence": [
+        "Review by clinicians, translational scientists, assay experts, and patient-facing science communicators.",
+        "Documented changes from review comments into structured artifacts."
+      ],
+      "what_not_to_infer": [
+        "Do not treat source-checked as expert-reviewed.",
+        "Do not turn these artifacts into patient-facing advice without a separate reviewed public education layer."
+      ],
+      "limitations": [
+        "This gap cannot be closed by code alone; it requires qualified human review."
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from the BCMA antigen escape claim set, public extraction records, and measurement glossary.",
+      "Designed as a public work queue, not an evidence-strength score."
+    ]
+  }
+}

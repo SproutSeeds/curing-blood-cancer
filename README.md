@@ -72,10 +72,11 @@ Run the public artifact validator:
 make validate
 ```
 
-The validator checks JSON parsing, claim-set and evidence-claim schema
-conformance, measurement glossaries, mechanism maps, mechanism extractions,
-source ID references, taxonomy ID references, mechanism-group links,
-extraction-record links, measurement-term links, and query-record links.
+The validator checks JSON parsing, claim-set, evidence-claim, and evidence-gap
+schema conformance, measurement glossaries, mechanism maps, mechanism
+extractions, source ID references, taxonomy ID references, mechanism-group
+links, extraction-record links, measurement-term links, claim links, and
+query-record links.
 
 You can also call the validator directly:
 
@@ -87,4 +88,10 @@ List structured claim sets and their measurement dependencies:
 
 ```bash
 make list-claim-sets
+```
+
+List evidence gaps and their linked claims:
+
+```bash
+make list-evidence-gaps
 ```
