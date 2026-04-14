@@ -159,6 +159,70 @@
               "type": "string"
             }
           },
+          "denominator_context": {
+            "type": "object",
+            "required": [
+              "population_denominator",
+              "numerator_observed",
+              "denominator_basis",
+              "cohort_context",
+              "product_or_class_context",
+              "prior_bcma_exposure_context",
+              "assay_method",
+              "specimen_source",
+              "target_assay_timing",
+              "relapse_or_response_state",
+              "frequency_claim_support",
+              "frequency_claim_boundary"
+            ],
+            "properties": {
+              "population_denominator": {
+                "type": "integer"
+              },
+              "numerator_observed": {
+                "type": "integer"
+              },
+              "denominator_basis": {
+                "type": "string"
+              },
+              "cohort_context": {
+                "type": "string"
+              },
+              "product_or_class_context": {
+                "type": "string"
+              },
+              "prior_bcma_exposure_context": {
+                "type": "string"
+              },
+              "assay_method": {
+                "type": "string"
+              },
+              "specimen_source": {
+                "type": "string"
+              },
+              "target_assay_timing": {
+                "type": "string"
+              },
+              "relapse_or_response_state": {
+                "type": "string"
+              },
+              "paired_measurement_context": {
+                "type": "string"
+              },
+              "frequency_claim_support": {
+                "type": "string",
+                "enum": [
+                  "source-cohort-count-only",
+                  "insufficient-denominator",
+                  "not-applicable"
+                ]
+              },
+              "frequency_claim_boundary": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
           "limitations": {
             "type": "array",
             "minItems": 1,
@@ -225,4 +289,3 @@
   },
   "additionalProperties": false
 }
-

@@ -544,6 +544,7 @@ class Validator:
             self.validate_against_schema(path, doc, schema)
 
             self.validate_extraction_signal_ids(path, doc)
+            self.validate_denominator_contexts(path, doc)
 
     def validate_extraction_signal_ids(self, path: Path, doc: dict[str, Any]) -> None:
         signals = doc.get("extracted_signals")
@@ -560,6 +561,47 @@ class Validator:
             if signal_id in seen_ids:
                 self.add_error(path, f"extracted_signals[{index}] duplicate signal_id: {signal_id}")
             seen_ids.add(signal_id)
+
+    def validate_denominator_contexts(self, path: Path, doc: dict[str, Any]) -> None:
+        signals = doc.get("extracted_signals")
+        if not isinstance(signals, list):
+            return
+
+        required_when_count_only = [
+            "denominator_basis",
+            "cohort_context",
+            "product_or_class_context",
+            "prior_bcma_exposure_context",
+            "assay_method",
+            "specimen_source",
+            "target_assay_timing",
+            "relapse_or_response_state",
+            "frequency_claim_boundary",
+        ]
+        for index, signal in enumerate(signals):
+            if not isinstance(signal, dict):
+                continue
+            context = signal.get("denominator_context")
+            if context is None:
+                continue
+            if not isinstance(context, dict):
+                self.add_error(path, f"extracted_signals[{index}].denominator_context must be an object")
+                continue
+
+            denominator = context.get("population_denominator")
+            numerator = context.get("numerator_observed")
+            if isinstance(denominator, int) and denominator < 0:
+                self.add_error(path, f"extracted_signals[{index}].population_denominator must be >= 0")
+            if isinstance(numerator, int) and numerator < 0:
+                self.add_error(path, f"extracted_signals[{index}].numerator_observed must be >= 0")
+            if isinstance(denominator, int) and isinstance(numerator, int) and numerator > denominator:
+                self.add_error(path, f"extracted_signals[{index}].numerator_observed exceeds denominator")
+
+            if context.get("frequency_claim_support") == "source-cohort-count-only":
+                for key in required_when_count_only:
+                    value = context.get(key)
+                    if not isinstance(value, str) or not value.strip():
+                        self.add_error(path, f"extracted_signals[{index}].denominator_context.{key} must be non-empty")
 
     def validate_measurement_glossaries(self) -> None:
         schema_path = self.root / "schemas" / "measurement-glossary.schema.json"

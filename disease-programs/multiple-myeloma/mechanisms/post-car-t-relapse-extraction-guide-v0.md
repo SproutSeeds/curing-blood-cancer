@@ -28,6 +28,7 @@ For each paper, trial record, regulatory record, or source summary, extract:
 - mechanism bucket or buckets
 - observed signal
 - measurement fields
+- denominator context when a source reports numerator and denominator fields
 - limitations
 - what the source does and does not support
 
@@ -49,6 +50,10 @@ Initial buckets:
 
 - One extraction record should cover one source.
 - Do not infer mechanism frequency unless the source reports enough data.
+- When a source reports denominator-ready target-status fields, preserve the
+  numerator, denominator, denominator basis, product context, prior target
+  exposure, assay method, specimen source, assay timing, response or relapse
+  state, and what frequency claims remain unsupported.
 - Do not turn association into causation without explicit support.
 - Do not compare products unless the source was designed for that comparison.
 - Do not use an extraction as treatment, sequencing, trial, or eligibility

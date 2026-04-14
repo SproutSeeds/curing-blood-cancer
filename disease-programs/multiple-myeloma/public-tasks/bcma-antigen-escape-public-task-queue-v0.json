@@ -25,7 +25,7 @@
       "task_title": "Extract BCMA target-status denominators from source records",
       "task_type": "source-extraction-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "bcma-escape-frequency-denominator-gap-v0"
@@ -57,7 +57,8 @@
       "acceptance_checks": [
         "Updated JSON passes make validate.",
         "Extraction record keeps source_ids, mechanism_group_ids, measurement_term_ids, and clinical_use_boundary.",
-        "No mechanism-frequency estimate is added unless denominator context is explicit."
+        "No mechanism-frequency estimate is added unless denominator context is explicit.",
+        "Completed in public follow-up PR for issue #4."
       ],
       "what_not_to_infer": [
         "Do not infer that BCMA antigen escape is common or rare from this task alone.",

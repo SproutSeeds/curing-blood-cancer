@@ -25,6 +25,21 @@
       "evidence_level": "source-summary",
       "direction": "unclear",
       "measurement_fields": [],
+      "denominator_context": {
+        "population_denominator": 0,
+        "numerator_observed": 0,
+        "denominator_basis": "",
+        "cohort_context": "",
+        "product_or_class_context": "",
+        "prior_bcma_exposure_context": "",
+        "assay_method": "",
+        "specimen_source": "",
+        "target_assay_timing": "",
+        "relapse_or_response_state": "",
+        "paired_measurement_context": "",
+        "frequency_claim_support": "insufficient-denominator",
+        "frequency_claim_boundary": ""
+      },
       "limitations": []
     }
   ],
@@ -39,4 +54,3 @@
     "review_notes": []
   }
 }
-
