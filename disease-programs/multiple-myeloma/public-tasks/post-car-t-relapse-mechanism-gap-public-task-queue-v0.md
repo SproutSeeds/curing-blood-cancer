@@ -1,0 +1,85 @@
+# Post-CAR T Relapse Mechanism Gap Public Task Queue v0
+
+Stewarded by [frg.earth](https://frg.earth/).
+
+This queue turns the under-covered buckets in the Post-CAR T Relapse Mechanism
+Coverage Report into contribution-ready public source-extraction tasks.
+
+## Use Boundary
+
+- Research-use only.
+- Not medical advice.
+- Not diagnostic guidance.
+- Not a treatment recommendation.
+- Not a trial recommendation.
+- Not a claim that multiple myeloma has been cured.
+- Coverage status is public artifact coverage, not biological priority,
+  evidence strength, or mechanism frequency.
+
+## Source Artifact
+
+- [Post-CAR T Relapse Mechanism Coverage Report v0](../mechanisms/post-car-t-relapse-mechanism-coverage-v0.md)
+
+## Ready Tasks
+
+| Task ID | Priority | Status | Issue Form | Linked Gap | Mechanism Bucket |
+| --- | --- | --- | --- | --- | --- |
+| `car-t-fitness-second-source-extraction-task-v0` | high | ready | source extraction | `non-antigen-loss-relapse-buckets-gap-v0` | `car-t-fitness-exhaustion-persistence-v0` |
+| `plasma-cell-identity-first-extraction-task-v0` | high | ready | source extraction | `non-antigen-loss-relapse-buckets-gap-v0` | `plasma-cell-identity-or-lineage-state-escape-v0` |
+| `disease-burden-site-risk-context-first-extraction-task-v0` | medium | ready | source extraction | `non-antigen-loss-relapse-buckets-gap-v0` | `disease-burden-site-risk-context-v0` |
+
+## Issue Drafts
+
+- [CAR T fitness second-source extraction](issue-drafts/car-t-fitness-second-source-extraction-task-v0.md)
+- [Plasma-cell identity first extraction](issue-drafts/plasma-cell-identity-first-extraction-task-v0.md)
+- [Disease burden, site, and risk-context first extraction](issue-drafts/disease-burden-site-risk-context-first-extraction-task-v0.md)
+
+## Task Notes
+
+### CAR T Fitness, Exhaustion, Expansion, Or Persistence
+
+The coverage report currently has one extraction record for this bucket. The
+next task adds a second public source extraction before any cross-source
+comparison is attempted.
+
+Candidate public source anchors:
+
+- `pubmed_tedder_bhutani_2025_bcma_resistance`
+- `pubmed_yue_2025_bcma_resistance`
+
+### Plasma-Cell Identity Or Lineage-State Escape
+
+The coverage report currently has no extracted signals for this bucket. The
+next task adds the first source-specific extraction and preserves peer-review
+status, model context, sample pairing, measurement method, and target-state
+scope.
+
+Candidate public source anchors:
+
+- `pubmed_plasma_cell_identity_escape_2025`
+- `pubmed_di_meo_2025_sema4a_low_bcma`
+- `pubmed_yue_2025_bcma_resistance`
+
+### Disease Burden, Site, And High-Risk Context
+
+The coverage report currently has no extracted signals for this bucket. The
+next task adds a first public extraction for context fields that should travel
+with relapse-mechanism interpretation.
+
+Candidate public source anchors:
+
+- `nci_pdq_myeloma_hp`
+- `clinicaltrials_gov`
+- `clinicaltrials_gov_api_v2`
+- `pubmed_tedder_bhutani_2025_bcma_resistance`
+
+## Structured Data
+
+- JSON: [`post-car-t-relapse-mechanism-gap-public-task-queue-v0.json`](post-car-t-relapse-mechanism-gap-public-task-queue-v0.json)
+- Metadata: [`post-car-t-relapse-mechanism-gap-public-task-queue-v0.metadata.json`](post-car-t-relapse-mechanism-gap-public-task-queue-v0.metadata.json)
+
+## Next Work
+
+- Open or assign public issues from these task drafts.
+- Add one source-specific extraction at a time.
+- Refresh the coverage report after each accepted extraction.

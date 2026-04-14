@@ -39,4 +39,6 @@ contribution-ready public tasks.
 
 ## Next Work
 
-- Add task queues for MRD endpoint definitions and non-BCMA relapse mechanisms.
+- Use the [Post-CAR T Relapse Mechanism Gap Public Task Queue v0](post-car-t-relapse-mechanism-gap-public-task-queue-v0.md)
+  for the next extraction-ready non-antigen-loss mechanism tasks.
+- Add a future task queue for MRD endpoint definitions.
