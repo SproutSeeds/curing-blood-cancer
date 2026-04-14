@@ -574,6 +574,7 @@ class Validator:
 
             self.validate_extraction_signal_ids(path, doc)
             self.validate_denominator_contexts(path, doc)
+            self.validate_translation_safety_contexts(path, doc)
 
     def validate_extraction_signal_ids(self, path: Path, doc: dict[str, Any]) -> None:
         signals = doc.get("extracted_signals")
@@ -631,6 +632,74 @@ class Validator:
                     value = context.get(key)
                     if not isinstance(value, str) or not value.strip():
                         self.add_error(path, f"extracted_signals[{index}].denominator_context.{key} must be non-empty")
+
+    def validate_translation_safety_contexts(self, path: Path, doc: dict[str, Any]) -> None:
+        signals = doc.get("extracted_signals")
+        if not isinstance(signals, list):
+            return
+
+        required_text_fields = [
+            "tumor_target_context",
+            "normal_tissue_context",
+            "model_context",
+            "clinical_translation_status",
+            "trial_registry_context",
+            "efficacy_claim_boundary",
+            "safety_claim_boundary",
+        ]
+        for index, signal in enumerate(signals):
+            if not isinstance(signal, dict):
+                continue
+            context = signal.get("translation_safety_context")
+            if context is None:
+                continue
+            if not isinstance(context, dict):
+                self.add_error(path, f"extracted_signals[{index}].translation_safety_context must be an object")
+                continue
+
+            for key in required_text_fields:
+                value = context.get(key)
+                if not isinstance(value, str) or not value.strip():
+                    self.add_error(
+                        path,
+                        f"extracted_signals[{index}].translation_safety_context.{key} must be non-empty",
+                    )
+
+            evidence_domain = context.get("evidence_domain")
+            efficacy_boundary = str(context.get("efficacy_claim_boundary", "")).lower()
+            safety_boundary = str(context.get("safety_claim_boundary", "")).lower()
+            registry_context = str(context.get("trial_registry_context", "")).lower()
+
+            if evidence_domain == "preclinical-activity":
+                has_preclinical_boundary = "not" in efficacy_boundary and (
+                    "clinical" in efficacy_boundary or "patient" in efficacy_boundary
+                )
+                if not has_preclinical_boundary:
+                    self.add_error(
+                        path,
+                        f"extracted_signals[{index}].translation_safety_context.efficacy_claim_boundary must separate preclinical activity from clinical or patient benefit",
+                    )
+
+            if evidence_domain == "normal-tissue-safety":
+                has_safety_boundary = "not" in safety_boundary and ("clinical safety" in safety_boundary or "safety" in safety_boundary)
+                if not has_safety_boundary:
+                    self.add_error(
+                        path,
+                        f"extracted_signals[{index}].translation_safety_context.safety_claim_boundary must state that safety context does not establish clinical safety",
+                    )
+
+            if "trial" in registry_context and "registry" in registry_context:
+                has_registry_boundary = (
+                    "no registry" in registry_context
+                    or "registry id" in registry_context
+                    or "protocol" in registry_context
+                    or "not captured" in registry_context
+                )
+                if not has_registry_boundary:
+                    self.add_error(
+                        path,
+                        f"extracted_signals[{index}].translation_safety_context.trial_registry_context must preserve registry or protocol status",
+                    )
 
     def validate_measurement_context_audits(self) -> None:
         schema_path = self.root / "schemas" / "measurement-context-audit.schema.json"

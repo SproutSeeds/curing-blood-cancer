@@ -40,6 +40,17 @@
         "frequency_claim_support": "insufficient-denominator",
         "frequency_claim_boundary": ""
       },
+      "translation_safety_context": {
+        "evidence_domain": "target-biology",
+        "tumor_target_context": "",
+        "normal_tissue_context": "",
+        "model_context": "",
+        "clinical_translation_status": "",
+        "trial_registry_context": "",
+        "efficacy_claim_boundary": "",
+        "safety_claim_boundary": "",
+        "actionability_boundary": ""
+      },
       "limitations": []
     }
   ],

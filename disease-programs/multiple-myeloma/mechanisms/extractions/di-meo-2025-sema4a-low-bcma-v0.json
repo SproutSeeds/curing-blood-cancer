@@ -23,7 +23,7 @@
     "pmid": "41072416",
     "accessed": "2026-04-14",
     "publication_year": 2025,
-    "study_context": "Translational and preclinical target exploration after BCMA CAR T relapse with low BCMA antigen density; PubMed abstract and metadata used for this v0 public extraction."
+    "study_context": "Translational and preclinical target exploration after BCMA CAR T relapse with low BCMA antigen density; public PubMed abstract and metadata used for this v0 public extraction."
   },
   "extracted_signals": [
     {
@@ -38,6 +38,17 @@
         "low-to-negative BCMA expression",
         "candidate alternate target need"
       ],
+      "translation_safety_context": {
+        "evidence_domain": "target-biology",
+        "tumor_target_context": "The source frames relapse with low-to-negative BCMA after BCMA CAR T as an alternate-target research context.",
+        "normal_tissue_context": "Normal-tissue reactivity is not assessed in this target-need signal and must be reviewed separately.",
+        "model_context": "This signal records post-BCMA CAR T relapse target-biology rationale, not a therapeutic model result.",
+        "clinical_translation_status": "Target-biology rationale only; it does not establish intervention readiness.",
+        "trial_registry_context": "No trial registry or protocol ID is captured in this v0 public extraction.",
+        "efficacy_claim_boundary": "Does not show SEMA4A-directed CAR T efficacy in patients.",
+        "safety_claim_boundary": "Does not assess SEMA4A normal-tissue safety.",
+        "actionability_boundary": "Not a testing, treatment, sequencing, eligibility, or trial recommendation."
+      },
       "limitations": [
         "Does not estimate all low-BCMA relapse frequency from the public abstract alone.",
         "Low target density is not the only possible relapse mechanism.",
@@ -57,6 +68,17 @@
         "molecules per cell",
         "paired target-density comparison"
       ],
+      "translation_safety_context": {
+        "evidence_domain": "target-biology",
+        "tumor_target_context": "The source reports SEMA4A antigen-density context where BCMA density is low; this extraction preserves the molecules-per-cell measurement language.",
+        "normal_tissue_context": "Tumor antigen-density context is separate from normal-tissue reactivity and safety interpretation.",
+        "model_context": "This is antigen-density profiling context, not a therapeutic model-efficacy result.",
+        "clinical_translation_status": "Target-density support is used only for alternate-target research tracking.",
+        "trial_registry_context": "No trial registry or protocol ID is captured in this v0 public extraction.",
+        "efficacy_claim_boundary": "Candidate target density does not establish clinical efficacy or patient benefit.",
+        "safety_claim_boundary": "Candidate tumor expression does not establish normal-tissue safety.",
+        "actionability_boundary": "Not a testing, treatment, sequencing, eligibility, or trial recommendation."
+      },
       "limitations": [
         "Candidate target density does not establish therapeutic efficacy.",
         "Requires full-methods review for cohort composition and assay details.",
@@ -77,8 +99,20 @@
         "patient-derived BCMA-low tumor model",
         "normal non-hematopoietic tissue reactivity screen"
       ],
+      "translation_safety_context": {
+        "evidence_domain": "preclinical-activity",
+        "tumor_target_context": "The activity signal is framed around multiple myeloma models, including BCMA-low contexts.",
+        "normal_tissue_context": "Normal non-hematopoietic tissue reactivity is a separate safety-context field and is not the same as clinical safety.",
+        "model_context": "The source reports generated and screened SEMA4A-directed CAR T constructs using expansion, cytokine release, cytotoxicity, and patient-derived BCMA-low tumor model contexts.",
+        "clinical_translation_status": "The public source frames work toward phase 1 clinical translation, but this extraction does not record patient efficacy.",
+        "trial_registry_context": "No trial registry or protocol ID is captured in this v0 public extraction; registry or protocol review is needed before any trial-readiness claim.",
+        "efficacy_claim_boundary": "Preclinical activity is not clinical efficacy or patient benefit.",
+        "safety_claim_boundary": "Preclinical and normal-tissue screens do not establish clinical safety.",
+        "actionability_boundary": "Not a testing, treatment, sequencing, eligibility, or trial recommendation."
+      },
       "limitations": [
         "Preclinical activity does not establish clinical benefit.",
+        "Do not label this signal as clinical efficacy.",
         "Does not recommend SEMA4A-directed therapy.",
         "Phase 1 clinical readiness claims require trial registry and protocol review."
       ]
@@ -96,8 +130,20 @@
         "model type",
         "clinical translation status"
       ],
+      "translation_safety_context": {
+        "evidence_domain": "normal-tissue-safety",
+        "tumor_target_context": "Target expression on tumor cells is separate from normal-tissue reactivity and safety interpretation.",
+        "normal_tissue_context": "Normal non-hematopoietic tissue reactivity is recorded as a required alternate-target safety-context field.",
+        "model_context": "This signal records safety-field extraction guidance, not a full preclinical or clinical safety dataset.",
+        "clinical_translation_status": "Safety package and protocol review are required before clinical translation can be assessed.",
+        "trial_registry_context": "No trial registry or protocol ID is captured in this v0 public extraction.",
+        "efficacy_claim_boundary": "No efficacy claim is supported by this safety-field signal.",
+        "safety_claim_boundary": "Normal-tissue safety context does not establish clinical safety.",
+        "actionability_boundary": "Not a testing, treatment, sequencing, eligibility, or trial recommendation."
+      },
       "limitations": [
         "Safety interpretation requires full preclinical package review and clinical protocol review.",
+        "Normal-tissue reactivity screening is safety context, not clinical safety.",
         "Public abstract does not provide a full safety dataset.",
         "Use only as extraction-field guidance."
       ]
@@ -106,13 +152,14 @@
   "evidence_boundary": {
     "what_this_supports": [
       "Low BCMA antigen density belongs in the BCMA antigen escape extraction field set.",
-      "Alternate-target strategies should capture target density, normal-tissue reactivity, model context, and clinical translation status.",
+      "Alternate-target strategies should capture target density, normal-tissue reactivity, model context, clinical translation status, and trial-registry or protocol status.",
       "SEMA4A can be tracked as a candidate alternate-target research signal in post-BCMA relapse maps."
     ],
     "what_this_does_not_support": [
       "It does not prove SEMA4A-directed CAR T therapy works in patients.",
       "It does not recommend a SEMA4A-directed clinical trial.",
       "It does not establish that low BCMA density is present in all post-CAR T relapse.",
+      "It does not establish clinical safety for SEMA4A-directed therapy.",
       "It does not replace safety, eligibility, or regulatory review."
     ]
   },
@@ -122,8 +169,8 @@
     "review_status": "source-checked",
     "review_notes": [
       "Built from PubMed ESummary and EFetch metadata/abstract for PMID 41072416.",
-      "Tracked as translational and preclinical signal extraction, not a clinical claim."
+      "Tracked as translational and preclinical signal extraction, not a clinical claim.",
+      "Issue #2 update separates target biology, preclinical activity, normal-tissue safety context, clinical translation status, trial-registry status, and claim boundaries."
     ]
   }
 }
-

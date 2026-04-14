@@ -223,6 +223,56 @@
             },
             "additionalProperties": false
           },
+          "translation_safety_context": {
+            "type": "object",
+            "required": [
+              "evidence_domain",
+              "tumor_target_context",
+              "normal_tissue_context",
+              "model_context",
+              "clinical_translation_status",
+              "trial_registry_context",
+              "efficacy_claim_boundary",
+              "safety_claim_boundary"
+            ],
+            "properties": {
+              "evidence_domain": {
+                "type": "string",
+                "enum": [
+                  "target-biology",
+                  "preclinical-activity",
+                  "normal-tissue-safety",
+                  "clinical-translation",
+                  "trial-registry-context"
+                ]
+              },
+              "tumor_target_context": {
+                "type": "string"
+              },
+              "normal_tissue_context": {
+                "type": "string"
+              },
+              "model_context": {
+                "type": "string"
+              },
+              "clinical_translation_status": {
+                "type": "string"
+              },
+              "trial_registry_context": {
+                "type": "string"
+              },
+              "efficacy_claim_boundary": {
+                "type": "string"
+              },
+              "safety_claim_boundary": {
+                "type": "string"
+              },
+              "actionability_boundary": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
           "limitations": {
             "type": "array",
             "minItems": 1,
