@@ -1,0 +1,56 @@
+{
+  "query_record_id": "multiple-myeloma-car-t-united-states-recruiting-v0",
+  "protocol_id": "clinicaltrials-gov-query-protocol-v0",
+  "run_date": "2026-04-14",
+  "source_ids": [
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2"
+  ],
+  "intended_use": "landscape-review",
+  "blood_cancer_scope": [
+    "multiple myeloma"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_car_t_cell_therapy"
+  ],
+  "query_inputs": {
+    "condition": "Multiple Myeloma",
+    "intervention_or_class": "CAR T",
+    "recruitment_status": [
+      "RECRUITING",
+      "NOT_YET_RECRUITING"
+    ],
+    "location": "United States",
+    "age_group": "",
+    "phase": ""
+  },
+  "urls": {
+    "web_search_url": "https://clinicaltrials.gov/search?cond=Multiple%20Myeloma&intr=CAR%20T&locStr=United%20States",
+    "api_studies_url": "https://clinicaltrials.gov/api/v2/studies?query.cond=Multiple%20Myeloma&query.intr=CAR%20T&query.locn=United%20States&filter.overallStatus=RECRUITING,NOT_YET_RECRUITING&countTotal=true&pageSize=1",
+    "api_version_url": "https://clinicaltrials.gov/api/v2/version"
+  },
+  "api_provenance": {
+    "api_version": "2.0.5",
+    "data_timestamp": "2026-04-13T13:00:05",
+    "total_count": 44,
+    "page_size": 1
+  },
+  "review": {
+    "manual_reviewed": false,
+    "review_notes": [
+      "Live API smoke query returned first NCT ID NCT05887167 on 2026-04-14.",
+      "This record is for pipeline demonstration and landscape-review provenance only."
+    ],
+    "known_misses_or_query_risks": [
+      "Trials using product names or target names without the phrase CAR T may be missed.",
+      "Trials outside United States or with unusual location metadata are excluded.",
+      "Recruitment status and site availability can change after the query run."
+    ],
+    "limits": [
+      "Not medical advice.",
+      "Does not establish trial availability.",
+      "Does not establish eligibility.",
+      "Does not establish safety or efficacy."
+    ]
+  }
+}

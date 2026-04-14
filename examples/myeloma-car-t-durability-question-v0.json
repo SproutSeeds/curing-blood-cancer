@@ -1,0 +1,87 @@
+{
+  "claim_id": "myeloma-car-t-durability-question-v0",
+  "claim_text": "In multiple myeloma, CAR T-cell therapy is a treatment class whose cure-oriented research questions include durability of remission, antigen escape, T-cell fitness, and relapse after deep response.",
+  "claim_kind": "cure-hypothesis",
+  "claim_status": "open-question",
+  "blood_cancer_scope": [
+    {
+      "subtype": "multiple myeloma",
+      "disease_state": "general research scope; not patient-specific",
+      "population_scope": "public artifact readers",
+      "excluded_scope": [
+        "individual eligibility",
+        "treatment sequencing",
+        "product-specific recommendation"
+      ]
+    }
+  ],
+  "evidence_level": "source-summary",
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "fda_drugs_at_fda",
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2"
+  ],
+  "supporting_urls": [
+    {
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "label": "NCI plasma cell neoplasms / multiple myeloma PDQ",
+      "accessed": "2026-04-14"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.cond=Multiple%20Myeloma&query.intr=CAR%20T&query.locn=United%20States&filter.overallStatus=RECRUITING,NOT_YET_RECRUITING&countTotal=true&pageSize=1",
+      "label": "ClinicalTrials.gov API example query",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_car_t_cell_therapy"
+  ],
+  "trial_query_record_ids": [
+    "multiple-myeloma-car-t-united-states-recruiting-v0"
+  ],
+  "mechanism": {
+    "summary": "CAR T-cell therapy engineers patient T cells to recognize myeloma-associated targets, commonly BCMA in current products.",
+    "targets_or_pathways": [
+      "BCMA",
+      "T-cell fitness",
+      "antigen escape"
+    ],
+    "measurement_dependencies": [
+      "measurable residual disease",
+      "relapse timing",
+      "prior therapy exposure"
+    ]
+  },
+  "clinical_use_boundary": "not-treatment-recommendation",
+  "uncertainty": {
+    "summary": "This is a research framing claim, not an efficacy, availability, or eligibility claim.",
+    "known_unknowns": [
+      "Which patient and disease factors predict durable remission after CAR T?",
+      "How often do relapse mechanisms involve antigen escape versus immune exhaustion or tumor burden?",
+      "Which consolidation or maintenance strategies, if any, improve durability?",
+      "Which trials are actually available at specific sites after the query timestamp?"
+    ],
+    "possible_failure_modes": [
+      "Overgeneralizing product-specific evidence to the whole class.",
+      "Ignoring prior therapy exposure or disease state.",
+      "Treating registry or source summaries as patient-specific advice.",
+      "Treating a search-result count as proof of availability or efficacy."
+    ]
+  },
+  "limitations": [
+    "Not medical advice.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not a claim that CAR T cures multiple myeloma.",
+    "Product-specific indications, safety, access, and eligibility vary."
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from public source registry IDs, the myeloma treatment-class taxonomy, the ClinicalTrials.gov query protocol, and a live example query."
+    ]
+  }
+}
