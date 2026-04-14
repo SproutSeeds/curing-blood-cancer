@@ -47,6 +47,7 @@ class Validator:
         query_record_ids = self.collect_query_record_ids()
 
         self.validate_evidence_claims()
+        self.validate_opportunity_maps()
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
         self.validate_query_record_references(query_record_ids)
@@ -149,6 +150,59 @@ class Validator:
                 continue
             if isinstance(doc, dict) and {"claim_id", "claim_text"}.issubset(doc):
                 self.validate_against_schema(path, doc, schema)
+
+    def validate_opportunity_maps(self) -> None:
+        schema_path = self.root / "schemas" / "opportunity-map.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or not {"map_id", "opportunities"}.issubset(doc):
+                continue
+            self.validate_against_schema(path, doc, schema)
+            self.validate_opportunity_scores(path, doc)
+
+    def validate_opportunity_scores(self, path: Path, doc: dict[str, Any]) -> None:
+        opportunities = doc.get("opportunities")
+        if not isinstance(opportunities, list):
+            return
+
+        seen_ids: set[str] = set()
+        seen_ranks: set[int] = set()
+        for index, opportunity in enumerate(opportunities):
+            if not isinstance(opportunity, dict):
+                continue
+
+            opportunity_id = opportunity.get("opportunity_id")
+            if isinstance(opportunity_id, str):
+                if opportunity_id in seen_ids:
+                    self.add_error(path, f"opportunities[{index}] duplicate opportunity_id: {opportunity_id}")
+                seen_ids.add(opportunity_id)
+
+            rank = opportunity.get("rank")
+            if isinstance(rank, int):
+                if rank <= 0:
+                    self.add_error(path, f"opportunities[{index}].rank must be positive")
+                if rank in seen_ranks:
+                    self.add_error(path, f"opportunities[{index}] duplicate rank: {rank}")
+                seen_ranks.add(rank)
+
+            scores = opportunity.get("scores")
+            score_total = opportunity.get("score_total")
+            if not isinstance(scores, dict):
+                continue
+            calculated = 0
+            for key, value in scores.items():
+                if not isinstance(value, int):
+                    continue
+                if value < 0 or value > 5:
+                    self.add_error(path, f"opportunities[{index}].scores.{key} must be between 0 and 5")
+                calculated += value
+            if isinstance(score_total, int) and score_total != calculated:
+                self.add_error(
+                    path,
+                    f"opportunities[{index}].score_total is {score_total}, expected {calculated}",
+                )
 
     def validate_source_references(self, known_ids: set[str]) -> None:
         for path, doc in self.json_docs.items():

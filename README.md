@@ -44,14 +44,15 @@ data, and reproducible methods.
 
 ## First Focus
 
-The first concrete focus is multiple myeloma and related plasma-cell disorders,
-with artifacts designed so the public surface can expand across blood-cancer
-subtypes.
+The first concrete focus is [multiple myeloma and related plasma-cell
+disorders](disease-programs/multiple-myeloma/README.md), with artifacts
+designed so the public surface can expand across blood-cancer subtypes.
 
 ## Repository Map
 
 - `artifacts/`: public maps, taxonomies, and explanatory outputs
 - `datasets/`: redistributable data products and manifests
+- `disease-programs/`: focused blood-cancer disease lanes
 - `docs/`: public documentation and workflow notes
 - `examples/`: small worked examples
 - `governance/`: contribution, safety, and publication rules

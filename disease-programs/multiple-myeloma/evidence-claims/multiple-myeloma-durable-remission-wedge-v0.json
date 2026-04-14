@@ -1,0 +1,99 @@
+{
+  "claim_id": "multiple-myeloma-durable-remission-wedge-v0",
+  "claim_text": "Multiple myeloma durable remission is a suitable first cure-oriented research wedge for Curing Blood Cancer because the public artifact set already contains source anchors, a treatment-class taxonomy, a trial-query protocol, and a CAR T durability question for this disease scope.",
+  "claim_kind": "cure-hypothesis",
+  "claim_status": "open-question",
+  "blood_cancer_scope": [
+    {
+      "subtype": "multiple myeloma",
+      "disease_state": "general research scope; not patient-specific",
+      "population_scope": "public artifact readers",
+      "excluded_scope": [
+        "individual eligibility",
+        "treatment sequencing",
+        "clinical guideline use",
+        "claim that a cure has been found"
+      ]
+    }
+  ],
+  "evidence_level": "source-summary",
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2",
+    "pubmed",
+    "fda_drugs_at_fda"
+  ],
+  "supporting_urls": [
+    {
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "label": "NCI plasma cell neoplasms / multiple myeloma PDQ",
+      "accessed": "2026-04-14"
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.cond=Multiple%20Myeloma&query.intr=CAR%20T&query.locn=United%20States&filter.overallStatus=RECRUITING,NOT_YET_RECRUITING&countTotal=true&pageSize=1",
+      "label": "ClinicalTrials.gov API example query",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_car_t_cell_therapy",
+    "myeloma_class_bispecific_antibody",
+    "myeloma_class_anti_cd38_antibody",
+    "myeloma_class_autologous_stem_cell_transplant",
+    "myeloma_class_vaccine_or_immunoprevention_research"
+  ],
+  "trial_query_record_ids": [
+    "multiple-myeloma-car-t-united-states-recruiting-v0"
+  ],
+  "mechanism": {
+    "summary": "The wedge organizes immune redirection, deep response measurement, residual disease biology, and relapse-prevention questions without treating any intervention class as a cure claim.",
+    "targets_or_pathways": [
+      "BCMA",
+      "GPRC5D",
+      "CD38",
+      "measurable residual disease",
+      "T-cell fitness",
+      "antigen escape"
+    ],
+    "measurement_dependencies": [
+      "measurable residual disease",
+      "relapse timing",
+      "prior therapy exposure",
+      "cytogenetic or molecular risk",
+      "immune recovery"
+    ]
+  },
+  "clinical_use_boundary": "not-treatment-recommendation",
+  "uncertainty": {
+    "summary": "This is a program-framing claim and should be revised as stronger evidence, expert review, or better public datasets become available.",
+    "known_unknowns": [
+      "Which response measures best predict cure-like durability in defined myeloma subgroups?",
+      "Which relapse mechanisms dominate after BCMA-directed CAR T or bispecific therapy?",
+      "Which consolidation, maintenance, or immune-priming strategies improve durability without unacceptable harm?",
+      "Which public datasets are sufficient for reproducible opportunity scoring?"
+    ],
+    "possible_failure_modes": [
+      "Overgeneralizing one disease state, therapy class, product, or trial to all myeloma.",
+      "Confusing deep response with cure.",
+      "Ranking opportunities without enough source quality context.",
+      "Using public artifacts as clinical advice."
+    ]
+  },
+  "limitations": [
+    "Not medical advice.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not a claim that multiple myeloma has been cured.",
+    "Needs expert review before being used as an educational anchor."
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from the public source registry, myeloma treatment-class taxonomy, ClinicalTrials.gov query protocol, and existing CAR T durability example."
+    ]
+  }
+}
+
