@@ -1,0 +1,24 @@
+{
+  "artifact_id": "public-artifact-catalog-v0",
+  "title": "Public Artifact Catalog v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "all blood-cancer subtypes",
+    "multiple myeloma and plasma-cell disorders"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "Tracked public artifact metadata files",
+      "url": "./public-artifact-catalog-v0.json",
+      "accessed": "2026-04-14"
+    }
+  ],
+  "limitations": [
+    "This catalog is a navigation artifact, not medical advice.",
+    "Counts and scopes are derived from public metadata files and do not grade evidence quality.",
+    "It includes only tracked public metadata artifacts present on the stated date.",
+    "It does not include private lab material, unpublished export candidates, patient data, or restricted datasets."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/public-artifact-catalog-v0.md"
+}

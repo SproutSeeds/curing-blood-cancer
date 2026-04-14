@@ -73,15 +73,21 @@ make validate
 ```
 
 The validator checks JSON parsing, claim-set, evidence-claim, and evidence-gap
-schema conformance, measurement glossaries, mechanism maps, mechanism
-extractions, source ID references, taxonomy ID references, mechanism-group
-links, extraction-record links, measurement-term links, claim links, and
-public-task links, and query-record links.
+schema conformance, artifact metadata, artifact catalogs, measurement
+glossaries, mechanism maps, mechanism extractions, source ID references,
+taxonomy ID references, mechanism-group links, extraction-record links,
+measurement-term links, claim links, public-task links, and query-record links.
 
 You can also call the validator directly:
 
 ```bash
 python3 tools/validate_public_artifacts.py
+```
+
+List public artifact metadata records:
+
+```bash
+make list-public-artifacts
 ```
 
 List structured claim sets and their measurement dependencies:

@@ -44,6 +44,7 @@ class Validator:
             return 1
 
         source_ids = self.collect_source_ids()
+        artifact_metadata = self.validate_artifact_metadata()
         taxonomy_ids = self.collect_taxonomy_ids()
         query_record_ids = self.collect_query_record_ids()
         mechanism_group_ids = self.collect_mechanism_group_ids()
@@ -55,6 +56,7 @@ class Validator:
         gap_ids = self.collect_gap_ids()
 
         self.validate_claim_sets()
+        self.validate_artifact_catalogs(artifact_metadata)
         self.validate_evidence_claims()
         self.validate_evidence_gap_registers()
         self.validate_public_task_queues()
@@ -119,6 +121,32 @@ class Validator:
                 self.add_error(registry, f"duplicate source_id: {source_id}")
             ids.add(source_id)
         return ids
+
+    def validate_artifact_metadata(self) -> dict[str, tuple[Path, dict[str, Any]]]:
+        schema_path = self.root / "schemas" / "artifact-metadata.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            self.add_error(schema_path, "missing artifact metadata schema")
+            return {}
+
+        metadata_by_id: dict[str, tuple[Path, dict[str, Any]]] = {}
+        for path, doc in self.json_docs.items():
+            if not self.is_artifact_metadata_path(path):
+                continue
+            if not isinstance(doc, dict):
+                self.add_error(path, "artifact metadata must be an object")
+                continue
+
+            self.validate_against_schema(path, doc, schema)
+            artifact_id = doc.get("artifact_id")
+            if not isinstance(artifact_id, str) or not artifact_id:
+                self.add_error(path, "artifact_id must be a non-empty string")
+                continue
+            if artifact_id in metadata_by_id:
+                self.add_error(path, f"duplicate artifact_id: {artifact_id}")
+                continue
+            metadata_by_id[artifact_id] = (path, doc)
+        return metadata_by_id
 
     def collect_taxonomy_ids(self) -> set[str]:
         ids: set[str] = set()
@@ -330,6 +358,84 @@ class Validator:
             if claim_id in seen_ids:
                 self.add_error(path, f"claims[{index}] duplicate claim_id: {claim_id}")
             seen_ids.add(claim_id)
+
+    def validate_artifact_catalogs(self, metadata_by_id: dict[str, tuple[Path, dict[str, Any]]]) -> None:
+        schema_path = self.root / "schemas" / "artifact-catalog.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        seen_catalogs: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "catalog_id" not in doc:
+                continue
+
+            self.validate_against_schema(path, doc, schema)
+            catalog_id = doc.get("catalog_id")
+            if isinstance(catalog_id, str):
+                if catalog_id in seen_catalogs:
+                    self.add_error(path, f"duplicate catalog_id: {catalog_id}")
+                seen_catalogs.add(catalog_id)
+
+            entries = doc.get("entries")
+            if not isinstance(entries, list):
+                continue
+
+            entry_ids: set[str] = set()
+            for index, entry in enumerate(entries):
+                if not isinstance(entry, dict):
+                    continue
+                artifact_id = entry.get("artifact_id")
+                if not isinstance(artifact_id, str) or not artifact_id:
+                    continue
+                if artifact_id in entry_ids:
+                    self.add_error(path, f"entries[{index}] duplicate artifact_id: {artifact_id}")
+                entry_ids.add(artifact_id)
+
+                metadata_record = metadata_by_id.get(artifact_id)
+                if metadata_record is None:
+                    self.add_error(path, f"entries[{index}] references unknown artifact_id: {artifact_id}")
+                    continue
+                self.validate_artifact_catalog_entry(path, index, entry, metadata_record)
+
+            if doc.get("generated_from") == "*.metadata.json files tracked in the public repo":
+                missing = sorted(set(metadata_by_id) - entry_ids)
+                for artifact_id in missing:
+                    self.add_error(path, f"catalog missing artifact_id from metadata: {artifact_id}")
+
+    def validate_artifact_catalog_entry(
+        self,
+        path: Path,
+        index: int,
+        entry: dict[str, Any],
+        metadata_record: tuple[Path, dict[str, Any]],
+    ) -> None:
+        metadata_path, metadata = metadata_record
+        metadata_rel = self.rel(metadata_path).as_posix()
+        expected = {
+            "title": metadata.get("title"),
+            "artifact_class": metadata.get("artifact_class"),
+            "claim_level": metadata.get("claim_level"),
+            "metadata_path": metadata_rel,
+            "source_count": len(metadata.get("sources", [])) if isinstance(metadata.get("sources"), list) else 0,
+            "limitation_count": (
+                len(metadata.get("limitations", [])) if isinstance(metadata.get("limitations"), list) else 0
+            ),
+        }
+        if isinstance(metadata.get("blood_cancer_scope"), list):
+            expected["blood_cancer_scope"] = metadata.get("blood_cancer_scope")
+
+        for key, expected_value in expected.items():
+            if entry.get(key) != expected_value:
+                self.add_error(
+                    path,
+                    f"entries[{index}].{key} is {entry.get(key)!r}, expected {expected_value!r}",
+                )
+
+        for key in ("path", "metadata_path"):
+            value = entry.get(key)
+            if isinstance(value, str) and not (self.root / value).exists():
+                self.add_error(path, f"entries[{index}].{key} does not exist: {value}")
 
     def validate_evidence_gap_registers(self) -> None:
         schema_path = self.root / "schemas" / "evidence-gap-register.schema.json"
@@ -851,6 +957,9 @@ class Validator:
 
     def is_json_schema(self, value: Any) -> bool:
         return isinstance(value, dict) and "$schema" in value and "properties" in value
+
+    def is_artifact_metadata_path(self, path: Path) -> bool:
+        return path.name.endswith(".metadata.json")
 
     def report(self) -> None:
         if self.errors:
