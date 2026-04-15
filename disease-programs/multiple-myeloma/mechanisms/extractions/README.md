@@ -18,6 +18,7 @@ Each record should:
 | Extraction | Primary Mechanism |
 | --- | --- |
 | [Maura 2025 plasma-cell identity escape](maura-2025-plasma-cell-identity-escape-v0.json) | plasma-cell identity or lineage-state escape |
+| [Yue 2025 BCMA resistance review](yue-2025-bcma-resistance-review-v0.json) | CAR T fitness, exhaustion, expansion, or persistence |
 | [Ledergor 2024 CD4 CAR T exhaustion](ledergor-2024-cd4-car-t-exhaustion-v0.json) | CAR T fitness, exhaustion, expansion, or persistence |
 | [Firestone 2024 BCMA antigen escape](firestone-2024-bcma-antigen-escape-v0.json) | BCMA antigen loss, low density, or target alteration |
 | [Tedder and Bhutani 2025 BCMA resistance review](tedder-bhutani-2025-bcma-resistance-review-v0.json) | multifactorial BCMA resistance |

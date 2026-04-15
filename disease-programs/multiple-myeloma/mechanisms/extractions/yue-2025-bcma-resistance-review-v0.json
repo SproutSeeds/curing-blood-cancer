@@ -1,0 +1,136 @@
+{
+  "extraction_record_id": "yue-2025-bcma-resistance-review-v0",
+  "date": "2026-04-14",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "post-car-t-relapse-mechanism-map-v0",
+  "source_ids": [
+    "pubmed_yue_2025_bcma_resistance"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_antibody_drug_conjugate",
+    "myeloma_class_bispecific_antibody",
+    "myeloma_class_car_t_cell_therapy"
+  ],
+  "mechanism_group_ids": [
+    "bcma-antigen-loss-or-low-density-v0",
+    "car-t-fitness-exhaustion-persistence-v0",
+    "measurement-and-follow-up-gaps-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed review article",
+    "title": "Mechanisms for resistance to BCMA-targeted immunotherapies in multiple myeloma.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39818472/",
+    "doi": "10.1016/j.blre.2025.101256",
+    "pmid": "39818472",
+    "accessed": "2026-04-14",
+    "publication_year": 2025,
+    "study_context": "Review article in Blood Reviews covering BCMA-targeted immunotherapies in relapsed/refractory multiple myeloma, including CAR-T, bispecific T-cell engagers, and antibody-drug conjugates; PubMed EFetch abstract and metadata used for this v0 public extraction."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "t-cell-driven-resistance-category-signal-v0",
+      "mechanism_group_id": "car-t-fitness-exhaustion-persistence-v0",
+      "signal_summary": "The review attributes part of BCMA-targeted immunotherapy resistance to T cell-driven factors, making T-cell function context a source-level mechanism category to track for CAR-T and T-cell engager resistance mapping.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "T cell-driven factors",
+        "BCMA-targeted CAR-T therapy",
+        "bispecific T cell engager context",
+        "relapsed or refractory multiple myeloma",
+        "resistance mechanism category",
+        "long-term survival uncertainty"
+      ],
+      "limitations": [
+        "Review-level abstract statement; it is not a cohort-level measurement.",
+        "The public abstract does not specify exhaustion markers, persistence duration, expansion kinetics, or product-level comparisons.",
+        "This signal supports extraction-field coverage, not a frequency estimate or patient-specific relapse explanation."
+      ]
+    },
+    {
+      "signal_id": "immune-tumor-microenvironment-resistance-category-signal-v0",
+      "mechanism_group_id": "car-t-fitness-exhaustion-persistence-v0",
+      "signal_summary": "The review lists the immune tumor microenvironment as a resistance-mechanism category, so public CAR-T fitness extraction should preserve immune-context fields that may shape T-cell activity and durability.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "immune tumor microenvironment",
+        "tumor microenvironment",
+        "T-cell activity context",
+        "durability context",
+        "resistance mechanism category",
+        "BCMA-targeted immunotherapy class"
+      ],
+      "limitations": [
+        "The abstract does not provide source-specific immune-cell subsets, biomarkers, or assay methods.",
+        "Microenvironment category framing should not be treated as proof that a given patient's relapse is immune-context driven.",
+        "Requires full-text and source-by-source extraction before mechanistic comparison."
+      ]
+    },
+    {
+      "signal_id": "antigen-dependency-resistance-category-signal-v0",
+      "mechanism_group_id": "bcma-antigen-loss-or-low-density-v0",
+      "signal_summary": "The review identifies antigen-dependency as one of the main attributed categories for resistance to BCMA-targeted immunotherapies.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "antigen-dependency",
+        "BCMA-targeted immunotherapy",
+        "CAR-T therapy",
+        "bispecific T cell engager context",
+        "antibody-drug conjugate context",
+        "resistance mechanism category"
+      ],
+      "limitations": [
+        "Review-level category only; the abstract does not provide target-status numerator, denominator, assay, or timing fields.",
+        "Does not estimate antigen-loss or antigen-low frequency.",
+        "Does not support product comparison or treatment sequencing."
+      ]
+    },
+    {
+      "signal_id": "review-level-resistance-category-boundary-signal-v0",
+      "mechanism_group_id": "measurement-and-follow-up-gaps-v0",
+      "signal_summary": "The review states that resistance understanding remains uncertain and organizes mechanisms into broad categories, making review-level framing distinct from quantitative source-specific measurement facts.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "review article status",
+        "mechanism category boundary",
+        "antigen-dependency category",
+        "T cell-driven category",
+        "immune tumor microenvironment category",
+        "cohort measurement not provided in abstract"
+      ],
+      "limitations": [
+        "Do not convert broad review categories into cohort-level measurements.",
+        "Do not compare categories as evidence strength or biological priority from this extraction.",
+        "Long-term survival impact and resistance mechanisms remain framed as uncertain in the source abstract."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "CAR T fitness, T-cell-driven factors, and immune tumor microenvironment context now have a second public source-specific extraction record.",
+      "Review-level BCMA resistance categories should be tracked separately from cohort-level measurements.",
+      "Antigen-dependency, T-cell-driven factors, and immune tumor microenvironment categories can guide extraction fields for later full-text or primary-study records."
+    ],
+    "what_this_does_not_support": [
+      "It does not prove that CAR T exhaustion, persistence loss, or immune microenvironment effects are dominant relapse mechanisms.",
+      "It does not estimate mechanism frequency across BCMA-targeted CAR-T, TCE, or ADC products.",
+      "It does not compare therapies, recommend therapy sequencing, or establish clinical efficacy for resistance-overcoming strategies.",
+      "It does not provide patient-specific diagnosis, prognosis, treatment, trial, or cure guidance."
+    ]
+  },
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-14",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from NCBI EFetch PubMed XML and ESummary metadata for PMID 39818472.",
+      "No PMC full-text record was available through the NCBI ID converter at extraction time, so this v0 extraction is limited to PubMed abstract and metadata.",
+      "Created to complete public issue #15 as second-source coverage for CAR T fitness, exhaustion, expansion, or persistence.",
+      "The public extraction surface is stewarded by frg.earth; scientific claims remain source-scoped to the cited public records."
+    ]
+  }
+}
