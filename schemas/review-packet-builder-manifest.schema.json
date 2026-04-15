@@ -1,0 +1,470 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/curing-blood-cancer/review-packet-builder-manifest.schema.json",
+  "title": "Curing Blood Cancer Review-Packet Builder Manifest",
+  "type": "object",
+  "required": [
+    "review_packet_builder_manifest_id",
+    "date",
+    "title",
+    "disease_program",
+    "manifest_scope",
+    "packet_type",
+    "target_packet",
+    "artifact_inputs",
+    "schema_inputs",
+    "claim_level",
+    "source_ids",
+    "source_inputs",
+    "validation_expectations",
+    "missing_inputs",
+    "limitations",
+    "do_not_infer",
+    "clinical_use_boundary",
+    "builder_code_boundary",
+    "review"
+  ],
+  "properties": {
+    "review_packet_builder_manifest_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-v[0-9]+$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disease_program": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_scope": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["disease", "manifest_use"],
+        "properties": {
+          "disease": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subtype_scope": {
+            "type": "string"
+          },
+          "manifest_use": {
+            "type": "string",
+            "minLength": 1
+          },
+          "excluded_scope": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "packet_type": {
+      "type": "string",
+      "enum": [
+        "multidisciplinary-review-packet-template",
+        "claim-set-expert-review-packet"
+      ]
+    },
+    "target_packet": {
+      "type": "object",
+      "required": ["artifact_id", "path", "review_status", "packet_boundary"],
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "source-checked",
+            "expert-review-needed",
+            "expert-reviewed",
+            "deprecated"
+          ]
+        },
+        "packet_boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "artifact_inputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "artifact_id",
+          "path",
+          "metadata_path",
+          "artifact_class",
+          "claim_level",
+          "review_status",
+          "limitations"
+        ],
+        "properties": {
+          "artifact_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "metadata_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact_class": {
+            "type": "string",
+            "enum": ["note", "protocol", "schema", "dataset", "tool", "map", "taxonomy"]
+          },
+          "claim_level": {
+            "type": "string",
+            "enum": ["fact", "derived", "hypothesis", "open-question", "do-not-use-clinically"]
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "source-checked",
+              "expert-review-needed",
+              "expert-reviewed",
+              "deprecated"
+            ]
+          },
+          "required_sections": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "limitations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "schema_inputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["schema_id", "schema_path", "validation_scope"],
+        "properties": {
+          "schema_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "schema_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "template_path": {
+            "type": "string"
+          },
+          "validation_scope": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "claim_level": {
+      "type": "string",
+      "enum": ["fact", "derived", "hypothesis", "open-question", "do-not-use-clinically"]
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "source_inputs": {
+      "type": "object",
+      "required": ["source_registry_path", "source_ids", "source_use"],
+      "properties": {
+        "source_registry_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "source_use": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "reference_ids": {
+      "type": "object",
+      "properties": {
+        "linked_claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "linked_gap_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "mechanism_group_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "measurement_term_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "public_task_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "trial_query_record_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "extraction_record_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "validation_expectations": {
+      "type": "object",
+      "required": [
+        "validation_command",
+        "required_checks",
+        "fail_closed_conditions",
+        "forbidden_fields"
+      ],
+      "properties": {
+        "validation_command": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_checks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "fail_closed_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "forbidden_fields": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "missing_inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "missing_input_id",
+          "missing_kind",
+          "reason_missing",
+          "blocking_state",
+          "next_public_task_ids"
+        ],
+        "properties": {
+          "missing_input_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "missing_kind": {
+            "type": "string",
+            "enum": [
+              "source",
+              "artifact",
+              "schema",
+              "validator",
+              "review",
+              "builder-code",
+              "publication-gate",
+              "other-public-input"
+            ]
+          },
+          "reason_missing": {
+            "type": "string",
+            "minLength": 1
+          },
+          "blocking_state": {
+            "type": "string",
+            "enum": [
+              "blocks-builder-code",
+              "blocks-generated-output",
+              "blocks-publication-use",
+              "non-blocking-note"
+            ]
+          },
+          "next_public_task_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "do_not_infer": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "clinical_use_boundary": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "not-medical-advice",
+          "not-diagnostic",
+          "not-treatment-recommendation",
+          "not-trial-recommendation",
+          "research-use-only"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "builder_code_boundary": {
+      "type": "object",
+      "required": [
+        "builder_code_allowed",
+        "generated_claims_allowed",
+        "patient_specific_outputs_allowed",
+        "publication_authorization_allowed",
+        "implementation_boundary"
+      ],
+      "properties": {
+        "builder_code_allowed": {
+          "type": "boolean"
+        },
+        "generated_claims_allowed": {
+          "type": "boolean"
+        },
+        "patient_specific_outputs_allowed": {
+          "type": "boolean"
+        },
+        "publication_authorization_allowed": {
+          "type": "boolean"
+        },
+        "implementation_boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "required": ["created", "last_reviewed", "review_status"],
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date"
+        },
+        "last_reviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "source-checked",
+            "expert-review-needed",
+            "expert-reviewed",
+            "deprecated"
+          ]
+        },
+        "review_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,67 @@
+{
+  "artifact_id": "multiple-myeloma-case-to-cure-pipeline-blueprint-v0",
+  "title": "Case-To-Cure Pipeline Blueprint v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "case pipeline",
+    "research tooling",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "./public-roadmap-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "NCI Plasma Cell Neoplasms Including Multiple Myeloma Treatment PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "ClinicalTrials.gov API",
+      "url": "https://clinicaltrials.gov/data-api/about-api",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "FDA Clinical Decision Support Software Guidance",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "FDA Expanded Access IND Applications for Clinical Treatment Overview",
+      "url": "https://www.fda.gov/drugs/investigational-new-drug-ind-application/ind-applications-clinical-treatment-expanded-access-overview",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "HHS HIPAA De-identification Guidance",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "FDA Drugs@FDA Database",
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/about-drugsfda",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Private-to-public workflow",
+      "url": "../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research pipeline blueprint only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not expanded-access guidance for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Actual case data, consent records, clinical decisions, and re-identification keys must remain outside the public repo.",
+    "Any patient-specific clinical workflow requires qualified clinician, privacy, legal, regulatory, and safety review."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-case-to-cure-pipeline-blueprint-v0.md"
+}

@@ -1,7 +1,7 @@
 {
   "protocol_id": "clinicaltrials-gov-query-protocol-v0",
   "date": "2026-04-14",
-  "scope": "blood-cancer trial discovery and provenance capture",
+  "scope": "blood-cancer trial discovery, provenance capture, and public-safe case-matching research support",
   "source_ids": [
     "clinicaltrials_gov",
     "clinicaltrials_gov_api_v2"
@@ -21,7 +21,8 @@
     "intervention_or_class",
     "location",
     "source_taxonomy_class",
-    "intended_use"
+    "intended_use",
+    "case_matching_provenance"
   ],
   "recommended_api_parameters": [
     "query.cond",
@@ -31,6 +32,33 @@
     "countTotal",
     "pageSize"
   ],
+  "case_matching_provenance_fields": {
+    "intended_use": "case-matching-research",
+    "boundary": [
+      "Public-safe provenance only.",
+      "No private case values, identifiers, dates tied to a person, free-text notes, images, or re-identification keys.",
+      "Not an eligibility decision.",
+      "Not a trial recommendation."
+    ],
+    "recommended_fields": [
+      "case_matching_use",
+      "case_feature_bundle_public_summary_id",
+      "case_feature_bundle_state",
+      "public_feature_group_ids",
+      "public_feature_to_query_rationale",
+      "excluded_private_fields",
+      "matching_boundary",
+      "verification_required_before_use"
+    ],
+    "allowed_public_feature_group_ids": [
+      "disease-state-envelope",
+      "measurement-context",
+      "therapy-exposure-context",
+      "molecular-immune-context",
+      "evidence-linkage",
+      "review-and-gate-status"
+    ]
+  },
   "status_policy": {
     "RECRUITING": "Enrollment-discovery searches; still requires site verification.",
     "NOT_YET_RECRUITING": "Near-future landscape searches; still requires site verification.",

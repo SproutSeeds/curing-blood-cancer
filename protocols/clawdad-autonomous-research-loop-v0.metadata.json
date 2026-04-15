@@ -1,0 +1,56 @@
+{
+  "artifact_id": "clawdad-autonomous-research-loop-v0",
+  "title": "Clawdad Autonomous Research Loop v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "autonomous research loop",
+    "public safety",
+    "research tooling"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "../disease-programs/multiple-myeloma/public-roadmap-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
+      "url": "../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Safety Governance",
+      "url": "../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Private-To-Public Workflow",
+      "url": "../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Autonomy protocol only; not medical advice.",
+    "Does not determine diagnosis, prognosis, treatment, trial eligibility, or expanded-access feasibility.",
+    "Does not claim that a cure or vaccine has been found.",
+    "Does not authorize use of patient-identifying data, real case data, private records, restricted datasets, credentials, or paid services.",
+    "Requires human review for clinical, legal, regulatory, sponsor, account, billing, publication, or destructive repository decisions.",
+    "Delegate outputs require validation and review before publication or reuse.",
+    "Source-backed public artifacts can still be incomplete, stale, or wrong.",
+    "The loop must stop on public-safety blockers instead of improvising around them."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/clawdad-autonomous-research-loop-v0.md"
+}

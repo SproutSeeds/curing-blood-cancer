@@ -1,6 +1,6 @@
 {
   "coverage_report_id": "post-car-t-relapse-mechanism-coverage-v0",
-  "date": "2026-04-14",
+  "date": "2026-04-15",
   "disease_program": "multiple-myeloma",
   "title": "Post-CAR T Relapse Mechanism Coverage Report v0",
   "blood_cancer_scope": [
@@ -35,10 +35,13 @@
   ],
   "extraction_record_ids": [
     "di-meo-2025-sema4a-low-bcma-v0",
+    "di-meo-2025-target-linked-phenotype-v0",
     "firestone-2024-bcma-antigen-escape-v0",
     "ledergor-2024-cd4-car-t-exhaustion-v0",
     "maura-2025-plasma-cell-identity-escape-v0",
+    "nci-pdq-2025-disease-context-v0",
     "tedder-bhutani-2025-bcma-resistance-review-v0",
+    "tedder-bhutani-2025-disease-context-v0",
     "yue-2025-bcma-resistance-review-v0"
   ],
   "coverage_basis": {
@@ -127,55 +130,78 @@
     {
       "mechanism_group_id": "plasma-cell-identity-or-lineage-state-escape-v0",
       "label": "Plasma-cell identity or lineage-state escape",
-      "signal_count": 2,
-      "extraction_record_count": 1,
-      "covered_source_count": 1,
-      "coverage_status": "needs-second-source-extraction",
-      "under_coverage_flag": true,
-      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "signal_count": 5,
+      "extraction_record_count": 2,
+      "covered_source_count": 2,
+      "coverage_status": "covered-for-v0-navigation",
+      "under_coverage_flag": false,
+      "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
       "source_ids": [
         "pubmed_di_meo_2025_sema4a_low_bcma",
         "pubmed_plasma_cell_identity_escape_2025",
         "pubmed_yue_2025_bcma_resistance"
       ],
       "covered_source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma",
         "pubmed_plasma_cell_identity_escape_2025"
       ],
       "extraction_record_ids": [
+        "di-meo-2025-target-linked-phenotype-v0",
         "maura-2025-plasma-cell-identity-escape-v0"
       ],
       "extraction_signal_ids": [
+        "bcma-low-target-linked-phenotype-context-signal-v0",
+        "identity-label-harmonization-boundary-signal-v0",
         "mouse-model-identity-escape-validation-signal-v0",
-        "plasma-cell-identity-escape-refractory-signature-signal-v0"
+        "plasma-cell-identity-escape-refractory-signature-signal-v0",
+        "sema4a-bcma-density-pairing-phenotype-signal-v0"
       ],
-      "next_extraction_need": "Add at least one additional public source extraction for plasma-cell identity or lineage-state escape before comparison.",
+      "next_extraction_need": "Use current plasma-cell identity or lineage-state coverage for navigation only; do not rank biological importance from counts.",
       "coverage_notes": [
-        "First-extraction coverage now exists from the Maura 2025 preprint source record.",
-        "This bucket remains single-source and preprint-linked; add another source before cross-source comparison."
+        "Second-source coverage now exists from Maura 2025 and Di Meo 2025 source records.",
+        "Di Meo 2025 supports target-linked phenotype field coverage, not a harmonized lineage-state ontology or clinical target-readiness claim."
       ]
     },
     {
       "mechanism_group_id": "disease-burden-site-risk-context-v0",
       "label": "Disease burden, site, and high-risk context",
-      "signal_count": 0,
-      "extraction_record_count": 0,
-      "covered_source_count": 0,
-      "coverage_status": "needs-first-extraction",
-      "under_coverage_flag": true,
-      "under_coverage_reason": "No extracted signals currently map to this mechanism bucket.",
+      "signal_count": 8,
+      "extraction_record_count": 2,
+      "covered_source_count": 4,
+      "coverage_status": "covered-for-v0-navigation",
+      "under_coverage_flag": false,
+      "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
       "source_ids": [
         "clinicaltrials_gov",
         "clinicaltrials_gov_api_v2",
         "nci_pdq_myeloma_hp",
         "pubmed_tedder_bhutani_2025_bcma_resistance"
       ],
-      "covered_source_ids": [],
-      "extraction_record_ids": [],
-      "extraction_signal_ids": [],
-      "next_extraction_need": "Add the first source-specific extraction for disease burden, site, and high-risk context.",
+      "covered_source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "pubmed_tedder_bhutani_2025_bcma_resistance"
+      ],
+      "extraction_record_ids": [
+        "nci-pdq-2025-disease-context-v0",
+        "tedder-bhutani-2025-disease-context-v0"
+      ],
+      "extraction_signal_ids": [
+        "baseline-burden-site-risk-context-field-signal-v0",
+        "context-not-causal-mechanism-boundary-signal-v0",
+        "nci-pdq-disease-burden-staging-context-signal-v0",
+        "nci-pdq-disease-site-plasmacytoma-context-signal-v0",
+        "nci-pdq-high-risk-cytogenetic-context-signal-v0",
+        "nci-pdq-relapsed-refractory-prior-therapy-context-signal-v0",
+        "prior-therapy-bcma-exposure-context-signal-v0",
+        "registry-eligibility-context-field-signal-v0"
+      ],
+      "next_extraction_need": "Use current disease burden, site, and high-risk context coverage for navigation only; do not rank biological importance from counts.",
       "coverage_notes": [
+        "Second-source context-field coverage now exists from Tedder and Bhutani 2025 plus the NCI PDQ health-professional summary.",
         "This bucket should capture context variables before any relapse-mechanism comparison is attempted.",
-        "Trial-registry and NCI PDQ source anchors are useful for extraction-field design, not patient-specific risk interpretation."
+        "NCI PDQ fields support disease-burden, site, high-risk, disease-state, and prior-therapy context labels, not patient-specific risk interpretation, eligibility, availability, efficacy, or safety."
       ]
     },
     {
@@ -272,10 +298,10 @@
   ],
   "summary": {
     "mechanism_bucket_count": 6,
-    "extraction_record_count": 6,
-    "extraction_signal_count": 24,
-    "needs_first_extraction_count": 1,
-    "needs_second_source_extraction_count": 1
+    "extraction_record_count": 9,
+    "extraction_signal_count": 35,
+    "needs_first_extraction_count": 0,
+    "needs_second_source_extraction_count": 0
   },
   "interpretation_boundary": [
     "Coverage counts are public artifact coverage metrics only.",
@@ -287,13 +313,16 @@
   ],
   "review": {
     "created": "2026-04-14",
-    "last_reviewed": "2026-04-14",
+    "last_reviewed": "2026-04-15",
     "review_status": "source-checked",
     "review_notes": [
       "Built from the public mechanism map and current public mechanism extraction records.",
       "Created for issue #6 to separate artifact coverage imbalance from biological importance.",
       "Issue #14 adds first-extraction coverage for plasma-cell identity or lineage-state escape.",
-      "Issue #15 adds second-source coverage for CAR T fitness, exhaustion, expansion, or persistence using the Yue 2025 review source."
+      "Issue #15 adds second-source coverage for CAR T fitness, exhaustion, expansion, or persistence using the Yue 2025 review source.",
+      "Issue #16 adds first-extraction coverage for disease burden, disease site, high-risk, prior-therapy, and registry-context fields.",
+      "Step 13 adds second-source coverage for plasma-cell identity or lineage-state escape using the Di Meo 2025 target-linked phenotype source.",
+      "Step 14 adds second-source context-field coverage for disease burden, disease site, high-risk, disease-state, and prior-therapy fields using the NCI PDQ health-professional summary."
     ]
   }
 }

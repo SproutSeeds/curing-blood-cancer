@@ -1,0 +1,70 @@
+{
+  "artifact_id": "multiple-myeloma-review-packet-builder-packet-skeleton-spec-v0",
+  "title": "Review-Packet Builder Packet-Skeleton Spec v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "review packets",
+    "research tooling",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Review-Packet Builder Packet-Assembly Gate v0",
+      "url": "./review-packet-builder-packet-assembly-gate-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Route-Table Output Schema v0",
+      "url": "../../../schemas/review-packet-route-table-output-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Route-Table Output Fixture v0",
+      "url": "../../../examples/review-packet-route-table-output-fixture-v0.json",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Manifest Route-Table Dry-Run Tool v0",
+      "url": "../../../tools/review_packet_manifest_route_table.py",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Builder Manifest Schema v0",
+      "url": "../../../schemas/review-packet-builder-manifest-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Builder Dry-Run Plan v0",
+      "url": "./review-packet-builder-dry-run-plan-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "./multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "../public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only packet-skeleton specification.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide eligibility guidance, expanded-access guidance, monitoring guidance, or publication authorization for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not build packet assembly code, generated packet output, generated biomedical prose, ranking, trial matching, recommendation behavior, patient-specific tooling, or publication workflow.",
+    "Defines empty skeleton slots only and does not fill sections.",
+    "Does not validate real case data, private records, patient-specific outputs, reviewer identities, or publication decisions.",
+    "Does not make any public artifact expert-reviewed or publication-ready.",
+    "Does not prove source coverage is complete."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/review-packet-builder-packet-skeleton-spec-v0.md"
+}

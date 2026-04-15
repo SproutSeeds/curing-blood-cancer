@@ -1,0 +1,47 @@
+{
+  "artifact_id": "target-record-schema-v0",
+  "title": "Target Record Schema v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "blood-cancer target records",
+    "research tooling"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Schema And Tooling Phase Inventory v0",
+      "url": "../disease-programs/multiple-myeloma/schema-tooling-phase-inventory-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Disease Map Schema v0",
+      "url": "./disease-map-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Task Queue schema",
+      "url": "./public-task-queue.schema.json",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "../disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Schema validation does not make a target record medical advice.",
+    "The schema does not accept patient-specific target expression, candidate options, trial matching, actionability scores, or real case data.",
+    "The schema does not prove targetability, therapy value, trial availability, eligibility, safety, efficacy, or clinical actionability.",
+    "The template is public placeholder data only.",
+    "Extraction-helper schemas remain future work."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/target-record-schema-v0.md"
+}

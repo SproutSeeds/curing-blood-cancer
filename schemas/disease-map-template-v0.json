@@ -1,0 +1,166 @@
+{
+  "disease_map_id": "multiple-myeloma-disease-map-template-v0",
+  "date": "2026-04-15",
+  "title": "Multiple Myeloma Disease Map Template v0",
+  "disease_program": "multiple-myeloma",
+  "disease_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "public research map"
+  ],
+  "claim_level": "open-question",
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "not-expanded-access-guidance",
+    "not-patient-specific",
+    "research-use-only",
+    "requires-human-review"
+  ],
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "hgnc_gene_names",
+    "nci_cancer_drug_dictionary",
+    "clinicaltrials_gov_api_v2",
+    "pubmed"
+  ],
+  "uncertainty": {
+    "summary": "Template only; records must be source-checked before reuse.",
+    "review_status": "draft",
+    "known_unknowns": [
+      "Which source-specific extraction rules should be required for the first machine-readable open research map.",
+      "Which fields should remain map-level rather than target-, therapy-, or trial-record-level."
+    ]
+  },
+  "limitations": [
+    "This template validates shape only.",
+    "This template does not prove any target, therapy, trial, or open question is clinically actionable.",
+    "This template must not be filled with patient-specific features, candidate options, or private case facts."
+  ],
+  "facts": [
+    {
+      "fact_id": "multiple-myeloma-public-disease-scope-v0",
+      "statement": "A public disease map record must state disease and subtype scope before linking claims, sources, or tasks.",
+      "scope": [
+        "multiple myeloma",
+        "plasma-cell disease"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp"
+      ],
+      "uncertainty": "This is a schema-planning fact, not a biomedical assertion about a patient.",
+      "limitations": [
+        "Disease scope does not establish patient relevance or treatment direction."
+      ]
+    }
+  ],
+  "derived_claims": [],
+  "hypotheses": [],
+  "open_questions": [
+    {
+      "question_id": "multiple-myeloma-source-extraction-rules-question-v0",
+      "question": "Which source-specific extraction rules are needed before a machine-readable myeloma open research map can compare target, therapy, trial, regulatory, and dataset coverage?",
+      "question_type": "schema-tooling",
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2"
+      ],
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0"
+      ],
+      "public_task_ids": [
+        "multiple-myeloma-disease-map-schema-task-v0"
+      ],
+      "uncertainty": "The public map schema is ready, but extraction requirements remain future work.",
+      "limitations": [
+        "An open question does not rank evidence strength or clinical importance."
+      ]
+    }
+  ],
+  "target_records": [
+    {
+      "target_id": "bcma-target-record-template-v0",
+      "label": "BCMA target record template",
+      "target_record_type": "cell-surface-antigen",
+      "claim_level": "open-question",
+      "source_ids": [
+        "hgnc_gene_names",
+        "pubmed"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0"
+      ],
+      "linked_gap_ids": [
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "uncertainty": "A target record can describe public target context, but it cannot establish targetability or clinical actionability by itself.",
+      "limitations": [
+        "No patient-specific target status.",
+        "No treatment recommendation."
+      ],
+      "clinical_use_boundary": "research-use-only"
+    }
+  ],
+  "therapy_records": [
+    {
+      "therapy_id": "car-t-therapy-class-record-template-v0",
+      "label": "CAR T-cell therapy class record template",
+      "therapy_record_type": "procedure-or-modality",
+      "claim_level": "open-question",
+      "source_ids": [
+        "nci_cancer_drug_dictionary",
+        "pubmed"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "linked_gap_ids": [
+        "alternate-target-clinical-translation-gap-v0"
+      ],
+      "uncertainty": "A therapy class record is for map organization and source linkage only.",
+      "limitations": [
+        "No therapy ranking.",
+        "No treatment recommendation."
+      ],
+      "clinical_use_boundary": "not-treatment-recommendation"
+    }
+  ],
+  "trial_records": [
+    {
+      "trial_record_id": "myeloma-trial-landscape-record-template-v0",
+      "label": "Myeloma trial landscape record template",
+      "trial_record_type": "registry-landscape",
+      "claim_level": "open-question",
+      "registry_source_ids": [
+        "clinicaltrials_gov_api_v2"
+      ],
+      "trial_query_record_ids": [
+        "multiple-myeloma-car-t-united-states-recruiting-v0"
+      ],
+      "uncertainty": "Registry records can support landscape review, but they cannot establish eligibility, availability, or appropriateness.",
+      "limitations": [
+        "No trial recommendation.",
+        "No eligibility inference."
+      ],
+      "clinical_use_boundary": "not-trial-recommendation"
+    }
+  ],
+  "linked_gap_ids": [
+    "non-antigen-loss-relapse-buckets-gap-v0",
+    "bcma-measurement-context-completeness-gap-v0"
+  ],
+  "public_task_ids": [
+    "multiple-myeloma-disease-map-schema-task-v0"
+  ],
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "draft",
+    "review_notes": [
+      "Template validates the disease-map schema shape without creating a generated map.",
+      "No real case data, patient identifiers, candidate options, or clinical guidance are included."
+    ]
+  }
+}

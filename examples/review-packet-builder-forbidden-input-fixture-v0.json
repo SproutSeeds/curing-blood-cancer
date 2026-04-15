@@ -1,0 +1,28 @@
+{
+  "fixture_id": "review-packet-builder-forbidden-input-fixture-v0",
+  "fixture_type": "forbidden-manifest-field-refusal",
+  "date": "2026-04-15",
+  "title": "Review-Packet Builder Forbidden Input Fixture v0",
+  "expected_tool_result": "refused",
+  "expected_command": "python3 tools/review_packet_manifest_route_table.py --manifest examples/review-packet-builder-forbidden-input-fixture-v0.json --json",
+  "unsafe_manifest_fragment": {
+    "patient_id": "forbidden-placeholder-no-real-person",
+    "generated_claim_text": "forbidden-placeholder-not-a-biomedical-claim"
+  },
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "limitations": [
+    "Fixture is intentionally unsafe-shaped for refusal testing.",
+    "The placeholder values are synthetic labels, not real patient data and not biomedical claims.",
+    "The route-table tool must refuse this fixture before any copied-reference output."
+  ],
+  "do_not_infer": [
+    "Do not treat this fixture as a valid manifest.",
+    "Do not use forbidden fields for sanitization, builder output, clinical guidance, or publication workflows."
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "extraction_record_id": "di-meo-2025-target-linked-phenotype-v0",
+  "date": "2026-04-15",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "post-car-t-relapse-mechanism-map-v0",
+  "source_ids": [
+    "pubmed_di_meo_2025_sema4a_low_bcma"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_car_t_cell_therapy"
+  ],
+  "mechanism_group_ids": [
+    "plasma-cell-identity-or-lineage-state-escape-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed research article",
+    "title": "Developing SEMA4A-directed CAR T cells to overcome low BCMA antigen density in multiple myeloma.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41072416/",
+    "doi": "10.1016/j.ccell.2025.09.007",
+    "pmid": "41072416",
+    "accessed": "2026-04-15",
+    "publication_year": 2025,
+    "study_context": "Translational and preclinical target exploration after BCMA CAR T relapse with low BCMA antigen density; this v0 extraction uses the public source record to map target-linked phenotype fields into the plasma-cell identity or lineage-state bucket without claiming full lineage-state escape."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "bcma-low-target-linked-phenotype-context-signal-v0",
+      "mechanism_group_id": "plasma-cell-identity-or-lineage-state-escape-v0",
+      "signal_summary": "The source frames low-to-negative BCMA expression after BCMA CAR T relapse as a target-linked phenotype context that should be preserved when reviewing plasma-cell identity or lineage-state escape hypotheses.",
+      "evidence_level": "mechanistic-preclinical",
+      "direction": "supports",
+      "measurement_fields": [
+        "BCMA antigen density",
+        "low-to-negative BCMA expression",
+        "post-BCMA CAR T relapse state",
+        "target-linked phenotype context",
+        "candidate alternate target need"
+      ],
+      "limitations": [
+        "This supports target-linked phenotype-field extraction, not a full lineage-state escape claim.",
+        "It does not estimate how often low-BCMA relapse occurs across products or disease states.",
+        "It does not support patient-specific target interpretation."
+      ]
+    },
+    {
+      "signal_id": "sema4a-bcma-density-pairing-phenotype-signal-v0",
+      "mechanism_group_id": "plasma-cell-identity-or-lineage-state-escape-v0",
+      "signal_summary": "The source reports paired antigen-density context for SEMA4A and BCMA in a post-BCMA relapse setting, making paired target-density fields part of the public identity or phenotype extraction surface.",
+      "evidence_level": "mechanistic-preclinical",
+      "direction": "supports",
+      "measurement_fields": [
+        "SEMA4A antigen density",
+        "BCMA antigen density",
+        "paired target-density comparison",
+        "post-BCMA relapse cohort context",
+        "molecules per cell"
+      ],
+      "limitations": [
+        "Candidate alternate-target density does not establish therapeutic efficacy.",
+        "Paired target-density context is not the same as harmonized lineage-state classification.",
+        "Full-methods and expert review are needed before cross-source comparison."
+      ]
+    },
+    {
+      "signal_id": "identity-label-harmonization-boundary-signal-v0",
+      "mechanism_group_id": "plasma-cell-identity-or-lineage-state-escape-v0",
+      "signal_summary": "The source supports preserving source-defined target-density and phenotype fields, but it should not be harmonized with transcriptomic identity-state labels without a separate mapping rule.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "source-defined phenotype label",
+        "target-density assay context",
+        "identity-state harmonization status",
+        "expert-review-needed status",
+        "cross-source mapping boundary"
+      ],
+      "limitations": [
+        "The extraction records a boundary for later mapping; it does not create a shared identity ontology.",
+        "It does not prove that SEMA4A is a clinically validated alternate target.",
+        "It does not recommend testing, treatment, sequencing, or trial selection."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "Plasma-cell identity or lineage-state escape now has a second public source-specific extraction record for v0 navigation.",
+      "Target-linked phenotype fields such as BCMA-low status and paired SEMA4A/BCMA density should be preserved before cross-source comparison.",
+      "Source-defined phenotype labels need explicit harmonization boundaries before being compared with transcriptomic identity-state evidence."
+    ],
+    "what_this_does_not_support": [
+      "It does not prove clinical efficacy for SEMA4A-directed therapy.",
+      "It does not establish clinical safety, trial readiness, patient eligibility, or treatment sequencing.",
+      "It does not estimate frequency of low-BCMA relapse or identity-state escape.",
+      "It does not establish a cure claim."
+    ]
+  },
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from the public source anchor and existing source-checked Di Meo 2025 extraction context.",
+      "Created to complete plasma-cell-identity-second-source-extraction-task-v0 as second-source coverage for the plasma-cell identity or lineage-state escape bucket.",
+      "This record deliberately says target-linked phenotype context rather than claiming full lineage-state escape."
+    ]
+  }
+}

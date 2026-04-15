@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/curing-blood-cancer/open-question-record.schema.json",
+  "title": "Curing Blood Cancer Open-Question Record",
+  "type": "object",
+  "required": [
+    "open_question_record_id",
+    "date",
+    "title",
+    "disease_program",
+    "disease_scope",
+    "question_text",
+    "question_type",
+    "question_context",
+    "claim_level",
+    "source_ids",
+    "uncertainty",
+    "limitations",
+    "do_not_infer",
+    "clinical_use_boundary",
+    "review"
+  ],
+  "properties": {
+    "open_question_record_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-v[0-9]+$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disease_program": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disease_scope": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["disease"],
+        "properties": {
+          "disease": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subtype_scope": {
+            "type": "string"
+          },
+          "disease_state": {
+            "type": "string"
+          },
+          "excluded_scope": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "question_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question_type": {
+      "type": "string",
+      "enum": [
+        "target",
+        "therapy",
+        "trial-landscape",
+        "measurement",
+        "mechanism",
+        "review-readiness",
+        "source-coverage",
+        "schema-tooling",
+        "case-to-cure-boundary",
+        "tooling-readiness",
+        "other-public-question"
+      ]
+    },
+    "question_context": {
+      "type": "object",
+      "required": ["public_summary"],
+      "properties": {
+        "public_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "claim_level": {
+      "type": "string",
+      "enum": ["fact", "derived", "hypothesis", "open-question", "do-not-use-clinically"]
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "target_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "therapy_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "trial_landscape_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "linked_claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "linked_gap_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "mechanism_group_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "measurement_term_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "public_task_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "uncertainty": {
+      "type": "object",
+      "required": ["summary", "known_unknowns"],
+      "properties": {
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "known_unknowns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "do_not_infer": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "clinical_use_boundary": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "not-medical-advice",
+          "not-diagnostic",
+          "not-treatment-recommendation",
+          "not-trial-recommendation",
+          "research-use-only"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "review": {
+      "type": "object",
+      "required": ["created", "last_reviewed", "review_status"],
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date"
+        },
+        "last_reviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "source-checked",
+            "expert-review-needed",
+            "expert-reviewed",
+            "deprecated"
+          ]
+        },
+        "review_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

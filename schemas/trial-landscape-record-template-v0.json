@@ -1,0 +1,132 @@
+{
+  "trial_landscape_record_id": "myeloma-trial-landscape-record-template-v0",
+  "date": "2026-04-15",
+  "title": "Multiple Myeloma Trial-Landscape Record Template v0",
+  "disease_program": "multiple-myeloma",
+  "disease_scope": [
+    {
+      "disease": "multiple myeloma",
+      "subtype_scope": "plasma-cell disease",
+      "disease_state": "public schema template",
+      "excluded_scope": [
+        "patient-specific trial eligibility",
+        "trial enrollment advice",
+        "trial availability claims for any person",
+        "sponsor access instructions",
+        "expanded-access decisions"
+      ]
+    }
+  ],
+  "landscape_scope": {
+    "landscape_type": "registry-query-template",
+    "public_summary": "Template-only trial-landscape context for public multiple myeloma registry and query provenance.",
+    "landscape_fields": [
+      "registry-source-provenance",
+      "query-freshness",
+      "therapy-record-linkage",
+      "target-record-linkage",
+      "no-eligibility-boundary"
+    ]
+  },
+  "registry_provenance": {
+    "registry_source_ids": [
+      "clinicaltrials_gov",
+      "clinicaltrials_gov_api_v2",
+      "who_ictrp_search_portal"
+    ],
+    "data_timestamp": "2026-04-15",
+    "accessed": "2026-04-15",
+    "query_scope": "Template-only public registry landscape context for multiple myeloma records.",
+    "trial_query_record_ids": [
+      "multiple-myeloma-car-t-united-states-recruiting-v0"
+    ],
+    "query_terms": [
+      "multiple myeloma",
+      "CAR T-cell therapy",
+      "registry landscape"
+    ],
+    "registry_urls": [
+      {
+        "label": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/",
+        "accessed": "2026-04-15"
+      }
+    ]
+  },
+  "claim_level": "open-question",
+  "source_ids": [
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2",
+    "who_ictrp_search_portal",
+    "nci_pdq_myeloma_hp",
+    "pubmed"
+  ],
+  "target_record_ids": [
+    "bcma-target-record-template-v0"
+  ],
+  "therapy_record_ids": [
+    "bcma-directed-therapy-class-template-v0"
+  ],
+  "linked_claim_ids": [
+    "bcma-resistance-is-multifactorial-v0",
+    "low-bcma-density-supports-alternate-target-research-tracking-v0"
+  ],
+  "linked_gap_ids": [
+    "expert-review-readiness-gap-v0",
+    "non-antigen-loss-relapse-buckets-gap-v0",
+    "alternate-target-clinical-translation-gap-v0"
+  ],
+  "mechanism_group_ids": [
+    "sequential-or-dual-target-immune-pressure-v0",
+    "disease-burden-site-risk-context-v0",
+    "measurement-and-follow-up-gaps-v0"
+  ],
+  "public_task_ids": [
+    "multiple-myeloma-trial-landscape-record-schema-task-v0"
+  ],
+  "uncertainty": {
+    "summary": "A valid trial-landscape record can organize public registry provenance and freshness context, but it cannot establish eligibility, enrollment fit, availability, safety, efficacy, appropriateness, sponsor access, or patient fit.",
+    "known_unknowns": [
+      "Whether any registry record is currently available or relevant for any person is outside this public template.",
+      "Registry freshness and source-specific query semantics require date-stamped review before reuse."
+    ]
+  },
+  "limitations": [
+    "Template only.",
+    "No real case data.",
+    "No trial recommendation.",
+    "No eligibility guidance.",
+    "No enrollment advice.",
+    "No availability claim for any person.",
+    "No treatment recommendation.",
+    "No sponsor access instruction.",
+    "No expanded-access guidance.",
+    "No cure claim."
+  ],
+  "do_not_infer": [
+    "Do not infer trial eligibility.",
+    "Do not infer trial availability.",
+    "Do not infer enrollment fit.",
+    "Do not infer sponsor access.",
+    "Do not infer trial safety.",
+    "Do not infer trial efficacy.",
+    "Do not infer clinical appropriateness.",
+    "Do not infer patient fit."
+  ],
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "draft",
+    "review_notes": [
+      "Template validates Trial-Landscape Record Schema v0 without creating a trial finder, trial match, trial ranking, enrollment record, or availability claim for any person.",
+      "No patient-specific fields, candidate options, eligibility fields, enrollment guidance, sponsor access instructions, treatment choices, or expanded-access guidance are present."
+    ]
+  }
+}

@@ -22,6 +22,7 @@ high-risk context, so this task adds the first public context extraction.
 
 ## Linked Public Artifacts
 
+- `tedder-bhutani-2025-disease-context-v0`
 - `post-car-t-relapse-mechanism-coverage-v0`
 - `post-car-t-relapse-mechanism-map-v0`
 - `mrd-and-relapse-measurement-glossary-v0`
@@ -44,6 +45,10 @@ high-risk context, so this task adds the first public context extraction.
 - Context fields are not treated as causal mechanisms unless the source
   explicitly supports that interpretation.
 - No patient-specific risk interpretation is added.
+- Completed with `tedder-bhutani-2025-disease-context-v0`; the coverage report
+  initially marked the bucket as `needs-second-source-extraction`.
+- Follow-up second-source coverage is now present from
+  `nci-pdq-2025-disease-context-v0`.
 
 ## Do Not Infer
 

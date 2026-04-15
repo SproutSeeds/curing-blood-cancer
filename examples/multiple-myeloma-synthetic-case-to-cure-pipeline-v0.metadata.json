@@ -1,0 +1,52 @@
+{
+  "artifact_id": "multiple-myeloma-synthetic-case-to-cure-pipeline-v0",
+  "title": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "synthetic example",
+    "case pipeline",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-To-Cure Synthetic Pipeline Schema",
+      "url": "../schemas/case-to-cure-synthetic-pipeline.schema.json",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "ClinicalTrials.gov Query Protocol v0",
+      "url": "../protocols/clinicaltrials-gov-query-protocol-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "../disease-programs/multiple-myeloma/public-roadmap-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Synthetic data only.",
+    "Contains no real case data.",
+    "Contains no PHI.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not expanded-access guidance for any person.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md"
+}

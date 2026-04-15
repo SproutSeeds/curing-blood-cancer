@@ -21,7 +21,10 @@ claims are attempted.
 
 - [`firestone-2024-bcma-antigen-escape-v0`](../mechanisms/extractions/firestone-2024-bcma-antigen-escape-v0.json): antigen escape after BCMA-directed therapies.
 - [`di-meo-2025-sema4a-low-bcma-v0`](../mechanisms/extractions/di-meo-2025-sema4a-low-bcma-v0.json): low BCMA density and SEMA4A alternate-target research.
+- [`di-meo-2025-target-linked-phenotype-v0`](../mechanisms/extractions/di-meo-2025-target-linked-phenotype-v0.json): target-linked phenotype fields for identity or lineage-state review.
 - [`tedder-bhutani-2025-bcma-resistance-review-v0`](../mechanisms/extractions/tedder-bhutani-2025-bcma-resistance-review-v0.json): BCMA resistance as a multifactorial review frame.
+- [`tedder-bhutani-2025-disease-context-v0`](../mechanisms/extractions/tedder-bhutani-2025-disease-context-v0.json): disease burden, site, high-risk, prior-therapy, and registry-context fields.
+- [`nci-pdq-2025-disease-context-v0`](../mechanisms/extractions/nci-pdq-2025-disease-context-v0.json): disease burden, site, high-risk, disease-state, and prior-therapy context fields.
 - [`ledergor-2024-cd4-car-t-exhaustion-v0`](../mechanisms/extractions/ledergor-2024-cd4-car-t-exhaustion-v0.json): CAR T persistence and exhaustion context.
 
 ## Measurement Dependencies
@@ -59,8 +62,8 @@ disease states, or treatment sequences.
 ### Low BCMA Density Supports Alternate-Target Research Tracking
 
 Low-to-negative BCMA expression after BCMA CAR T relapse is a source-backed
-reason to track alternate-target research signals, including SEMA4A in the
-cited translational and preclinical source.
+reason to track alternate-target research signals and target-linked phenotype
+fields, including SEMA4A in the cited translational and preclinical source.
 
 This supports a public research bucket for alternate-target evidence. It does
 not claim SEMA4A-directed CAR T therapy works in patients.

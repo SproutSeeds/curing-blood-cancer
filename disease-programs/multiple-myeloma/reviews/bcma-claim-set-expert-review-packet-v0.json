@@ -66,6 +66,9 @@
     "bcma-resistance-is-multifactorial-v0"
   ],
   "source_ids": [
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2",
+    "nci_pdq_myeloma_hp",
     "pubmed_antigen_escape_bcma_directed_2024",
     "pubmed_di_meo_2025_sema4a_low_bcma",
     "pubmed_tedder_bhutani_2025_bcma_resistance",
@@ -81,7 +84,10 @@
   "extraction_record_ids": [
     "firestone-2024-bcma-antigen-escape-v0",
     "di-meo-2025-sema4a-low-bcma-v0",
+    "di-meo-2025-target-linked-phenotype-v0",
     "tedder-bhutani-2025-bcma-resistance-review-v0",
+    "tedder-bhutani-2025-disease-context-v0",
+    "nci-pdq-2025-disease-context-v0",
     "ledergor-2024-cd4-car-t-exhaustion-v0"
   ],
   "review_status_boundary": [
@@ -189,7 +195,8 @@
         "relapse-or-disease-progression"
       ],
       "extraction_record_ids": [
-        "di-meo-2025-sema4a-low-bcma-v0"
+        "di-meo-2025-sema4a-low-bcma-v0",
+        "di-meo-2025-target-linked-phenotype-v0"
       ],
       "review_questions": [
         "Does the claim keep target biology separate from clinical efficacy?",
@@ -220,6 +227,10 @@
         "expert-review-readiness-gap-v0"
       ],
       "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
         "pubmed_tedder_bhutani_2025_bcma_resistance",
         "pubmed_ledergor_2024_cd4_car_t_exhaustion"
       ],
@@ -228,6 +239,9 @@
       ],
       "extraction_record_ids": [
         "tedder-bhutani-2025-bcma-resistance-review-v0",
+        "tedder-bhutani-2025-disease-context-v0",
+        "nci-pdq-2025-disease-context-v0",
+        "di-meo-2025-target-linked-phenotype-v0",
         "ledergor-2024-cd4-car-t-exhaustion-v0"
       ],
       "review_questions": [
@@ -261,6 +275,9 @@
         "expert-review-readiness-gap-v0"
       ],
       "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
         "pubmed_antigen_escape_bcma_directed_2024",
         "pubmed_di_meo_2025_sema4a_low_bcma",
         "pubmed_tedder_bhutani_2025_bcma_resistance",
@@ -276,7 +293,10 @@
       "extraction_record_ids": [
         "firestone-2024-bcma-antigen-escape-v0",
         "di-meo-2025-sema4a-low-bcma-v0",
+        "di-meo-2025-target-linked-phenotype-v0",
         "tedder-bhutani-2025-bcma-resistance-review-v0",
+        "tedder-bhutani-2025-disease-context-v0",
+        "nci-pdq-2025-disease-context-v0",
         "ledergor-2024-cd4-car-t-exhaustion-v0"
       ],
       "review_questions": [
@@ -316,7 +336,10 @@
     "review_status": "expert-review-needed",
     "review_notes": [
       "Created for public issue #5.",
-      "Separates review readiness from completed expert review."
+      "Separates review readiness from completed expert review.",
+      "Updated to include the disease-context extraction record added for public issue #16.",
+      "Updated to include Di Meo 2025 target-linked phenotype extraction for plasma-cell identity second-source coverage.",
+      "Updated to include NCI PDQ disease-context extraction for second-source context-field coverage."
     ]
   }
 }

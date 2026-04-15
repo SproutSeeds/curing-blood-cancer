@@ -26,6 +26,7 @@
   "limitations": [
     "Public trial-search protocol, not medical advice.",
     "Does not establish trial availability, eligibility, safety, or efficacy.",
+    "Case-matching provenance fields are public-safe audit context only and do not establish trial relevance or fit for any person.",
     "Search results can change as registry records are updated.",
     "Requires manual review before use in public claims."
   ],

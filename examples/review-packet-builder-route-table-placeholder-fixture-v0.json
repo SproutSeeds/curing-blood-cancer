@@ -1,0 +1,34 @@
+{
+  "fixture_id": "review-packet-builder-route-table-placeholder-fixture-v0",
+  "fixture_type": "valid-placeholder-manifest-reference",
+  "date": "2026-04-15",
+  "title": "Review-Packet Builder Route-Table Placeholder Fixture v0",
+  "based_on_manifest_path": "schemas/review-packet-builder-manifest-template-v0.json",
+  "expected_input_manifest_id": "myeloma-review-packet-builder-manifest-template-v0",
+  "expected_route_table_status": "route-table-ready-with-missing-inputs",
+  "expected_command": "python3 tools/review_packet_manifest_route_table.py --manifest schemas/review-packet-builder-manifest-template-v0.json --json",
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "output_boundary": [
+    "copied-reference routing only",
+    "not a review packet",
+    "not expert review",
+    "not generated biomedical prose",
+    "not publication-ready"
+  ],
+  "limitations": [
+    "Fixture points to a public placeholder manifest only.",
+    "Fixture does not contain real case data.",
+    "Fixture does not authorize builder code, packet assembly, generated claims, patient-specific outputs, or publication decisions."
+  ],
+  "do_not_infer": [
+    "Do not infer expert review from this fixture.",
+    "Do not infer evidence strength, clinical importance, patient relevance, actionability, or publication readiness from route-table output.",
+    "Do not use route-table output for treatment selection, trial selection, expanded-access decisions, monitoring decisions, or cure claims."
+  ]
+}

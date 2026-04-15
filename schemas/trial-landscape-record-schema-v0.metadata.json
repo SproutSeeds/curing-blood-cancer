@@ -1,0 +1,47 @@
+{
+  "artifact_id": "trial-landscape-record-schema-v0",
+  "title": "Trial-Landscape Record Schema v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "blood-cancer trial-landscape records",
+    "research tooling"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Therapy Record Schema v0",
+      "url": "./therapy-record-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "ClinicalTrials.gov Query Protocol v0",
+      "url": "../protocols/clinicaltrials-gov-query-protocol-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Schema And Tooling Phase Inventory v0",
+      "url": "../disease-programs/multiple-myeloma/schema-tooling-phase-inventory-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "../disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Schema validation does not make a trial-landscape record medical advice.",
+    "The schema does not accept eligibility guidance, enrollment advice, availability claims for any person, sponsor access instructions, treatment recommendations, expanded-access guidance, trial matching, option rankings, or real case data.",
+    "The schema does not prove trial availability, safety, efficacy, appropriateness, enrollment status, sponsor access, eligibility, or patient fit.",
+    "The template is public placeholder data only.",
+    "Extraction-helper schemas remain future work."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/trial-landscape-record-schema-v0.md"
+}

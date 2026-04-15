@@ -1,0 +1,70 @@
+{
+  "artifact_id": "multiple-myeloma-multidisciplinary-review-packet-template-v0",
+  "title": "Multidisciplinary Review Packet Template v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "case-to-cure pipeline",
+    "multidisciplinary review",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "BCMA Claim Set Expert Review Packet v0",
+      "url": "./bcma-claim-set-expert-review-packet-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "MRD And Relapse Measurement Glossary v0",
+      "url": "../measurements/mrd-and-relapse-measurement-glossary-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-Feature Bundle Public Summary v0",
+      "url": "../../../schemas/case-feature-bundle-public-summary-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Candidate-Option Scoring Rubric v0",
+      "url": "../candidate-option-scoring-rubric-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "../publication-gate-checklist-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "ClinicalTrials.gov Query Protocol v0",
+      "url": "../../../protocols/clinicaltrials-gov-query-protocol-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "../public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only review packet template.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide expanded-access guidance for any person.",
+    "Does not provide monitoring guidance.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not make any artifact expert-reviewed.",
+    "Must not be filled publicly with real case facts, identifiers, raw records, dates tied to a person, images, free-text notes, candidate options, rankings, or decisions.",
+    "Reviewer prompts do not establish clinical truth, trial eligibility, site availability, sponsor availability, regulatory feasibility, clinical safety, comparative benefit, or patient fit.",
+    "Requires qualified reviewers, mapped comments, publication-gate review, metadata, provenance, uncertainty, limitations, clinical-use boundary text, and validation before any downstream artifact update."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-multidisciplinary-review-packet-template-v0.md"
+}

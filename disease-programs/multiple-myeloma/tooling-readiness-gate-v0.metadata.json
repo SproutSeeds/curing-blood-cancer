@@ -1,0 +1,83 @@
+{
+  "artifact_id": "multiple-myeloma-tooling-readiness-gate-v0",
+  "title": "Multiple Myeloma Tooling Readiness Gate v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "research tooling",
+    "schema readiness",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "./public-roadmap-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Schema And Tooling Phase Inventory v0",
+      "url": "./schema-tooling-phase-inventory-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Open Research Map v0.1",
+      "url": "./open-research-map-v0-1.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Disease Map Schema v0",
+      "url": "../../schemas/disease-map-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Target Record Schema v0",
+      "url": "../../schemas/target-record-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Therapy Record Schema v0",
+      "url": "../../schemas/therapy-record-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Trial-Landscape Record Schema v0",
+      "url": "../../schemas/trial-landscape-record-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Open-Question Record Schema v0",
+      "url": "../../schemas/open-question-record-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "./public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "./reviews/multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Builder Input Manifest Spec v0",
+      "url": "./reviews/review-packet-builder-manifest-spec-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only tooling readiness gate.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide eligibility guidance or expanded-access guidance for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not build a generator, dashboard, explorer, evidence graph, extraction helper, review-packet builder, patient matcher, or recommendation system.",
+    "Does not generate biomedical claims or rank targets, therapies, trials, questions, sources, mechanisms, or public tasks.",
+    "Selected next slice after the manifest specification is schema and validator coverage only; builder code and generated outputs remain blocked."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-tooling-readiness-gate-v0.md"
+}

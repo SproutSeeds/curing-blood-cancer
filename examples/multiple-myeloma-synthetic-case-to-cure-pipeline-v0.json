@@ -1,0 +1,423 @@
+{
+  "synthetic_case_pipeline_id": "multiple-myeloma-synthetic-case-to-cure-pipeline-v0",
+  "date": "2026-04-15",
+  "disease_program": "multiple-myeloma",
+  "blueprint_id": "multiple-myeloma-case-to-cure-pipeline-blueprint-v0",
+  "clinical_use_boundary": "research-use-only",
+  "synthetic_case_notice": {
+    "uses_real_patient_data": false,
+    "contains_phi": false,
+    "contains_patient_specific_recommendation": false,
+    "public_export_allowed": true,
+    "description": "Synthetic plumbing example only. All case-like values are placeholders used to test the public pipeline shape."
+  },
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2",
+    "pubmed",
+    "fda_drugs_at_fda",
+    "pubmed_kumar_2016_imwg_mrd_response_criteria",
+    "pubmed_antigen_escape_bcma_directed_2024"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_car_t_cell_therapy",
+    "myeloma_class_bispecific_antibody",
+    "myeloma_class_autologous_stem_cell_transplant",
+    "myeloma_class_supportive_care_bone_renal_infection"
+  ],
+  "measurement_term_ids": [
+    "measurable-residual-disease",
+    "mrd-negativity",
+    "sustained-mrd-negativity",
+    "relapse-or-disease-progression",
+    "bone-marrow-target-status",
+    "antigen-density"
+  ],
+  "trial_query_record_ids": [
+    "multiple-myeloma-car-t-united-states-recruiting-v0"
+  ],
+  "data_zones": [
+    {
+      "zone_id": "case-vault",
+      "public": false,
+      "contains": [
+        "raw records",
+        "PHI",
+        "consent files",
+        "re-identification keys"
+      ]
+    },
+    {
+      "zone_id": "private-lab-case-workspace",
+      "public": false,
+      "contains": [
+        "normalized case features",
+        "evidence packets",
+        "candidate review questions",
+        "multidisciplinary review records"
+      ]
+    },
+    {
+      "zone_id": "public-method-surface",
+      "public": true,
+      "contains": [
+        "schemas",
+        "synthetic examples",
+        "source IDs",
+        "protocols",
+        "aggregate learning after publication gate"
+      ]
+    }
+  ],
+  "pipeline_stages": [
+    {
+      "stage_id": "case_00",
+      "name": "Governance setup",
+      "private_input": "synthetic consent placeholder and synthetic clinician-owner role",
+      "public_input": "case-to-cure pipeline blueprint",
+      "private_output": "synthetic case workspace path and audit-log placeholder",
+      "public_output": "no case-specific public output",
+      "gate": "consent and role check",
+      "synthetic_status": "demonstrated-with-synthetic-placeholder"
+    },
+    {
+      "stage_id": "case_01",
+      "name": "Intake partition",
+      "private_input": "synthetic record inventory with no files and no identifiers",
+      "public_input": "source registry shape",
+      "private_output": "PHI inventory placeholder",
+      "public_output": "synthetic manifest shape only",
+      "gate": "PHI boundary check",
+      "synthetic_status": "demonstrated-with-synthetic-placeholder"
+    },
+    {
+      "stage_id": "case_02",
+      "name": "De-identification plan",
+      "private_input": "synthetic PHI inventory with no real identifiers",
+      "public_input": "HHS HIPAA de-identification guidance",
+      "private_output": "de-identification-plan placeholder",
+      "public_output": "generic de-identification checklist requirements only",
+      "gate": "privacy review",
+      "synthetic_status": "public-method-only"
+    },
+    {
+      "stage_id": "case_03",
+      "name": "Disease-state normalization",
+      "private_input": "synthetic diagnosis and disease-setting placeholders",
+      "public_input": "multiple myeloma cure wedge and measurement glossary",
+      "private_output": "normalized disease-state placeholder",
+      "public_output": "schema feedback only",
+      "gate": "clinician review",
+      "synthetic_status": "demonstrated-with-synthetic-placeholder"
+    },
+    {
+      "stage_id": "case_04",
+      "name": "Measurement normalization",
+      "private_input": "synthetic MRD and relapse-context placeholders",
+      "public_input": "MRD and relapse measurement glossary",
+      "private_output": "measurement-context placeholder",
+      "public_output": "measurement gap updates only",
+      "gate": "measurement review",
+      "synthetic_status": "demonstrated-with-synthetic-placeholder"
+    },
+    {
+      "stage_id": "case_05",
+      "name": "Molecular and immune context",
+      "private_input": "synthetic target-assay and immune-context placeholders",
+      "public_input": "mechanism maps and source registry",
+      "private_output": "molecular-immune feature placeholder",
+      "public_output": "public extraction task candidates only",
+      "gate": "lab validity review",
+      "synthetic_status": "demonstrated-with-synthetic-placeholder"
+    },
+    {
+      "stage_id": "case_06",
+      "name": "Exposure and resistance map",
+      "private_input": "synthetic prior-therapy class placeholders",
+      "public_input": "multiple myeloma treatment-class taxonomy",
+      "private_output": "therapy exposure map placeholder",
+      "public_output": "taxonomy gap candidates only",
+      "gate": "clinician review",
+      "synthetic_status": "demonstrated-with-synthetic-placeholder"
+    },
+    {
+      "stage_id": "case_07",
+      "name": "Evidence retrieval",
+      "private_input": "synthetic normalized feature bundle",
+      "public_input": "NCI, PubMed, ClinicalTrials.gov, FDA, source registry IDs",
+      "private_output": "source-backed evidence packet placeholder",
+      "public_output": "public source and query records only",
+      "gate": "source freshness check",
+      "synthetic_status": "demonstrated-with-synthetic-placeholder"
+    },
+    {
+      "stage_id": "case_08",
+      "name": "Candidate hypothesis generation",
+      "private_input": "synthetic evidence packet",
+      "public_input": "claim schemas and opportunity map",
+      "private_output": "candidate option review-question set",
+      "public_output": "no patient-specific candidate options",
+      "gate": "safety boundary check",
+      "synthetic_status": "blocked-without-real-governance"
+    },
+    {
+      "stage_id": "case_09",
+      "name": "Candidate scoring",
+      "private_input": "synthetic candidate review questions",
+      "public_input": "public scoring dimensions and safety labels",
+      "private_output": "ranked clinical-review questions placeholder",
+      "public_output": "de-identified scoring rubric improvements only",
+      "gate": "no auto-action gate",
+      "synthetic_status": "blocked-without-real-governance"
+    },
+    {
+      "stage_id": "case_10",
+      "name": "Feasibility and exclusion review",
+      "private_input": "synthetic ranked questions",
+      "public_input": "trial and drug source references",
+      "private_output": "feasibility notes placeholder",
+      "public_output": "public evidence gaps only",
+      "gate": "clinician and site verification",
+      "synthetic_status": "blocked-without-real-governance"
+    },
+    {
+      "stage_id": "case_11",
+      "name": "Multidisciplinary review",
+      "private_input": "synthetic private packets",
+      "public_input": "expert-review packet pattern",
+      "private_output": "review decision record placeholder",
+      "public_output": "review template improvements only",
+      "gate": "tumor board or equivalent",
+      "synthetic_status": "blocked-without-real-governance"
+    },
+    {
+      "stage_id": "case_12",
+      "name": "Action-path selection",
+      "private_input": "synthetic review decision",
+      "public_input": "regulatory and source references",
+      "private_output": "standard-care, trial, expanded-access, research-only, or no-go path placeholder",
+      "public_output": "generic pathway map only",
+      "gate": "clinician owner signoff",
+      "synthetic_status": "blocked-without-real-governance"
+    },
+    {
+      "stage_id": "case_13",
+      "name": "Monitoring plan",
+      "private_input": "synthetic selected-path placeholder",
+      "public_input": "measurement glossary",
+      "private_output": "monitoring and stop-rule placeholder",
+      "public_output": "generic monitoring schema only",
+      "gate": "clinical safety review",
+      "synthetic_status": "blocked-without-real-governance"
+    },
+    {
+      "stage_id": "case_14",
+      "name": "Outcome capture",
+      "private_input": "synthetic follow-up placeholder",
+      "public_input": "outcome schema draft",
+      "private_output": "outcome and learning placeholder",
+      "public_output": "de-identified aggregate artifact only after publication gate",
+      "gate": "privacy and publication review",
+      "synthetic_status": "public-method-only"
+    }
+  ],
+  "synthetic_records": {
+    "case_intake_manifest": {
+      "case_id": "synthetic-mm-case-alpha",
+      "disease_program": "multiple-myeloma",
+      "consent_status": "synthetic-approved-placeholder",
+      "clinical_owner": "synthetic-clinician-role",
+      "allowed_uses": [
+        "research-review",
+        "public-method-demonstration"
+      ],
+      "raw_record_inventory": [
+        {
+          "record_type": "synthetic-pathology-placeholder",
+          "source_system": "none",
+          "contains_phi": false,
+          "received_at": "2026-04-15",
+          "private_uri": "synthetic-only://no-real-record"
+        }
+      ],
+      "public_export_allowed": false
+    },
+    "case_feature_bundle": {
+      "case_id": "synthetic-mm-case-alpha",
+      "disease_state": {
+        "diagnosis": "multiple myeloma",
+        "disease_setting": "synthetic-relapsed-placeholder",
+        "response_state": "synthetic-source-defined-placeholder",
+        "risk_context": [
+          "synthetic-risk-feature-placeholder"
+        ]
+      },
+      "measurement_context": {
+        "measurement_term_ids": [
+          "measurable-residual-disease",
+          "mrd-negativity",
+          "relapse-or-disease-progression"
+        ],
+        "mrd_method": "synthetic-method-placeholder",
+        "mrd_threshold": "synthetic-threshold-placeholder",
+        "sample_context": "synthetic-sample-context-placeholder"
+      },
+      "therapy_exposure": [
+        {
+          "taxonomy_class_ids": [
+            "myeloma_class_car_t_cell_therapy"
+          ],
+          "agent_or_strategy": "synthetic-agent-placeholder",
+          "line_context": "synthetic-line-placeholder",
+          "response": "synthetic-response-placeholder",
+          "toxicity_or_constraint": "synthetic-constraint-placeholder"
+        }
+      ],
+      "molecular_immune_context": {
+        "target_assays": [
+          "synthetic-BCMA-status-placeholder"
+        ],
+        "genomic_features": [
+          "synthetic-genomic-feature-placeholder"
+        ],
+        "immune_fitness_notes": [
+          "synthetic-immune-context-placeholder"
+        ]
+      }
+    },
+    "evidence_packet": {
+      "case_id": "synthetic-mm-case-alpha",
+      "source_freshness": [
+        {
+          "source_id": "clinicaltrials_gov_api_v2",
+          "checked_at": "2026-04-15",
+          "version_or_timestamp": "source-defined-placeholder"
+        }
+      ],
+      "matched_public_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "matched_evidence_gap_ids": [
+        "bcma-measurement-context-completeness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0"
+      ],
+      "matched_trial_query_record_ids": [
+        "multiple-myeloma-car-t-united-states-recruiting-v0"
+      ],
+      "matched_regulatory_source_ids": [
+        "fda_drugs_at_fda"
+      ],
+      "limitations": [
+        "Synthetic record only.",
+        "No real diagnosis, assay, prior therapy, toxicity, or eligibility facts are present."
+      ]
+    },
+    "candidate_option_set": {
+      "case_id": "synthetic-mm-case-alpha",
+      "candidate_options": [
+        {
+          "candidate_id": "synthetic-standard-care-review-question-v0",
+          "candidate_type": "standard-care-review",
+          "review_question": "Which established options would clinicians review if these synthetic placeholders were real?",
+          "evidence_basis_source_ids": [
+            "nci_pdq_myeloma_hp",
+            "fda_drugs_at_fda"
+          ],
+          "known_constraints": [
+            "synthetic-constraint-placeholder"
+          ],
+          "overclaiming_risk": "high",
+          "requires_clinician_review": true,
+          "requires_site_or_sponsor_verification": false,
+          "public_export_allowed": false
+        },
+        {
+          "candidate_id": "synthetic-trial-review-question-v0",
+          "candidate_type": "trial-review",
+          "review_question": "Which trial records would need site verification if these synthetic placeholders were real?",
+          "evidence_basis_source_ids": [
+            "clinicaltrials_gov",
+            "clinicaltrials_gov_api_v2"
+          ],
+          "trial_query_record_ids": [
+            "multiple-myeloma-car-t-united-states-recruiting-v0"
+          ],
+          "known_constraints": [
+            "synthetic-site-and-eligibility-placeholder"
+          ],
+          "overclaiming_risk": "high",
+          "requires_clinician_review": true,
+          "requires_site_or_sponsor_verification": true,
+          "public_export_allowed": false
+        },
+        {
+          "candidate_id": "synthetic-research-only-hypothesis-v0",
+          "candidate_type": "research-only",
+          "review_question": "Which mechanism hypotheses belong only in evidence-gap tracking?",
+          "evidence_basis_source_ids": [
+            "pubmed_antigen_escape_bcma_directed_2024"
+          ],
+          "known_constraints": [
+            "synthetic-mechanism-uncertainty-placeholder"
+          ],
+          "overclaiming_risk": "medium",
+          "requires_clinician_review": true,
+          "requires_site_or_sponsor_verification": false,
+          "public_export_allowed": false
+        }
+      ]
+    },
+    "review_decision_record": {
+      "review_id": "synthetic-review-placeholder-v0",
+      "review_body": "synthetic-multidisciplinary-review",
+      "review_date": "2026-04-15",
+      "decision": "needs-more-data",
+      "rationale": [
+        "Synthetic example cannot support care decisions.",
+        "Real case data would require clinician, privacy, legal, regulatory, and safety review."
+      ],
+      "required_confirmations": [
+        "consent verified",
+        "source freshness checked",
+        "eligibility verified by trial site if trial path is considered",
+        "label and safety reviewed by clinician",
+        "publication gate passed before public downstreaming"
+      ],
+      "monitoring_requirements": [
+        "synthetic-monitoring-placeholder"
+      ],
+      "public_learning_candidate": true
+    }
+  },
+  "publication_gate_result": {
+    "actual_case_data_publication_allowed": false,
+    "patient_specific_outputs_publication_allowed": false,
+    "allowed_public_outputs": [
+      "schema improvements",
+      "generic source registry gaps",
+      "synthetic examples",
+      "de-identified aggregate learning after separate review"
+    ],
+    "blocked_outputs": [
+      "raw records",
+      "case dates",
+      "locations",
+      "provider names",
+      "patient-specific candidate options",
+      "treatment recommendations",
+      "trial recommendations"
+    ]
+  },
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Synthetic example exercises the case-to-cure pipeline blueprint without real case data.",
+      "Candidate options are review questions only and are blocked from public export.",
+      "The publication gate permits only public method improvements or separately reviewed aggregate learning."
+    ]
+  }
+}

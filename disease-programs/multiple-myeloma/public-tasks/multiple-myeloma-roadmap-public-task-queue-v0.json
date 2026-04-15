@@ -1,0 +1,1560 @@
+{
+  "task_queue_id": "multiple-myeloma-roadmap-public-task-queue-v0",
+  "date": "2026-04-15",
+  "disease_program": "multiple-myeloma",
+  "title": "Multiple Myeloma Roadmap Public Task Queue v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "public roadmap",
+    "case-to-cure pipeline",
+    "research tooling"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "gap_register_ids": [
+    "bcma-antigen-escape-evidence-gap-register-v0"
+  ],
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2",
+    "pubmed",
+    "fda_drugs_at_fda",
+    "dailymed",
+    "ema_medicines",
+    "hgnc_gene_names",
+    "ncbi_gene",
+    "nci_cancer_drug_dictionary",
+    "seer_cancer_stat_facts",
+    "who_ictrp_search_portal",
+    "pubmed_kumar_2016_imwg_mrd_response_criteria",
+    "pubmed_munshi_2017_mrd_survival_meta_analysis",
+    "pubmed_soh_2022_mrd_flow_harmonization",
+    "pubmed_tedder_bhutani_2025_bcma_resistance",
+    "pubmed_yue_2025_bcma_resistance"
+  ],
+  "tasks": [
+    {
+      "task_id": "multiple-myeloma-open-research-map-task-v0",
+      "task_title": "Draft Multiple Myeloma Open Research Map v0.1",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "car-t-fitness-exhaustion-persistence-v0",
+        "plasma-cell-identity-or-lineage-state-escape-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "measurable-residual-disease",
+        "mrd-negativity",
+        "sustained-mrd-negativity",
+        "relapse-or-disease-progression",
+        "progression-free-survival",
+        "overall-survival"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov_api_v2",
+        "pubmed",
+        "fda_drugs_at_fda",
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_munshi_2017_mrd_survival_meta_analysis"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-open-research-map-task-v0.md",
+      "public_deliverables": [
+        "A Markdown navigation artifact titled Multiple Myeloma Open Research Map v0.1.",
+        "A machine-readable companion record if the disease-map schema exists before drafting.",
+        "Catalog and README links that make the map findable from the myeloma program page.",
+        "Multiple Myeloma Open Research Map v0.1 at disease-programs/multiple-myeloma/open-research-map-v0-1.md.",
+        "Validated JSON companion at disease-programs/multiple-myeloma/open-research-map-v0-1.json."
+      ],
+      "acceptance_checks": [
+        "The map separates facts, derived claims, hypotheses, open questions, and do-not-use clinical material.",
+        "Every section lists source IDs or explicitly marks missing source extraction.",
+        "The map links the wedge, source registry, measurement glossary, mechanism map, public task queues, and review boundary.",
+        "No section ranks patient options, recommends therapy, recommends a trial, or claims a cure.",
+        "make validate passes.",
+        "Completed in public artifact multiple-myeloma-open-research-map-v0-1.",
+        "JSON companion validates against Disease Map Schema v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that a map section is clinically actionable.",
+        "Do not treat artifact coverage as evidence strength or biological frequency.",
+        "Do not imply the open research map is comprehensive across all myeloma settings."
+      ],
+      "safety_boundary": [
+        "Research navigation only.",
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-source-registry-expansion-task-v0",
+      "task_title": "Expand reusable myeloma source registry anchors",
+      "task_type": "source-extraction-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "alternate-target-clinical-translation-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "disease-burden-site-risk-context-v0"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "pubmed",
+        "fda_drugs_at_fda",
+        "seer_cancer_stat_facts"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-source-registry-expansion-task-v0.md",
+      "public_deliverables": [
+        "New or revised source registry records for target, therapy, trial, regulatory, and dataset source classes.",
+        "A source-registry Markdown update matching the machine-readable JSON.",
+        "A short limitations note for each source class.",
+        "Source Registry v0 updated with reusable target, therapy, trial, regulatory, labeling, and dataset source anchors."
+      ],
+      "acceptance_checks": [
+        "Each new source record has owner, source type, blood-cancer scope, claim uses, claim limits, URL, and access date.",
+        "Sources are public, free to reference, and do not require credentials or restricted datasets.",
+        "Claim limits explain what the source cannot prove.",
+        "make validate passes.",
+        "Completed in public artifact source-registry-v0 with reusable target, therapy, trial, regulatory, labeling, and dataset source classes."
+      ],
+      "what_not_to_infer": [
+        "Do not treat a source record as evidence by itself.",
+        "Do not infer approval, efficacy, availability, eligibility, or safety from registry presence alone.",
+        "Do not add restricted or paid-access dependencies to the public workflow."
+      ],
+      "safety_boundary": [
+        "Public source anchors only.",
+        "No patient-specific interpretation.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-disease-map-schema-task-v0",
+      "task_title": "Define the first disease-map schema and companion Markdown shape",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "car-t-fitness-exhaustion-persistence-v0",
+        "plasma-cell-identity-or-lineage-state-escape-v0",
+        "disease-burden-site-risk-context-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "measurable-residual-disease",
+        "mrd-sensitivity-threshold",
+        "bone-marrow-mrd",
+        "relapse-or-disease-progression",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov_api_v2",
+        "pubmed",
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_soh_2022_mrd_flow_harmonization"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-disease-map-schema-task-v0.md",
+      "public_deliverables": [
+        "A JSON schema for disease-map records or a clearly named first schema slice.",
+        "A companion README or Markdown description of required map sections.",
+        "Validator coverage for the new schema before any generator depends on it.",
+        "Disease Map Schema v0 at schemas/disease-map-schema-v0.md with a validated template record."
+      ],
+      "acceptance_checks": [
+        "The schema requires disease scope, source IDs, claim level, uncertainty, limitations, and clinical-use boundary.",
+        "The schema can represent target, therapy, trial, open-question, and public-task links without patient-specific fields.",
+        "The Markdown companion explains how facts, derived claims, hypotheses, and open questions differ.",
+        "make validate passes.",
+        "Completed in public artifact disease-map-schema-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not build generation scripts before the shape is validated.",
+        "Do not include patient-specific features or candidate options in public disease-map records.",
+        "Do not flatten MRD, relapse, target status, or trial status into one generic evidence field."
+      ],
+      "safety_boundary": [
+        "Schema work only.",
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-schema-tooling-phase-inventory-task-v0",
+      "task_title": "Inventory the downstream schema and tooling phase before adding generators",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "bcma-measurement-context-completeness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "car-t-fitness-exhaustion-persistence-v0",
+        "plasma-cell-identity-or-lineage-state-escape-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "measurable-residual-disease",
+        "mrd-negativity",
+        "bone-marrow-target-status",
+        "antigen-density",
+        "relapse-or-disease-progression"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "fda_drugs_at_fda",
+        "dailymed",
+        "ema_medicines",
+        "who_ictrp_search_portal",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary",
+        "pubmed"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-schema-tooling-phase-inventory-task-v0.md",
+      "public_deliverables": [
+        "A public phase inventory that names the next target, therapy, trial, open-question, public-task, or tooling shape to define.",
+        "A decision table separating ready schema slices from blocked, deferred, and needs-human review work.",
+        "A recommendation for the next validated shape before evidence graph, trial explorer, target prioritization, extraction helper, or review packet builder work starts.",
+        "Updates to roadmap or open-research-map navigation showing that tooling waits for validated shapes.",
+        "Multiple Myeloma Schema And Tooling Phase Inventory v0 at disease-programs/multiple-myeloma/schema-tooling-phase-inventory-v0.md."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The inventory states which schema slices already exist and which are missing.",
+        "The inventory does not add generation scripts or extract new biomedical claims.",
+        "Each next-phase candidate lists required source IDs, public safety boundary, and blocker status.",
+        "The selected next task remains research-use-only and cannot be interpreted as clinical prioritization.",
+        "Completed in public artifact multiple-myeloma-schema-tooling-phase-inventory-v0 with target-record schema selected next."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that a ready schema task is evidence strength, biological priority, patient relevance, or treatment value.",
+        "Do not build evidence graph, trial explorer, target prioritization, extraction helper, or review-packet builder tooling before the relevant shape is validated.",
+        "Do not create target, therapy, trial, or open-question records that imply actionability, availability, eligibility, efficacy, safety, or a cure claim."
+      ],
+      "safety_boundary": [
+        "Phase inventory only.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-target-record-schema-task-v0",
+      "task_title": "Define a public target-record schema before target tooling",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "alternate-target-clinical-translation-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0",
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "plasma-cell-identity-or-lineage-state-escape-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
+      ],
+      "source_ids": [
+        "hgnc_gene_names",
+        "ncbi_gene",
+        "nci_cancer_drug_dictionary",
+        "nci_pdq_myeloma_hp",
+        "pubmed",
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-target-record-schema-task-v0.md",
+      "public_deliverables": [
+        "A JSON schema for target-record records.",
+        "A Markdown companion explaining required target, source, uncertainty, limitation, and clinical-use-boundary fields.",
+        "A template target-record JSON file with public placeholder values only.",
+        "Validator coverage for records with target_record_id before target-prioritization or evidence graph tooling starts.",
+        "Catalog, README, and roadmap links that make the target-record schema discoverable.",
+        "Target Record Schema v0 at schemas/target-record-schema-v0.md with a validated template record."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The schema requires target ID, target name or symbol, disease scope, source IDs, claim level, uncertainty, limitations, review status, and clinical-use boundary.",
+        "The schema can link to claims, gaps, mechanism groups, therapy records, trial records, and public tasks without requiring those records to exist yet.",
+        "The schema does not accept patient-specific target expression, candidate options, actionability scores, treatment choices, trial matching, or real case data.",
+        "The Markdown companion states that target-record validation checks shape only, not targetability, efficacy, safety, eligibility, availability, or patient fit.",
+        "Completed in public artifact target-record-schema-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer target actionability from a valid target record.",
+        "Do not infer that a target is expressed in any person.",
+        "Do not rank targets, therapies, trials, or products.",
+        "Do not use the schema for treatment selection, trial selection, expanded-access decisions, or cure claims."
+      ],
+      "safety_boundary": [
+        "Schema work only.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-therapy-record-schema-task-v0",
+      "task_title": "Define a public therapy-record schema after target shape",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "alternate-target-clinical-translation-gap-v0",
+        "expert-review-readiness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression"
+      ],
+      "source_ids": [
+        "nci_cancer_drug_dictionary",
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "fda_drugs_at_fda",
+        "dailymed",
+        "ema_medicines",
+        "pubmed"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-therapy-record-schema-task-v0.md",
+      "public_deliverables": [
+        "A JSON schema for therapy-record records.",
+        "A Markdown companion explaining required therapy class, target-link, source, uncertainty, limitation, and clinical-use-boundary fields.",
+        "A template therapy-record JSON file with public placeholder values only.",
+        "Validator coverage for records with therapy_record_id before therapy landscape, evidence graph, or trial explorer tooling starts.",
+        "Catalog, README, and roadmap links that make the therapy-record schema discoverable.",
+        "Therapy Record Schema v0 at schemas/therapy-record-schema-v0.md with a validated template record."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The schema requires therapy ID, therapy class or modality, disease scope, source IDs, claim level, uncertainty, limitations, review status, and clinical-use boundary.",
+        "The schema can link to target records, claims, gaps, mechanism groups, trial records, and public tasks without requiring patient-specific candidate options.",
+        "The schema does not accept treatment recommendations, option rankings, dosing, eligibility, availability claims for any person, expanded-access guidance, or real case data.",
+        "The Markdown companion states that therapy-record validation checks shape only, not efficacy, safety, availability, eligibility, sequencing, or patient fit.",
+        "Completed in public artifact therapy-record-schema-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer therapy value from a valid therapy record.",
+        "Do not rank therapies, products, trials, or targets.",
+        "Do not use the schema for treatment selection, trial selection, expanded-access decisions, or cure claims.",
+        "Do not infer that any therapy is available, appropriate, safe, effective, or indicated for any person."
+      ],
+      "safety_boundary": [
+        "Schema work only.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-trial-landscape-record-schema-task-v0",
+      "task_title": "Define a public trial-landscape record schema after therapy shape",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "alternate-target-clinical-translation-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "sequential-or-dual-target-immune-pressure-v0",
+        "disease-burden-site-risk-context-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression"
+      ],
+      "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "who_ictrp_search_portal",
+        "nci_pdq_myeloma_hp",
+        "fda_drugs_at_fda",
+        "dailymed",
+        "ema_medicines",
+        "pubmed"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-trial-landscape-record-schema-task-v0.md",
+      "public_deliverables": [
+        "A JSON schema for trial-landscape records.",
+        "A Markdown companion explaining registry provenance, data freshness, therapy and target links, uncertainty, limitations, and clinical-use boundary fields.",
+        "A template trial-landscape record JSON file with public placeholder values only.",
+        "Validator coverage for records with trial_landscape_record_id before trial explorer or evidence graph tooling starts.",
+        "Catalog, README, and roadmap links that make the trial-landscape record schema discoverable.",
+        "Trial-Landscape Record Schema v0 at schemas/trial-landscape-record-schema-v0.md with a validated template record."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The schema requires trial-landscape ID, registry source IDs, query or registry provenance, data timestamp or accessed date, disease scope, source IDs, uncertainty, limitations, review status, and clinical-use boundary.",
+        "The schema can link to target records, therapy records, claims, gaps, mechanism groups, and public tasks without requiring patient-specific eligibility or matching fields.",
+        "The schema does not accept eligibility guidance, enrollment advice, availability claims for any person, treatment recommendations, sponsor access instructions, expanded-access guidance, or real case data.",
+        "The Markdown companion states that trial-landscape validation checks shape only, not eligibility, availability, appropriateness, safety, efficacy, enrollment status, or patient fit.",
+        "Completed in public artifact trial-landscape-record-schema-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer trial eligibility from a valid trial-landscape record.",
+        "Do not infer trial availability, enrollment fit, sponsor access, safety, efficacy, or appropriateness for any person.",
+        "Do not use the schema for treatment selection, trial selection, expanded-access decisions, or cure claims.",
+        "Do not rank trials, therapies, products, or targets."
+      ],
+      "safety_boundary": [
+        "Schema work only.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-open-question-record-schema-task-v0",
+      "task_title": "Define a public open-question record schema after trial shape",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-open-question-record-schema-task-v0.md",
+      "public_deliverables": [
+        "A JSON schema for standalone open-question records.",
+        "A Markdown companion explaining question type, provenance, linked target, therapy, trial, claim, gap, mechanism, and task fields.",
+        "A template open-question JSON file with public placeholder values only.",
+        "Validator coverage for records with open_question_record_id before evidence graph or map-builder tooling starts.",
+        "Catalog, README, and roadmap links that make the open-question record schema discoverable.",
+        "Open-Question Record Schema v0 at schemas/open-question-record-schema-v0.md with a validated template record."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The schema requires open-question ID, question text, question type, disease scope, source IDs, uncertainty, limitations, review status, and clinical-use boundary.",
+        "The schema can link to target records, therapy records, trial-landscape records, claims, gaps, mechanism groups, and public tasks without requiring clinical priority, urgency, or patient-specific fields.",
+        "The schema does not accept clinical priority, evidence-strength ranking, urgency, treatment recommendations, trial recommendations, expanded-access guidance, or real case data.",
+        "The Markdown companion states that open-question validation checks shape only, not evidence strength, clinical importance, patient relevance, or actionability.",
+        "Completed in public artifact open-question-record-schema-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that an open question is clinically urgent because it validates.",
+        "Do not infer evidence strength, patient relevance, or actionability from an open-question record.",
+        "Do not use open-question records for treatment selection, trial selection, expanded-access decisions, or cure claims.",
+        "Do not rank questions, trials, therapies, products, or targets by clinical priority."
+      ],
+      "safety_boundary": [
+        "Schema work only.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-tooling-readiness-gate-task-v0",
+      "task_title": "Create a schema-backed tooling readiness gate before first generator",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-tooling-readiness-gate-task-v0.md",
+      "public_deliverables": [
+        "A public tooling readiness gate that maps evidence graph, trial explorer, target prioritization, extraction helper, and review-packet builder ideas to validated input schemas.",
+        "A no-tooling-yet decision table that names the smallest safe first tooling slice or records a blocker.",
+        "A boundary section that blocks patient-specific use, clinical recommendation, trial guidance, evidence-strength ranking, and generated claims.",
+        "Catalog, README, roadmap, and open research map links if the gate becomes a reusable public protocol artifact.",
+        "Multiple Myeloma Tooling Readiness Gate v0 at disease-programs/multiple-myeloma/tooling-readiness-gate-v0.md."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The gate references the validated disease-map, target-record, therapy-record, trial-landscape-record, open-question-record, and public task queue shapes.",
+        "The gate distinguishes schema readiness, source coverage, review readiness, and tooling readiness without turning any into clinical actionability.",
+        "The gate either selects one smallest safe public tooling slice or records why tooling remains blocked.",
+        "The gate does not build a generator, dashboard, explorer, ranking tool, trial finder, patient matcher, or recommendation system.",
+        "Completed in public artifact multiple-myeloma-tooling-readiness-gate-v0 with review-packet builder input manifest specification selected as the next spec-only slice."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that schema readiness means tooling should generate biomedical claims.",
+        "Do not infer that graph connectivity, task priority, or review readiness is evidence strength.",
+        "Do not use a tooling gate for treatment selection, trial selection, expanded-access decisions, or cure claims.",
+        "Do not rank questions, trials, therapies, products, targets, or mechanisms by clinical priority."
+      ],
+      "safety_boundary": [
+        "Readiness gate only.",
+        "No generated claims.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-review-packet-builder-manifest-spec-task-v0",
+      "task_title": "Define a review-packet builder input manifest spec before builder code",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-review-packet-builder-manifest-spec-task-v0.md",
+      "public_deliverables": [
+        "A public review-packet builder input manifest specification.",
+        "A field list for public artifact IDs, paths, schema IDs, source IDs, claim IDs, gap IDs, mechanism IDs, measurement IDs, task IDs, validation outputs, limitations, and review status.",
+        "Validation expectations for a future manifest before any review-packet builder code is written.",
+        "Boundary language that blocks generated claims, ranking, patient matching, clinical recommendations, trial guidance, expanded-access guidance, and real case data.",
+        "Catalog, README, roadmap, open research map, and phase inventory links if the manifest specification becomes a reusable protocol artifact.",
+        "Review-Packet Builder Input Manifest Spec v0 at disease-programs/multiple-myeloma/reviews/review-packet-builder-manifest-spec-v0.md."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The specification references only public artifacts, public schemas, public task queues, public source IDs, and public validation outputs.",
+        "The specification preserves provenance, subtype scope, uncertainty, limitations, review status, and no-clinical-use boundaries.",
+        "The specification keeps missing inputs explicit instead of filling or generating claims.",
+        "The specification states that manifest validation is not expert review, evidence strength, clinical importance, patient relevance, actionability, or publication authorization.",
+        "No builder code, generator, dashboard, explorer, ranking tool, trial finder, patient matcher, recommendation system, or generated-claim pipeline is added.",
+        "Completed in public artifact multiple-myeloma-review-packet-builder-manifest-spec-v0 with manifest schema and validator coverage selected next."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that a manifest specification authorizes review-packet-builder code.",
+        "Do not infer evidence strength, clinical importance, patient relevance, or actionability from manifest inclusion.",
+        "Do not use a manifest for treatment selection, trial selection, expanded-access decisions, or cure claims.",
+        "Do not rank questions, trials, therapies, products, targets, sources, mechanisms, or tasks by clinical priority."
+      ],
+      "safety_boundary": [
+        "Manifest specification only.",
+        "No generated claims.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No builder code.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-review-packet-builder-manifest-schema-task-v0",
+      "task_title": "Define a validated review-packet builder manifest schema before builder code",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-review-packet-builder-manifest-schema-task-v0.md",
+      "public_deliverables": [
+        "A JSON schema for review-packet builder input manifest records.",
+        "A public placeholder manifest template with no real case data and no generated claims.",
+        "Validator coverage for records with review_packet_builder_manifest_id.",
+        "A Markdown companion explaining manifest identity, packet routing, artifact inputs, schema inputs, source inputs, missing inputs, review routing, limitations, and safety boundary fields.",
+        "Catalog, README, roadmap, open research map, and phase inventory links that make the validated manifest shape discoverable.",
+        "Review-Packet Builder Manifest Schema v0 at schemas/review-packet-builder-manifest-schema-v0.md with a validated placeholder manifest record."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The schema requires manifest ID, packet type, target packet, public artifact inputs, source IDs, limitations, review status, missing-input handling, and clinical-use boundary fields.",
+        "The schema can link public artifact IDs, paths, metadata paths, schema IDs, source IDs, claim IDs, gap IDs, mechanism IDs, measurement IDs, task IDs, query-record IDs, and extraction-record IDs without requiring generated text.",
+        "The validator rejects patient identifiers, real case data, generated biomedical claims, treatment recommendations, trial recommendations, expanded-access guidance, publication authorization, rankings, clinical priority, urgency, and patient relevance fields.",
+        "No builder code, generator, dashboard, explorer, ranking tool, trial finder, patient matcher, recommendation system, or generated-claim pipeline is added.",
+        "Completed in public artifact review-packet-builder-manifest-schema-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that a validated manifest schema authorizes review-packet-builder code.",
+        "Do not infer expert review, evidence strength, clinical importance, patient relevance, actionability, or publication authorization from manifest validation.",
+        "Do not use manifest records for treatment selection, trial selection, expanded-access decisions, or cure claims.",
+        "Do not rank questions, trials, therapies, products, targets, sources, mechanisms, artifacts, tasks, or evidence by clinical priority."
+      ],
+      "safety_boundary": [
+        "Manifest schema work only.",
+        "No generated claims.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No publication authorization.",
+        "No builder code.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-review-packet-builder-dry-run-plan-task-v0",
+      "task_title": "Define a no-code review-packet builder dry-run plan before builder code",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-review-packet-builder-dry-run-plan-task-v0.md",
+      "public_deliverables": [
+        "A no-code dry-run plan for future review-packet-builder behavior using only public placeholder manifests.",
+        "A no-generated-claims policy for future builder work.",
+        "A copy, reference, and refuse table that separates source-backed public content reuse from generated biomedical text.",
+        "A missing-input handling plan that fails closed instead of filling absent artifacts, sources, limitations, review status, or validation outputs.",
+        "Roadmap, readiness-gate, task-queue, and open-research-map links that keep builder implementation blocked until the dry-run plan is reviewed.",
+        "Review-Packet Builder Dry-Run Plan v0 at disease-programs/multiple-myeloma/reviews/review-packet-builder-dry-run-plan-v0.md."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The dry-run plan references Review-Packet Builder Manifest Schema v0 and its placeholder template as the only manifest inputs.",
+        "The plan states that future builder work may copy existing public artifact references and metadata but must not generate, rewrite, rank, summarize as advice, or strengthen biomedical claims.",
+        "The plan separates allowed copy, allowed reference, required omission, and hard refusal behavior for missing or unsafe inputs.",
+        "No builder code, generator, dashboard, explorer, ranking tool, trial finder, patient matcher, recommendation system, generated packet output, or generated-claim pipeline is added.",
+        "Completed in public artifact multiple-myeloma-review-packet-builder-dry-run-plan-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that a dry-run plan authorizes review-packet-builder code.",
+        "Do not infer expert review, evidence strength, clinical importance, patient relevance, actionability, or publication authorization from manifest validation or dry-run planning.",
+        "Do not use dry-run examples for treatment selection, trial selection, expanded-access decisions, or cure claims.",
+        "Do not rank questions, trials, therapies, products, targets, sources, mechanisms, artifacts, tasks, or evidence by clinical priority."
+      ],
+      "safety_boundary": [
+        "Dry-run planning only.",
+        "No generated claims.",
+        "No generated review packets.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No publication authorization.",
+        "No builder code.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-review-packet-builder-implementation-gate-task-v0",
+      "task_title": "Run an aggregate implementation gate before review-packet builder code",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-review-packet-builder-implementation-gate-task-v0.md",
+      "public_deliverables": [
+        "An aggregate implementation gate for review-packet-builder code readiness.",
+        "A decision table checking manifest schema validation, dry-run behavior, no-generated-claims policy, refusal behavior, and output boundaries.",
+        "A recommendation to either keep builder code blocked or select the smallest safe code slice.",
+        "Explicit blockers for generated claims, real case data, private records, patient-specific outputs, rankings, recommendations, and publication authorization.",
+        "Roadmap, task queue, and tooling-readiness links that preserve the no-code boundary until the gate is complete.",
+        "Review-Packet Builder Implementation Gate v0 at disease-programs/multiple-myeloma/reviews/review-packet-builder-implementation-gate-v0.md."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The gate references Review-Packet Builder Manifest Schema v0 and Review-Packet Builder Dry-Run Plan v0.",
+        "The gate states whether builder implementation remains blocked or a smallest safe code slice is selected.",
+        "The gate does not add builder code, generated packet output, generated biomedical claims, ranking behavior, trial matching, recommendation behavior, or patient-specific interpretation.",
+        "If a future code slice is selected, it is limited to copied public identifiers, public paths, boundary text, validation status, and explicit missing-input reports.",
+        "Completed in public artifact multiple-myeloma-review-packet-builder-implementation-gate-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that an implementation gate authorizes clinical use.",
+        "Do not infer expert review, evidence strength, clinical importance, patient relevance, actionability, or publication authorization from implementation readiness.",
+        "Do not use readiness-gate outputs for treatment selection, trial selection, expanded-access decisions, or cure claims.",
+        "Do not rank questions, trials, therapies, products, targets, sources, mechanisms, artifacts, tasks, or evidence by clinical priority."
+      ],
+      "safety_boundary": [
+        "Implementation gate only.",
+        "No generated claims.",
+        "No generated review packets.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No publication authorization.",
+        "No builder code.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-review-packet-builder-route-table-script-task-v0",
+      "task_title": "Build a deterministic review-packet manifest route-table dry-run script",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-review-packet-builder-route-table-script-task-v0.md",
+      "public_deliverables": [
+        "A deterministic local route-table dry-run script for the public placeholder manifest.",
+        "A fixture based on schemas/review-packet-builder-manifest-template-v0.json.",
+        "A refusal fixture for at least one forbidden manifest field.",
+        "Documentation stating that script output is copied-reference routing only, not a review packet, not expert review, not generated biomedical text, and not publication-ready.",
+        "Focused tests or validation checks that fail closed on missing paths, missing source IDs, missing boundary fields, or forbidden inputs.",
+        "Review-packet manifest route-table dry-run tool at tools/review_packet_manifest_route_table.py.",
+        "Placeholder route-table fixture at examples/review-packet-builder-route-table-placeholder-fixture-v0.json.",
+        "Forbidden-field refusal fixture at examples/review-packet-builder-forbidden-input-fixture-v0.json."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The script reads only public repo files and requires no network, credentials, accounts, paid services, or private records.",
+        "The script output is limited to copied public identifiers, public paths, boundary text, validation status, missing-input records, and refusal reasons.",
+        "The script rejects patient identifiers, real case data, generated claims, recommendations, rankings, trial matching, expanded-access guidance, publication authorization, and private records.",
+        "No generated review packets, generated biomedical prose, generated public explainers, patient-specific outputs, ranking views, trial finder, recommendation system, or publication workflow is added.",
+        "Completed in public artifact review-packet-manifest-route-table-tool-v0 with a self-test covering forbidden fields, missing paths, unknown source IDs, and missing boundary fields."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that a route-table script is a review-packet builder.",
+        "Do not infer expert review, evidence strength, clinical importance, patient relevance, actionability, or publication authorization from route-table output.",
+        "Do not use route-table output for treatment selection, trial selection, expanded-access decisions, or cure claims.",
+        "Do not rank questions, trials, therapies, products, targets, sources, mechanisms, artifacts, tasks, or evidence by clinical priority."
+      ],
+      "safety_boundary": [
+        "Copied-reference route-table script only.",
+        "No generated claims.",
+        "No generated review packets.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No publication authorization.",
+        "No packet assembly.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-review-packet-builder-route-table-output-schema-task-v0",
+      "task_title": "Define a review-packet route-table output schema before packet assembly",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-review-packet-builder-route-table-output-schema-task-v0.md",
+      "public_deliverables": [
+        "A JSON schema for route-table dry-run outputs produced by tools/review_packet_manifest_route_table.py.",
+        "A placeholder route-table output fixture generated only from public placeholder inputs.",
+        "Validator coverage for route-table output records before any packet assembly code can rely on them.",
+        "Documentation that route-table records are copied-reference routing only, not review packets, expert review, generated biomedical prose, recommendations, rankings, or publication-ready text.",
+        "Review-Packet Route-Table Output Schema v0 at schemas/review-packet-route-table-output-schema-v0.md.",
+        "Placeholder route-table output fixture at examples/review-packet-route-table-output-fixture-v0.json."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The output schema requires route_table_id, input_manifest_id, route_table_status, copied_reference_routes, missing_input_records, refusal_records, output_boundary, and do_not_infer.",
+        "The validator rejects generated claims, patient identifiers, recommendations, rankings, trial matching, expanded-access guidance, publication authorization, private records, and packet assembly fields.",
+        "The fixture is built only from public placeholder inputs and does not include real case data or generated biomedical content.",
+        "No review packet assembly, generated prose, clinical ranking, trial finder, recommendation system, patient-specific workflow, or publication workflow is added.",
+        "Completed in public artifact review-packet-route-table-output-schema-v0 with validator coverage for route_table_id records."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that a route-table output schema authorizes packet assembly.",
+        "Do not infer expert review, evidence strength, clinical importance, patient relevance, actionability, or publication authorization from route-table output records.",
+        "Do not use route-table output for treatment selection, trial selection, expanded-access decisions, monitoring decisions, or cure claims.",
+        "Do not rank questions, trials, therapies, products, targets, sources, mechanisms, artifacts, tasks, or evidence by clinical priority."
+      ],
+      "safety_boundary": [
+        "Route-table output schema only.",
+        "No generated claims.",
+        "No generated review packets.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No publication authorization.",
+        "No packet assembly.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-review-packet-builder-packet-assembly-gate-task-v0",
+      "task_title": "Create an aggregate packet-assembly gate before any review-packet output",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-review-packet-builder-packet-assembly-gate-task-v0.md",
+      "public_deliverables": [
+        "A no-code aggregate gate that reviews manifest schema, route-table tool, route-table output schema, fixtures, and dry-run policy before any packet assembly.",
+        "A gate decision that either keeps packet assembly blocked or selects one smallest safe downstream task.",
+        "A boundary table that keeps generated biomedical prose, recommendation, ranking, patient-specific output, trial matching, expanded-access guidance, and publication workflow blocked.",
+        "Review-Packet Builder Packet-Assembly Gate v0 at disease-programs/multiple-myeloma/reviews/review-packet-builder-packet-assembly-gate-v0.md."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The gate references Review-Packet Builder Manifest Schema v0, Review-Packet Manifest Route-Table Dry-Run Tool v0, Review-Packet Route-Table Output Schema v0, and Review-Packet Builder Dry-Run Plan v0.",
+        "The gate states whether packet assembly remains blocked or a smallest safe downstream slice is selected.",
+        "The gate does not add packet assembly code, generated packet output, generated biomedical claims, ranking behavior, trial matching, recommendation behavior, patient-specific interpretation, or publication workflow.",
+        "If a future code slice is selected, it is limited to deterministic copied public identifiers, public paths, boundary text, validation status, and explicit missing-input or refusal records.",
+        "Completed in public artifact multiple-myeloma-review-packet-builder-packet-assembly-gate-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that a packet-assembly gate authorizes clinical use.",
+        "Do not infer expert review, evidence strength, clinical importance, patient relevance, actionability, or publication authorization from route-table readiness.",
+        "Do not use readiness-gate outputs for treatment selection, trial selection, expanded-access decisions, monitoring decisions, or cure claims.",
+        "Do not rank questions, trials, therapies, products, targets, sources, mechanisms, artifacts, tasks, or evidence by clinical priority."
+      ],
+      "safety_boundary": [
+        "Packet-assembly gate only.",
+        "No generated claims.",
+        "No generated review packets.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No publication authorization.",
+        "No packet assembly code.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-review-packet-builder-packet-skeleton-spec-task-v0",
+      "task_title": "Define a review-packet builder packet-skeleton spec",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression",
+        "antigen-density",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-review-packet-builder-packet-skeleton-spec-task-v0.md",
+      "public_deliverables": [
+        "A no-code packet-skeleton specification that maps public review-packet section labels to route-table references, missing-input slots, and refusal states.",
+        "A clear statement that skeleton slots are empty and must not be filled with generated biomedical prose, case facts, recommendations, rankings, or reviewer conclusions.",
+        "Refusal behavior for patient identifiers, real case data, generated claims, treatment or trial recommendations, expanded-access guidance, publication authorization, and private records.",
+        "Review-Packet Builder Packet-Skeleton Spec v0 at disease-programs/multiple-myeloma/reviews/review-packet-builder-packet-skeleton-spec-v0.md."
+      ],
+      "acceptance_checks": [
+        "make validate passes.",
+        "The spec references the packet-assembly gate, route-table output schema, route-table tool, manifest schema, dry-run plan, and review packet template.",
+        "The spec defines empty section slots only and does not create review-packet output.",
+        "The spec preserves route-table IDs, route decisions, review status, limitation text, missing-input records, refusal records, and output boundaries.",
+        "No packet assembly code, generated packet output, generated prose, clinical ranking, trial finder, recommendation system, patient-specific workflow, or publication workflow is added.",
+        "Completed in public artifact multiple-myeloma-review-packet-builder-packet-skeleton-spec-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that a packet skeleton is a review packet.",
+        "Do not infer expert review, evidence strength, clinical importance, patient relevance, actionability, or publication authorization from skeleton fields.",
+        "Do not use a packet skeleton for treatment selection, trial selection, expanded-access decisions, monitoring decisions, or cure claims.",
+        "Do not rank questions, trials, therapies, products, targets, sources, mechanisms, artifacts, tasks, or evidence by clinical priority."
+      ],
+      "safety_boundary": [
+        "Packet-skeleton specification only.",
+        "No packet assembly code.",
+        "No generated claims.",
+        "No generated review packets.",
+        "No patient-specific interpretation.",
+        "No real case data.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No publication authorization.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-case-feature-bundle-summary-task-v0",
+      "task_title": "Draft a public-safe case-feature-bundle shape summary",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "bcma-measurement-context-completeness-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "measurement_term_ids": [
+        "measurable-residual-disease",
+        "mrd-sensitivity-threshold",
+        "bone-marrow-mrd",
+        "bone-marrow-target-status",
+        "antigen-density",
+        "relapse-or-disease-progression"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov_api_v2",
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_soh_2022_mrd_flow_harmonization"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-case-feature-bundle-summary-task-v0.md",
+      "public_deliverables": [
+        "A public-safe summary of the private-only case-feature-bundle shape.",
+        "A do-not-upload boundary that rejects real cases, identifiers, free-text notes, dates tied to a person, and images.",
+        "Links from the case-to-cure blueprint and schema README if the shape becomes a reusable public method artifact.",
+        "Case-Feature Bundle Public Summary v0 at schemas/case-feature-bundle-public-summary-v0.md."
+      ],
+      "acceptance_checks": [
+        "The artifact describes allowed field groups without soliciting case upload.",
+        "All examples are synthetic placeholders or generic field labels.",
+        "The summary states that real case data belongs only in a governed private environment.",
+        "The summary preserves measurement context, disease-state scope, source provenance, uncertainty, and limitations.",
+        "make validate passes.",
+        "Completed in public artifact case-feature-bundle-public-summary-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not publish a private case schema that can be filled with real public case data.",
+        "Do not include rare combinations, exact dates, notes, locations, provider names, or record identifiers.",
+        "Do not imply the public repo can evaluate an individual case."
+      ],
+      "safety_boundary": [
+        "Public method summary only.",
+        "No real case data.",
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-candidate-option-scoring-rubric-task-v0",
+      "task_title": "Add a candidate-option scoring rubric with no-action safeguards",
+      "task_type": "tooling-task",
+      "priority": "medium",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "alternate-target-clinical-translation-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "low-bcma-density-supports-alternate-target-research-tracking-v0",
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "mechanism_group_ids": [
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0"
+      ],
+      "measurement_term_ids": [
+        "normal-tissue-reactivity-screen",
+        "antigen-density",
+        "relapse-or-disease-progression"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "pubmed",
+        "fda_drugs_at_fda"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-candidate-option-scoring-rubric-task-v0.md",
+      "public_deliverables": [
+        "A rubric that separates standard-care review, trial review, expanded-access review, research-only hypotheses, and no-go records.",
+        "Explicit dimensions for evidence strength, uncertainty, feasibility, measurement clarity, review owner, and overclaiming risk.",
+        "A boundary statement that scores are not recommendations and do not rank patient options.",
+        "Candidate-Option Scoring Rubric v0 at disease-programs/multiple-myeloma/candidate-option-scoring-rubric-v0.md."
+      ],
+      "acceptance_checks": [
+        "The rubric requires candidate_type before any score is interpreted.",
+        "Expanded-access and trial-review categories require site, sponsor, clinician, and regulatory verification language.",
+        "Research-only and no-go records are first-class outcomes, not failures.",
+        "No score can be used as treatment advice, trial advice, or a patient-specific ranking.",
+        "make validate passes.",
+        "Completed in public artifact multiple-myeloma-candidate-option-scoring-rubric-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that higher score means better treatment.",
+        "Do not rank standard care, trial, expanded-access, research-only, and no-go buckets on one clinical axis.",
+        "Do not turn hypothesis scores into clinical action."
+      ],
+      "safety_boundary": [
+        "Review-readiness rubric only.",
+        "Requires qualified clinician review for any real case.",
+        "Requires site or sponsor verification for any trial or expanded-access question.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-publication-gate-checklist-task-v0",
+      "task_title": "Add a publication-gate checklist for case-derived public learning",
+      "task_type": "tooling-task",
+      "priority": "medium",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "measurement_term_ids": [
+        "measurable-residual-disease",
+        "mrd-negativity",
+        "bone-marrow-target-status",
+        "relapse-or-disease-progression"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov_api_v2",
+        "pubmed",
+        "fda_drugs_at_fda"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-publication-gate-checklist-task-v0.md",
+      "public_deliverables": [
+        "A publication-gate checklist for any case-derived public learning.",
+        "Fail-closed criteria for privacy, provenance, subtype scope, review status, and clinical-use boundary.",
+        "A link from the case-to-cure blueprint stage gates.",
+        "Publication-Gate Checklist v0 at disease-programs/multiple-myeloma/publication-gate-checklist-v0.md."
+      ],
+      "acceptance_checks": [
+        "The checklist blocks PHI, raw records, re-identification keys, dates tied to a person, images, and free-text notes.",
+        "The checklist requires source IDs, subtype scope, uncertainty, limitations, and review status before publication.",
+        "The checklist distinguishes aggregate learning from patient-specific candidate options or decisions.",
+        "The checklist states that clinical, legal, regulatory, sponsor, and institutional decisions remain outside the public repo.",
+        "make validate passes.",
+        "Completed in public artifact multiple-myeloma-publication-gate-checklist-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that passing a public checklist authorizes publication of real case facts without private governance.",
+        "Do not downstream patient-specific candidate options, monitoring plans, or decisions.",
+        "Do not use the public repo as a medical record or clinical decision system."
+      ],
+      "safety_boundary": [
+        "Publication safety checklist only.",
+        "No private records.",
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-multidisciplinary-review-packet-task-v0",
+      "task_title": "Create a multidisciplinary multiple myeloma review packet template",
+      "task_type": "expert-review-task",
+      "priority": "medium",
+      "status": "done",
+      "suggested_issue_form": "expert-review-task.yml",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0",
+        "alternate-target-clinical-translation-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "tnfrsf17-loss-is-trackable-escape-signal-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0",
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "mechanism_group_ids": [
+        "bcma-antigen-loss-or-low-density-v0",
+        "car-t-fitness-exhaustion-persistence-v0",
+        "plasma-cell-identity-or-lineage-state-escape-v0",
+        "disease-burden-site-risk-context-v0",
+        "sequential-or-dual-target-immune-pressure-v0",
+        "measurement-and-follow-up-gaps-v0"
+      ],
+      "measurement_term_ids": [
+        "measurable-residual-disease",
+        "mrd-negativity",
+        "mrd-sensitivity-threshold",
+        "bone-marrow-mrd",
+        "bone-marrow-target-status",
+        "antigen-density",
+        "normal-tissue-reactivity-screen",
+        "relapse-or-disease-progression"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "pubmed",
+        "fda_drugs_at_fda"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-multidisciplinary-review-packet-task-v0.md",
+      "public_deliverables": [
+        "A reusable public review packet template for multidisciplinary myeloma review.",
+        "Sections for hematology, cellular therapy, pathology, genomics, trial operations, regulatory access, safety, ethics, and patient communication review.",
+        "A do-not-fill-publicly boundary for real case facts.",
+        "Multidisciplinary Review Packet Template v0 at disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md."
+      ],
+      "acceptance_checks": [
+        "The template is usable without private context and contains no real case data.",
+        "Each review section asks for source IDs, uncertainty, limitations, and reviewer role.",
+        "The template separates source-checked, expert-review-needed, expert-reviewed, and blocked statuses.",
+        "The template does not recommend treatment, trial enrollment, or expanded access for any person.",
+        "make validate passes.",
+        "Completed in public artifact multiple-myeloma-multidisciplinary-review-packet-template-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer expert review has occurred because a template exists.",
+        "Do not fill the public template with real case facts.",
+        "Do not treat review prompts as medical advice."
+      ],
+      "safety_boundary": [
+        "Review template only.",
+        "No real case data.",
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "multiple-myeloma-case-specific-private-lab-blocker-register-task-v0",
+      "task_title": "Create a case-specific private-lab blocker register",
+      "task_type": "tooling-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0",
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "bcma-target-presence-should-be-extracted-v0"
+      ],
+      "mechanism_group_ids": [
+        "measurement-and-follow-up-gaps-v0",
+        "disease-burden-site-risk-context-v0"
+      ],
+      "measurement_term_ids": [
+        "measurable-residual-disease",
+        "relapse-or-disease-progression",
+        "bone-marrow-target-status"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov_api_v2",
+        "pubmed",
+        "fda_drugs_at_fda"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/multiple-myeloma-case-specific-private-lab-blocker-register-task-v0.md",
+      "public_deliverables": [
+        "A public-safe Case-Specific Private-Lab Blocker Register v0.",
+        "A stage-by-stage map from case_00 through case_14 to private-lab tasks or human-gated blockers.",
+        "Explicit blocked public outputs for real case data, patient-specific candidate options, treatment recommendations, trial recommendations, expanded-access guidance, monitoring instructions, and publication authorization.",
+        "Metadata, catalog, and README navigation for the blocker register.",
+        "Case-Specific Private-Lab Blocker Register v0 at disease-programs/multiple-myeloma/case-specific-private-lab-blocker-register-v0.md."
+      ],
+      "acceptance_checks": [
+        "Every stage from case_00 through case_14 has a private-lab or human-gated blocker entry.",
+        "The register distinguishes consent, PHI, source freshness, measurement, lab validity, CDS/regulatory, feasibility, safety, and publication gates.",
+        "The register states that clinical, legal, regulatory, sponsor, institutional, treating-team, and publication decisions remain outside the public repo.",
+        "No real case data, patient identifiers, exact person-linked dates, notes, images, rare identifying combinations, private record paths, or re-identification keys are included.",
+        "No treatment recommendation, trial recommendation, expanded-access guidance, monitoring instruction, or candidate-option ranking is added.",
+        "make validate passes.",
+        "Completed in public artifact multiple-myeloma-case-specific-private-lab-blocker-register-v0."
+      ],
+      "what_not_to_infer": [
+        "Do not infer that a blocker register authorizes real case processing in the public repo.",
+        "Do not infer that any private-lab task has been completed.",
+        "Do not infer clinical readiness, expert review, publication authorization, trial availability, sponsor access, patient fit, efficacy, safety, or cure from a blocker entry."
+      ],
+      "safety_boundary": [
+        "Public blocker register only.",
+        "No real case data.",
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No expanded-access guidance.",
+        "No monitoring guidance.",
+        "No cure claim."
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Derived from multiple-myeloma public-roadmap-v0 and case-to-cure-pipeline-blueprint-v0.",
+      "Uses currently validated BCMA and post-CAR T gap IDs as anchors so the queue can pass the existing public task schema.",
+      "Task priority indicates public artifact readiness, not evidence strength, biological importance, treatment value, or patient relevance.",
+      "A future broader roadmap gap register is needed before this queue can be treated as comprehensive across all myeloma settings.",
+      "Case-feature-bundle public summary task completed by case-feature-bundle-public-summary-v0.",
+      "Candidate-option scoring rubric task completed by multiple-myeloma-candidate-option-scoring-rubric-v0.",
+      "Publication-gate checklist task completed by multiple-myeloma-publication-gate-checklist-v0.",
+      "Multidisciplinary review packet template task completed by multiple-myeloma-multidisciplinary-review-packet-template-v0.",
+      "Open research map task completed by multiple-myeloma-open-research-map-v0-1.",
+      "Source registry expansion task completed by source-registry-v0 reusable target, therapy, trial, regulatory, labeling, and dataset anchors.",
+      "Disease-map schema task completed by disease-map-schema-v0 with validator coverage.",
+      "Open research map JSON companion added at disease-programs/multiple-myeloma/open-research-map-v0-1.json.",
+      "Step 15 adds a ready schema/tooling phase inventory task after all current second-source extraction tasks reached done status.",
+      "Step 16 completes the schema/tooling phase inventory and adds target-record schema as the next ready validated-shape task.",
+      "Step 17 completes target-record schema v0 and adds therapy-record schema as the next ready validated-shape task.",
+      "Step 18 completes therapy-record schema v0 and adds trial-landscape record schema as the next ready validated-shape task.",
+      "Step 19 completes trial-landscape record schema v0 and adds open-question record schema as the next ready validated-shape task.",
+      "Step 20 completes open-question record schema v0 and adds a tooling readiness gate as the next aggregate public task.",
+      "Step 21 completes the tooling readiness gate and selects a review-packet builder input manifest specification as the next spec-only public task before any builder code.",
+      "Step 22 completes the review-packet builder manifest specification and adds manifest schema plus validator coverage as the next ready public task before builder code.",
+      "Step 23 completes review-packet builder manifest schema v0 and adds a no-code dry-run plan as the next ready public task before builder code.",
+      "Step 24 completes the review-packet builder dry-run plan and adds an aggregate implementation gate as the next ready public task before any builder code.",
+      "Step 25 completes the implementation gate and conditionally selects a deterministic copied-reference route-table dry-run script as the next ready public task.",
+      "Step 26 completes the route-table dry-run script and selects a validated route-table output schema as the next ready public task before any packet assembly.",
+      "Step 27 completes the route-table output schema and selects an aggregate packet-assembly gate as the next ready public task before any review-packet output.",
+      "Step 28 completes the packet-assembly gate and selects a no-code packet-skeleton specification as the next ready public task.",
+      "Step 29 completes the packet-skeleton specification and directs the next action to an aggregate review-packet-builder recombination handoff before any new downstream task is selected.",
+      "Step 30 completes the review-packet-builder recombination handoff and directs the next action to a definition-of-complete audit before any new task is selected.",
+      "Step 31 completes the definition-of-complete audit and selects a case-specific private-lab blocker register as the next ready public task.",
+      "Step 32 completes the case-specific private-lab blocker register and leaves no ready public task selected."
+    ]
+  }
+}

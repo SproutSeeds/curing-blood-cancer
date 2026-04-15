@@ -1,0 +1,54 @@
+{
+  "artifact_id": "case-feature-bundle-public-summary-v0",
+  "title": "Case-Feature Bundle Public Summary v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "case-to-cure pipeline",
+    "public safety",
+    "schema summary"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
+      "url": "../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "MRD And Relapse Measurement Glossary v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Private-to-public workflow",
+      "url": "../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only public method summary.",
+    "Not a fillable public case schema.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide expanded-access guidance for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not permit real case upload, patient-identifying data, raw records, free-text notes, dates tied to a person, or patient-specific candidate options.",
+    "Field groups are shape categories for public planning and do not form a complete clinical ontology.",
+    "Any real case workflow requires private governance, consent, privacy review, clinical ownership, and audit controls outside this repo."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/case-feature-bundle-public-summary-v0.md"
+}

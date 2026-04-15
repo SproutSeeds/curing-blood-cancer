@@ -1,0 +1,65 @@
+{
+  "artifact_id": "multiple-myeloma-publication-gate-checklist-v0",
+  "title": "Publication-Gate Checklist v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "case-to-cure pipeline",
+    "case-derived public learning",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "./case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
+      "url": "../../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-Feature Bundle Public Summary v0",
+      "url": "../../schemas/case-feature-bundle-public-summary-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Candidate-Option Scoring Rubric v0",
+      "url": "./candidate-option-scoring-rubric-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Private To Public Workflow",
+      "url": "../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "./public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only public release-readiness checklist.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide expanded-access guidance for any person.",
+    "Does not provide monitoring guidance.",
+    "Does not claim that multiple myeloma has been cured.",
+    "A checklist pass does not authorize publication of real case facts without private governance.",
+    "Does not establish clinical truth, trial eligibility, site availability, sponsor availability, regulatory feasibility, or patient fit.",
+    "Does not permit patient-specific candidate options, rankings, decisions, raw records, identifiers, dates tied to a person, images, free-text notes, or re-identification keys in the public repo.",
+    "Requires metadata, provenance, uncertainty, limitations, clinical-use boundary text, and validation before public release review."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-publication-gate-checklist-v0.md"
+}
