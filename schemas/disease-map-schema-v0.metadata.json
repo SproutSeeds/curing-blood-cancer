@@ -1,0 +1,47 @@
+{
+  "artifact_id": "disease-map-schema-v0",
+  "title": "Disease Map Schema v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "blood-cancer disease maps",
+    "research tooling"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Curing Blood Cancer source registry",
+      "url": "../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Open Research Map v0.1",
+      "url": "../disease-programs/multiple-myeloma/open-research-map-v0-1.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "../disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Mechanism Map schema",
+      "url": "./mechanism-map.schema.json",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Task Queue schema",
+      "url": "./public-task-queue.schema.json",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Schema validation checks shape, not truth.",
+    "Schema validation does not make a disease-map record medical advice.",
+    "The schema does not accept patient-specific features, candidate options, or real case data.",
+    "The schema does not prove targetability, therapy value, trial availability, eligibility, safety, efficacy, or clinical actionability.",
+    "More source-specific extraction rules are needed before map tooling compares coverage across lanes."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/disease-map-schema-v0.md"
+}

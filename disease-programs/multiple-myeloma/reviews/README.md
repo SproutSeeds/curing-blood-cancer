@@ -11,4 +11,17 @@ traceable, and safer to do in public.
 | Packet | Status | Boundary |
 | --- | --- | --- |
 | [BCMA Claim Set Expert Review Packet v0](bcma-claim-set-expert-review-packet-v0.md) | expert-review-needed | source-checked is separate from expert-reviewed |
+| [Multidisciplinary Review Packet Template v0](multidisciplinary-review-packet-template-v0.md) | expert-review-needed | do not fill public template with real case facts |
 
+## Current Builder Specs
+
+| Spec | Status | Boundary |
+| --- | --- | --- |
+| [Review-Packet Builder Input Manifest Spec v0](review-packet-builder-manifest-spec-v0.md) | source-checked | manifest specification only; no builder code or generated claims |
+| [Review-Packet Builder Dry-Run Plan v0](review-packet-builder-dry-run-plan-v0.md) | source-checked | no-code copy, reference, omit, and refuse policy only |
+| [Review-Packet Builder Implementation Gate v0](review-packet-builder-implementation-gate-v0.md) | source-checked | selects copied-reference route-table script only; no packet assembly |
+| [Review-Packet Manifest Route-Table Dry-Run Tool v0](../../../tools/review_packet_manifest_route_table.py) | source-checked | copied-reference routing only; no generated biomedical prose or packet assembly |
+| [Review-Packet Route-Table Output Schema v0](../../../schemas/review-packet-route-table-output-schema-v0.md) | source-checked | route-table output contract only; no packet assembly |
+| [Review-Packet Builder Packet-Assembly Gate v0](review-packet-builder-packet-assembly-gate-v0.md) | source-checked | keeps packet assembly blocked; selects a no-code packet-skeleton spec only |
+| [Review-Packet Builder Packet-Skeleton Spec v0](review-packet-builder-packet-skeleton-spec-v0.md) | source-checked | empty slots and route references only; no packet output |
+| [Review-Packet Builder Recombination Handoff v0](review-packet-builder-recombination-handoff-v0.md) | source-checked | no ready builder task selected; next action is completion audit |

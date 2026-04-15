@@ -1,0 +1,595 @@
+{
+  "disease_map_id": "multiple-myeloma-open-research-map-v0-1",
+  "date": "2026-04-15",
+  "title": "Multiple Myeloma Open Research Map v0.1",
+  "disease_program": "multiple-myeloma",
+  "disease_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "durable MRD-negative remission",
+    "post-BCMA relapse",
+    "post-CAR T relapse",
+    "public navigation"
+  ],
+  "claim_level": "open-question",
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "not-expanded-access-guidance",
+    "not-patient-specific",
+    "research-use-only",
+    "requires-human-review"
+  ],
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2",
+    "fda_drugs_at_fda",
+    "dailymed",
+    "ema_medicines",
+    "who_ictrp_search_portal",
+    "pubmed",
+    "hgnc_gene_names",
+    "nci_cancer_drug_dictionary",
+    "pubmed_kumar_2016_imwg_mrd_response_criteria",
+    "pubmed_munshi_2017_mrd_survival_meta_analysis",
+    "pubmed_soh_2022_mrd_flow_harmonization",
+    "pubmed_tedder_bhutani_2025_bcma_resistance",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+    "pubmed_antigen_escape_bcma_directed_2024",
+    "pubmed_yue_2025_bcma_resistance",
+    "pubmed_di_meo_2025_sema4a_low_bcma",
+    "pubmed_plasma_cell_identity_escape_2025"
+  ],
+  "uncertainty": {
+    "summary": "This JSON companion translates the public Markdown map into a validated disease-map shape. It is source-backed navigation, not a comprehensive review or clinical decision artifact.",
+    "review_status": "source-checked",
+    "known_unknowns": [
+      "Broader non-BCMA and non-CAR T myeloma states remain under-covered.",
+      "Source-specific extraction rules are still needed before tooling compares target, therapy, trial, regulatory, dataset, or deeper non-BCMA coverage.",
+      "Expert review is still needed before stronger public explainers or educational summaries reuse the map."
+    ]
+  },
+  "limitations": [
+    "Research-use-only navigation map.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide expanded-access guidance for any person.",
+    "Does not provide monitoring guidance.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Not a systematic review or comprehensive map across all myeloma settings.",
+    "Does not rank patient options, mechanisms, trials, sources, therapies, targets, or research priorities for clinical use.",
+    "Artifact coverage is not evidence strength, biological priority, patient relevance, or clinical actionability.",
+    "Valid schema shape does not prove that any mapped statement is true."
+  ],
+  "facts": [
+    {
+      "fact_id": "multiple-myeloma-map-disease-scope-v0",
+      "statement": "The public map is scoped to multiple myeloma and related plasma-cell disease context.",
+      "scope": [
+        "multiple myeloma",
+        "plasma-cell disease"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp"
+      ],
+      "uncertainty": "This is a scope statement for public navigation, not a patient-specific diagnosis or prognosis.",
+      "limitations": [
+        "Disease scope does not establish patient relevance, prognosis, treatment direction, or trial relevance."
+      ]
+    },
+    {
+      "fact_id": "mrd-response-relapse-vocabulary-anchor-v0",
+      "statement": "The map uses public MRD, response, relapse, and measurement vocabulary as orientation terms before comparing claims.",
+      "scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "response assessment"
+      ],
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_munshi_2017_mrd_survival_meta_analysis",
+        "pubmed_soh_2022_mrd_flow_harmonization"
+      ],
+      "uncertainty": "Measurement terms need method, specimen, threshold, timing, and follow-up context before interpretation.",
+      "limitations": [
+        "MRD negativity, response status, target status, or antigen density must not be treated as cure, prognosis, or treatment guidance."
+      ]
+    },
+    {
+      "fact_id": "trial-registry-navigation-boundary-v0",
+      "statement": "Trial registry and regulatory source records are included only for landscape navigation and provenance.",
+      "scope": [
+        "trial registry",
+        "regulatory source",
+        "public provenance"
+      ],
+      "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "fda_drugs_at_fda",
+        "dailymed",
+        "ema_medicines",
+        "who_ictrp_search_portal"
+      ],
+      "uncertainty": "Registry or labeling presence can change and does not establish local availability, eligibility, efficacy, safety, or appropriateness.",
+      "limitations": [
+        "No trial recommendation.",
+        "No eligibility inference.",
+        "No regulatory or access decision."
+      ]
+    }
+  ],
+  "derived_claims": [
+    {
+      "claim_id": "deep-response-measurement-map-node-v0",
+      "statement": "MRD and relapse measurement context should remain visible before papers, trials, or mechanism claims are compared.",
+      "claim_level": "derived",
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_munshi_2017_mrd_survival_meta_analysis",
+        "pubmed_soh_2022_mrd_flow_harmonization"
+      ],
+      "linked_claim_ids": [
+        "multiple-myeloma-durable-remission-wedge-v0"
+      ],
+      "uncertainty": "This is an artifact-organization claim about public map construction.",
+      "limitations": [
+        "Does not interpret MRD status for any person.",
+        "Does not convert MRD negativity into a cure claim."
+      ]
+    },
+    {
+      "claim_id": "post-car-t-relapse-mechanism-map-node-v0",
+      "statement": "Post-CAR T relapse navigation should keep target escape, immune fitness, plasma-cell identity, disease context, and measurement-gap lanes separate.",
+      "claim_level": "derived",
+      "source_ids": [
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_yue_2025_bcma_resistance",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_plasma_cell_identity_escape_2025"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "uncertainty": "The map does not estimate frequency, causality, or product-specific relevance.",
+      "limitations": [
+        "No treatment sequencing inference.",
+        "No patient-specific mechanism assignment."
+      ]
+    },
+    {
+      "claim_id": "bcma-alternate-target-map-node-v0",
+      "statement": "BCMA target status, TNFRSF17 alteration, low BCMA, SEMA4A, and alternate-target translation remain public research tracking topics with evidence gaps.",
+      "claim_level": "open-question",
+      "source_ids": [
+        "hgnc_gene_names",
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_yue_2025_bcma_resistance"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "uncertainty": "Alternate-target readiness and target actionability are not established by map inclusion.",
+      "limitations": [
+        "No target actionability inference.",
+        "No alternate-target clinical readiness claim."
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "hypothesis_id": "non-antigen-loss-relapse-map-hypothesis-v0",
+      "statement": "Non-antigen-loss relapse buckets may need separate extraction lanes before the map can compare mechanism coverage.",
+      "claim_level": "hypothesis",
+      "source_ids": [
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+        "pubmed_plasma_cell_identity_escape_2025"
+      ],
+      "uncertainty": "This hypothesis needs first and second source extraction before being used for comparison.",
+      "limitations": [
+        "Does not assign relapse mechanism to any person.",
+        "Does not rank mechanisms by frequency or importance."
+      ]
+    },
+    {
+      "hypothesis_id": "source-specific-extraction-rule-hypothesis-v0",
+      "statement": "Target, therapy, trial, regulatory, and dataset source classes may need different extraction rules before tooling can compare them safely.",
+      "claim_level": "open-question",
+      "source_ids": [
+        "hgnc_gene_names",
+        "nci_cancer_drug_dictionary",
+        "clinicaltrials_gov_api_v2"
+      ],
+      "uncertainty": "Source-class-specific extraction rules are not yet defined in this map.",
+      "limitations": [
+        "Does not authorize generation scripts or evidence graph tooling by itself."
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question_id": "source-specific-extraction-rules-question-v0",
+      "question": "Which additional source-specific extraction rules are required before the map can compare coverage across target, therapy, trial, regulatory, and dataset classes beyond the current BCMA and post-CAR T emphasis?",
+      "question_type": "source-coverage",
+      "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "hgnc_gene_names",
+        "nci_pdq_myeloma_hp",
+        "nci_cancer_drug_dictionary",
+        "pubmed"
+      ],
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0"
+      ],
+      "public_task_ids": [
+        "disease-burden-site-risk-context-second-source-extraction-task-v0"
+      ],
+      "uncertainty": "The source registry has anchors, and the disease-context bucket now has second-source coverage for v0 navigation, but source-class-specific extraction rules remain incomplete.",
+      "limitations": [
+        "Source coverage is not evidence strength or clinical priority."
+      ]
+    },
+    {
+      "question_id": "disease-map-schema-refinement-question-v0",
+      "question": "Which disease-map schema fields need refinement after the first machine-readable companion is drafted and validated?",
+      "question_type": "schema-tooling",
+      "source_ids": [
+        "pubmed",
+        "clinicaltrials_gov_api_v2",
+        "hgnc_gene_names",
+        "ncbi_gene",
+        "nci_cancer_drug_dictionary"
+      ],
+      "linked_gap_ids": [
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "public_task_ids": [
+        "multiple-myeloma-disease-map-schema-task-v0",
+        "multiple-myeloma-schema-tooling-phase-inventory-task-v0",
+        "multiple-myeloma-target-record-schema-task-v0",
+        "multiple-myeloma-therapy-record-schema-task-v0",
+        "multiple-myeloma-trial-landscape-record-schema-task-v0",
+        "multiple-myeloma-open-question-record-schema-task-v0",
+        "multiple-myeloma-tooling-readiness-gate-task-v0",
+        "multiple-myeloma-review-packet-builder-manifest-spec-task-v0",
+        "multiple-myeloma-review-packet-builder-manifest-schema-task-v0",
+        "multiple-myeloma-review-packet-builder-dry-run-plan-task-v0",
+        "multiple-myeloma-review-packet-builder-implementation-gate-task-v0",
+        "multiple-myeloma-review-packet-builder-route-table-script-task-v0",
+        "multiple-myeloma-review-packet-builder-route-table-output-schema-task-v0",
+        "multiple-myeloma-review-packet-builder-packet-assembly-gate-task-v0",
+        "multiple-myeloma-review-packet-builder-packet-skeleton-spec-task-v0"
+      ],
+      "uncertainty": "Disease-map, target-record, therapy-record, trial-landscape record, open-question record, review-packet builder manifest, and route-table output schemas are usable. The packet-assembly gate keeps packet assembly blocked, the packet-skeleton spec defines empty slots only, and the review-builder recombination handoff selects no downstream builder task. The next action is a definition-of-complete audit before any new task is selected. Packet assembly and generated claims remain blocked.",
+      "limitations": [
+        "Schema refinement does not imply any clinical claim is stronger."
+      ]
+    },
+    {
+      "question_id": "relapse-mechanism-bucket-extraction-question-v0",
+      "question": "Which relapse-mechanism buckets need first or second source extraction before the map can safely compare coverage across lanes?",
+      "question_type": "mechanism",
+      "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "nci_pdq_myeloma_hp",
+        "pubmed_tedder_bhutani_2025_bcma_resistance",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0"
+      ],
+      "public_task_ids": [
+        "disease-burden-site-risk-context-second-source-extraction-task-v0"
+      ],
+      "uncertainty": "Current public BCMA/post-CAR T buckets have at least second-source coverage for v0 navigation, but deeper microenvironment, sequencing, non-BCMA, and primary-study extraction remains incomplete.",
+      "limitations": [
+        "No mechanism frequency or patient relevance inference."
+      ]
+    },
+    {
+      "question_id": "trial-query-landscape-boundary-question-v0",
+      "question": "Which trial-query fields are enough for landscape navigation while still blocking eligibility, availability, and recommendation inferences?",
+      "question_type": "trial",
+      "source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "who_ictrp_search_portal"
+      ],
+      "linked_gap_ids": [
+        "alternate-target-clinical-translation-gap-v0"
+      ],
+      "public_task_ids": [
+        "multiple-myeloma-source-registry-expansion-task-v0"
+      ],
+      "uncertainty": "Trial-query provenance exists, but no trial landscape map or eligibility validator is present.",
+      "limitations": [
+        "No trial recommendation.",
+        "No eligibility or availability inference."
+      ]
+    },
+    {
+      "question_id": "expert-review-readiness-question-v0",
+      "question": "Which review packet items must be completed before public explainers or stronger educational summaries can reuse this map?",
+      "question_type": "review",
+      "source_ids": [
+        "pubmed",
+        "nci_pdq_myeloma_hp"
+      ],
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0"
+      ],
+      "public_task_ids": [
+        "multiple-myeloma-multidisciplinary-review-packet-task-v0"
+      ],
+      "uncertainty": "Review packets are present, but completed qualified expert comments are not.",
+      "limitations": [
+        "Source-checked is not expert-reviewed."
+      ]
+    },
+    {
+      "question_id": "case-derived-learning-publication-question-v0",
+      "question": "Which aggregate case-derived learnings, if any, can pass the publication gate without exposing real case facts?",
+      "question_type": "review",
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "pubmed"
+      ],
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0"
+      ],
+      "public_task_ids": [
+        "multiple-myeloma-publication-gate-checklist-task-v0"
+      ],
+      "uncertainty": "No real case-derived public learning is included in this map.",
+      "limitations": [
+        "No real case facts.",
+        "No publication authorization."
+      ]
+    }
+  ],
+  "target_records": [
+    {
+      "target_id": "bcma-target-public-map-record-v0",
+      "label": "BCMA target context",
+      "target_record_type": "cell-surface-antigen",
+      "claim_level": "open-question",
+      "source_ids": [
+        "hgnc_gene_names",
+        "pubmed_antigen_escape_bcma_directed_2024",
+        "pubmed_yue_2025_bcma_resistance"
+      ],
+      "linked_claim_ids": [
+        "bcma-target-presence-should-be-extracted-v0"
+      ],
+      "linked_gap_ids": [
+        "bcma-measurement-context-completeness-gap-v0"
+      ],
+      "uncertainty": "Target context requires assay, specimen, timing, and method provenance before interpretation.",
+      "limitations": [
+        "No patient-specific target status.",
+        "No target actionability claim."
+      ],
+      "clinical_use_boundary": "research-use-only"
+    },
+    {
+      "target_id": "tnfrsf17-public-map-record-v0",
+      "label": "TNFRSF17 alteration context",
+      "target_record_type": "gene-or-protein",
+      "claim_level": "open-question",
+      "source_ids": [
+        "hgnc_gene_names",
+        "pubmed_antigen_escape_bcma_directed_2024"
+      ],
+      "linked_claim_ids": [
+        "tnfrsf17-loss-is-trackable-escape-signal-v0"
+      ],
+      "linked_gap_ids": [
+        "bcma-escape-frequency-denominator-gap-v0"
+      ],
+      "uncertainty": "Trackable alteration language does not establish frequency, causality, or clinical actionability.",
+      "limitations": [
+        "No patient-specific genomic interpretation.",
+        "No treatment recommendation."
+      ],
+      "clinical_use_boundary": "research-use-only"
+    },
+    {
+      "target_id": "sema4a-low-bcma-public-map-record-v0",
+      "label": "SEMA4A and low-BCMA research context",
+      "target_record_type": "pathway",
+      "claim_level": "hypothesis",
+      "source_ids": [
+        "hgnc_gene_names",
+        "pubmed_di_meo_2025_sema4a_low_bcma"
+      ],
+      "linked_claim_ids": [
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "linked_gap_ids": [
+        "alternate-target-clinical-translation-gap-v0"
+      ],
+      "uncertainty": "This record is a research tracking context, not a clinically validated target record.",
+      "limitations": [
+        "No alternate-target readiness claim.",
+        "No clinical safety or efficacy inference."
+      ],
+      "clinical_use_boundary": "research-use-only"
+    }
+  ],
+  "therapy_records": [
+    {
+      "therapy_id": "bcma-car-t-public-map-record-v0",
+      "label": "BCMA-directed CAR T-cell therapy context",
+      "therapy_record_type": "procedure-or-modality",
+      "claim_level": "open-question",
+      "source_ids": [
+        "nci_cancer_drug_dictionary",
+        "pubmed_yue_2025_bcma_resistance",
+        "clinicaltrials_gov_api_v2"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0"
+      ],
+      "uncertainty": "Therapy-class context is for map organization and source linkage only.",
+      "limitations": [
+        "No therapy ranking.",
+        "No treatment recommendation."
+      ],
+      "clinical_use_boundary": "not-treatment-recommendation"
+    },
+    {
+      "therapy_id": "bispecific-antibody-public-map-record-v0",
+      "label": "Bispecific antibody research context",
+      "therapy_record_type": "investigational-class",
+      "claim_level": "open-question",
+      "source_ids": [
+        "nci_cancer_drug_dictionary",
+        "clinicaltrials_gov_api_v2",
+        "pubmed"
+      ],
+      "linked_claim_ids": [
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "linked_gap_ids": [
+        "alternate-target-clinical-translation-gap-v0"
+      ],
+      "uncertainty": "The record marks a therapy-class lane for future source extraction, not a recommendation.",
+      "limitations": [
+        "No clinical availability claim.",
+        "No patient-specific fit or sequencing inference."
+      ],
+      "clinical_use_boundary": "not-treatment-recommendation"
+    },
+    {
+      "therapy_id": "candidate-option-review-public-map-record-v0",
+      "label": "Candidate-option review safety context",
+      "therapy_record_type": "research-only-class",
+      "claim_level": "do-not-use-clinically",
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "pubmed"
+      ],
+      "linked_claim_ids": [],
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0"
+      ],
+      "uncertainty": "Public candidate-option review remains a no-action readiness rubric, not a candidate option record.",
+      "limitations": [
+        "No patient-specific candidate options.",
+        "No expanded-access guidance.",
+        "No trial or treatment recommendation."
+      ],
+      "clinical_use_boundary": "research-use-only"
+    }
+  ],
+  "trial_records": [
+    {
+      "trial_record_id": "clinicaltrials-gov-query-protocol-map-record-v0",
+      "label": "ClinicalTrials.gov query-protocol context",
+      "trial_record_type": "query-protocol",
+      "claim_level": "open-question",
+      "registry_source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2"
+      ],
+      "trial_query_record_ids": [
+        "multiple-myeloma-car-t-united-states-recruiting-v0"
+      ],
+      "uncertainty": "The query protocol supports reproducible landscape records but not eligibility or availability conclusions.",
+      "limitations": [
+        "No trial recommendation.",
+        "No eligibility inference."
+      ],
+      "clinical_use_boundary": "not-trial-recommendation"
+    },
+    {
+      "trial_record_id": "trial-regulatory-landscape-map-record-v0",
+      "label": "Trial and regulatory landscape source context",
+      "trial_record_type": "registry-landscape",
+      "claim_level": "open-question",
+      "registry_source_ids": [
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2",
+        "who_ictrp_search_portal",
+        "fda_drugs_at_fda",
+        "dailymed",
+        "ema_medicines"
+      ],
+      "trial_query_record_ids": [],
+      "uncertainty": "Registry and regulatory-source presence can support provenance but does not establish current status, local access, or appropriateness.",
+      "limitations": [
+        "No sponsor, site, or regulatory decision.",
+        "No efficacy, safety, or availability inference."
+      ],
+      "clinical_use_boundary": "not-trial-recommendation"
+    }
+  ],
+  "linked_gap_ids": [
+    "bcma-escape-frequency-denominator-gap-v0",
+    "bcma-measurement-context-completeness-gap-v0",
+    "alternate-target-clinical-translation-gap-v0",
+    "non-antigen-loss-relapse-buckets-gap-v0",
+    "expert-review-readiness-gap-v0"
+  ],
+  "public_task_ids": [
+    "multiple-myeloma-open-research-map-task-v0",
+    "multiple-myeloma-source-registry-expansion-task-v0",
+    "multiple-myeloma-disease-map-schema-task-v0",
+    "multiple-myeloma-schema-tooling-phase-inventory-task-v0",
+    "multiple-myeloma-target-record-schema-task-v0",
+    "multiple-myeloma-therapy-record-schema-task-v0",
+    "multiple-myeloma-trial-landscape-record-schema-task-v0",
+    "multiple-myeloma-open-question-record-schema-task-v0",
+    "multiple-myeloma-tooling-readiness-gate-task-v0",
+    "multiple-myeloma-review-packet-builder-manifest-spec-task-v0",
+    "multiple-myeloma-review-packet-builder-manifest-schema-task-v0",
+    "multiple-myeloma-review-packet-builder-dry-run-plan-task-v0",
+    "multiple-myeloma-review-packet-builder-implementation-gate-task-v0",
+    "multiple-myeloma-review-packet-builder-route-table-script-task-v0",
+    "multiple-myeloma-review-packet-builder-route-table-output-schema-task-v0",
+    "multiple-myeloma-review-packet-builder-packet-assembly-gate-task-v0",
+    "multiple-myeloma-review-packet-builder-packet-skeleton-spec-task-v0",
+    "multiple-myeloma-publication-gate-checklist-task-v0",
+    "multiple-myeloma-multidisciplinary-review-packet-task-v0",
+    "disease-burden-site-risk-context-first-extraction-task-v0",
+    "plasma-cell-identity-second-source-extraction-task-v0",
+    "disease-burden-site-risk-context-second-source-extraction-task-v0"
+  ],
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Companion record translates the Markdown open research map into Disease Map Schema v0.",
+      "The record is a public navigation artifact only.",
+      "No real case data, patient identifiers, candidate options, treatment recommendations, trial recommendations, or cure claims are included.",
+      "The map now reflects first-extraction coverage for disease burden, disease site, high-risk, prior-therapy, and registry-context fields.",
+      "The map now reflects second-source coverage for plasma-cell identity or lineage-state escape using a target-linked phenotype extraction.",
+      "The map now reflects second-source coverage for disease burden, disease site, high-risk, disease-state, and prior-therapy context using the NCI PDQ extraction.",
+      "Step 15 adds the schema/tooling phase inventory as the next ready public task after current second-source extraction tasks reached done status.",
+      "Step 16 completes the schema/tooling phase inventory and selects target-record schema as the next validated shape before target tooling.",
+      "Step 17 completes target-record schema v0 and selects therapy-record schema as the next ready validated shape.",
+      "Step 18 completes therapy-record schema v0 and selects trial-landscape record schema as the next ready validated shape.",
+      "Step 19 completes trial-landscape record schema v0 and selects open-question record schema as the next ready validated shape.",
+      "Step 20 completes open-question record schema v0 and selects a tooling readiness gate as the next aggregate public task.",
+      "Step 21 completes the tooling readiness gate and selects a review-packet builder input manifest specification as the next spec-only public task.",
+      "Step 22 completes the review-packet builder input manifest specification and selects manifest schema plus validator coverage as the next ready public task.",
+      "Step 29 completes the review-packet builder packet-skeleton spec and directs the next action to an aggregate recombination handoff before any new downstream task is selected.",
+      "Step 30 completes the review-packet builder recombination handoff and directs the next action to a definition-of-complete audit before any new task is selected."
+    ]
+  }
+}

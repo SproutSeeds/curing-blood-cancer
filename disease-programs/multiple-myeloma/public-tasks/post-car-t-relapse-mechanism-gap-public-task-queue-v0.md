@@ -26,13 +26,17 @@ Coverage Report into contribution-ready public source-extraction tasks.
 | --- | --- | --- | --- | --- | --- |
 | `car-t-fitness-second-source-extraction-task-v0` | high | done | [#15](https://github.com/SproutSeeds/curing-blood-cancer/issues/15) | `non-antigen-loss-relapse-buckets-gap-v0` | `car-t-fitness-exhaustion-persistence-v0` |
 | `plasma-cell-identity-first-extraction-task-v0` | high | done | [#14](https://github.com/SproutSeeds/curing-blood-cancer/issues/14) | `non-antigen-loss-relapse-buckets-gap-v0` | `plasma-cell-identity-or-lineage-state-escape-v0` |
-| `disease-burden-site-risk-context-first-extraction-task-v0` | medium | ready | [#16](https://github.com/SproutSeeds/curing-blood-cancer/issues/16) | `non-antigen-loss-relapse-buckets-gap-v0` | `disease-burden-site-risk-context-v0` |
+| `disease-burden-site-risk-context-first-extraction-task-v0` | medium | done | [#16](https://github.com/SproutSeeds/curing-blood-cancer/issues/16) | `non-antigen-loss-relapse-buckets-gap-v0` | `disease-burden-site-risk-context-v0` |
+| `plasma-cell-identity-second-source-extraction-task-v0` | high | done | pending | `non-antigen-loss-relapse-buckets-gap-v0` | `plasma-cell-identity-or-lineage-state-escape-v0` |
+| `disease-burden-site-risk-context-second-source-extraction-task-v0` | medium | done | pending | `non-antigen-loss-relapse-buckets-gap-v0` | `disease-burden-site-risk-context-v0` |
 
 ## Issue Drafts
 
 - [CAR T fitness second-source extraction](issue-drafts/car-t-fitness-second-source-extraction-task-v0.md)
 - [Plasma-cell identity first extraction](issue-drafts/plasma-cell-identity-first-extraction-task-v0.md)
 - [Disease burden, site, and risk-context first extraction](issue-drafts/disease-burden-site-risk-context-first-extraction-task-v0.md)
+- [Plasma-cell identity second-source extraction](issue-drafts/plasma-cell-identity-second-source-extraction-task-v0.md)
+- [Disease burden, site, and risk-context second-source extraction](issue-drafts/disease-burden-site-risk-context-second-source-extraction-task-v0.md)
 
 ## Task Notes
 
@@ -52,24 +56,31 @@ Remaining public source anchor for deeper expansion:
 
 ### Plasma-Cell Identity Or Lineage-State Escape
 
-The coverage report now has first-extraction coverage from
-`maura-2025-plasma-cell-identity-escape-v0`. The next step is a second
-source-specific extraction before any cross-source comparison.
+The coverage report now has second-source coverage from
+`maura-2025-plasma-cell-identity-escape-v0` and
+`di-meo-2025-target-linked-phenotype-v0`.
+
+Di Meo 2025 supports target-linked phenotype field coverage. It should not be
+treated as a harmonized lineage-state ontology or a clinical target-readiness
+claim.
 
 Candidate public source anchors:
 
-- `pubmed_di_meo_2025_sema4a_low_bcma`
 - `pubmed_yue_2025_bcma_resistance`
 
 ### Disease Burden, Site, And High-Risk Context
 
-The coverage report currently has no extracted signals for this bucket. The
-next task adds a first public extraction for context fields that should travel
-with relapse-mechanism interpretation.
+The coverage report now has second-source context-field coverage from
+`tedder-bhutani-2025-disease-context-v0` and
+`nci-pdq-2025-disease-context-v0`.
+
+NCI PDQ supports disease-burden, site, high-risk, disease-state, and
+prior-therapy context labels. It should not be treated as causal relapse
+evidence, patient-specific risk guidance, treatment guidance, trial guidance,
+eligibility guidance, efficacy evidence, or safety evidence.
 
 Candidate public source anchors:
 
-- `nci_pdq_myeloma_hp`
 - `clinicaltrials_gov`
 - `clinicaltrials_gov_api_v2`
 - `pubmed_tedder_bhutani_2025_bcma_resistance`
@@ -81,5 +92,9 @@ Candidate public source anchors:
 
 ## Next Work
 
-- Work the linked public issues one source-specific extraction at a time.
+- Current ready second-source extraction tasks are complete for v0 navigation.
 - Refresh the coverage report after each accepted extraction.
+- Use `make list-public-tasks ARGS="--status ready"` and
+  `make list-mechanism-coverage ARGS="--under-covered"` before creating the
+  next explicit schema, tooling, or deeper extraction task instead of adding
+  ad hoc extraction siblings.

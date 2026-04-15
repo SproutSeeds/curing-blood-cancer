@@ -1,0 +1,119 @@
+{
+  "open_question_record_id": "myeloma-open-question-record-template-v0",
+  "date": "2026-04-15",
+  "title": "Multiple Myeloma Open-Question Record Template v0",
+  "disease_program": "multiple-myeloma",
+  "disease_scope": [
+    {
+      "disease": "multiple myeloma",
+      "subtype_scope": "plasma-cell disease",
+      "disease_state": "public schema template",
+      "excluded_scope": [
+        "patient-specific interpretation",
+        "clinical priority",
+        "urgency guidance",
+        "treatment selection",
+        "trial selection",
+        "expanded-access decisions"
+      ]
+    }
+  ],
+  "question_text": "Which source-backed fields are required before a public multiple myeloma evidence graph can link target, therapy, trial-landscape, and open-question records without implying clinical actionability?",
+  "question_type": "schema-tooling",
+  "question_context": {
+    "public_summary": "Template-only public research question for schema cross-link readiness before evidence graph or map-builder tooling.",
+    "question_fields": [
+      "schema-cross-links",
+      "source-provenance",
+      "review-boundary",
+      "no-evidence-strength-ranking",
+      "no-clinical-priority"
+    ]
+  },
+  "claim_level": "open-question",
+  "source_ids": [
+    "pubmed",
+    "clinicaltrials_gov_api_v2",
+    "nci_pdq_myeloma_hp",
+    "hgnc_gene_names",
+    "nci_cancer_drug_dictionary"
+  ],
+  "target_record_ids": [
+    "bcma-target-record-template-v0"
+  ],
+  "therapy_record_ids": [
+    "bcma-directed-therapy-class-template-v0"
+  ],
+  "trial_landscape_record_ids": [
+    "myeloma-trial-landscape-record-template-v0"
+  ],
+  "linked_claim_ids": [
+    "bcma-resistance-is-multifactorial-v0",
+    "bcma-target-presence-should-be-extracted-v0",
+    "low-bcma-density-supports-alternate-target-research-tracking-v0"
+  ],
+  "linked_gap_ids": [
+    "expert-review-readiness-gap-v0",
+    "non-antigen-loss-relapse-buckets-gap-v0",
+    "bcma-measurement-context-completeness-gap-v0"
+  ],
+  "mechanism_group_ids": [
+    "measurement-and-follow-up-gaps-v0",
+    "disease-burden-site-risk-context-v0",
+    "sequential-or-dual-target-immune-pressure-v0"
+  ],
+  "measurement_term_ids": [
+    "relapse-or-disease-progression",
+    "antigen-density",
+    "bone-marrow-target-status"
+  ],
+  "public_task_ids": [
+    "multiple-myeloma-open-question-record-schema-task-v0"
+  ],
+  "uncertainty": {
+    "summary": "A valid open-question record can organize a public research question and its links, but it cannot establish evidence strength, clinical importance, urgency, patient relevance, actionability, or the next clinical step for any person.",
+    "known_unknowns": [
+      "Whether an open question deserves expert review depends on separate source-backed review, not schema validity.",
+      "Whether a linked target, therapy, trial-landscape record, claim, or gap supports stronger language requires separate source checking."
+    ]
+  },
+  "limitations": [
+    "Template only.",
+    "No real case data.",
+    "No evidence-strength ranking.",
+    "No clinical priority.",
+    "No urgency guidance.",
+    "No patient-relevance claim.",
+    "No actionability claim.",
+    "No treatment recommendation.",
+    "No trial recommendation.",
+    "No expanded-access guidance.",
+    "No cure claim."
+  ],
+  "do_not_infer": [
+    "Do not infer evidence strength.",
+    "Do not infer clinical importance.",
+    "Do not infer urgency.",
+    "Do not infer patient relevance.",
+    "Do not infer actionability.",
+    "Do not infer treatment choice.",
+    "Do not infer trial choice.",
+    "Do not infer expanded-access suitability."
+  ],
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "draft",
+    "review_notes": [
+      "Template validates Open-Question Record Schema v0 without creating a clinical priority list, evidence-strength ranking, patient-specific question, treatment recommendation, trial recommendation, or actionability claim.",
+      "No patient-specific fields, real case data, urgency labels, evidence ranking fields, clinical priority fields, candidate options, trial matching, or expanded-access guidance are present."
+    ]
+  }
+}

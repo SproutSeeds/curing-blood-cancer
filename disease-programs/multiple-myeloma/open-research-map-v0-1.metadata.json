@@ -1,0 +1,105 @@
+{
+  "artifact_id": "multiple-myeloma-open-research-map-v0-1",
+  "title": "Multiple Myeloma Open Research Map v0.1",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "open research map",
+    "durable MRD-negative remission",
+    "public navigation"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "./public-roadmap-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Cure Wedge v0",
+      "url": "./cure-wedge-durable-mrd-negative-remission-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "MRD And Relapse Measurement Glossary v0",
+      "url": "./measurements/mrd-and-relapse-measurement-glossary-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Post-CAR T Relapse Mechanism Map v0",
+      "url": "./mechanisms/post-car-t-relapse-mechanism-map-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Post-CAR T Relapse Mechanism Coverage Report v0",
+      "url": "./mechanisms/post-car-t-relapse-mechanism-coverage-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "BCMA Antigen Escape Claim Set v0",
+      "url": "./evidence-claims/bcma-antigen-escape-claim-set-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "BCMA Antigen Escape Evidence Gap Register v0",
+      "url": "./evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "./case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Candidate-Option Scoring Rubric v0",
+      "url": "./candidate-option-scoring-rubric-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "./publication-gate-checklist-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "./reviews/multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "ClinicalTrials.gov Query Protocol v0",
+      "url": "../../protocols/clinicaltrials-gov-query-protocol-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "./public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Disease Map Schema v0",
+      "url": "../../schemas/disease-map-schema-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only navigation map.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide expanded-access guidance for any person.",
+    "Does not provide monitoring guidance.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Not a systematic review or comprehensive map across all myeloma settings.",
+    "Does not rank patient options, mechanisms, trials, sources, therapies, targets, or research priorities for clinical use.",
+    "Artifact coverage is not evidence strength, biological priority, patient relevance, or clinical actionability.",
+    "Machine-readable companion validates against Disease Map Schema v0, but schema validation does not prove map statements are true."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-open-research-map-v0-1.md"
+}

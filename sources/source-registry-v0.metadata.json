@@ -32,6 +32,46 @@
       "accessed": "2026-04-14"
     },
     {
+      "label": "HGNC gene nomenclature database",
+      "url": "https://www.genenames.org/",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "NCBI Gene",
+      "url": "https://www.ncbi.nlm.nih.gov/gene/",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "NCI Drug Dictionary",
+      "url": "https://www.cancer.gov/publications/dictionaries/cancer-drug",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "WHO ICTRP Search Portal",
+      "url": "https://trialsearch.who.int/",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "DailyMed",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "EMA medicines",
+      "url": "https://www.ema.europa.eu/en/medicines",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "NCBI Gene Expression Omnibus",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/info/overview.html",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "NCI Genomic Data Commons",
+      "url": "https://gdc.cancer.gov/",
+      "accessed": "2026-04-15"
+    },
+    {
       "label": "PubMed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/",
       "accessed": "2026-04-14"

@@ -1,0 +1,95 @@
+{
+  "artifact_id": "multiple-myeloma-public-loop-completion-handoff-v0",
+  "title": "Multiple Myeloma Public Loop Completion Handoff v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "autonomous research loop",
+    "completion handoff",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Clawdad Autonomous Research Loop v0",
+      "url": "../../protocols/clawdad-autonomous-research-loop-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "./public-roadmap-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Definition-Of-Complete Audit v0",
+      "url": "./definition-of-complete-audit-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-Specific Private-Lab Blocker Register v0",
+      "url": "./case-specific-private-lab-blocker-register-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "./case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
+      "url": "../../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Open Research Map v0.1",
+      "url": "./open-research-map-v0-1.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "./public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Schema And Tooling Phase Inventory v0",
+      "url": "./schema-tooling-phase-inventory-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Builder Recombination Handoff v0",
+      "url": "./reviews/review-packet-builder-recombination-handoff-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Private To Public Workflow",
+      "url": "../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only completion handoff.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide eligibility guidance, expanded-access guidance, monitoring guidance, or publication authorization for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not prove the science, source coverage, roadmap, or tooling surface is complete beyond the stated v0 public loop handoff.",
+    "Does not inspect private lab records or real case data.",
+    "Does not authorize review-packet assembly, generated packet output, generated claims, ranking, recommendation behavior, patient matching, trial matching, or publication workflow.",
+    "Does not make any public artifact expert-reviewed or publication-ready.",
+    "Does not require credentials, paid APIs, account changes, restricted datasets, clinician decisions, sponsor decisions, regulatory decisions, or institutional decisions."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-public-loop-completion-handoff-v0.md"
+}

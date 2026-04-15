@@ -26,6 +26,13 @@ as a claim by itself.
 | `statistics` | Useful for incidence, mortality, survival, or registry-level population context. |
 | `data-reuse` | Useful for public or redistributable data workflows. |
 | `measurement-standard` | Useful for response, MRD, assay, and endpoint definitions. |
+| `target-reference` | Useful for gene, protein, antigen, or target identifier normalization. |
+| `nomenclature` | Useful for stable symbols, names, and cross-references. |
+| `therapy-reference` | Useful for drug, agent, class, and synonym normalization. |
+| `trial-registry-aggregate` | Useful for cross-registry trial discovery. |
+| `labeling` | Useful for public product-label review. |
+| `dataset-discovery` | Useful for locating public datasets before appraisal. |
+| `genomics-data` | Useful for cancer genomics data discovery and cohort-level analysis planning. |
 
 ## Records
 
@@ -45,6 +52,14 @@ as a claim by itself.
 | `nci_pdq_mpn_hp` | National Cancer Institute | health-professional PDQ summary | myeloproliferative neoplasms | `clinical-summary` | Not a formal guideline or patient-specific recommendation. |
 | `clinicaltrials_gov` | U.S. National Library of Medicine | trial registry | all blood-cancer subtypes with registered studies | `trial-search` | Trial listings do not prove availability, eligibility, safety, or efficacy. |
 | `clinicaltrials_gov_api_v2` | U.S. National Library of Medicine | trial registry API | all blood-cancer subtypes with registered studies | `trial-search`, `data-reuse` | API output is a registry snapshot; trial details, status, eligibility, and site availability still require verification. |
+| `hgnc_gene_names` | HUGO Gene Nomenclature Committee | gene nomenclature database | human gene symbols and names relevant to blood-cancer target records | `target-reference`, `nomenclature`, `data-reuse` | Gene nomenclature and stable IDs do not establish expression, function, targetability, evidence quality, or clinical actionability. |
+| `ncbi_gene` | National Center for Biotechnology Information | gene database | genes and mapped phenotypes relevant to blood-cancer target records | `target-reference`, `data-reuse` | Gene records integrate references and cross-links but do not establish target validity, disease relevance, or clinical actionability. |
+| `nci_cancer_drug_dictionary` | National Cancer Institute | cancer drug dictionary | cancer drugs and investigational agents | `therapy-reference` | Drug definitions, synonyms, and trial links are not treatment recommendations, approval status, efficacy evidence, safety evidence, or availability claims. |
+| `who_ictrp_search_portal` | World Health Organization | clinical trial search portal | global clinical-trial records | `trial-search`, `trial-registry-aggregate` | Aggregated registry presence does not prove eligibility, availability, data quality, safety, efficacy, or local trial status. |
+| `dailymed` | U.S. National Library of Medicine | structured product labeling database | drug labels submitted to FDA | `labeling`, `regulatory-status` | Label presence is not a complete listing of FDA-regulated products and does not determine patient-specific appropriateness. |
+| `ema_medicines` | European Medicines Agency | medicines regulatory information | centrally authorised or EMA-evaluated medicines | `regulatory-status`, `therapy-reference` | EMA pages may not include nationally authorised medicines or complete treatment options and are not patient-specific guidance. |
+| `ncbi_geo` | National Center for Biotechnology Information | functional genomics data repository | public functional genomics datasets, including blood-cancer studies when deposited | `dataset-discovery`, `data-reuse`, `literature-search` | Submitted datasets vary in consent, reuse terms, metadata completeness, and study quality; dataset presence does not establish clinical truth. |
+| `nci_gdc_data_portal` | National Cancer Institute Genomic Data Commons | cancer genomics data portal and API | NCI cancer genomics programs and harmonized datasets | `dataset-discovery`, `genomics-data`, `data-reuse` | Some data require controlled access; cohort inclusion and harmonization do not establish patient-specific interpretation or clinical actionability. |
 | `pubmed_kumar_2016_imwg_mrd_response_criteria` | PubMed-indexed literature | consensus statement | multiple myeloma, response criteria, minimal residual disease | `literature-search`, `measurement-standard` | Consensus criteria; use for public measurement definitions, not patient-specific interpretation. |
 | `pubmed_munshi_2017_mrd_survival_meta_analysis` | PubMed-indexed literature | meta-analysis | multiple myeloma, minimal residual disease, survival outcomes | `literature-search`, `measurement-standard` | Outcome association does not provide patient-specific prognosis or prove a treatment strategy. |
 | `pubmed_soh_2022_mrd_flow_harmonization` | PubMed-indexed literature | research article | multiple myeloma, measurable residual disease, flow cytometry | `literature-search`, `measurement-standard`, `data-reuse` | Flow-cytometry harmonization source; does not replace local laboratory validation or clinical interpretation. |
@@ -76,6 +91,14 @@ as a claim by itself.
 | `nci_pdq_mpn_hp` | https://www.cancer.gov/types/myeloproliferative/hp/myeloproliferative-neoplasms-treatment | 2026-04-11 |
 | `clinicaltrials_gov` | https://clinicaltrials.gov/ | 2026-04-11 |
 | `clinicaltrials_gov_api_v2` | https://clinicaltrials.gov/data-api/about-api | 2026-04-14 |
+| `hgnc_gene_names` | https://www.genenames.org/ | 2026-04-15 |
+| `ncbi_gene` | https://www.ncbi.nlm.nih.gov/gene/ | 2026-04-15 |
+| `nci_cancer_drug_dictionary` | https://www.cancer.gov/publications/dictionaries/cancer-drug | 2026-04-15 |
+| `who_ictrp_search_portal` | https://trialsearch.who.int/ | 2026-04-15 |
+| `dailymed` | https://dailymed.nlm.nih.gov/dailymed/ | 2026-04-15 |
+| `ema_medicines` | https://www.ema.europa.eu/en/medicines | 2026-04-15 |
+| `ncbi_geo` | https://www.ncbi.nlm.nih.gov/geo/info/overview.html | 2026-04-15 |
+| `nci_gdc_data_portal` | https://gdc.cancer.gov/ | 2026-04-15 |
 | `pubmed_kumar_2016_imwg_mrd_response_criteria` | https://pubmed.ncbi.nlm.nih.gov/27511158/ | 2026-04-14 |
 | `pubmed_munshi_2017_mrd_survival_meta_analysis` | https://pubmed.ncbi.nlm.nih.gov/27632282/ | 2026-04-14 |
 | `pubmed_soh_2022_mrd_flow_harmonization` | https://pubmed.ncbi.nlm.nih.gov/35005838/ | 2026-04-14 |

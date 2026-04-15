@@ -8,10 +8,13 @@ is the public downstream surface.
 1. Create or revise work in `../curing-blood-cancer-lab`.
 2. Move candidate material into `../curing-blood-cancer-lab/export-candidates/`.
 3. Run the private publication gate.
-4. Rewrite the artifact so it stands alone publicly.
-5. Add provenance, blood-cancer subtype scope, and uncertainty.
-6. Place it in the appropriate public directory.
-7. Record the export in the private `downstream/EXPORT_MANIFEST.md`.
+4. For multiple myeloma case-derived learning, check the public-facing
+   [Publication-Gate Checklist v0](../disease-programs/multiple-myeloma/publication-gate-checklist-v0.md)
+   before preparing a public release candidate.
+5. Rewrite the artifact so it stands alone publicly.
+6. Add provenance, blood-cancer subtype scope, and uncertainty.
+7. Place it in the appropriate public directory.
+8. Record the export in the private `downstream/EXPORT_MANIFEST.md`.
 
 ## Public Artifact Requirements
 

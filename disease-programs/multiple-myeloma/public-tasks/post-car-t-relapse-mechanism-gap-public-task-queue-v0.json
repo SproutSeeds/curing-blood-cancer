@@ -1,6 +1,6 @@
 {
   "task_queue_id": "post-car-t-relapse-mechanism-gap-public-task-queue-v0",
-  "date": "2026-04-14",
+  "date": "2026-04-15",
   "disease_program": "multiple-myeloma",
   "title": "Post-CAR T Relapse Mechanism Gap Public Task Queue v0",
   "blood_cancer_scope": [
@@ -141,7 +141,7 @@
       "task_title": "Add the first public extraction for disease burden, disease site, and high-risk context",
       "task_type": "source-extraction-task",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0"
@@ -156,6 +156,9 @@
         "progression-free-survival",
         "overall-survival",
         "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "tedder-bhutani-2025-disease-context-v0"
       ],
       "source_ids": [
         "nci_pdq_myeloma_hp",
@@ -174,7 +177,8 @@
         "Context fields are not treated as causal mechanisms unless the source explicitly supports that interpretation.",
         "Trial-registry fields are labeled as registry context, not proof of efficacy, availability, eligibility, or safety.",
         "Cytogenetic, extramedullary, prior-line, and prior-BCMA exposure fields preserve the source's definitions.",
-        "make validate passes after the extraction and coverage update."
+        "make validate passes after the extraction and coverage update.",
+        "Completed in public follow-up PR for issue #16 using tedder-bhutani-2025-disease-context-v0."
       ],
       "what_not_to_infer": [
         "Do not infer patient-specific risk from public registry or overview fields.",
@@ -188,16 +192,132 @@
         "No trial recommendation.",
         "No cure claim."
       ]
+    },
+    {
+      "task_id": "plasma-cell-identity-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for plasma-cell identity or lineage-state escape",
+      "task_type": "source-extraction-task",
+      "priority": "high",
+      "status": "done",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0",
+        "low-bcma-density-supports-alternate-target-research-tracking-v0"
+      ],
+      "mechanism_group_ids": [
+        "plasma-cell-identity-or-lineage-state-escape-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-target-status",
+        "antigen-density",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "di-meo-2025-target-linked-phenotype-v0",
+        "maura-2025-plasma-cell-identity-escape-v0"
+      ],
+      "source_ids": [
+        "pubmed_di_meo_2025_sema4a_low_bcma",
+        "pubmed_yue_2025_bcma_resistance"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/plasma-cell-identity-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "A second source-specific extraction for plasma-cell identity, lineage-state escape, or target-linked phenotype change.",
+        "A short note separating source-defined identity or lineage-state labels from harmonized cross-source biology.",
+        "An updated coverage report showing second-source coverage or a documented blocker if the selected source does not support the bucket."
+      ],
+      "acceptance_checks": [
+        "The new extraction uses the mechanism extraction schema and passes make validate.",
+        "The extraction preserves peer-review status, source-defined labels, model or sample context, and measurement method.",
+        "BCMA-low, BCMA-retained, alternate-target, and lineage-state signals are separated only when the source supports separation.",
+        "Coverage counts remain public artifact coverage, not mechanism frequency or biological priority.",
+        "Completed with di-meo-2025-target-linked-phenotype-v0 as target-linked phenotype-field coverage."
+      ],
+      "what_not_to_infer": [
+        "Do not infer clinical efficacy for any alternate target from identity-state evidence alone.",
+        "Do not treat preclinical, review, or preprint framing as clinical guidance.",
+        "Do not compare mechanisms across sources until extraction fields are aligned and reviewed."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "disease-burden-site-risk-context-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for disease burden, disease site, high-risk, prior-therapy, or registry context",
+      "task_type": "source-extraction-task",
+      "priority": "medium",
+      "status": "done",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "mechanism_group_ids": [
+        "disease-burden-site-risk-context-v0"
+      ],
+      "measurement_term_ids": [
+        "progression-free-survival",
+        "overall-survival",
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "nci-pdq-2025-disease-context-v0",
+        "tedder-bhutani-2025-disease-context-v0"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "clinicaltrials_gov",
+        "clinicaltrials_gov_api_v2"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/disease-burden-site-risk-context-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "A second source-specific extraction for disease-burden, disease-site, high-risk, prior-therapy, or registry-context fields.",
+        "A field note identifying which fields are context labels rather than causal relapse mechanisms.",
+        "An updated coverage report showing second-source coverage or a documented blocker if the selected source only supports field definitions."
+      ],
+      "acceptance_checks": [
+        "The new extraction uses the mechanism extraction schema and passes make validate.",
+        "Registry fields are labeled as registry context, not proof of efficacy, availability, eligibility, or safety.",
+        "Cytogenetic, extramedullary, prior-line, prior-BCMA exposure, and eligibility fields preserve the selected source's definitions.",
+        "Context fields are not treated as causal mechanisms unless the source explicitly supports that interpretation.",
+        "Completed with nci-pdq-2025-disease-context-v0; coverage now shows covered-for-v0-navigation for the disease-context bucket."
+      ],
+      "what_not_to_infer": [
+        "Do not infer patient-specific risk from public registry or overview fields.",
+        "Do not recommend a trial or treatment based on eligibility or baseline-characteristic fields.",
+        "Do not rank relapse mechanisms from context-field coverage."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
     }
   ],
   "review": {
     "created": "2026-04-14",
-    "last_reviewed": "2026-04-14",
+    "last_reviewed": "2026-04-15",
     "review_status": "source-checked",
     "review_notes": [
       "Derived from under-covered buckets in post-car-t-relapse-mechanism-coverage-v0.",
       "Tasks are contribution-ready extraction tasks, not evidence-strength rankings.",
-      "Each task is scoped to public sources and public artifact updates only."
+      "Each task is scoped to public sources and public artifact updates only.",
+      "Issue #16 adds first-extraction coverage for disease burden, disease site, high-risk, prior-therapy, and registry-context fields.",
+      "Step 12 adds ready second-source extraction tasks for the two remaining under-covered buckets rather than starting another extraction without a task.",
+      "Step 13 completes plasma-cell identity second-source coverage with di-meo-2025-target-linked-phenotype-v0.",
+      "Step 14 completes disease-burden, site, and high-risk context second-source coverage with nci-pdq-2025-disease-context-v0."
     ]
   }
 }

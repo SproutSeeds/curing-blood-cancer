@@ -1,0 +1,106 @@
+{
+  "therapy_record_id": "bcma-directed-therapy-class-template-v0",
+  "date": "2026-04-15",
+  "title": "BCMA-Directed Therapy Class Template v0",
+  "disease_program": "multiple-myeloma",
+  "disease_scope": [
+    {
+      "disease": "multiple myeloma",
+      "subtype_scope": "plasma-cell disease",
+      "disease_state": "public schema template",
+      "excluded_scope": [
+        "patient-specific treatment selection",
+        "trial eligibility",
+        "expanded-access decisions",
+        "dosing or sequencing"
+      ]
+    }
+  ],
+  "therapy_name": "BCMA-directed therapy class template",
+  "therapy_class": "target-linked immunotherapy class",
+  "therapy_aliases": [
+    "BCMA-directed therapy",
+    "target-linked therapy context"
+  ],
+  "therapy_record_type": "immunotherapy-class",
+  "therapy_context": {
+    "context_type": "target-linked-class",
+    "public_summary": "Template-only therapy-class context for a public multiple myeloma therapy record.",
+    "therapy_context_fields": [
+      "therapy-class-naming",
+      "target-record-linkage",
+      "registry-and-label-source-provenance-needed"
+    ]
+  },
+  "claim_level": "open-question",
+  "source_ids": [
+    "nci_cancer_drug_dictionary",
+    "nci_pdq_myeloma_hp",
+    "clinicaltrials_gov",
+    "fda_drugs_at_fda",
+    "dailymed",
+    "ema_medicines",
+    "pubmed"
+  ],
+  "target_record_ids": [
+    "bcma-target-record-template-v0"
+  ],
+  "linked_claim_ids": [
+    "bcma-resistance-is-multifactorial-v0"
+  ],
+  "linked_gap_ids": [
+    "alternate-target-clinical-translation-gap-v0",
+    "expert-review-readiness-gap-v0"
+  ],
+  "mechanism_group_ids": [
+    "bcma-antigen-loss-or-low-density-v0",
+    "sequential-or-dual-target-immune-pressure-v0",
+    "measurement-and-follow-up-gaps-v0"
+  ],
+  "trial_record_ids": [],
+  "public_task_ids": [
+    "multiple-myeloma-therapy-record-schema-task-v0"
+  ],
+  "uncertainty": {
+    "summary": "A valid therapy record can organize public therapy-class context, but it cannot establish efficacy, safety, availability, eligibility, sequencing, clinical appropriateness, or patient fit.",
+    "known_unknowns": [
+      "Whether any therapy is appropriate for any person is outside this public template.",
+      "Whether any therapy has a specific indication, label status, or trial availability requires separate source-backed and date-stamped review."
+    ]
+  },
+  "limitations": [
+    "Template only.",
+    "No real case data.",
+    "No treatment recommendation.",
+    "No option ranking.",
+    "No dosing guidance.",
+    "No trial recommendation.",
+    "No expanded-access guidance.",
+    "No cure claim."
+  ],
+  "do_not_infer": [
+    "Do not infer therapy efficacy.",
+    "Do not infer therapy safety.",
+    "Do not infer therapy availability.",
+    "Do not infer eligibility.",
+    "Do not infer sequencing.",
+    "Do not infer patient fit.",
+    "Do not infer clinical actionability."
+  ],
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "draft",
+    "review_notes": [
+      "Template validates Therapy Record Schema v0 without creating a therapy recommendation, therapy ranking, or trial-matching record.",
+      "No patient-specific fields, candidate options, treatment choices, dosing fields, eligibility fields, availability claims for any person, or expanded-access guidance are present."
+    ]
+  }
+}

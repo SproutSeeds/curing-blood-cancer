@@ -144,6 +144,86 @@
       "claim_limits": ["API output is a registry snapshot; trial details, status, eligibility, and site availability still require verification."]
     },
     {
+      "source_id": "hgnc_gene_names",
+      "owner": "HUGO Gene Nomenclature Committee",
+      "source_type": "gene nomenclature database",
+      "url": "https://www.genenames.org/",
+      "accessed": "2026-04-15",
+      "blood_cancer_scope": ["human gene symbols and names relevant to blood-cancer target records"],
+      "claim_uses": ["target-reference", "nomenclature", "data-reuse"],
+      "claim_limits": ["Gene nomenclature and stable IDs do not establish expression, function, targetability, evidence quality, or clinical actionability."]
+    },
+    {
+      "source_id": "ncbi_gene",
+      "owner": "National Center for Biotechnology Information",
+      "source_type": "gene database",
+      "url": "https://www.ncbi.nlm.nih.gov/gene/",
+      "accessed": "2026-04-15",
+      "blood_cancer_scope": ["genes and mapped phenotypes relevant to blood-cancer target records"],
+      "claim_uses": ["target-reference", "data-reuse"],
+      "claim_limits": ["Gene records integrate references and cross-links but do not establish target validity, disease relevance, or clinical actionability."]
+    },
+    {
+      "source_id": "nci_cancer_drug_dictionary",
+      "owner": "National Cancer Institute",
+      "source_type": "cancer drug dictionary",
+      "url": "https://www.cancer.gov/publications/dictionaries/cancer-drug",
+      "accessed": "2026-04-15",
+      "blood_cancer_scope": ["cancer drugs and investigational agents"],
+      "claim_uses": ["therapy-reference"],
+      "claim_limits": ["Drug definitions, synonyms, and trial links are not treatment recommendations, approval status, efficacy evidence, safety evidence, or availability claims."]
+    },
+    {
+      "source_id": "who_ictrp_search_portal",
+      "owner": "World Health Organization",
+      "source_type": "clinical trial search portal",
+      "url": "https://trialsearch.who.int/",
+      "accessed": "2026-04-15",
+      "blood_cancer_scope": ["global clinical-trial records"],
+      "claim_uses": ["trial-search", "trial-registry-aggregate"],
+      "claim_limits": ["Aggregated registry presence does not prove eligibility, availability, data quality, safety, efficacy, or local trial status."]
+    },
+    {
+      "source_id": "dailymed",
+      "owner": "U.S. National Library of Medicine",
+      "source_type": "structured product labeling database",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/",
+      "accessed": "2026-04-15",
+      "blood_cancer_scope": ["drug labels submitted to FDA"],
+      "claim_uses": ["labeling", "regulatory-status"],
+      "claim_limits": ["Label presence is not a complete listing of FDA-regulated products and does not determine patient-specific appropriateness."]
+    },
+    {
+      "source_id": "ema_medicines",
+      "owner": "European Medicines Agency",
+      "source_type": "medicines regulatory information",
+      "url": "https://www.ema.europa.eu/en/medicines",
+      "accessed": "2026-04-15",
+      "blood_cancer_scope": ["centrally authorised or EMA-evaluated medicines"],
+      "claim_uses": ["regulatory-status", "therapy-reference"],
+      "claim_limits": ["EMA pages may not include nationally authorised medicines or complete treatment options and are not patient-specific guidance."]
+    },
+    {
+      "source_id": "ncbi_geo",
+      "owner": "National Center for Biotechnology Information",
+      "source_type": "functional genomics data repository",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/info/overview.html",
+      "accessed": "2026-04-15",
+      "blood_cancer_scope": ["public functional genomics datasets", "blood-cancer studies when deposited"],
+      "claim_uses": ["dataset-discovery", "data-reuse", "literature-search"],
+      "claim_limits": ["Submitted datasets vary in consent, reuse terms, metadata completeness, and study quality; dataset presence does not establish clinical truth."]
+    },
+    {
+      "source_id": "nci_gdc_data_portal",
+      "owner": "National Cancer Institute Genomic Data Commons",
+      "source_type": "cancer genomics data portal and API",
+      "url": "https://gdc.cancer.gov/",
+      "accessed": "2026-04-15",
+      "blood_cancer_scope": ["NCI cancer genomics programs", "harmonized cancer genomics datasets"],
+      "claim_uses": ["dataset-discovery", "genomics-data", "data-reuse"],
+      "claim_limits": ["Some data require controlled access; cohort inclusion and harmonization do not establish patient-specific interpretation or clinical actionability."]
+    },
+    {
       "source_id": "pubmed_kumar_2016_imwg_mrd_response_criteria",
       "owner": "PubMed-indexed literature",
       "source_type": "consensus statement",

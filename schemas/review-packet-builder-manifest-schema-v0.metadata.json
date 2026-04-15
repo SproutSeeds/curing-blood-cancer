@@ -1,0 +1,63 @@
+{
+  "artifact_id": "review-packet-builder-manifest-schema-v0",
+  "title": "Review-Packet Builder Manifest Schema v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "review packets",
+    "research tooling",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Review-Packet Builder Input Manifest Spec v0",
+      "url": "../disease-programs/multiple-myeloma/reviews/review-packet-builder-manifest-spec-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Tooling Readiness Gate v0",
+      "url": "../disease-programs/multiple-myeloma/tooling-readiness-gate-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "../disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "BCMA Claim Set Expert Review Packet v0",
+      "url": "../disease-programs/multiple-myeloma/reviews/bcma-claim-set-expert-review-packet-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "../disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only manifest schema.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide eligibility guidance, expanded-access guidance, monitoring guidance, or publication authorization for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not build a review-packet builder, generator, dashboard, explorer, ranking tool, trial finder, patient matcher, recommendation system, or generated-claim pipeline.",
+    "Schema validation checks manifest shape only, not expert review, evidence strength, clinical importance, patient relevance, actionability, or publication readiness.",
+    "Implementation remains limited to the copied-reference route-table dry-run script selected by the aggregate implementation gate; packet assembly and generated claims remain blocked."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/review-packet-builder-manifest-schema-v0.md"
+}

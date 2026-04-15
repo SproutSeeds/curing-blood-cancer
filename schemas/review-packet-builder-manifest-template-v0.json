@@ -1,0 +1,302 @@
+{
+  "review_packet_builder_manifest_id": "myeloma-review-packet-builder-manifest-template-v0",
+  "date": "2026-04-15",
+  "title": "Multiple Myeloma Review-Packet Builder Manifest Template v0",
+  "disease_program": "multiple-myeloma",
+  "manifest_scope": [
+    {
+      "disease": "multiple myeloma",
+      "subtype_scope": "plasma-cell disease",
+      "manifest_use": "public review-packet input manifest template",
+      "excluded_scope": [
+        "builder code",
+        "generated biomedical claims",
+        "real case data",
+        "patient-specific matching",
+        "clinical recommendations",
+        "trial guidance",
+        "expanded-access guidance",
+        "publication authorization"
+      ]
+    }
+  ],
+  "packet_type": "multidisciplinary-review-packet-template",
+  "target_packet": {
+    "artifact_id": "multiple-myeloma-multidisciplinary-review-packet-template-v0",
+    "path": "disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md",
+    "review_status": "expert-review-needed",
+    "packet_boundary": "Template only; do not fill public packet with real case facts."
+  },
+  "artifact_inputs": [
+    {
+      "artifact_id": "multiple-myeloma-tooling-readiness-gate-v0",
+      "path": "disease-programs/multiple-myeloma/tooling-readiness-gate-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/tooling-readiness-gate-v0.metadata.json",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "review_status": "source-checked",
+      "required_sections": [
+        "Validated Input Shapes",
+        "Candidate Tooling Gate",
+        "Builder Code Gate"
+      ],
+      "limitations": [
+        "Gate is not builder code.",
+        "Gate does not authorize generated claims."
+      ]
+    },
+    {
+      "artifact_id": "multiple-myeloma-review-packet-builder-manifest-spec-v0",
+      "path": "disease-programs/multiple-myeloma/reviews/review-packet-builder-manifest-spec-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/review-packet-builder-manifest-spec-v0.metadata.json",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "review_status": "source-checked",
+      "required_sections": [
+        "Manifest Sections",
+        "Forbidden Manifest Fields",
+        "Validation Expectations"
+      ],
+      "limitations": [
+        "Spec is not builder code.",
+        "Spec does not validate real manifest records by itself."
+      ]
+    },
+    {
+      "artifact_id": "multiple-myeloma-open-research-map-v0-1",
+      "path": "disease-programs/multiple-myeloma/open-research-map-v0-1.md",
+      "metadata_path": "disease-programs/multiple-myeloma/open-research-map-v0-1.metadata.json",
+      "artifact_class": "map",
+      "claim_level": "open-question",
+      "review_status": "source-checked",
+      "required_sections": [
+        "Map Nodes",
+        "Current Contribution Targets",
+        "Review And Publication Boundaries"
+      ],
+      "limitations": [
+        "Map is not comprehensive.",
+        "Map is not clinical guidance."
+      ]
+    },
+    {
+      "artifact_id": "multiple-myeloma-roadmap-public-task-queue-v0",
+      "path": "disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.metadata.json",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "review_status": "source-checked",
+      "required_sections": [
+        "Task Status",
+        "Issue Drafts",
+        "Review Boundary"
+      ],
+      "limitations": [
+        "Task priority is not evidence strength.",
+        "Task priority is not clinical priority."
+      ]
+    },
+    {
+      "artifact_id": "multiple-myeloma-multidisciplinary-review-packet-template-v0",
+      "path": "disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.metadata.json",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "review_status": "expert-review-needed",
+      "required_sections": [
+        "Do Not Fill Publicly",
+        "Review Sections",
+        "Completion Gate"
+      ],
+      "limitations": [
+        "Template does not make artifacts expert-reviewed.",
+        "Template must not be filled with real case facts in public."
+      ]
+    }
+  ],
+  "schema_inputs": [
+    {
+      "schema_id": "review-packet-builder-manifest.schema.json",
+      "schema_path": "schemas/review-packet-builder-manifest.schema.json",
+      "template_path": "schemas/review-packet-builder-manifest-template-v0.json",
+      "validation_scope": "public manifest records with review_packet_builder_manifest_id"
+    },
+    {
+      "schema_id": "public-task-queue.schema.json",
+      "schema_path": "schemas/public-task-queue.schema.json",
+      "validation_scope": "public task queue inputs and next task references"
+    },
+    {
+      "schema_id": "disease-map.schema.json",
+      "schema_path": "schemas/disease-map.schema.json",
+      "template_path": "schemas/disease-map-template-v0.json",
+      "validation_scope": "open research map companion and disease-map links"
+    },
+    {
+      "schema_id": "open-question-record.schema.json",
+      "schema_path": "schemas/open-question-record.schema.json",
+      "template_path": "schemas/open-question-record-template-v0.json",
+      "validation_scope": "public research-question links and no-actionability boundaries"
+    }
+  ],
+  "claim_level": "open-question",
+  "source_ids": [
+    "pubmed",
+    "clinicaltrials_gov_api_v2",
+    "nci_pdq_myeloma_hp",
+    "hgnc_gene_names",
+    "nci_cancer_drug_dictionary"
+  ],
+  "source_inputs": {
+    "source_registry_path": "sources/source-registry-v0.md",
+    "source_ids": [
+      "pubmed",
+      "clinicaltrials_gov_api_v2",
+      "nci_pdq_myeloma_hp",
+      "hgnc_gene_names",
+      "nci_cancer_drug_dictionary"
+    ],
+    "source_use": "Source IDs are public provenance anchors only; they do not establish clinical actionability, efficacy, safety, eligibility, availability, or patient fit."
+  },
+  "reference_ids": {
+    "linked_claim_ids": [
+      "bcma-resistance-is-multifactorial-v0",
+      "bcma-target-presence-should-be-extracted-v0",
+      "low-bcma-density-supports-alternate-target-research-tracking-v0"
+    ],
+    "linked_gap_ids": [
+      "expert-review-readiness-gap-v0",
+      "non-antigen-loss-relapse-buckets-gap-v0",
+      "bcma-measurement-context-completeness-gap-v0"
+    ],
+    "mechanism_group_ids": [
+      "measurement-and-follow-up-gaps-v0",
+      "disease-burden-site-risk-context-v0",
+      "sequential-or-dual-target-immune-pressure-v0"
+    ],
+    "measurement_term_ids": [
+      "relapse-or-disease-progression",
+      "antigen-density",
+      "bone-marrow-target-status"
+    ],
+    "public_task_ids": [
+      "multiple-myeloma-review-packet-builder-manifest-schema-task-v0"
+    ],
+    "trial_query_record_ids": [
+      "multiple-myeloma-car-t-united-states-recruiting-v0"
+    ],
+    "extraction_record_ids": [
+      "tedder-bhutani-2025-disease-context-v0",
+      "nci-pdq-2025-disease-context-v0"
+    ]
+  },
+  "validation_expectations": {
+    "validation_command": "make validate",
+    "required_checks": [
+      "manifest schema validation",
+      "artifact input path and metadata path existence",
+      "source ID resolution",
+      "reference ID resolution where validators exist",
+      "builder code boundary booleans are false",
+      "forbidden field rejection"
+    ],
+    "fail_closed_conditions": [
+      "missing source_ids",
+      "unknown artifact_id",
+      "missing metadata_path",
+      "missing limitations",
+      "missing clinical_use_boundary",
+      "builder_code_allowed is not false",
+      "generated_claims_allowed is not false",
+      "patient_specific_outputs_allowed is not false",
+      "publication_authorization_allowed is not false"
+    ],
+    "forbidden_fields": [
+      "patient_id",
+      "case_id",
+      "date_of_birth",
+      "medical_record_number",
+      "raw_record",
+      "free_text_note",
+      "real_case_data",
+      "generated_claim_text",
+      "generated_public_explainer",
+      "candidate_option",
+      "clinical_priority",
+      "evidence_strength",
+      "patient_relevance",
+      "treatment_recommendation",
+      "trial_recommendation",
+      "expanded_access_guidance",
+      "publication_authorization",
+      "builder_output"
+    ]
+  },
+  "missing_inputs": [
+    {
+      "missing_input_id": "review-packet-builder-code-v0",
+      "missing_kind": "builder-code",
+      "reason_missing": "Builder code is intentionally blocked until a validated manifest schema, dry-run plan, and no-generated-claims policy exist.",
+      "blocking_state": "blocks-builder-code",
+      "next_public_task_ids": [
+        "multiple-myeloma-review-packet-builder-manifest-schema-task-v0"
+      ]
+    },
+    {
+      "missing_input_id": "review-packet-builder-dry-run-plan-v0",
+      "missing_kind": "validator",
+      "reason_missing": "A later dry-run plan is needed before code can copy or assemble public packet sections.",
+      "blocking_state": "blocks-generated-output",
+      "next_public_task_ids": [
+        "multiple-myeloma-review-packet-builder-manifest-schema-task-v0"
+      ]
+    }
+  ],
+  "limitations": [
+    "Template only.",
+    "No builder code.",
+    "No generated biomedical claims.",
+    "No real case data.",
+    "No patient-specific output.",
+    "No evidence-strength ranking.",
+    "No clinical priority.",
+    "No treatment recommendation.",
+    "No trial recommendation.",
+    "No expanded-access guidance.",
+    "No publication authorization.",
+    "No cure claim."
+  ],
+  "do_not_infer": [
+    "Do not infer that a valid manifest authorizes builder code.",
+    "Do not infer expert review.",
+    "Do not infer evidence strength.",
+    "Do not infer clinical importance.",
+    "Do not infer patient relevance.",
+    "Do not infer actionability.",
+    "Do not infer publication authorization.",
+    "Do not infer treatment choice, trial choice, or expanded-access suitability."
+  ],
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "builder_code_boundary": {
+    "builder_code_allowed": false,
+    "generated_claims_allowed": false,
+    "patient_specific_outputs_allowed": false,
+    "publication_authorization_allowed": false,
+    "implementation_boundary": "This manifest validates input shape only. It does not authorize builder code, generated claims, patient-specific outputs, or publication decisions."
+  },
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "draft",
+    "review_notes": [
+      "Template validates Review-Packet Builder Manifest Schema v0 without building a review-packet builder or generating review packet output.",
+      "No patient-specific fields, real case data, generated claims, rankings, treatment recommendations, trial recommendations, expanded-access guidance, or publication authorization are present."
+    ]
+  }
+}

@@ -9,6 +9,7 @@ private repo context.
 
 ## Current Task Queues
 
+- [Multiple Myeloma Roadmap Public Task Queue v0](multiple-myeloma-roadmap-public-task-queue-v0.md)
 - [BCMA Antigen Escape Public Task Queue v0](bcma-antigen-escape-public-task-queue-v0.md)
 - [Post-CAR T Relapse Mechanism Gap Public Task Queue v0](post-car-t-relapse-mechanism-gap-public-task-queue-v0.md)
 

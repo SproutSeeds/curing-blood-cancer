@@ -1,0 +1,47 @@
+{
+  "artifact_id": "open-question-record-schema-v0",
+  "title": "Open-Question Record Schema v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "blood-cancer open-question records",
+    "research tooling"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Trial-Landscape Record Schema v0",
+      "url": "./trial-landscape-record-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Disease Map Schema v0",
+      "url": "./disease-map-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Schema And Tooling Phase Inventory v0",
+      "url": "../disease-programs/multiple-myeloma/schema-tooling-phase-inventory-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "../disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Schema validation does not make an open-question record medical advice.",
+    "The schema does not accept clinical priority, evidence-strength ranking, urgency guidance, patient relevance, actionability, treatment recommendations, trial recommendations, expanded-access guidance, candidate options, or real case data.",
+    "The schema does not prove a question is important, urgent, resolved, actionable, patient-relevant, expert-reviewed, or higher evidence than another question.",
+    "The template is public placeholder data only.",
+    "Tooling should wait for a separate readiness gate after this shape validates."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/open-question-record-schema-v0.md"
+}

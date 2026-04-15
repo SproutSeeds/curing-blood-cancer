@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/curing-blood-cancer/case-to-cure-synthetic-pipeline.schema.json",
+  "title": "Case-To-Cure Synthetic Pipeline Example",
+  "type": "object",
+  "required": [
+    "synthetic_case_pipeline_id",
+    "date",
+    "disease_program",
+    "blueprint_id",
+    "clinical_use_boundary",
+    "synthetic_case_notice",
+    "source_ids",
+    "pipeline_stages",
+    "synthetic_records",
+    "publication_gate_result",
+    "review"
+  ],
+  "properties": {
+    "synthetic_case_pipeline_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-v[0-9]+$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "disease_program": {
+      "type": "string"
+    },
+    "blueprint_id": {
+      "type": "string"
+    },
+    "clinical_use_boundary": {
+      "type": "string",
+      "enum": [
+        "research-use-only",
+        "not-medical-advice",
+        "requires-clinician-review"
+      ]
+    },
+    "synthetic_case_notice": {
+      "type": "object",
+      "required": [
+        "uses_real_patient_data",
+        "contains_phi",
+        "contains_patient_specific_recommendation",
+        "public_export_allowed",
+        "description"
+      ],
+      "properties": {
+        "uses_real_patient_data": {
+          "type": "boolean",
+          "enum": [false]
+        },
+        "contains_phi": {
+          "type": "boolean",
+          "enum": [false]
+        },
+        "contains_patient_specific_recommendation": {
+          "type": "boolean",
+          "enum": [false]
+        },
+        "public_export_allowed": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "taxonomy_class_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "measurement_term_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "trial_query_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "data_zones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["zone_id", "public", "contains"],
+        "properties": {
+          "zone_id": {
+            "type": "string"
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "contains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "pipeline_stages": {
+      "type": "array",
+      "minItems": 15,
+      "items": {
+        "type": "object",
+        "required": [
+          "stage_id",
+          "name",
+          "private_input",
+          "public_input",
+          "private_output",
+          "public_output",
+          "gate",
+          "synthetic_status"
+        ],
+        "properties": {
+          "stage_id": {
+            "type": "string",
+            "pattern": "^case_[0-9][0-9]$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "private_input": {
+            "type": "string"
+          },
+          "public_input": {
+            "type": "string"
+          },
+          "private_output": {
+            "type": "string"
+          },
+          "public_output": {
+            "type": "string"
+          },
+          "gate": {
+            "type": "string"
+          },
+          "synthetic_status": {
+            "type": "string",
+            "enum": [
+              "demonstrated-with-synthetic-placeholder",
+              "blocked-without-real-governance",
+              "public-method-only"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "synthetic_records": {
+      "type": "object",
+      "required": [
+        "case_intake_manifest",
+        "case_feature_bundle",
+        "evidence_packet",
+        "candidate_option_set",
+        "review_decision_record"
+      ]
+    },
+    "publication_gate_result": {
+      "type": "object",
+      "required": [
+        "actual_case_data_publication_allowed",
+        "patient_specific_outputs_publication_allowed",
+        "allowed_public_outputs",
+        "blocked_outputs"
+      ],
+      "properties": {
+        "actual_case_data_publication_allowed": {
+          "type": "boolean",
+          "enum": [false]
+        },
+        "patient_specific_outputs_publication_allowed": {
+          "type": "boolean",
+          "enum": [false]
+        },
+        "allowed_public_outputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "blocked_outputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "required": ["created", "last_reviewed", "review_status"],
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date"
+        },
+        "last_reviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "source-checked",
+            "expert-review-needed",
+            "expert-reviewed",
+            "deprecated"
+          ]
+        },
+        "review_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

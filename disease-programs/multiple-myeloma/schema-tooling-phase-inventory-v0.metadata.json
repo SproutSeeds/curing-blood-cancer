@@ -1,0 +1,64 @@
+{
+  "artifact_id": "multiple-myeloma-schema-tooling-phase-inventory-v0",
+  "title": "Multiple Myeloma Schema And Tooling Phase Inventory v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "research tooling",
+    "schema planning",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "./public-roadmap-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Open Research Map v0.1",
+      "url": "./open-research-map-v0-1.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Disease Map Schema v0",
+      "url": "../../schemas/disease-map-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Task Queue schema",
+      "url": "../../schemas/public-task-queue.schema.json",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Post-CAR T Relapse Mechanism Coverage Report v0",
+      "url": "./mechanisms/post-car-t-relapse-mechanism-coverage-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "./public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only phase inventory.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide expanded-access guidance for any person.",
+    "Does not provide monitoring guidance.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not add biomedical claims, extraction records, generation scripts, or tooling.",
+    "Does not rank targets, therapies, trials, mechanisms, datasets, or public tasks by clinical importance.",
+    "Review-packet-builder manifest specification does not imply implementation readiness, evidence strength, patient relevance, clinical actionability, efficacy, safety, availability, eligibility, publication authorization, or patient fit."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-schema-tooling-phase-inventory-v0.md"
+}

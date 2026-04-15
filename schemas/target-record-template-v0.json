@@ -1,0 +1,98 @@
+{
+  "target_record_id": "bcma-target-record-template-v0",
+  "date": "2026-04-15",
+  "title": "BCMA Target Record Template v0",
+  "disease_program": "multiple-myeloma",
+  "disease_scope": [
+    {
+      "disease": "multiple myeloma",
+      "subtype_scope": "plasma-cell disease",
+      "disease_state": "public schema template",
+      "excluded_scope": [
+        "patient-specific target expression",
+        "treatment selection",
+        "trial selection",
+        "expanded-access decisions"
+      ]
+    }
+  ],
+  "target_symbol": "TNFRSF17",
+  "target_name": "TNF receptor superfamily member 17",
+  "target_aliases": [
+    "BCMA",
+    "CD269"
+  ],
+  "target_record_type": "cell-surface-antigen",
+  "target_context": {
+    "context_type": "surface-marker",
+    "public_summary": "Template-only target context for a public multiple myeloma target record.",
+    "target_context_fields": [
+      "gene-or-protein-naming",
+      "antigen-density-context",
+      "assay-provenance-needed"
+    ]
+  },
+  "claim_level": "open-question",
+  "source_ids": [
+    "hgnc_gene_names",
+    "ncbi_gene",
+    "nci_cancer_drug_dictionary",
+    "pubmed"
+  ],
+  "linked_claim_ids": [
+    "bcma-target-presence-should-be-extracted-v0"
+  ],
+  "linked_gap_ids": [
+    "bcma-measurement-context-completeness-gap-v0",
+    "alternate-target-clinical-translation-gap-v0"
+  ],
+  "mechanism_group_ids": [
+    "bcma-antigen-loss-or-low-density-v0",
+    "measurement-and-follow-up-gaps-v0"
+  ],
+  "therapy_record_ids": [],
+  "trial_record_ids": [],
+  "public_task_ids": [
+    "multiple-myeloma-target-record-schema-task-v0"
+  ],
+  "uncertainty": {
+    "summary": "A valid target record can organize public target context, but it cannot establish targetability, actionability, efficacy, safety, availability, eligibility, or patient fit.",
+    "known_unknowns": [
+      "Whether any target is expressed in any person is outside this public template.",
+      "Whether any target has therapeutic value requires separate source-backed and expert-reviewed evidence."
+    ]
+  },
+  "limitations": [
+    "Template only.",
+    "No real case data.",
+    "No patient-specific target status.",
+    "No target ranking.",
+    "No treatment recommendation.",
+    "No trial recommendation.",
+    "No cure claim."
+  ],
+  "do_not_infer": [
+    "Do not infer targetability.",
+    "Do not infer patient expression.",
+    "Do not infer clinical actionability.",
+    "Do not infer therapy selection.",
+    "Do not infer trial eligibility.",
+    "Do not infer efficacy or safety."
+  ],
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "draft",
+    "review_notes": [
+      "Template validates Target Record Schema v0 without creating a real target-prioritization record.",
+      "No patient-specific fields, candidate options, treatment choices, trial matching fields, or actionability scores are present."
+    ]
+  }
+}

@@ -6,7 +6,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - parent map: `post-car-t-relapse-mechanism-map-v0`
 - linked gap: `non-antigen-loss-relapse-buckets-gap-v0`
 - clinical boundary: research-use-only, not medical advice
-- last reviewed: `2026-04-14`
+- last reviewed: `2026-04-15`
 
 ## Purpose
 
@@ -33,34 +33,37 @@ structured artifacts for the most biologically important bucket.
 | --- | ---: | ---: | --- | --- |
 | BCMA antigen loss, low density, or target alteration | 5 | 4 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
 | CAR T fitness, exhaustion, expansion, or persistence | 5 | 2 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
-| Plasma-cell identity or lineage-state escape | 2 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
-| Disease burden, site, and high-risk context | 0 | 0 | needs-first-extraction | Add the first source-specific extraction. |
+| Plasma-cell identity or lineage-state escape | 5 | 2 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
+| Disease burden, site, and high-risk context | 8 | 2 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
 | Sequential or dual-target immune pressure | 5 | 3 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
 | Measurement and follow-up gaps | 7 | 6 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
 
 ## Under-Covered Buckets
 
-### Needs First Extraction
-
-- `disease-burden-site-risk-context-v0`
-  - public source anchors: `nci_pdq_myeloma_hp`, `clinicaltrials_gov`,
-    `clinicaltrials_gov_api_v2`,
-    `pubmed_tedder_bhutani_2025_bcma_resistance`
-  - next step: create a source-specific extraction for baseline burden,
-    disease site, high-risk context, and prior-exposure fields
-
 ### Needs Second Source Extraction
 
-- `plasma-cell-identity-or-lineage-state-escape-v0`
-  - current public extraction:
-    `maura-2025-plasma-cell-identity-escape-v0`
-  - public source anchors for expansion:
-    `pubmed_yue_2025_bcma_resistance`,
-    `pubmed_di_meo_2025_sema4a_low_bcma`
-  - next step: add at least one additional source-specific extraction before
-    comparing identity or lineage-state evidence across sources
+No mechanism buckets currently need first extraction or second-source
+extraction for v0 navigation. This does not mean the mechanism map is complete
+or that buckets can be ranked; it only means every current bucket has at least
+two public extraction records or a documented interpretation boundary.
 
 ### Second-Source Coverage Added
+
+- `disease-burden-site-risk-context-v0`
+  - current public extractions:
+    `tedder-bhutani-2025-disease-context-v0`,
+    `nci-pdq-2025-disease-context-v0`
+  - note: NCI PDQ supports disease-burden, site, high-risk, disease-state, and
+    prior-therapy context fields, not causal relapse-mechanism claims,
+    eligibility guidance, treatment guidance, or patient-specific risk
+    interpretation
+
+- `plasma-cell-identity-or-lineage-state-escape-v0`
+  - current public extractions:
+    `maura-2025-plasma-cell-identity-escape-v0`,
+    `di-meo-2025-target-linked-phenotype-v0`
+  - note: Di Meo 2025 supports target-linked phenotype field coverage, not a
+    harmonized lineage-state ontology or clinical target-readiness claim
 
 - `car-t-fitness-exhaustion-persistence-v0`
   - current public extractions: `ledergor-2024-cd4-car-t-exhaustion-v0`,

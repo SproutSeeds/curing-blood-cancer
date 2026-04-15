@@ -1,0 +1,70 @@
+{
+  "artifact_id": "review-packet-manifest-route-table-tool-v0",
+  "title": "Review-Packet Manifest Route-Table Dry-Run Tool v0",
+  "artifact_class": "tool",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "review packets",
+    "research tooling",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Review-Packet Builder Implementation Gate v0",
+      "url": "../disease-programs/multiple-myeloma/reviews/review-packet-builder-implementation-gate-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Builder Dry-Run Plan v0",
+      "url": "../disease-programs/multiple-myeloma/reviews/review-packet-builder-dry-run-plan-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Builder Manifest Schema v0",
+      "url": "../schemas/review-packet-builder-manifest-schema-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Builder Manifest Template v0",
+      "url": "../schemas/review-packet-builder-manifest-template-v0.json",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Builder Forbidden Input Fixture v0",
+      "url": "../examples/review-packet-builder-forbidden-input-fixture-v0.json",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Review-Packet Builder Route-Table Placeholder Fixture v0",
+      "url": "../examples/review-packet-builder-route-table-placeholder-fixture-v0.json",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only dry-run tool.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide eligibility guidance, expanded-access guidance, monitoring guidance, or publication authorization for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not assemble review packets, generate biomedical prose, rewrite claims, rank evidence, match patients, select trials, or recommend therapies.",
+    "Reads public repository files only and requires no network, credentials, accounts, paid services, or private records.",
+    "Output is copied-reference routing, missing-input reporting, and refusal records only.",
+    "Route-table output is not expert review, source completeness, evidence strength, clinical importance, patient relevance, actionability, or publication readiness.",
+    "Refusal behavior is limited to explicit forbidden fields and missing public references; it does not sanitize private or real case data for use."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/review-packet-manifest-route-table-tool-v0.py"
+}

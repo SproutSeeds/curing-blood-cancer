@@ -1,0 +1,47 @@
+{
+  "artifact_id": "multiple-myeloma-roadmap-public-task-queue-v0",
+  "title": "Multiple Myeloma Roadmap Public Task Queue v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "public roadmap",
+    "case-to-cure pipeline",
+    "research tooling"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "../public-roadmap-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "BCMA Antigen Escape Evidence Gap Register v0",
+      "url": "../evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research task queue only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide expanded-access guidance for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Task priority means public artifact readiness, not patient relevance, evidence strength, biological importance, or treatment value.",
+    "This first roadmap queue uses existing validated BCMA and post-CAR T gap IDs; it does not replace the need for a broader non-BCMA roadmap gap register."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-roadmap-public-task-queue-v0.md"
+}

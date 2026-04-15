@@ -1,0 +1,164 @@
+{
+  "rubric_id": "multiple-myeloma-candidate-option-scoring-rubric-v0",
+  "date": "2026-04-15",
+  "disease_program": "multiple-myeloma",
+  "title": "Candidate-Option Scoring Rubric v0",
+  "clinical_use_boundary": "research-use-only",
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2",
+    "pubmed",
+    "fda_drugs_at_fda",
+    "pubmed_di_meo_2025_sema4a_low_bcma",
+    "pubmed_yue_2025_bcma_resistance"
+  ],
+  "linked_public_artifacts": [
+    "multiple-myeloma-case-to-cure-pipeline-blueprint-v0",
+    "clinicaltrials-gov-query-protocol-v0",
+    "case-feature-bundle-public-summary-v0",
+    "multiple-myeloma-roadmap-public-task-queue-v0"
+  ],
+  "candidate_types": [
+    {
+      "candidate_type": "standard-care-review",
+      "meaning": "Question for qualified clinicians about approved or guideline-recognized care in context.",
+      "required_owner_before_real_world_use": "treating clinician",
+      "public_output": "generic source gap or review prompt only"
+    },
+    {
+      "candidate_type": "trial-review",
+      "meaning": "Question about whether public trial records deserve private site or clinician verification.",
+      "required_owner_before_real_world_use": "treating clinician and trial site",
+      "public_output": "de-identified query-pattern artifact or trial-source gap only"
+    },
+    {
+      "candidate_type": "expanded-access-review",
+      "meaning": "Question about whether an investigational-product pathway is legally, clinically, and operationally possible.",
+      "required_owner_before_real_world_use": "treating physician, sponsor, institution, and regulator where applicable",
+      "public_output": "generic pathway gap only"
+    },
+    {
+      "candidate_type": "research-only-hypothesis",
+      "meaning": "Biological or translational hypothesis that is not ready for care.",
+      "required_owner_before_real_world_use": "research lead or expert reviewer",
+      "public_output": "evidence gap, source-extraction task, or review packet item"
+    },
+    {
+      "candidate_type": "no-go",
+      "meaning": "Record that a path should not proceed or should remain blocked.",
+      "required_owner_before_real_world_use": "treating clinician, review board, or responsible reviewer where relevant",
+      "public_output": "de-identified safety pattern or blocked-status note only"
+    }
+  ],
+  "score_scale": {
+    "min": 0,
+    "max": 3,
+    "score_0": "Missing, unsafe, unsupported, or not reviewable.",
+    "score_1": "Present but weak, ambiguous, or missing key provenance.",
+    "score_2": "Usable for structured review with important caveats.",
+    "score_3": "Strong enough for public review-readiness tracking within its candidate type.",
+    "interpretation_boundary": "Higher score means stronger review readiness, not better treatment, better trial, better access path, or better patient fit."
+  },
+  "dimensions": [
+    {
+      "dimension_id": "source_provenance",
+      "question": "Are source IDs, query-record IDs, claim IDs, and access dates traceable?",
+      "what_not_to_infer": "Do not infer source quality or clinical actionability from provenance alone."
+    },
+    {
+      "dimension_id": "evidence_signal_and_uncertainty",
+      "question": "Are evidence signal, contradictions, maturity, and limitations explicit?",
+      "what_not_to_infer": "Do not infer efficacy, safety, or comparative benefit."
+    },
+    {
+      "dimension_id": "measurement_context",
+      "question": "Are MRD, response, relapse, target, assay, and sample context preserved where relevant?",
+      "what_not_to_infer": "Do not compare measurements across sources without method alignment."
+    },
+    {
+      "dimension_id": "feasibility_verification_readiness",
+      "question": "Does the record name needed clinician, site, sponsor, regulatory, or institutional checks?",
+      "what_not_to_infer": "Do not infer that any pathway is feasible or available."
+    },
+    {
+      "dimension_id": "safety_and_overclaiming_controls",
+      "question": "Are safety unknowns, overclaiming risk, and no-action language explicit?",
+      "what_not_to_infer": "Do not reduce safety review to a public score."
+    },
+    {
+      "dimension_id": "review_owner_clarity",
+      "question": "Does the record state who must review before any real-world use?",
+      "what_not_to_infer": "Do not treat public review readiness as qualified review."
+    },
+    {
+      "dimension_id": "public_artifact_readiness",
+      "question": "Can the record produce a safe public task, gap, query-pattern, or review prompt without private facts?",
+      "what_not_to_infer": "Do not downstream patient-specific candidate options."
+    }
+  ],
+  "interpretation_bands": [
+    {
+      "total_min": 0,
+      "total_max": 7,
+      "meaning": "Blocked or no-go for public downstreaming until safety and provenance gaps are resolved."
+    },
+    {
+      "total_min": 8,
+      "total_max": 14,
+      "meaning": "Needs source extraction, measurement clarification, review-owner mapping, or boundary repair."
+    },
+    {
+      "total_min": 15,
+      "total_max": 21,
+      "meaning": "Ready for a generic public task, review prompt, or private multidisciplinary packet item."
+    }
+  ],
+  "type_specific_gates": {
+    "standard-care-review": [
+      "Requires public source IDs for approved or established care context before scoring above 1.",
+      "Requires clinician-owner language.",
+      "Must state that this is not a recommendation."
+    ],
+    "trial-review": [
+      "Requires ClinicalTrials.gov query record or public trial source ID before scoring above 1.",
+      "Requires source freshness and site-verification boundary.",
+      "Must state that this is not trial advice and not an eligibility decision."
+    ],
+    "expanded-access-review": [
+      "Requires investigational-product status or source gap before scoring above 1.",
+      "Requires treating-physician, sponsor, institutional, and regulatory verification requirements.",
+      "Must state that this is not expanded-access guidance."
+    ],
+    "research-only-hypothesis": [
+      "Requires hypothesis statement, source IDs or explicit missing-source gap, and translation or safety boundary.",
+      "Must state that the hypothesis is not ready for care.",
+      "Can end as an evidence gap or source-extraction task."
+    ],
+    "no-go": [
+      "Requires reason for no-go or blocked status.",
+      "Requires source, safety, feasibility, privacy, or review basis.",
+      "Can preserve de-identified safety learning if publication gates pass."
+    ]
+  },
+  "fail_closed_rules": [
+    "Private case facts would be needed in the public repo.",
+    "Provenance is missing.",
+    "Measurement context is ambiguous and material to the claim.",
+    "Trial status, site availability, sponsor access, or eligibility would be inferred from public records alone.",
+    "Safety, toxicity, logistics, or contraindication review is missing.",
+    "Expanded-access feasibility would require sponsor, regulator, institution, or treating-team decisions.",
+    "The record could be read as patient-specific advice.",
+    "A cure, vaccine, efficacy, safety, or access claim would be unsupported."
+  ],
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Rubric scores public review readiness only.",
+      "Rubric requires candidate_type before score interpretation.",
+      "Scores must not be used as clinical rankings or recommendations."
+    ]
+  }
+}

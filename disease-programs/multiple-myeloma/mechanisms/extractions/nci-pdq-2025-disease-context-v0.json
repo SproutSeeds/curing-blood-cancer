@@ -1,0 +1,141 @@
+{
+  "extraction_record_id": "nci-pdq-2025-disease-context-v0",
+  "date": "2026-04-15",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "post-car-t-relapse-mechanism-map-v0",
+  "source_ids": [
+    "nci_pdq_myeloma_hp"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_antibody_drug_conjugate",
+    "myeloma_class_bispecific_antibody",
+    "myeloma_class_car_t_cell_therapy"
+  ],
+  "mechanism_group_ids": [
+    "disease-burden-site-risk-context-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "NCI health-professional PDQ summary",
+    "title": "Plasma Cell Neoplasms (Including Multiple Myeloma) Treatment (PDQ) - Health Professional Version.",
+    "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+    "accessed": "2026-04-15",
+    "publication_year": 2025,
+    "study_context": "Public NCI PDQ health-professional summary used to extract disease-burden, disease-site, high-risk, and relapsed/refractory context fields for public mechanism-map navigation. This record does not use patient data and does not make treatment, trial, prognosis, or eligibility recommendations."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "nci-pdq-disease-burden-staging-context-signal-v0",
+      "mechanism_group_id": "disease-burden-site-risk-context-v0",
+      "signal_summary": "The PDQ staging section supports preserving public disease-burden and stage-context fields such as M protein measurements, hemoglobin, calcium, lytic bone lesions, renal function, LDH, beta-2-microglobulin, albumin, and R-ISS context.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "M protein in serum or urine",
+        "hemoglobin",
+        "serum calcium",
+        "lytic bone lesions",
+        "renal function",
+        "lactate dehydrogenase",
+        "beta-2-microglobulin",
+        "albumin",
+        "International Staging System or Revised International Staging System context"
+      ],
+      "limitations": [
+        "Staging context is not a direct relapse mechanism.",
+        "This extraction does not estimate patient prognosis.",
+        "Use only as public context-field guidance before mechanism comparison."
+      ]
+    },
+    {
+      "signal_id": "nci-pdq-high-risk-cytogenetic-context-signal-v0",
+      "mechanism_group_id": "disease-burden-site-risk-context-v0",
+      "signal_summary": "The PDQ summary supports preserving high-risk cytogenetic context from interphase FISH or cytogenetic testing before comparing relapse-mechanism artifacts.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "interphase FISH result",
+        "cytogenetic risk group",
+        "del 17p",
+        "t(4;14)",
+        "t(14;16)",
+        "t(14;20)",
+        "1q gain or amplification",
+        "1p32 deletion",
+        "plasma cell leukemia context"
+      ],
+      "limitations": [
+        "Risk groups are context fields, not causal mechanism assignments.",
+        "The PDQ notes that some genetic-risk stratification comes from retrospective analyses and requires prospective validation.",
+        "This extraction does not recommend risk-adapted treatment."
+      ]
+    },
+    {
+      "signal_id": "nci-pdq-disease-site-plasmacytoma-context-signal-v0",
+      "mechanism_group_id": "disease-burden-site-risk-context-v0",
+      "signal_summary": "The PDQ summary distinguishes multiple lesions of bone, isolated plasmacytoma of bone, extramedullary plasmacytoma, and extramedullary tumor sampling context, supporting public extraction of disease-site fields.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "bone lesion context",
+        "solitary lytic lesion",
+        "multiple bone lesions",
+        "extramedullary plasmacytoma",
+        "soft-tissue plasmacytoma site",
+        "bone marrow plasma-cell context",
+        "site-specific sampling context"
+      ],
+      "limitations": [
+        "Disease-site fields are context variables and should not be converted into mechanism frequency claims.",
+        "This extraction does not provide imaging interpretation or diagnostic guidance.",
+        "Source definitions must be preserved before harmonizing across artifacts."
+      ]
+    },
+    {
+      "signal_id": "nci-pdq-relapsed-refractory-prior-therapy-context-signal-v0",
+      "mechanism_group_id": "disease-burden-site-risk-context-v0",
+      "signal_summary": "The PDQ relapsed or refractory section supports preserving disease-state and prior-treatment context fields, including relapse timing, refractory status, and prior therapy-class exposure, while keeping treatment options separate from recommendations.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "relapsed disease state",
+        "refractory disease state",
+        "prior induction therapy",
+        "prior autologous stem cell transplant",
+        "maintenance therapy context",
+        "therapy class exposure",
+        "CAR T-cell therapy class",
+        "bispecific antibody therapy class",
+        "BCMA-targeting antibody-drug conjugate class"
+      ],
+      "limitations": [
+        "Treatment-option lists are not treatment recommendations.",
+        "This extraction does not rank sequences or products.",
+        "This extraction does not infer trial eligibility, access, efficacy, safety, or patient fit."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "Disease burden, disease site, high-risk, prior-therapy, and disease-state context fields now have a second public source-specific extraction record.",
+      "Public mechanism-map records should preserve context fields before comparing relapse-mechanism buckets.",
+      "NCI PDQ context fields can help define extraction labels while remaining separate from clinical recommendations."
+    ],
+    "what_this_does_not_support": [
+      "It does not prove any context field causes relapse.",
+      "It does not provide patient-specific diagnosis, prognosis, treatment guidance, trial guidance, eligibility guidance, or monitoring guidance.",
+      "It does not rank relapse mechanisms, therapy classes, products, trials, or access paths.",
+      "It does not establish a cure claim."
+    ]
+  },
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from the public NCI PDQ health-professional summary accessed on 2026-04-15.",
+      "Created to complete disease-burden-site-risk-context-second-source-extraction-task-v0 as second-source coverage for disease-context fields.",
+      "Use this record for source-defined context fields only, not clinical interpretation."
+    ]
+  }
+}

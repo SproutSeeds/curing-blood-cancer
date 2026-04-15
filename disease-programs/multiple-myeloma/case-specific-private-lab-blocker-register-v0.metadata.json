@@ -1,0 +1,80 @@
+{
+  "artifact_id": "multiple-myeloma-case-specific-private-lab-blocker-register-v0",
+  "title": "Case-Specific Private-Lab Blocker Register v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "case-to-cure pipeline",
+    "private-lab blockers",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Definition-Of-Complete Audit v0",
+      "url": "./definition-of-complete-audit-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "./case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
+      "url": "../../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-Feature Bundle Public Summary v0",
+      "url": "../../schemas/case-feature-bundle-public-summary-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Candidate-Option Scoring Rubric v0",
+      "url": "./candidate-option-scoring-rubric-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "./publication-gate-checklist-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "./reviews/multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Private To Public Workflow",
+      "url": "../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "url": "./public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only blocker register.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide eligibility guidance, expanded-access guidance, monitoring guidance, or publication authorization for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not contain real case data, private records, identifiers, dates tied to a person, images, notes, reviewer identities, private record paths, or re-identification keys.",
+    "Does not complete any private-lab task or human-gated decision.",
+    "Does not authorize public case processing, packet assembly, generated claims, ranking, recommendation behavior, patient matching, trial matching, or publication workflow.",
+    "Does not make any public artifact expert-reviewed or publication-ready.",
+    "Does not require credentials, paid APIs, account changes, restricted datasets, clinician decisions, sponsor decisions, regulatory decisions, or institutional decisions."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-case-specific-private-lab-blocker-register-v0.md"
+}

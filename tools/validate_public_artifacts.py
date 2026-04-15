@@ -68,6 +68,14 @@ class Validator:
         self.validate_mechanism_maps()
         self.validate_mechanism_coverage_reports()
         self.validate_opportunity_maps()
+        self.validate_disease_maps()
+        self.validate_target_records()
+        self.validate_therapy_records()
+        self.validate_trial_landscape_records(source_ids)
+        self.validate_open_question_records()
+        self.validate_review_packet_builder_manifest_records(source_ids, artifact_metadata)
+        self.validate_review_packet_route_table_outputs()
+        self.validate_case_to_cure_synthetic_pipelines()
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
         self.validate_mechanism_group_references(mechanism_group_ids)
@@ -1010,6 +1018,647 @@ class Validator:
                     path,
                     f"opportunities[{index}].score_total is {score_total}, expected {calculated}",
                 )
+
+    def validate_disease_maps(self) -> None:
+        schema_path = self.root / "schemas" / "disease-map.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        forbidden_keys = {
+            "patient_id",
+            "case_id",
+            "date_of_birth",
+            "medical_record_number",
+            "raw_record",
+            "free_text_note",
+            "candidate_option",
+            "candidate_options",
+            "candidate_option_ids",
+        }
+        required_boundaries = {
+            "not-medical-advice",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        seen_maps: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "disease_map_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            map_id = doc.get("disease_map_id")
+            if isinstance(map_id, str):
+                if map_id in seen_maps:
+                    self.add_error(path, f"duplicate disease_map_id: {map_id}")
+                seen_maps.add(map_id)
+
+            boundaries = doc.get("clinical_use_boundary")
+            if isinstance(boundaries, list):
+                missing = sorted(required_boundaries - {value for value in boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+
+            for key in sorted(forbidden_keys):
+                for location, _value in self.find_key(doc, key):
+                    self.add_error(path, f"{location} is not allowed in public disease-map records")
+
+    def validate_target_records(self) -> None:
+        schema_path = self.root / "schemas" / "target-record.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        forbidden_keys = {
+            "actionability_score",
+            "candidate_option",
+            "candidate_options",
+            "candidate_option_ids",
+            "case_id",
+            "date_of_birth",
+            "free_text_note",
+            "medical_record_number",
+            "patient_id",
+            "patient_target_expression",
+            "raw_record",
+            "real_case_data",
+            "treatment_choice",
+            "trial_match",
+            "trial_matching",
+        }
+        required_boundaries = {
+            "not-medical-advice",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        seen_records: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "target_record_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            record_id = doc.get("target_record_id")
+            if isinstance(record_id, str):
+                if record_id in seen_records:
+                    self.add_error(path, f"duplicate target_record_id: {record_id}")
+                seen_records.add(record_id)
+
+            boundaries = doc.get("clinical_use_boundary")
+            if isinstance(boundaries, list):
+                missing = sorted(required_boundaries - {value for value in boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+
+            for key in sorted(forbidden_keys):
+                for location, _value in self.find_key(doc, key):
+                    self.add_error(path, f"{location} is not allowed in public target-record records")
+
+    def validate_therapy_records(self) -> None:
+        schema_path = self.root / "schemas" / "therapy-record.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        forbidden_keys = {
+            "actionability_score",
+            "availability_for_patient",
+            "candidate_option",
+            "candidate_options",
+            "candidate_option_ids",
+            "case_id",
+            "date_of_birth",
+            "dose",
+            "dosing",
+            "eligibility",
+            "expanded_access_guidance",
+            "free_text_note",
+            "medical_record_number",
+            "option_rank",
+            "patient_id",
+            "raw_record",
+            "real_case_data",
+            "treatment_choice",
+            "treatment_recommendation",
+            "trial_match",
+            "trial_matching",
+        }
+        required_boundaries = {
+            "not-medical-advice",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        seen_records: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "therapy_record_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            record_id = doc.get("therapy_record_id")
+            if isinstance(record_id, str):
+                if record_id in seen_records:
+                    self.add_error(path, f"duplicate therapy_record_id: {record_id}")
+                seen_records.add(record_id)
+
+            boundaries = doc.get("clinical_use_boundary")
+            if isinstance(boundaries, list):
+                missing = sorted(required_boundaries - {value for value in boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+
+            for key in sorted(forbidden_keys):
+                for location, _value in self.find_key(doc, key):
+                    self.add_error(path, f"{location} is not allowed in public therapy-record records")
+
+    def validate_trial_landscape_records(self, known_source_ids: set[str]) -> None:
+        schema_path = self.root / "schemas" / "trial-landscape-record.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        forbidden_keys = {
+            "actionability_score",
+            "availability_for_patient",
+            "candidate_option",
+            "candidate_options",
+            "candidate_option_ids",
+            "case_id",
+            "date_of_birth",
+            "dose",
+            "dosing",
+            "eligibility",
+            "eligibility_guidance",
+            "enrollment_advice",
+            "enrollment_guidance",
+            "expanded_access_guidance",
+            "free_text_note",
+            "medical_record_number",
+            "option_rank",
+            "patient_fit",
+            "patient_id",
+            "raw_record",
+            "real_case_data",
+            "sponsor_access",
+            "sponsor_access_instruction",
+            "sponsor_access_instructions",
+            "treatment_choice",
+            "treatment_recommendation",
+            "trial_match",
+            "trial_matching",
+            "trial_recommendation",
+        }
+        required_boundaries = {
+            "not-medical-advice",
+            "not-diagnostic",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        seen_records: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "trial_landscape_record_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            record_id = doc.get("trial_landscape_record_id")
+            if isinstance(record_id, str):
+                if record_id in seen_records:
+                    self.add_error(path, f"duplicate trial_landscape_record_id: {record_id}")
+                seen_records.add(record_id)
+
+            boundaries = doc.get("clinical_use_boundary")
+            if isinstance(boundaries, list):
+                missing = sorted(required_boundaries - {value for value in boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+
+            source_values = doc.get("source_ids")
+            source_set = {value for value in source_values if isinstance(value, str)} if isinstance(source_values, list) else set()
+            provenance = doc.get("registry_provenance")
+            if isinstance(provenance, dict):
+                registry_source_ids = provenance.get("registry_source_ids")
+                if isinstance(registry_source_ids, list):
+                    for index, value in enumerate(registry_source_ids):
+                        if not isinstance(value, str):
+                            continue
+                        if value not in known_source_ids:
+                            self.add_error(
+                                path,
+                                f"registry_provenance.registry_source_ids[{index}] references unknown source_id: {value}",
+                            )
+                        if value not in source_set:
+                            self.add_error(
+                                path,
+                                f"registry_provenance.registry_source_ids[{index}] must also appear in source_ids: {value}",
+                            )
+
+            for key in sorted(forbidden_keys):
+                for location, _value in self.find_key(doc, key):
+                    self.add_error(path, f"{location} is not allowed in public trial-landscape records")
+
+    def validate_open_question_records(self) -> None:
+        schema_path = self.root / "schemas" / "open-question-record.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        forbidden_keys = {
+            "actionability",
+            "actionability_score",
+            "availability_for_patient",
+            "candidate_option",
+            "candidate_options",
+            "candidate_option_ids",
+            "case_id",
+            "clinical_importance",
+            "clinical_priority",
+            "clinical_priority_score",
+            "date_of_birth",
+            "evidence_rank",
+            "evidence_strength",
+            "evidence_strength_score",
+            "expanded_access_guidance",
+            "free_text_note",
+            "medical_record_number",
+            "option_rank",
+            "patient_id",
+            "patient_relevance",
+            "raw_record",
+            "real_case_data",
+            "treatment_choice",
+            "treatment_recommendation",
+            "trial_choice",
+            "trial_match",
+            "trial_matching",
+            "trial_recommendation",
+            "urgency",
+            "urgency_score",
+        }
+        required_boundaries = {
+            "not-medical-advice",
+            "not-diagnostic",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        seen_records: set[str] = set()
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "open_question_record_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            record_id = doc.get("open_question_record_id")
+            if isinstance(record_id, str):
+                if record_id in seen_records:
+                    self.add_error(path, f"duplicate open_question_record_id: {record_id}")
+                seen_records.add(record_id)
+
+            boundaries = doc.get("clinical_use_boundary")
+            if isinstance(boundaries, list):
+                missing = sorted(required_boundaries - {value for value in boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+
+            for key in sorted(forbidden_keys):
+                for location, _value in self.find_key(doc, key):
+                    self.add_error(path, f"{location} is not allowed in public open-question records")
+
+    def validate_review_packet_builder_manifest_records(
+        self,
+        known_source_ids: set[str],
+        artifact_metadata: dict[str, tuple[Path, dict[str, Any]]],
+    ) -> None:
+        schema_path = self.root / "schemas" / "review-packet-builder-manifest.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        forbidden_keys = {
+            "actionability",
+            "actionability_score",
+            "availability_for_patient",
+            "builder_output",
+            "candidate_option",
+            "candidate_options",
+            "candidate_option_ids",
+            "case_id",
+            "clinical_importance",
+            "clinical_priority",
+            "clinical_priority_score",
+            "date_of_birth",
+            "dose",
+            "dosing",
+            "eligibility",
+            "eligibility_guidance",
+            "enrollment_advice",
+            "enrollment_guidance",
+            "evidence_rank",
+            "evidence_strength",
+            "evidence_strength_score",
+            "expanded_access_guidance",
+            "free_text_note",
+            "generated_claim_text",
+            "generated_public_explainer",
+            "medical_record_number",
+            "option_rank",
+            "patient_fit",
+            "patient_id",
+            "patient_relevance",
+            "publication_authorization",
+            "raw_record",
+            "real_case_data",
+            "reviewer_email",
+            "reviewer_identity",
+            "reviewer_name",
+            "sponsor_access",
+            "sponsor_access_instruction",
+            "sponsor_access_instructions",
+            "treatment_choice",
+            "treatment_recommendation",
+            "trial_choice",
+            "trial_match",
+            "trial_matching",
+            "trial_recommendation",
+            "urgency",
+            "urgency_score",
+        }
+        required_boundaries = {
+            "not-medical-advice",
+            "not-diagnostic",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        required_false_flags = {
+            "builder_code_allowed",
+            "generated_claims_allowed",
+            "patient_specific_outputs_allowed",
+            "publication_authorization_allowed",
+        }
+        seen_records: set[str] = set()
+        known_artifact_ids = set(artifact_metadata)
+
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "review_packet_builder_manifest_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            record_id = doc.get("review_packet_builder_manifest_id")
+            if isinstance(record_id, str):
+                if record_id in seen_records:
+                    self.add_error(path, f"duplicate review_packet_builder_manifest_id: {record_id}")
+                seen_records.add(record_id)
+
+            boundaries = doc.get("clinical_use_boundary")
+            if isinstance(boundaries, list):
+                missing = sorted(required_boundaries - {value for value in boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+
+            builder_boundary = doc.get("builder_code_boundary")
+            if isinstance(builder_boundary, dict):
+                for flag in sorted(required_false_flags):
+                    if builder_boundary.get(flag) is not False:
+                        self.add_error(path, f"builder_code_boundary.{flag} must be false")
+
+            source_values = doc.get("source_ids")
+            source_set = {value for value in source_values if isinstance(value, str)} if isinstance(source_values, list) else set()
+            source_inputs = doc.get("source_inputs")
+            if isinstance(source_inputs, dict):
+                nested_source_ids = source_inputs.get("source_ids")
+                if isinstance(nested_source_ids, list):
+                    for index, value in enumerate(nested_source_ids):
+                        if not isinstance(value, str):
+                            continue
+                        if value not in known_source_ids:
+                            self.add_error(path, f"source_inputs.source_ids[{index}] references unknown source_id: {value}")
+                        if value not in source_set:
+                            self.add_error(path, f"source_inputs.source_ids[{index}] must also appear in source_ids: {value}")
+
+            target_packet = doc.get("target_packet")
+            if isinstance(target_packet, dict):
+                artifact_id = target_packet.get("artifact_id")
+                if isinstance(artifact_id, str) and artifact_id not in known_artifact_ids:
+                    self.add_error(path, f"target_packet.artifact_id references unknown artifact_id: {artifact_id}")
+                packet_path = target_packet.get("path")
+                if isinstance(packet_path, str) and not (self.root / packet_path).exists():
+                    self.add_error(path, f"target_packet.path does not exist: {packet_path}")
+
+            artifact_inputs = doc.get("artifact_inputs")
+            if isinstance(artifact_inputs, list):
+                for index, artifact_input in enumerate(artifact_inputs):
+                    if not isinstance(artifact_input, dict):
+                        continue
+                    artifact_id = artifact_input.get("artifact_id")
+                    if isinstance(artifact_id, str):
+                        metadata_record = artifact_metadata.get(artifact_id)
+                        if metadata_record is None:
+                            self.add_error(path, f"artifact_inputs[{index}].artifact_id references unknown artifact_id: {artifact_id}")
+                        else:
+                            metadata_path, metadata = metadata_record
+                            expected_metadata_path = self.rel(metadata_path).as_posix()
+                            if artifact_input.get("metadata_path") != expected_metadata_path:
+                                self.add_error(
+                                    path,
+                                    f"artifact_inputs[{index}].metadata_path is {artifact_input.get('metadata_path')!r}, expected {expected_metadata_path!r}",
+                                )
+                            if artifact_input.get("artifact_class") != metadata.get("artifact_class"):
+                                self.add_error(
+                                    path,
+                                    f"artifact_inputs[{index}].artifact_class is {artifact_input.get('artifact_class')!r}, expected {metadata.get('artifact_class')!r}",
+                                )
+                            if artifact_input.get("claim_level") != metadata.get("claim_level"):
+                                self.add_error(
+                                    path,
+                                    f"artifact_inputs[{index}].claim_level is {artifact_input.get('claim_level')!r}, expected {metadata.get('claim_level')!r}",
+                                )
+                    input_path = artifact_input.get("path")
+                    if isinstance(input_path, str) and not (self.root / input_path).exists():
+                        self.add_error(path, f"artifact_inputs[{index}].path does not exist: {input_path}")
+                    input_metadata_path = artifact_input.get("metadata_path")
+                    if isinstance(input_metadata_path, str) and not (self.root / input_metadata_path).exists():
+                        self.add_error(path, f"artifact_inputs[{index}].metadata_path does not exist: {input_metadata_path}")
+
+            schema_inputs = doc.get("schema_inputs")
+            if isinstance(schema_inputs, list):
+                for index, schema_input in enumerate(schema_inputs):
+                    if not isinstance(schema_input, dict):
+                        continue
+                    schema_input_path = schema_input.get("schema_path")
+                    if isinstance(schema_input_path, str) and not (self.root / schema_input_path).exists():
+                        self.add_error(path, f"schema_inputs[{index}].schema_path does not exist: {schema_input_path}")
+                    template_path = schema_input.get("template_path")
+                    if isinstance(template_path, str) and template_path and not (self.root / template_path).exists():
+                        self.add_error(path, f"schema_inputs[{index}].template_path does not exist: {template_path}")
+
+            for key in sorted(forbidden_keys):
+                for location, _value in self.find_key(doc, key):
+                    self.add_error(path, f"{location} is not allowed in public review-packet builder manifest records")
+
+    def validate_review_packet_route_table_outputs(self) -> None:
+        schema_path = self.root / "schemas" / "review-packet-route-table-output.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        forbidden_keys = {
+            "actionability",
+            "actionability_score",
+            "availability_for_patient",
+            "builder_output",
+            "candidate_option",
+            "candidate_options",
+            "candidate_option_ids",
+            "case_id",
+            "clinical_importance",
+            "clinical_priority",
+            "clinical_priority_score",
+            "date_of_birth",
+            "dose",
+            "dosing",
+            "eligibility",
+            "eligibility_guidance",
+            "enrollment_advice",
+            "enrollment_guidance",
+            "evidence_rank",
+            "evidence_strength",
+            "evidence_strength_score",
+            "expanded_access_guidance",
+            "free_text_note",
+            "generated_claim_text",
+            "generated_packet_output",
+            "generated_public_explainer",
+            "medical_record_number",
+            "option_rank",
+            "packet_assembly",
+            "patient_fit",
+            "patient_id",
+            "patient_relevance",
+            "publication_authorization",
+            "raw_record",
+            "real_case_data",
+            "recommendation",
+            "reviewer_email",
+            "reviewer_identity",
+            "reviewer_name",
+            "sponsor_access",
+            "sponsor_access_instruction",
+            "sponsor_access_instructions",
+            "treatment_choice",
+            "treatment_recommendation",
+            "trial_choice",
+            "trial_match",
+            "trial_matching",
+            "trial_recommendation",
+            "urgency",
+            "urgency_score",
+        }
+        required_output_boundaries = {
+            "copied-reference routing only",
+            "not a review packet",
+            "not expert review",
+            "not generated biomedical prose",
+            "not medical advice",
+            "not publication-ready",
+        }
+        required_clinical_boundaries = {
+            "not-medical-advice",
+            "not-diagnostic",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        seen_records: set[str] = set()
+
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "route_table_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            record_id = doc.get("route_table_id")
+            if isinstance(record_id, str):
+                if record_id in seen_records:
+                    self.add_error(path, f"duplicate route_table_id: {record_id}")
+                seen_records.add(record_id)
+
+            if doc.get("tool") != "tools/review_packet_manifest_route_table.py":
+                self.add_error(path, "tool must be tools/review_packet_manifest_route_table.py")
+
+            output_boundaries = doc.get("output_boundary")
+            if isinstance(output_boundaries, list):
+                missing = sorted(required_output_boundaries - {value for value in output_boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"output_boundary missing required values: {', '.join(missing)}")
+
+            status = doc.get("route_table_status")
+            routes = doc.get("copied_reference_routes")
+            refusals = doc.get("refusal_records")
+            if status == "refused":
+                if isinstance(routes, list) and routes:
+                    self.add_error(path, "refused route-table outputs must not contain copied_reference_routes")
+            elif status in {"route-table-ready", "route-table-ready-with-missing-inputs"}:
+                if isinstance(routes, list) and not routes:
+                    self.add_error(path, "ready route-table outputs must contain copied_reference_routes")
+                if isinstance(refusals, list) and refusals:
+                    self.add_error(path, "ready route-table outputs must not contain refusal_records")
+                clinical_boundaries = doc.get("clinical_use_boundary")
+                if isinstance(clinical_boundaries, list):
+                    missing = sorted(
+                        required_clinical_boundaries - {value for value in clinical_boundaries if isinstance(value, str)}
+                    )
+                    if missing:
+                        self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+                else:
+                    self.add_error(path, "ready route-table outputs must include clinical_use_boundary")
+
+            for key in sorted(forbidden_keys):
+                for location, _value in self.find_key(doc, key):
+                    self.add_error(path, f"{location} is not allowed in public route-table output records")
+
+    def validate_case_to_cure_synthetic_pipelines(self) -> None:
+        schema_path = self.root / "schemas" / "case-to-cure-synthetic-pipeline.schema.json"
+        schema = self.json_docs.get(schema_path)
+        if not isinstance(schema, dict):
+            return
+
+        expected_stage_ids = {f"case_{index:02d}" for index in range(15)}
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "synthetic_case_pipeline_id" not in doc:
+                continue
+            self.validate_against_schema(path, doc, schema)
+
+            notice = doc.get("synthetic_case_notice")
+            if isinstance(notice, dict):
+                if notice.get("uses_real_patient_data") is not False:
+                    self.add_error(path, "synthetic_case_notice.uses_real_patient_data must be false")
+                if notice.get("contains_phi") is not False:
+                    self.add_error(path, "synthetic_case_notice.contains_phi must be false")
+                if notice.get("contains_patient_specific_recommendation") is not False:
+                    self.add_error(path, "synthetic_case_notice.contains_patient_specific_recommendation must be false")
+
+            stages = doc.get("pipeline_stages")
+            if isinstance(stages, list):
+                seen_stage_ids: set[str] = set()
+                for index, stage in enumerate(stages):
+                    if not isinstance(stage, dict):
+                        continue
+                    stage_id = stage.get("stage_id")
+                    if isinstance(stage_id, str):
+                        if stage_id in seen_stage_ids:
+                            self.add_error(path, f"pipeline_stages[{index}] duplicate stage_id: {stage_id}")
+                        seen_stage_ids.add(stage_id)
+                missing = sorted(expected_stage_ids - seen_stage_ids)
+                if missing:
+                    self.add_error(path, f"pipeline_stages missing required stage ids: {', '.join(missing)}")
+
+            publication_gate = doc.get("publication_gate_result")
+            if isinstance(publication_gate, dict):
+                if publication_gate.get("actual_case_data_publication_allowed") is not False:
+                    self.add_error(path, "publication_gate_result.actual_case_data_publication_allowed must be false")
+                if publication_gate.get("patient_specific_outputs_publication_allowed") is not False:
+                    self.add_error(path, "publication_gate_result.patient_specific_outputs_publication_allowed must be false")
 
     def validate_source_references(self, known_ids: set[str]) -> None:
         for path, doc in self.json_docs.items():

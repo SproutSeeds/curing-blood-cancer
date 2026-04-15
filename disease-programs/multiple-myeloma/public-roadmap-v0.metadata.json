@@ -1,0 +1,43 @@
+{
+  "artifact_id": "multiple-myeloma-public-roadmap-v0",
+  "title": "Multiple Myeloma Public Roadmap v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "public roadmap",
+    "research tooling"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Durable MRD-Negative Remission Cure Wedge v0",
+      "url": "./cure-wedge-durable-mrd-negative-remission-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../sources/source-registry-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Private-to-public workflow",
+      "url": "../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research roadmap only.",
+    "Not medical advice.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Execution priorities may change as public sources, reviews, and safety boundaries evolve."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-public-roadmap-v0.md"
+}

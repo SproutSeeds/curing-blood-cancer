@@ -1,0 +1,148 @@
+{
+  "checklist_id": "multiple-myeloma-publication-gate-checklist-v0",
+  "date": "2026-04-15",
+  "disease_program": "multiple-myeloma",
+  "title": "Publication-Gate Checklist v0",
+  "clinical_use_boundary": "research-use-only",
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "clinicaltrials_gov_api_v2",
+    "pubmed",
+    "fda_drugs_at_fda"
+  ],
+  "linked_public_artifacts": [
+    "multiple-myeloma-case-to-cure-pipeline-blueprint-v0",
+    "multiple-myeloma-synthetic-case-to-cure-pipeline-v0",
+    "case-feature-bundle-public-summary-v0",
+    "multiple-myeloma-candidate-option-scoring-rubric-v0",
+    "multiple-myeloma-roadmap-public-task-queue-v0",
+    "docs/private-to-public-workflow.md",
+    "governance/PUBLIC_SAFETY.md"
+  ],
+  "allowed_public_output_types": [
+    {
+      "output_type": "synthetic-method-fixture",
+      "allowed_public_shape": "Fully synthetic example that exercises public schemas, protocols, or tooling.",
+      "not_allowed": "Real case timelines, rare feature combinations, clinician notes, images, or identifiers."
+    },
+    {
+      "output_type": "generic-method-improvement",
+      "allowed_public_shape": "Reusable checklist, template, schema summary, protocol field, or validator rule.",
+      "not_allowed": "Private lab operations, re-identification keys, patient-specific decisions, or unreleasable source text."
+    },
+    {
+      "output_type": "aggregate-learning",
+      "allowed_public_shape": "De-identified aggregate pattern that has passed private governance and public safety review.",
+      "not_allowed": "Any single-person fact, date tied to a person, site-level trace, or identifying feature combination."
+    },
+    {
+      "output_type": "public-source-linkage",
+      "allowed_public_shape": "Linkage between public source IDs, claim IDs, gap IDs, query-record IDs, measurement terms, or task IDs.",
+      "not_allowed": "Linkage that reveals a private case, treating institution, clinician, sponsor contact, or real case trajectory."
+    }
+  ],
+  "required_release_record_fields": [
+    "proposed_public_artifact_id",
+    "artifact_class",
+    "allowed_output_type",
+    "disease_or_subtype_scope",
+    "public_source_ids",
+    "linked_public_ids",
+    "uncertainty_and_missingness_notes",
+    "limitations",
+    "what_not_to_infer",
+    "review_status",
+    "needed_reviewer_roles",
+    "privacy_decision_state",
+    "clinical_use_boundary",
+    "final_gate_decision"
+  ],
+  "gates": [
+    {
+      "gate_id": "gate-output-type",
+      "requirement": "Artifact is synthetic, generic method learning, public-source linkage, or separately reviewed aggregate learning.",
+      "pass_evidence": "Release record names one allowed output type.",
+      "fail_closed_action": "Block public release until output type is narrowed."
+    },
+    {
+      "gate_id": "gate-privacy",
+      "requirement": "No PHI, identifiers, raw records, re-identification keys, exact dates tied to a person, images, free-text notes, or identifying feature combinations are present.",
+      "pass_evidence": "Privacy review state is passed-public-boundary and artifact contains only public-safe fields.",
+      "fail_closed_action": "Block release and return to private governance."
+    },
+    {
+      "gate_id": "gate-private-provenance",
+      "requirement": "Private upstream reference is non-sensitive and does not expose records, dates, people, sites, sponsors, or treating-team context.",
+      "pass_evidence": "Metadata uses only a coarse private upstream path or omits private references.",
+      "fail_closed_action": "Remove or rewrite the reference before public review."
+    },
+    {
+      "gate_id": "gate-public-provenance",
+      "requirement": "Public source IDs, artifact IDs, query-record IDs, claim IDs, evidence-gap IDs, or measurement-term IDs are present where the artifact depends on them.",
+      "pass_evidence": "Release record lists stable public IDs and source access dates.",
+      "fail_closed_action": "Block release until provenance is traceable."
+    },
+    {
+      "gate_id": "gate-scope",
+      "requirement": "Disease, subtype, mechanism, treatment-class, measurement, and setting boundaries are explicit.",
+      "pass_evidence": "Scope field states what is and is not covered.",
+      "fail_closed_action": "Rewrite scope before public review."
+    },
+    {
+      "gate_id": "gate-uncertainty",
+      "requirement": "Uncertainty, missingness, contradictions, and limitations are stated in plain language.",
+      "pass_evidence": "Limitations and what-not-to-infer sections are present.",
+      "fail_closed_action": "Block release until limitations are explicit."
+    },
+    {
+      "gate_id": "gate-claim-label",
+      "requirement": "Facts, derived claims, hypotheses, open questions, and do-not-use-clinically material are separated.",
+      "pass_evidence": "Release record names the claim label used by each substantive statement.",
+      "fail_closed_action": "Split or relabel claims before release."
+    },
+    {
+      "gate_id": "gate-review-status",
+      "requirement": "Source-checked, expert-review-needed, expert-reviewed, blocked, and deprecated statuses remain distinct.",
+      "pass_evidence": "Review status and needed reviewer roles are visible.",
+      "fail_closed_action": "Block release if review status is ambiguous or overstated."
+    },
+    {
+      "gate_id": "gate-clinical-boundary",
+      "requirement": "Artifact contains no diagnosis, prognosis, treatment advice, trial advice, expanded-access advice, monitoring instruction, candidate ranking, or cure claim.",
+      "pass_evidence": "Clinical boundary text is present and matches repository safety rules.",
+      "fail_closed_action": "Block release and remove clinical-use language."
+    },
+    {
+      "gate_id": "gate-candidate-options",
+      "requirement": "Patient-specific candidate options, option rankings, and action recommendations are not downstreamed.",
+      "pass_evidence": "Candidate material is absent or reduced to generic task, gap, query-pattern, or review prompt language.",
+      "fail_closed_action": "Block release or convert to private-only review packet work."
+    },
+    {
+      "gate_id": "gate-external-decisions",
+      "requirement": "Clinical, legal, regulatory, sponsor, institutional-review, and treating-team decisions stay outside the public repo.",
+      "pass_evidence": "Release record names external decision classes as out of scope.",
+      "fail_closed_action": "Block release until decision language is removed."
+    },
+    {
+      "gate_id": "gate-repository-readiness",
+      "requirement": "Metadata, catalog links, validation status, and public navigation links are prepared before publication.",
+      "pass_evidence": "make validate passes and catalog or README links are updated when required.",
+      "fail_closed_action": "Keep artifact out of public release until validation passes."
+    }
+  ],
+  "decision_outcomes": [
+    "blocked-private",
+    "revise-public-method",
+    "aggregate-review-needed",
+    "public-release-candidate",
+    "public-release-blocked"
+  ],
+  "fail_closed_default": "blocked-private",
+  "review_boundary": [
+    "Publication-readiness protocol only.",
+    "Does not authorize publication of real case facts.",
+    "Does not provide medical, diagnostic, treatment, trial, expanded-access, or monitoring guidance.",
+    "Does not establish clinical truth, eligibility, availability, feasibility, or cure."
+  ]
+}

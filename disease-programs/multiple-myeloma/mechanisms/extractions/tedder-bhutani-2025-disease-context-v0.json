@@ -1,0 +1,134 @@
+{
+  "extraction_record_id": "tedder-bhutani-2025-disease-context-v0",
+  "date": "2026-04-15",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "post-car-t-relapse-mechanism-map-v0",
+  "source_ids": [
+    "clinicaltrials_gov",
+    "clinicaltrials_gov_api_v2",
+    "nci_pdq_myeloma_hp",
+    "pubmed_tedder_bhutani_2025_bcma_resistance"
+  ],
+  "taxonomy_class_ids": [
+    "myeloma_class_bispecific_antibody",
+    "myeloma_class_car_t_cell_therapy"
+  ],
+  "mechanism_group_ids": [
+    "disease-burden-site-risk-context-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "Public source-anchor context extraction",
+    "title": "Disease burden, disease site, high-risk, prior-therapy, and registry-context fields for post-BCMA relapse mechanism review.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40710330/",
+    "doi": "10.3390/cells14141077",
+    "pmid": "40710330",
+    "accessed": "2026-04-15",
+    "publication_year": 2025,
+    "study_context": "Public source-anchor extraction for relapse-mechanism context fields in multiple myeloma. Tedder and Bhutani 2025 provides BCMA-resistance review framing; NCI PDQ and ClinicalTrials.gov anchors provide public context-field labels only, not patient-specific risk, eligibility, availability, efficacy, or safety conclusions."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "baseline-burden-site-risk-context-field-signal-v0",
+      "mechanism_group_id": "disease-burden-site-risk-context-v0",
+      "signal_summary": "Disease burden, disease site, and high-risk disease context should travel as context fields before interpreting public relapse-mechanism artifacts.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "baseline disease burden",
+        "disease site",
+        "extramedullary disease or plasmacytoma context",
+        "high-risk cytogenetic or molecular context",
+        "relapsed or refractory disease state"
+      ],
+      "limitations": [
+        "This is context-field coverage, not proof that any field causes relapse.",
+        "Definitions must remain source-specific until a validated cross-source extraction rule exists.",
+        "No patient-specific risk interpretation is supported."
+      ]
+    },
+    {
+      "signal_id": "prior-therapy-bcma-exposure-context-signal-v0",
+      "mechanism_group_id": "disease-burden-site-risk-context-v0",
+      "signal_summary": "Prior therapy, prior BCMA exposure, and prior immune-therapy class should be preserved as context fields when reviewing post-BCMA relapse mechanisms.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "prior lines of therapy",
+        "prior BCMA-targeted therapy exposure",
+        "prior CAR T-cell therapy exposure",
+        "prior bispecific antibody exposure",
+        "prior antibody-drug conjugate exposure",
+        "refractory status as defined by the source"
+      ],
+      "limitations": [
+        "Does not establish an optimal therapy sequence.",
+        "Does not rank products, targets, or intervention classes.",
+        "Does not recommend treatment for any person."
+      ]
+    },
+    {
+      "signal_id": "registry-eligibility-context-field-signal-v0",
+      "mechanism_group_id": "disease-burden-site-risk-context-v0",
+      "signal_summary": "ClinicalTrials.gov records and API fields can provide registry context such as disease condition, intervention class, eligibility text, enrollment status, and update metadata, but those fields must not be treated as proof of eligibility or availability.",
+      "evidence_level": "registry-record",
+      "direction": "supports",
+      "measurement_fields": [
+        "registry disease condition",
+        "registry intervention class",
+        "eligibility criteria text",
+        "prior therapy requirement text",
+        "measurable disease criterion text",
+        "enrollment status",
+        "registry freshness or last-update field"
+      ],
+      "limitations": [
+        "Trial registry context does not prove efficacy, safety, availability, or eligibility.",
+        "Registry records can be incomplete, stale, or differently worded across sponsors.",
+        "No trial recommendation or patient matching is supported."
+      ]
+    },
+    {
+      "signal_id": "context-not-causal-mechanism-boundary-signal-v0",
+      "mechanism_group_id": "disease-burden-site-risk-context-v0",
+      "signal_summary": "Disease burden, site, high-risk, prior-exposure, and registry-eligibility fields should be separated from direct biological mechanism claims unless a cited source explicitly supports a causal interpretation.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "context-variable flag",
+        "causal-mechanism flag",
+        "source-definition preservation",
+        "expert-review-needed status",
+        "no-clinical-use boundary"
+      ],
+      "limitations": [
+        "The extraction marks interpretation boundaries rather than establishing a biological mechanism.",
+        "The field list is not comprehensive across all myeloma disease states.",
+        "Expert review is still needed before stronger educational summaries reuse these fields."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "The disease-burden, disease-site, high-risk, prior-therapy, and registry-eligibility bucket now has first public extraction coverage.",
+      "Public maps should carry disease-context fields before comparing relapse-mechanism buckets.",
+      "Registry fields can be used as context labels only when their no-eligibility, no-availability, no-efficacy, and no-safety boundaries remain explicit."
+    ],
+    "what_this_does_not_support": [
+      "It does not prove any context field causes relapse.",
+      "It does not estimate patient-specific risk, prognosis, treatment fit, trial eligibility, or monitoring needs.",
+      "It does not rank relapse mechanisms, therapies, targets, products, trials, or access paths.",
+      "It does not establish a cure claim."
+    ]
+  },
+  "review": {
+    "created": "2026-04-15",
+    "last_reviewed": "2026-04-15",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from public source anchors only; no real case data or private lab context is included.",
+      "Use this extraction to test context-field plumbing in the public mechanism map, not to make patient-specific or clinical claims.",
+      "ClinicalTrials.gov and NCI PDQ anchors are included for field-label context and claim boundaries, not as proof of trial eligibility, availability, safety, efficacy, or patient risk."
+    ]
+  }
+}

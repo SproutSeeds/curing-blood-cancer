@@ -105,3 +105,42 @@ Show review items for one claim:
 ```bash
 make list-review-packets ARGS="--claim-id bcma-resistance-is-multifactorial-v0"
 ```
+
+### Review-Packet Manifest Route-Table Dry Run
+
+Run:
+
+```bash
+python3 tools/review_packet_manifest_route_table.py
+```
+
+Or:
+
+```bash
+make review-packet-route-table
+```
+
+The route-table dry run reads the public placeholder review-packet builder
+manifest, checks public IDs and paths, and emits copied-reference routes,
+missing-input records, and refusal records. It is not a review-packet builder,
+not expert review, not generated biomedical prose, not medical advice, and not
+publication-ready output.
+
+Machine-readable output:
+
+```bash
+make review-packet-route-table ARGS="--json"
+```
+
+Focused fail-closed checks:
+
+```bash
+make review-packet-route-table ARGS="--self-test"
+```
+
+The self-test checks the valid placeholder manifest plus refusal cases for a
+forbidden field, missing path, unknown source ID, and missing clinical-use
+boundary. Route-table outputs validate against
+[`Review-Packet Route-Table Output Schema v0`](../schemas/review-packet-route-table-output-schema-v0.md).
+The tool uses only the Python standard library and reads only public repository
+files.
