@@ -15,7 +15,8 @@
     "pubmed_di_meo_2025_sema4a_low_bcma",
     "pubmed_tedder_bhutani_2025_bcma_resistance",
     "pubmed_ledergor_2024_cd4_car_t_exhaustion",
-    "pubmed_plasma_cell_identity_escape_2025"
+    "pubmed_plasma_cell_identity_escape_2025",
+    "pubmed_yue_2025_bcma_resistance"
   ],
   "claim_set_ids": [
     "bcma-antigen-escape-claim-set-v0"
@@ -40,7 +41,8 @@
     "di-meo-2025-sema4a-low-bcma-v0",
     "tedder-bhutani-2025-bcma-resistance-review-v0",
     "ledergor-2024-cd4-car-t-exhaustion-v0",
-    "maura-2025-plasma-cell-identity-escape-v0"
+    "maura-2025-plasma-cell-identity-escape-v0",
+    "yue-2025-bcma-resistance-review-v0"
   ],
   "gaps": [
     {
@@ -191,19 +193,21 @@
       "extraction_record_ids": [
         "tedder-bhutani-2025-bcma-resistance-review-v0",
         "ledergor-2024-cd4-car-t-exhaustion-v0",
-        "maura-2025-plasma-cell-identity-escape-v0"
+        "maura-2025-plasma-cell-identity-escape-v0",
+        "yue-2025-bcma-resistance-review-v0"
       ],
       "source_ids": [
         "pubmed_tedder_bhutani_2025_bcma_resistance",
         "pubmed_ledergor_2024_cd4_car_t_exhaustion",
-        "pubmed_plasma_cell_identity_escape_2025"
+        "pubmed_plasma_cell_identity_escape_2025",
+        "pubmed_yue_2025_bcma_resistance"
       ],
       "public_next_actions": [
-        "Add additional source-specific extraction records for immune fitness, persistence, microenvironment, sequencing, plasma-cell identity, and disease-burden context.",
+        "Add additional source-specific extraction records for plasma-cell identity, disease-burden context, sequencing, and deeper immune fitness or persistence details.",
         "Keep the mechanism coverage report current as each bucket moves from no extraction to first extraction to second-source coverage."
       ],
       "what_would_improve_confidence": [
-        "Full-text extraction across multiple non-antigen-loss sources, including second-source extraction for plasma-cell identity or lineage-state escape.",
+        "Full-text extraction across multiple non-antigen-loss sources, including second-source extraction for plasma-cell identity or lineage-state escape and primary-study extraction for immune fitness fields.",
         "Mechanism-bucket coverage metrics before any prioritization claim."
       ],
       "what_not_to_infer": [
@@ -241,13 +245,15 @@
         "firestone-2024-bcma-antigen-escape-v0",
         "di-meo-2025-sema4a-low-bcma-v0",
         "tedder-bhutani-2025-bcma-resistance-review-v0",
-        "ledergor-2024-cd4-car-t-exhaustion-v0"
+        "ledergor-2024-cd4-car-t-exhaustion-v0",
+        "yue-2025-bcma-resistance-review-v0"
       ],
       "source_ids": [
         "pubmed_antigen_escape_bcma_directed_2024",
         "pubmed_di_meo_2025_sema4a_low_bcma",
         "pubmed_tedder_bhutani_2025_bcma_resistance",
-        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+        "pubmed_yue_2025_bcma_resistance"
       ],
       "public_next_actions": [
         "Use bcma-claim-set-expert-review-packet-v0 to collect claim-scope, measurement-assumption, source-quality, and safety-language review notes.",
@@ -273,7 +279,8 @@
     "review_notes": [
       "Built from the BCMA antigen escape claim set, public extraction records, and measurement glossary.",
       "Designed as a public work queue, not an evidence-strength score.",
-      "Issue #5 created a mapped expert-review packet; target artifacts remain source-checked until qualified review is completed."
+      "Issue #5 created a mapped expert-review packet; target artifacts remain source-checked until qualified review is completed.",
+      "Issue #15 adds Yue 2025 as review-level second-source coverage for the CAR T fitness bucket."
     ]
   }
 }

@@ -20,11 +20,11 @@ Coverage Report into contribution-ready public source-extraction tasks.
 
 - [Post-CAR T Relapse Mechanism Coverage Report v0](../mechanisms/post-car-t-relapse-mechanism-coverage-v0.md)
 
-## Ready Tasks
+## Task Status
 
 | Task ID | Priority | Status | GitHub Issue | Linked Gap | Mechanism Bucket |
 | --- | --- | --- | --- | --- | --- |
-| `car-t-fitness-second-source-extraction-task-v0` | high | ready | [#15](https://github.com/SproutSeeds/curing-blood-cancer/issues/15) | `non-antigen-loss-relapse-buckets-gap-v0` | `car-t-fitness-exhaustion-persistence-v0` |
+| `car-t-fitness-second-source-extraction-task-v0` | high | done | [#15](https://github.com/SproutSeeds/curing-blood-cancer/issues/15) | `non-antigen-loss-relapse-buckets-gap-v0` | `car-t-fitness-exhaustion-persistence-v0` |
 | `plasma-cell-identity-first-extraction-task-v0` | high | done | [#14](https://github.com/SproutSeeds/curing-blood-cancer/issues/14) | `non-antigen-loss-relapse-buckets-gap-v0` | `plasma-cell-identity-or-lineage-state-escape-v0` |
 | `disease-burden-site-risk-context-first-extraction-task-v0` | medium | ready | [#16](https://github.com/SproutSeeds/curing-blood-cancer/issues/16) | `non-antigen-loss-relapse-buckets-gap-v0` | `disease-burden-site-risk-context-v0` |
 
@@ -38,14 +38,17 @@ Coverage Report into contribution-ready public source-extraction tasks.
 
 ### CAR T Fitness, Exhaustion, Expansion, Or Persistence
 
-The coverage report currently has one extraction record for this bucket. The
-next task adds a second public source extraction before any cross-source
-comparison is attempted.
+The coverage report now has second-source coverage from
+`ledergor-2024-cd4-car-t-exhaustion-v0` and
+`yue-2025-bcma-resistance-review-v0`.
 
-Candidate public source anchors:
+Yue 2025 is review-level category coverage for T-cell-driven factors and
+immune tumor microenvironment framing. It should not be treated as a
+cohort-level measurement source.
+
+Remaining public source anchor for deeper expansion:
 
 - `pubmed_tedder_bhutani_2025_bcma_resistance`
-- `pubmed_yue_2025_bcma_resistance`
 
 ### Plasma-Cell Identity Or Lineage-State Escape
 

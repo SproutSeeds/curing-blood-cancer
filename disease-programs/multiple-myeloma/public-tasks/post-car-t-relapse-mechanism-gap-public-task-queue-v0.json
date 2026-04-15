@@ -29,7 +29,7 @@
       "task_title": "Add a second public source extraction for CAR T fitness, exhaustion, expansion, or persistence",
       "task_type": "source-extraction-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0"
@@ -44,7 +44,8 @@
         "relapse-or-disease-progression"
       ],
       "extraction_record_ids": [
-        "ledergor-2024-cd4-car-t-exhaustion-v0"
+        "ledergor-2024-cd4-car-t-exhaustion-v0",
+        "yue-2025-bcma-resistance-review-v0"
       ],
       "source_ids": [
         "pubmed_tedder_bhutani_2025_bcma_resistance",
@@ -61,7 +62,8 @@
         "The new extraction uses the mechanism extraction schema and passes make validate.",
         "The extraction preserves source_id, mechanism_group_id, measurement_term_ids, and clinical_use_boundary.",
         "Review-article statements are not treated as cohort-level measurements unless the underlying source provides them.",
-        "Coverage counts are described only as public artifact coverage, not mechanism frequency or biological priority."
+        "Coverage counts are described only as public artifact coverage, not mechanism frequency or biological priority.",
+        "Completed in public follow-up PR for issue #15 using yue-2025-bcma-resistance-review-v0."
       ],
       "what_not_to_infer": [
         "Do not infer that CAR T exhaustion or persistence is the dominant relapse mechanism.",

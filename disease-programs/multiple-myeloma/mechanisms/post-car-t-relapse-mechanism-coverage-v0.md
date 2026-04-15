@@ -31,12 +31,12 @@ structured artifacts for the most biologically important bucket.
 
 | Mechanism Bucket | Signals | Extraction Records | Status | Next Extraction Need |
 | --- | ---: | ---: | --- | --- |
-| BCMA antigen loss, low density, or target alteration | 4 | 3 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
-| CAR T fitness, exhaustion, expansion, or persistence | 3 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
+| BCMA antigen loss, low density, or target alteration | 5 | 4 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
+| CAR T fitness, exhaustion, expansion, or persistence | 5 | 2 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
 | Plasma-cell identity or lineage-state escape | 2 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
 | Disease burden, site, and high-risk context | 0 | 0 | needs-first-extraction | Add the first source-specific extraction. |
 | Sequential or dual-target immune pressure | 5 | 3 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
-| Measurement and follow-up gaps | 6 | 5 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
+| Measurement and follow-up gaps | 7 | 6 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
 
 ## Under-Covered Buckets
 
@@ -51,13 +51,6 @@ structured artifacts for the most biologically important bucket.
 
 ### Needs Second Source Extraction
 
-- `car-t-fitness-exhaustion-persistence-v0`
-  - current public extraction: `ledergor-2024-cd4-car-t-exhaustion-v0`
-  - public source anchors for expansion:
-    `pubmed_tedder_bhutani_2025_bcma_resistance`,
-    `pubmed_yue_2025_bcma_resistance`
-  - next step: add at least one additional source-specific extraction before
-    comparing immune fitness, exhaustion, persistence, or expansion signals
 - `plasma-cell-identity-or-lineage-state-escape-v0`
   - current public extraction:
     `maura-2025-plasma-cell-identity-escape-v0`
@@ -66,6 +59,15 @@ structured artifacts for the most biologically important bucket.
     `pubmed_di_meo_2025_sema4a_low_bcma`
   - next step: add at least one additional source-specific extraction before
     comparing identity or lineage-state evidence across sources
+
+### Second-Source Coverage Added
+
+- `car-t-fitness-exhaustion-persistence-v0`
+  - current public extractions: `ledergor-2024-cd4-car-t-exhaustion-v0`,
+    `yue-2025-bcma-resistance-review-v0`
+  - note: Yue 2025 is review-level category coverage for T-cell-driven and
+    immune tumor microenvironment resistance framing; it is not cohort-level
+    measurement evidence
 
 ## Reproduce
 
