@@ -64,6 +64,8 @@ research directions deserve structured public tracking.
 - [Case-Specific Private-Lab Blocker Register v0](case-specific-private-lab-blocker-register-v0.md)
 - [Public Loop Completion Handoff v0](public-loop-completion-handoff-v0.md)
 - [Public Review And Release Gate v0](public-review-release-gate-v0.md)
+- [Public Inventory v0](public-inventory-v0.md)
+- [Public Review Release Gate Pass v0](public-review-release-gate-pass-v0.md)
 - [Review-Packet Manifest Route-Table Dry-Run Tool v0](../../tools/review_packet_manifest_route_table.py)
 - [Case-Feature Bundle Public Summary v0](../../schemas/case-feature-bundle-public-summary-v0.md)
 - [Cure Wedge v0](cure-wedge-durable-mrd-negative-remission-v0.md)

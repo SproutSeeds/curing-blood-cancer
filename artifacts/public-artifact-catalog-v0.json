@@ -356,6 +356,40 @@
       "limitation_count": 12
     },
     {
+      "artifact_id": "multiple-myeloma-public-inventory-v0",
+      "title": "Multiple Myeloma Public Inventory v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "public inventory",
+        "public navigation",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-inventory-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-inventory-v0.metadata.json",
+      "source_count": 7,
+      "limitation_count": 11
+    },
+    {
+      "artifact_id": "multiple-myeloma-public-review-release-gate-pass-v0",
+      "title": "Multiple Myeloma Public Review Release Gate Pass v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "public release readiness",
+        "maintainer review",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-review-release-gate-pass-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-review-release-gate-pass-v0.metadata.json",
+      "source_count": 8,
+      "limitation_count": 12
+    },
+    {
       "artifact_id": "review-packet-manifest-route-table-tool-v0",
       "title": "Review-Packet Manifest Route-Table Dry-Run Tool v0",
       "artifact_class": "tool",
@@ -804,7 +838,9 @@
       "Added the multiple myeloma definition-of-complete audit as the aggregate loop audit selecting a case-specific private-lab blocker register task.",
       "Added the case-specific private-lab blocker register as a stage-by-stage public-safe boundary map for remaining case-specific work.",
       "Added the multiple myeloma public loop completion handoff as the current endpoint for the v0 autonomous public loop.",
-      "Added the multiple myeloma public review and release gate as the next human-gated phase seed."
+      "Added the multiple myeloma public review and release gate as the next human-gated phase seed.",
+      "Added the multiple myeloma public inventory as the current-state map for PR review.",
+      "Added the multiple myeloma public review release gate pass as the repository-readiness review artifact for protected-branch review."
     ]
   }
 }

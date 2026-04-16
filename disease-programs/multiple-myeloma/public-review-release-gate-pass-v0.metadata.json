@@ -1,0 +1,70 @@
+{
+  "artifact_id": "multiple-myeloma-public-review-release-gate-pass-v0",
+  "title": "Multiple Myeloma Public Review Release Gate Pass v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "public release readiness",
+    "maintainer review",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Public Review And Release Gate v0",
+      "url": "./public-review-release-gate-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Public Loop Completion Handoff v0",
+      "url": "./public-loop-completion-handoff-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Definition-Of-Complete Audit v0",
+      "url": "./definition-of-complete-audit-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Case-Specific Private-Lab Blocker Register v0",
+      "url": "./case-specific-private-lab-blocker-register-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multiple Myeloma Public Inventory v0",
+      "url": "./public-inventory-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Private To Public Workflow",
+      "url": "../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only repository-readiness artifact.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide eligibility guidance, expanded-access guidance, monitoring guidance, or publication authorization for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not complete expert review or clinical review.",
+    "Does not prove source coverage is comprehensive.",
+    "Does not inspect private lab records or real case data.",
+    "Does not authorize generated claims, ranking, recommendation behavior, patient matching, trial matching, review-packet assembly, or publication workflow.",
+    "Does not require credentials, paid APIs, account changes, restricted datasets, clinician decisions, sponsor decisions, regulatory decisions, or institutional decisions."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-public-review-release-gate-pass-v0.md"
+}

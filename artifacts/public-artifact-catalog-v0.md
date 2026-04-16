@@ -56,6 +56,8 @@ Read the machine-readable catalog at
 | Case-Specific Private-Lab Blocker Register v0 | dataset | open-question | [disease-programs/multiple-myeloma/case-specific-private-lab-blocker-register-v0.md](../disease-programs/multiple-myeloma/case-specific-private-lab-blocker-register-v0.md) |
 | Multiple Myeloma Public Loop Completion Handoff v0 | protocol | open-question | [disease-programs/multiple-myeloma/public-loop-completion-handoff-v0.md](../disease-programs/multiple-myeloma/public-loop-completion-handoff-v0.md) |
 | Multiple Myeloma Public Review And Release Gate v0 | protocol | open-question | [disease-programs/multiple-myeloma/public-review-release-gate-v0.md](../disease-programs/multiple-myeloma/public-review-release-gate-v0.md) |
+| Multiple Myeloma Public Inventory v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-inventory-v0.md](../disease-programs/multiple-myeloma/public-inventory-v0.md) |
+| Multiple Myeloma Public Review Release Gate Pass v0 | protocol | open-question | [disease-programs/multiple-myeloma/public-review-release-gate-pass-v0.md](../disease-programs/multiple-myeloma/public-review-release-gate-pass-v0.md) |
 | Review-Packet Manifest Route-Table Dry-Run Tool v0 | tool | open-question | [tools/review_packet_manifest_route_table.py](../tools/review_packet_manifest_route_table.py) |
 | Review-Packet Route-Table Output Schema v0 | schema | open-question | [schemas/review-packet-route-table-output-schema-v0.md](../schemas/review-packet-route-table-output-schema-v0.md) |
 | Multiple Myeloma Synthetic Case-To-Cure Pipeline v0 | dataset | open-question | [examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md](../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md) |
