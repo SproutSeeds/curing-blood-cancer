@@ -55,6 +55,7 @@ research directions deserve structured public tracking.
 - [Publication-Gate Checklist v0](publication-gate-checklist-v0.md)
 - [Multidisciplinary Review Packet Template v0](reviews/multidisciplinary-review-packet-template-v0.md)
 - [Expert Validation Issue Index v0](reviews/expert-validation-issue-index-v0.md)
+- [Expert Validation Outreach Map v0](reviews/expert-validation-outreach-map-v0.md)
 - [Review-Packet Builder Input Manifest Spec v0](reviews/review-packet-builder-manifest-spec-v0.md)
 - [Review-Packet Builder Dry-Run Plan v0](reviews/review-packet-builder-dry-run-plan-v0.md)
 - [Review-Packet Builder Implementation Gate v0](reviews/review-packet-builder-implementation-gate-v0.md)
