@@ -1,0 +1,109 @@
+{
+  "artifact_id": "multiple-myeloma-expert-validation-issue-index-v0",
+  "title": "Multiple Myeloma Expert Validation Issue Index v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "expert validation",
+    "public issues",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "BCMA Claim Set Expert Review Packet v0",
+      "url": "./bcma-claim-set-expert-review-packet-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "./multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #22",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/22",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #23",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/23",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #24",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/24",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #25",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/25",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #26",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/26",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #27",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/27",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #28",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/28",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #29",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/29",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #30",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/30",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #31",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/31",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #32",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/32",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #33",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/33",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Expert validation issue #34",
+      "url": "https://github.com/SproutSeeds/curing-blood-cancer/issues/34",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-15"
+    }
+  ],
+  "limitations": [
+    "Research-use-only issue index.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide eligibility guidance, expanded-access guidance, monitoring guidance, or publication authorization for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not complete expert review by itself.",
+    "Does not prove source coverage is comprehensive or grade evidence quality.",
+    "Does not inspect private lab records or real case data.",
+    "Does not authorize generated claims, ranking, recommendation behavior, patient matching, trial matching, review-packet assembly, or publication workflow."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-expert-validation-issue-index-v0.md"
+}

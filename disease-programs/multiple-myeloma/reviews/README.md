@@ -13,6 +13,12 @@ traceable, and safer to do in public.
 | [BCMA Claim Set Expert Review Packet v0](bcma-claim-set-expert-review-packet-v0.md) | expert-review-needed | source-checked is separate from expert-reviewed |
 | [Multidisciplinary Review Packet Template v0](multidisciplinary-review-packet-template-v0.md) | expert-review-needed | do not fill public template with real case facts |
 
+## Public Expert Validation Issues
+
+| Index | Status | Boundary |
+| --- | --- | --- |
+| [Expert Validation Issue Index v0](expert-validation-issue-index-v0.md) | 13 public issues opened | issue creation does not complete expert review |
+
 ## Current Builder Specs
 
 | Spec | Status | Boundary |
