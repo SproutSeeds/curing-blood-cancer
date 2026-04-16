@@ -507,6 +507,23 @@
       "limitation_count": 11
     },
     {
+      "artifact_id": "multiple-myeloma-expert-validation-outreach-map-v0",
+      "title": "Multiple Myeloma Expert Validation Outreach Map v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "expert validation",
+        "expert outreach",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/expert-validation-outreach-map-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/expert-validation-outreach-map-v0.metadata.json",
+      "source_count": 21,
+      "limitation_count": 11
+    },
+    {
       "artifact_id": "mrd-and-relapse-measurement-glossary-v0",
       "title": "MRD And Relapse Measurement Glossary v0",
       "artifact_class": "dataset",
@@ -858,7 +875,8 @@
       "Added the multiple myeloma public review and release gate as the next human-gated phase seed.",
       "Added the multiple myeloma public inventory as the current-state map for PR review.",
       "Added the multiple myeloma public review release gate pass as the repository-readiness review artifact for protected-branch review.",
-      "Added the multiple myeloma expert validation issue index linking 13 review items to public GitHub issues."
+      "Added the multiple myeloma expert validation issue index linking 13 review items to public GitHub issues.",
+      "Added the multiple myeloma expert validation outreach map as a public shortlist and reviewer-lens sweep."
     ]
   }
 }

@@ -18,6 +18,7 @@ traceable, and safer to do in public.
 | Index | Status | Boundary |
 | --- | --- | --- |
 | [Expert Validation Issue Index v0](expert-validation-issue-index-v0.md) | 13 public issues opened | issue creation does not complete expert review |
+| [Expert Validation Outreach Map v0](expert-validation-outreach-map-v0.md) | public shortlist drafted | named people are candidates, not endorsers or participants |
 
 ## Current Builder Specs
 

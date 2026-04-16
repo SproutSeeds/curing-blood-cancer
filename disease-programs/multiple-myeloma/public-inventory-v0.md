@@ -20,12 +20,12 @@ guide, trial guide, or cure claim.
 
 ## At A Glance
 
-After the expert-validation issue index is cataloged, the public multiple
-myeloma surface contains 48 metadata-tracked artifacts:
+After the expert-validation outreach map is cataloged, the public multiple
+myeloma surface contains 49 metadata-tracked artifacts:
 
 | Class | Count | Meaning |
 | --- | ---: | --- |
-| dataset | 14 | Catalogs, public task queues, evidence-gap records, measurement context, issue indexes, source registry, and synthetic examples. |
+| dataset | 15 | Catalogs, public task queues, evidence-gap records, measurement context, issue indexes, outreach maps, source registry, and synthetic examples. |
 | map | 4 | Cure-wedge, open research, concept, and mechanism maps. |
 | protocol | 20 | Roadmaps, gates, review plans, handoffs, checklists, and review-packet protocols. |
 | schema | 8 | Validated shapes for disease maps, target records, therapy records, trial landscapes, open questions, case summaries, and review-packet routing. |
@@ -40,7 +40,7 @@ myeloma surface contains 48 metadata-tracked artifacts:
 | Case-to-cure plumbing | [Case-To-Cure Pipeline Blueprint v0](case-to-cure-pipeline-blueprint-v0.md), [Synthetic Case-To-Cure Pipeline v0](../../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md), [Case-Feature Bundle Public Summary v0](../../schemas/case-feature-bundle-public-summary-v0.md), [Candidate-Option Scoring Rubric v0](candidate-option-scoring-rubric-v0.md), and [Publication-Gate Checklist v0](publication-gate-checklist-v0.md). | Public-safe shape only; no real case data or patient-specific advice. |
 | Evidence and gaps | [BCMA Antigen Escape Claim Set v0](evidence-claims/bcma-antigen-escape-claim-set-v0.md), [BCMA Antigen Escape Evidence Gap Register v0](evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md), measurement audits, and public task queues. | Source-backed and limitation-heavy; expert review still needed. |
 | Mechanism work | [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md), extraction guide, extraction records, and coverage report. | Navigation coverage only; counts are not evidence-strength rankings. |
-| Review readiness | [BCMA Claim Set Expert Review Packet v0](reviews/bcma-claim-set-expert-review-packet-v0.md), [Multidisciplinary Review Packet Template v0](reviews/multidisciplinary-review-packet-template-v0.md), [Expert Validation Issue Index v0](reviews/expert-validation-issue-index-v0.md), manifest specs, dry-run plans, packet-assembly gates, and recombination handoff. | Expert-review-needed; 13 public validation issues are opened; packet assembly remains blocked. |
+| Review readiness | [BCMA Claim Set Expert Review Packet v0](reviews/bcma-claim-set-expert-review-packet-v0.md), [Multidisciplinary Review Packet Template v0](reviews/multidisciplinary-review-packet-template-v0.md), [Expert Validation Issue Index v0](reviews/expert-validation-issue-index-v0.md), [Expert Validation Outreach Map v0](reviews/expert-validation-outreach-map-v0.md), manifest specs, dry-run plans, packet-assembly gates, and recombination handoff. | Expert-review-needed; 13 public validation issues are opened; outreach candidates are mapped; packet assembly remains blocked. |
 | Schemas and tools | Disease-map, target, therapy, trial-landscape, open-question, review-packet manifest, route-table output, and case-feature summary schemas, plus the route-table dry-run tool. | Validated public tooling substrate; no generated clinical claims. |
 | Source anchors | [Source Registry v0](../../sources/source-registry-v0.md), [ClinicalTrials.gov Query Protocol v0](../../protocols/clinicaltrials-gov-query-protocol-v0.md), and [Treatment-Class Taxonomy v0](../../taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.md). | Reusable public provenance anchors; not proof of completeness. |
 
@@ -75,7 +75,9 @@ Start here:
    for the current PR-readiness pass.
 7. [Expert Validation Issue Index v0](reviews/expert-validation-issue-index-v0.md)
    for the public expert-review request surface.
-8. [Public Artifact Catalog v0](../../artifacts/public-artifact-catalog-v0.md)
+8. [Expert Validation Outreach Map v0](reviews/expert-validation-outreach-map-v0.md)
+   for the public shortlist of people and reviewer lenses to contact.
+9. [Public Artifact Catalog v0](../../artifacts/public-artifact-catalog-v0.md)
    for the full metadata-backed listing.
 
 ## What Comes Next

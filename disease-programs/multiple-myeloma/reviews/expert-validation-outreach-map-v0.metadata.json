@@ -1,0 +1,134 @@
+{
+  "artifact_id": "multiple-myeloma-expert-validation-outreach-map-v0",
+  "title": "Multiple Myeloma Expert Validation Outreach Map v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "expert validation",
+    "expert outreach",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Expert Validation Issue Index v0",
+      "url": "./expert-validation-issue-index-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "BCMA Claim Set Expert Review Packet v0",
+      "url": "./bcma-claim-set-expert-review-packet-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "./multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Saad Usmani MSK Myeloma Service announcement",
+      "url": "https://www.mskcc.org/news-releases/saad-usmani-named-chief-myeloma-service-msk-cancer",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Noopur Raje Mass General profile",
+      "url": "https://www.massgeneral.org/cancer-center/doctors/17342/Noopur-Raje",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "C. Ola Landgren University of Miami Myeloma Division",
+      "url": "https://med.miami.edu/departments/medicine/divisions/myeloma",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Bruno Paiva Cima Universidad de Navarra profile",
+      "url": "https://cima.cun.es/en/research/staff-research/bruno-paiva",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Sham Mailankody MSK profile",
+      "url": "https://www.mskcc.org/cancer-care/doctors/sham-mailankody",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Krina Patel MD Anderson profile",
+      "url": "https://faculty.mdanderson.org/profiles/krina_patel.html",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Samir Parekh Mount Sinai Center announcement",
+      "url": "https://www.mountsinai.org/about/newsroom/2025/mount-sinai-names-samir-parekh-md-as-director-of-the-center-of-excellence-for-multiple-myeloma",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Joseph Mikhael IMF Medical Advisor announcement",
+      "url": "https://www.myeloma.org/news-events/multiple-myeloma-news/dr-joseph-mikhael-steps-new-role-medical-advisor-international-myeloma-foundation",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Jenny Ahlstrom HealthTree leadership profile",
+      "url": "https://healthtree.org/leadership",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Plain-language CARTITUDE-1 summary PubMed record",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37403937/",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Nikhil Munshi Dana-Farber profile",
+      "url": "https://www.dana-farber.org/find-a-doctor/nikhil-c-munshi",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "BCMA-specific CAR T cells PubMed record",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30896447/",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Nina Shah UCSF profile",
+      "url": "https://profiles.ucsf.edu/nina.shah",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Ajai Chari UCSF profile",
+      "url": "https://medicine.ucsf.edu/people/ajai-chari",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Irene Ghobrial Dana-Farber profile",
+      "url": "https://www.dana-farber.org/find-a-doctor/irene-ghobrial/",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Jesus San Miguel IMF MRD profile",
+      "url": "https://www.myeloma.org/blog/jesus-san-miguel-on-minimal-residual-disease-mrd",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "FDA Project Endpoint",
+      "url": "https://www.fda.gov/about-fda/oncology-center-excellence/project-endpoint",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only outreach planning artifact.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide eligibility guidance, expanded-access guidance, monitoring guidance, or publication authorization for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not imply that any named person or organization has reviewed, endorsed, joined, or validated this project.",
+    "Does not prove source coverage is comprehensive or grade evidence quality.",
+    "Does not inspect private lab records or real case data.",
+    "Does not authorize generated claims, ranking, recommendation behavior, patient matching, trial matching, review-packet assembly, or publication workflow."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-expert-validation-outreach-map-v0.md"
+}
