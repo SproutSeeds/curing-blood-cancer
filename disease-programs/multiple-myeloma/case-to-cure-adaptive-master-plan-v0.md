@@ -409,6 +409,7 @@ step.
 | `end-to-end-synthetic-case-dry-run-v0` | Synthetic dry run | Full synthetic pipeline dry run from intake to publication gate |
 | `case-to-cure-master-completion-audit-v0` | Completion audit | Audit that decides whether the master plan is complete, blocked, or ready for the next named phase |
 | `case-to-cure-public-scope-human-gate-blocker-v0` | Human gate blocker | Blocked next state after the master completion audit; no autonomous public-safe case-to-cure item remains without human phase selection or named gate clearance |
+| `public-caregiver-intake-frontend-v0` | Public static frontend | Human-selected next phase for a static, synthetic-only caregiver intake prototype that refuses real patient data and does not provide medical advice |
 
 ## Clawdad Delegation Rule
 

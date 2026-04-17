@@ -2,14 +2,8 @@
 
 - active_version: `v2`
 - active_milestone: `case-to-cure-adaptive-master-plan-v0`
-- active_phase: `case-to-cure-public-scope-human-gate-blocker-v0`
+- active_phase: `public-caregiver-intake-frontend-v0`
 - band: `exact`
-- next_action: `No autonomous public-safe case-to-cure backlog item remains after the master completion audit. Await human selection of a new named public-safe phase or clearance of expert-review-needed, private-lab-needed, clinical-team-needed, legal-needed, regulatory-needed, publication-gate-needed, or human-review-needed gates.`
+- next_action: `Build static-synthetic-caregiver-intake-frontend-v0: a public, static, synthetic-only caregiver intake prototype with no real data collection, no backend, no advice, generic caregiver language, frg.earth stewardship, navigation updates, and validation.`
 - blocked_by:
-  - `expert-review-needed`
-  - `private-lab-needed`
-  - `clinical-team-needed`
-  - `legal-needed`
-  - `regulatory-needed`
-  - `publication-gate-needed`
-  - `human-review-needed`
+  - `(none)`

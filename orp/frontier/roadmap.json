@@ -8,7 +8,7 @@
   "active_milestone": "case-to-cure-adaptive-master-plan-v0",
   "active_milestone_label": "Case-To-Cure Adaptive Master Plan v0",
   "band": "exact",
-  "next_action": "No autonomous public-safe case-to-cure backlog item remains after the master completion audit. Await human selection of a new named public-safe phase or clearance of expert-review-needed, private-lab-needed, clinical-team-needed, legal-needed, regulatory-needed, publication-gate-needed, or human-review-needed gates.",
+  "next_action": "Build static-synthetic-caregiver-intake-frontend-v0: a public, static, synthetic-only caregiver intake prototype with no real data collection, no backend, no advice, generic caregiver language, frg.earth stewardship, navigation updates, and validation.",
   "phases": [
     {
       "id": "case-to-cure-loop-governor-v0",
@@ -266,7 +266,31 @@
         "Blocked until human selection of a new named public-safe phase or clearance of expert-review-needed, private-lab-needed, clinical-team-needed, legal-needed, regulatory-needed, publication-gate-needed, or human-review-needed gates."
       ],
       "compute_hooks": []
+    },
+    {
+      "id": "public-caregiver-intake-frontend-v0",
+      "label": "Public Caregiver Intake Frontend v0",
+      "status": "active",
+      "goal": "Create a public-facing, static, synthetic-only caregiver intake frontend prototype for multiple myeloma case organization that explains the private-lab handoff path without collecting real patient data or providing medical advice.",
+      "depends_on": [
+        "case-to-cure-master-completion-audit-v0"
+      ],
+      "requirements": [
+        "Use generic caregiver language only; do not use private names or private relationship details.",
+        "Build only a static/synthetic public prototype in this repo: no real data collection, no uploads, no backend, no auth, no database, no email submission, and no patient-identifying data.",
+        "Use the existing caregiver case intake product spec, private intake schema contract, projection checklist, consent/privacy/security gate, synthetic caregiver fixture, public safety governance, and private-to-public workflow as boundaries.",
+        "The interface must be plain-language, caregiver-friendly, progressive, layout-stable, and explicit about unknown/not sure answers, consent/privacy boundaries, emergency boundaries, clinician review, and no medical advice."
+      ],
+      "success_criteria": [
+        "A static frontend artifact exists and can be opened or served locally without sending data anywhere.",
+        "The frontend uses synthetic fixture data only and visibly warns against entering real patient information.",
+        "The public repo navigation points to the prototype and validation passes."
+      ],
+      "plans": [
+        "Start with the smallest useful static prototype target and documentation; avoid real intake plumbing until private-lab, consent, security, legal, and clinical gates are cleared."
+      ],
+      "compute_hooks": []
     }
   ],
-  "active_phase": "case-to-cure-public-scope-human-gate-blocker-v0"
+  "active_phase": "public-caregiver-intake-frontend-v0"
 }

@@ -3,8 +3,8 @@
   "kind": "orp_frontier_additional_items",
   "program_id": "curing-blood-cancer",
   "label": "Curing Blood Cancer",
-  "active_list_id": "case-to-cure-master-backlog-v0",
-  "active_item_id": "case-to-cure-public-scope-human-gate-blocker-v0",
+  "active_list_id": "public-caregiver-intake-frontend-v0",
+  "active_item_id": "static-synthetic-caregiver-intake-frontend-v0",
   "lists": [
     {
       "id": "case-intake-frontends",
@@ -74,7 +74,7 @@
     {
       "id": "case-to-cure-master-backlog-v0",
       "label": "Case-To-Cure Adaptive Master Backlog v0",
-      "status": "active",
+      "status": "complete",
       "items": [
         {
           "id": "case-to-cure-loop-governor-v0",
@@ -433,6 +433,41 @@
           ],
           "plans": [
             "Blocked until human selection of a new named public-safe phase or clearance of expert-review-needed, private-lab-needed, clinical-team-needed, legal-needed, regulatory-needed, publication-gate-needed, or human-review-needed gates."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "public-caregiver-intake-frontend-v0",
+      "label": "Public Caregiver Intake Frontend v0",
+      "status": "active",
+      "items": [
+        {
+          "id": "static-synthetic-caregiver-intake-frontend-v0",
+          "label": "Static synthetic caregiver intake frontend",
+          "status": "active",
+          "goal": "Build the first static, synthetic-only public caregiver intake frontend prototype for multiple myeloma case organization, using existing public artifacts as boundaries and refusing real patient data.",
+          "depends_on": [
+            "caregiver-friendly-case-intake-v0",
+            "caregiver-case-intake-product-spec-v0",
+            "private-intake-schema-contract-v0",
+            "consent-privacy-security-retention-gate-v0"
+          ],
+          "requirements": [
+            "Do not collect, submit, upload, store, email, or transmit real case data; the prototype must be static and synthetic-only.",
+            "Use generic caregiver language only and no private names.",
+            "Use the synthetic caregiver fixture and existing intake/product specs as source material.",
+            "Keep clinical boundary copy visible: no diagnosis, treatment, trial, prognosis, monitoring, urgency, or expanded-access advice.",
+            "Create a usable public first screen rather than a marketing landing page; include frg.earth stewardship."
+          ],
+          "success_criteria": [
+            "A static frontend entrypoint exists and works locally without a backend.",
+            "The frontend makes it easy to understand the intake sections, unknown/not-sure states, review step, privacy boundary, and private-lab handoff path.",
+            "No public artifact contains private names, PHI, real case data, advice outputs, rankings, matching, or cure claims.",
+            "Navigation and ORP state are updated and validation passes."
+          ],
+          "plans": [
+            "Prefer a no-build static HTML/CSS/JS prototype under a public-facing directory, plus a short metadata/protocol artifact if needed."
           ]
         }
       ]

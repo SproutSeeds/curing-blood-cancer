@@ -1,7 +1,7 @@
 # Additional Frontier Items: Curing Blood Cancer
 
-- active_list_id: `case-to-cure-master-backlog-v0`
-- active_item_id: `case-to-cure-public-scope-human-gate-blocker-v0`
+- active_list_id: `public-caregiver-intake-frontend-v0`
+- active_item_id: `static-synthetic-caregiver-intake-frontend-v0`
 
 ## `case-intake-frontends` Human-Friendly Case Intake Front Ends (`complete`)
 
@@ -13,7 +13,7 @@
 - [x] `case-intake-next-public-build-slice-v0` Next public-safe caregiver intake build slice (`complete`)
   - goal: Extend the Caregiver Case Intake Product Spec v0 into one concrete public-safe next artifact: private-intake schema contract, public-safe projection validator, no-PHI/no-advice checklist, synthetic fixture expansion, or static synthetic prototype plan.
 
-## `case-to-cure-master-backlog-v0` Case-To-Cure Adaptive Master Backlog v0 (`active`)
+## `case-to-cure-master-backlog-v0` Case-To-Cure Adaptive Master Backlog v0 (`complete`)
 
 - [x] `case-to-cure-loop-governor-v0` Case-to-cure loop governor (`complete`)
   - goal: Make the loop itself enforce next-step synthesis after each completed public-safe step.
@@ -51,3 +51,8 @@
   - goal: Audit whether the adaptive master plan is complete, safely blocked, or ready for a new named phase.
 - [ ] `case-to-cure-public-scope-human-gate-blocker-v0` Case-to-cure public-scope human gate blocker (`blocked`)
   - goal: Record that no autonomous public-safe case-to-cure backlog item remains after the master completion audit.
+
+## `public-caregiver-intake-frontend-v0` Public Caregiver Intake Frontend v0 (`active`)
+
+- [ ] `static-synthetic-caregiver-intake-frontend-v0` Static synthetic caregiver intake frontend (`active`)
+  - goal: Build the first static, synthetic-only public caregiver intake frontend prototype for multiple myeloma case organization, using existing public artifacts as boundaries and refusing real patient data.
