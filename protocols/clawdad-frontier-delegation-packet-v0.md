@@ -140,24 +140,33 @@ makes another slice clearly safer.
 
 ### Active Named Phase. Case-To-Cure Adaptive Master Plan v0
 
-The current active named phase is `case-to-cure-adaptive-master-plan-v0`.
-The active phase is `case-to-cure-public-scope-human-gate-blocker-v0`.
-The active additional queue is `case-to-cure-master-backlog-v0`.
+The current active named phase is `public-caregiver-intake-frontend-v0`
+inside `case-to-cure-adaptive-master-plan-v0`.
+The active phase is `public-caregiver-intake-frontend-v0`.
+The active additional queue is `public-caregiver-intake-frontend-v0`.
+The active additional item is `static-synthetic-caregiver-intake-frontend-v0`.
 
 This phase supersedes the prior "frontier complete / no ready tasks" endpoint
-and the completed caregiver intake subphase. The eight-lane public
-frontier and caregiver intake foundation remain valuable, but they are no
-longer the stopping condition.
+and the completed caregiver intake documentation subphase. The eight-lane
+public frontier, caregiver intake foundation, and case-to-cure master audit
+remain valuable, but the human-selected next phase is now a public static
+frontend prototype.
 
 Required output for the next pass:
 
-- stop at the blocked next state unless a human selects a new named public-safe
-  phase or clears a named gate
-- preserve the case-to-cure master completion audit as the current handoff
-- do not create another autonomous case-to-cure sibling item by momentum
-- keep remaining work labeled as expert-review-needed, private-lab-needed,
-  clinical-team-needed, legal-needed, regulatory-needed,
-  publication-gate-needed, human-review-needed, or out-of-scope
+- build or specify the smallest useful static, synthetic-only public caregiver
+  intake frontend prototype
+- use generic caregiver language only; do not use private names or private
+  relationship details
+- use the existing caregiver case intake product spec, private intake schema
+  contract, projection checklist, consent/privacy/security gate, synthetic
+  caregiver fixture, public safety governance, and private-to-public workflow
+  as boundaries
+- keep the interface as a public prototype only: no real data collection,
+  uploads, backend, auth, database, email submission, or patient-identifying
+  data
+- include clear frg.earth stewardship, unknown/not-sure paths, final review,
+  emergency boundary, clinician-review boundary, and no-advice copy
 - block real case data, identifiers, raw records, uploads, person-linked
   dates, free-text case details, private correspondence, patient-specific
   outputs, recommendations, rankings, matching, treatment guidance, trial

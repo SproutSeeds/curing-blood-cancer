@@ -408,8 +408,8 @@ Current frontier completion artifact:
 ## Active Named Phase: Case-To-Cure Adaptive Master Plan v0
 
 The current live ORP frontier points to
-`case-to-cure-adaptive-master-plan-v0` and the active phase
-`case-to-cure-public-scope-human-gate-blocker-v0`.
+`case-to-cure-adaptive-master-plan-v0` and the active human-selected phase
+`public-caregiver-intake-frontend-v0`.
 
 Canonical active artifact:
 
@@ -431,10 +431,12 @@ Canonical active artifact:
 - [Case-To-Public Learning Extraction Gate v0](case-to-public-learning-extraction-gate-v0.md)
 - [End-To-End Synthetic Case Dry Run v0](end-to-end-synthetic-case-dry-run-v0.md)
 - [Case-To-Cure Master Completion Audit v0](case-to-cure-master-completion-audit-v0.md)
+- [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
+- [Synthetic Caregiver Intake v0](../../examples/multiple-myeloma-synthetic-caregiver-intake-v0.json)
 
 The active backlog is the ORP additional list
-`case-to-cure-master-backlog-v0`. It exists so Clawdad has a durable queue
-after a narrow phase closes.
+`public-caregiver-intake-frontend-v0`. It exists because a human selected a new
+public-safe phase after the master completion audit reached the human gate.
 
 Active loop rule:
 
@@ -476,10 +478,13 @@ The completed case-to-public learning extraction gate item is
 The completed end-to-end synthetic dry-run item is
 `end-to-end-synthetic-case-dry-run-v0`.
 The completed master audit item is `case-to-cure-master-completion-audit-v0`.
-The active queue item is now
-`case-to-cure-public-scope-human-gate-blocker-v0`, meaning no additional
-autonomous public-safe case-to-cure item is ready without human selection of a
-new named phase or named gate clearance.
+The previously active queue item
+`case-to-cure-public-scope-human-gate-blocker-v0` recorded the safe stop after
+the master audit. The active queue item is now
+`static-synthetic-caregiver-intake-frontend-v0`, meaning the next autonomous
+public-safe move is a static, synthetic-only caregiver intake prototype with no
+real data collection, backend, advice, matching, ranking, or patient-specific
+output.
 
 Completion criteria:
 

@@ -31,7 +31,8 @@
         "case-to-public-learning-extraction-gate-v0",
         "end-to-end-synthetic-case-dry-run-v0",
         "case-to-cure-master-completion-audit-v0",
-        "case-to-cure-public-scope-human-gate-blocker-v0"
+        "case-to-cure-public-scope-human-gate-blocker-v0",
+        "public-caregiver-intake-frontend-v0"
       ],
       "is_active": true
     }
