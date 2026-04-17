@@ -1,0 +1,75 @@
+{
+  "artifact_id": "multiple-myeloma-expert-response-validation-ledger-v0",
+  "title": "Multiple Myeloma Expert Response Validation Ledger v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "expert validation",
+    "response intake",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "../frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Expert Validation Issue Index v0",
+      "url": "./expert-validation-issue-index-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Expert Validation Outreach Map v0",
+      "url": "./expert-validation-outreach-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "BCMA Claim Set Expert Review Packet v0",
+      "url": "./bcma-claim-set-expert-review-packet-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "./multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Inventory v0",
+      "url": "../public-inventory-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "GitHub Issues API for SproutSeeds/curing-blood-cancer",
+      "url": "https://api.github.com/repos/SproutSeeds/curing-blood-cancer/issues?state=all&per_page=100",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private To Public Workflow",
+      "url": "../../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only response-intake ledger.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Does not provide eligibility guidance, expanded-access guidance, screening guidance, monitoring guidance, or publication authorization for any person.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not complete expert review by itself.",
+    "Does not prove that any public issue response is expert-authored, source-backed, sufficient, or endorsed.",
+    "Does not copy, summarize, or rely on private correspondence.",
+    "Does not inspect private lab records or real case data.",
+    "Does not authorize generated claims, ranking, recommendation behavior, patient matching, trial matching, review-packet assembly, or publication workflow."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-expert-response-validation-ledger-v0.md"
+}

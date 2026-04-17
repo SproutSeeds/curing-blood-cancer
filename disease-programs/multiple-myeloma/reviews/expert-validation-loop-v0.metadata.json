@@ -1,0 +1,119 @@
+{
+  "artifact_id": "multiple-myeloma-expert-validation-loop-v0",
+  "title": "Expert Validation Loop v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "expert validation",
+    "public issue dispositions",
+    "response ledger routing",
+    "review lens routing",
+    "source correction tasks",
+    "case-to-cure pipeline",
+    "public safety",
+    "private-lab handoff"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Expert Validation Issue Index v0",
+      "url": "expert-validation-issue-index-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Outreach Map v0",
+      "url": "expert-validation-outreach-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Response Validation Ledger v0",
+      "url": "expert-response-validation-ledger-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Candidate Hypothesis Review Question Set v0",
+      "url": "candidate-hypothesis-review-question-set-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Builder v0",
+      "url": "multidisciplinary-review-packet-builder-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "../publication-gate-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private-To-Public Workflow",
+      "url": "../../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "../case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Stage Validator And Owner Map v0",
+      "url": "../case-to-cure-stage-validator-map-v0.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only protocol.",
+    "Public disposition-loop scaffold only.",
+    "Not a response ingestion system.",
+    "Not outreach.",
+    "Not completed expert review.",
+    "Not clinical review.",
+    "Not publication review.",
+    "Not publication authorization.",
+    "Not a private correspondence store.",
+    "Not a reviewer identity ledger.",
+    "Not a reviewer decision record.",
+    "Not a source-ranking system.",
+    "Not evidence ranking.",
+    "Not option ranking.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not availability guidance.",
+    "Not expanded-access guidance.",
+    "Not access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not safety-management guidance.",
+    "Does not send outreach, prepare completed outreach, ingest private replies, copy private correspondence, publish unpublished expert comments, disclose private reviewer identities, imply endorsement, imply consensus, upgrade claims by issue metadata, or make artifacts expert-reviewed.",
+    "Does not contain patient-identifying data, real case facts, private records, portal exports, molecular reports, pathology reports, flow reports, genomics reports, images, notes, raw assay values, therapy histories, exact dates tied to a person, facilities tied to a person, clinicians tied to a person, sponsor contacts, contact details, private case IDs, private workspace paths, private prompts, or re-identification keys.",
+    "Does not authorize clinical interpretation, trial-status verification, sponsor or site verification, patient matching, trial matching, target actionability, source ranking, evidence ranking, target ranking, mechanism ranking, product ranking, therapy ranking, trial ranking, option ranking, private-lab work, legal clearance, regulatory readiness, ethics readiness, security readiness, retention decisions, emergency handling, publication, or publication of case-derived learning.",
+    "Does not validate public learning extraction, end-to-end synthetic dry-run, or master-completion audit semantics.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-expert-validation-loop-v0.md"
+}

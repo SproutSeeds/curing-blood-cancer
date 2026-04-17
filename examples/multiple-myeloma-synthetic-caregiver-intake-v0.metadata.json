@@ -1,0 +1,58 @@
+{
+  "artifact_id": "multiple-myeloma-synthetic-caregiver-intake-v0",
+  "title": "Multiple Myeloma Synthetic Caregiver Intake v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "caregiver intake",
+    "synthetic fixture",
+    "case-to-cure pipeline",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Caregiver Case Intake Product Spec v0",
+      "url": "../disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Checklist v0",
+      "url": "../disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-Feature Bundle Public Summary v0",
+      "url": "../schemas/case-feature-bundle-public-summary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Synthetic fixture only.",
+    "Not real case data.",
+    "Not an intake form.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Does not contain patient-identifying data, private records, raw records, images, notes, dates tied to a person, or re-identification keys.",
+    "Does not authorize public collection, upload, storage, processing, or publication of real case data.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-synthetic-caregiver-intake-v0.json"
+}

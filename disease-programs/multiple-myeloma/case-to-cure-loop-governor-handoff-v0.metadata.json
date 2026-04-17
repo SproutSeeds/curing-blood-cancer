@@ -1,0 +1,98 @@
+{
+  "artifact_id": "multiple-myeloma-case-to-cure-loop-governor-handoff-v0",
+  "title": "Case-To-Cure Loop Governor Handoff v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "case-to-cure pipeline",
+    "adaptive planning",
+    "ORP frontier state",
+    "public research tooling",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "./case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ORP Frontier State",
+      "url": "../../orp/frontier/state.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../../orp/frontier/additional-items.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ORP Frontier Version Stack",
+      "url": "../../orp/frontier/version-stack.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Clawdad Frontier Delegation Packet v0",
+      "url": "../../protocols/clawdad-frontier-delegation-packet-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case Intake Frontier Completion Audit Handoff v0",
+      "url": "./case-intake/case-intake-frontier-completion-audit-handoff-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Case Intake Product Spec v0",
+      "url": "./case-intake/caregiver-case-intake-product-spec-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Checklist v0",
+      "url": "./case-intake/caregiver-intake-public-projection-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Caregiver Intake v0",
+      "url": "../../examples/multiple-myeloma-synthetic-caregiver-intake-v0.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "./case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private-To-Public Workflow",
+      "url": "../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only loop handoff.",
+    "Not a master completion audit.",
+    "Not an intake form.",
+    "Not a live backend or database design.",
+    "Not an executable validator.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency guidance.",
+    "Does not collect, store, transmit, publish, or authorize use of real case data.",
+    "Does not contain patient-identifying data, private records, portal exports, reports, images, notes, dates tied to a person, contact details, free-text case details, consent records, or re-identification keys.",
+    "Does not authorize clinical interpretation, case packet assembly, patient matching, trial matching, option ranking, or publication of case-derived learning.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-case-to-cure-loop-governor-handoff-v0.md"
+}

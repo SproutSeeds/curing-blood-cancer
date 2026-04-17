@@ -1,0 +1,74 @@
+{
+  "artifact_id": "precursor-risk-interception-boundary-note-v0",
+  "title": "Precursor, Risk, And Interception Boundary Note v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "MGUS",
+    "smoldering multiple myeloma",
+    "precursor states",
+    "early intervention",
+    "interception research",
+    "risk-language guardrails"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "../frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "NCI Plasma Cell Neoplasms / Multiple Myeloma Treatment PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "IMWG consensus perspectives for MGUS and smoldering multiple myeloma",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20410922/",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "IMWG risk stratification model for smoldering multiple myeloma",
+      "url": "https://www.nature.com/articles/s41408-020-00366-3",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ClinicalTrials.gov Query Protocol v0",
+      "url": "../../../protocols/clinicaltrials-gov-query-protocol-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Issue Index v0",
+      "url": "../reviews/expert-validation-issue-index-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only boundary note.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not screening guidance.",
+    "Not personal risk advice.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not monitoring guidance.",
+    "Not prevention guidance.",
+    "Does not create or authorize a personal risk calculator.",
+    "Does not claim that multiple myeloma has been cured or prevented.",
+    "Does not use real case data, patient-identifying data, private records, or private expert correspondence."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/precursor-risk-interception-boundary-note-v0.md"
+}

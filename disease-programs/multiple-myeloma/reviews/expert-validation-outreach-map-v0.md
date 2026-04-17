@@ -40,6 +40,11 @@ readability.
 They do not ask experts to choose treatment, rank options, interpret a case,
 match a trial, guide expanded access, or declare a cure.
 
+Public response intake and allowed dispositions are tracked in
+[Expert Response Validation Ledger v0](expert-response-validation-ledger-v0.md).
+Use that ledger for status changes; do not copy private correspondence into
+public artifacts.
+
 ## Provisional Expert-Mode Sweep
 
 This sweep is an internal/operator synthesis of what a rigorous reviewer is

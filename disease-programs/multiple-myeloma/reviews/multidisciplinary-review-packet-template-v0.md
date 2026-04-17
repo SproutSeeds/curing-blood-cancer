@@ -8,7 +8,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - review status: expert-review-needed
 - clinical boundary: research-use-only, not medical advice
 - public data boundary: do not fill this public template with real case facts
-- last reviewed: `2026-04-15`
+- last reviewed: `2026-04-16`
 
 ## Purpose
 
@@ -49,6 +49,7 @@ separately reviewed aggregate learning that passes the
 | --- | --- | --- |
 | `multiple-myeloma-case-to-cure-pipeline-blueprint-v0` | source-checked | Confirm that the staged pipeline keeps case-specific work private and public artifacts generic. |
 | `case-feature-bundle-public-summary-v0` | source-checked | Confirm that public field groups cannot be mistaken for a case upload schema. |
+| `high-risk-organ-frailty-context-modifier-map-v0` | source-checked | Confirm that context modifiers remain optional, source-scoped, non-identifying, and cannot produce prognosis, eligibility, treatment, or option ranking. |
 | `multiple-myeloma-candidate-option-scoring-rubric-v0` | source-checked | Confirm that review-readiness scoring cannot become candidate ranking or action guidance. |
 | `multiple-myeloma-publication-gate-checklist-v0` | source-checked | Confirm that publication gates fail closed before case-derived public learning is released. |
 | `mrd-and-relapse-measurement-glossary-v0` | source-checked | Confirm that MRD, relapse, target, and response terms are precise enough for review packet routing. |
@@ -60,6 +61,7 @@ separately reviewed aggregate learning that passes the
 | Review Item | Focus | Required Roles | Public Action |
 | --- | --- | --- | --- |
 | `hematology-disease-state-review-template-v0` | claim scope | myeloma clinician, outcomes reviewer | Confirm disease-state, response, relapse, and MRD wording boundaries. |
+| `context-modifier-review-template-v0` | context boundary | myeloma clinician, geriatric or organ-context reviewer, patient-protection reviewer | Confirm high-risk, extramedullary, organ, frailty, performance-status, immune, infection-risk, and prior-exposure fields remain optional and non-directive. |
 | `cellular-therapy-review-template-v0` | translation boundary | cellular therapy clinician or translational scientist | Confirm CAR T, bispecific, and immune-effector context remains source-backed and non-prescriptive. |
 | `pathology-measurement-review-template-v0` | measurement assumptions | pathology, flow, MRD, or assay reviewer | Confirm specimen, assay, threshold, timing, and target-status fields are sufficient before comparison. |
 | `genomics-target-biology-review-template-v0` | source quality | genomics, target biology, or translational reviewer | Confirm source maturity, model context, and target-biology limits are explicit. |

@@ -1,0 +1,193 @@
+{
+  "artifact_id": "clawdad-frontier-delegation-packet-v0",
+  "title": "Clawdad Frontier Delegation Packet v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "autonomous research loop",
+    "frontier roadmap",
+    "public research tooling"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "../disease-programs/multiple-myeloma/frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "../disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Loop Governor Handoff v0",
+      "url": "../disease-programs/multiple-myeloma/case-to-cure-loop-governor-handoff-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private Intake Schema Contract v0",
+      "url": "../disease-programs/multiple-myeloma/case-intake/private-intake-schema-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Static Synthetic Caregiver Prototype Plan v0",
+      "url": "../disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-prototype-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Validator v0",
+      "url": "../disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-validator-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ORP Frontier State",
+      "url": "../orp/frontier/state.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../orp/frontier/additional-items.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "../disease-programs/multiple-myeloma/public-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Loop Completion Handoff v0",
+      "url": "../disease-programs/multiple-myeloma/public-loop-completion-handoff-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Issue Index v0",
+      "url": "../disease-programs/multiple-myeloma/reviews/expert-validation-issue-index-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Case Intake Product Spec v0",
+      "url": "../disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Consent Privacy Security Retention Gate v0",
+      "url": "../disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case Feature Normalization Contract v0",
+      "url": "../disease-programs/multiple-myeloma/case-feature-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "MRD And Relapse Measurement Glossary v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "MRD Endpoint Language Guardrail Addendum v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Treatment-Class Taxonomy v0",
+      "url": "../taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Immune Therapy Sequencing And Access Boundary v0",
+      "url": "../disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Caregiver Intake v0",
+      "url": "../examples/multiple-myeloma-synthetic-caregiver-intake-v0.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety Governance",
+      "url": "../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "../disease-programs/multiple-myeloma/therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Molecular Immune Context Contract v0",
+      "url": "../disease-programs/multiple-myeloma/contexts/molecular-immune-context-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ClinicalTrials.gov Query Protocol v0",
+      "url": "clinicaltrials-gov-query-protocol-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Evidence Retrieval Packet v0",
+      "url": "../disease-programs/multiple-myeloma/evidence-retrieval-packet-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Trial Therapy Landscape Non-Advice Gate v0",
+      "url": "../disease-programs/multiple-myeloma/therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Candidate Hypothesis Review Question Set v0",
+      "url": "../disease-programs/multiple-myeloma/reviews/candidate-hypothesis-review-question-set-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Builder v0",
+      "url": "../disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Loop v0",
+      "url": "../disease-programs/multiple-myeloma/reviews/expert-validation-loop-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Public Learning Extraction Gate v0",
+      "url": "../disease-programs/multiple-myeloma/case-to-public-learning-extraction-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "End-To-End Synthetic Case Dry Run v0",
+      "url": "../disease-programs/multiple-myeloma/end-to-end-synthetic-case-dry-run-v0.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Autonomy protocol only; not medical advice.",
+    "Does not determine diagnosis, prognosis, treatment, trial eligibility, screening, monitoring, or expanded-access feasibility.",
+    "Does not claim that a cure or vaccine has been found.",
+    "Does not authorize use of patient-identifying data, real case data, private records, restricted datasets, credentials, paid services, or private correspondence.",
+    "Does not authorize autonomous outreach, commits, pushes, releases, destructive repository operations, billing changes, or publication actions.",
+    "Requires human review for clinical, legal, regulatory, sponsor, institutional-review, treating-team, publication, or account decisions.",
+    "Delegate outputs require validation and review before publication or reuse.",
+    "Source-backed public artifacts can still be incomplete, stale, or wrong.",
+    "The loop must stop on public-safety blockers instead of improvising around them.",
+    "A completed subphase is not a completed initiative; the adaptive master backlog remains live until completion audit or explicit blocker."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/clawdad-frontier-delegation-packet-v0.md"
+}

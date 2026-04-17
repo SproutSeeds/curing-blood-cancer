@@ -1,0 +1,81 @@
+{
+  "artifact_id": "post-bcma-resistance-frontier-addendum-v0",
+  "title": "Post-BCMA Resistance Frontier Addendum v0",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "post-BCMA relapse",
+    "post-CAR T relapse",
+    "resistance mechanisms",
+    "evidence gaps"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "../frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Post-CAR T Relapse Mechanism Map v0",
+      "url": "post-car-t-relapse-mechanism-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Post-CAR T Relapse Mechanism Coverage Report v0",
+      "url": "post-car-t-relapse-mechanism-coverage-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "BCMA Antigen Escape Claim Set v0",
+      "url": "../evidence-claims/bcma-antigen-escape-claim-set-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "BCMA Antigen Escape Evidence Gap Register v0",
+      "url": "../evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Post-CAR T Relapse Mechanism Gap Public Task Queue v0",
+      "url": "../public-tasks/post-car-t-relapse-mechanism-gap-public-task-queue-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "MRD Endpoint Language Guardrail Addendum v0",
+      "url": "../measurements/mrd-endpoint-language-guardrail-addendum-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Immune Therapy Sequencing And Access Boundary v0",
+      "url": "../therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only map addendum.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not eligibility, expanded-access, monitoring, referral, or sequencing guidance.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not rank relapse mechanisms, products, targets, trials, sources, artifacts, or evidence.",
+    "Does not establish clinical actionability for any mechanism or measurement.",
+    "Does not use real case data, patient-identifying data, private records, or private expert correspondence.",
+    "Mechanism statements require source-specific extraction and expert review before educational reuse.",
+    "Coverage counts remain public artifact coverage metrics, not mechanism frequency or biological priority."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/post-bcma-resistance-frontier-addendum-v0.md"
+}

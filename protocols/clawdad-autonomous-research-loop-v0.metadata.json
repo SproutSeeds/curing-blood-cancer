@@ -14,7 +14,27 @@
     {
       "label": "Multiple Myeloma Public Roadmap v0",
       "url": "../disease-programs/multiple-myeloma/public-roadmap-v0.md",
-      "accessed": "2026-04-15"
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "../disease-programs/multiple-myeloma/frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "../disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../orp/frontier/additional-items.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Clawdad Frontier Delegation Packet v0",
+      "url": "./clawdad-frontier-delegation-packet-v0.md",
+      "accessed": "2026-04-16"
     },
     {
       "label": "Case-To-Cure Pipeline Blueprint v0",
@@ -50,7 +70,8 @@
     "Requires human review for clinical, legal, regulatory, sponsor, account, billing, publication, or destructive repository decisions.",
     "Delegate outputs require validation and review before publication or reuse.",
     "Source-backed public artifacts can still be incomplete, stale, or wrong.",
-    "The loop must stop on public-safety blockers instead of improvising around them."
+    "The loop must stop on public-safety blockers instead of improvising around them.",
+    "A completed subphase is not a completed initiative unless the adaptive master completion audit says so."
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/clawdad-autonomous-research-loop-v0.md"
 }

@@ -1,6 +1,6 @@
 {
   "review_packet_id": "multiple-myeloma-multidisciplinary-review-packet-template-v0",
-  "date": "2026-04-15",
+  "date": "2026-04-16",
   "disease_program": "multiple-myeloma",
   "title": "Multidisciplinary Review Packet Template v0",
   "blood_cancer_scope": [
@@ -13,6 +13,7 @@
   "clinical_use_boundary": "research-use-only",
   "review_scope": [
     "claim scope",
+    "context boundary",
     "measurement assumptions",
     "source quality",
     "translational boundaries",
@@ -33,6 +34,12 @@
       "path": "schemas/case-feature-bundle-public-summary-v0.md",
       "current_review_status": "source-checked",
       "review_goal": "Confirm that public field groups cannot be mistaken for a case upload schema."
+    },
+    {
+      "artifact_id": "high-risk-organ-frailty-context-modifier-map-v0",
+      "path": "disease-programs/multiple-myeloma/contexts/high-risk-organ-frailty-context-modifier-map-v0.md",
+      "current_review_status": "source-checked",
+      "review_goal": "Confirm that context modifiers remain optional, source-scoped, non-identifying, and cannot produce prognosis, eligibility, treatment, or option ranking."
     },
     {
       "artifact_id": "multiple-myeloma-candidate-option-scoring-rubric-v0",
@@ -85,6 +92,7 @@
   ],
   "source_ids": [
     "nci_pdq_myeloma_hp",
+    "pubmed_palumbo_2015_imwg_frailty",
     "clinicaltrials_gov",
     "clinicaltrials_gov_api_v2",
     "pubmed",
@@ -108,7 +116,9 @@
     "firestone-2024-bcma-antigen-escape-v0",
     "di-meo-2025-sema4a-low-bcma-v0",
     "tedder-bhutani-2025-bcma-resistance-review-v0",
-    "ledergor-2024-cd4-car-t-exhaustion-v0"
+    "ledergor-2024-cd4-car-t-exhaustion-v0",
+    "nci-pdq-2025-disease-context-v0",
+    "tedder-bhutani-2025-disease-context-v0"
   ],
   "review_status_boundary": [
     "The public template and linked artifacts are source-checked review infrastructure.",
@@ -154,6 +164,45 @@
         "Not medical advice.",
         "Not a diagnostic recommendation.",
         "Not a treatment recommendation."
+      ]
+    },
+    {
+      "review_item_id": "context-modifier-review-template-v0",
+      "review_focus": "unsupported-inference",
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "linked_gap_ids": [
+        "expert-review-readiness-gap-v0"
+      ],
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "pubmed_palumbo_2015_imwg_frailty",
+        "pubmed_tedder_bhutani_2025_bcma_resistance"
+      ],
+      "measurement_term_ids": [],
+      "extraction_record_ids": [
+        "nci-pdq-2025-disease-context-v0",
+        "tedder-bhutani-2025-disease-context-v0"
+      ],
+      "review_questions": [
+        "Are high-risk, extramedullary, organ, frailty, performance-status, immune-status, infection-risk, and prior-exposure fields optional and source-scoped?",
+        "Could any context field imply prognosis, eligibility, treatment selection, monitoring, or option ranking?",
+        "Which context fields must remain private-only, synthetic-only, or expert-review-needed before public reuse?"
+      ],
+      "required_reviewer_roles": [
+        "multiple myeloma clinician",
+        "geriatric or organ-context reviewer",
+        "patient-protection or public-safety reviewer"
+      ],
+      "current_public_status": "expert-review-needed",
+      "reviewer_action_needed": "Confirm context modifier wording boundaries before any private case context is summarized publicly.",
+      "claim_language_action": "weaken-or-clarify",
+      "safety_boundary": [
+        "Not a prognosis recommendation.",
+        "Not eligibility guidance.",
+        "Not a treatment or trial recommendation.",
+        "Not option ranking."
       ]
     },
     {
@@ -459,12 +508,13 @@
   ],
   "review": {
     "created": "2026-04-15",
-    "last_reviewed": "2026-04-15",
+    "last_reviewed": "2026-04-16",
     "review_status": "expert-review-needed",
     "review_notes": [
       "Reusable public template for future private multidisciplinary myeloma review packets.",
       "Separates review readiness from completed expert review.",
-      "Uses publication gate and candidate-option rubric as upstream public-safety boundaries."
+      "Uses publication gate and candidate-option rubric as upstream public-safety boundaries.",
+      "Adds a context-modifier review item for optional, source-scoped high-risk, extramedullary, organ, frailty, immune, infection-risk, and prior-exposure fields."
     ]
   }
 }

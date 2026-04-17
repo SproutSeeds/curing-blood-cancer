@@ -1,0 +1,169 @@
+{
+  "fixture_id": "multiple-myeloma-synthetic-caregiver-intake-v0",
+  "artifact_id": "multiple-myeloma-synthetic-caregiver-intake-v0",
+  "disease_program": "multiple-myeloma",
+  "fixture_status": "synthetic-only-public-v0",
+  "synthetic_notice": {
+    "uses_real_patient_data": false,
+    "contains_phi": false,
+    "contains_private_records": false,
+    "contains_patient_specific_recommendation": false,
+    "generated_for": "public intake flow shape testing only"
+  },
+  "caregiver_flow": {
+    "reference_user": "caregiver-like caregiver",
+    "flow_state": "draft_review",
+    "save_resume": "conceptual-only",
+    "unknown_state_supported": true,
+    "final_review_required_before_private_handoff": true,
+    "covers_product_spec_steps": true
+  },
+  "sections": [
+    {
+      "section_id": "intake_00_boundary",
+      "title": "Before You Start",
+      "synthetic_answers": {
+        "understands_not_medical_advice": true,
+        "understands_no_public_real_data": true,
+        "understands_emergency_boundary": true
+      }
+    },
+    {
+      "section_id": "intake_01_consent_readiness",
+      "title": "Consent And Privacy",
+      "synthetic_answers": {
+        "consent_status": "pending",
+        "allowed_uses": ["private-review-draft"],
+        "public_export_allowed": false
+      }
+    },
+    {
+      "section_id": "intake_02_helper_context",
+      "title": "Helper Context",
+      "synthetic_answers": {
+        "helper_role_category": "unknown",
+        "preferred_language_category": "unknown",
+        "helper_confidence": "not_sure",
+        "helper_name_public": false,
+        "contact_details_public": false,
+        "relationship_details_private_only": true,
+        "free_text_private_only": true
+      }
+    },
+    {
+      "section_id": "intake_03_diagnosis_context",
+      "title": "Diagnosis Context",
+      "synthetic_answers": {
+        "source_stated_diagnosis": "multiple myeloma",
+        "diagnosis_source_type": "synthetic-summary",
+        "diagnosis_certainty": "source-stated-not-reviewed",
+        "exact_dates_present": false
+      }
+    },
+    {
+      "section_id": "intake_04_disease_state",
+      "title": "Where Things Stand",
+      "synthetic_answers": {
+        "disease_setting": "unknown",
+        "caregiver_confidence": "not_sure",
+        "needs_clinician_review": true
+      }
+    },
+    {
+      "section_id": "intake_05_treatment_history",
+      "title": "Treatment History",
+      "synthetic_answers": {
+        "known_prior_therapy_classes": ["unknown"],
+        "sequence_known": false,
+        "exact_agents_private_only": true,
+        "exact_dates_private_only": true
+      }
+    },
+    {
+      "section_id": "intake_06_response_mrd_relapse",
+      "title": "Response, MRD, And Relapse Terms",
+      "synthetic_answers": {
+        "mrd_status": "unknown",
+        "mrd_method": "unknown",
+        "response_term_source_known": false,
+        "cannot_be_used_as_cure_flag": true
+      }
+    },
+    {
+      "section_id": "intake_07_labs_measurements",
+      "title": "Labs And Measurements",
+      "synthetic_answers": {
+        "has_lab_reports": "unknown",
+        "units_required_before_private_review": true,
+        "exact_values_public": false,
+        "date_precision_public": "none"
+      }
+    },
+    {
+      "section_id": "intake_08_context_modifiers",
+      "title": "Context That May Matter",
+      "synthetic_answers": {
+        "bone_context": "unknown",
+        "renal_context": "unknown",
+        "infection_context": "unknown",
+        "cytogenetic_or_genomic_context": "unknown",
+        "extramedullary_context": "unknown",
+        "frailty_or_function_context": "unknown",
+        "all_context_requires_source_and_review": true
+      }
+    },
+    {
+      "section_id": "intake_09_records_inventory",
+      "title": "Records Inventory",
+      "synthetic_answers": {
+        "record_types_available": ["unknown"],
+        "file_upload_allowed_in_public_demo": false,
+        "record_contents_public": false
+      }
+    },
+    {
+      "section_id": "intake_10_questions_goals_constraints",
+      "title": "Questions For Private Review",
+      "synthetic_answers": {
+        "question_categories": ["organize-records", "understand-what-is-missing"],
+        "free_text_private_only": true,
+        "financial_or_travel_constraints_private_only": true
+      }
+    },
+    {
+      "section_id": "intake_11_review_submit",
+      "title": "Review Before Private Handoff",
+      "synthetic_answers": {
+        "ready_for_private_handoff": false,
+        "blocked_reason": "synthetic-public-fixture",
+        "public_submission_allowed": false
+      }
+    }
+  ],
+  "public_projection_result": {
+    "projection_id": "synthetic-caregiver-intake-projection-v0",
+    "projection_gate_artifact": "multiple-myeloma-caregiver-intake-public-projection-checklist-v0",
+    "projection_verdict": "synthetic-only-ok",
+    "contains_real_case_data": false,
+    "contains_phi": false,
+    "contains_free_text_case_details": false,
+    "real_case_publication_allowed": false,
+    "patient_specific_outputs_allowed": false,
+    "public_export_allowed": false,
+    "requires_final_review": true,
+    "requires_clinician_review": true,
+    "requires_privacy_review": true,
+    "requires_publication_gate": true,
+    "unknown_state_supported": true,
+    "allowed_public_output": "synthetic fixture shape only",
+    "allowed_public_successor": "synthetic fixture",
+    "publication_gate_required_for_any_future_aggregate_learning": true
+  },
+  "private_handoff_preview": {
+    "conceptual_private_path": "../curing-blood-cancer-lab/cases/<case_id>/intake/caregiver-intake-draft.json",
+    "contains_phi_in_real_system": true,
+    "requires_consent_review": true,
+    "requires_clinician_review": true,
+    "requires_privacy_review": true
+  }
+}

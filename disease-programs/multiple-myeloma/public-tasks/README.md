@@ -13,6 +13,10 @@ private repo context.
 - [BCMA Antigen Escape Public Task Queue v0](bcma-antigen-escape-public-task-queue-v0.md)
 - [Post-CAR T Relapse Mechanism Gap Public Task Queue v0](post-car-t-relapse-mechanism-gap-public-task-queue-v0.md)
 
+## Frontier Issue Drafts
+
+- [MRD endpoint source extraction task](issue-drafts/multiple-myeloma-mrd-endpoint-source-extraction-task-v0.md)
+
 ## Boundary
 
 - Research tasks only.

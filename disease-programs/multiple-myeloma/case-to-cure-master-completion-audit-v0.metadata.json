@@ -1,0 +1,150 @@
+{
+  "artifact_id": "multiple-myeloma-case-to-cure-master-completion-audit-v0",
+  "title": "Case-To-Cure Master Completion Audit v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "case-to-cure pipeline",
+    "adaptive completion audit",
+    "ORP frontier state",
+    "public safety",
+    "expert validation gates",
+    "private-lab handoff",
+    "human review gates"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "public-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Inventory v0",
+      "url": "public-inventory-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Loop Completion Handoff v0",
+      "url": "public-loop-completion-handoff-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Frontier Completion Audit Handoff v0",
+      "url": "frontier-completion-audit-handoff-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Definition-Of-Complete Audit v0",
+      "url": "definition-of-complete-audit-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Stage Validator And Owner Map v0",
+      "url": "case-to-cure-stage-validator-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "End-To-End Synthetic Case Dry Run v0",
+      "url": "end-to-end-synthetic-case-dry-run-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Public Learning Extraction Gate v0",
+      "url": "case-to-public-learning-extraction-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Loop v0",
+      "url": "reviews/expert-validation-loop-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Builder v0",
+      "url": "reviews/multidisciplinary-review-packet-builder-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Candidate Hypothesis Review Question Set v0",
+      "url": "reviews/candidate-hypothesis-review-question-set-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ORP Frontier State",
+      "url": "../../orp/frontier/state.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../../orp/frontier/additional-items.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ORP Frontier Version Stack",
+      "url": "../../orp/frontier/version-stack.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private-To-Public Workflow",
+      "url": "../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only protocol.",
+    "Public completion audit only.",
+    "Not scientific completion.",
+    "Not expert review.",
+    "Not clinical review.",
+    "Not legal review.",
+    "Not regulatory review.",
+    "Not privacy review.",
+    "Not publication review.",
+    "Not release review.",
+    "Not private-lab readiness.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not availability guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not safety-management guidance.",
+    "Does not inspect, process, extract, summarize, de-identify, publish, or authorize use of real case data, patient-identifying data, raw records, portal exports, molecular reports, pathology reports, flow reports, genomics reports, images, notes, exact dates tied to a person, clinician names, site names tied to a person, sponsor contacts, private paths, private prompts, private case IDs, or re-identification keys.",
+    "Does not copy private correspondence, unpublished expert comments, reviewer deliberation, private permission context, private reviewer identities, or private contact details.",
+    "Does not authorize single-case claims, public case reports, case-derived claims, generated biomedical claims, generated packet content, generated case summaries, generated publication text, patient-specific outputs, patient matching, trial matching, target actionability, source ranking, evidence ranking, target ranking, mechanism ranking, product ranking, therapy ranking, trial ranking, option ranking, recommendations, sequencing, comparison, prioritization, private-lab work, legal clearance, regulatory readiness, ethics readiness, security readiness, retention decisions, emergency handling, publication, release, or clinical decisions.",
+    "Does not complete expert-review-needed, private-lab-needed, clinical-team-needed, legal-needed, regulatory-needed, publication-gate-needed, or human-review-needed gates.",
+    "Does not select a new autonomous public-safe phase.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-case-to-cure-master-completion-audit-v0.md"
+}

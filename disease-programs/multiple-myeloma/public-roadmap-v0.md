@@ -5,7 +5,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - disease program: `multiple-myeloma`
 - roadmap status: `active-v0`
 - claim level: `open-question`
-- last reviewed: `2026-04-15`
+- last reviewed: `2026-04-16`
 - clinical boundary: research roadmap, not medical advice
 
 ## Purpose
@@ -198,8 +198,11 @@ make validate
 
 Case-specific plumbing:
 
+- [Case-To-Cure Adaptive Master Plan v0](case-to-cure-adaptive-master-plan-v0.md)
 - [Case-To-Cure Pipeline Blueprint v0](case-to-cure-pipeline-blueprint-v0.md)
+- [Case-To-Cure Stage Validator And Owner Map v0](case-to-cure-stage-validator-map-v0.md)
 - [Multiple Myeloma Synthetic Case-To-Cure Pipeline v0](../../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md)
+- [End-To-End Synthetic Case Dry Run v0](end-to-end-synthetic-case-dry-run-v0.md)
 
 Done when:
 
@@ -258,7 +261,49 @@ Done when:
 - each section links to source-backed records
 - the artifact is modest about uncertainty and does not claim a cure
 
-### 7. Build Tools On Top
+### 7. Work The Adaptive Frontier Map
+
+The v0 public loop now has a durable adaptive named phase:
+
+[Case-To-Cure Adaptive Master Plan v0](case-to-cure-adaptive-master-plan-v0.md)
+
+The active roadmap remains:
+
+[Multiple Myeloma ORP Frontier Roadmap v0](frontier-roadmap-v0.md)
+
+The adaptive master plan and frontier map turn the completed scaffolding into a
+concrete operating plan for expert validation, MRD and endpoint guardrails,
+immune therapy landscape work, post-BCMA resistance mapping, precursor-state
+boundaries, context modifiers, case-to-cure dry-run plumbing, and public
+translation. The adaptive plan adds the rule that each completed step must
+inspect its outcome, write a handoff, synthesize the next safest public step,
+and queue, activate, or block that step explicitly.
+
+The Clawdad standing brief for this phase is:
+
+[Clawdad Frontier Delegation Packet v0](../../protocols/clawdad-frontier-delegation-packet-v0.md)
+
+Frontier lane order:
+
+1. expert response intake and validation ledger
+2. MRD, deep response, and endpoint language
+3. immune therapy sequencing and access boundary
+4. post-BCMA resistance and relapse mechanisms
+5. precursor, risk, and interception questions
+6. high-risk, extramedullary, organ, and frailty context
+7. case-to-cure pipeline plumbing
+8. public translation and contribution surface
+
+Done when:
+
+- the adaptive master backlog is complete or blocked by a named human gate
+- every frontier lane has a first public artifact or explicit blocked status
+- metadata, catalog entries, README links, and protocols are current
+- `make validate` passes
+- all remaining work is named as expert-review-needed, private-lab-needed,
+  clinical-team-needed, or human-publication-gate-needed
+
+### 8. Build Tools On Top
 
 Tooling should sit on top of the evidence layer, not replace it.
 
@@ -320,50 +365,100 @@ lab repo.
 
 ## Immediate Next Queue
 
-1. Work the contribution-ready tasks in
-   [Multiple Myeloma Roadmap Public Task Queue v0](public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md).
-2. Use [Multiple Myeloma Open Research Map v0.1](open-research-map-v0-1.md)
-   as the current navigation surface.
-3. Use the
-   [Schema And Tooling Phase Inventory v0](schema-tooling-phase-inventory-v0.md)
-   as the phase boundary before adding generators.
-4. Use [Tooling Readiness Gate v0](tooling-readiness-gate-v0.md) as the
-   aggregate no-tooling-yet checkpoint.
-5. Keep the validated trial-landscape and open-question shapes as public
-   research context only, not eligibility, availability, enrollment, clinical
-   priority, urgency, evidence-strength ranking, or guidance tooling.
-6. Use [Review-Packet Builder Input Manifest Spec v0](reviews/review-packet-builder-manifest-spec-v0.md)
-   as the spec-only boundary for future review-packet-builder inputs.
-7. Use [Review-Packet Builder Manifest Schema v0](../../schemas/review-packet-builder-manifest-schema-v0.md)
-   as the validated manifest boundary before any review-packet-builder code.
-8. Use [Review-Packet Builder Dry-Run Plan v0](reviews/review-packet-builder-dry-run-plan-v0.md)
-   as the no-code copy, reference, omit, and refuse boundary.
-9. Use [Review-Packet Builder Implementation Gate v0](reviews/review-packet-builder-implementation-gate-v0.md)
-   as the aggregate gate before any review-packet-builder implementation.
-10. Build only `multiple-myeloma-review-packet-builder-route-table-script-task-v0`
-   as the first copied-reference dry-run code slice; keep packet assembly,
-   generated packet output, and generated biomedical claim handling blocked.
-11. Define `multiple-myeloma-review-packet-builder-route-table-output-schema-task-v0`
-   before any downstream workflow relies on route-table output records.
-12. Use `multiple-myeloma-review-packet-builder-packet-assembly-gate-task-v0`
-   as a no-code aggregate gate before any review-packet output or packet
-   assembly work.
-13. Define `multiple-myeloma-review-packet-builder-packet-skeleton-spec-task-v0`
-   as a no-code empty-section skeleton before any packet assembly output.
-14. Run an aggregate review-packet-builder recombination handoff before any
-   new packet-output, schema, validator, or builder task is selected.
-15. Use [Definition-Of-Complete Audit v0](definition-of-complete-audit-v0.md)
-   as the aggregate audit across roadmap items, case-to-cure
-   stages, synthetic fixtures, source registry sufficiency, validators,
-   navigation, and remaining private-lab or human-gated blockers.
-16. Use [Case-Specific Private-Lab Blocker Register v0](case-specific-private-lab-blocker-register-v0.md)
-   as the public-safe blocker map before any real case tooling.
-17. Use [Public Loop Completion Handoff v0](public-loop-completion-handoff-v0.md)
-   as the current endpoint for the v0 public loop; select no new public task
-   without a new named phase, human review, or aggregate gate.
+1. Treat [Public Loop Completion Handoff v0](public-loop-completion-handoff-v0.md)
+   as the completed endpoint for the original v0 public loop.
+2. Use [Case-To-Cure Adaptive Master Plan v0](case-to-cure-adaptive-master-plan-v0.md)
+   as the live ORP named phase and durable next-step loop.
+3. Use [Multiple Myeloma ORP Frontier Roadmap v0](frontier-roadmap-v0.md) as the
+   active roadmap context.
+4. Use [Clawdad Frontier Delegation Packet v0](../../protocols/clawdad-frontier-delegation-packet-v0.md)
+   as the standing Clawdad brief for autonomous public-safe passes.
+5. The adaptive case-to-cure loop has completed the loop governor, private
+   intake schema/projection boundary, static synthetic caregiver prototype,
+   projection validator, and
+   [Consent Privacy Security Retention Gate v0](case-intake/consent-privacy-security-retention-gate-v0.md),
+   plus the
+   [Case Feature Normalization Contract v0](case-feature-normalization-contract-v0.md)
+   and
+   [Measurement Normalization Contract v0](measurements/measurement-normalization-contract-v0.md),
+   and the
+   [Therapy Exposure Timeline Contract v0](therapy-landscapes/therapy-exposure-timeline-contract-v0.md),
+   and the
+   [Molecular Immune Context Contract v0](contexts/molecular-immune-context-contract-v0.md),
+   and the
+   [Evidence Retrieval Packet v0](evidence-retrieval-packet-v0.md),
+   and the
+   [Trial Therapy Landscape Non-Advice Gate v0](therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md),
+   and the
+   [Candidate Hypothesis Review Question Set v0](reviews/candidate-hypothesis-review-question-set-v0.md),
+   and the
+   [Multidisciplinary Review Packet Builder v0](reviews/multidisciplinary-review-packet-builder-v0.md),
+   and the
+   [Expert Validation Loop v0](reviews/expert-validation-loop-v0.md).
+6. The case-to-public learning extraction gate is complete as
+   [Case-To-Public Learning Extraction Gate v0](case-to-public-learning-extraction-gate-v0.md);
+   it preserves allowed output type, privacy decision state,
+   de-identification basis, aggregation state, minimum-size state,
+   single-case claim blockers, public source context, review lens,
+   disposition state, uncertainty, limitations, blocked uses, and
+   publication-gate state before any private-case learning can become public.
+7. The end-to-end synthetic case dry run is complete as
+   [End-To-End Synthetic Case Dry Run v0](end-to-end-synthetic-case-dry-run-v0.md);
+   it exercises success, omit, refusal, and blocker states from synthetic
+   caregiver intake through publication-gate refusal without real case data,
+   patient-specific outputs, matching, ranking, clinical guidance, or
+   publication authorization.
+8. The case-to-cure master completion audit is complete as
+   [Case-To-Cure Master Completion Audit v0](case-to-cure-master-completion-audit-v0.md);
+   it records the adaptive public-safe scope as complete and blocks the next
+   state on expert, private-lab, clinical, legal, regulatory, publication, or
+   human-review gates unless a human selects a new named public-safe phase.
+9. The expert validation loop now preserves issue IDs, artifact IDs, source
+   IDs, review lenses, outreach-map role labels, response-ledger disposition
+   states, allowed dispositions, uncertainty, blocked uses, and next public
+   actions without outreach, private correspondence, unpublished expert
+   comments, recommendations, rankings, publication authorization, or clinical
+   decisions.
+10. The multidisciplinary review packet builder now preserves question IDs,
+   artifact IDs, source IDs, review lenses, missing-input blockers, refusals,
+   and boundary fields with copy, reference, omit, or refuse behavior only,
+   without packet assembly, generated biomedical prose, patient-specific
+   output, recommendations, rankings, matching, publication authorization, or
+   clinical decisions.
+11. The candidate hypothesis review question set now preserves source-scoped
+   review questions, evidence packet IDs, landscape gate status, source
+   context, uncertainty, review lens, blocked uses, and explicit no
+   patient-action output without candidate options, recommendations, rankings,
+   matching, treatment guidance, trial guidance, expanded-access guidance,
+   monitoring guidance, or patient-specific interpretation.
+12. The trial/therapy landscape non-advice gate now preserves trial, therapy,
+   product, target, jurisdiction, source freshness, access-date, status,
+   limitation, uncertainty, and review fields without availability claims,
+   eligibility claims, matching, sequencing, access guidance, ranking, or
+   patient-specific interpretation.
+12. The evidence retrieval packet preserves public source IDs, query
+   records, source freshness, access-date state, limitations, uncertainty,
+   no-completeness warnings, review status, and no-advice boundaries without
+   patient matching, trial matching, actionability, availability, eligibility,
+   monitoring, ranking, or patient-specific interpretation.
+13. The molecular immune context contract now preserves cytogenetics,
+   genomics, target assays, pathology, flow, immune context, assay validity,
+   source validity, source status, timepoint buckets, review gates, and target
+   language boundaries before downstream use without actionability, testing,
+   treatment, trial, monitoring, ranking, or patient-specific interpretation.
+14. The therapy exposure timeline contract now preserves prior therapies,
+   exposure, line or timing context, response linkage, toxicity, or constraints
+   before downstream use without sequencing, eligibility, access, monitoring,
+   ranking, or treatment guidance.
+15. Then advance immune therapy and post-BCMA resistance lanes with date-scoped,
+   source-backed, non-advisory records.
+16. Then define precursor, high-risk, organ, frailty, and case-to-cure dry-run
+   plumbing boundaries.
+17. Then improve the public translation and contribution surface.
 18. Build artifact-generation scripts, evidence graph tooling, target
    prioritization views, trial explorers, extraction helpers, or review-packet
-   builders only after their input shapes validate.
+   builders only after their input shapes validate and the relevant frontier
+   lane says tooling is unblocked.
 
 ## Review Boundary
 

@@ -1,0 +1,81 @@
+{
+  "artifact_id": "mrd-endpoint-language-guardrail-addendum-v0",
+  "title": "MRD Endpoint Language Guardrail Addendum v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "measurable residual disease",
+    "complete response",
+    "endpoint language",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "../frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "MRD And Relapse Measurement Glossary v0",
+      "url": "mrd-and-relapse-measurement-glossary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "BCMA Measurement Context Audit v0",
+      "url": "bcma-measurement-context-audit-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "FDA Draft Guidance On MRD And Complete Response In Multiple Myeloma",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "PubMed literature anchor: IMWG response and MRD criteria",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27511158/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: MRD and survival meta-analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27632282/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: MRD flow cytometry harmonization",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35005838/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Response Validation Ledger v0",
+      "url": "../reviews/expert-response-validation-ledger-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only protocol.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not eligibility, expanded-access, monitoring, or screening guidance.",
+    "Does not claim that MRD negativity, complete response, stringent complete response, sustained MRD negativity, or deep response means cure.",
+    "Does not establish clinical actionability for any endpoint or assay.",
+    "Does not rank assays, endpoints, therapies, trials, targets, products, mechanisms, sources, artifacts, or evidence.",
+    "Does not use real case data, patient-identifying data, private records, or private correspondence.",
+    "Does not authorize endpoint dashboards, scoring, generated claims, patient matching, trial matching, review-packet filling, or recommendation behavior.",
+    "Regulatory and endpoint contexts can change after the access date."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/mrd-endpoint-language-guardrail-addendum-v0.md"
+}

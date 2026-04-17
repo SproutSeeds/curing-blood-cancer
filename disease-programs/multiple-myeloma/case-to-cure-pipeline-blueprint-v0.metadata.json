@@ -42,6 +42,61 @@
       "accessed": "2026-04-15"
     },
     {
+      "label": "Caregiver Case Intake Product Spec v0",
+      "url": "./case-intake/caregiver-case-intake-product-spec-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Checklist v0",
+      "url": "./case-intake/caregiver-intake-public-projection-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "./case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Loop Governor Handoff v0",
+      "url": "./case-to-cure-loop-governor-handoff-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case Intake Frontier Completion Audit Handoff v0",
+      "url": "./case-intake/case-intake-frontier-completion-audit-handoff-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private Intake Schema Contract v0",
+      "url": "./case-intake/private-intake-schema-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Static Synthetic Caregiver Prototype Plan v0",
+      "url": "./case-intake/static-synthetic-caregiver-prototype-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Validator v0",
+      "url": "./case-intake/caregiver-intake-public-projection-validator-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Consent Privacy Security Retention Gate v0",
+      "url": "./case-intake/consent-privacy-security-retention-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case Feature Normalization Contract v0",
+      "url": "./case-feature-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "./measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
       "label": "FDA Drugs@FDA Database",
       "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/about-drugsfda",
       "accessed": "2026-04-15"
@@ -50,6 +105,51 @@
       "label": "Private-to-public workflow",
       "url": "../../docs/private-to-public-workflow.md",
       "accessed": "2026-04-15"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Molecular Immune Context Contract v0",
+      "url": "./contexts/molecular-immune-context-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Evidence Retrieval Packet v0",
+      "url": "evidence-retrieval-packet-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Trial Therapy Landscape Non-Advice Gate v0",
+      "url": "therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Candidate Hypothesis Review Question Set v0",
+      "url": "reviews/candidate-hypothesis-review-question-set-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Builder v0",
+      "url": "reviews/multidisciplinary-review-packet-builder-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Loop v0",
+      "url": "./reviews/expert-validation-loop-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Public Learning Extraction Gate v0",
+      "url": "./case-to-public-learning-extraction-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "End-To-End Synthetic Case Dry Run v0",
+      "url": "./end-to-end-synthetic-case-dry-run-v0.md",
+      "accessed": "2026-04-16"
     }
   ],
   "limitations": [

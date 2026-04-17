@@ -1,0 +1,142 @@
+{
+  "artifact_id": "multiple-myeloma-case-to-cure-stage-validator-map-v0",
+  "title": "Case-To-Cure Stage Validator And Owner Map v0",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "case-to-cure pipeline",
+    "stage validator map",
+    "private-lab blockers",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "./frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "./case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
+      "url": "../../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-Specific Private-Lab Blocker Register v0",
+      "url": "./case-specific-private-lab-blocker-register-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-Feature Bundle Public Summary v0",
+      "url": "../../schemas/case-feature-bundle-public-summary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case Feature Normalization Contract v0",
+      "url": "./case-feature-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "./measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Candidate-Option Scoring Rubric v0",
+      "url": "./candidate-option-scoring-rubric-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "./publication-gate-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "./reviews/multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Review And Release Gate v0",
+      "url": "./public-review-release-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Artifact Validator",
+      "url": "../../tools/validate_public_artifacts.py",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Molecular Immune Context Contract v0",
+      "url": "./contexts/molecular-immune-context-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Evidence Retrieval Packet v0",
+      "url": "evidence-retrieval-packet-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Trial Therapy Landscape Non-Advice Gate v0",
+      "url": "therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Candidate Hypothesis Review Question Set v0",
+      "url": "reviews/candidate-hypothesis-review-question-set-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Builder v0",
+      "url": "reviews/multidisciplinary-review-packet-builder-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Loop v0",
+      "url": "./reviews/expert-validation-loop-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Public Learning Extraction Gate v0",
+      "url": "./case-to-public-learning-extraction-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "End-To-End Synthetic Case Dry Run v0",
+      "url": "./end-to-end-synthetic-case-dry-run-v0.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only stage map.",
+    "Not a pipeline implementation.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Does not authorize case processing, case upload, packet assembly, patient matching, trial matching, option ranking, recommendation behavior, generated claims, or publication workflow.",
+    "Does not validate consent, de-identification, source matching, clinical interpretation, trial eligibility, sponsor access, safety, monitoring, or publication readiness for any person.",
+    "Does not use real case data, patient-identifying data, private records, raw records, images, notes, dates tied to a person, re-identification keys, or private expert correspondence."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-case-to-cure-stage-validator-map-v0.md"
+}

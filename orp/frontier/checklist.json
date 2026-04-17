@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "orp_frontier_checklist",
+  "program_id": "curing-blood-cancer",
+  "label": "Curing Blood Cancer",
+  "active_version": "v2",
+  "active_milestone": "case-to-cure-adaptive-master-plan-v0",
+  "exact": [
+    {
+      "version_id": "v2",
+      "version_label": "Case-To-Cure Adaptive Master Plan",
+      "milestone_id": "case-to-cure-adaptive-master-plan-v0",
+      "milestone_label": "Case-To-Cure Adaptive Master Plan v0",
+      "band": "exact",
+      "status": "active",
+      "phase_ids": [
+        "case-to-cure-loop-governor-v0",
+        "private-intake-schema-contract-v0",
+        "static-synthetic-caregiver-prototype-v0",
+        "public-projection-validator-v0",
+        "consent-privacy-security-retention-gate-v0",
+        "case-feature-normalization-contract-v0",
+        "measurement-normalization-contract-v0",
+        "therapy-exposure-timeline-contract-v0",
+        "molecular-immune-context-contract-v0",
+        "evidence-retrieval-packet-v0",
+        "trial-therapy-landscape-non-advice-gate-v0",
+        "candidate-hypothesis-review-question-set-v0",
+        "multidisciplinary-review-packet-builder-v0",
+        "expert-validation-loop-v0",
+        "case-to-public-learning-extraction-gate-v0",
+        "end-to-end-synthetic-case-dry-run-v0",
+        "case-to-cure-master-completion-audit-v0",
+        "case-to-cure-public-scope-human-gate-blocker-v0"
+      ],
+      "is_active": true
+    }
+  ],
+  "structured": [
+    {
+      "version_id": "v1",
+      "version_label": "Case Intake Frontier",
+      "milestone_id": "case-intake-frontier-v0",
+      "milestone_label": "Caregiver Case Intake Frontier v0",
+      "band": "structured",
+      "status": "complete",
+      "phase_ids": [
+        "case-intake-product-spec-v0"
+      ],
+      "is_active": false
+    }
+  ],
+  "horizon": []
+}

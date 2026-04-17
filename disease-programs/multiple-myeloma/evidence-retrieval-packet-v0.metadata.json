@@ -1,0 +1,136 @@
+{
+  "artifact_id": "multiple-myeloma-evidence-retrieval-packet-v0",
+  "title": "Evidence Retrieval Packet v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "evidence retrieval",
+    "source registry",
+    "query provenance",
+    "source freshness",
+    "trial registry context",
+    "public projection",
+    "case-to-cure pipeline",
+    "public safety",
+    "private-lab handoff"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Case Feature Normalization Contract v0",
+      "url": "case-feature-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Molecular Immune Context Contract v0",
+      "url": "contexts/molecular-immune-context-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ClinicalTrials.gov Query Protocol v0",
+      "url": "../../protocols/clinicaltrials-gov-query-protocol-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Open Research Map v0.1",
+      "url": "open-research-map-v0-1.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Stage Validator And Owner Map v0",
+      "url": "case-to-cure-stage-validator-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private Intake Schema Contract v0",
+      "url": "case-intake/private-intake-schema-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Validator v0",
+      "url": "case-intake/caregiver-intake-public-projection-validator-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "publication-gate-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private-To-Public Workflow",
+      "url": "../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only schema contract.",
+    "Public source packet skeleton only.",
+    "Not an executable schema.",
+    "Not a live retrieval workflow.",
+    "Not a search engine.",
+    "Not a scraper.",
+    "Not an API implementation.",
+    "Not a database.",
+    "Not a backend.",
+    "Not an account or public submission workflow.",
+    "Not a real evidence packet.",
+    "Not a case-matched evidence packet.",
+    "Not a trial matcher.",
+    "Not an eligibility checker.",
+    "Not an availability checker.",
+    "Not an access pathway.",
+    "Not a target actionability record.",
+    "Not an evidence grade.",
+    "Not an option ranking.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not availability guidance.",
+    "Not expanded-access guidance.",
+    "Not access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not safety-management guidance.",
+    "Does not run literature, registry, regulatory, labeling, dataset, or trial searches.",
+    "Does not process, normalize, store, route, publish, match, compare, rank, grade, or authorize use of real case-linked evidence.",
+    "Does not contain patient-identifying data, private records, portal exports, molecular reports, pathology reports, flow reports, genomics reports, images, notes, raw assay values, therapy histories, exact dates tied to a person, facilities, clinicians, sponsor contacts, contact details, private case IDs, private workspace paths, private prompts, or re-identification keys.",
+    "Does not authorize source appraisal, clinical interpretation, molecular interpretation, target actionability, patient matching, trial matching, evidence ranking, source ranking, target ranking, mechanism ranking, option ranking, private-lab work, legal clearance, regulatory readiness, sponsor or site verification, security readiness, retention decisions, emergency handling, or publication of case-derived learning.",
+    "Does not validate trial, therapy landscape, candidate hypothesis, multidisciplinary review, monitoring-plan, or public-learning extraction semantics.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-evidence-retrieval-packet-v0.md"
+}

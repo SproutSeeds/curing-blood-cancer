@@ -1,0 +1,123 @@
+{
+  "artifact_id": "multiple-myeloma-therapy-exposure-timeline-contract-v0",
+  "title": "Therapy Exposure Timeline Contract v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "therapy exposure",
+    "treatment-class taxonomy",
+    "timeline normalization",
+    "response linkage",
+    "toxicity context",
+    "constraint context",
+    "case-to-cure pipeline",
+    "public projection",
+    "public safety",
+    "private-lab handoff"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Treatment-Class Taxonomy v0",
+      "url": "../../../taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Immune Therapy Sequencing And Access Boundary v0",
+      "url": "immune-therapy-sequencing-access-boundary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Therapy Record Schema v0",
+      "url": "../../../schemas/therapy-record-schema-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case Feature Normalization Contract v0",
+      "url": "../case-feature-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "../measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private Intake Schema Contract v0",
+      "url": "../case-intake/private-intake-schema-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Validator v0",
+      "url": "../case-intake/caregiver-intake-public-projection-validator-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "../case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Stage Validator And Owner Map v0",
+      "url": "../case-to-cure-stage-validator-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "../publication-gate-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only schema contract.",
+    "Public shape contract only.",
+    "Not an executable schema.",
+    "Not a real therapy timeline.",
+    "Not a medication list.",
+    "Not a dosing record.",
+    "Not a regimen parser.",
+    "Not an intake form.",
+    "Not a live backend.",
+    "Not a database.",
+    "Not an upload path.",
+    "Not an account or public submission workflow.",
+    "Not a treatment timeline processor.",
+    "Not a refractory-status assessment.",
+    "Not a toxicity assessment.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not product availability guidance.",
+    "Not access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not safety-management guidance.",
+    "Not toxicity-management guidance.",
+    "Does not collect, normalize, store, route, transform, publish, sequence, compare, rank, or authorize use of real therapy exposure data.",
+    "Does not contain patient-identifying data, private records, portal exports, medication records, reports, images, notes, raw lab values, doses, schedules, cycles, exact dates tied to a person, facilities, prescribers, contact details, private case IDs, private workspace paths, or re-identification keys.",
+    "Does not authorize clinical interpretation, refractory assessment, response assessment, safety management, toxicity management, patient matching, trial matching, evidence ranking, option ranking, private-lab work, legal clearance, regulatory readiness, security readiness, retention decisions, emergency handling, or publication of case-derived learning.",
+    "Does not validate molecular, immune, evidence retrieval, trial, therapy landscape, candidate hypothesis, multidisciplinary review, monitoring-plan, or public-learning extraction semantics.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-therapy-exposure-timeline-contract-v0.md"
+}

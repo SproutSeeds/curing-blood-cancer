@@ -1,0 +1,192 @@
+{
+  "artifact_id": "multiple-myeloma-end-to-end-synthetic-case-dry-run-v0",
+  "title": "End-To-End Synthetic Case Dry Run v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "synthetic dry run",
+    "case-to-cure pipeline",
+    "caregiver intake",
+    "public projection",
+    "normalization contracts",
+    "evidence retrieval",
+    "trial and therapy landscape gate",
+    "candidate hypothesis review",
+    "review packet routing",
+    "expert validation loop",
+    "public learning extraction",
+    "publication gate",
+    "public safety",
+    "private-lab handoff"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma Synthetic Caregiver Intake v0",
+      "url": "../../examples/multiple-myeloma-synthetic-caregiver-intake-v0.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
+      "url": "../../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Case Intake Product Spec v0",
+      "url": "case-intake/caregiver-case-intake-product-spec-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private Intake Schema Contract v0",
+      "url": "case-intake/private-intake-schema-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Static Synthetic Caregiver Prototype Plan v0",
+      "url": "case-intake/static-synthetic-caregiver-prototype-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Validator v0",
+      "url": "case-intake/caregiver-intake-public-projection-validator-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Consent Privacy Security Retention Gate v0",
+      "url": "case-intake/consent-privacy-security-retention-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case Feature Normalization Contract v0",
+      "url": "case-feature-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Molecular Immune Context Contract v0",
+      "url": "contexts/molecular-immune-context-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Evidence Retrieval Packet v0",
+      "url": "evidence-retrieval-packet-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Trial Therapy Landscape Non-Advice Gate v0",
+      "url": "therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Candidate Hypothesis Review Question Set v0",
+      "url": "reviews/candidate-hypothesis-review-question-set-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Builder v0",
+      "url": "reviews/multidisciplinary-review-packet-builder-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Loop v0",
+      "url": "reviews/expert-validation-loop-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Public Learning Extraction Gate v0",
+      "url": "case-to-public-learning-extraction-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "publication-gate-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Stage Validator And Owner Map v0",
+      "url": "case-to-cure-stage-validator-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private-To-Public Workflow",
+      "url": "../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only protocol.",
+    "Synthetic-only dry-run artifact.",
+    "Public route table and refusal report only.",
+    "Not executable validation code.",
+    "Not a runner.",
+    "Not a backend.",
+    "Not an intake system.",
+    "Not an extractor.",
+    "Not a de-identification system.",
+    "Not a case processor.",
+    "Not a case summary.",
+    "Not an evidence engine.",
+    "Not a trial finder.",
+    "Not a patient matcher.",
+    "Not a trial matcher.",
+    "Not a ranker.",
+    "Not a review-packet assembler.",
+    "Not generated biomedical prose.",
+    "Not expert review.",
+    "Not clinical review.",
+    "Not legal review.",
+    "Not regulatory review.",
+    "Not privacy review.",
+    "Not publication review.",
+    "Not publication authorization.",
+    "Not release authorization.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not availability guidance.",
+    "Not expanded-access guidance.",
+    "Not access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not safety-management guidance.",
+    "Does not inspect, process, extract, summarize, de-identify, publish, or authorize use of real case data, patient-identifying data, raw records, portal exports, molecular reports, pathology reports, flow reports, genomics reports, images, notes, exact dates tied to a person, clinician names, site names tied to a person, sponsor contacts, private paths, private prompts, private case IDs, or re-identification keys.",
+    "Does not copy private correspondence, unpublished expert comments, reviewer deliberation, private permission context, private reviewer identities, or private contact details.",
+    "Does not authorize single-case claims, public case reports, case-derived claims, generated biomedical claims, patient-specific outputs, patient matching, trial matching, target actionability, source ranking, evidence ranking, target ranking, mechanism ranking, product ranking, therapy ranking, trial ranking, option ranking, recommendations, sequencing, comparison, prioritization, private-lab work, legal clearance, regulatory readiness, ethics readiness, security readiness, retention decisions, emergency handling, publication, release, or clinical decisions.",
+    "Does not validate master-completion audit semantics.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-end-to-end-synthetic-case-dry-run-v0.md"
+}

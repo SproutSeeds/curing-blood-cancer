@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "orp_frontier_additional_items",
+  "program_id": "curing-blood-cancer",
+  "label": "Curing Blood Cancer",
+  "active_list_id": "case-to-cure-master-backlog-v0",
+  "active_item_id": "case-to-cure-public-scope-human-gate-blocker-v0",
+  "lists": [
+    {
+      "id": "case-intake-frontends",
+      "label": "Human-Friendly Case Intake Front Ends",
+      "status": "complete",
+      "items": [
+        {
+          "id": "caregiver-friendly-case-intake-v0",
+          "label": "caregiver-friendly case intake front end",
+          "status": "complete",
+          "goal": "Design the first public-facing but privacy-preserving case-intake surface so a caregiver can enter a loved one's multiple myeloma details through a simple guided flow, with all real case data routed only to a private, consented, access-controlled system and with no medical advice or public PHI.",
+          "depends_on": [],
+          "requirements": [
+            "Public repo may document UI, schemas, copy, synthetic examples, and private handoff contracts only; no real patient data, uploaded records, private notes, or identifying details belong in public artifacts, issues, logs, or examples.",
+            "The experience must be easy for a caregiver: plain-language questions, progressive sections, save/resume concept, unknown/not sure choices, unit/date helpers, and a final review screen before submission.",
+            "Define minimum viable case data and optional deeper data: diagnosis context, disease state, prior therapies, response/MRD history, relapse history, key labs with units and dates, cytogenetics/genomics if known, imaging/bone/renal/infection context, transplant/CAR T/bispecific exposure, current care-team questions, goals, and constraints.",
+            "Every field must carry provenance, date or timepoint where relevant, unknown/uncertain states, and a public-safe projection rule for downstream artifacts.",
+            "Include consent, privacy, security, data-minimization, retention, emergency, and clinician-review boundaries before any real intake implementation.",
+            "The system must not provide diagnosis, treatment recommendations, trial recommendations, prognosis, monitoring advice, or urgency guidance from the public interface.",
+            "Output should connect to the existing case-to-cure pipeline, case-feature bundle boundary, publication gate, and private-lab blocker model."
+          ],
+          "success_criteria": [
+            "A public-safe intake roadmap or product spec exists and is linked from the frontier roadmap or case-to-cure plumbing artifacts.",
+            "A caregiver-friendly field inventory distinguishes required, optional, unknown, and private-only fields without collecting real data.",
+            "A synthetic-only intake example or fixture demonstrates the flow and validates without resembling a real person.",
+            "Privacy and clinical boundary copy is explicit enough that caregiver-like caregivers understand what the system can and cannot do.",
+            "Clawdad can hand off to the next build step without exposing PHI or implying medical advice."
+          ],
+          "plans": [
+            "Start with a no-PHI public product/spec artifact before building any real data-capture backend.",
+            "Then define a private intake schema and public-safe projection contract.",
+            "Then prototype the front end only against synthetic fixtures."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "case-intake-frontier-v0",
+      "label": "Caregiver Case Intake Frontier v0",
+      "status": "complete",
+      "items": [
+        {
+          "id": "case-intake-next-public-build-slice-v0",
+          "label": "Next public-safe caregiver intake build slice",
+          "status": "complete",
+          "goal": "Extend the Caregiver Case Intake Product Spec v0 into one concrete public-safe next artifact: private-intake schema contract, public-safe projection validator, no-PHI/no-advice checklist, synthetic fixture expansion, or static synthetic prototype plan.",
+          "depends_on": [
+            "case-intake-product-spec-v0"
+          ],
+          "requirements": [
+            "Start from disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.md and examples/multiple-myeloma-synthetic-caregiver-intake-v0.json.",
+            "Do not collect or invent real case data; use synthetic-only fixtures.",
+            "Do not create treatment, trial, prognosis, monitoring, urgency, or expanded-access advice.",
+            "Update metadata, catalog, README, roadmap, and case-to-cure links for any new artifact."
+          ],
+          "success_criteria": [
+            "A concrete public-safe next artifact exists and validates.",
+            "The artifact is linked from the caregiver intake spec or case-to-cure blueprint.",
+            "The run reports the next remaining blocker or next phase without marking the whole initiative complete prematurely."
+          ],
+          "plans": [
+            "Prefer the smallest high-value artifact: no-PHI/no-advice intake checklist or private-to-public projection contract."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "case-to-cure-master-backlog-v0",
+      "label": "Case-To-Cure Adaptive Master Backlog v0",
+      "status": "active",
+      "items": [
+        {
+          "id": "case-to-cure-loop-governor-v0",
+          "label": "Case-to-cure loop governor",
+          "status": "complete",
+          "goal": "Make the loop itself enforce next-step synthesis after each completed public-safe step.",
+          "depends_on": [],
+          "requirements": [
+            "Read the adaptive master plan and update Clawdad/ORP instructions so closed phases flow into the next safest step.",
+            "No real case data, PHI, patient-specific advice, treatment ranking, trial advice, or cure claim."
+          ],
+          "success_criteria": [
+            "Delegation packet and ORP state point to the adaptive loop, not a closed finite phase."
+          ],
+          "plans": [
+            "Start here, then hand off to private intake schema contract or the next revealed public-safe dependency."
+          ]
+        },
+        {
+          "id": "private-intake-schema-contract-v0",
+          "label": "Private intake schema contract",
+          "status": "complete",
+          "goal": "Define the private-only intake record shape and public-safe projection boundary for future consented multiple myeloma case work.",
+          "depends_on": [
+            "case-to-cure-loop-governor-v0"
+          ],
+          "requirements": [
+            "Document field groups, unknown states, provenance, private-only identifiers, and public projection rules without collecting real data."
+          ],
+          "success_criteria": [
+            "A public-safe contract or blocker note exists and links to the caregiver intake spec and case-to-cure blueprint."
+          ],
+          "plans": [
+            "Prefer a markdown contract first; executable schema can follow only after the public boundary is clear."
+          ]
+        },
+        {
+          "id": "static-synthetic-caregiver-prototype-v0",
+          "label": "Static synthetic caregiver prototype",
+          "status": "complete",
+          "goal": "Design the first synthetic-only public prototype plan for a caregiver-centered intake flow that never accepts real case details.",
+          "depends_on": [
+            "private-intake-schema-contract-v0"
+          ],
+          "requirements": [
+            "Use synthetic fixtures only and keep emergency, clinician-review, consent, privacy, and no-advice copy visible."
+          ],
+          "success_criteria": [
+            "Prototype plan or fixture extension exists with public navigation and validation coverage."
+          ],
+          "plans": [
+            "Keep it static and synthetic before any backend or data capture."
+          ]
+        },
+        {
+          "id": "public-projection-validator-v0",
+          "label": "Public projection validator",
+          "status": "complete",
+          "goal": "Create a fail-closed public projection validator or validator spec for no-PHI, no-advice, synthetic-only public exports.",
+          "depends_on": [
+            "private-intake-schema-contract-v0"
+          ],
+          "requirements": [
+            "Validator must reject identifiers, real case free text, advice language, rankings, urgency guidance, and publication without gate approval."
+          ],
+          "success_criteria": [
+            "A validator, validator map, or precise blocker note exists and is linked from case-intake and case-to-cure artifacts."
+          ],
+          "plans": [
+            "Start as protocol-level checks if executable validation needs a later schema."
+          ]
+        },
+        {
+          "id": "consent-privacy-security-retention-gate-v0",
+          "label": "Consent privacy security retention gate",
+          "status": "complete",
+          "goal": "Specify the human and technical gates before any real case intake, storage, retention, emergency handling, or clinician review.",
+          "depends_on": [
+            "private-intake-schema-contract-v0"
+          ],
+          "requirements": [
+            "Public artifact must define gates and blockers only; it must not authorize real intake or collect data."
+          ],
+          "success_criteria": [
+            "Gate spec exists or blocker note records the exact private, legal, clinical, and security reviews needed."
+          ],
+          "plans": [
+            "Tie to private-to-public workflow, publication gate, and caregiver intake boundary."
+          ]
+        },
+        {
+          "id": "case-feature-normalization-contract-v0",
+          "label": "Case feature normalization contract",
+          "status": "complete",
+          "goal": "Define the public-safe shape for normalized disease-state and context features used by the private case-to-cure pipeline.",
+          "depends_on": [
+            "public-projection-validator-v0"
+          ],
+          "requirements": [
+            "Include unknown, not-tested, source-missing, provenance, timepoint, and limitation fields without producing prognosis or option ranking."
+          ],
+          "success_criteria": [
+            "A normalization contract, schema plan, or blocker note exists and links to the case-feature public summary."
+          ],
+          "plans": [
+            "Keep this as shape and boundary first; executable schema follows after field semantics are stable."
+          ]
+        },
+        {
+          "id": "measurement-normalization-contract-v0",
+          "label": "Measurement normalization contract",
+          "status": "complete",
+          "goal": "Define public-safe MRD, response, relapse, lab, imaging, method, threshold, sample, and timepoint normalization for private case work.",
+          "depends_on": [
+            "case-feature-normalization-contract-v0"
+          ],
+          "requirements": [
+            "Preserve method, threshold, sample, timepoint, durability, endpoint role, source context, and uncertainty; block cure claims."
+          ],
+          "success_criteria": [
+            "Measurement contract or blocker note links to MRD glossary and endpoint guardrails."
+          ],
+          "plans": [
+            "Use current MRD guardrails as the boundary before creating any fixture or schema update."
+          ]
+        },
+        {
+          "id": "therapy-exposure-timeline-contract-v0",
+          "label": "Therapy exposure timeline contract",
+          "status": "complete",
+          "goal": "Define the private timeline shape for prior therapies, lines, exposures, responses, toxicities, constraints, and refractory context.",
+          "depends_on": [
+            "case-feature-normalization-contract-v0"
+          ],
+          "requirements": [
+            "Public artifact may define fields and safety gates only; it must not infer recommendations, eligibility, sequencing, or ranking."
+          ],
+          "success_criteria": [
+            "Therapy exposure contract or blocker note links to treatment taxonomy and immune therapy boundary."
+          ],
+          "plans": [
+            "Keep dates and identifiers private; public examples must be synthetic and non-identifying."
+          ]
+        },
+        {
+          "id": "molecular-immune-context-contract-v0",
+          "label": "Molecular immune context contract",
+          "status": "complete",
+          "goal": "Define the private/public boundary for cytogenetics, genomics, target assays, pathology, flow, immune context, and source validity fields.",
+          "depends_on": [
+            "case-feature-normalization-contract-v0"
+          ],
+          "requirements": [
+            "Do not interpret features as patient options; preserve source, method, date/timepoint, uncertainty, and not-tested states."
+          ],
+          "success_criteria": [
+            "Context contract or blocker note links to mechanism maps, context modifier map, and source registry."
+          ],
+          "plans": [
+            "Capture shape, provenance, and uncertainty before any hypothesis review uses the fields."
+          ]
+        },
+        {
+          "id": "evidence-retrieval-packet-v0",
+          "label": "Evidence retrieval packet",
+          "status": "complete",
+          "goal": "Define a reproducible public-source evidence packet skeleton for future private case questions without patient matching.",
+          "depends_on": [
+            "measurement-normalization-contract-v0",
+            "therapy-exposure-timeline-contract-v0",
+            "molecular-immune-context-contract-v0"
+          ],
+          "requirements": [
+            "Include source IDs, query records, freshness checks, limitations, uncertainty, and no-completeness warnings."
+          ],
+          "success_criteria": [
+            "Evidence packet skeleton or blocker note links to source registry, ClinicalTrials.gov query protocol, and open research maps."
+          ],
+          "plans": [
+            "Do not match, rank, or advise; make the retrieval method auditable."
+          ]
+        },
+        {
+          "id": "trial-therapy-landscape-non-advice-gate-v0",
+          "label": "Trial therapy landscape non-advice gate",
+          "status": "complete",
+          "goal": "Define how trial, therapy, product, target, and access context can be extracted as landscape information without advice.",
+          "depends_on": [
+            "evidence-retrieval-packet-v0"
+          ],
+          "requirements": [
+            "Preserve trial, therapy, product, target, jurisdiction, source freshness, access-date, status, limitation, uncertainty, and review fields as landscape context only.",
+            "Block availability claims, eligibility claims, patient matching, trial matching, sequencing advice, treatment guidance, trial guidance, expanded-access guidance, monitoring guidance, urgency guidance, ranking, and patient-specific interpretation."
+          ],
+          "success_criteria": [
+            "Non-advice gate links to the evidence retrieval packet, trial-landscape schema, therapy-record schema, ClinicalTrials.gov query protocol, source registry, therapy exposure contract, and immune therapy boundary.",
+            "Landscape fields preserve source freshness, access-date state, jurisdiction, status, uncertainty, limitations, and review status without patient matching or advice."
+          ],
+          "plans": [
+            "Completed as Trial Therapy Landscape Non-Advice Gate v0; next safest public step is candidate hypothesis review question framing."
+          ]
+        },
+        {
+          "id": "candidate-hypothesis-review-question-set-v0",
+          "label": "Candidate hypothesis review question set",
+          "status": "complete",
+          "goal": "Represent candidate hypotheses as review questions for qualified humans, not recommendations or rankings.",
+          "depends_on": [
+            "evidence-retrieval-packet-v0",
+            "trial-therapy-landscape-non-advice-gate-v0"
+          ],
+          "requirements": [
+            "Preserve evidence packet IDs, landscape gate status, source context, uncertainty, review lens, blocked uses, and explicit no patient-action output.",
+            "Use the evidence retrieval packet, trial therapy landscape non-advice gate, candidate-option scoring rubric, review packet templates, source registry, and publication gate as fail-closed boundaries.",
+            "Do not infer recommendations, rankings, treatment guidance, trial guidance, expanded-access guidance, monitoring guidance, urgency guidance, availability, eligibility, or patient-specific interpretation."
+          ],
+          "success_criteria": [
+            "Question-set artifact or blocker note links to the evidence retrieval packet, trial therapy landscape non-advice gate, candidate-option scoring rubric, and review packet templates.",
+            "Candidate hypotheses are framed only as source-scoped questions for qualified human review, never patient options or ranked choices.",
+            "The ORP additional queue records what the question set revealed and activates or blocks the next public-safe item."
+          ],
+          "plans": [
+            "Completed as Candidate Hypothesis Review Question Set v0; next safest public step is a multidisciplinary review packet builder skeleton that can copy, reference, omit, or refuse question fields without generating claims or patient-specific outputs."
+          ]
+        },
+        {
+          "id": "multidisciplinary-review-packet-builder-v0",
+          "label": "Multidisciplinary review packet builder",
+          "status": "complete",
+          "goal": "Define the public-safe packet builder skeleton and route rules for multidisciplinary review under private and clinical gates.",
+          "depends_on": [
+            "candidate-hypothesis-review-question-set-v0"
+          ],
+          "requirements": [
+            "Preserve question IDs, artifact IDs, source IDs, review-lens fields, missing-input blockers, safety boundaries, and no-generated-claims behavior.",
+            "Use the candidate hypothesis review question set, review-packet template, review-packet builder manifest spec, route-table schema/tool, evidence retrieval packet, trial/therapy landscape non-advice gate, publication gate, source registry, public projection validator, private intake schema contract, and public safety workflow as boundaries.",
+            "Do not assemble real packets, process real case facts, generate biomedical prose, publish patient-specific outputs, recommend, rank, match trials, infer eligibility, infer availability, provide expanded-access or monitoring guidance, authorize publication, or make clinical decisions."
+          ],
+          "success_criteria": [
+            "Packet builder skeleton, route rules, or blocker note links to the candidate hypothesis review question set, manifest spec, review-packet template, route-table schema/tool, evidence packet, landscape gate, source registry, and publication gate.",
+            "Route behavior is limited to copy, reference, omit, refuse, or mark missing fields; it does not create generated claims, recommendations, rankings, or patient-specific outputs.",
+            "The ORP additional queue records what the builder revealed and activates or blocks the next public-safe item."
+          ],
+          "plans": [
+            "Completed as Multidisciplinary Review Packet Builder v0; next safest public step is an expert validation loop that treats issues, outreach roles, and response-ledger states as public-safe dispositions only."
+          ]
+        },
+        {
+          "id": "expert-validation-loop-v0",
+          "label": "Expert validation loop",
+          "status": "complete",
+          "goal": "Make expert validation issue updates and response dispositions part of the recurring public loop.",
+          "depends_on": [
+            "multidisciplinary-review-packet-builder-v0"
+          ],
+          "requirements": [
+            "Tie public issue statuses, outreach-map roles, response-ledger dispositions, source correction tasks, and review-lens gaps into the recurring adaptive loop.",
+            "Represent any expert response content only as safe dispositions unless public permission and public source context exist.",
+            "Preserve issue IDs, artifact IDs, source IDs, review-lens fields, allowed dispositions, next public actions, uncertainty, and blocked-use boundaries.",
+            "Do not publish private correspondence, unpublished expert comments, reviewer identity disclosures beyond already-public outreach maps, recommendations, rankings, patient-specific outputs, treatment guidance, trial guidance, expanded-access guidance, monitoring guidance, publication authorization, or clinical decisions."
+          ],
+          "success_criteria": [
+            "Expert validation loop artifact or blocker note links to issue index, outreach map, response ledger, candidate question set, multidisciplinary builder, source registry, publication gate, and public safety workflow.",
+            "All expert validation updates are represented as public-safe statuses, allowed dispositions, source-context-needed notes, or next public tasks without copying private correspondence.",
+            "The ORP additional queue records what the expert validation loop revealed and activates or blocks the next public-safe item."
+          ],
+          "plans": [
+            "Completed as Expert Validation Loop v0; next safest public step is the case-to-public learning extraction gate for sanitation, aggregation, source-scope, uncertainty, privacy, and publication boundaries."
+          ]
+        },
+        {
+          "id": "case-to-public-learning-extraction-gate-v0",
+          "label": "Case-to-public learning extraction gate",
+          "status": "complete",
+          "goal": "Define the sanitation, aggregation, source-scope, uncertainty, privacy, review, and publication gate for any future public learning extracted from a private case.",
+          "depends_on": [
+            "expert-validation-loop-v0"
+          ],
+          "requirements": [
+            "Only approved, sanitized, non-identifying, non-advisory, source-scoped learning may become public.",
+            "Preserve artifact IDs, source IDs, issue IDs, review-lens fields, disposition states, privacy decision state, allowed output type, uncertainty, limitations, blocked-use boundaries, and publication-gate state.",
+            "Use the expert validation loop, publication gate, private-to-public workflow, public safety rules, source registry, stage validator map, and pipeline blueprint as boundaries.",
+            "Block patient identifiers, raw records, dates tied to a person, single-case claims, private correspondence, unpublished expert comments, patient-specific recommendations, rankings, treatment guidance, trial guidance, expanded-access guidance, monitoring guidance, publication authorization, and clinical decisions."
+          ],
+          "success_criteria": [
+            "Learning extraction gate or blocker note links to the expert validation loop, publication gate, private-to-public workflow, public safety rules, source registry, stage validator map, and pipeline blueprint.",
+            "Gate fields preserve allowed output type, privacy decision state, public source context, uncertainty, limitations, review status, blocked uses, and publication-gate state.",
+            "The ORP additional queue records what the extraction gate revealed and activates or blocks the next public-safe item."
+          ],
+          "plans": [
+            "Completed as Case-To-Public Learning Extraction Gate v0; next safest public step is an end-to-end synthetic case dry run that exercises success, omit, refusal, and blocker paths without real case material."
+          ]
+        },
+        {
+          "id": "end-to-end-synthetic-case-dry-run-v0",
+          "label": "End-to-end synthetic case dry run",
+          "status": "complete",
+          "goal": "Dry-run the complete case-to-cure path with synthetic-only artifacts from caregiver intake through publication gate.",
+          "depends_on": [
+            "case-to-public-learning-extraction-gate-v0"
+          ],
+          "requirements": [
+            "Use visibly artificial data only and exercise success, omit, refusal, and blocker paths across intake, projection, normalization, evidence retrieval, landscape gating, candidate question routing, review-packet route rules, expert validation disposition plumbing, case-to-public learning extraction, and publication-gate refusal.",
+            "Link the synthetic caregiver intake fixture, synthetic case-to-cure pipeline, public projection validator, normalization contracts, evidence retrieval packet, trial/therapy landscape non-advice gate, candidate hypothesis review question set, multidisciplinary review packet builder, expert validation loop, case-to-public learning extraction gate, publication gate, stage validator map, pipeline blueprint, source registry, private-to-public workflow, and public safety rules.",
+            "Do not use real case data, identifiers, raw records, uploads, person-linked dates, free-text case details, private correspondence, patient-specific outputs, recommendations, rankings, matching, treatment guidance, trial guidance, expanded-access guidance, monitoring guidance, publication authorization, or clinical decisions."
+          ],
+          "success_criteria": [
+            "Synthetic dry-run artifact or validation report exists and links all owner artifacts, gates, and blockers.",
+            "The dry run demonstrates success, omit, refusal, and blocker paths without processing or resembling a real person.",
+            "The ORP additional queue records what the dry run revealed and activates or blocks the master completion audit."
+          ],
+          "plans": [
+            "Completed as End-To-End Synthetic Case Dry Run v0; next safest public step is the case-to-cure master completion audit."
+          ]
+        },
+        {
+          "id": "case-to-cure-master-completion-audit-v0",
+          "label": "Case-to-cure master completion audit",
+          "status": "complete",
+          "goal": "Audit whether the adaptive master plan is complete, safely blocked, or ready for a new named phase.",
+          "depends_on": [
+            "end-to-end-synthetic-case-dry-run-v0"
+          ],
+          "requirements": [
+            "Inspect the adaptive master backlog, public artifacts, catalogs, navigation, ORP state, validators, blockers, and remaining human gates.",
+            "Do not call the initiative complete unless all remaining work is explicitly expert-review-needed, private-lab-needed, clinical-team-needed, legal-needed, regulatory-needed, publication-gate-needed, human-review-needed, or out-of-scope.",
+            "Do not use real case data, clinical judgment, outreach, private lab access, publication authorization, or patient-specific guidance."
+          ],
+          "success_criteria": [
+            "Completion audit records files changed, validation state, blockers, and the next named phase or human gate.",
+            "The audit states whether the public-safe adaptive scope is complete, safely blocked, or ready for a new named phase.",
+            "The ORP additional queue records the audit outcome and next state without requiring real case data or human decisions."
+          ],
+          "plans": [
+            "Completed as Case-To-Cure Master Completion Audit v0; it records the public-safe adaptive case-to-cure scope as complete and blocks the next state on named human gates unless a human selects a new named public-safe phase."
+          ]
+        },
+        {
+          "id": "case-to-cure-public-scope-human-gate-blocker-v0",
+          "label": "Case-to-cure public-scope human gate blocker",
+          "status": "blocked",
+          "goal": "Record that no autonomous public-safe case-to-cure backlog item remains after the master completion audit.",
+          "depends_on": [
+            "case-to-cure-master-completion-audit-v0"
+          ],
+          "requirements": [
+            "Stop autonomous case-to-cure backlog work unless a human selects a new named public-safe phase or clears a named gate.",
+            "Keep remaining work labeled as expert-review-needed, private-lab-needed, clinical-team-needed, legal-needed, regulatory-needed, publication-gate-needed, human-review-needed, or out-of-scope.",
+            "Do not create another sibling artifact, tool, schema, or extraction phase by momentum.",
+            "Do not use real case data, clinical judgment, outreach, private lab access, publication authorization, credentials, paid services, or patient-specific guidance."
+          ],
+          "success_criteria": [
+            "The blocker is explicit in ORP state, additional queue, version stack, inventory, and completion audit.",
+            "The next action names human gate classes instead of an autonomous artifact.",
+            "Validation passes with the completion audit cataloged."
+          ],
+          "plans": [
+            "Blocked until human selection of a new named public-safe phase or clearance of expert-review-needed, private-lab-needed, clinical-team-needed, legal-needed, regulatory-needed, publication-gate-needed, or human-review-needed gates."
+          ]
+        }
+      ]
+    }
+  ]
+}
