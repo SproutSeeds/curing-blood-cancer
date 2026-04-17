@@ -1,0 +1,132 @@
+{
+  "artifact_id": "multiple-myeloma-candidate-hypothesis-review-question-set-v0",
+  "title": "Candidate Hypothesis Review Question Set v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "candidate hypothesis review",
+    "review questions",
+    "evidence packet linkage",
+    "trial therapy landscape boundary",
+    "review packet planning",
+    "case-to-cure pipeline",
+    "public safety",
+    "private-lab handoff"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Candidate-Option Scoring Rubric v0",
+      "url": "../candidate-option-scoring-rubric-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Evidence Retrieval Packet v0",
+      "url": "../evidence-retrieval-packet-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Trial Therapy Landscape Non-Advice Gate v0",
+      "url": "../therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Review-Packet Builder Input Manifest Spec v0",
+      "url": "review-packet-builder-manifest-spec-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Open-Question Record Schema v0",
+      "url": "../../../schemas/open-question-record-schema-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "../publication-gate-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "../case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Stage Validator And Owner Map v0",
+      "url": "../case-to-cure-stage-validator-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Validator v0",
+      "url": "../case-intake/caregiver-intake-public-projection-validator-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private-To-Public Workflow",
+      "url": "../../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only protocol.",
+    "Public question-only scaffold.",
+    "Not an executable schema.",
+    "Not a scoring engine.",
+    "Not a route-table builder.",
+    "Not a review-packet builder.",
+    "Not a generated-prose workflow.",
+    "Not a real candidate-option record set.",
+    "Not a private multidisciplinary review packet.",
+    "Not a tumor-board packet.",
+    "Not a clinician summary.",
+    "Not a real case summary.",
+    "Not a treatment selector.",
+    "Not a trial selector.",
+    "Not an expanded-access pathway.",
+    "Not a monitoring plan.",
+    "Not an urgency guide.",
+    "Not a referral guide.",
+    "Not an evidence ranking.",
+    "Not an option ranking.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not availability guidance.",
+    "Not expanded-access guidance.",
+    "Not access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not safety-management guidance.",
+    "Does not create, select, score, rank, compare, recommend, publish, or authorize candidate options for a real person.",
+    "Does not run literature, registry, regulatory, labeling, dataset, therapy, product, target, mechanism, or trial searches.",
+    "Does not process, normalize, store, route, publish, match, compare, rank, verify, or authorize use of real case-linked candidate hypotheses.",
+    "Does not contain patient-identifying data, private records, portal exports, molecular reports, pathology reports, flow reports, genomics reports, images, notes, raw assay values, therapy histories, exact dates tied to a person, facilities, clinicians, sponsor contacts, contact details, private case IDs, private workspace paths, private prompts, or re-identification keys.",
+    "Does not authorize clinical interpretation, trial-status verification, sponsor or site verification, patient matching, trial matching, target actionability, source ranking, evidence ranking, target ranking, mechanism ranking, product ranking, therapy ranking, trial ranking, option ranking, private-lab work, legal clearance, regulatory readiness, ethics readiness, security readiness, retention decisions, emergency handling, or publication of case-derived learning.",
+    "Does not validate multidisciplinary packet assembly, monitoring-plan, or public-learning extraction semantics.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-candidate-hypothesis-review-question-set-v0.md"
+}

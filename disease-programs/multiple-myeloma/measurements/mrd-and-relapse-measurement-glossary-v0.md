@@ -72,6 +72,13 @@ and follow-up duration are visible.
 - JSON: [`mrd-and-relapse-measurement-glossary-v0.json`](mrd-and-relapse-measurement-glossary-v0.json)
 - Metadata: [`mrd-and-relapse-measurement-glossary-v0.metadata.json`](mrd-and-relapse-measurement-glossary-v0.metadata.json)
 
+## Endpoint Guardrail
+
+- Use the [MRD Endpoint Language Guardrail Addendum v0](mrd-endpoint-language-guardrail-addendum-v0.md)
+  before reusing MRD, complete response, stringent complete response,
+  sustained MRD negativity, deep response, relapse, progression, PFS, OS, or
+  regulatory endpoint language in downstream artifacts.
+
 ## Next Work
 
 - Add disease-state-specific endpoint tables for frontline, relapsed, and

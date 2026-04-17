@@ -74,6 +74,11 @@ An issue response can produce one of these public outcomes:
 No issue response should be treated as medical advice or patient-specific
 guidance.
 
+The current public-safe intake status for all 13 issues is tracked in
+[Expert Response Validation Ledger v0](expert-response-validation-ledger-v0.md).
+That ledger records allowed dispositions, public issue state, artifact paths,
+and next public actions without copying private correspondence.
+
 ## Public Safety Check
 
 - No patient-identifying data.

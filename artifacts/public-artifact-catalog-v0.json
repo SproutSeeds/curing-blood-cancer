@@ -1,10 +1,309 @@
 {
   "catalog_id": "public-artifact-catalog-v0",
-  "date": "2026-04-15",
+  "date": "2026-04-16",
   "title": "Public Artifact Catalog v0",
   "clinical_use_boundary": "research-use-only",
   "generated_from": "*.metadata.json files tracked in the public repo",
   "entries": [
+    {
+      "artifact_id": "bcma-antigen-escape-claim-set-v0",
+      "title": "BCMA Antigen Escape Claim Set v0",
+      "artifact_class": "dataset",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-directed therapy",
+        "post-BCMA relapse",
+        "post-CAR T relapse"
+      ],
+      "path": "disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.metadata.json",
+      "source_count": 4,
+      "limitation_count": 8
+    },
+    {
+      "artifact_id": "bcma-antigen-escape-evidence-gap-register-v0",
+      "title": "BCMA Antigen Escape Evidence Gap Register v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-directed therapy",
+        "post-BCMA relapse",
+        "post-CAR T relapse"
+      ],
+      "path": "disease-programs/multiple-myeloma/evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.metadata.json",
+      "source_count": 6,
+      "limitation_count": 8
+    },
+    {
+      "artifact_id": "bcma-antigen-escape-public-task-queue-v0",
+      "title": "BCMA Antigen Escape Public Task Queue v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-directed therapy",
+        "post-BCMA relapse",
+        "post-CAR T relapse"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-tasks/bcma-antigen-escape-public-task-queue-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/bcma-antigen-escape-public-task-queue-v0.metadata.json",
+      "source_count": 2,
+      "limitation_count": 7
+    },
+    {
+      "artifact_id": "bcma-measurement-context-audit-v0",
+      "title": "BCMA Measurement Context Audit v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-directed therapy",
+        "post-BCMA relapse",
+        "post-CAR T relapse",
+        "measurement context"
+      ],
+      "path": "disease-programs/multiple-myeloma/measurements/bcma-measurement-context-audit-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/measurements/bcma-measurement-context-audit-v0.metadata.json",
+      "source_count": 2,
+      "limitation_count": 6
+    },
+    {
+      "artifact_id": "multiple-myeloma-case-specific-private-lab-blocker-register-v0",
+      "title": "Case-Specific Private-Lab Blocker Register v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "case-to-cure pipeline",
+        "private-lab blockers",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-specific-private-lab-blocker-register-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-specific-private-lab-blocker-register-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "mrd-and-relapse-measurement-glossary-v0",
+      "title": "MRD And Relapse Measurement Glossary v0",
+      "artifact_class": "dataset",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "response assessment",
+        "relapse assessment"
+      ],
+      "path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.metadata.json",
+      "source_count": 6,
+      "limitation_count": 7
+    },
+    {
+      "artifact_id": "multiple-myeloma-expert-response-validation-ledger-v0",
+      "title": "Multiple Myeloma Expert Response Validation Ledger v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "expert validation",
+        "response intake",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/expert-response-validation-ledger-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/expert-response-validation-ledger-v0.metadata.json",
+      "source_count": 9,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-expert-validation-issue-index-v0",
+      "title": "Multiple Myeloma Expert Validation Issue Index v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "expert validation",
+        "public issues",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/expert-validation-issue-index-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/expert-validation-issue-index-v0.metadata.json",
+      "source_count": 16,
+      "limitation_count": 11
+    },
+    {
+      "artifact_id": "multiple-myeloma-expert-validation-outreach-map-v0",
+      "title": "Multiple Myeloma Expert Validation Outreach Map v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "expert validation",
+        "expert outreach",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/expert-validation-outreach-map-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/expert-validation-outreach-map-v0.metadata.json",
+      "source_count": 21,
+      "limitation_count": 11
+    },
+    {
+      "artifact_id": "multiple-myeloma-public-inventory-v0",
+      "title": "Multiple Myeloma Public Inventory v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "public inventory",
+        "public navigation",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-inventory-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-inventory-v0.metadata.json",
+      "source_count": 37,
+      "limitation_count": 11
+    },
+    {
+      "artifact_id": "multiple-myeloma-roadmap-public-task-queue-v0",
+      "title": "Multiple Myeloma Roadmap Public Task Queue v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "public roadmap",
+        "case-to-cure pipeline",
+        "research tooling"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.metadata.json",
+      "source_count": 4,
+      "limitation_count": 9
+    },
+    {
+      "artifact_id": "multiple-myeloma-synthetic-caregiver-intake-v0",
+      "title": "Multiple Myeloma Synthetic Caregiver Intake v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "caregiver intake",
+        "synthetic fixture",
+        "case-to-cure pipeline",
+        "public safety"
+      ],
+      "path": "examples/multiple-myeloma-synthetic-caregiver-intake-v0.json",
+      "metadata_path": "examples/multiple-myeloma-synthetic-caregiver-intake-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 14
+    },
+    {
+      "artifact_id": "multiple-myeloma-synthetic-case-to-cure-pipeline-v0",
+      "title": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "synthetic example",
+        "case pipeline",
+        "public safety"
+      ],
+      "path": "examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md",
+      "metadata_path": "examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 9
+    },
+    {
+      "artifact_id": "post-car-t-relapse-mechanism-coverage-v0",
+      "title": "Post-CAR T Relapse Mechanism Coverage Report v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-targeted CAR T-cell therapy",
+        "post-CAR T relapse",
+        "mechanism extraction coverage"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-coverage-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-coverage-v0.metadata.json",
+      "source_count": 3,
+      "limitation_count": 7
+    },
+    {
+      "artifact_id": "post-car-t-relapse-mechanism-gap-public-task-queue-v0",
+      "title": "Post-CAR T Relapse Mechanism Gap Public Task Queue v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-targeted CAR T-cell therapy",
+        "post-CAR T relapse",
+        "mechanism extraction coverage"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-tasks/post-car-t-relapse-mechanism-gap-public-task-queue-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/post-car-t-relapse-mechanism-gap-public-task-queue-v0.metadata.json",
+      "source_count": 3,
+      "limitation_count": 7
+    },
+    {
+      "artifact_id": "public-artifact-catalog-v0",
+      "title": "Public Artifact Catalog v0",
+      "artifact_class": "dataset",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "all blood-cancer subtypes",
+        "multiple myeloma and plasma-cell disorders"
+      ],
+      "path": "artifacts/public-artifact-catalog-v0.md",
+      "metadata_path": "artifacts/public-artifact-catalog-v0.metadata.json",
+      "source_count": 1,
+      "limitation_count": 4
+    },
+    {
+      "artifact_id": "source-registry-v0",
+      "title": "Source Registry v0",
+      "artifact_class": "dataset",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "leukemia",
+        "lymphoma",
+        "multiple myeloma and plasma-cell disorders",
+        "myelodysplastic syndromes",
+        "myeloproliferative neoplasms"
+      ],
+      "path": "sources/source-registry-v0.md",
+      "metadata_path": "sources/source-registry-v0.metadata.json",
+      "source_count": 24,
+      "limitation_count": 4
+    },
+    {
+      "artifact_id": "multiple-myeloma-case-to-cure-stage-validator-map-v0",
+      "title": "Case-To-Cure Stage Validator And Owner Map v0",
+      "artifact_class": "map",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "case-to-cure pipeline",
+        "stage validator map",
+        "private-lab blockers",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-to-cure-stage-validator-map-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-stage-validator-map-v0.metadata.json",
+      "source_count": 22,
+      "limitation_count": 13
+    },
     {
       "artifact_id": "curing-blood-cancer-concept-map-v0",
       "title": "Curing Blood Cancer Concept Map v0",
@@ -23,18 +322,43 @@
       "limitation_count": 4
     },
     {
-      "artifact_id": "public-artifact-catalog-v0",
-      "title": "Public Artifact Catalog v0",
-      "artifact_class": "dataset",
-      "claim_level": "derived",
+      "artifact_id": "high-risk-organ-frailty-context-modifier-map-v0",
+      "title": "High-Risk, Extramedullary, Organ, And Frailty Context Modifier Map v0",
+      "artifact_class": "map",
+      "claim_level": "open-question",
       "blood_cancer_scope": [
-        "all blood-cancer subtypes",
-        "multiple myeloma and plasma-cell disorders"
+        "multiple myeloma",
+        "plasma-cell disease",
+        "high-risk context",
+        "extramedullary context",
+        "organ context",
+        "frailty context",
+        "case-feature bundle boundary",
+        "review-packet checklist"
       ],
-      "path": "artifacts/public-artifact-catalog-v0.md",
-      "metadata_path": "artifacts/public-artifact-catalog-v0.metadata.json",
-      "source_count": 1,
-      "limitation_count": 4
+      "path": "disease-programs/multiple-myeloma/contexts/high-risk-organ-frailty-context-modifier-map-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/contexts/high-risk-organ-frailty-context-modifier-map-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "immune-therapy-sequencing-access-boundary-v0",
+      "title": "Immune Therapy Sequencing And Access Boundary v0",
+      "artifact_class": "map",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "immune therapy",
+        "CAR T-cell therapy",
+        "bispecific antibodies",
+        "antibody-drug conjugates",
+        "therapy access boundary"
+      ],
+      "path": "disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 12
     },
     {
       "artifact_id": "multiple-myeloma-durable-mrd-negative-remission-wedge-v0",
@@ -51,22 +375,6 @@
       "limitation_count": 5
     },
     {
-      "artifact_id": "multiple-myeloma-public-roadmap-v0",
-      "title": "Multiple Myeloma Public Roadmap v0",
-      "artifact_class": "protocol",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "public roadmap",
-        "research tooling"
-      ],
-      "path": "disease-programs/multiple-myeloma/public-roadmap-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/public-roadmap-v0.metadata.json",
-      "source_count": 4,
-      "limitation_count": 6
-    },
-    {
       "artifact_id": "multiple-myeloma-open-research-map-v0-1",
       "title": "Multiple Myeloma Open Research Map v0.1",
       "artifact_class": "map",
@@ -81,6 +389,583 @@
       "path": "disease-programs/multiple-myeloma/open-research-map-v0-1.md",
       "metadata_path": "disease-programs/multiple-myeloma/open-research-map-v0-1.metadata.json",
       "source_count": 15,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "post-bcma-resistance-frontier-addendum-v0",
+      "title": "Post-BCMA Resistance Frontier Addendum v0",
+      "artifact_class": "map",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "post-BCMA relapse",
+        "post-CAR T relapse",
+        "resistance mechanisms",
+        "evidence gaps"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/post-bcma-resistance-frontier-addendum-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/post-bcma-resistance-frontier-addendum-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "post-car-t-relapse-mechanism-map-v0",
+      "title": "Post-CAR T Relapse Mechanism Map v0",
+      "artifact_class": "map",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-targeted CAR T-cell therapy",
+        "post-CAR T relapse"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-map-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-map-v0.metadata.json",
+      "source_count": 7,
+      "limitation_count": 6
+    },
+    {
+      "artifact_id": "bcma-claim-set-expert-review-packet-v0",
+      "title": "BCMA Claim Set Expert Review Packet v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "BCMA-directed therapy",
+        "post-BCMA relapse",
+        "post-CAR T relapse",
+        "expert review readiness"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/bcma-claim-set-expert-review-packet-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/bcma-claim-set-expert-review-packet-v0.metadata.json",
+      "source_count": 4,
+      "limitation_count": 7
+    },
+    {
+      "artifact_id": "multiple-myeloma-candidate-hypothesis-review-question-set-v0",
+      "title": "Candidate Hypothesis Review Question Set v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "candidate hypothesis review",
+        "review questions",
+        "evidence packet linkage",
+        "trial therapy landscape boundary",
+        "review packet planning",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/candidate-hypothesis-review-question-set-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/candidate-hypothesis-review-question-set-v0.metadata.json",
+      "source_count": 14,
+      "limitation_count": 39
+    },
+    {
+      "artifact_id": "multiple-myeloma-candidate-option-scoring-rubric-v0",
+      "title": "Candidate-Option Scoring Rubric v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "case-to-cure pipeline",
+        "candidate option review",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/candidate-option-scoring-rubric-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/candidate-option-scoring-rubric-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-caregiver-intake-public-projection-checklist-v0",
+      "title": "Caregiver Intake Public Projection Checklist v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "caregiver intake",
+        "public projection",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-checklist-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-checklist-v0.metadata.json",
+      "source_count": 14,
+      "limitation_count": 16
+    },
+    {
+      "artifact_id": "multiple-myeloma-caregiver-intake-public-projection-validator-v0",
+      "title": "Caregiver Intake Public Projection Validator v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "caregiver intake",
+        "public projection",
+        "validator spec",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-validator-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-validator-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 20
+    },
+    {
+      "artifact_id": "multiple-myeloma-case-intake-frontier-completion-audit-handoff-v0",
+      "title": "Case Intake Frontier Completion Audit Handoff v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "caregiver intake",
+        "case-intake frontier",
+        "completion audit",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-intake/case-intake-frontier-completion-audit-handoff-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-intake/case-intake-frontier-completion-audit-handoff-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 17
+    },
+    {
+      "artifact_id": "multiple-myeloma-case-to-cure-adaptive-master-plan-v0",
+      "title": "Case-To-Cure Adaptive Master Plan v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "case-to-cure pipeline",
+        "adaptive planning",
+        "public research tooling",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.metadata.json",
+      "source_count": 25,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-case-to-cure-loop-governor-handoff-v0",
+      "title": "Case-To-Cure Loop Governor Handoff v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "case-to-cure pipeline",
+        "adaptive planning",
+        "ORP frontier state",
+        "public research tooling",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-to-cure-loop-governor-handoff-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-loop-governor-handoff-v0.metadata.json",
+      "source_count": 12,
+      "limitation_count": 18
+    },
+    {
+      "artifact_id": "multiple-myeloma-case-to-cure-master-completion-audit-v0",
+      "title": "Case-To-Cure Master Completion Audit v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "case-to-cure pipeline",
+        "adaptive completion audit",
+        "ORP frontier state",
+        "public safety",
+        "expert validation gates",
+        "private-lab handoff",
+        "human review gates"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-to-cure-master-completion-audit-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-master-completion-audit-v0.metadata.json",
+      "source_count": 20,
+      "limitation_count": 28
+    },
+    {
+      "artifact_id": "multiple-myeloma-case-to-cure-pipeline-blueprint-v0",
+      "title": "Case-To-Cure Pipeline Blueprint v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "case pipeline",
+        "research tooling",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.metadata.json",
+      "source_count": 28,
+      "limitation_count": 9
+    },
+    {
+      "artifact_id": "multiple-myeloma-case-to-public-learning-extraction-gate-v0",
+      "title": "Case-To-Public Learning Extraction Gate v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "case-to-cure pipeline",
+        "public learning extraction",
+        "publication gate",
+        "privacy boundary",
+        "aggregate learning",
+        "source-scoped learning",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-to-public-learning-extraction-gate-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-to-public-learning-extraction-gate-v0.metadata.json",
+      "source_count": 11,
+      "limitation_count": 35
+    },
+    {
+      "artifact_id": "clawdad-autonomous-research-loop-v0",
+      "title": "Clawdad Autonomous Research Loop v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "autonomous research loop",
+        "public safety",
+        "research tooling"
+      ],
+      "path": "protocols/clawdad-autonomous-research-loop-v0.md",
+      "metadata_path": "protocols/clawdad-autonomous-research-loop-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 9
+    },
+    {
+      "artifact_id": "clawdad-frontier-delegation-packet-v0",
+      "title": "Clawdad Frontier Delegation Packet v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "autonomous research loop",
+        "frontier roadmap",
+        "public research tooling"
+      ],
+      "path": "protocols/clawdad-frontier-delegation-packet-v0.md",
+      "metadata_path": "protocols/clawdad-frontier-delegation-packet-v0.metadata.json",
+      "source_count": 33,
+      "limitation_count": 10
+    },
+    {
+      "artifact_id": "clinicaltrials-gov-query-protocol-v0",
+      "title": "ClinicalTrials.gov Query Protocol v0",
+      "artifact_class": "protocol",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "all blood-cancer subtypes"
+      ],
+      "path": "protocols/clinicaltrials-gov-query-protocol-v0.md",
+      "metadata_path": "protocols/clinicaltrials-gov-query-protocol-v0.metadata.json",
+      "source_count": 3,
+      "limitation_count": 5
+    },
+    {
+      "artifact_id": "multiple-myeloma-consent-privacy-security-retention-gate-v0",
+      "title": "Consent Privacy Security Retention Gate v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "caregiver intake",
+        "consent boundary",
+        "privacy boundary",
+        "security boundary",
+        "retention boundary",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.metadata.json",
+      "source_count": 13,
+      "limitation_count": 28
+    },
+    {
+      "artifact_id": "multiple-myeloma-end-to-end-synthetic-case-dry-run-v0",
+      "title": "End-To-End Synthetic Case Dry Run v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "synthetic dry run",
+        "case-to-cure pipeline",
+        "caregiver intake",
+        "public projection",
+        "normalization contracts",
+        "evidence retrieval",
+        "trial and therapy landscape gate",
+        "candidate hypothesis review",
+        "review packet routing",
+        "expert validation loop",
+        "public learning extraction",
+        "publication gate",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/end-to-end-synthetic-case-dry-run-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/end-to-end-synthetic-case-dry-run-v0.metadata.json",
+      "source_count": 24,
+      "limitation_count": 43
+    },
+    {
+      "artifact_id": "multiple-myeloma-expert-validation-loop-v0",
+      "title": "Expert Validation Loop v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "expert validation",
+        "public issue dispositions",
+        "response ledger routing",
+        "review lens routing",
+        "source correction tasks",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/expert-validation-loop-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/expert-validation-loop-v0.metadata.json",
+      "source_count": 13,
+      "limitation_count": 31
+    },
+    {
+      "artifact_id": "multiple-myeloma-caregiver-case-intake-product-spec-v0",
+      "title": "Caregiver Case Intake Product Spec v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "caregiver intake",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.metadata.json",
+      "source_count": 12,
+      "limitation_count": 15
+    },
+    {
+      "artifact_id": "mrd-endpoint-language-guardrail-addendum-v0",
+      "title": "MRD Endpoint Language Guardrail Addendum v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "measurable residual disease",
+        "complete response",
+        "endpoint language",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-multidisciplinary-review-packet-builder-v0",
+      "title": "Multidisciplinary Review Packet Builder v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "multidisciplinary review",
+        "review packet builder",
+        "candidate hypothesis routing",
+        "route rules",
+        "review packet planning",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.metadata.json",
+      "source_count": 19,
+      "limitation_count": 40
+    },
+    {
+      "artifact_id": "multiple-myeloma-multidisciplinary-review-packet-template-v0",
+      "title": "Multidisciplinary Review Packet Template v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "case-to-cure pipeline",
+        "multidisciplinary review",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.metadata.json",
+      "source_count": 9,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-definition-of-complete-audit-v0",
+      "title": "Multiple Myeloma Definition-Of-Complete Audit v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "autonomous research loop",
+        "completion audit",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/definition-of-complete-audit-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/definition-of-complete-audit-v0.metadata.json",
+      "source_count": 11,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-frontier-completion-audit-handoff-v0",
+      "title": "Multiple Myeloma Frontier Completion Audit Handoff v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "frontier completion audit",
+        "autonomous research loop",
+        "public safety",
+        "phase handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/frontier-completion-audit-handoff-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/frontier-completion-audit-handoff-v0.metadata.json",
+      "source_count": 18,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-frontier-roadmap-v0",
+      "title": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "frontier research map",
+        "case-to-cure pipeline",
+        "public research tooling"
+      ],
+      "path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.metadata.json",
+      "source_count": 27,
+      "limitation_count": 9
+    },
+    {
+      "artifact_id": "multiple-myeloma-public-loop-completion-handoff-v0",
+      "title": "Multiple Myeloma Public Loop Completion Handoff v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "autonomous research loop",
+        "completion handoff",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-loop-completion-handoff-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-loop-completion-handoff-v0.metadata.json",
+      "source_count": 13,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-public-review-release-gate-v0",
+      "title": "Multiple Myeloma Public Review And Release Gate v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "public release readiness",
+        "human review",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-review-release-gate-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-review-release-gate-v0.metadata.json",
+      "source_count": 7,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-public-review-release-gate-pass-v0",
+      "title": "Multiple Myeloma Public Review Release Gate Pass v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "public release readiness",
+        "maintainer review",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-review-release-gate-pass-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-review-release-gate-pass-v0.metadata.json",
+      "source_count": 8,
+      "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-public-roadmap-v0",
+      "title": "Multiple Myeloma Public Roadmap v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "public roadmap",
+        "research tooling"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-roadmap-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-roadmap-v0.metadata.json",
+      "source_count": 19,
+      "limitation_count": 6
+    },
+    {
+      "artifact_id": "multiple-myeloma-public-translation-contribution-guide-v0",
+      "title": "Multiple Myeloma Public Translation And Contribution Guide v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "public translation",
+        "contribution guide",
+        "glossary index",
+        "expert review",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-translation-contribution-guide-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-translation-contribution-guide-v0.metadata.json",
+      "source_count": 14,
       "limitation_count": 12
     },
     {
@@ -118,38 +1003,39 @@
       "limitation_count": 10
     },
     {
-      "artifact_id": "multiple-myeloma-case-to-cure-pipeline-blueprint-v0",
-      "title": "Case-To-Cure Pipeline Blueprint v0",
+      "artifact_id": "post-car-t-relapse-extraction-guide-v0",
+      "title": "Post-CAR T Relapse Extraction Guide v0",
       "artifact_class": "protocol",
-      "claim_level": "open-question",
+      "claim_level": "derived",
       "blood_cancer_scope": [
         "multiple myeloma",
-        "plasma-cell disease",
-        "case pipeline",
-        "research tooling",
-        "public safety"
+        "BCMA-targeted CAR T-cell therapy",
+        "post-CAR T relapse"
       ],
-      "path": "disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.metadata.json",
-      "source_count": 8,
-      "limitation_count": 9
+      "path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-extraction-guide-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-extraction-guide-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 5
     },
     {
-      "artifact_id": "multiple-myeloma-candidate-option-scoring-rubric-v0",
-      "title": "Candidate-Option Scoring Rubric v0",
+      "artifact_id": "precursor-risk-interception-boundary-note-v0",
+      "title": "Precursor, Risk, And Interception Boundary Note v0",
       "artifact_class": "protocol",
       "claim_level": "open-question",
       "blood_cancer_scope": [
         "multiple myeloma",
         "plasma-cell disease",
-        "case-to-cure pipeline",
-        "candidate option review",
-        "public safety"
+        "MGUS",
+        "smoldering multiple myeloma",
+        "precursor states",
+        "early intervention",
+        "interception research",
+        "risk-language guardrails"
       ],
-      "path": "disease-programs/multiple-myeloma/candidate-option-scoring-rubric-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/candidate-option-scoring-rubric-v0.metadata.json",
-      "source_count": 5,
-      "limitation_count": 12
+      "path": "disease-programs/multiple-myeloma/precursors/precursor-risk-interception-boundary-note-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/precursors/precursor-risk-interception-boundary-note-v0.metadata.json",
+      "source_count": 8,
+      "limitation_count": 13
     },
     {
       "artifact_id": "multiple-myeloma-publication-gate-checklist-v0",
@@ -167,40 +1053,6 @@
       "metadata_path": "disease-programs/multiple-myeloma/publication-gate-checklist-v0.metadata.json",
       "source_count": 7,
       "limitation_count": 12
-    },
-    {
-      "artifact_id": "multiple-myeloma-multidisciplinary-review-packet-template-v0",
-      "title": "Multidisciplinary Review Packet Template v0",
-      "artifact_class": "protocol",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "case-to-cure pipeline",
-        "multidisciplinary review",
-        "public safety"
-      ],
-      "path": "disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.metadata.json",
-      "source_count": 8,
-      "limitation_count": 12
-    },
-    {
-      "artifact_id": "multiple-myeloma-review-packet-builder-manifest-spec-v0",
-      "title": "Review-Packet Builder Input Manifest Spec v0",
-      "artifact_class": "protocol",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "review packets",
-        "research tooling",
-        "public safety"
-      ],
-      "path": "disease-programs/multiple-myeloma/reviews/review-packet-builder-manifest-spec-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/reviews/review-packet-builder-manifest-spec-v0.metadata.json",
-      "source_count": 13,
-      "limitation_count": 11
     },
     {
       "artifact_id": "multiple-myeloma-review-packet-builder-dry-run-plan-v0",
@@ -235,6 +1087,23 @@
       "metadata_path": "disease-programs/multiple-myeloma/reviews/review-packet-builder-implementation-gate-v0.metadata.json",
       "source_count": 9,
       "limitation_count": 13
+    },
+    {
+      "artifact_id": "multiple-myeloma-review-packet-builder-manifest-spec-v0",
+      "title": "Review-Packet Builder Input Manifest Spec v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "review packets",
+        "research tooling",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/review-packet-builder-manifest-spec-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/review-packet-builder-manifest-spec-v0.metadata.json",
+      "source_count": 13,
+      "limitation_count": 11
     },
     {
       "artifact_id": "multiple-myeloma-review-packet-builder-packet-assembly-gate-v0",
@@ -288,111 +1157,225 @@
       "limitation_count": 12
     },
     {
-      "artifact_id": "multiple-myeloma-definition-of-complete-audit-v0",
-      "title": "Multiple Myeloma Definition-Of-Complete Audit v0",
+      "artifact_id": "multiple-myeloma-static-synthetic-caregiver-prototype-plan-v0",
+      "title": "Static Synthetic Caregiver Prototype Plan v0",
       "artifact_class": "protocol",
       "claim_level": "open-question",
       "blood_cancer_scope": [
         "multiple myeloma",
         "plasma-cell disease",
-        "autonomous research loop",
-        "completion audit",
+        "caregiver intake",
+        "static prototype",
+        "synthetic fixture",
+        "case-to-cure pipeline",
         "public safety"
       ],
-      "path": "disease-programs/multiple-myeloma/definition-of-complete-audit-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/definition-of-complete-audit-v0.metadata.json",
-      "source_count": 11,
-      "limitation_count": 12
+      "path": "disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-prototype-plan-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-prototype-plan-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 19
     },
     {
-      "artifact_id": "multiple-myeloma-case-specific-private-lab-blocker-register-v0",
-      "title": "Case-Specific Private-Lab Blocker Register v0",
-      "artifact_class": "dataset",
+      "artifact_id": "multiple-myeloma-trial-therapy-landscape-non-advice-gate-v0",
+      "title": "Trial Therapy Landscape Non-Advice Gate v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "trial landscape",
+        "therapy landscape",
+        "product status context",
+        "source freshness",
+        "query provenance",
+        "public projection",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.metadata.json",
+      "source_count": 18,
+      "limitation_count": 42
+    },
+    {
+      "artifact_id": "multiple-myeloma-case-feature-normalization-contract-v0",
+      "title": "Case Feature Normalization Contract v0",
+      "artifact_class": "schema",
       "claim_level": "open-question",
       "blood_cancer_scope": [
         "multiple myeloma",
         "plasma-cell disease",
         "case-to-cure pipeline",
-        "private-lab blockers",
-        "public safety"
+        "case feature normalization",
+        "disease-state normalization",
+        "context modifiers",
+        "public projection",
+        "public safety",
+        "private-lab handoff"
       ],
-      "path": "disease-programs/multiple-myeloma/case-specific-private-lab-blocker-register-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/case-specific-private-lab-blocker-register-v0.metadata.json",
+      "path": "disease-programs/multiple-myeloma/case-feature-normalization-contract-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-feature-normalization-contract-v0.metadata.json",
       "source_count": 10,
-      "limitation_count": 12
+      "limitation_count": 23
     },
     {
-      "artifact_id": "multiple-myeloma-public-loop-completion-handoff-v0",
-      "title": "Multiple Myeloma Public Loop Completion Handoff v0",
-      "artifact_class": "protocol",
+      "artifact_id": "case-feature-bundle-public-summary-v0",
+      "title": "Case-Feature Bundle Public Summary v0",
+      "artifact_class": "schema",
       "claim_level": "open-question",
       "blood_cancer_scope": [
         "multiple myeloma",
         "plasma-cell disease",
-        "autonomous research loop",
-        "completion handoff",
-        "public safety"
+        "case-to-cure pipeline",
+        "public safety",
+        "schema summary"
       ],
-      "path": "disease-programs/multiple-myeloma/public-loop-completion-handoff-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/public-loop-completion-handoff-v0.metadata.json",
-      "source_count": 13,
-      "limitation_count": 12
-    },
-    {
-      "artifact_id": "multiple-myeloma-public-review-release-gate-v0",
-      "title": "Multiple Myeloma Public Review And Release Gate v0",
-      "artifact_class": "protocol",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "public release readiness",
-        "human review",
-        "public safety"
-      ],
-      "path": "disease-programs/multiple-myeloma/public-review-release-gate-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/public-review-release-gate-v0.metadata.json",
-      "source_count": 7,
-      "limitation_count": 12
-    },
-    {
-      "artifact_id": "multiple-myeloma-public-inventory-v0",
-      "title": "Multiple Myeloma Public Inventory v0",
-      "artifact_class": "dataset",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "public inventory",
-        "public navigation",
-        "public safety"
-      ],
-      "path": "disease-programs/multiple-myeloma/public-inventory-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/public-inventory-v0.metadata.json",
-      "source_count": 7,
+      "path": "schemas/case-feature-bundle-public-summary-v0.md",
+      "metadata_path": "schemas/case-feature-bundle-public-summary-v0.metadata.json",
+      "source_count": 5,
       "limitation_count": 11
     },
     {
-      "artifact_id": "multiple-myeloma-public-review-release-gate-pass-v0",
-      "title": "Multiple Myeloma Public Review Release Gate Pass v0",
-      "artifact_class": "protocol",
+      "artifact_id": "disease-map-schema-v0",
+      "title": "Disease Map Schema v0",
+      "artifact_class": "schema",
       "claim_level": "open-question",
       "blood_cancer_scope": [
         "multiple myeloma",
         "plasma-cell disease",
-        "public release readiness",
-        "maintainer review",
-        "public safety"
+        "blood-cancer disease maps",
+        "research tooling"
       ],
-      "path": "disease-programs/multiple-myeloma/public-review-release-gate-pass-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/public-review-release-gate-pass-v0.metadata.json",
-      "source_count": 8,
-      "limitation_count": 12
+      "path": "schemas/disease-map-schema-v0.md",
+      "metadata_path": "schemas/disease-map-schema-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 5
     },
     {
-      "artifact_id": "review-packet-manifest-route-table-tool-v0",
-      "title": "Review-Packet Manifest Route-Table Dry-Run Tool v0",
-      "artifact_class": "tool",
+      "artifact_id": "evidence-claim-schema-v0",
+      "title": "Evidence Claim Schema v0",
+      "artifact_class": "schema",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "all blood-cancer subtypes"
+      ],
+      "path": "schemas/evidence-claim-schema-v0.md",
+      "metadata_path": "schemas/evidence-claim-schema-v0.metadata.json",
+      "source_count": 2,
+      "limitation_count": 3
+    },
+    {
+      "artifact_id": "multiple-myeloma-evidence-retrieval-packet-v0",
+      "title": "Evidence Retrieval Packet v0",
+      "artifact_class": "schema",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "evidence retrieval",
+        "source registry",
+        "query provenance",
+        "source freshness",
+        "trial registry context",
+        "public projection",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/evidence-retrieval-packet-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/evidence-retrieval-packet-v0.metadata.json",
+      "source_count": 15,
+      "limitation_count": 37
+    },
+    {
+      "artifact_id": "multiple-myeloma-measurement-normalization-contract-v0",
+      "title": "Measurement Normalization Contract v0",
+      "artifact_class": "schema",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "measurement normalization",
+        "measurable residual disease",
+        "response assessment",
+        "relapse assessment",
+        "endpoint language",
+        "case-to-cure pipeline",
+        "public projection",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.metadata.json",
+      "source_count": 11,
+      "limitation_count": 27
+    },
+    {
+      "artifact_id": "multiple-myeloma-molecular-immune-context-contract-v0",
+      "title": "Molecular Immune Context Contract v0",
+      "artifact_class": "schema",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "molecular context",
+        "immune context",
+        "cytogenetics",
+        "genomics",
+        "target assays",
+        "pathology context",
+        "flow context",
+        "mechanism linkage",
+        "case-to-cure pipeline",
+        "public projection",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/contexts/molecular-immune-context-contract-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/contexts/molecular-immune-context-contract-v0.metadata.json",
+      "source_count": 14,
+      "limitation_count": 34
+    },
+    {
+      "artifact_id": "open-question-record-schema-v0",
+      "title": "Open-Question Record Schema v0",
+      "artifact_class": "schema",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "blood-cancer open-question records",
+        "research tooling"
+      ],
+      "path": "schemas/open-question-record-schema-v0.md",
+      "metadata_path": "schemas/open-question-record-schema-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 5
+    },
+    {
+      "artifact_id": "multiple-myeloma-private-intake-schema-contract-v0",
+      "title": "Private Intake Schema Contract v0",
+      "artifact_class": "schema",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "caregiver intake",
+        "private intake schema",
+        "case-to-cure pipeline",
+        "public projection",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-intake/private-intake-schema-contract-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-intake/private-intake-schema-contract-v0.metadata.json",
+      "source_count": 13,
+      "limitation_count": 17
+    },
+    {
+      "artifact_id": "review-packet-builder-manifest-schema-v0",
+      "title": "Review-Packet Builder Manifest Schema v0",
+      "artifact_class": "schema",
       "claim_level": "open-question",
       "blood_cancer_scope": [
         "multiple myeloma",
@@ -401,10 +1384,10 @@
         "research tooling",
         "public safety"
       ],
-      "path": "tools/review_packet_manifest_route_table.py",
-      "metadata_path": "tools/review_packet_manifest_route_table.metadata.json",
-      "source_count": 8,
-      "limitation_count": 12
+      "path": "schemas/review-packet-builder-manifest-schema-v0.md",
+      "metadata_path": "schemas/review-packet-builder-manifest-schema-v0.metadata.json",
+      "source_count": 7,
+      "limitation_count": 10
     },
     {
       "artifact_id": "review-packet-route-table-output-schema-v0",
@@ -424,293 +1407,6 @@
       "limitation_count": 11
     },
     {
-      "artifact_id": "multiple-myeloma-synthetic-case-to-cure-pipeline-v0",
-      "title": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
-      "artifact_class": "dataset",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "synthetic example",
-        "case pipeline",
-        "public safety"
-      ],
-      "path": "examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md",
-      "metadata_path": "examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.metadata.json",
-      "source_count": 5,
-      "limitation_count": 9
-    },
-    {
-      "artifact_id": "bcma-antigen-escape-claim-set-v0",
-      "title": "BCMA Antigen Escape Claim Set v0",
-      "artifact_class": "dataset",
-      "claim_level": "derived",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "BCMA-directed therapy",
-        "post-BCMA relapse",
-        "post-CAR T relapse"
-      ],
-      "path": "disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.metadata.json",
-      "source_count": 4,
-      "limitation_count": 8
-    },
-    {
-      "artifact_id": "bcma-antigen-escape-evidence-gap-register-v0",
-      "title": "BCMA Antigen Escape Evidence Gap Register v0",
-      "artifact_class": "dataset",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "BCMA-directed therapy",
-        "post-BCMA relapse",
-        "post-CAR T relapse"
-      ],
-      "path": "disease-programs/multiple-myeloma/evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.metadata.json",
-      "source_count": 6,
-      "limitation_count": 8
-    },
-    {
-      "artifact_id": "bcma-claim-set-expert-review-packet-v0",
-      "title": "BCMA Claim Set Expert Review Packet v0",
-      "artifact_class": "protocol",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "BCMA-directed therapy",
-        "post-BCMA relapse",
-        "post-CAR T relapse",
-        "expert review readiness"
-      ],
-      "path": "disease-programs/multiple-myeloma/reviews/bcma-claim-set-expert-review-packet-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/reviews/bcma-claim-set-expert-review-packet-v0.metadata.json",
-      "source_count": 4,
-      "limitation_count": 7
-    },
-    {
-      "artifact_id": "multiple-myeloma-expert-validation-issue-index-v0",
-      "title": "Multiple Myeloma Expert Validation Issue Index v0",
-      "artifact_class": "dataset",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "expert validation",
-        "public issues",
-        "public safety"
-      ],
-      "path": "disease-programs/multiple-myeloma/reviews/expert-validation-issue-index-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/reviews/expert-validation-issue-index-v0.metadata.json",
-      "source_count": 16,
-      "limitation_count": 11
-    },
-    {
-      "artifact_id": "multiple-myeloma-expert-validation-outreach-map-v0",
-      "title": "Multiple Myeloma Expert Validation Outreach Map v0",
-      "artifact_class": "dataset",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "expert validation",
-        "expert outreach",
-        "public safety"
-      ],
-      "path": "disease-programs/multiple-myeloma/reviews/expert-validation-outreach-map-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/reviews/expert-validation-outreach-map-v0.metadata.json",
-      "source_count": 21,
-      "limitation_count": 11
-    },
-    {
-      "artifact_id": "mrd-and-relapse-measurement-glossary-v0",
-      "title": "MRD And Relapse Measurement Glossary v0",
-      "artifact_class": "dataset",
-      "claim_level": "derived",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "measurable residual disease",
-        "response assessment",
-        "relapse assessment"
-      ],
-      "path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.metadata.json",
-      "source_count": 6,
-      "limitation_count": 7
-    },
-    {
-      "artifact_id": "bcma-measurement-context-audit-v0",
-      "title": "BCMA Measurement Context Audit v0",
-      "artifact_class": "dataset",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "BCMA-directed therapy",
-        "post-BCMA relapse",
-        "post-CAR T relapse",
-        "measurement context"
-      ],
-      "path": "disease-programs/multiple-myeloma/measurements/bcma-measurement-context-audit-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/measurements/bcma-measurement-context-audit-v0.metadata.json",
-      "source_count": 2,
-      "limitation_count": 6
-    },
-    {
-      "artifact_id": "post-car-t-relapse-extraction-guide-v0",
-      "title": "Post-CAR T Relapse Extraction Guide v0",
-      "artifact_class": "protocol",
-      "claim_level": "derived",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "BCMA-targeted CAR T-cell therapy",
-        "post-CAR T relapse"
-      ],
-      "path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-extraction-guide-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-extraction-guide-v0.metadata.json",
-      "source_count": 5,
-      "limitation_count": 5
-    },
-    {
-      "artifact_id": "post-car-t-relapse-mechanism-map-v0",
-      "title": "Post-CAR T Relapse Mechanism Map v0",
-      "artifact_class": "map",
-      "claim_level": "derived",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "BCMA-targeted CAR T-cell therapy",
-        "post-CAR T relapse"
-      ],
-      "path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-map-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-map-v0.metadata.json",
-      "source_count": 7,
-      "limitation_count": 6
-    },
-    {
-      "artifact_id": "post-car-t-relapse-mechanism-coverage-v0",
-      "title": "Post-CAR T Relapse Mechanism Coverage Report v0",
-      "artifact_class": "dataset",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "BCMA-targeted CAR T-cell therapy",
-        "post-CAR T relapse",
-        "mechanism extraction coverage"
-      ],
-      "path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-coverage-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-coverage-v0.metadata.json",
-      "source_count": 3,
-      "limitation_count": 7
-    },
-    {
-      "artifact_id": "post-car-t-relapse-mechanism-gap-public-task-queue-v0",
-      "title": "Post-CAR T Relapse Mechanism Gap Public Task Queue v0",
-      "artifact_class": "dataset",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "BCMA-targeted CAR T-cell therapy",
-        "post-CAR T relapse",
-        "mechanism extraction coverage"
-      ],
-      "path": "disease-programs/multiple-myeloma/public-tasks/post-car-t-relapse-mechanism-gap-public-task-queue-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/post-car-t-relapse-mechanism-gap-public-task-queue-v0.metadata.json",
-      "source_count": 3,
-      "limitation_count": 7
-    },
-    {
-      "artifact_id": "multiple-myeloma-roadmap-public-task-queue-v0",
-      "title": "Multiple Myeloma Roadmap Public Task Queue v0",
-      "artifact_class": "dataset",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "public roadmap",
-        "case-to-cure pipeline",
-        "research tooling"
-      ],
-      "path": "disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.metadata.json",
-      "source_count": 4,
-      "limitation_count": 9
-    },
-    {
-      "artifact_id": "bcma-antigen-escape-public-task-queue-v0",
-      "title": "BCMA Antigen Escape Public Task Queue v0",
-      "artifact_class": "dataset",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "BCMA-directed therapy",
-        "post-BCMA relapse",
-        "post-CAR T relapse"
-      ],
-      "path": "disease-programs/multiple-myeloma/public-tasks/bcma-antigen-escape-public-task-queue-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/bcma-antigen-escape-public-task-queue-v0.metadata.json",
-      "source_count": 2,
-      "limitation_count": 7
-    },
-    {
-      "artifact_id": "clinicaltrials-gov-query-protocol-v0",
-      "title": "ClinicalTrials.gov Query Protocol v0",
-      "artifact_class": "protocol",
-      "claim_level": "derived",
-      "blood_cancer_scope": [
-        "all blood-cancer subtypes"
-      ],
-      "path": "protocols/clinicaltrials-gov-query-protocol-v0.md",
-      "metadata_path": "protocols/clinicaltrials-gov-query-protocol-v0.metadata.json",
-      "source_count": 3,
-      "limitation_count": 5
-    },
-    {
-      "artifact_id": "clawdad-autonomous-research-loop-v0",
-      "title": "Clawdad Autonomous Research Loop v0",
-      "artifact_class": "protocol",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "autonomous research loop",
-        "public safety",
-        "research tooling"
-      ],
-      "path": "protocols/clawdad-autonomous-research-loop-v0.md",
-      "metadata_path": "protocols/clawdad-autonomous-research-loop-v0.metadata.json",
-      "source_count": 6,
-      "limitation_count": 8
-    },
-    {
-      "artifact_id": "evidence-claim-schema-v0",
-      "title": "Evidence Claim Schema v0",
-      "artifact_class": "schema",
-      "claim_level": "derived",
-      "blood_cancer_scope": [
-        "all blood-cancer subtypes"
-      ],
-      "path": "schemas/evidence-claim-schema-v0.md",
-      "metadata_path": "schemas/evidence-claim-schema-v0.metadata.json",
-      "source_count": 2,
-      "limitation_count": 3
-    },
-    {
-      "artifact_id": "disease-map-schema-v0",
-      "title": "Disease Map Schema v0",
-      "artifact_class": "schema",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "blood-cancer disease maps",
-        "research tooling"
-      ],
-      "path": "schemas/disease-map-schema-v0.md",
-      "metadata_path": "schemas/disease-map-schema-v0.metadata.json",
-      "source_count": 5,
-      "limitation_count": 5
-    },
-    {
       "artifact_id": "target-record-schema-v0",
       "title": "Target Record Schema v0",
       "artifact_class": "schema",
@@ -725,6 +1421,30 @@
       "metadata_path": "schemas/target-record-schema-v0.metadata.json",
       "source_count": 5,
       "limitation_count": 5
+    },
+    {
+      "artifact_id": "multiple-myeloma-therapy-exposure-timeline-contract-v0",
+      "title": "Therapy Exposure Timeline Contract v0",
+      "artifact_class": "schema",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "therapy exposure",
+        "treatment-class taxonomy",
+        "timeline normalization",
+        "response linkage",
+        "toxicity context",
+        "constraint context",
+        "case-to-cure pipeline",
+        "public projection",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/therapy-landscapes/therapy-exposure-timeline-contract-v0.metadata.json",
+      "source_count": 13,
+      "limitation_count": 33
     },
     {
       "artifact_id": "therapy-record-schema-v0",
@@ -759,73 +1479,6 @@
       "limitation_count": 5
     },
     {
-      "artifact_id": "open-question-record-schema-v0",
-      "title": "Open-Question Record Schema v0",
-      "artifact_class": "schema",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "blood-cancer open-question records",
-        "research tooling"
-      ],
-      "path": "schemas/open-question-record-schema-v0.md",
-      "metadata_path": "schemas/open-question-record-schema-v0.metadata.json",
-      "source_count": 5,
-      "limitation_count": 5
-    },
-    {
-      "artifact_id": "review-packet-builder-manifest-schema-v0",
-      "title": "Review-Packet Builder Manifest Schema v0",
-      "artifact_class": "schema",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "review packets",
-        "research tooling",
-        "public safety"
-      ],
-      "path": "schemas/review-packet-builder-manifest-schema-v0.md",
-      "metadata_path": "schemas/review-packet-builder-manifest-schema-v0.metadata.json",
-      "source_count": 7,
-      "limitation_count": 10
-    },
-    {
-      "artifact_id": "case-feature-bundle-public-summary-v0",
-      "title": "Case-Feature Bundle Public Summary v0",
-      "artifact_class": "schema",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "case-to-cure pipeline",
-        "public safety",
-        "schema summary"
-      ],
-      "path": "schemas/case-feature-bundle-public-summary-v0.md",
-      "metadata_path": "schemas/case-feature-bundle-public-summary-v0.metadata.json",
-      "source_count": 5,
-      "limitation_count": 11
-    },
-    {
-      "artifact_id": "source-registry-v0",
-      "title": "Source Registry v0",
-      "artifact_class": "dataset",
-      "claim_level": "derived",
-      "blood_cancer_scope": [
-        "leukemia",
-        "lymphoma",
-        "multiple myeloma and plasma-cell disorders",
-        "myelodysplastic syndromes",
-        "myeloproliferative neoplasms"
-      ],
-      "path": "sources/source-registry-v0.md",
-      "metadata_path": "sources/source-registry-v0.metadata.json",
-      "source_count": 18,
-      "limitation_count": 4
-    },
-    {
       "artifact_id": "multiple-myeloma-treatment-class-taxonomy-v0",
       "title": "Multiple Myeloma Treatment-Class Taxonomy v0",
       "artifact_class": "taxonomy",
@@ -838,45 +1491,32 @@
       "metadata_path": "taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.metadata.json",
       "source_count": 4,
       "limitation_count": 4
+    },
+    {
+      "artifact_id": "review-packet-manifest-route-table-tool-v0",
+      "title": "Review-Packet Manifest Route-Table Dry-Run Tool v0",
+      "artifact_class": "tool",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "review packets",
+        "research tooling",
+        "public safety"
+      ],
+      "path": "tools/review_packet_manifest_route_table.py",
+      "metadata_path": "tools/review_packet_manifest_route_table.metadata.json",
+      "source_count": 8,
+      "limitation_count": 12
     }
   ],
   "review": {
-    "created": "2026-04-14",
-    "last_reviewed": "2026-04-15",
+    "created": "2026-04-16",
+    "last_reviewed": "2026-04-16",
     "review_status": "source-checked",
     "review_notes": [
-      "Generated from public artifact metadata files.",
-      "Reviewed for public-safe navigation scope and research-use-only boundary.",
-      "Added the multiple myeloma public roadmap as the canonical execution plan.",
-      "Added the case-to-cure pipeline blueprint as the public plumbing plan for future consented case work.",
-      "Added the synthetic case-to-cure example to exercise the pipeline without real case data.",
-      "Added the Clawdad autonomous research loop protocol to drive public-safe iterative execution.",
-      "Added the multiple myeloma roadmap public task queue as the contribution-ready execution bridge.",
-      "Added the case-feature bundle public summary as the safe public boundary for private case-feature shape planning.",
-      "Added the candidate-option scoring rubric as a no-action public review-readiness protocol.",
-      "Added the publication-gate checklist as a fail-closed release-readiness protocol for case-derived public learning.",
-      "Added the multidisciplinary review packet template as a do-not-fill-publicly review-readiness protocol.",
-      "Added the multiple myeloma open research map v0.1 as a public navigation map.",
-      "Added the disease-map schema v0 as the validated shape for future machine-readable disease maps.",
-      "Added the multiple myeloma open research map JSON companion using Disease Map Schema v0.",
-      "Added the multiple myeloma schema and tooling phase inventory as the phase-boundary artifact selecting target-record schema next.",
-      "Added target-record schema v0 as the validated shape for public target context before target tooling.",
-      "Added therapy-record schema v0 as the validated shape for public therapy context before therapy landscape or trial tooling.",
-      "Added trial-landscape record schema v0 as the validated shape for registry landscape context before trial explorer or evidence graph tooling.",
-      "Added open-question record schema v0 as the validated shape for public research questions before evidence graph or map-builder tooling.",
-      "Added the multiple myeloma tooling readiness gate as the aggregate no-tooling-yet checkpoint selecting a review-packet builder manifest specification next.",
-      "Added the review-packet builder input manifest spec as a spec-only protocol before manifest schema or builder code.",
-      "Added review-packet builder manifest schema v0 as the validated public input shape before any builder code.",
-      "Added review-packet builder dry-run plan v0 as the no-code copy, reference, omit, and refuse policy before any builder implementation.",
-      "Added review-packet builder implementation gate v0 as the aggregate no-code decision point selecting a copied-reference route-table script task.",
-      "Added the multiple myeloma definition-of-complete audit as the aggregate loop audit selecting a case-specific private-lab blocker register task.",
-      "Added the case-specific private-lab blocker register as a stage-by-stage public-safe boundary map for remaining case-specific work.",
-      "Added the multiple myeloma public loop completion handoff as the current endpoint for the v0 autonomous public loop.",
-      "Added the multiple myeloma public review and release gate as the next human-gated phase seed.",
-      "Added the multiple myeloma public inventory as the current-state map for PR review.",
-      "Added the multiple myeloma public review release gate pass as the repository-readiness review artifact for protected-branch review.",
-      "Added the multiple myeloma expert validation issue index linking 13 review items to public GitHub issues.",
-      "Added the multiple myeloma expert validation outreach map as a public shortlist and reviewer-lens sweep."
+      "Generated from public artifact metadata records.",
+      "Counts and entries are navigation metadata only; they do not grade evidence quality or authorize clinical use."
     ]
   }
 }

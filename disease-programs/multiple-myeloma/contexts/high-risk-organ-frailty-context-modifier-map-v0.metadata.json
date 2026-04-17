@@ -1,0 +1,83 @@
+{
+  "artifact_id": "high-risk-organ-frailty-context-modifier-map-v0",
+  "title": "High-Risk, Extramedullary, Organ, And Frailty Context Modifier Map v0",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "high-risk context",
+    "extramedullary context",
+    "organ context",
+    "frailty context",
+    "case-feature bundle boundary",
+    "review-packet checklist"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "../frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-Feature Bundle Public Summary v0",
+      "url": "../../../schemas/case-feature-bundle-public-summary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "NCI PDQ 2025 Disease Context Extraction v0",
+      "url": "../mechanisms/extractions/nci-pdq-2025-disease-context-v0.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Tedder and Bhutani 2025 Disease Context Extraction v0",
+      "url": "../mechanisms/extractions/tedder-bhutani-2025-disease-context-v0.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Post-BCMA Resistance Frontier Addendum v0",
+      "url": "../mechanisms/post-bcma-resistance-frontier-addendum-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Template v0",
+      "url": "../reviews/multidisciplinary-review-packet-template-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "NCI Plasma Cell Neoplasms / Multiple Myeloma Treatment PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "IMWG frailty report",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25628469/",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only context map.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not monitoring guidance.",
+    "Does not provide referral, safety-management, or supportive-care guidance.",
+    "Does not create or authorize a frailty score, organ-function score, risk calculator, severity ranking, or option-ranking tool.",
+    "Does not change the case-feature bundle schema or authorize public case intake.",
+    "Does not use real case data, patient-identifying data, private records, or private expert correspondence."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/high-risk-organ-frailty-context-modifier-map-v0.md"
+}

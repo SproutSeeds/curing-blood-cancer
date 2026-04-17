@@ -1,0 +1,88 @@
+{
+  "artifact_id": "multiple-myeloma-case-intake-frontier-completion-audit-handoff-v0",
+  "title": "Case Intake Frontier Completion Audit Handoff v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "caregiver intake",
+    "case-intake frontier",
+    "completion audit",
+    "case-to-cure pipeline",
+    "public safety",
+    "private-lab handoff"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Caregiver Case Intake Product Spec v0",
+      "url": "./caregiver-case-intake-product-spec-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Checklist v0",
+      "url": "./caregiver-intake-public-projection-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Caregiver Intake v0",
+      "url": "../../../examples/multiple-myeloma-synthetic-caregiver-intake-v0.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Stage Validator And Owner Map v0",
+      "url": "../case-to-cure-stage-validator-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "../frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Inventory v0",
+      "url": "../public-inventory-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../../../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private-to-public workflow",
+      "url": "../../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only phase handoff.",
+    "Not an intake implementation.",
+    "Not an executable validator.",
+    "Not a live backend plan.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency guidance.",
+    "Does not collect, store, upload, process, publish, or authorize public use of real case data.",
+    "Does not contain patient-identifying data, real case details, private records, portal exports, images, notes, dates tied to a person, free-text case details, or re-identification keys.",
+    "Does not authorize publication of case-derived learning; privacy, clinician, source, and publication gates remain required.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-case-intake-frontier-completion-audit-handoff-v0.md"
+}

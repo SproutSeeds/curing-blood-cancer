@@ -19,6 +19,7 @@ and what would make the next version more useful.
 
 - Claim set: [`bcma-antigen-escape-claim-set-v0`](../evidence-claims/bcma-antigen-escape-claim-set-v0.md)
 - Mechanism map: [`post-car-t-relapse-mechanism-map-v0`](../mechanisms/post-car-t-relapse-mechanism-map-v0.md)
+- Frontier addendum: [`post-bcma-resistance-frontier-addendum-v0`](../mechanisms/post-bcma-resistance-frontier-addendum-v0.md)
 - Measurement glossary: [`mrd-and-relapse-measurement-glossary-v0`](../measurements/mrd-and-relapse-measurement-glossary-v0.md)
 
 ## Highest-Value Gaps
@@ -85,3 +86,6 @@ assumptions, source quality, and public-language safety.
 - Add full-text extraction tasks for sources already anchored in the source
   registry.
 - Add a public issue template that converts each gap into a contributor task.
+- Use the post-BCMA resistance frontier addendum to capture contradiction,
+  measurement-context, and mechanism-family status before any mechanism
+  dashboard, source scoring, or comparison work.

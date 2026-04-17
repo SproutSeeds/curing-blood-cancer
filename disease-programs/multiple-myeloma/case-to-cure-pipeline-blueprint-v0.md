@@ -19,6 +19,16 @@ and publication boundaries. It cannot hold patient-identifying data, determine
 care, recommend a treatment, recommend a trial, or claim that a cure has been
 found.
 
+The adaptive execution plan for continuing this work is
+[Case-To-Cure Adaptive Master Plan v0](case-to-cure-adaptive-master-plan-v0.md).
+That plan keeps the large cure-oriented scope visible while requiring each
+completed step to inspect its result, write a handoff, and synthesize the next
+safe public step.
+The current adaptive-loop handoff is
+[Case-To-Cure Loop Governor Handoff v0](case-to-cure-loop-governor-handoff-v0.md),
+which closes the loop-governor item and activates the private intake schema
+contract as the next public-safe dependency.
+
 ## Cure-Oriented Definition
 
 For a particular case, "cure" must be operationalized by the treating clinical
@@ -84,6 +94,55 @@ These contracts describe the shape of the future pipeline. They are not case
 records.
 
 ### Case Intake Manifest
+
+The public caregiver-facing intake product target is
+[Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md).
+It defines the plain-language flow, field groups, privacy boundary, and
+private handoff contract for future real intake work. It does not collect real
+case data, authorize public uploads, or provide medical advice.
+
+The public projection gate for that intake phase is
+[Caregiver Intake Public Projection Checklist v0](case-intake/caregiver-intake-public-projection-checklist-v0.md).
+It defines fail-closed verdicts, no-PHI checks, no-advice checks, unknown-state
+requirements, final-review requirements, and the boundary between private
+intake content and public shape-only or synthetic artifacts.
+
+The public completion handoff for the current intake phase is
+[Case Intake Frontier Completion Audit Handoff v0](case-intake/case-intake-frontier-completion-audit-handoff-v0.md).
+It closes the current autonomous public slice without authorizing real intake,
+uploads, advice, clinical interpretation, publication, or private-lab work.
+
+The public shape contract for a future private intake record is
+[Private Intake Schema Contract v0](case-intake/private-intake-schema-contract-v0.md).
+It defines field groups, unknown states, provenance, private-only content, and
+projection outcomes without creating a live schema, backend, public upload
+path, or case record.
+
+The public static prototype plan is
+[Static Synthetic Caregiver Prototype Plan v0](case-intake/static-synthetic-caregiver-prototype-plan-v0.md).
+It maps the synthetic `intake_00` through `intake_11` screens, refusal paths,
+copy families, and fixture bindings without creating a public form, live
+backend, upload path, public submission, or patient-specific output.
+
+The public projection validator spec is
+[Caregiver Intake Public Projection Validator v0](case-intake/caregiver-intake-public-projection-validator-v0.md).
+It defines fail-closed protocol checks for PHI, real case details, free text,
+uploads, advice language, unknown-state inference, review-gate claims,
+allowed-successor mismatches, and publication bypass without processing real
+case data.
+
+The consent, privacy, security, retention, emergency, and clinician-review
+gate is
+[Consent Privacy Security Retention Gate v0](case-intake/consent-privacy-security-retention-gate-v0.md).
+It records the human and technical blockers before any real case intake,
+storage, retention, emergency handling, clinician review, or case-derived
+public learning.
+
+The public shape contract for normalized case features is
+[Case Feature Normalization Contract v0](case-feature-normalization-contract-v0.md).
+It defines feature groups, value states, source status, timepoint buckets,
+review gates, limitations, and allowed public successors without creating a
+fillable real-case schema, normalizer, or patient-specific interpretation.
 
 Private-only path:
 
@@ -158,9 +217,33 @@ Shape:
 Public-safe companion:
 
 - [Case-Feature Bundle Public Summary v0](../../schemas/case-feature-bundle-public-summary-v0.md)
+- [Case Feature Normalization Contract v0](case-feature-normalization-contract-v0.md)
 
-The companion describes allowed public field groups and publication boundaries.
-It is not a fillable public case schema.
+These companions describe allowed public field groups, normalization states,
+and publication boundaries. They are not fillable public case schemas.
+
+The public shape contract for measurement normalization is
+[Measurement Normalization Contract v0](measurements/measurement-normalization-contract-v0.md).
+It preserves MRD, response, relapse, lab, imaging, method, threshold, sample,
+timepoint, durability, endpoint role, source context, uncertainty, and
+limitation fields without publishing real values or producing monitoring,
+prognosis, treatment, trial, ranking, or cure-claim output.
+
+The public shape contract for therapy exposure timelines is
+[Therapy Exposure Timeline Contract v0](therapy-landscapes/therapy-exposure-timeline-contract-v0.md).
+It preserves therapy class, exposure state, broad timing bucket, response
+linkage, toxicity or constraint category, refractory context, source status,
+review status, uncertainty, and limitations without publishing real therapy
+histories or producing sequencing, eligibility, access, monitoring, ranking,
+or treatment guidance.
+
+The public shape contract for molecular and immune context is
+[Molecular Immune Context Contract v0](contexts/molecular-immune-context-contract-v0.md).
+It preserves cytogenetic, genomic, target-assay, pathology, flow, immune
+context, assay-validity, source-validity, timepoint, therapy-linkage,
+measurement-linkage, uncertainty, review, and limitation fields without
+publishing real reports or producing actionability, testing, treatment, trial,
+monitoring, ranking, or patient-specific interpretation.
 
 ### Evidence Packet
 
@@ -176,6 +259,71 @@ Public dependencies:
 - [ClinicalTrials.gov Query Protocol v0](../../protocols/clinicaltrials-gov-query-protocol-v0.md)
 - [MRD And Relapse Measurement Glossary v0](measurements/mrd-and-relapse-measurement-glossary-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
+- [Evidence Retrieval Packet v0](evidence-retrieval-packet-v0.md)
+- [Trial Therapy Landscape Non-Advice Gate v0](therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md)
+- [Candidate Hypothesis Review Question Set v0](reviews/candidate-hypothesis-review-question-set-v0.md)
+- [Multidisciplinary Review Packet Builder v0](reviews/multidisciplinary-review-packet-builder-v0.md)
+- [Expert Validation Loop v0](reviews/expert-validation-loop-v0.md)
+- [Case-To-Public Learning Extraction Gate v0](case-to-public-learning-extraction-gate-v0.md)
+- [End-To-End Synthetic Case Dry Run v0](end-to-end-synthetic-case-dry-run-v0.md)
+
+Public-safe companion:
+
+[Evidence Retrieval Packet v0](evidence-retrieval-packet-v0.md) defines the
+public-source-only packet skeleton for source IDs, query records, source
+freshness, access-date state, limitations, uncertainty, no-completeness
+warnings, review status, and no-advice boundaries. It does not perform patient
+matching, trial matching, target actionability, evidence ranking, or
+patient-specific interpretation.
+
+[Trial Therapy Landscape Non-Advice Gate v0](therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md)
+defines the public landscape gate for trial, therapy, product, target,
+jurisdiction, status, source freshness, access-date, limitation, uncertainty,
+and review fields. It does not perform availability checks, eligibility
+checks, trial matching, patient matching, sequencing, access guidance, ranking,
+or patient-specific interpretation.
+
+[Candidate Hypothesis Review Question Set v0](reviews/candidate-hypothesis-review-question-set-v0.md)
+defines the public question-only scaffold for candidate hypothesis review. It
+preserves evidence packet IDs, landscape gate status, source context,
+uncertainty, review lens, blocked uses, and no patient-action output without
+creating candidate options, recommendations, rankings, patient matching, trial
+matching, availability, eligibility, treatment guidance, trial guidance,
+expanded-access guidance, monitoring guidance, or patient-specific
+interpretation.
+
+[Multidisciplinary Review Packet Builder v0](reviews/multidisciplinary-review-packet-builder-v0.md)
+defines the public route-rule skeleton for review packet planning. It routes
+question IDs, artifact IDs, source IDs, review lenses, missing-input blockers,
+refusals, and boundary fields by copy, reference, omit, or refuse behavior
+only. It does not assemble packets, generate biomedical prose, process real
+case facts, create patient-specific outputs, recommend, rank, match trials,
+infer eligibility or availability, authorize publication, or make clinical
+decisions.
+
+[Expert Validation Loop v0](reviews/expert-validation-loop-v0.md) defines the
+public disposition-loop scaffold for issue-linked validation work. It preserves
+issue IDs, artifact IDs, source IDs, review lenses, outreach-map role labels,
+response-ledger states, allowed dispositions, uncertainty, blocked uses, and
+next public actions without outreach, private correspondence, unpublished
+expert comments, recommendations, rankings, publication authorization, or
+clinical decisions.
+
+[Case-To-Public Learning Extraction Gate v0](case-to-public-learning-extraction-gate-v0.md)
+defines the public sanitation and publication gate for future case-derived
+learning. It preserves allowed output type, privacy decision state,
+de-identification basis, aggregation state, single-case claim blockers, public
+source context, review lens, disposition state, uncertainty, limitations,
+blocked uses, and publication-gate state before any private-case learning can
+be prepared for public review. It does not extract, de-identify, summarize,
+publish, advise, rank, match, or authorize case-derived learning.
+
+[End-To-End Synthetic Case Dry Run v0](end-to-end-synthetic-case-dry-run-v0.md)
+defines the synthetic route table from caregiver intake through
+publication-gate refusal. It exercises success, omit, refusal, and blocker
+paths without running a real case, assembling review packets, generating case
+summaries, matching trials, ranking options, giving clinical guidance, or
+authorizing publication.
 
 Shape:
 
@@ -336,6 +484,10 @@ The current public fixture is:
 
 - [Multiple Myeloma Synthetic Case-To-Cure Pipeline v0](../../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md)
 
+The current public stage validator and owner map is:
+
+- [Case-To-Cure Stage Validator And Owner Map v0](case-to-cure-stage-validator-map-v0.md)
+
 It demonstrates the full `case_00` through `case_14` pipeline with synthetic
 placeholders only. It contains no real case data, no PHI, no patient-specific
 candidate option, and no treatment or trial recommendation.
@@ -360,20 +512,91 @@ review boards, trial sites, sponsors, and regulators complete their parts.
 
 ## Immediate Implementation Queue
 
-1. Add a private-only synthetic case manifest template in the lab repo.
-2. Keep any fillable `case-feature-bundle.schema.json` private, and use
+The active queue is governed by
+[Case-To-Cure Adaptive Master Plan v0](case-to-cure-adaptive-master-plan-v0.md)
+and the ORP additional list `case-to-cure-master-backlog-v0`.
+
+The first public-safe queue items are:
+
+1. Complete the loop governor so a completed subphase always produces a
+   next-step synthesis before the run stops. Completed by
+   [Case-To-Cure Loop Governor Handoff v0](case-to-cure-loop-governor-handoff-v0.md).
+2. Define the private intake schema contract and public projection boundary for
+   the caregiver intake flow. Completed by
+   [Private Intake Schema Contract v0](case-intake/private-intake-schema-contract-v0.md).
+3. Design a static synthetic caregiver prototype before any live data capture.
+   Completed by
+   [Static Synthetic Caregiver Prototype Plan v0](case-intake/static-synthetic-caregiver-prototype-plan-v0.md).
+4. Create a public projection validator or validator spec that fails closed on
+   PHI, advice, rankings, urgency guidance, and publication without a gate.
+   Completed by
+   [Caregiver Intake Public Projection Validator v0](case-intake/caregiver-intake-public-projection-validator-v0.md).
+5. Define consent, privacy, security, retention, emergency, and
+   clinician-review gates before any real case intake. Completed by
+   [Consent Privacy Security Retention Gate v0](case-intake/consent-privacy-security-retention-gate-v0.md).
+6. Keep any fillable `case-feature-bundle.schema.json` private, and use
    [Case-Feature Bundle Public Summary v0](../../schemas/case-feature-bundle-public-summary-v0.md)
-   as the public shape boundary.
-3. Use the case-matching provenance fields in
+   and
+   [Case Feature Normalization Contract v0](case-feature-normalization-contract-v0.md)
+   as the public shape and normalization boundary. Completed by
+   [Case Feature Normalization Contract v0](case-feature-normalization-contract-v0.md).
+7. Define the measurement normalization contract for MRD, response, relapse,
+   labs, imaging, method, threshold, sample, timepoint, durability, endpoint
+   role, source context, uncertainty, and limitation fields before these terms
+   are used downstream. Completed by
+   [Measurement Normalization Contract v0](measurements/measurement-normalization-contract-v0.md).
+8. Define the therapy exposure timeline contract before prior therapies, lines,
+   exposure, response linkage, toxicities, constraints, or refractory context
+   are used downstream. Completed by
+   [Therapy Exposure Timeline Contract v0](therapy-landscapes/therapy-exposure-timeline-contract-v0.md).
+9. Define the molecular immune context contract before cytogenetics, genomics,
+   target assays, pathology, flow, immune context, assay validity, source
+   validity, or target language are used downstream. Completed by
+   [Molecular Immune Context Contract v0](contexts/molecular-immune-context-contract-v0.md).
+10. Define the evidence retrieval packet skeleton before public-source queries,
+   source freshness, query records, public evidence IDs, or limitation ledgers
+   are used downstream. Completed by
+   [Evidence Retrieval Packet v0](evidence-retrieval-packet-v0.md).
+11. Define the trial/therapy landscape non-advice gate before trial, therapy,
+   product, target, jurisdiction, status, freshness, or access-context fields
+   are reused downstream. Completed by
+   [Trial Therapy Landscape Non-Advice Gate v0](therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md).
+12. Define the candidate hypothesis review question set before candidate
+   hypotheses are framed for review packets or public task routing. Completed
+   by
+   [Candidate Hypothesis Review Question Set v0](reviews/candidate-hypothesis-review-question-set-v0.md).
+13. Define the multidisciplinary review packet builder skeleton before
+   question IDs, artifact IDs, source IDs, reviewer lenses, missing-input
+   blockers, refusals, or no-generated-claims behavior are reused downstream.
+   Completed by
+   [Multidisciplinary Review Packet Builder v0](reviews/multidisciplinary-review-packet-builder-v0.md).
+14. Define the expert validation loop before issue statuses, outreach maps,
+   response ledgers, or safe dispositions are treated as recurring review
+   infrastructure. Completed by
+   [Expert Validation Loop v0](reviews/expert-validation-loop-v0.md).
+15. Define the case-to-public learning extraction gate before any future
+   private-case learning can be sanitized, aggregated, source-scoped, reviewed,
+   or publication-gated for public use. Completed by
+   [Case-To-Public Learning Extraction Gate v0](case-to-public-learning-extraction-gate-v0.md).
+16. Advance the end-to-end synthetic case dry run before any future real-case
+   exercise of the public pipeline. Completed by
+   [End-To-End Synthetic Case Dry Run v0](end-to-end-synthetic-case-dry-run-v0.md).
+17. Run the case-to-cure master completion audit before any new autonomous
+   case-to-cure item is selected. Completed by
+   [Case-To-Cure Master Completion Audit v0](case-to-cure-master-completion-audit-v0.md),
+   which blocks the next state on expert, private-lab, clinical, legal,
+   regulatory, publication, or human-review gates unless a human selects a new
+   named public-safe phase.
+18. Use the case-matching provenance fields in
    [ClinicalTrials.gov Query Protocol v0](../../protocols/clinicaltrials-gov-query-protocol-v0.md)
    for public-safe trial-query records.
-4. Use [Candidate-Option Scoring Rubric v0](candidate-option-scoring-rubric-v0.md)
+19. Use [Candidate-Option Scoring Rubric v0](candidate-option-scoring-rubric-v0.md)
    to separate standard-care review, trial review, expanded-access review,
    research-only hypotheses, and no-go decisions without ranking patient
    options.
-5. Use [Publication-Gate Checklist v0](publication-gate-checklist-v0.md)
+20. Use [Publication-Gate Checklist v0](publication-gate-checklist-v0.md)
    before any case-derived public learning is downstreamed.
-6. Use the
+21. Use the
    [Multidisciplinary Review Packet Template v0](reviews/multidisciplinary-review-packet-template-v0.md)
    for private multidisciplinary myeloma review packets.
 

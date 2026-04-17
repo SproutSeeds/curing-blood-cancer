@@ -16,6 +16,7 @@ Initial focus:
 | --- | --- | --- |
 | [Post-CAR T Relapse Mechanism Map v0](post-car-t-relapse-mechanism-map-v0.md) | source-checked v0 | research artifact, not medical advice |
 | [Post-CAR T Relapse Mechanism Coverage Report v0](post-car-t-relapse-mechanism-coverage-v0.md) | source-checked v0 | coverage counts, not mechanism rankings |
+| [Post-BCMA Resistance Frontier Addendum v0](post-bcma-resistance-frontier-addendum-v0.md) | frontier v0 | claim-level and uncertainty map, not patient-option guidance |
 
 ## Extraction Workflow
 

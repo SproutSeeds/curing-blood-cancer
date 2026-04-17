@@ -1,0 +1,131 @@
+{
+  "artifact_id": "multiple-myeloma-molecular-immune-context-contract-v0",
+  "title": "Molecular Immune Context Contract v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "molecular context",
+    "immune context",
+    "cytogenetics",
+    "genomics",
+    "target assays",
+    "pathology context",
+    "flow context",
+    "mechanism linkage",
+    "case-to-cure pipeline",
+    "public projection",
+    "public safety",
+    "private-lab handoff"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Case Feature Normalization Contract v0",
+      "url": "../case-feature-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "../measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "../therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "High-Risk, Extramedullary, Organ, And Frailty Context Modifier Map v0",
+      "url": "high-risk-organ-frailty-context-modifier-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Post-BCMA Resistance Frontier Addendum v0",
+      "url": "../mechanisms/post-bcma-resistance-frontier-addendum-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Post-CAR T Relapse Mechanism Map v0",
+      "url": "../mechanisms/post-car-t-relapse-mechanism-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "BCMA Measurement Context Audit v0",
+      "url": "../measurements/bcma-measurement-context-audit-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Target Record Schema v0",
+      "url": "../../../schemas/target-record-schema-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private Intake Schema Contract v0",
+      "url": "../case-intake/private-intake-schema-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Validator v0",
+      "url": "../case-intake/caregiver-intake-public-projection-validator-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "../case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "../publication-gate-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only schema contract.",
+    "Public shape contract only.",
+    "Not an executable schema.",
+    "Not a real molecular profile.",
+    "Not a target-status record for any person.",
+    "Not an intake form.",
+    "Not a live backend.",
+    "Not a database.",
+    "Not an upload path.",
+    "Not an account or public submission workflow.",
+    "Not a genomics interpreter.",
+    "Not a cytogenetics interpreter.",
+    "Not a pathology interpreter.",
+    "Not a flow-cytometry interpreter.",
+    "Not an immune-fitness interpreter.",
+    "Not an actionability record.",
+    "Not a biomarker report.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not access guidance.",
+    "Not testing guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not safety-management guidance.",
+    "Does not collect, normalize, store, route, transform, publish, compare, rank, or authorize use of real molecular or immune context data.",
+    "Does not contain patient-identifying data, private records, portal exports, molecular reports, pathology reports, flow reports, genomics reports, images, notes, raw assay values, variant lists, exact dates tied to a person, facilities, clinicians, accession numbers, contact details, private case IDs, private workspace paths, or re-identification keys.",
+    "Does not authorize clinical interpretation, molecular interpretation, pathology interpretation, flow interpretation, target actionability, testing recommendations, patient matching, trial matching, target ranking, mechanism ranking, evidence ranking, option ranking, private-lab work, legal clearance, regulatory readiness, security readiness, retention decisions, emergency handling, or publication of case-derived learning.",
+    "Does not validate evidence retrieval, trial, therapy landscape, candidate hypothesis, multidisciplinary review, monitoring-plan, or public-learning extraction semantics.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-molecular-immune-context-contract-v0.md"
+}

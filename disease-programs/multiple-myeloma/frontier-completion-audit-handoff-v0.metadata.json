@@ -1,0 +1,121 @@
+{
+  "artifact_id": "multiple-myeloma-frontier-completion-audit-handoff-v0",
+  "title": "Multiple Myeloma Frontier Completion Audit Handoff v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "frontier completion audit",
+    "autonomous research loop",
+    "public safety",
+    "phase handoff"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "./frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Clawdad Frontier Delegation Packet v0",
+      "url": "../../protocols/clawdad-frontier-delegation-packet-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Roadmap v0",
+      "url": "./public-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Inventory v0",
+      "url": "./public-inventory-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Loop Completion Handoff v0",
+      "url": "./public-loop-completion-handoff-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "./case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Stage Validator And Owner Map v0",
+      "url": "./case-to-cure-stage-validator-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Response Validation Ledger v0",
+      "url": "./reviews/expert-response-validation-ledger-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "MRD Endpoint Language Guardrail Addendum v0",
+      "url": "./measurements/mrd-endpoint-language-guardrail-addendum-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Immune Therapy Sequencing And Access Boundary v0",
+      "url": "./therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Post-BCMA Resistance Frontier Addendum v0",
+      "url": "./mechanisms/post-bcma-resistance-frontier-addendum-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Precursor, Risk, And Interception Boundary Note v0",
+      "url": "./precursors/precursor-risk-interception-boundary-note-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "High-Risk, Extramedullary, Organ, And Frailty Context Modifier Map v0",
+      "url": "./contexts/high-risk-organ-frailty-context-modifier-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Translation And Contribution Guide v0",
+      "url": "./public-translation-contribution-guide-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Artifact Validator",
+      "url": "../../tools/validate_public_artifacts.py",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only frontier completion audit.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not screening, monitoring, safety-management, or personal-risk guidance.",
+    "Does not complete expert review, clinical review, private-lab review, publication review, or any human-gated decision.",
+    "Does not authorize public case processing, public case upload, review-packet assembly, generated packet output, generated claims, patient matching, trial matching, option ranking, recommendation behavior, or publication workflow.",
+    "Does not claim that multiple myeloma has been cured or that any vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-frontier-completion-audit-handoff-v0.md"
+}

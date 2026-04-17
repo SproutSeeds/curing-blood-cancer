@@ -1,0 +1,95 @@
+{
+  "artifact_id": "multiple-myeloma-case-feature-normalization-contract-v0",
+  "title": "Case Feature Normalization Contract v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "case-to-cure pipeline",
+    "case feature normalization",
+    "disease-state normalization",
+    "context modifiers",
+    "public projection",
+    "public safety",
+    "private-lab handoff"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Case-Feature Bundle Public Summary v0",
+      "url": "../../schemas/case-feature-bundle-public-summary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Consent Privacy Security Retention Gate v0",
+      "url": "./case-intake/consent-privacy-security-retention-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Validator v0",
+      "url": "./case-intake/caregiver-intake-public-projection-validator-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private Intake Schema Contract v0",
+      "url": "./case-intake/private-intake-schema-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "./case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "./case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Stage Validator And Owner Map v0",
+      "url": "./case-to-cure-stage-validator-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "High-Risk, Extramedullary, Organ, And Frailty Context Modifier Map v0",
+      "url": "./contexts/high-risk-organ-frailty-context-modifier-map-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "./publication-gate-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only schema contract.",
+    "Public shape contract only.",
+    "Not an executable schema.",
+    "Not a real case-feature bundle.",
+    "Not an intake form.",
+    "Not a live backend.",
+    "Not a database.",
+    "Not an upload path.",
+    "Not an account or public submission workflow.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Does not collect, normalize, store, route, transform, publish, or authorize use of real case data.",
+    "Does not contain patient-identifying data, private records, portal exports, reports, images, notes, exact dates tied to a person, contact details, private case IDs, private workspace paths, or re-identification keys.",
+    "Does not authorize clinical interpretation, patient matching, trial matching, evidence ranking, option ranking, private-lab work, legal clearance, regulatory readiness, security readiness, retention decisions, emergency handling, or publication of case-derived learning.",
+    "Does not validate measurement, therapy exposure, molecular, immune, evidence retrieval, trial, therapy landscape, candidate hypothesis, multidisciplinary review, or public-learning extraction semantics.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-case-feature-normalization-contract-v0.md"
+}

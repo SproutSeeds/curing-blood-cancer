@@ -1,0 +1,82 @@
+{
+  "artifact_id": "immune-therapy-sequencing-access-boundary-v0",
+  "title": "Immune Therapy Sequencing And Access Boundary v0",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "immune therapy",
+    "CAR T-cell therapy",
+    "bispecific antibodies",
+    "antibody-drug conjugates",
+    "therapy access boundary"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "../frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Treatment-Class Taxonomy v0",
+      "url": "../../../taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Therapy Record Schema v0",
+      "url": "../../../schemas/therapy-record-schema-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "NCI Plasma Cell Neoplasms / Multiple Myeloma Treatment PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Drugs@FDA",
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "FDA Linvoseltamab Accelerated Approval Notice",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-linvoseltamab-gcpt-relapsed-or-refractory-multiple-myeloma",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Dana-Farber Multiple Myeloma CAR T-Cell Therapy Update",
+      "url": "https://www.dana-farber.org/for-physicians/clinical-resources/hematologic-malignancies/advances-newsletter/2025-issue-20/multiple-myeloma-cart-t-cell-therapy-update",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only map.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not eligibility, expanded-access, monitoring, referral, or access guidance.",
+    "Does not claim that any immune therapy cures multiple myeloma.",
+    "Does not rank therapies, products, targets, trials, sources, mechanisms, artifacts, or evidence.",
+    "Does not establish current availability, eligibility, safety, efficacy, indication, sequencing, appropriateness, or patient fit.",
+    "Does not use real case data, patient-identifying data, private records, private expert correspondence, or private lab context.",
+    "Regulatory status, labels, trial status, site availability, and product availability can change after the source access date.",
+    "Any patient-specific question belongs with treating clinicians, trial sites, sponsors, institutions, and responsible regulators."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/immune-therapy-sequencing-access-boundary-v0.md"
+}

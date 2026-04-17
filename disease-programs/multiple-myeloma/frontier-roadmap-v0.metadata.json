@@ -1,0 +1,162 @@
+{
+  "artifact_id": "multiple-myeloma-frontier-roadmap-v0",
+  "title": "Multiple Myeloma ORP Frontier Roadmap v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "frontier research map",
+    "case-to-cure pipeline",
+    "public research tooling"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "NCI Plasma Cell Neoplasms / Multiple Myeloma Treatment PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "FDA Draft Guidance On MRD And Complete Response In Multiple Myeloma",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "FDA Linvoseltamab Accelerated Approval Notice",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-linvoseltamab-gcpt-relapsed-or-refractory-multiple-myeloma",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Dana-Farber Multiple Myeloma CAR T-Cell Therapy Update",
+      "url": "https://www.dana-farber.org/for-physicians/clinical-resources/hematologic-malignancies/advances-newsletter/2025-issue-20/multiple-myeloma-cart-t-cell-therapy-update",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Issue Index v0",
+      "url": "./reviews/expert-validation-issue-index-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Response Validation Ledger v0",
+      "url": "./reviews/expert-response-validation-ledger-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "./case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "./case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Cure Loop Governor Handoff v0",
+      "url": "./case-to-cure-loop-governor-handoff-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Private Intake Schema Contract v0",
+      "url": "./case-intake/private-intake-schema-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Static Synthetic Caregiver Prototype Plan v0",
+      "url": "./case-intake/static-synthetic-caregiver-prototype-plan-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Validator v0",
+      "url": "./case-intake/caregiver-intake-public-projection-validator-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Consent Privacy Security Retention Gate v0",
+      "url": "./case-intake/consent-privacy-security-retention-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case Feature Normalization Contract v0",
+      "url": "./case-feature-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "./measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Caregiver Case Intake Product Spec v0",
+      "url": "./case-intake/caregiver-case-intake-product-spec-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Caregiver Intake v0",
+      "url": "../../examples/multiple-myeloma-synthetic-caregiver-intake-v0.json",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Loop Completion Handoff v0",
+      "url": "./public-loop-completion-handoff-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Molecular Immune Context Contract v0",
+      "url": "./contexts/molecular-immune-context-contract-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Evidence Retrieval Packet v0",
+      "url": "./evidence-retrieval-packet-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Trial Therapy Landscape Non-Advice Gate v0",
+      "url": "therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Candidate Hypothesis Review Question Set v0",
+      "url": "reviews/candidate-hypothesis-review-question-set-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multidisciplinary Review Packet Builder v0",
+      "url": "reviews/multidisciplinary-review-packet-builder-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Loop v0",
+      "url": "./reviews/expert-validation-loop-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Case-To-Public Learning Extraction Gate v0",
+      "url": "./case-to-public-learning-extraction-gate-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "End-To-End Synthetic Case Dry Run v0",
+      "url": "./end-to-end-synthetic-case-dry-run-v0.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research roadmap only.",
+    "Not medical advice.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not an expanded-access recommendation.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Does not use or authorize public use of patient-identifying data or real case data.",
+    "Some frontier lanes may remain blocked until expert review, private-lab review, or source extraction is complete.",
+    "Regulatory, trial, product, and evidence landscapes can change after the access date."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-frontier-roadmap-v0.md"
+}

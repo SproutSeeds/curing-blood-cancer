@@ -1,0 +1,102 @@
+{
+  "artifact_id": "multiple-myeloma-public-translation-contribution-guide-v0",
+  "title": "Multiple Myeloma Public Translation And Contribution Guide v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "public translation",
+    "contribution guide",
+    "glossary index",
+    "expert review",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Multiple Myeloma ORP Frontier Roadmap v0",
+      "url": "./frontier-roadmap-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Disease Program README",
+      "url": "./README.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Public Inventory v0",
+      "url": "./public-inventory-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Multiple Myeloma Open Research Map v0.1",
+      "url": "./open-research-map-v0-1.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "../../CONTRIBUTING.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Source Extraction issue template",
+      "url": "../../.github/ISSUE_TEMPLATE/source-extraction-task.yml",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Evidence Gap issue template",
+      "url": "../../.github/ISSUE_TEMPLATE/evidence-gap-task.yml",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Review issue template",
+      "url": "../../.github/ISSUE_TEMPLATE/expert-review-task.yml",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Validation Issue Index v0",
+      "url": "./reviews/expert-validation-issue-index-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Expert Response Validation Ledger v0",
+      "url": "./reviews/expert-response-validation-ledger-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "MRD And Relapse Measurement Glossary v0",
+      "url": "./measurements/mrd-and-relapse-measurement-glossary-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Publication-Gate Checklist v0",
+      "url": "./publication-gate-checklist-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-16"
+    }
+  ],
+  "limitations": [
+    "Research-use-only navigation and contribution guide.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not screening, monitoring, safety-management, or personal-risk guidance.",
+    "Does not complete expert review or clinical review.",
+    "Does not authorize public case processing, public case upload, public review-packet assembly, patient matching, trial matching, option ranking, recommendation behavior, generated claims, or publication workflow.",
+    "Does not claim that multiple myeloma has been cured or that any vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-public-translation-contribution-guide-v0.md"
+}

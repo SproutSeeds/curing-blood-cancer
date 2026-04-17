@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "orp_frontier_state",
+  "active_version": "v2",
+  "active_milestone": "case-to-cure-adaptive-master-plan-v0",
+  "active_phase": "case-to-cure-public-scope-human-gate-blocker-v0",
+  "band": "exact",
+  "next_action": "No autonomous public-safe case-to-cure backlog item remains after the master completion audit. Await human selection of a new named public-safe phase or clearance of expert-review-needed, private-lab-needed, clinical-team-needed, legal-needed, regulatory-needed, publication-gate-needed, or human-review-needed gates.",
+  "blocked_by": [
+    "expert-review-needed",
+    "private-lab-needed",
+    "clinical-team-needed",
+    "legal-needed",
+    "regulatory-needed",
+    "publication-gate-needed",
+    "human-review-needed"
+  ]
+}

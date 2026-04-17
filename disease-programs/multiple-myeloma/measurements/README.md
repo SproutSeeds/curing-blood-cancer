@@ -8,6 +8,8 @@ the multiple myeloma disease program.
 ## Current Artifacts
 
 - [MRD and Relapse Measurement Glossary v0](mrd-and-relapse-measurement-glossary-v0.md)
+- [MRD Endpoint Language Guardrail Addendum v0](mrd-endpoint-language-guardrail-addendum-v0.md)
+- [Measurement Normalization Contract v0](measurement-normalization-contract-v0.md)
 - [BCMA Measurement Context Audit v0](bcma-measurement-context-audit-v0.md)
 
 ## Boundary

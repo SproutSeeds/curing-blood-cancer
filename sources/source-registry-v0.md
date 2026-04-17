@@ -1,7 +1,7 @@
 # Source Registry v0
 
 - registry id: `source-registry-v0`
-- date: `2026-04-14`
+- date: `2026-04-16`
 - scope: public source anchors for Curing Blood Cancer artifacts
 - status: initial registry
 
@@ -22,13 +22,16 @@ as a claim by itself.
 | `trial-search` | Useful for finding or filtering trial records. |
 | `literature-search` | Useful for locating publications, not for replacing study appraisal. |
 | `mechanism-map` | Useful for organizing biological resistance, relapse, or response mechanisms. |
+| `context-modifier` | Useful for source-defined disease-state, organ, frailty, functional, or host-context fields without patient-specific decision logic. |
 | `regulatory-status` | Useful for checking drug or product approval status. |
+| `regulatory-context` | Useful for public regulatory endpoint, guidance, and review-context language without implying product status or clinical use. |
 | `statistics` | Useful for incidence, mortality, survival, or registry-level population context. |
 | `data-reuse` | Useful for public or redistributable data workflows. |
 | `measurement-standard` | Useful for response, MRD, assay, and endpoint definitions. |
 | `target-reference` | Useful for gene, protein, antigen, or target identifier normalization. |
 | `nomenclature` | Useful for stable symbols, names, and cross-references. |
 | `therapy-reference` | Useful for drug, agent, class, and synonym normalization. |
+| `precursor-risk-context` | Useful for source-defined precursor-state and cohort-level risk-model context without personal risk calculation. |
 | `trial-registry-aggregate` | Useful for cross-registry trial discovery. |
 | `labeling` | Useful for public product-label review. |
 | `dataset-discovery` | Useful for locating public datasets before appraisal. |
@@ -39,7 +42,7 @@ as a claim by itself.
 | Source ID | Owner | Source Type | Blood-Cancer Scope | Claim Uses | Claim Limits |
 | --- | --- | --- | --- | --- | --- |
 | `acs_blood_cancer_overview` | American Cancer Society | public overview | leukemia, lymphoma, myeloma | `overview` | Not a treatment guideline, trial registry, or primary evidence source. |
-| `nci_pdq_myeloma_hp` | National Cancer Institute | health-professional PDQ summary | plasma-cell neoplasms, multiple myeloma | `clinical-summary` | Not a formal guideline or patient-specific recommendation. |
+| `nci_pdq_myeloma_hp` | National Cancer Institute | health-professional PDQ summary | plasma-cell neoplasms, multiple myeloma, MGUS, smoldering multiple myeloma | `clinical-summary`, `precursor-risk-context`, `context-modifier` | Not a formal guideline, screening recommendation, personal risk calculator, prognosis tool, or patient-specific recommendation. |
 | `nci_pdq_aml_hp` | National Cancer Institute | health-professional PDQ summary | adult acute myeloid leukemia | `clinical-summary` | Not a formal guideline or patient-specific recommendation. |
 | `nci_pdq_all_hp` | National Cancer Institute | health-professional PDQ summary | adult acute lymphoblastic leukemia | `clinical-summary` | Not a formal guideline or patient-specific recommendation. |
 | `nci_pdq_cll_hp` | National Cancer Institute | health-professional PDQ summary | chronic lymphocytic leukemia | `clinical-summary` | Not a formal guideline or patient-specific recommendation. |
@@ -60,10 +63,15 @@ as a claim by itself.
 | `ema_medicines` | European Medicines Agency | medicines regulatory information | centrally authorised or EMA-evaluated medicines | `regulatory-status`, `therapy-reference` | EMA pages may not include nationally authorised medicines or complete treatment options and are not patient-specific guidance. |
 | `ncbi_geo` | National Center for Biotechnology Information | functional genomics data repository | public functional genomics datasets, including blood-cancer studies when deposited | `dataset-discovery`, `data-reuse`, `literature-search` | Submitted datasets vary in consent, reuse terms, metadata completeness, and study quality; dataset presence does not establish clinical truth. |
 | `nci_gdc_data_portal` | National Cancer Institute Genomic Data Commons | cancer genomics data portal and API | NCI cancer genomics programs and harmonized datasets | `dataset-discovery`, `genomics-data`, `data-reuse` | Some data require controlled access; cohort inclusion and harmonization do not establish patient-specific interpretation or clinical actionability. |
+| `dana_farber_car_t_update_2025` | Dana-Farber Cancer Institute | physician clinical resource update | multiple myeloma, CAR T-cell therapy, immune effector therapy | `overview`, `clinical-summary` | Institutional update; use for public research context only, not product status verification, referral advice, eligibility, availability, or treatment sequencing. |
 | `pubmed_kumar_2016_imwg_mrd_response_criteria` | PubMed-indexed literature | consensus statement | multiple myeloma, response criteria, minimal residual disease | `literature-search`, `measurement-standard` | Consensus criteria; use for public measurement definitions, not patient-specific interpretation. |
 | `pubmed_munshi_2017_mrd_survival_meta_analysis` | PubMed-indexed literature | meta-analysis | multiple myeloma, minimal residual disease, survival outcomes | `literature-search`, `measurement-standard` | Outcome association does not provide patient-specific prognosis or prove a treatment strategy. |
 | `pubmed_soh_2022_mrd_flow_harmonization` | PubMed-indexed literature | research article | multiple myeloma, measurable residual disease, flow cytometry | `literature-search`, `measurement-standard`, `data-reuse` | Flow-cytometry harmonization source; does not replace local laboratory validation or clinical interpretation. |
-| `pubmed_tedder_bhutani_2025_bcma_resistance` | PubMed-indexed literature | review article | multiple myeloma, BCMA-targeted CAR T-cell therapy, BCMA-targeted bispecific antibodies | `literature-search`, `mechanism-map` | Review article; use for mechanism framing, not patient-specific treatment selection. |
+| `fda_mrd_cr_endpoint_guidance_2026` | U.S. Food and Drug Administration | draft guidance | multiple myeloma, minimal residual disease, complete response, accelerated approval endpoints | `measurement-standard`, `regulatory-context` | Draft, nonbinding regulatory context; not for implementation and not a patient-specific interpretation, product approval, availability, eligibility, treatment-selection, or trial-advice source. |
+| `pubmed_kyle_2010_mgus_smm_imwg` | PubMed-indexed literature | consensus perspective | multiple myeloma, MGUS, smoldering multiple myeloma, precursor states | `literature-search`, `precursor-risk-context` | Consensus perspective for source extraction; not a personal risk calculator, monitoring instruction, screening recommendation, or treatment recommendation. |
+| `pubmed_mateos_2020_smm_risk_model` | Blood Cancer Journal / IMWG | open-access research article | smoldering multiple myeloma, risk stratification, precursor states | `literature-search`, `precursor-risk-context` | Cohort-level risk-model context; does not determine individual prognosis, screening, monitoring, treatment fit, or trial eligibility. |
+| `pubmed_palumbo_2015_imwg_frailty` | PubMed-indexed literature | IMWG report | multiple myeloma, frailty, geriatric assessment, host context | `literature-search`, `context-modifier` | Frailty and geriatric-assessment context for source extraction; not a prognosis tool, treatment-fit tool, transplant-fit tool, monitoring instruction, or patient-specific assessment. |
+| `pubmed_tedder_bhutani_2025_bcma_resistance` | PubMed-indexed literature | review article | multiple myeloma, BCMA-targeted CAR T-cell therapy, BCMA-targeted bispecific antibodies | `literature-search`, `mechanism-map`, `context-modifier` | Review article; use for mechanism and context-field framing, not patient-specific treatment selection. |
 | `pubmed_ledergor_2024_cd4_car_t_exhaustion` | PubMed-indexed literature | research article | multiple myeloma, BCMA-targeted CAR T-cell therapy, T-cell exhaustion | `literature-search`, `mechanism-map` | Study context and cohort details require paper-level appraisal before strong claims. |
 | `pubmed_antigen_escape_bcma_directed_2024` | PubMed-indexed literature | research article | multiple myeloma, BCMA-directed therapy, antigen escape | `literature-search`, `mechanism-map` | Mechanism observations should not be generalized beyond the studied context without review. |
 | `pubmed_yue_2025_bcma_resistance` | PubMed-indexed literature | review article | multiple myeloma, BCMA-targeted immunotherapy, resistance mechanisms | `literature-search`, `mechanism-map` | Review article; mechanism categories require source-specific extraction before quantitative use. |
@@ -71,6 +79,7 @@ as a claim by itself.
 | `pubmed_plasma_cell_identity_escape_2025` | PubMed-indexed literature | preprint record | multiple myeloma, anti-BCMA T-cell redirecting therapy, plasma-cell identity escape | `literature-search`, `mechanism-map` | Preprint; not peer reviewed at access date. Mechanism findings require source-specific appraisal and should not be treated as clinical guidance. |
 | `pubmed` | U.S. National Library of Medicine | literature index | all blood-cancer subtypes | `literature-search` | Indexing a paper does not validate study quality or clinical actionability. |
 | `fda_drugs_at_fda` | U.S. Food and Drug Administration | regulatory database | approved drugs and therapeutic biologics | `regulatory-status` | Approval status is not patient-specific appropriateness or comparative effectiveness. |
+| `fda_linvoseltamab_accelerated_approval_2025` | U.S. Food and Drug Administration | regulatory notice | multiple myeloma, BCMA, bispecific antibody, accelerated approval | `regulatory-status`, `therapy-reference` | Product-specific regulatory notice; does not establish availability, eligibility, treatment selection, comparative efficacy, sequencing, or patient fit. |
 | `seer_cancer_stat_facts` | National Cancer Institute SEER Program | cancer statistics | selected blood-cancer statistics pages | `statistics` | Population statistics do not predict individual outcome. |
 
 ## URL Registry
@@ -99,9 +108,14 @@ as a claim by itself.
 | `ema_medicines` | https://www.ema.europa.eu/en/medicines | 2026-04-15 |
 | `ncbi_geo` | https://www.ncbi.nlm.nih.gov/geo/info/overview.html | 2026-04-15 |
 | `nci_gdc_data_portal` | https://gdc.cancer.gov/ | 2026-04-15 |
+| `dana_farber_car_t_update_2025` | https://www.dana-farber.org/for-physicians/clinical-resources/hematologic-malignancies/advances-newsletter/2025-issue-20/multiple-myeloma-cart-t-cell-therapy-update | 2026-04-16 |
 | `pubmed_kumar_2016_imwg_mrd_response_criteria` | https://pubmed.ncbi.nlm.nih.gov/27511158/ | 2026-04-14 |
 | `pubmed_munshi_2017_mrd_survival_meta_analysis` | https://pubmed.ncbi.nlm.nih.gov/27632282/ | 2026-04-14 |
 | `pubmed_soh_2022_mrd_flow_harmonization` | https://pubmed.ncbi.nlm.nih.gov/35005838/ | 2026-04-14 |
+| `fda_mrd_cr_endpoint_guidance_2026` | https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated | 2026-04-16 |
+| `pubmed_kyle_2010_mgus_smm_imwg` | https://pubmed.ncbi.nlm.nih.gov/20410922/ | 2026-04-16 |
+| `pubmed_mateos_2020_smm_risk_model` | https://www.nature.com/articles/s41408-020-00366-3 | 2026-04-16 |
+| `pubmed_palumbo_2015_imwg_frailty` | https://pubmed.ncbi.nlm.nih.gov/25628469/ | 2026-04-16 |
 | `pubmed_tedder_bhutani_2025_bcma_resistance` | https://pubmed.ncbi.nlm.nih.gov/40710330/ | 2026-04-14 |
 | `pubmed_ledergor_2024_cd4_car_t_exhaustion` | https://pubmed.ncbi.nlm.nih.gov/38574299/ | 2026-04-14 |
 | `pubmed_antigen_escape_bcma_directed_2024` | https://pubmed.ncbi.nlm.nih.gov/38728378/ | 2026-04-14 |
@@ -110,6 +124,7 @@ as a claim by itself.
 | `pubmed_plasma_cell_identity_escape_2025` | https://pubmed.ncbi.nlm.nih.gov/41415462/ | 2026-04-14 |
 | `pubmed` | https://pubmed.ncbi.nlm.nih.gov/ | 2026-04-11 |
 | `fda_drugs_at_fda` | https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database | 2026-04-11 |
+| `fda_linvoseltamab_accelerated_approval_2025` | https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-linvoseltamab-gcpt-relapsed-or-refractory-multiple-myeloma | 2026-04-16 |
 | `seer_cancer_stat_facts` | https://seer.cancer.gov/statfacts/ | 2026-04-11 |
 
 ## Initial Use Policy

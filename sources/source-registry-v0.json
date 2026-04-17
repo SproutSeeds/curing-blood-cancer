@@ -1,6 +1,6 @@
 {
   "registry_id": "source-registry-v0",
-  "date": "2026-04-14",
+  "date": "2026-04-16",
   "scope": "public source anchors for Curing Blood Cancer artifacts",
   "records": [
     {
@@ -19,9 +19,9 @@
       "source_type": "health-professional PDQ summary",
       "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
       "accessed": "2026-04-11",
-      "blood_cancer_scope": ["plasma-cell neoplasms", "multiple myeloma"],
-      "claim_uses": ["clinical-summary"],
-      "claim_limits": ["Not a formal guideline or patient-specific recommendation."]
+      "blood_cancer_scope": ["plasma-cell neoplasms", "multiple myeloma", "MGUS", "smoldering multiple myeloma"],
+      "claim_uses": ["clinical-summary", "precursor-risk-context", "context-modifier"],
+      "claim_limits": ["Not a formal guideline, screening recommendation, personal risk calculator, prognosis tool, or patient-specific recommendation."]
     },
     {
       "source_id": "nci_pdq_aml_hp",
@@ -224,6 +224,16 @@
       "claim_limits": ["Some data require controlled access; cohort inclusion and harmonization do not establish patient-specific interpretation or clinical actionability."]
     },
     {
+      "source_id": "dana_farber_car_t_update_2025",
+      "owner": "Dana-Farber Cancer Institute",
+      "source_type": "physician clinical resource update",
+      "url": "https://www.dana-farber.org/for-physicians/clinical-resources/hematologic-malignancies/advances-newsletter/2025-issue-20/multiple-myeloma-cart-t-cell-therapy-update",
+      "accessed": "2026-04-16",
+      "blood_cancer_scope": ["multiple myeloma", "CAR T-cell therapy", "immune effector therapy"],
+      "claim_uses": ["overview", "clinical-summary"],
+      "claim_limits": ["Institutional update; use for public research context only, not product status verification, referral advice, eligibility, availability, or treatment sequencing."]
+    },
+    {
       "source_id": "pubmed_kumar_2016_imwg_mrd_response_criteria",
       "owner": "PubMed-indexed literature",
       "source_type": "consensus statement",
@@ -254,14 +264,54 @@
       "claim_limits": ["Flow-cytometry harmonization source; does not replace local laboratory validation or clinical interpretation."]
     },
     {
+      "source_id": "fda_mrd_cr_endpoint_guidance_2026",
+      "owner": "U.S. Food and Drug Administration",
+      "source_type": "draft guidance",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated",
+      "accessed": "2026-04-16",
+      "blood_cancer_scope": ["multiple myeloma", "minimal residual disease", "complete response", "accelerated approval endpoints"],
+      "claim_uses": ["measurement-standard", "regulatory-context"],
+      "claim_limits": ["Draft, nonbinding regulatory context; not for implementation and not a patient-specific interpretation, product approval, availability, eligibility, treatment-selection, or trial-advice source."]
+    },
+    {
+      "source_id": "pubmed_kyle_2010_mgus_smm_imwg",
+      "owner": "PubMed-indexed literature",
+      "source_type": "consensus perspective",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20410922/",
+      "accessed": "2026-04-16",
+      "blood_cancer_scope": ["multiple myeloma", "MGUS", "smoldering multiple myeloma", "precursor states"],
+      "claim_uses": ["literature-search", "precursor-risk-context"],
+      "claim_limits": ["Consensus perspective for source extraction; not a personal risk calculator, monitoring instruction, screening recommendation, or treatment recommendation."]
+    },
+    {
+      "source_id": "pubmed_mateos_2020_smm_risk_model",
+      "owner": "Blood Cancer Journal / IMWG",
+      "source_type": "open-access research article",
+      "url": "https://www.nature.com/articles/s41408-020-00366-3",
+      "accessed": "2026-04-16",
+      "blood_cancer_scope": ["smoldering multiple myeloma", "risk stratification", "precursor states"],
+      "claim_uses": ["literature-search", "precursor-risk-context"],
+      "claim_limits": ["Cohort-level risk-model context; does not determine individual prognosis, screening, monitoring, treatment fit, or trial eligibility."]
+    },
+    {
+      "source_id": "pubmed_palumbo_2015_imwg_frailty",
+      "owner": "PubMed-indexed literature",
+      "source_type": "IMWG report",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25628469/",
+      "accessed": "2026-04-16",
+      "blood_cancer_scope": ["multiple myeloma", "frailty", "geriatric assessment", "host context"],
+      "claim_uses": ["literature-search", "context-modifier"],
+      "claim_limits": ["Frailty and geriatric-assessment context for source extraction; not a prognosis tool, treatment-fit tool, transplant-fit tool, monitoring instruction, or patient-specific assessment."]
+    },
+    {
       "source_id": "pubmed_tedder_bhutani_2025_bcma_resistance",
       "owner": "PubMed-indexed literature",
       "source_type": "review article",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40710330/",
       "accessed": "2026-04-14",
       "blood_cancer_scope": ["multiple myeloma", "BCMA-targeted CAR T-cell therapy", "BCMA-targeted bispecific antibodies"],
-      "claim_uses": ["literature-search", "mechanism-map"],
-      "claim_limits": ["Review article; use for mechanism framing, not patient-specific treatment selection."]
+      "claim_uses": ["literature-search", "mechanism-map", "context-modifier"],
+      "claim_limits": ["Review article; use for mechanism and context-field framing, not patient-specific treatment selection."]
     },
     {
       "source_id": "pubmed_ledergor_2024_cd4_car_t_exhaustion",
@@ -332,6 +382,16 @@
       "blood_cancer_scope": ["approved drugs and therapeutic biologics"],
       "claim_uses": ["regulatory-status"],
       "claim_limits": ["Approval status is not patient-specific appropriateness or comparative effectiveness."]
+    },
+    {
+      "source_id": "fda_linvoseltamab_accelerated_approval_2025",
+      "owner": "U.S. Food and Drug Administration",
+      "source_type": "regulatory notice",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-linvoseltamab-gcpt-relapsed-or-refractory-multiple-myeloma",
+      "accessed": "2026-04-16",
+      "blood_cancer_scope": ["multiple myeloma", "BCMA", "bispecific antibody", "accelerated approval"],
+      "claim_uses": ["regulatory-status", "therapy-reference"],
+      "claim_limits": ["Product-specific regulatory notice; does not establish availability, eligibility, treatment selection, comparative efficacy, sequencing, or patient fit."]
     },
     {
       "source_id": "seer_cancer_stat_facts",
