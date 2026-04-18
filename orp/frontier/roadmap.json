@@ -8,7 +8,7 @@
   "active_milestone": "case-to-cure-adaptive-master-plan-v0",
   "active_milestone_label": "Case-To-Cure Adaptive Master Plan v0",
   "band": "exact",
-  "next_action": "Run static-synthetic-caregiver-intake-frontend-smoke-test-v0: document public-safety smoke checks for the static frontend, including no submit path, no storage, no uploads, no backend calls, responsive layout, refusal copy, and no-advice boundaries.",
+  "next_action": "Build myeloma-state-object-schema-v0: define a synthetic-only model-facing myeloma state object schema from the machine representation stack, preserving source context, missingness, uncertainty, review status, and no patient-specific predictions or advice.",
   "phases": [
     {
       "id": "case-to-cure-loop-governor-v0",
@@ -270,8 +270,8 @@
     {
       "id": "public-caregiver-intake-frontend-v0",
       "label": "Public Caregiver Intake Frontend v0",
-      "status": "active",
-      "goal": "Maintain the public-facing, static, synthetic-only caregiver intake frontend prototype and verify it stays non-collecting, non-advisory, and public-safe.",
+      "status": "complete",
+      "goal": "Created and smoke-tested the public-facing, static, synthetic-only caregiver intake frontend prototype for multiple myeloma case organization without collecting real patient data or providing medical advice.",
       "depends_on": [
         "case-to-cure-master-completion-audit-v0"
       ],
@@ -284,13 +284,41 @@
       "success_criteria": [
         "A static frontend artifact exists and can be opened or served locally without sending data anywhere.",
         "The frontend uses synthetic fixture data only and visibly warns against entering real patient information.",
-        "The public repo navigation points to the prototype and validation passes."
+        "The public repo navigation points to the prototype and validation passes.",
+        "A smoke-test report records no-submit, no-storage, no-upload, no external image dependency, responsive layout, and no-advice checks before any future frontend iteration."
       ],
       "plans": [
-        "Start with the smallest useful static prototype target and documentation; avoid real intake plumbing until private-lab, consent, security, legal, and clinical gates are cleared."
+        "Completed as Static Synthetic Caregiver Intake Frontend v0 and Static Synthetic Caregiver Intake Frontend Smoke Test v0.",
+        "Next active public-safe phase is myeloma-machine-representation-implementation-v0."
+      ],
+      "compute_hooks": []
+    },
+    {
+      "id": "myeloma-machine-representation-implementation-v0",
+      "label": "Myeloma Machine Representation Implementation v0",
+      "status": "active",
+      "goal": "Turn the myeloma machine representation architecture into synthetic-only, public-safe schema and fixture artifacts without model weights, real case data, patient-specific predictions, treatment advice, trial advice, or option ranking.",
+      "depends_on": [
+        "myeloma-machine-representation-stack-v0",
+        "static-synthetic-caregiver-intake-frontend-smoke-test-v0"
+      ],
+      "requirements": [
+        "Use the machine representation stack, case-feature normalization, measurement normalization, therapy exposure timeline, molecular/immune context, evidence retrieval, and public safety governance as boundaries.",
+        "Define source context, tumor genomic events, transcriptome state, marrow ecosystem state, clinical context, treatment timeline, measurement timeline, missingness, uncertainty, and review status.",
+        "Use synthetic examples only; do not use real case data, identifiers, raw records, uploads, exact person-linked dates, private notes, or free-text case details.",
+        "Do not produce model weights, predictions, prognosis, treatment advice, trial advice, monitoring guidance, urgency guidance, matching, ranking, or patient-specific outputs."
+      ],
+      "success_criteria": [
+        "A public myeloma-state-object-schema-v0 artifact exists with metadata and navigation links.",
+        "The schema preserves explicit unknown/not-tested/not-collected states and never infers absence from missing modalities.",
+        "The artifact is tied to machine representation, case-feature, measurement, therapy exposure, molecular/immune, evidence retrieval, and public safety boundaries.",
+        "Validation passes and ORP synthesizes the next public-safe implementation atom."
+      ],
+      "plans": [
+        "Start with a Markdown schema contract before executable validation; add JSON schema or synthetic fixtures only after the field families and no-advice boundaries are reviewed."
       ],
       "compute_hooks": []
     }
   ],
-  "active_phase": "public-caregiver-intake-frontend-v0"
+  "active_phase": "myeloma-machine-representation-implementation-v0"
 }

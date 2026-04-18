@@ -205,6 +205,11 @@
       "label": "Static Synthetic Caregiver Intake Frontend v0",
       "url": "case-intake/static-synthetic-caregiver-intake-frontend-v0.html",
       "accessed": "2026-04-17"
+    },
+    {
+      "label": "Static Synthetic Caregiver Intake Frontend Smoke Test v0",
+      "url": "case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md",
+      "accessed": "2026-04-18"
     }
   ],
   "limitations": [

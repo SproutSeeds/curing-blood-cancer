@@ -16,6 +16,7 @@ needed before a private, consented, access-controlled intake system exists.
 - [Private Intake Schema Contract v0](private-intake-schema-contract-v0.md)
 - [Static Synthetic Caregiver Prototype Plan v0](static-synthetic-caregiver-prototype-plan-v0.md)
 - [Static Synthetic Caregiver Intake Frontend v0](static-synthetic-caregiver-intake-frontend-v0.html)
+- [Static Synthetic Caregiver Intake Frontend Smoke Test v0](static-synthetic-caregiver-intake-frontend-smoke-test-v0.md)
 - [Caregiver Intake Public Projection Validator v0](caregiver-intake-public-projection-validator-v0.md)
 - [Consent Privacy Security Retention Gate v0](consent-privacy-security-retention-gate-v0.md)
 - [Case Intake Frontier Completion Audit Handoff v0](case-intake-frontier-completion-audit-handoff-v0.md)

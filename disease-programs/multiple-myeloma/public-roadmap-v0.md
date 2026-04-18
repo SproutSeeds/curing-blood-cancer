@@ -202,6 +202,7 @@ Case-specific plumbing:
 - [Case-To-Cure Pipeline Blueprint v0](case-to-cure-pipeline-blueprint-v0.md)
 - [Case-To-Cure Stage Validator And Owner Map v0](case-to-cure-stage-validator-map-v0.md)
 - [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
+- [Static Synthetic Caregiver Intake Frontend Smoke Test v0](case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md)
 - [Multiple Myeloma Synthetic Case-To-Cure Pipeline v0](../../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md)
 - [End-To-End Synthetic Case Dry Run v0](end-to-end-synthetic-case-dry-run-v0.md)
 
@@ -416,10 +417,15 @@ lab repo.
    it records the adaptive public-safe scope as complete and blocks the next
    state on expert, private-lab, clinical, legal, regulatory, publication, or
    human-review gates unless a human selects a new named public-safe phase.
-   A human-selected public frontend phase is now active; the first artifact is
+   A human-selected public frontend phase produced the first artifact,
    [Static Synthetic Caregiver Intake Frontend v0](case-intake/static-synthetic-caregiver-intake-frontend-v0.html),
    a no-build synthetic-only prototype with no submit path, upload path,
    backend, storage, advice, matching, ranking, or patient-specific output.
+   The smoke-test artifact is
+   [Static Synthetic Caregiver Intake Frontend Smoke Test v0](case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md);
+   it documents no-submit, no-storage, no-upload, no-backend, no external image
+   dependency, responsive layout, refusal-copy, emergency-boundary,
+   clinician-review, and no-advice checks.
 9. The expert validation loop now preserves issue IDs, artifact IDs, source
    IDs, review lenses, outreach-map role labels, response-ledger disposition
    states, allowed dispositions, uncertainty, blocked uses, and next public

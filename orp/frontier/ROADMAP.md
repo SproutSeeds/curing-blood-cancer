@@ -3,7 +3,7 @@
 - active_version: `v2`
 - active_milestone: `case-to-cure-adaptive-master-plan-v0`
 - band: `exact`
-- next_action: `Run static-synthetic-caregiver-intake-frontend-smoke-test-v0: document public-safety smoke checks for the static frontend, including no submit path, no storage, no uploads, no backend calls, responsive layout, refusal copy, and no-advice boundaries.`
+- next_action: `Build myeloma-state-object-schema-v0: define a synthetic-only model-facing myeloma state object schema from the machine representation stack, preserving source context, missingness, uncertainty, review status, and no patient-specific predictions or advice.`
 
 ## Phases
 
@@ -25,4 +25,5 @@
 - [x] **Phase end-to-end-synthetic-case-dry-run-v0: End-To-End Synthetic Case Dry Run v0** - Dry-run the complete case-to-cure path with synthetic-only artifacts from caregiver intake through publication gate.
 - [x] **Phase case-to-cure-master-completion-audit-v0: Case-To-Cure Master Completion Audit v0** - Audit whether the adaptive master plan is complete, safely blocked, or ready for a new named phase.
 - [ ] **Phase case-to-cure-public-scope-human-gate-blocker-v0: Case-To-Cure Public-Scope Human Gate Blocker v0** - Block further autonomous case-to-cure work until a human selects a new named public-safe phase or clears a named gate.
-- [ ] **Phase public-caregiver-intake-frontend-v0: Public Caregiver Intake Frontend v0** - Maintain the public-facing, static, synthetic-only caregiver intake frontend prototype and verify it stays non-collecting, non-advisory, and public-safe.
+- [x] **Phase public-caregiver-intake-frontend-v0: Public Caregiver Intake Frontend v0** - Created and smoke-tested the public-facing, static, synthetic-only caregiver intake frontend prototype for multiple myeloma case organization without collecting real patient data or providing medical advice.
+- [ ] **Phase myeloma-machine-representation-implementation-v0: Myeloma Machine Representation Implementation v0** - Turn the myeloma machine representation architecture into synthetic-only, public-safe schema and fixture artifacts without model weights, real case data, patient-specific predictions, treatment advice, trial advice, or option ranking.

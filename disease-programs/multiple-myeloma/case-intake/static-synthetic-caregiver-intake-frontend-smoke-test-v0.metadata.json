@@ -1,0 +1,106 @@
+{
+  "artifact_id": "multiple-myeloma-static-synthetic-caregiver-intake-frontend-smoke-test-v0",
+  "title": "Static Synthetic Caregiver Intake Frontend Smoke Test v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "caregiver intake",
+    "static frontend prototype",
+    "smoke test",
+    "synthetic fixture",
+    "public safety",
+    "private-lab handoff"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Static Synthetic Caregiver Intake Frontend v0",
+      "url": "static-synthetic-caregiver-intake-frontend-v0.html",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Static Synthetic Caregiver Intake Frontend v0 metadata",
+      "url": "static-synthetic-caregiver-intake-frontend-v0.metadata.json",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Caregiver Case Intake Product Spec v0",
+      "url": "caregiver-case-intake-product-spec-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Checklist v0",
+      "url": "caregiver-intake-public-projection-checklist-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Caregiver Intake Public Projection Validator v0",
+      "url": "caregiver-intake-public-projection-validator-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Consent Privacy Security Retention Gate v0",
+      "url": "consent-privacy-security-retention-gate-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Multiple Myeloma Synthetic Caregiver Intake v0",
+      "url": "../../../examples/multiple-myeloma-synthetic-caregiver-intake-v0.json",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Private-To-Public Workflow",
+      "url": "../../../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Myeloma Machine Representation Stack v0",
+      "url": "../machine-representation-stack-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../../../orp/frontier/additional-items.json",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Medical Care.jpg Wikimedia Commons page",
+      "url": "https://commons.wikimedia.org/wiki/File:Medical_Care.jpg",
+      "accessed": "2026-04-18"
+    }
+  ],
+  "limitations": [
+    "Research-use-only smoke-test report.",
+    "Static frontend smoke check only.",
+    "Synthetic fixture content only.",
+    "Not a full security audit.",
+    "Not accessibility certification.",
+    "Not clinical review.",
+    "Not legal review.",
+    "Not privacy review.",
+    "Not regulatory review.",
+    "Not publication approval.",
+    "Not a live intake form.",
+    "Not a backend or database approval.",
+    "Not a private-lab handoff approval.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Does not collect, store, submit, upload, transmit, process, summarize, de-identify, or publish real case data, patient-identifying data, raw records, portal exports, report text, images, notes, exact dates tied to a person, contact details, private paths, private prompts, private case IDs, or re-identification keys.",
+    "Does not authorize patient matching, trial matching, target actionability, source ranking, evidence ranking, target ranking, mechanism ranking, product ranking, therapy ranking, trial ranking, option ranking, recommendations, sequencing, comparison, prioritization, publication, release, or clinical decisions.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-static-synthetic-caregiver-intake-frontend-smoke-test-v0.md"
+}

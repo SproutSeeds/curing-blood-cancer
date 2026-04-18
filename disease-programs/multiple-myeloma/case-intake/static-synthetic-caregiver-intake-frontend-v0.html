@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src https://upload.wikimedia.org data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'"
+      content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'"
     >
+    <link rel="icon" href="data:,">
     <title>Static Synthetic Caregiver Intake Frontend v0</title>
     <style>
       :root {
@@ -401,7 +402,7 @@
           <article class="section-panel">
             <img
               class="section-image"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Medical_Care.jpg/640px-Medical_Care.jpg"
+              src="assets/medical-care-commons.jpg"
               alt="A stethoscope on a notebook, used here as generic record-organization imagery."
             >
             <div class="section-body">
@@ -466,7 +467,7 @@
         <section class="info-panel" aria-label="Prototype sources and next action">
           <h3>Research-use-only boundary</h3>
           <p>This frontend is a public shape prototype. It uses the synthetic caregiver fixture, private intake schema contract, projection checklist, consent/privacy/security gate, public safety governance, and private-to-public workflow as boundaries.</p>
-          <p>Next safe work: run a public safety smoke test for no-submit behavior, no storage, no uploads, mobile layout, and refusal copy.</p>
+          <p>Public safety smoke test documented: no submit path, no storage, no upload control, no backend call, responsive layout, disabled handoff controls, and no-advice copy.</p>
         </section>
       </main>
     </div>
