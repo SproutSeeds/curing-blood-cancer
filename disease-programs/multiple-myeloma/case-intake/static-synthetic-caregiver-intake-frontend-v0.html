@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src https://upload.wikimedia.org data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'"
+    >
+    <title>Static Synthetic Caregiver Intake Frontend v0</title>
+    <style>
+      :root {
+        --ink: #172423;
+        --muted: #536563;
+        --paper: #fbfdfb;
+        --surface: #eef5f0;
+        --line: #c8d8d2;
+        --accent: #146c5c;
+        --accent-strong: #0e4d42;
+        --warn: #b63232;
+        --focus: #e5bf28;
+        --soft: #e8f2f1;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.45;
+        letter-spacing: 0;
+      }
+
+      button,
+      input {
+        font: inherit;
+        letter-spacing: 0;
+      }
+
+      button {
+        border-radius: 8px;
+      }
+
+      .app-shell {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+        background: var(--paper);
+      }
+
+      .sidebar {
+        background: var(--surface);
+        border-right: 1px solid var(--line);
+        padding: 24px;
+        display: grid;
+        align-content: start;
+        gap: 18px;
+      }
+
+      .brand {
+        display: grid;
+        gap: 8px;
+      }
+
+      .brand p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        overflow-wrap: anywhere;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.05;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1.12;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .steward {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--accent-strong);
+      }
+
+      .boundary {
+        display: grid;
+        gap: 10px;
+        border: 1px solid #e1a5a5;
+        background: #fff7f7;
+        padding: 14px;
+        border-radius: 8px;
+      }
+
+      .boundary strong {
+        color: var(--warn);
+      }
+
+      .nav-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .step-button {
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid var(--line);
+        background: var(--white);
+        color: var(--ink);
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        align-items: center;
+        text-align: left;
+        padding: 8px 10px;
+        cursor: pointer;
+      }
+
+      .step-button[aria-current="step"] {
+        border-color: var(--accent);
+        box-shadow: inset 4px 0 0 var(--accent);
+      }
+
+      .step-index {
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        background: var(--soft);
+        color: var(--accent-strong);
+        font-weight: 800;
+      }
+
+      .main {
+        display: grid;
+        align-content: start;
+        gap: 22px;
+        padding: 28px;
+      }
+
+      .workbench {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+        gap: 22px;
+        align-items: start;
+      }
+
+      .section-panel,
+      .review-panel,
+      .info-panel {
+        border: 1px solid var(--line);
+        background: var(--white);
+        border-radius: 8px;
+      }
+
+      .section-panel {
+        display: grid;
+      }
+
+      .section-image {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+        border-bottom: 1px solid var(--line);
+        display: block;
+        background: var(--soft);
+      }
+
+      .section-body {
+        display: grid;
+        gap: 18px;
+        padding: 22px;
+      }
+
+      .copy-stack {
+        display: grid;
+        gap: 10px;
+      }
+
+      .section-id {
+        color: var(--accent-strong);
+        font-weight: 800;
+        font-size: 14px;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .choice-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .choice-button {
+        min-height: 56px;
+        border: 1px solid var(--line);
+        background: var(--white);
+        color: var(--ink);
+        padding: 10px 12px;
+        text-align: left;
+        cursor: pointer;
+      }
+
+      .choice-button[data-selected="true"] {
+        border-color: var(--accent);
+        background: var(--soft);
+        box-shadow: inset 0 -4px 0 var(--accent);
+      }
+
+      .blocked-list,
+      .facts-list,
+      .review-list {
+        display: grid;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .blocked-list li,
+      .facts-list li,
+      .review-list li {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 12px;
+        background: var(--paper);
+      }
+
+      .blocked-list li {
+        border-color: #e4b5b5;
+        background: #fff8f8;
+      }
+
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .primary,
+      .secondary,
+      .disabled-action {
+        min-height: 46px;
+        padding: 10px 14px;
+        border: 1px solid transparent;
+      }
+
+      .primary {
+        background: var(--accent);
+        color: var(--white);
+        cursor: pointer;
+      }
+
+      .secondary {
+        background: var(--white);
+        border-color: var(--line);
+        color: var(--ink);
+        cursor: pointer;
+      }
+
+      .disabled-action {
+        background: #dce4e1;
+        color: #5a6664;
+        cursor: not-allowed;
+      }
+
+      .review-panel,
+      .info-panel {
+        display: grid;
+        gap: 14px;
+        padding: 18px;
+      }
+
+      .status-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .status-tile {
+        min-height: 76px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        background: var(--surface);
+      }
+
+      .status-tile span {
+        display: block;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .status-tile strong {
+        display: block;
+        margin-top: 4px;
+      }
+
+      .footer-note {
+        border-top: 1px solid var(--line);
+        padding: 16px 22px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      a {
+        color: var(--accent-strong);
+      }
+
+      :focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 2px;
+      }
+
+      @media (max-width: 920px) {
+        .app-shell,
+        .workbench {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .nav-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 560px) {
+        .main,
+        .sidebar,
+        .section-body {
+          padding: 16px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+
+        .choice-grid,
+        .status-grid,
+        .nav-list {
+          grid-template-columns: 1fr;
+        }
+
+        .section-image {
+          height: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Synthetic intake sections">
+        <div class="brand">
+          <div class="steward">Stewarded by frg.earth</div>
+          <h1>Caregiver intake prototype</h1>
+          <p>Static, synthetic-only multiple myeloma case organization.</p>
+        </div>
+
+        <div class="boundary" role="note" aria-label="Public safety boundary">
+          <strong>Public demo boundary</strong>
+          <p>Use only the synthetic example. Do not enter names, dates, reports, record text, locations, contact details, or real medical details.</p>
+          <p>This prototype cannot diagnose, recommend treatment, recommend trials, estimate prognosis, monitor symptoms, handle emergencies, rank options, or send anything to a private lab.</p>
+        </div>
+
+        <nav class="nav-list" id="stepNav" aria-label="Synthetic intake step navigation"></nav>
+      </aside>
+
+      <main class="main">
+        <section class="workbench" aria-label="Synthetic caregiver intake workbench">
+          <article class="section-panel">
+            <img
+              class="section-image"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Medical_Care.jpg/640px-Medical_Care.jpg"
+              alt="A stethoscope on a notebook, used here as generic record-organization imagery."
+            >
+            <div class="section-body">
+              <div class="copy-stack">
+                <div class="section-id" id="sectionId"></div>
+                <h2 id="sectionTitle"></h2>
+                <p class="muted" id="sectionIntent"></p>
+              </div>
+
+              <div>
+                <h3>Choose a synthetic state</h3>
+                <div class="choice-grid" id="choiceGrid" aria-label="Synthetic answer states"></div>
+              </div>
+
+              <div>
+                <h3>Visible synthetic values</h3>
+                <ul class="facts-list" id="factsList"></ul>
+              </div>
+
+              <div>
+                <h3>Blocked in this public prototype</h3>
+                <ul class="blocked-list" id="blockedList"></ul>
+              </div>
+
+              <div class="toolbar" aria-label="Section controls">
+                <button class="secondary" id="backButton" type="button">Back</button>
+                <button class="primary" id="nextButton" type="button">Next synthetic section</button>
+                <button class="disabled-action" type="button" disabled aria-disabled="true">Private handoff not live</button>
+              </div>
+            </div>
+            <div class="footer-note">
+              Image: Medical Care.jpg by DarkoStojanovic, CC0 via Wikimedia Commons. This public prototype does not transmit data.
+            </div>
+          </article>
+
+          <aside class="review-panel" aria-label="Synthetic review and safety status">
+            <h3>Review before private handoff</h3>
+            <p class="muted">The public prototype can only show synthetic section states and blocked-use checks.</p>
+            <div class="status-grid">
+              <div class="status-tile">
+                <span>Data mode</span>
+                <strong>Synthetic only</strong>
+              </div>
+              <div class="status-tile">
+                <span>Public export</span>
+                <strong>Blocked</strong>
+              </div>
+              <div class="status-tile">
+                <span>Unknown state</span>
+                <strong>Allowed</strong>
+              </div>
+              <div class="status-tile">
+                <span>Clinical review</span>
+                <strong>Required privately</strong>
+              </div>
+            </div>
+            <ul class="review-list" id="reviewList"></ul>
+            <button class="disabled-action" type="button" disabled aria-disabled="true">Submit disabled in public demo</button>
+          </aside>
+        </section>
+
+        <section class="info-panel" aria-label="Prototype sources and next action">
+          <h3>Research-use-only boundary</h3>
+          <p>This frontend is a public shape prototype. It uses the synthetic caregiver fixture, private intake schema contract, projection checklist, consent/privacy/security gate, public safety governance, and private-to-public workflow as boundaries.</p>
+          <p>Next safe work: run a public safety smoke test for no-submit behavior, no storage, no uploads, mobile layout, and refusal copy.</p>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const sections = [
+        {
+          id: "intake_00_boundary",
+          title: "Before you start",
+          intent: "Start with no-advice, no-emergency, privacy, consent, and clinician-review boundaries.",
+          facts: ["understands_not_medical_advice: true", "understands_no_public_real_data: true", "understands_emergency_boundary: true"],
+          blocked: ["care questions", "urgent symptom handling", "real medical details"]
+        },
+        {
+          id: "intake_01_consent_readiness",
+          title: "Consent and privacy",
+          intent: "Explain that real consent belongs only in a private, governed system.",
+          facts: ["consent_status: pending", "allowed_uses: private-review-draft", "public_export_allowed: false"],
+          blocked: ["signed consent records", "identity", "public export"]
+        },
+        {
+          id: "intake_02_helper_context",
+          title: "Helper context",
+          intent: "Use role category and language category only; names and relationship details stay private.",
+          facts: ["helper_role_category: unknown", "preferred_language_category: unknown", "helper_confidence: not_sure"],
+          blocked: ["helper names", "contact details", "free-text family context"]
+        },
+        {
+          id: "intake_03_diagnosis_context",
+          title: "Diagnosis context",
+          intent: "Ask for source type before label confidence; never diagnose.",
+          facts: ["source_stated_diagnosis: multiple myeloma", "diagnosis_source_type: synthetic-summary", "diagnosis_certainty: source-stated-not-reviewed"],
+          blocked: ["report files", "exact dates", "institution or clinician names"]
+        },
+        {
+          id: "intake_04_disease_state",
+          title: "Where things stand",
+          intent: "Keep disease setting as source-stated or unknown; never determine state.",
+          facts: ["disease_setting: unknown", "caregiver_confidence: not_sure", "needs_clinician_review: true"],
+          blocked: ["relapse interpretation", "refractory interpretation", "prognosis"]
+        },
+        {
+          id: "intake_05_treatment_history",
+          title: "Treatment history",
+          intent: "Use therapy-class buckets only; exact agents and dates remain private.",
+          facts: ["known_prior_therapy_classes: unknown", "sequence_known: false", "exact_agents_private_only: true"],
+          blocked: ["exact agents", "therapy sequencing", "ranking or treatment advice"]
+        },
+        {
+          id: "intake_06_response_mrd_relapse",
+          title: "Response, MRD, and relapse terms",
+          intent: "Preserve source context and never turn response language into a cure flag.",
+          facts: ["mrd_status: unknown", "mrd_method: unknown", "cannot_be_used_as_cure_flag: true"],
+          blocked: ["MRD interpretation", "relapse determination", "cure wording"]
+        },
+        {
+          id: "intake_07_labs_measurements",
+          title: "Labs and measurements",
+          intent: "Show source and unit prompts while keeping exact values private.",
+          facts: ["has_lab_reports: unknown", "units_required_before_private_review: true", "date_precision_public: none"],
+          blocked: ["exact lab values", "trend interpretation", "monitoring guidance"]
+        },
+        {
+          id: "intake_08_context_modifiers",
+          title: "Context that may matter",
+          intent: "Keep optional context labels unknown or source-scoped and non-directive.",
+          facts: ["bone_context: unknown", "renal_context: unknown", "all_context_requires_source_and_review: true"],
+          blocked: ["prognosis", "eligibility", "treatment intensity"]
+        },
+        {
+          id: "intake_09_records_inventory",
+          title: "Records inventory",
+          intent: "Show record-type availability only; no upload widget appears.",
+          facts: ["record_types_available: unknown", "file_upload_allowed_in_public_demo: false", "record_contents_public: false"],
+          blocked: ["PDF uploads", "portal exports", "raw note text"]
+        },
+        {
+          id: "intake_10_questions_goals_constraints",
+          title: "Questions for private review",
+          intent: "Use general question categories only; free text remains private.",
+          facts: ["question_categories: organize-records, understand-what-is-missing", "free_text_private_only: true", "financial_or_travel_constraints_private_only: true"],
+          blocked: ["personal constraints", "desired therapy or trial preferences", "prioritization"]
+        },
+        {
+          id: "intake_11_review_submit",
+          title: "Review before private handoff",
+          intent: "Show private-handoff-only status and keep public submission disabled.",
+          facts: ["ready_for_private_handoff: false", "blocked_reason: synthetic-public-fixture", "public_submission_allowed: false"],
+          blocked: ["public submission", "automatic private routing", "patient-specific output"]
+        }
+      ];
+
+      const choices = ["known", "unknown", "not sure", "not collected"];
+      const state = new Map(sections.map((section) => [section.id, "unknown"]));
+      let currentIndex = 0;
+
+      const stepNav = document.getElementById("stepNav");
+      const sectionId = document.getElementById("sectionId");
+      const sectionTitle = document.getElementById("sectionTitle");
+      const sectionIntent = document.getElementById("sectionIntent");
+      const choiceGrid = document.getElementById("choiceGrid");
+      const factsList = document.getElementById("factsList");
+      const blockedList = document.getElementById("blockedList");
+      const reviewList = document.getElementById("reviewList");
+      const backButton = document.getElementById("backButton");
+      const nextButton = document.getElementById("nextButton");
+
+      function renderNav() {
+        stepNav.innerHTML = "";
+        sections.forEach((section, index) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "step-button";
+          button.setAttribute("aria-current", index === currentIndex ? "step" : "false");
+          button.innerHTML = `<span class="step-index">${index + 1}</span><span>${section.title}</span>`;
+          button.addEventListener("click", () => {
+            currentIndex = index;
+            render();
+          });
+          stepNav.appendChild(button);
+        });
+      }
+
+      function renderList(target, values) {
+        target.innerHTML = "";
+        values.forEach((value) => {
+          const item = document.createElement("li");
+          item.textContent = value;
+          target.appendChild(item);
+        });
+      }
+
+      function renderChoices(section) {
+        choiceGrid.innerHTML = "";
+        choices.forEach((choice) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "choice-button";
+          button.dataset.selected = String(state.get(section.id) === choice);
+          button.textContent = choice;
+          button.addEventListener("click", () => {
+            state.set(section.id, choice);
+            render();
+          });
+          choiceGrid.appendChild(button);
+        });
+      }
+
+      function renderReview() {
+        const values = sections.map((section, index) => `${index + 1}. ${section.title}: ${state.get(section.id)}`);
+        values.push("Projection verdict: synthetic-only-ok");
+        values.push("Public submission: disabled");
+        values.push("Private handoff: not live");
+        renderList(reviewList, values);
+      }
+
+      function render() {
+        const section = sections[currentIndex];
+        sectionId.textContent = section.id;
+        sectionTitle.textContent = section.title;
+        sectionIntent.textContent = section.intent;
+        renderChoices(section);
+        renderList(factsList, section.facts);
+        renderList(blockedList, section.blocked);
+        renderReview();
+        renderNav();
+        backButton.disabled = currentIndex === 0;
+        nextButton.textContent = currentIndex === sections.length - 1 ? "Return to first section" : "Next synthetic section";
+      }
+
+      backButton.addEventListener("click", () => {
+        currentIndex = Math.max(0, currentIndex - 1);
+        render();
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentIndex = currentIndex === sections.length - 1 ? 0 : currentIndex + 1;
+        render();
+      });
+
+      render();
+    </script>
+  </body>
+</html>

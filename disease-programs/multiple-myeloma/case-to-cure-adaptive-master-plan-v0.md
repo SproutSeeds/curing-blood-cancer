@@ -192,6 +192,8 @@ Next subplan shape:
   [Therapy Exposure Timeline Contract v0](therapy-landscapes/therapy-exposure-timeline-contract-v0.md)
 - molecular and immune context contract, completed by
   [Molecular Immune Context Contract v0](contexts/molecular-immune-context-contract-v0.md)
+- machine-facing disease-state representation architecture, started by
+  [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
 - unknown, not-tested, not-sure, and source-missing states
 
 ### 5. Evidence Retrieval
@@ -400,6 +402,7 @@ step.
 | `measurement-normalization-contract-v0` | Case normalization | MRD, response, relapse, lab, imaging, method, threshold, and timepoint normalization contract |
 | `therapy-exposure-timeline-contract-v0` | Case normalization | Prior therapy, line, exposure, response, toxicity, and constraint timeline contract |
 | `molecular-immune-context-contract-v0` | Case normalization | Cytogenetic, genomic, target-assay, pathology, and immune context contract |
+| `myeloma-machine-representation-stack-v0` | Case normalization | Source-backed public architecture for the model-facing myeloma state object, fusion layers, prediction-head boundaries, and validation standards |
 | `evidence-retrieval-packet-v0` | Evidence retrieval | Source-backed evidence packet skeleton with freshness and limitation fields |
 | `trial-therapy-landscape-non-advice-gate-v0` | Therapy and trial landscape | Non-advisory trial and therapy landscape extraction gate |
 | `candidate-hypothesis-review-question-set-v0` | Candidate hypothesis review | Question-only hypothesis packet that cannot rank or recommend patient action |
@@ -410,6 +413,8 @@ step.
 | `case-to-cure-master-completion-audit-v0` | Completion audit | Audit that decides whether the master plan is complete, blocked, or ready for the next named phase |
 | `case-to-cure-public-scope-human-gate-blocker-v0` | Human gate blocker | Blocked next state after the master completion audit; no autonomous public-safe case-to-cure item remains without human phase selection or named gate clearance |
 | `public-caregiver-intake-frontend-v0` | Public static frontend | Human-selected next phase for a static, synthetic-only caregiver intake prototype that refuses real patient data and does not provide medical advice |
+| `static-synthetic-caregiver-intake-frontend-v0` | Public static frontend | Completed no-build HTML/CSS/JS caregiver intake prototype using synthetic fixture content, disabled handoff controls, and no submit, upload, backend, storage, advice, matching, ranking, or patient-specific output |
+| `static-synthetic-caregiver-intake-frontend-smoke-test-v0` | Public static frontend | Active smoke-test report item for no-submit, no-storage, no-upload, no-network, responsive layout, refusal copy, emergency boundary, clinician-review boundary, and no-advice checks |
 
 ## Clawdad Delegation Rule
 
@@ -435,6 +440,7 @@ Clawdad may stop only when:
 - [Case-To-Cure Loop Governor Handoff v0](case-to-cure-loop-governor-handoff-v0.md)
 - [Case-To-Cure Pipeline Blueprint v0](case-to-cure-pipeline-blueprint-v0.md)
 - [Case-To-Cure Stage Validator And Owner Map v0](case-to-cure-stage-validator-map-v0.md)
+- [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
 - [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
 - [Caregiver Intake Public Projection Checklist v0](case-intake/caregiver-intake-public-projection-checklist-v0.md)
 - [Private Intake Schema Contract v0](case-intake/private-intake-schema-contract-v0.md)
@@ -442,6 +448,7 @@ Clawdad may stop only when:
 - [Measurement Normalization Contract v0](measurements/measurement-normalization-contract-v0.md)
 - [Therapy Exposure Timeline Contract v0](therapy-landscapes/therapy-exposure-timeline-contract-v0.md)
 - [Static Synthetic Caregiver Prototype Plan v0](case-intake/static-synthetic-caregiver-prototype-plan-v0.md)
+- [Static Synthetic Caregiver Intake Frontend v0](case-intake/static-synthetic-caregiver-intake-frontend-v0.html)
 - [Caregiver Intake Public Projection Validator v0](case-intake/caregiver-intake-public-projection-validator-v0.md)
 - [Consent Privacy Security Retention Gate v0](case-intake/consent-privacy-security-retention-gate-v0.md)
 - [Expert Validation Loop v0](reviews/expert-validation-loop-v0.md)

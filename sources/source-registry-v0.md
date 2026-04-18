@@ -1,7 +1,7 @@
 # Source Registry v0
 
 - registry id: `source-registry-v0`
-- date: `2026-04-16`
+- date: `2026-04-18`
 - scope: public source anchors for Curing Blood Cancer artifacts
 - status: initial registry
 
@@ -36,6 +36,7 @@ as a claim by itself.
 | `labeling` | Useful for public product-label review. |
 | `dataset-discovery` | Useful for locating public datasets before appraisal. |
 | `genomics-data` | Useful for cancer genomics data discovery and cohort-level analysis planning. |
+| `machine-representation` | Useful for architecture and schema decisions about machine-readable disease-state representations without patient-specific decision logic. |
 
 ## Records
 
@@ -68,6 +69,12 @@ as a claim by itself.
 | `pubmed_munshi_2017_mrd_survival_meta_analysis` | PubMed-indexed literature | meta-analysis | multiple myeloma, minimal residual disease, survival outcomes | `literature-search`, `measurement-standard` | Outcome association does not provide patient-specific prognosis or prove a treatment strategy. |
 | `pubmed_soh_2022_mrd_flow_harmonization` | PubMed-indexed literature | research article | multiple myeloma, measurable residual disease, flow cytometry | `literature-search`, `measurement-standard`, `data-reuse` | Flow-cytometry harmonization source; does not replace local laboratory validation or clinical interpretation. |
 | `fda_mrd_cr_endpoint_guidance_2026` | U.S. Food and Drug Administration | draft guidance | multiple myeloma, minimal residual disease, complete response, accelerated approval endpoints | `measurement-standard`, `regulatory-context` | Draft, nonbinding regulatory context; not for implementation and not a patient-specific interpretation, product approval, availability, eligibility, treatment-selection, or trial-advice source. |
+| `nature_genetics_commpass_subtypes_2024` | MMRF CoMMpass Network / Nature Genetics | open-access research article | multiple myeloma, newly diagnosed multiple myeloma, CoMMpass, genomics, transcriptomics, longitudinal clinical data | `literature-search`, `genomics-data`, `dataset-discovery`, `machine-representation` | Cohort-level molecular profiling source; not a patient-specific prognostic model, treatment selector, trial matcher, or clinical decision system. |
+| `nature_cancer_immune_atlas_myeloma_2026` | Immune Atlas Consortium / Nature Cancer | open-access research article | multiple myeloma, newly diagnosed multiple myeloma, bone marrow microenvironment, single-cell RNA sequencing, immune atlas | `literature-search`, `genomics-data`, `context-modifier`, `machine-representation` | Cohort-level immune microenvironment source; does not establish patient-specific immune status, prognosis, treatment fit, trial fit, monitoring guidance, or intervention guidance. |
+| `nature_genetics_mm_precursor_genomic_landscape_2025` | Nature Genetics | open-access research article | multiple myeloma, MGUS, smoldering multiple myeloma, precursor states, genomic progression | `literature-search`, `genomics-data`, `precursor-risk-context`, `machine-representation` | Cohort-level genomic progression source; not a personal risk calculator, screening recommendation, monitoring instruction, treatment recommendation, or trial recommendation. |
+| `nature_communications_rrmm_resistance_2022` | Multiple Myeloma Research Consortium / Nature Communications | open-access research article | multiple myeloma, relapsed refractory multiple myeloma, genetic heterogeneity, drug resistance, relapse biology | `literature-search`, `genomics-data`, `mechanism-map`, `machine-representation` | Relapsed/refractory cohort-level resistance source; mechanism observations must not be used to rank patient options, infer therapy resistance for a person, or guide treatment. |
+| `jco_ims_imwg_high_risk_consensus_2025` | International Myeloma Society / International Myeloma Working Group | consensus recommendations | multiple myeloma, newly diagnosed multiple myeloma, high-risk myeloma, genomic staging | `literature-search`, `context-modifier`, `machine-representation` | Consensus genomic staging source; not patient-specific prognostic advice, treatment selection, transplant-fit guidance, trial guidance, or monitoring guidance. |
+| `pubmed_high_risk_genomic_consensus_validation_2026` | PubMed-indexed literature / Blood | validation study | multiple myeloma, newly diagnosed multiple myeloma, first relapse, high-risk genomic staging, next-generation sequencing | `literature-search`, `genomics-data`, `context-modifier`, `machine-representation` | Cohort-level validation study; not a patient-specific prognosis tool, treatment selector, trial matcher, or clinical decision system. |
 | `pubmed_kyle_2010_mgus_smm_imwg` | PubMed-indexed literature | consensus perspective | multiple myeloma, MGUS, smoldering multiple myeloma, precursor states | `literature-search`, `precursor-risk-context` | Consensus perspective for source extraction; not a personal risk calculator, monitoring instruction, screening recommendation, or treatment recommendation. |
 | `pubmed_mateos_2020_smm_risk_model` | Blood Cancer Journal / IMWG | open-access research article | smoldering multiple myeloma, risk stratification, precursor states | `literature-search`, `precursor-risk-context` | Cohort-level risk-model context; does not determine individual prognosis, screening, monitoring, treatment fit, or trial eligibility. |
 | `pubmed_palumbo_2015_imwg_frailty` | PubMed-indexed literature | IMWG report | multiple myeloma, frailty, geriatric assessment, host context | `literature-search`, `context-modifier` | Frailty and geriatric-assessment context for source extraction; not a prognosis tool, treatment-fit tool, transplant-fit tool, monitoring instruction, or patient-specific assessment. |
@@ -113,6 +120,12 @@ as a claim by itself.
 | `pubmed_munshi_2017_mrd_survival_meta_analysis` | https://pubmed.ncbi.nlm.nih.gov/27632282/ | 2026-04-14 |
 | `pubmed_soh_2022_mrd_flow_harmonization` | https://pubmed.ncbi.nlm.nih.gov/35005838/ | 2026-04-14 |
 | `fda_mrd_cr_endpoint_guidance_2026` | https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated | 2026-04-16 |
+| `nature_genetics_commpass_subtypes_2024` | https://www.nature.com/articles/s41588-024-01853-0 | 2026-04-18 |
+| `nature_cancer_immune_atlas_myeloma_2026` | https://www.nature.com/articles/s43018-025-01072-4 | 2026-04-18 |
+| `nature_genetics_mm_precursor_genomic_landscape_2025` | https://www.nature.com/articles/s41588-025-02196-0 | 2026-04-18 |
+| `nature_communications_rrmm_resistance_2022` | https://www.nature.com/articles/s41467-022-31430-0 | 2026-04-18 |
+| `jco_ims_imwg_high_risk_consensus_2025` | https://pubmed.ncbi.nlm.nih.gov/40489728/ | 2026-04-18 |
+| `pubmed_high_risk_genomic_consensus_validation_2026` | https://pubmed.ncbi.nlm.nih.gov/40991836/ | 2026-04-18 |
 | `pubmed_kyle_2010_mgus_smm_imwg` | https://pubmed.ncbi.nlm.nih.gov/20410922/ | 2026-04-16 |
 | `pubmed_mateos_2020_smm_risk_model` | https://www.nature.com/articles/s41408-020-00366-3 | 2026-04-16 |
 | `pubmed_palumbo_2015_imwg_frailty` | https://pubmed.ncbi.nlm.nih.gov/25628469/ | 2026-04-16 |

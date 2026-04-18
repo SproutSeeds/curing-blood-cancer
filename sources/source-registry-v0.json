@@ -1,6 +1,6 @@
 {
   "registry_id": "source-registry-v0",
-  "date": "2026-04-16",
+  "date": "2026-04-18",
   "scope": "public source anchors for Curing Blood Cancer artifacts",
   "records": [
     {
@@ -272,6 +272,66 @@
       "blood_cancer_scope": ["multiple myeloma", "minimal residual disease", "complete response", "accelerated approval endpoints"],
       "claim_uses": ["measurement-standard", "regulatory-context"],
       "claim_limits": ["Draft, nonbinding regulatory context; not for implementation and not a patient-specific interpretation, product approval, availability, eligibility, treatment-selection, or trial-advice source."]
+    },
+    {
+      "source_id": "nature_genetics_commpass_subtypes_2024",
+      "owner": "MMRF CoMMpass Network / Nature Genetics",
+      "source_type": "open-access research article",
+      "url": "https://www.nature.com/articles/s41588-024-01853-0",
+      "accessed": "2026-04-18",
+      "blood_cancer_scope": ["multiple myeloma", "newly diagnosed multiple myeloma", "CoMMpass", "genomics", "transcriptomics", "longitudinal clinical data"],
+      "claim_uses": ["literature-search", "genomics-data", "dataset-discovery", "machine-representation"],
+      "claim_limits": ["Cohort-level molecular profiling source; not a patient-specific prognostic model, treatment selector, trial matcher, or clinical decision system."]
+    },
+    {
+      "source_id": "nature_cancer_immune_atlas_myeloma_2026",
+      "owner": "Immune Atlas Consortium / Nature Cancer",
+      "source_type": "open-access research article",
+      "url": "https://www.nature.com/articles/s43018-025-01072-4",
+      "accessed": "2026-04-18",
+      "blood_cancer_scope": ["multiple myeloma", "newly diagnosed multiple myeloma", "bone marrow microenvironment", "single-cell RNA sequencing", "immune atlas"],
+      "claim_uses": ["literature-search", "genomics-data", "context-modifier", "machine-representation"],
+      "claim_limits": ["Cohort-level immune microenvironment source; does not establish patient-specific immune status, prognosis, treatment fit, trial fit, monitoring guidance, or intervention guidance."]
+    },
+    {
+      "source_id": "nature_genetics_mm_precursor_genomic_landscape_2025",
+      "owner": "Nature Genetics",
+      "source_type": "open-access research article",
+      "url": "https://www.nature.com/articles/s41588-025-02196-0",
+      "accessed": "2026-04-18",
+      "blood_cancer_scope": ["multiple myeloma", "MGUS", "smoldering multiple myeloma", "precursor states", "genomic progression"],
+      "claim_uses": ["literature-search", "genomics-data", "precursor-risk-context", "machine-representation"],
+      "claim_limits": ["Cohort-level genomic progression source; not a personal risk calculator, screening recommendation, monitoring instruction, treatment recommendation, or trial recommendation."]
+    },
+    {
+      "source_id": "nature_communications_rrmm_resistance_2022",
+      "owner": "Multiple Myeloma Research Consortium / Nature Communications",
+      "source_type": "open-access research article",
+      "url": "https://www.nature.com/articles/s41467-022-31430-0",
+      "accessed": "2026-04-18",
+      "blood_cancer_scope": ["multiple myeloma", "relapsed refractory multiple myeloma", "genetic heterogeneity", "drug resistance", "relapse biology"],
+      "claim_uses": ["literature-search", "genomics-data", "mechanism-map", "machine-representation"],
+      "claim_limits": ["Relapsed/refractory cohort-level resistance source; mechanism observations must not be used to rank patient options, infer therapy resistance for a person, or guide treatment."]
+    },
+    {
+      "source_id": "jco_ims_imwg_high_risk_consensus_2025",
+      "owner": "International Myeloma Society / International Myeloma Working Group",
+      "source_type": "consensus recommendations",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40489728/",
+      "accessed": "2026-04-18",
+      "blood_cancer_scope": ["multiple myeloma", "newly diagnosed multiple myeloma", "high-risk myeloma", "genomic staging"],
+      "claim_uses": ["literature-search", "context-modifier", "machine-representation"],
+      "claim_limits": ["Consensus genomic staging source; not patient-specific prognostic advice, treatment selection, transplant-fit guidance, trial guidance, or monitoring guidance."]
+    },
+    {
+      "source_id": "pubmed_high_risk_genomic_consensus_validation_2026",
+      "owner": "PubMed-indexed literature / Blood",
+      "source_type": "validation study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40991836/",
+      "accessed": "2026-04-18",
+      "blood_cancer_scope": ["multiple myeloma", "newly diagnosed multiple myeloma", "first relapse", "high-risk genomic staging", "next-generation sequencing"],
+      "claim_uses": ["literature-search", "genomics-data", "context-modifier", "machine-representation"],
+      "claim_limits": ["Cohort-level validation study; not a patient-specific prognosis tool, treatment selector, trial matcher, or clinical decision system."]
     },
     {
       "source_id": "pubmed_kyle_2010_mgus_smm_imwg",

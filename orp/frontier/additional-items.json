@@ -4,7 +4,7 @@
   "program_id": "curing-blood-cancer",
   "label": "Curing Blood Cancer",
   "active_list_id": "public-caregiver-intake-frontend-v0",
-  "active_item_id": "static-synthetic-caregiver-intake-frontend-v0",
+  "active_item_id": "static-synthetic-caregiver-intake-frontend-smoke-test-v0",
   "lists": [
     {
       "id": "case-intake-frontends",
@@ -445,7 +445,7 @@
         {
           "id": "static-synthetic-caregiver-intake-frontend-v0",
           "label": "Static synthetic caregiver intake frontend",
-          "status": "active",
+          "status": "complete",
           "goal": "Build the first static, synthetic-only public caregiver intake frontend prototype for multiple myeloma case organization, using existing public artifacts as boundaries and refusing real patient data.",
           "depends_on": [
             "caregiver-friendly-case-intake-v0",
@@ -467,7 +467,32 @@
             "Navigation and ORP state are updated and validation passes."
           ],
           "plans": [
-            "Prefer a no-build static HTML/CSS/JS prototype under a public-facing directory, plus a short metadata/protocol artifact if needed."
+            "Completed as Static Synthetic Caregiver Intake Frontend v0: a no-build HTML/CSS/JS prototype that uses synthetic fixture content, visible public-safety copy, disabled private handoff controls, and no data submission path.",
+            "Next safest public step is a smoke-test report that verifies no-submit, no-storage, no-upload, no-backend, responsive layout, refusal-copy, and no-advice behavior before any future frontend iteration."
+          ]
+        },
+        {
+          "id": "static-synthetic-caregiver-intake-frontend-smoke-test-v0",
+          "label": "Static synthetic caregiver intake frontend smoke test",
+          "status": "active",
+          "goal": "Document public-safety smoke checks for the static synthetic caregiver intake frontend so the prototype is auditable before any future UI iteration.",
+          "depends_on": [
+            "static-synthetic-caregiver-intake-frontend-v0"
+          ],
+          "requirements": [
+            "Use the static frontend, metadata, product spec, projection checklist, consent/privacy/security gate, public safety governance, and synthetic fixture only.",
+            "Verify that the frontend has no form submission path, no upload control, no backend call, no local storage, no session storage, no cookies, no auth, no email path, and no database behavior.",
+            "Check desktop and mobile layouts for readable boundary copy, unknown/not-sure states, final review, emergency boundary, clinician-review boundary, frg.earth stewardship, and disabled private handoff controls.",
+            "Do not use real case data, private names, identifiers, records, person-linked dates, free-text case details, patient-specific outputs, recommendations, rankings, matching, treatment guidance, trial guidance, monitoring guidance, expanded-access guidance, publication authorization, outreach, or private lab access."
+          ],
+          "success_criteria": [
+            "A public smoke-test report or validator note exists and is linked from the frontend metadata or case-intake README.",
+            "The report records desktop and mobile checks plus no-submit/no-storage/no-upload/no-network behavior using synthetic-only content.",
+            "Any remaining frontend risk is queued as a public-safe UI task or blocked by a named human/private/clinical/legal/publication gate.",
+            "Validation passes after catalog and navigation updates."
+          ],
+          "plans": [
+            "Prefer a short markdown smoke-test report before adding executable UI tests; use Playwright screenshots only for local verification and do not introduce live intake plumbing."
           ]
         }
       ]

@@ -37,7 +37,7 @@ def artifact_path(root: Path, metadata_path: Path) -> Path:
     else:
         return metadata_path.relative_to(root)
 
-    for suffix in (".md", ".json", ".py"):
+    for suffix in (".md", ".json", ".py", ".html"):
         candidate = root / f"{stem}{suffix}"
         if candidate.exists():
             return candidate.relative_to(root)

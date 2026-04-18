@@ -3,23 +3,13 @@
 Stewarded by [frg.earth](https://frg.earth/).
 
 - catalog id: `public-artifact-catalog-v0`
-- date: `2026-04-16`
-- clinical use boundary: research-use-only
-- generated from: `*.metadata.json files tracked in the public repo`
+- date: `2026-04-18`
+- clinical boundary: research-use-only, not medical advice
+- generated from: `*.metadata.json` files tracked in the public repo
+- review status: expert-review-needed
 
-This catalog is a public navigation index. It does not grade evidence, authorize clinical use, or imply that any artifact is complete.
-
-## Summary
-
-- artifacts: 84
-- dataset: 17
-- map: 8
-- protocol: 42
-- schema: 15
-- taxonomy: 1
-- tool: 1
-
-## Artifacts
+This catalog is a navigation index. It does not rank artifacts, validate a
+claim for clinical use, or authorize patient-specific interpretation.
 
 ### dataset
 
@@ -63,6 +53,7 @@ This catalog is a public navigation index. It does not grade evidence, authorize
 | BCMA Claim Set Expert Review Packet v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/bcma-claim-set-expert-review-packet-v0.md](../disease-programs/multiple-myeloma/reviews/bcma-claim-set-expert-review-packet-v0.md) |
 | Candidate Hypothesis Review Question Set v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/candidate-hypothesis-review-question-set-v0.md](../disease-programs/multiple-myeloma/reviews/candidate-hypothesis-review-question-set-v0.md) |
 | Candidate-Option Scoring Rubric v0 | protocol | open-question | [disease-programs/multiple-myeloma/candidate-option-scoring-rubric-v0.md](../disease-programs/multiple-myeloma/candidate-option-scoring-rubric-v0.md) |
+| Caregiver Case Intake Product Spec v0 | protocol | open-question | [disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.md](../disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.md) |
 | Caregiver Intake Public Projection Checklist v0 | protocol | open-question | [disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-checklist-v0.md](../disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-checklist-v0.md) |
 | Caregiver Intake Public Projection Validator v0 | protocol | open-question | [disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-validator-v0.md](../disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-validator-v0.md) |
 | Case Intake Frontier Completion Audit Handoff v0 | protocol | open-question | [disease-programs/multiple-myeloma/case-intake/case-intake-frontier-completion-audit-handoff-v0.md](../disease-programs/multiple-myeloma/case-intake/case-intake-frontier-completion-audit-handoff-v0.md) |
@@ -77,7 +68,6 @@ This catalog is a public navigation index. It does not grade evidence, authorize
 | Consent Privacy Security Retention Gate v0 | protocol | open-question | [disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.md](../disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.md) |
 | End-To-End Synthetic Case Dry Run v0 | protocol | open-question | [disease-programs/multiple-myeloma/end-to-end-synthetic-case-dry-run-v0.md](../disease-programs/multiple-myeloma/end-to-end-synthetic-case-dry-run-v0.md) |
 | Expert Validation Loop v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/expert-validation-loop-v0.md](../disease-programs/multiple-myeloma/reviews/expert-validation-loop-v0.md) |
-| Caregiver Case Intake Product Spec v0 | protocol | open-question | [disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.md](../disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.md) |
 | MRD Endpoint Language Guardrail Addendum v0 | protocol | open-question | [disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md](../disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md) |
 | Multidisciplinary Review Packet Builder v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md](../disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md) |
 | Multidisciplinary Review Packet Template v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md](../disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md) |
@@ -91,6 +81,7 @@ This catalog is a public navigation index. It does not grade evidence, authorize
 | Multiple Myeloma Public Translation And Contribution Guide v0 | protocol | open-question | [disease-programs/multiple-myeloma/public-translation-contribution-guide-v0.md](../disease-programs/multiple-myeloma/public-translation-contribution-guide-v0.md) |
 | Multiple Myeloma Schema And Tooling Phase Inventory v0 | protocol | open-question | [disease-programs/multiple-myeloma/schema-tooling-phase-inventory-v0.md](../disease-programs/multiple-myeloma/schema-tooling-phase-inventory-v0.md) |
 | Multiple Myeloma Tooling Readiness Gate v0 | protocol | open-question | [disease-programs/multiple-myeloma/tooling-readiness-gate-v0.md](../disease-programs/multiple-myeloma/tooling-readiness-gate-v0.md) |
+| Myeloma Machine Representation Stack v0 | protocol | open-question | [disease-programs/multiple-myeloma/machine-representation-stack-v0.md](../disease-programs/multiple-myeloma/machine-representation-stack-v0.md) |
 | Post-CAR T Relapse Extraction Guide v0 | protocol | derived | [disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-extraction-guide-v0.md](../disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-extraction-guide-v0.md) |
 | Precursor, Risk, And Interception Boundary Note v0 | protocol | open-question | [disease-programs/multiple-myeloma/precursors/precursor-risk-interception-boundary-note-v0.md](../disease-programs/multiple-myeloma/precursors/precursor-risk-interception-boundary-note-v0.md) |
 | Publication-Gate Checklist v0 | protocol | open-question | [disease-programs/multiple-myeloma/publication-gate-checklist-v0.md](../disease-programs/multiple-myeloma/publication-gate-checklist-v0.md) |
@@ -134,3 +125,4 @@ This catalog is a public navigation index. It does not grade evidence, authorize
 | Artifact | Class | Claim Level | Path |
 | --- | --- | --- | --- |
 | Review-Packet Manifest Route-Table Dry-Run Tool v0 | tool | open-question | [tools/review_packet_manifest_route_table.py](../tools/review_packet_manifest_route_table.py) |
+| Static Synthetic Caregiver Intake Frontend v0 | tool | open-question | [disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-v0.html](../disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-v0.html) |

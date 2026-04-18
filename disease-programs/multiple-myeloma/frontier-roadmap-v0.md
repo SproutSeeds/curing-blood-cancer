@@ -77,6 +77,7 @@ The frontier loop should inspect these public artifacts before each pass:
 - [Open Research Map v0.1](open-research-map-v0-1.md)
 - [Case-To-Cure Adaptive Master Plan v0](case-to-cure-adaptive-master-plan-v0.md)
 - [Case-To-Cure Pipeline Blueprint v0](case-to-cure-pipeline-blueprint-v0.md)
+- [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
 - [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
 - [Public Loop Completion Handoff v0](public-loop-completion-handoff-v0.md)
 - [Public Review And Release Gate v0](public-review-release-gate-v0.md)
@@ -423,6 +424,7 @@ Canonical active artifact:
 - [Measurement Normalization Contract v0](measurements/measurement-normalization-contract-v0.md)
 - [Therapy Exposure Timeline Contract v0](therapy-landscapes/therapy-exposure-timeline-contract-v0.md)
 - [Molecular Immune Context Contract v0](contexts/molecular-immune-context-contract-v0.md)
+- [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
 - [Evidence Retrieval Packet v0](evidence-retrieval-packet-v0.md)
 - [Trial Therapy Landscape Non-Advice Gate v0](therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md)
 - [Candidate Hypothesis Review Question Set v0](reviews/candidate-hypothesis-review-question-set-v0.md)
@@ -480,11 +482,14 @@ The completed end-to-end synthetic dry-run item is
 The completed master audit item is `case-to-cure-master-completion-audit-v0`.
 The previously active queue item
 `case-to-cure-public-scope-human-gate-blocker-v0` recorded the safe stop after
-the master audit. The active queue item is now
-`static-synthetic-caregiver-intake-frontend-v0`, meaning the next autonomous
-public-safe move is a static, synthetic-only caregiver intake prototype with no
-real data collection, backend, advice, matching, ranking, or patient-specific
-output.
+the master audit. A human-selected public frontend phase is now active. The
+completed frontend item is
+[Static Synthetic Caregiver Intake Frontend v0](case-intake/static-synthetic-caregiver-intake-frontend-v0.html),
+and the active queue item is now
+`static-synthetic-caregiver-intake-frontend-smoke-test-v0`, meaning the next
+autonomous public-safe move is to document no-submit, no-storage, no-upload,
+no-network, responsive layout, refusal-copy, emergency-boundary,
+clinician-review, and no-advice checks before any future frontend iteration.
 
 Completion criteria:
 

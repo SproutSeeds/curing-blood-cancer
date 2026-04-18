@@ -124,6 +124,14 @@ It maps the synthetic `intake_00` through `intake_11` screens, refusal paths,
 copy families, and fixture bindings without creating a public form, live
 backend, upload path, public submission, or patient-specific output.
 
+The public static frontend prototype is
+[Static Synthetic Caregiver Intake Frontend v0](case-intake/static-synthetic-caregiver-intake-frontend-v0.html).
+It turns the synthetic screen plan into a no-build HTML/CSS/JS prototype with
+section navigation, unknown/not-sure paths, final-review cues, emergency and
+clinician-review boundaries, disabled private handoff controls, and no form
+submission, upload, backend, auth, database, email, storage, advice, matching,
+ranking, or patient-specific output.
+
 The public projection validator spec is
 [Caregiver Intake Public Projection Validator v0](case-intake/caregiver-intake-public-projection-validator-v0.md).
 It defines fail-closed protocol checks for PHI, real case details, free text,
@@ -244,6 +252,13 @@ context, assay-validity, source-validity, timepoint, therapy-linkage,
 measurement-linkage, uncertainty, review, and limitation fields without
 publishing real reports or producing actionability, testing, treatment, trial,
 monitoring, ranking, or patient-specific interpretation.
+
+The public architecture note for translating these contracts into a
+model-facing disease-state object is
+[Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md).
+It defines feature families, missing-modality rules, fusion-layer boundaries,
+prediction-head boundaries, and validation standards without creating a model,
+processing real data, or producing patient-specific predictions.
 
 ### Evidence Packet
 
@@ -553,50 +568,59 @@ The first public-safe queue items are:
    target assays, pathology, flow, immune context, assay validity, source
    validity, or target language are used downstream. Completed by
    [Molecular Immune Context Contract v0](contexts/molecular-immune-context-contract-v0.md).
-10. Define the evidence retrieval packet skeleton before public-source queries,
+10. Define the model-facing machine representation stack before progression,
+   response, MRD, or resistance modeling heads are specified downstream.
+   Started by [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md).
+11. Define the evidence retrieval packet skeleton before public-source queries,
    source freshness, query records, public evidence IDs, or limitation ledgers
    are used downstream. Completed by
    [Evidence Retrieval Packet v0](evidence-retrieval-packet-v0.md).
-11. Define the trial/therapy landscape non-advice gate before trial, therapy,
+12. Define the trial/therapy landscape non-advice gate before trial, therapy,
    product, target, jurisdiction, status, freshness, or access-context fields
    are reused downstream. Completed by
    [Trial Therapy Landscape Non-Advice Gate v0](therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md).
-12. Define the candidate hypothesis review question set before candidate
+13. Define the candidate hypothesis review question set before candidate
    hypotheses are framed for review packets or public task routing. Completed
    by
    [Candidate Hypothesis Review Question Set v0](reviews/candidate-hypothesis-review-question-set-v0.md).
-13. Define the multidisciplinary review packet builder skeleton before
+14. Define the multidisciplinary review packet builder skeleton before
    question IDs, artifact IDs, source IDs, reviewer lenses, missing-input
    blockers, refusals, or no-generated-claims behavior are reused downstream.
    Completed by
    [Multidisciplinary Review Packet Builder v0](reviews/multidisciplinary-review-packet-builder-v0.md).
-14. Define the expert validation loop before issue statuses, outreach maps,
+15. Define the expert validation loop before issue statuses, outreach maps,
    response ledgers, or safe dispositions are treated as recurring review
    infrastructure. Completed by
    [Expert Validation Loop v0](reviews/expert-validation-loop-v0.md).
-15. Define the case-to-public learning extraction gate before any future
+16. Define the case-to-public learning extraction gate before any future
    private-case learning can be sanitized, aggregated, source-scoped, reviewed,
    or publication-gated for public use. Completed by
    [Case-To-Public Learning Extraction Gate v0](case-to-public-learning-extraction-gate-v0.md).
-16. Advance the end-to-end synthetic case dry run before any future real-case
+17. Advance the end-to-end synthetic case dry run before any future real-case
    exercise of the public pipeline. Completed by
    [End-To-End Synthetic Case Dry Run v0](end-to-end-synthetic-case-dry-run-v0.md).
-17. Run the case-to-cure master completion audit before any new autonomous
+18. Run the case-to-cure master completion audit before any new autonomous
    case-to-cure item is selected. Completed by
    [Case-To-Cure Master Completion Audit v0](case-to-cure-master-completion-audit-v0.md),
    which blocks the next state on expert, private-lab, clinical, legal,
    regulatory, publication, or human-review gates unless a human selects a new
    named public-safe phase.
-18. Use the case-matching provenance fields in
+19. Build the human-selected public static caregiver intake frontend only as a
+   synthetic prototype. Completed by
+   [Static Synthetic Caregiver Intake Frontend v0](case-intake/static-synthetic-caregiver-intake-frontend-v0.html);
+   the next public-safe item is a smoke-test report for no-submit,
+   no-storage, no-upload, no-backend, responsive layout, refusal-copy,
+   emergency-boundary, clinician-review, and no-advice behavior.
+19. Use the case-matching provenance fields in
    [ClinicalTrials.gov Query Protocol v0](../../protocols/clinicaltrials-gov-query-protocol-v0.md)
    for public-safe trial-query records.
-19. Use [Candidate-Option Scoring Rubric v0](candidate-option-scoring-rubric-v0.md)
+20. Use [Candidate-Option Scoring Rubric v0](candidate-option-scoring-rubric-v0.md)
    to separate standard-care review, trial review, expanded-access review,
    research-only hypotheses, and no-go decisions without ranking patient
    options.
-20. Use [Publication-Gate Checklist v0](publication-gate-checklist-v0.md)
+21. Use [Publication-Gate Checklist v0](publication-gate-checklist-v0.md)
    before any case-derived public learning is downstreamed.
-21. Use the
+22. Use the
    [Multidisciplinary Review Packet Template v0](reviews/multidisciplinary-review-packet-template-v0.md)
    for private multidisciplinary myeloma review packets.
 
