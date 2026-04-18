@@ -112,6 +112,11 @@
       "accessed": "2026-04-16"
     },
     {
+      "label": "Myeloma Machine Representation Stack v0",
+      "url": "./machine-representation-stack-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
       "label": "Evidence Retrieval Packet v0",
       "url": "./evidence-retrieval-packet-v0.md",
       "accessed": "2026-04-16"
@@ -145,6 +150,11 @@
       "label": "End-To-End Synthetic Case Dry Run v0",
       "url": "./end-to-end-synthetic-case-dry-run-v0.md",
       "accessed": "2026-04-16"
+    },
+    {
+      "label": "Static Synthetic Caregiver Intake Frontend v0",
+      "url": "./case-intake/static-synthetic-caregiver-intake-frontend-v0.html",
+      "accessed": "2026-04-17"
     }
   ],
   "limitations": [

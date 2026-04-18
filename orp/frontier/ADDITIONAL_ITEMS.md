@@ -1,7 +1,7 @@
 # Additional Frontier Items: Curing Blood Cancer
 
 - active_list_id: `public-caregiver-intake-frontend-v0`
-- active_item_id: `static-synthetic-caregiver-intake-frontend-v0`
+- active_item_id: `static-synthetic-caregiver-intake-frontend-smoke-test-v0`
 
 ## `case-intake-frontends` Human-Friendly Case Intake Front Ends (`complete`)
 
@@ -54,5 +54,7 @@
 
 ## `public-caregiver-intake-frontend-v0` Public Caregiver Intake Frontend v0 (`active`)
 
-- [ ] `static-synthetic-caregiver-intake-frontend-v0` Static synthetic caregiver intake frontend (`active`)
+- [x] `static-synthetic-caregiver-intake-frontend-v0` Static synthetic caregiver intake frontend (`complete`)
   - goal: Build the first static, synthetic-only public caregiver intake frontend prototype for multiple myeloma case organization, using existing public artifacts as boundaries and refusing real patient data.
+- [ ] `static-synthetic-caregiver-intake-frontend-smoke-test-v0` Static synthetic caregiver intake frontend smoke test (`active`)
+  - goal: Document public-safety smoke checks for the static synthetic caregiver intake frontend so the prototype is auditable before any future UI iteration.

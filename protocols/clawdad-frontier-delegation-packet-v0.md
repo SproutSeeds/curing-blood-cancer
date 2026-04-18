@@ -100,9 +100,11 @@ Inspect these files at the start of each pass:
 - `disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-checklist-v0.md`
 - `disease-programs/multiple-myeloma/case-intake/private-intake-schema-contract-v0.md`
 - `disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-prototype-plan-v0.md`
+- `disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-v0.html`
 - `disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-validator-v0.md`
 - `disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.md`
 - `disease-programs/multiple-myeloma/case-feature-normalization-contract-v0.md`
+- `disease-programs/multiple-myeloma/machine-representation-stack-v0.md`
 - `disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md`
 - `disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md`
 - `disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md`
@@ -144,7 +146,7 @@ The current active named phase is `public-caregiver-intake-frontend-v0`
 inside `case-to-cure-adaptive-master-plan-v0`.
 The active phase is `public-caregiver-intake-frontend-v0`.
 The active additional queue is `public-caregiver-intake-frontend-v0`.
-The active additional item is `static-synthetic-caregiver-intake-frontend-v0`.
+The active additional item is `static-synthetic-caregiver-intake-frontend-smoke-test-v0`.
 
 This phase supersedes the prior "frontier complete / no ready tasks" endpoint
 and the completed caregiver intake documentation subphase. The eight-lane
@@ -154,8 +156,8 @@ frontend prototype.
 
 Required output for the next pass:
 
-- build or specify the smallest useful static, synthetic-only public caregiver
-  intake frontend prototype
+- document the smallest useful public-safety smoke-test report for the static,
+  synthetic-only public caregiver intake frontend prototype
 - use generic caregiver language only; do not use private names or private
   relationship details
 - use the existing caregiver case intake product spec, private intake schema
@@ -165,8 +167,12 @@ Required output for the next pass:
 - keep the interface as a public prototype only: no real data collection,
   uploads, backend, auth, database, email submission, or patient-identifying
   data
-- include clear frg.earth stewardship, unknown/not-sure paths, final review,
-  emergency boundary, clinician-review boundary, and no-advice copy
+- verify clear frg.earth stewardship, unknown/not-sure paths, final review,
+  emergency boundary, clinician-review boundary, disabled private handoff, and
+  no-advice copy
+- verify no form submission path, upload control, backend call, local storage,
+  session storage, cookies, auth, email path, database behavior, or real data
+  capture
 - block real case data, identifiers, raw records, uploads, person-linked
   dates, free-text case details, private correspondence, patient-specific
   outputs, recommendations, rankings, matching, treatment guidance, trial

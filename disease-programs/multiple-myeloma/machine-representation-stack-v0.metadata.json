@@ -1,0 +1,116 @@
+{
+  "artifact_id": "multiple-myeloma-machine-representation-stack-v0",
+  "title": "Myeloma Machine Representation Stack v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "machine representation",
+    "genomics",
+    "transcriptomics",
+    "bone marrow microenvironment",
+    "longitudinal disease state",
+    "progression risk modeling",
+    "response modeling",
+    "MRD endpoint modeling",
+    "resistance hypothesis generation",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Comprehensive Molecular Profiling Of Multiple Myeloma Identifies Refined Copy Number And Expression Subtypes",
+      "url": "https://www.nature.com/articles/s41588-024-01853-0",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "A Single-Cell Atlas Characterizes Dysregulation Of The Bone Marrow Immune Microenvironment Associated With Outcomes In Multiple Myeloma",
+      "url": "https://www.nature.com/articles/s43018-025-01072-4",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Genomic Landscape Of Multiple Myeloma And Its Precursor Conditions",
+      "url": "https://www.nature.com/articles/s41588-025-02196-0",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "The Genetic Heterogeneity And Drug Resistance Mechanisms Of Relapsed Refractory Multiple Myeloma",
+      "url": "https://www.nature.com/articles/s41467-022-31430-0",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "FDA Draft Guidance On MRD And Complete Response In Multiple Myeloma",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "International Myeloma Society/International Myeloma Working Group Consensus Recommendations On The Definition Of High-Risk Multiple Myeloma",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40489728/",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "High-Risk Genomic Consensus Validation For Patients With Newly Diagnosed Multiple Myeloma Using Next-Generation Sequencing",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40991836/",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "NCI Plasma Cell Neoplasms Including Multiple Myeloma Treatment PDQ",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../sources/source-registry-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Case-To-Cure Pipeline Blueprint v0",
+      "url": "case-to-cure-pipeline-blueprint-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Molecular Immune Context Contract v0",
+      "url": "contexts/molecular-immune-context-contract-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-18"
+    }
+  ],
+  "limitations": [
+    "Research architecture note only.",
+    "Not a clinical model.",
+    "Not an executable schema.",
+    "Not a patient-state record.",
+    "Not a prognosis tool.",
+    "Not a diagnosis tool.",
+    "Not a treatment selector.",
+    "Not a trial matcher.",
+    "Not a monitoring tool.",
+    "Not medical advice.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not urgency or emergency guidance.",
+    "Not a claim of validated clinical utility.",
+    "Does not contain patient-identifying data, real case data, raw sequencing records, molecular reports, pathology reports, flow reports, portal exports, images, notes, exact dates tied to a person, private paths, private case IDs, or re-identification keys.",
+    "Does not collect, normalize, store, transmit, train on, infer from, predict for, publish, compare, rank, or authorize use of real patient data.",
+    "Does not output patient-specific diagnosis, prognosis, treatment recommendations, trial recommendations, resistance calls, monitoring guidance, candidate option ranking, or clinical decisions.",
+    "All biological claims require source-specific extraction and expert validation before stronger downstream use.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-machine-representation-stack-v0.md"
+}

@@ -87,6 +87,11 @@
       "accessed": "2026-04-16"
     },
     {
+      "label": "Myeloma Machine Representation Stack v0",
+      "url": "../disease-programs/multiple-myeloma/machine-representation-stack-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
       "label": "MRD And Relapse Measurement Glossary v0",
       "url": "../disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md",
       "accessed": "2026-04-16"
@@ -175,6 +180,11 @@
       "label": "End-To-End Synthetic Case Dry Run v0",
       "url": "../disease-programs/multiple-myeloma/end-to-end-synthetic-case-dry-run-v0.md",
       "accessed": "2026-04-16"
+    },
+    {
+      "label": "Static Synthetic Caregiver Intake Frontend v0",
+      "url": "../disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-v0.html",
+      "accessed": "2026-04-17"
     }
   ],
   "limitations": [

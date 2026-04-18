@@ -20,7 +20,7 @@
     "active_milestone": "case-to-cure-adaptive-master-plan-v0",
     "active_phase": "public-caregiver-intake-frontend-v0",
     "band": "exact",
-    "next_action": "Build static-synthetic-caregiver-intake-frontend-v0: a public, static, synthetic-only caregiver intake prototype with no real data collection, no backend, no advice, generic caregiver language, frg.earth stewardship, navigation updates, and validation.",
+    "next_action": "Run static-synthetic-caregiver-intake-frontend-smoke-test-v0: document public-safety smoke checks for the static frontend, including no submit path, no storage, no uploads, no backend calls, responsive layout, refusal copy, and no-advice boundaries.",
     "blocked_by": []
   },
   "versions": [
@@ -524,10 +524,12 @@
               "success_criteria": [
                 "A static frontend artifact exists and can be opened or served locally without sending data anywhere.",
                 "The frontend uses synthetic fixture data only and visibly warns against entering real patient information.",
-                "The public repo navigation points to the prototype and validation passes."
+                "The public repo navigation points to the prototype and validation passes.",
+                "A smoke-test report records no-submit, no-storage, no-upload, no-network, responsive layout, and no-advice checks before any future frontend iteration."
               ],
               "plans": [
-                "Start with the smallest useful static prototype target and documentation; avoid real intake plumbing until private-lab, consent, security, legal, and clinical gates are cleared."
+                "Static Synthetic Caregiver Intake Frontend v0 now exists as a public, no-build, synthetic-only prototype with no submission path or backend.",
+                "Next item is static-synthetic-caregiver-intake-frontend-smoke-test-v0 to document no-submit, no-storage, no-upload, no-network, responsive layout, and no-advice checks."
               ],
               "compute_hooks": []
             }

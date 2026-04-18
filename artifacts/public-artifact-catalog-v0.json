@@ -1,6 +1,6 @@
 {
   "catalog_id": "public-artifact-catalog-v0",
-  "date": "2026-04-16",
+  "date": "2026-04-18",
   "title": "Public Artifact Catalog v0",
   "clinical_use_boundary": "research-use-only",
   "generated_from": "*.metadata.json files tracked in the public repo",
@@ -168,7 +168,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-inventory-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-inventory-v0.metadata.json",
-      "source_count": 37,
+      "source_count": 39,
       "limitation_count": 11
     },
     {
@@ -283,7 +283,7 @@
       ],
       "path": "sources/source-registry-v0.md",
       "metadata_path": "sources/source-registry-v0.metadata.json",
-      "source_count": 24,
+      "source_count": 30,
       "limitation_count": 4
     },
     {
@@ -481,6 +481,24 @@
       "limitation_count": 12
     },
     {
+      "artifact_id": "multiple-myeloma-caregiver-case-intake-product-spec-v0",
+      "title": "Caregiver Case Intake Product Spec v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "caregiver intake",
+        "case-to-cure pipeline",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.metadata.json",
+      "source_count": 12,
+      "limitation_count": 15
+    },
+    {
       "artifact_id": "multiple-myeloma-caregiver-intake-public-projection-checklist-v0",
       "title": "Caregiver Intake Public Projection Checklist v0",
       "artifact_class": "protocol",
@@ -554,7 +572,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.metadata.json",
-      "source_count": 25,
+      "source_count": 27,
       "limitation_count": 12
     },
     {
@@ -611,7 +629,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.metadata.json",
-      "source_count": 28,
+      "source_count": 30,
       "limitation_count": 9
     },
     {
@@ -667,7 +685,7 @@
       ],
       "path": "protocols/clawdad-frontier-delegation-packet-v0.md",
       "metadata_path": "protocols/clawdad-frontier-delegation-packet-v0.metadata.json",
-      "source_count": 33,
+      "source_count": 35,
       "limitation_count": 10
     },
     {
@@ -754,24 +772,6 @@
       "metadata_path": "disease-programs/multiple-myeloma/reviews/expert-validation-loop-v0.metadata.json",
       "source_count": 13,
       "limitation_count": 31
-    },
-    {
-      "artifact_id": "multiple-myeloma-caregiver-case-intake-product-spec-v0",
-      "title": "Caregiver Case Intake Product Spec v0",
-      "artifact_class": "protocol",
-      "claim_level": "open-question",
-      "blood_cancer_scope": [
-        "multiple myeloma",
-        "plasma-cell disease",
-        "caregiver intake",
-        "case-to-cure pipeline",
-        "public safety",
-        "private-lab handoff"
-      ],
-      "path": "disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.md",
-      "metadata_path": "disease-programs/multiple-myeloma/case-intake/caregiver-case-intake-product-spec-v0.metadata.json",
-      "source_count": 12,
-      "limitation_count": 15
     },
     {
       "artifact_id": "mrd-endpoint-language-guardrail-addendum-v0",
@@ -879,7 +879,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.metadata.json",
-      "source_count": 27,
+      "source_count": 29,
       "limitation_count": 9
     },
     {
@@ -946,7 +946,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-roadmap-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-roadmap-v0.metadata.json",
-      "source_count": 19,
+      "source_count": 21,
       "limitation_count": 6
     },
     {
@@ -1001,6 +1001,30 @@
       "metadata_path": "disease-programs/multiple-myeloma/tooling-readiness-gate-v0.metadata.json",
       "source_count": 11,
       "limitation_count": 10
+    },
+    {
+      "artifact_id": "multiple-myeloma-machine-representation-stack-v0",
+      "title": "Myeloma Machine Representation Stack v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "genomics",
+        "transcriptomics",
+        "bone marrow microenvironment",
+        "longitudinal disease state",
+        "progression risk modeling",
+        "response modeling",
+        "MRD endpoint modeling",
+        "resistance hypothesis generation",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/machine-representation-stack-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/machine-representation-stack-v0.metadata.json",
+      "source_count": 14,
+      "limitation_count": 21
     },
     {
       "artifact_id": "post-car-t-relapse-extraction-guide-v0",
@@ -1508,15 +1532,34 @@
       "metadata_path": "tools/review_packet_manifest_route_table.metadata.json",
       "source_count": 8,
       "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-static-synthetic-caregiver-intake-frontend-v0",
+      "title": "Static Synthetic Caregiver Intake Frontend v0",
+      "artifact_class": "tool",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "caregiver intake",
+        "static frontend prototype",
+        "synthetic fixture",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-v0.html",
+      "metadata_path": "disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-v0.metadata.json",
+      "source_count": 11,
+      "limitation_count": 26
     }
   ],
   "review": {
-    "created": "2026-04-16",
-    "last_reviewed": "2026-04-16",
-    "review_status": "source-checked",
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-18",
+    "review_status": "expert-review-needed",
     "review_notes": [
-      "Generated from public artifact metadata records.",
-      "Counts and entries are navigation metadata only; they do not grade evidence quality or authorize clinical use."
+      "Generated mechanically from public metadata files.",
+      "Catalog completeness is structural only and does not validate scientific or clinical claims."
     ]
   }
 }
