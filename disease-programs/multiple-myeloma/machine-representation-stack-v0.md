@@ -333,15 +333,43 @@ boundaries, and validation requirements.
 
 Recommended next atoms:
 
-1. `myeloma-state-object-schema-v0`: executable or markdown schema for the
-   model-facing state object, using synthetic-only examples.
-2. `machine-representation-source-extraction-v0`: source-extraction table that
-   maps each architecture claim to exact public source lines and unresolved
-   expert-validation needs.
-3. `synthetic-myeloma-state-fixture-v0`: synthetic fixture with missing DNA,
-   missing RNA, missing single-cell, and complete multimodal scenarios.
-4. `model-output-boundary-wrapper-v0`: refusal and uncertainty wrapper for
-   progression, response, MRD, and resistance heads.
+1. `myeloma-state-object-schema-v0`: completed as
+   [Myeloma State Object Schema v0](../../schemas/myeloma-state-object-schema-v0.md),
+   a markdown schema contract for the model-facing state object.
+2. `synthetic-myeloma-state-fixture-v0`: completed as
+   [Synthetic Myeloma State Fixture v0](../../examples/synthetic-myeloma-state-fixture-v0.json),
+   covering complete multimodal, missing RNA, missing single-cell, and
+   private-source-blocked scenarios.
+3. `model-output-boundary-wrapper-v0`: completed as
+   [Model Output Boundary Wrapper v0](model-output-boundary-wrapper-v0.md),
+   defining refusal, uncertainty, review, and blocked-use rules for progression,
+   response, MRD, and resistance head placeholders.
+4. `myeloma-state-validator-rule-map-v0`: completed as
+   [Myeloma State Validator Rule Map v0](myeloma-state-validator-rule-map-v0.md),
+   connecting the state-object schema, synthetic fixture, and output wrapper to
+   stable fail-closed checks without validating real cases or producing
+   predictions.
+5. `machine-representation-source-extraction-v0`: completed as
+   [Machine Representation Source Extraction v0](machine-representation-source-extraction-v0.md),
+   mapping architecture claims to public source IDs, source-context gaps,
+   uncertainty, review status, blocked uses, and contribution task seeds.
+6. `machine-representation-source-gap-task-queue-v0`: completed as
+   [Machine Representation Source-Gap Task Queue v0](public-tasks/machine-representation-source-gap-task-queue-v0.md),
+   turning source-context-needed rows into contribution-ready public source
+   tasks without model code, predictions, advice, matching, ranking, outreach,
+   or issue creation.
+7. `machine-representation-source-gap-issue-draft-packet-v0`: completed as
+   [Machine Representation Source-Gap Issue Draft Packet v0](public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md),
+   preparing human-reviewable task text without opening issues, sending
+   outreach, requesting private material, source ranking, evidence ranking,
+   model behavior, advice, matching, ranking, or publication authorization.
+8. `machine-representation-implementation-completion-audit-v0`: completed as
+   [Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md),
+   closing the human-selected machine-representation implementation phase as
+   public-safe and human-gated.
+9. `machine-representation-public-scope-human-gate-blocker-v0`: blocked next
+   state until a human selects a new named public-safe phase or clears a named
+   gate.
 
 ## Public Safety Check
 

@@ -1,0 +1,593 @@
+{
+  "artifact_id": "synthetic-myeloma-state-fixture-v0",
+  "title": "Synthetic Myeloma State Fixture v0",
+  "disease_program": "multiple-myeloma",
+  "fixture_status": "synthetic-only-public-v0",
+  "schema_id": "myeloma-state-object-schema-v0",
+  "schema_version": "v0",
+  "clinical_boundary": "research-use-only; not medical advice",
+  "data_boundary": {
+    "uses_real_case_data": false,
+    "contains_identifiers": false,
+    "contains_raw_records": false,
+    "contains_uploads": false,
+    "contains_exact_person_linked_dates": false,
+    "contains_free_text_case_details": false,
+    "contains_private_correspondence": false,
+    "contains_model_weights": false,
+    "contains_predictions": false,
+    "contains_recommendations": false,
+    "contains_matching_or_ranking": false,
+    "contains_clinical_decisions": false
+  },
+  "fixture_set_purpose": [
+    "exercise required source and review metadata",
+    "exercise optional modality families without inferring missingness",
+    "exercise blocked prediction-head and clinical-use fields",
+    "support future public validator design without accepting real case data"
+  ],
+  "shared_blocked_output_manifest": {
+    "diagnosis_output": "blocked",
+    "prognosis_output": "blocked",
+    "progression_prediction": "blocked",
+    "response_prediction": "blocked",
+    "mrd_interpretation": "blocked",
+    "resistance_attribution": "blocked",
+    "treatment_guidance": "blocked",
+    "trial_guidance": "blocked",
+    "expanded_access_guidance": "blocked",
+    "monitoring_guidance": "blocked",
+    "matching": "blocked",
+    "ranking": "blocked",
+    "publication_authorization": "blocked",
+    "clinical_decision": "blocked"
+  },
+  "fixtures": [
+    {
+      "fixture_id": "synthetic_state_complete_multimodal_v0",
+      "purpose": "Exercises all modality families with visibly synthetic placeholders.",
+      "state_object_metadata": {
+        "schema_id": "myeloma-state-object-schema-v0",
+        "schema_version": "v0",
+        "object_kind": "synthetic_fixture",
+        "synthetic_status": "synthetic_only",
+        "disease_program": "multiple-myeloma",
+        "object_scope": "complete_multimodal_shape_test",
+        "public_export_allowed": true
+      },
+      "source_context": {
+        "source_ids": [
+          "nci_pdq_myeloma_hp",
+          "nature_genetics_commpass_subtypes_2024",
+          "nature_cancer_immune_atlas_myeloma_2026"
+        ],
+        "source_type": "synthetic_schema_test",
+        "source_status": "synthetic_source",
+        "method_state": "source_defined_method",
+        "specimen_or_model_context": "model_system",
+        "timepoint_bucket": "study_visit_source_defined",
+        "access_date_state": "public_artifact_access_date",
+        "provenance_review_status": "public_shape_only",
+        "public_artifact_ids": [
+          "myeloma-state-object-schema-v0",
+          "multiple-myeloma-machine-representation-stack-v0"
+        ]
+      },
+      "disease_state_context": {
+        "field_group_id": "disease_state_context",
+        "value_state": "synthetic_placeholder",
+        "synthetic_label": "synthetic_context_bucket_alpha",
+        "review_status": "public_shape_only",
+        "limitation_note_required": true
+      },
+      "tumor_genomic_events": [
+        {
+          "field_group_id": "tumor_genomic_events",
+          "field_id": "synthetic_genomic_event_group_alpha",
+          "value_state": "synthetic_placeholder",
+          "method_state": "source_defined_method",
+          "specimen_or_model_context": "tumor_normal_dna",
+          "linkage_state": "molecular_immune_contract_linked",
+          "uncertainty_state": "source_limit",
+          "limitation_note_required": true
+        }
+      ],
+      "transcriptome_state": {
+        "field_group_id": "transcriptome_state",
+        "value_state": "synthetic_placeholder",
+        "method_state": "source_defined_method",
+        "specimen_or_model_context": "bulk_rna",
+        "linkage_state": "molecular_immune_contract_linked",
+        "uncertainty_state": "source_limit",
+        "limitation_note_required": true
+      },
+      "marrow_ecosystem_state": {
+        "field_group_id": "marrow_ecosystem_state",
+        "value_state": "synthetic_placeholder",
+        "method_state": "source_defined_method",
+        "specimen_or_model_context": "single_cell_marrow",
+        "linkage_state": "molecular_immune_contract_linked",
+        "uncertainty_state": "source_limit",
+        "limitation_note_required": true
+      },
+      "clinical_context": {
+        "field_group_id": "clinical_context",
+        "value_state": "synthetic_placeholder",
+        "method_state": "not_applicable",
+        "specimen_or_model_context": "public_cohort",
+        "linkage_state": "measurement_contract_linked",
+        "uncertainty_state": "population_mismatch",
+        "limitation_note_required": true
+      },
+      "treatment_timeline": {
+        "field_group_id": "treatment_timeline",
+        "value_state": "synthetic_placeholder",
+        "method_state": "not_applicable",
+        "specimen_or_model_context": "public_cohort",
+        "linkage_state": "therapy_contract_linked",
+        "uncertainty_state": "source_limit",
+        "limitation_note_required": true
+      },
+      "measurement_timeline": {
+        "field_group_id": "measurement_timeline",
+        "value_state": "synthetic_placeholder",
+        "method_state": "source_defined_method",
+        "specimen_or_model_context": "bone_marrow",
+        "linkage_state": "measurement_contract_linked",
+        "uncertainty_state": "method_limit",
+        "limitation_note_required": true
+      },
+      "evidence_links": {
+        "evidence_packet_ids": [
+          "multiple-myeloma-evidence-retrieval-packet-v0"
+        ],
+        "source_registry_ids": [
+          "source-registry-v0"
+        ],
+        "no_completeness_warning": true,
+        "matching_or_ranking_allowed": false
+      },
+      "missingness_and_uncertainty": {
+        "missing_modality_flags": [],
+        "missingness_reason": "none_for_fixture_shape",
+        "absence_inference_allowed": false,
+        "cohort_shift_warning": true,
+        "calibration_state": "calibration_needed",
+        "uncertainty_state": "expert_review_needed"
+      },
+      "review_and_gate_state": {
+        "review_status": "public_shape_only",
+        "private_lab_needed": false,
+        "clinician_review_needed": true,
+        "source_appraisal_needed": true,
+        "publication_gate_needed": true,
+        "allowed_public_successor": "validator-design-only"
+      },
+      "blocked_output_manifest": {
+        "diagnosis_output": "blocked",
+        "prognosis_output": "blocked",
+        "progression_prediction": "blocked",
+        "response_prediction": "blocked",
+        "mrd_interpretation": "blocked",
+        "resistance_attribution": "blocked",
+        "treatment_guidance": "blocked",
+        "trial_guidance": "blocked",
+        "expanded_access_guidance": "blocked",
+        "monitoring_guidance": "blocked",
+        "matching": "blocked",
+        "ranking": "blocked",
+        "publication_authorization": "blocked",
+        "clinical_decision": "blocked"
+      }
+    },
+    {
+      "fixture_id": "synthetic_state_missing_rna_v0",
+      "purpose": "Exercises missing transcriptome handling without normal-expression inference.",
+      "state_object_metadata": {
+        "schema_id": "myeloma-state-object-schema-v0",
+        "schema_version": "v0",
+        "object_kind": "synthetic_fixture",
+        "synthetic_status": "synthetic_only",
+        "disease_program": "multiple-myeloma",
+        "object_scope": "missing_rna_shape_test",
+        "public_export_allowed": true
+      },
+      "source_context": {
+        "source_ids": [
+          "nci_pdq_myeloma_hp",
+          "nature_genetics_commpass_subtypes_2024"
+        ],
+        "source_type": "synthetic_schema_test",
+        "source_status": "synthetic_source",
+        "method_state": "method_needed",
+        "specimen_or_model_context": "context_needed",
+        "timepoint_bucket": "unknown",
+        "access_date_state": "public_artifact_access_date",
+        "provenance_review_status": "public_shape_only",
+        "public_artifact_ids": [
+          "myeloma-state-object-schema-v0",
+          "multiple-myeloma-machine-representation-stack-v0"
+        ]
+      },
+      "tumor_genomic_events": [
+        {
+          "field_group_id": "tumor_genomic_events",
+          "field_id": "synthetic_genomic_event_group_beta",
+          "value_state": "synthetic_placeholder",
+          "method_state": "source_defined_method",
+          "specimen_or_model_context": "tumor_normal_dna",
+          "linkage_state": "molecular_immune_contract_linked",
+          "uncertainty_state": "source_limit",
+          "limitation_note_required": true
+        }
+      ],
+      "transcriptome_state": {
+        "field_group_id": "transcriptome_state",
+        "value_state": "not_collected",
+        "method_state": "method_not_reported",
+        "specimen_or_model_context": "bulk_rna",
+        "linkage_state": "linkage_needed",
+        "uncertainty_state": "missing_modality",
+        "limitation_note_required": true,
+        "normal_expression_inference_allowed": false
+      },
+      "marrow_ecosystem_state": {
+        "field_group_id": "marrow_ecosystem_state",
+        "value_state": "synthetic_placeholder",
+        "method_state": "source_defined_method",
+        "specimen_or_model_context": "single_cell_marrow",
+        "linkage_state": "molecular_immune_contract_linked",
+        "uncertainty_state": "source_limit",
+        "limitation_note_required": true
+      },
+      "clinical_context": {
+        "field_group_id": "clinical_context",
+        "value_state": "unknown",
+        "method_state": "not_applicable",
+        "specimen_or_model_context": "context_needed",
+        "linkage_state": "linkage_needed",
+        "uncertainty_state": "unknown",
+        "limitation_note_required": true
+      },
+      "treatment_timeline": {
+        "field_group_id": "treatment_timeline",
+        "value_state": "not_collected",
+        "method_state": "not_applicable",
+        "specimen_or_model_context": "not_applicable",
+        "linkage_state": "therapy_contract_linked",
+        "uncertainty_state": "missing_modality",
+        "limitation_note_required": true
+      },
+      "measurement_timeline": {
+        "field_group_id": "measurement_timeline",
+        "value_state": "not_collected",
+        "method_state": "method_needed",
+        "specimen_or_model_context": "context_needed",
+        "linkage_state": "measurement_contract_linked",
+        "uncertainty_state": "missing_modality",
+        "limitation_note_required": true
+      },
+      "evidence_links": {
+        "evidence_packet_ids": [
+          "multiple-myeloma-evidence-retrieval-packet-v0"
+        ],
+        "source_registry_ids": [
+          "source-registry-v0"
+        ],
+        "no_completeness_warning": true,
+        "matching_or_ranking_allowed": false
+      },
+      "missingness_and_uncertainty": {
+        "missing_modality_flags": [
+          "transcriptome_state"
+        ],
+        "missingness_reason": "synthetic_missing_rna_scenario",
+        "absence_inference_allowed": false,
+        "cohort_shift_warning": true,
+        "calibration_state": "calibration_needed",
+        "uncertainty_state": "missing_modality"
+      },
+      "review_and_gate_state": {
+        "review_status": "source_appraisal_needed",
+        "private_lab_needed": false,
+        "clinician_review_needed": true,
+        "source_appraisal_needed": true,
+        "publication_gate_needed": true,
+        "allowed_public_successor": "validator-design-only"
+      },
+      "blocked_output_manifest": {
+        "diagnosis_output": "blocked",
+        "prognosis_output": "blocked",
+        "progression_prediction": "blocked",
+        "response_prediction": "blocked",
+        "mrd_interpretation": "blocked",
+        "resistance_attribution": "blocked",
+        "treatment_guidance": "blocked",
+        "trial_guidance": "blocked",
+        "expanded_access_guidance": "blocked",
+        "monitoring_guidance": "blocked",
+        "matching": "blocked",
+        "ranking": "blocked",
+        "publication_authorization": "blocked",
+        "clinical_decision": "blocked"
+      }
+    },
+    {
+      "fixture_id": "synthetic_state_missing_single_cell_v0",
+      "purpose": "Exercises optional marrow ecosystem handling without immune-normality inference.",
+      "state_object_metadata": {
+        "schema_id": "myeloma-state-object-schema-v0",
+        "schema_version": "v0",
+        "object_kind": "synthetic_fixture",
+        "synthetic_status": "synthetic_only",
+        "disease_program": "multiple-myeloma",
+        "object_scope": "missing_single_cell_shape_test",
+        "public_export_allowed": true
+      },
+      "source_context": {
+        "source_ids": [
+          "nci_pdq_myeloma_hp",
+          "nature_cancer_immune_atlas_myeloma_2026"
+        ],
+        "source_type": "synthetic_schema_test",
+        "source_status": "synthetic_source",
+        "method_state": "method_needed",
+        "specimen_or_model_context": "context_needed",
+        "timepoint_bucket": "study_visit_source_defined",
+        "access_date_state": "public_artifact_access_date",
+        "provenance_review_status": "public_shape_only",
+        "public_artifact_ids": [
+          "myeloma-state-object-schema-v0",
+          "multiple-myeloma-machine-representation-stack-v0"
+        ]
+      },
+      "tumor_genomic_events": [
+        {
+          "field_group_id": "tumor_genomic_events",
+          "field_id": "synthetic_genomic_event_group_gamma",
+          "value_state": "synthetic_placeholder",
+          "method_state": "source_defined_method",
+          "specimen_or_model_context": "tumor_normal_dna",
+          "linkage_state": "molecular_immune_contract_linked",
+          "uncertainty_state": "source_limit",
+          "limitation_note_required": true
+        }
+      ],
+      "transcriptome_state": {
+        "field_group_id": "transcriptome_state",
+        "value_state": "synthetic_placeholder",
+        "method_state": "source_defined_method",
+        "specimen_or_model_context": "bulk_rna",
+        "linkage_state": "molecular_immune_contract_linked",
+        "uncertainty_state": "source_limit",
+        "limitation_note_required": true
+      },
+      "marrow_ecosystem_state": {
+        "field_group_id": "marrow_ecosystem_state",
+        "value_state": "not_tested",
+        "method_state": "method_not_reported",
+        "specimen_or_model_context": "single_cell_marrow",
+        "linkage_state": "linkage_needed",
+        "uncertainty_state": "missing_modality",
+        "limitation_note_required": true,
+        "immune_normality_inference_allowed": false,
+        "state_object_blocked_by_missing_single_cell": false
+      },
+      "clinical_context": {
+        "field_group_id": "clinical_context",
+        "value_state": "synthetic_placeholder",
+        "method_state": "not_applicable",
+        "specimen_or_model_context": "public_cohort",
+        "linkage_state": "measurement_contract_linked",
+        "uncertainty_state": "population_mismatch",
+        "limitation_note_required": true
+      },
+      "treatment_timeline": {
+        "field_group_id": "treatment_timeline",
+        "value_state": "synthetic_placeholder",
+        "method_state": "not_applicable",
+        "specimen_or_model_context": "public_cohort",
+        "linkage_state": "therapy_contract_linked",
+        "uncertainty_state": "source_limit",
+        "limitation_note_required": true
+      },
+      "measurement_timeline": {
+        "field_group_id": "measurement_timeline",
+        "value_state": "synthetic_placeholder",
+        "method_state": "source_defined_method",
+        "specimen_or_model_context": "blood",
+        "linkage_state": "measurement_contract_linked",
+        "uncertainty_state": "method_limit",
+        "limitation_note_required": true
+      },
+      "evidence_links": {
+        "evidence_packet_ids": [
+          "multiple-myeloma-evidence-retrieval-packet-v0"
+        ],
+        "source_registry_ids": [
+          "source-registry-v0"
+        ],
+        "no_completeness_warning": true,
+        "matching_or_ranking_allowed": false
+      },
+      "missingness_and_uncertainty": {
+        "missing_modality_flags": [
+          "marrow_ecosystem_state"
+        ],
+        "missingness_reason": "synthetic_missing_single_cell_scenario",
+        "absence_inference_allowed": false,
+        "cohort_shift_warning": true,
+        "calibration_state": "calibration_needed",
+        "uncertainty_state": "missing_modality"
+      },
+      "review_and_gate_state": {
+        "review_status": "molecular_review_needed",
+        "private_lab_needed": false,
+        "clinician_review_needed": true,
+        "source_appraisal_needed": true,
+        "publication_gate_needed": true,
+        "allowed_public_successor": "validator-design-only"
+      },
+      "blocked_output_manifest": {
+        "diagnosis_output": "blocked",
+        "prognosis_output": "blocked",
+        "progression_prediction": "blocked",
+        "response_prediction": "blocked",
+        "mrd_interpretation": "blocked",
+        "resistance_attribution": "blocked",
+        "treatment_guidance": "blocked",
+        "trial_guidance": "blocked",
+        "expanded_access_guidance": "blocked",
+        "monitoring_guidance": "blocked",
+        "matching": "blocked",
+        "ranking": "blocked",
+        "publication_authorization": "blocked",
+        "clinical_decision": "blocked"
+      }
+    },
+    {
+      "fixture_id": "synthetic_state_private_source_blocked_v0",
+      "purpose": "Exercises private-source refusal without exposing private content.",
+      "state_object_metadata": {
+        "schema_id": "myeloma-state-object-schema-v0",
+        "schema_version": "v0",
+        "object_kind": "synthetic_fixture",
+        "synthetic_status": "blocked_real_case",
+        "disease_program": "multiple-myeloma",
+        "object_scope": "private_source_blocked_shape_test",
+        "public_export_allowed": false
+      },
+      "source_context": {
+        "source_ids": [],
+        "source_type": "private_future_shape_placeholder",
+        "source_status": "source_seen_private",
+        "method_state": "private_only",
+        "specimen_or_model_context": "clinical_record_private",
+        "timepoint_bucket": "not_collected",
+        "access_date_state": "not_public",
+        "provenance_review_status": "privacy_review_needed",
+        "public_artifact_ids": [
+          "myeloma-state-object-schema-v0",
+          "multiple-myeloma-machine-representation-stack-v0"
+        ],
+        "source_id_state": "private_source_not_exported"
+      },
+      "disease_state_context": {
+        "field_group_id": "disease_state_context",
+        "value_state": "blocked_from_public",
+        "method_state": "private_only",
+        "specimen_or_model_context": "clinical_record_private",
+        "linkage_state": "linkage_needed",
+        "uncertainty_state": "expert_review_needed",
+        "limitation_note_required": true
+      },
+      "tumor_genomic_events": [
+        {
+          "field_group_id": "tumor_genomic_events",
+          "field_id": "private_event_not_exported",
+          "value_state": "blocked_from_public",
+          "method_state": "private_only",
+          "specimen_or_model_context": "clinical_record_private",
+          "linkage_state": "linkage_needed",
+          "uncertainty_state": "expert_review_needed",
+          "limitation_note_required": true
+        }
+      ],
+      "transcriptome_state": {
+        "field_group_id": "transcriptome_state",
+        "value_state": "private_only",
+        "method_state": "private_only",
+        "specimen_or_model_context": "clinical_record_private",
+        "linkage_state": "linkage_needed",
+        "uncertainty_state": "expert_review_needed",
+        "limitation_note_required": true
+      },
+      "marrow_ecosystem_state": {
+        "field_group_id": "marrow_ecosystem_state",
+        "value_state": "private_only",
+        "method_state": "private_only",
+        "specimen_or_model_context": "clinical_record_private",
+        "linkage_state": "linkage_needed",
+        "uncertainty_state": "expert_review_needed",
+        "limitation_note_required": true
+      },
+      "clinical_context": {
+        "field_group_id": "clinical_context",
+        "value_state": "blocked_from_public",
+        "method_state": "private_only",
+        "specimen_or_model_context": "clinical_record_private",
+        "linkage_state": "linkage_needed",
+        "uncertainty_state": "expert_review_needed",
+        "limitation_note_required": true
+      },
+      "treatment_timeline": {
+        "field_group_id": "treatment_timeline",
+        "value_state": "blocked_from_public",
+        "method_state": "private_only",
+        "specimen_or_model_context": "clinical_record_private",
+        "linkage_state": "therapy_contract_linked",
+        "uncertainty_state": "expert_review_needed",
+        "limitation_note_required": true
+      },
+      "measurement_timeline": {
+        "field_group_id": "measurement_timeline",
+        "value_state": "blocked_from_public",
+        "method_state": "private_only",
+        "specimen_or_model_context": "clinical_record_private",
+        "linkage_state": "measurement_contract_linked",
+        "uncertainty_state": "expert_review_needed",
+        "limitation_note_required": true
+      },
+      "evidence_links": {
+        "evidence_packet_ids": [],
+        "source_registry_ids": [],
+        "no_completeness_warning": true,
+        "matching_or_ranking_allowed": false
+      },
+      "missingness_and_uncertainty": {
+        "missing_modality_flags": [
+          "public_source_context"
+        ],
+        "missingness_reason": "private_source_not_exported",
+        "absence_inference_allowed": false,
+        "cohort_shift_warning": true,
+        "calibration_state": "blocked_patient_specific",
+        "uncertainty_state": "expert_review_needed"
+      },
+      "review_and_gate_state": {
+        "review_status": "privacy_review_needed",
+        "private_lab_needed": true,
+        "clinician_review_needed": true,
+        "source_appraisal_needed": true,
+        "publication_gate_needed": true,
+        "allowed_public_successor": "generic-public-task-only"
+      },
+      "blocked_output_manifest": {
+        "diagnosis_output": "blocked",
+        "prognosis_output": "blocked",
+        "progression_prediction": "blocked",
+        "response_prediction": "blocked",
+        "mrd_interpretation": "blocked",
+        "resistance_attribution": "blocked",
+        "treatment_guidance": "blocked",
+        "trial_guidance": "blocked",
+        "expanded_access_guidance": "blocked",
+        "monitoring_guidance": "blocked",
+        "matching": "blocked",
+        "ranking": "blocked",
+        "publication_authorization": "blocked",
+        "clinical_decision": "blocked"
+      }
+    }
+  ],
+  "validation_expectations": [
+    "each fixture has state_object_metadata, source_context, missingness_and_uncertainty, review_and_gate_state, and blocked_output_manifest",
+    "missing RNA and missing single-cell scenarios preserve missingness without absence, normality, lower-risk, eligibility, safety, treatment-fit, trial-fit, or no-review inference",
+    "private-source scenario blocks public export and exposes no private content",
+    "all prediction-head and clinical-use outputs remain blocked"
+  ],
+  "next_step_synthesis": {
+    "completed_step_revealed": "The schema can be exercised with compact synthetic fixtures, but every fixture repeats a blocked-output manifest; the next public-safe step should make prediction-head refusal behavior reusable.",
+    "next_frontier_lane": "model-output-boundary-wrapper-v0"
+  }
+}

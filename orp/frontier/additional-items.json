@@ -4,7 +4,7 @@
   "program_id": "curing-blood-cancer",
   "label": "Curing Blood Cancer",
   "active_list_id": "myeloma-machine-representation-implementation-v0",
-  "active_item_id": "myeloma-state-object-schema-v0",
+  "active_item_id": "machine-representation-public-scope-human-gate-blocker-v0",
   "lists": [
     {
       "id": "case-intake-frontends",
@@ -493,7 +493,7 @@
           ],
           "plans": [
             "Completed as Static Synthetic Caregiver Intake Frontend Smoke Test v0, including static source scans, Playwright desktop/mobile checks, disabled handoff controls, storage/cookie checks, and local image/CSP repair.",
-            "Next safest public work is myeloma-state-object-schema-v0."
+            "It handed off to myeloma-state-object-schema-v0, which is now complete; the active next item is synthetic-myeloma-state-fixture-v0."
           ]
         }
       ]
@@ -506,7 +506,7 @@
         {
           "id": "myeloma-state-object-schema-v0",
           "label": "Myeloma state object schema",
-          "status": "active",
+          "status": "complete",
           "goal": "Define the first public, synthetic-only myeloma disease-state object schema derived from the machine representation stack.",
           "depends_on": [
             "myeloma-machine-representation-stack-v0",
@@ -525,7 +525,212 @@
             "Validation passes after catalog and ORP updates."
           ],
           "plans": [
-            "Prefer a Markdown schema contract first, then derive JSON schema and synthetic fixtures in later public-safe atoms."
+            "Completed as schemas/myeloma-state-object-schema-v0.md.",
+            "Handoff activates synthetic-myeloma-state-fixture-v0 for visibly artificial fixture coverage."
+          ]
+        },
+        {
+          "id": "synthetic-myeloma-state-fixture-v0",
+          "label": "Synthetic myeloma state fixture",
+          "status": "complete",
+          "goal": "Create synthetic-only myeloma state object fixtures that exercise the schema across complete multimodal, missing RNA, missing single-cell, and private-source-blocked scenarios.",
+          "depends_on": [
+            "myeloma-state-object-schema-v0"
+          ],
+          "requirements": [
+            "Use the myeloma state object schema, machine representation stack, upstream normalization contracts, evidence retrieval packet, and public safety governance as boundaries.",
+            "Every fixture must be visibly artificial and must include source context, missingness, uncertainty, review/gate state, and blocked output manifest fields.",
+            "Do not include real case data, identifiers, raw records, exact person-linked dates, report text, uploads, private correspondence, model weights, predictions, recommendations, matching, ranking, or clinical decisions."
+          ],
+          "success_criteria": [
+            "A synthetic-myeloma-state-fixture-v0 artifact exists with metadata and public navigation links.",
+            "Fixtures exercise complete multimodal, missing RNA, missing single-cell, and private-source-blocked schema paths.",
+            "Missingness is explicit and never implies absence, normality, lower risk, safety, treatment fit, trial fit, or no need for review.",
+            "Validation passes after catalog and ORP updates."
+          ],
+          "plans": [
+            "Completed as examples/synthetic-myeloma-state-fixture-v0.json.",
+            "Handoff activates model-output-boundary-wrapper-v0 because every fixture repeats the same blocked-output manifest and prediction-head refusal states."
+          ]
+        },
+        {
+          "id": "model-output-boundary-wrapper-v0",
+          "label": "Model output boundary wrapper",
+          "status": "complete",
+          "goal": "Define reusable public-safe refusal and uncertainty rules for progression, response, MRD, and resistance head placeholders before any model-facing output work.",
+          "depends_on": [
+            "myeloma-state-object-schema-v0",
+            "synthetic-myeloma-state-fixture-v0"
+          ],
+          "requirements": [
+            "Use the myeloma state object schema, synthetic fixture, measurement normalization contract, therapy exposure timeline contract, molecular immune context contract, evidence retrieval packet, and public safety governance as boundaries.",
+            "Represent progression, response, MRD, and resistance head placeholders only as not-implemented, calibration-needed, or blocked-patient-specific states.",
+            "Do not produce scores, thresholds, probabilities, risk categories, candidate options, matches, rankings, treatment guidance, trial guidance, monitoring guidance, expanded-access guidance, publication authorization, or clinical decisions.",
+            "Preserve uncertainty, missingness, review status, gate status, source context, and refusal reason for every placeholder output family."
+          ],
+          "success_criteria": [
+            "A model-output-boundary-wrapper-v0 artifact exists with metadata and public navigation links.",
+            "The wrapper defines allowed placeholder fields, required refusal states, required uncertainty and review fields, and blocked downstream uses.",
+            "The wrapper can be referenced by future validators or fixtures without creating predictions or advice.",
+            "Validation passes after catalog and ORP updates."
+          ],
+          "plans": [
+            "Completed as disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md.",
+            "Handoff activates myeloma-state-validator-rule-map-v0 because the schema, fixture, and wrapper now need stable fail-closed rule IDs before any future validator or review packet references them."
+          ]
+        },
+        {
+          "id": "myeloma-state-validator-rule-map-v0",
+          "label": "Myeloma state validator rule map",
+          "status": "complete",
+          "goal": "Define no-code validator rules for myeloma state objects, synthetic fixtures, and model-output boundary wrapper fields without validating real cases or creating prediction behavior.",
+          "depends_on": [
+            "myeloma-state-object-schema-v0",
+            "synthetic-myeloma-state-fixture-v0",
+            "model-output-boundary-wrapper-v0"
+          ],
+          "requirements": [
+            "Use the myeloma state object schema, synthetic fixture, model-output boundary wrapper, measurement normalization contract, therapy exposure timeline contract, molecular immune context contract, evidence retrieval packet, and public safety governance as boundaries.",
+            "Map rule IDs to owner artifacts, required fields, synthetic coverage, fail-closed action, allowed public successor, review state, and blocked downstream uses.",
+            "Do not validate, normalize, infer from, score, predict for, rank, match, publish, or make decisions from real case data.",
+            "Do not create treatment guidance, trial guidance, monitoring guidance, expanded-access guidance, publication authorization, model weights, scoring code, prediction APIs, or clinical action language."
+          ],
+          "success_criteria": [
+            "A myeloma-state-validator-rule-map-v0 artifact exists with metadata and public navigation links.",
+            "The rule map covers schema core fields, missingness states, source context, review gates, synthetic fixture scenarios, and model-output wrapper refusal states.",
+            "Every rule has a fail-closed action and blocked-use label before future executable validators or review packets can reference it.",
+            "Validation passes after catalog and ORP updates."
+          ],
+          "plans": [
+            "Completed as disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md.",
+            "Handoff activates machine-representation-source-extraction-v0 because the rule map identifies architecture claims that need exact public source IDs, source-context gaps, and expert-review status before stronger downstream use."
+          ]
+        },
+        {
+          "id": "machine-representation-source-extraction-v0",
+          "label": "Machine representation source extraction",
+          "status": "complete",
+          "goal": "Map myeloma machine-representation architecture claims to public source IDs, source-context gaps, extraction status, uncertainty, and expert-review needs without model code, predictions, advice, matching, or ranking.",
+          "depends_on": [
+            "myeloma-state-object-schema-v0",
+            "synthetic-myeloma-state-fixture-v0",
+            "model-output-boundary-wrapper-v0",
+            "myeloma-state-validator-rule-map-v0"
+          ],
+          "requirements": [
+            "Use the myeloma machine representation stack, source registry, state object schema, synthetic fixture, model-output boundary wrapper, validator rule map, evidence retrieval packet, and public safety governance as boundaries.",
+            "Map each architecture claim to source IDs, source-context status, extraction status, uncertainty, review status, blocked uses, and next public contribution task.",
+            "Do not create model code, source ranking, evidence ranking, clinical interpretation, treatment guidance, trial guidance, monitoring guidance, matching, ranking, or patient-specific outputs.",
+            "Do not use real case data, identifiers, raw records, private correspondence, paid APIs, restricted datasets, or private lab access."
+          ],
+          "success_criteria": [
+            "A machine-representation-source-extraction-v0 artifact exists with metadata and public navigation links.",
+            "Architecture claims from the machine representation stack are mapped to source IDs or explicit source-context-needed tasks.",
+            "Every extraction row carries uncertainty, review status, blocked-use labels, and a contribution-ready next action.",
+            "Validation passes after catalog and ORP updates."
+          ],
+          "plans": [
+            "Completed as disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md.",
+            "Handoff activates machine-representation-source-gap-task-queue-v0 because the extraction table leaves source_context_needed rows and contribution task seeds that should be turned into public tasks before any stronger downstream use."
+          ]
+        },
+        {
+          "id": "machine-representation-source-gap-task-queue-v0",
+          "label": "Machine representation source-gap task queue",
+          "status": "complete",
+          "goal": "Turn machine-representation source-context gaps and contribution task seeds into a public task queue without model code, predictions, advice, matching, ranking, clinical interpretation, outreach, or publication decisions.",
+          "depends_on": [
+            "machine-representation-source-extraction-v0"
+          ],
+          "requirements": [
+            "Use the machine representation source extraction table, source registry, evidence retrieval packet, validator rule map, model-output boundary wrapper, and public safety governance as boundaries.",
+            "Convert source_context_needed rows and expert-review-needed rows into public tasks with source IDs or source-context-needed labels, uncertainty, blocked uses, review status, and done criteria.",
+            "Do not create model code, evidence ranking, source ranking, treatment guidance, trial guidance, monitoring guidance, matching, ranking, patient-specific outputs, outreach, or publication authorization.",
+            "Do not use real case data, identifiers, raw records, private correspondence, paid APIs, restricted datasets, or private lab access."
+          ],
+          "success_criteria": [
+            "A machine-representation-source-gap-task-queue-v0 artifact exists with metadata and public navigation links.",
+            "Every source-context gap from the source extraction table has a public-safe task, blocker, or explicit no-add reason.",
+            "Each task carries blocked-use labels, uncertainty, review status, and public-source-only done criteria.",
+            "Validation passes after catalog and ORP updates."
+          ],
+          "plans": [
+            "Completed as disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md.",
+            "Handoff activates machine-representation-source-gap-issue-draft-packet-v0 because the task queue is ready for human-reviewable issue draft text, but autonomous issue opening and outreach remain blocked."
+          ]
+        },
+        {
+          "id": "machine-representation-source-gap-issue-draft-packet-v0",
+          "label": "Machine representation source-gap issue draft packet",
+          "status": "complete",
+          "goal": "Prepare reusable public issue draft text for machine-representation source-gap tasks without opening issues, sending outreach, requesting private material, creating model code, predictions, advice, matching, ranking, or clinical interpretation.",
+          "depends_on": [
+            "machine-representation-source-gap-task-queue-v0"
+          ],
+          "requirements": [
+            "Use the machine representation source-gap task queue, source extraction table, source registry, evidence retrieval packet, validator rule map, model-output boundary wrapper, and public safety governance as boundaries.",
+            "Draft issue-ready public text for each ready task with purpose, allowed inputs, blocked outputs, done criteria, and no-advice copy.",
+            "Do not open GitHub issues, send outreach, copy private correspondence, request real case data, rank sources, rank evidence, rank options, or authorize publication.",
+            "Do not use real case data, identifiers, raw records, private correspondence, paid APIs, restricted datasets, or private lab access."
+          ],
+          "success_criteria": [
+            "A machine-representation-source-gap-issue-draft-packet-v0 artifact exists with metadata and public navigation links.",
+            "Each issue draft is human-reviewable and linked to task IDs, source-extraction rows, blocked uses, and done criteria.",
+            "The packet explicitly blocks autonomous issue creation, outreach, source ranking, evidence ranking, model behavior, clinical interpretation, and publication authorization.",
+            "Validation passes after catalog and ORP updates."
+          ],
+          "plans": [
+            "Prefer one compact markdown packet first; no autonomous issue creation, no outreach, no source ranking, and no clinical interpretation.",
+            "Completed as disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md.",
+            "Handoff activates machine-representation-implementation-completion-audit-v0 because the phase success criteria are now represented and should be audited before selecting any new public-safe phase."
+          ]
+        },
+        {
+          "id": "machine-representation-implementation-completion-audit-v0",
+          "label": "Machine representation implementation completion audit",
+          "status": "complete",
+          "goal": "Audit whether the human-selected machine-representation implementation phase is complete or whether another public-safe adjacent item remains, without opening issues, sending outreach, requesting private material, validating real cases, producing model outputs, advice, matching, ranking, or publication authorization.",
+          "depends_on": [
+            "machine-representation-source-gap-issue-draft-packet-v0"
+          ],
+          "requirements": [
+            "Use the state object schema, synthetic fixture, model-output boundary wrapper, validator rule map, source extraction table, source-gap task queue, source-gap issue draft packet, adaptive master plan, public inventory, public catalog, and public safety governance as audit inputs.",
+            "Decide whether the myeloma-machine-representation-implementation-v0 phase is complete, blocked, or needs another public-safe adjacent item.",
+            "Name any remaining work only as public-safe next items or explicit expert-review-needed, private-lab-needed, clinical-team-needed, legal-needed, regulatory-needed, publication-gate-needed, or human-review-needed blockers.",
+            "Do not open GitHub issues, send outreach, request private material, validate real cases, rank sources, rank evidence, rank options, create model behavior, or authorize publication."
+          ],
+          "success_criteria": [
+            "A machine-representation-implementation-completion-audit-v0 artifact exists with metadata and public navigation links.",
+            "The audit checks every completed implementation artifact against phase success criteria and public-safety boundaries.",
+            "The audit either activates a next public-safe item, marks the phase complete with a named blocker, or records why no autonomous public-safe item remains.",
+            "Validation passes after catalog and ORP updates."
+          ],
+          "plans": [
+            "Completed as disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md.",
+            "Handoff activates machine-representation-public-scope-human-gate-blocker-v0 because the audit closes the human-selected machine-representation implementation phase and leaves only named human-gated work."
+          ]
+        },
+        {
+          "id": "machine-representation-public-scope-human-gate-blocker-v0",
+          "label": "Machine representation public-scope human gate blocker",
+          "status": "blocked",
+          "goal": "Record that no autonomous public-safe machine-representation implementation item remains after the completion audit.",
+          "depends_on": [
+            "machine-representation-implementation-completion-audit-v0"
+          ],
+          "requirements": [
+            "Stop autonomous machine-representation implementation work unless a human selects a new named public-safe phase or clears a named gate.",
+            "Keep remaining work labeled as expert-review-needed, private-lab-needed, clinical-team-needed, model-governance-needed, legal-needed, regulatory-needed, publication-gate-needed, human-review-needed, or out-of-scope.",
+            "Do not create another sibling schema, fixture, validator, issue draft, model, dashboard, extractor, or tool by momentum.",
+            "Do not use real case data, clinical judgment, outreach, private lab access, publication authorization, credentials, paid services, model training, predictions, matching, ranking, or patient-specific guidance."
+          ],
+          "success_criteria": [
+            "The blocker is explicit in ORP state, additional queue, version stack, inventory, and completion audit.",
+            "The next action names human gate classes instead of an autonomous artifact.",
+            "Validation passes with the completion audit cataloged."
+          ],
+          "plans": [
+            "Blocked until human selection of a new named public-safe phase or clearance of expert-review-needed, private-lab-needed, clinical-team-needed, model-governance-needed, legal-needed, regulatory-needed, publication-gate-needed, or human-review-needed gates."
           ]
         }
       ]

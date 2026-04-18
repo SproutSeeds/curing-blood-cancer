@@ -202,6 +202,14 @@ Case-specific plumbing:
 - [Case-To-Cure Pipeline Blueprint v0](case-to-cure-pipeline-blueprint-v0.md)
 - [Case-To-Cure Stage Validator And Owner Map v0](case-to-cure-stage-validator-map-v0.md)
 - [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
+- [Myeloma State Object Schema v0](../../schemas/myeloma-state-object-schema-v0.md)
+- [Synthetic Myeloma State Fixture v0](../../examples/synthetic-myeloma-state-fixture-v0.json)
+- [Model Output Boundary Wrapper v0](model-output-boundary-wrapper-v0.md)
+- [Myeloma State Validator Rule Map v0](myeloma-state-validator-rule-map-v0.md)
+- [Machine Representation Source Extraction v0](machine-representation-source-extraction-v0.md)
+- [Machine Representation Source-Gap Task Queue v0](public-tasks/machine-representation-source-gap-task-queue-v0.md)
+- [Machine Representation Source-Gap Issue Draft Packet v0](public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md)
+- [Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md)
 - [Static Synthetic Caregiver Intake Frontend Smoke Test v0](case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md)
 - [Multiple Myeloma Synthetic Case-To-Cure Pipeline v0](../../examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md)
 - [End-To-End Synthetic Case Dry Run v0](end-to-end-synthetic-case-dry-run-v0.md)
@@ -389,6 +397,22 @@ lab repo.
    [Molecular Immune Context Contract v0](contexts/molecular-immune-context-contract-v0.md),
    and the
    [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md),
+   and the
+   [Myeloma State Object Schema v0](../../schemas/myeloma-state-object-schema-v0.md),
+   and the
+   [Synthetic Myeloma State Fixture v0](../../examples/synthetic-myeloma-state-fixture-v0.json),
+   and the
+   [Model Output Boundary Wrapper v0](model-output-boundary-wrapper-v0.md),
+   and the
+   [Myeloma State Validator Rule Map v0](myeloma-state-validator-rule-map-v0.md),
+   and the
+   [Machine Representation Source Extraction v0](machine-representation-source-extraction-v0.md),
+   and the
+   [Machine Representation Source-Gap Task Queue v0](public-tasks/machine-representation-source-gap-task-queue-v0.md),
+   and the
+   [Machine Representation Source-Gap Issue Draft Packet v0](public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md),
+   and the
+   [Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md),
    and the
    [Evidence Retrieval Packet v0](evidence-retrieval-packet-v0.md),
    and the

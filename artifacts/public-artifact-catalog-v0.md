@@ -20,6 +20,8 @@ claim for clinical use, or authorize patient-specific interpretation.
 | BCMA Antigen Escape Public Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/bcma-antigen-escape-public-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/bcma-antigen-escape-public-task-queue-v0.md) |
 | BCMA Measurement Context Audit v0 | dataset | open-question | [disease-programs/multiple-myeloma/measurements/bcma-measurement-context-audit-v0.md](../disease-programs/multiple-myeloma/measurements/bcma-measurement-context-audit-v0.md) |
 | Case-Specific Private-Lab Blocker Register v0 | dataset | open-question | [disease-programs/multiple-myeloma/case-specific-private-lab-blocker-register-v0.md](../disease-programs/multiple-myeloma/case-specific-private-lab-blocker-register-v0.md) |
+| Machine Representation Source Extraction v0 | dataset | open-question | [disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md](../disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md) |
+| Machine Representation Source-Gap Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md) |
 | MRD And Relapse Measurement Glossary v0 | dataset | derived | [disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md](../disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md) |
 | Multiple Myeloma Expert Response Validation Ledger v0 | dataset | open-question | [disease-programs/multiple-myeloma/reviews/expert-response-validation-ledger-v0.md](../disease-programs/multiple-myeloma/reviews/expert-response-validation-ledger-v0.md) |
 | Multiple Myeloma Expert Validation Issue Index v0 | dataset | open-question | [disease-programs/multiple-myeloma/reviews/expert-validation-issue-index-v0.md](../disease-programs/multiple-myeloma/reviews/expert-validation-issue-index-v0.md) |
@@ -32,6 +34,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Post-CAR T Relapse Mechanism Gap Public Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/post-car-t-relapse-mechanism-gap-public-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/post-car-t-relapse-mechanism-gap-public-task-queue-v0.md) |
 | Public Artifact Catalog v0 | dataset | derived | [artifacts/public-artifact-catalog-v0.md](../artifacts/public-artifact-catalog-v0.md) |
 | Source Registry v0 | dataset | derived | [sources/source-registry-v0.md](../sources/source-registry-v0.md) |
+| Synthetic Myeloma State Fixture v0 | dataset | open-question | [examples/synthetic-myeloma-state-fixture-v0.json](../examples/synthetic-myeloma-state-fixture-v0.json) |
 
 ### map
 
@@ -43,6 +46,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Immune Therapy Sequencing And Access Boundary v0 | map | open-question | [disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md](../disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md) |
 | Multiple Myeloma Durable MRD-Negative Remission Cure Wedge v0 | map | open-question | [disease-programs/multiple-myeloma/cure-wedge-durable-mrd-negative-remission-v0.md](../disease-programs/multiple-myeloma/cure-wedge-durable-mrd-negative-remission-v0.md) |
 | Multiple Myeloma Open Research Map v0.1 | map | open-question | [disease-programs/multiple-myeloma/open-research-map-v0-1.md](../disease-programs/multiple-myeloma/open-research-map-v0-1.md) |
+| Myeloma State Validator Rule Map v0 | map | open-question | [disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md](../disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md) |
 | Post-BCMA Resistance Frontier Addendum v0 | map | open-question | [disease-programs/multiple-myeloma/mechanisms/post-bcma-resistance-frontier-addendum-v0.md](../disease-programs/multiple-myeloma/mechanisms/post-bcma-resistance-frontier-addendum-v0.md) |
 | Post-CAR T Relapse Mechanism Map v0 | map | derived | [disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-map-v0.md](../disease-programs/multiple-myeloma/mechanisms/post-car-t-relapse-mechanism-map-v0.md) |
 
@@ -68,6 +72,9 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Consent Privacy Security Retention Gate v0 | protocol | open-question | [disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.md](../disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.md) |
 | End-To-End Synthetic Case Dry Run v0 | protocol | open-question | [disease-programs/multiple-myeloma/end-to-end-synthetic-case-dry-run-v0.md](../disease-programs/multiple-myeloma/end-to-end-synthetic-case-dry-run-v0.md) |
 | Expert Validation Loop v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/expert-validation-loop-v0.md](../disease-programs/multiple-myeloma/reviews/expert-validation-loop-v0.md) |
+| Machine Representation Implementation Completion Audit v0 | protocol | open-question | [disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md](../disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md) |
+| Machine Representation Source-Gap Issue Draft Packet v0 | protocol | open-question | [disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md](../disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md) |
+| Model Output Boundary Wrapper v0 | protocol | open-question | [disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md](../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md) |
 | MRD Endpoint Language Guardrail Addendum v0 | protocol | open-question | [disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md](../disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md) |
 | Multidisciplinary Review Packet Builder v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md](../disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md) |
 | Multidisciplinary Review Packet Template v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md](../disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md) |
@@ -106,6 +113,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Evidence Retrieval Packet v0 | schema | open-question | [disease-programs/multiple-myeloma/evidence-retrieval-packet-v0.md](../disease-programs/multiple-myeloma/evidence-retrieval-packet-v0.md) |
 | Measurement Normalization Contract v0 | schema | open-question | [disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md](../disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md) |
 | Molecular Immune Context Contract v0 | schema | open-question | [disease-programs/multiple-myeloma/contexts/molecular-immune-context-contract-v0.md](../disease-programs/multiple-myeloma/contexts/molecular-immune-context-contract-v0.md) |
+| Myeloma State Object Schema v0 | schema | open-question | [schemas/myeloma-state-object-schema-v0.md](../schemas/myeloma-state-object-schema-v0.md) |
 | Open-Question Record Schema v0 | schema | open-question | [schemas/open-question-record-schema-v0.md](../schemas/open-question-record-schema-v0.md) |
 | Private Intake Schema Contract v0 | schema | open-question | [disease-programs/multiple-myeloma/case-intake/private-intake-schema-contract-v0.md](../disease-programs/multiple-myeloma/case-intake/private-intake-schema-contract-v0.md) |
 | Review-Packet Builder Manifest Schema v0 | schema | open-question | [schemas/review-packet-builder-manifest-schema-v0.md](../schemas/review-packet-builder-manifest-schema-v0.md) |

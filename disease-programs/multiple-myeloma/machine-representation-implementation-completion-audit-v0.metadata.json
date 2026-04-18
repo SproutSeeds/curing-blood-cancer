@@ -1,0 +1,124 @@
+{
+  "artifact_id": "machine-representation-implementation-completion-audit-v0",
+  "title": "Machine Representation Implementation Completion Audit v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "machine representation",
+    "completion audit",
+    "myeloma state object",
+    "synthetic fixture",
+    "model output boundary",
+    "validator rule map",
+    "source extraction",
+    "public contribution",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Case-To-Cure Adaptive Master Plan v0",
+      "url": "case-to-cure-adaptive-master-plan-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Myeloma Machine Representation Stack v0",
+      "url": "machine-representation-stack-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Myeloma State Object Schema v0",
+      "url": "../../schemas/myeloma-state-object-schema-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Synthetic Myeloma State Fixture v0",
+      "url": "../../examples/synthetic-myeloma-state-fixture-v0.json",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Model Output Boundary Wrapper v0",
+      "url": "model-output-boundary-wrapper-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Myeloma State Validator Rule Map v0",
+      "url": "myeloma-state-validator-rule-map-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Machine Representation Source Extraction v0",
+      "url": "machine-representation-source-extraction-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Machine Representation Source-Gap Task Queue v0",
+      "url": "public-tasks/machine-representation-source-gap-task-queue-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Machine Representation Source-Gap Issue Draft Packet v0",
+      "url": "public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Multiple Myeloma Public Inventory v0",
+      "url": "public-inventory-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Public Artifact Catalog v0",
+      "url": "../../artifacts/public-artifact-catalog-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "ORP Frontier State",
+      "url": "../../orp/frontier/state.json",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../../orp/frontier/additional-items.json",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-18"
+    }
+  ],
+  "limitations": [
+    "Public completion audit only.",
+    "Not scientific review.",
+    "Not expert review.",
+    "Not clinical review.",
+    "Not legal review.",
+    "Not regulatory review.",
+    "Not privacy review.",
+    "Not model-governance review.",
+    "Not publication review.",
+    "Not release review.",
+    "Not a clinical model.",
+    "Not a normalizer.",
+    "Not executable validator software.",
+    "Not a prediction record.",
+    "Not a scoring function.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not publication authorization.",
+    "Does not contain patient-identifying data, real case data, raw records, molecular reports, pathology reports, flow reports, images, notes, exact dates tied to a person, private paths, private case IDs, private correspondence, or re-identification keys.",
+    "Does not collect, normalize, store, transmit, train on, infer from, publish, compare, rank, match, recommend, or authorize use of real case data.",
+    "Does not output patient-specific progression risk, response probability, MRD interpretation, resistance attribution, treatment recommendations, trial recommendations, monitoring actions, candidate option rankings, or clinical decisions.",
+    "Does not open issues, send outreach, publish, commit, push, or authorize public release.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/machine-representation-implementation-completion-audit-v0.md"
+}

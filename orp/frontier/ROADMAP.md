@@ -3,7 +3,7 @@
 - active_version: `v2`
 - active_milestone: `case-to-cure-adaptive-master-plan-v0`
 - band: `exact`
-- next_action: `Build myeloma-state-object-schema-v0: define a synthetic-only model-facing myeloma state object schema from the machine representation stack, preserving source context, missingness, uncertainty, review status, and no patient-specific predictions or advice.`
+- next_action: `Blocked on human gate after machine-representation implementation completion audit: no autonomous public-safe machine-representation implementation item remains until a human selects a new named public-safe phase or clears expert-review, private-lab, clinical-team, model-governance, legal, regulatory, publication, or human-review gates.`
 
 ## Phases
 
@@ -26,4 +26,4 @@
 - [x] **Phase case-to-cure-master-completion-audit-v0: Case-To-Cure Master Completion Audit v0** - Audit whether the adaptive master plan is complete, safely blocked, or ready for a new named phase.
 - [ ] **Phase case-to-cure-public-scope-human-gate-blocker-v0: Case-To-Cure Public-Scope Human Gate Blocker v0** - Block further autonomous case-to-cure work until a human selects a new named public-safe phase or clears a named gate.
 - [x] **Phase public-caregiver-intake-frontend-v0: Public Caregiver Intake Frontend v0** - Created and smoke-tested the public-facing, static, synthetic-only caregiver intake frontend prototype for multiple myeloma case organization without collecting real patient data or providing medical advice.
-- [ ] **Phase myeloma-machine-representation-implementation-v0: Myeloma Machine Representation Implementation v0** - Turn the myeloma machine representation architecture into synthetic-only, public-safe schema and fixture artifacts without model weights, real case data, patient-specific predictions, treatment advice, trial advice, or option ranking.
+- [ ] **Phase myeloma-machine-representation-implementation-v0: Myeloma Machine Representation Implementation v0** - Public-safe implementation audit is complete and the active state is blocked on human selection of a new named public-safe phase or clearance of named expert-review, private-lab, clinical-team, model-governance, legal, regulatory, publication, or human-review gates.

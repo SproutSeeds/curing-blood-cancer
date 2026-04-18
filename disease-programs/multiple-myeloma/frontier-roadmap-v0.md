@@ -491,12 +491,33 @@ prototype. The completed frontend item is
 [Static Synthetic Caregiver Intake Frontend v0](case-intake/static-synthetic-caregiver-intake-frontend-v0.html),
 and the completed smoke-test item is
 [Static Synthetic Caregiver Intake Frontend Smoke Test v0](case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md).
-The active queue item is now `myeloma-state-object-schema-v0`, meaning the next
-autonomous public-safe move is to define a synthetic-only model-facing state
-object schema derived from
-[Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
-without model weights, real case data, patient-specific predictions, treatment
-advice, trial advice, or option ranking.
+The completed queue items now include `myeloma-state-object-schema-v0`,
+captured as
+[Myeloma State Object Schema v0](../../schemas/myeloma-state-object-schema-v0.md),
+and `synthetic-myeloma-state-fixture-v0`, captured as
+[Synthetic Myeloma State Fixture v0](../../examples/synthetic-myeloma-state-fixture-v0.json).
+The completed queue item now also includes `model-output-boundary-wrapper-v0`,
+captured as
+[Model Output Boundary Wrapper v0](model-output-boundary-wrapper-v0.md).
+The completed queue item now also includes `myeloma-state-validator-rule-map-v0`,
+captured as
+[Myeloma State Validator Rule Map v0](myeloma-state-validator-rule-map-v0.md).
+The completed queue item now also includes `machine-representation-source-extraction-v0`,
+captured as
+[Machine Representation Source Extraction v0](machine-representation-source-extraction-v0.md).
+The completed queue item now also includes
+`machine-representation-source-gap-task-queue-v0`, captured as
+[Machine Representation Source-Gap Task Queue v0](public-tasks/machine-representation-source-gap-task-queue-v0.md).
+The completed queue item now also includes
+`machine-representation-source-gap-issue-draft-packet-v0`, captured as
+[Machine Representation Source-Gap Issue Draft Packet v0](public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md).
+The completed queue item now also includes
+`machine-representation-implementation-completion-audit-v0`, captured as
+[Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md).
+The active queue item is now blocked as
+`machine-representation-public-scope-human-gate-blocker-v0`, meaning no further
+autonomous public-safe machine-representation implementation item remains
+without human selection of a new named phase or clearance of a named gate.
 
 Completion criteria:
 
