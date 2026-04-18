@@ -168,7 +168,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-inventory-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-inventory-v0.metadata.json",
-      "source_count": 39,
+      "source_count": 40,
       "limitation_count": 11
     },
     {
@@ -572,7 +572,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.metadata.json",
-      "source_count": 27,
+      "source_count": 28,
       "limitation_count": 12
     },
     {
@@ -685,7 +685,7 @@
       ],
       "path": "protocols/clawdad-frontier-delegation-packet-v0.md",
       "metadata_path": "protocols/clawdad-frontier-delegation-packet-v0.metadata.json",
-      "source_count": 35,
+      "source_count": 36,
       "limitation_count": 10
     },
     {
@@ -879,7 +879,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.metadata.json",
-      "source_count": 29,
+      "source_count": 30,
       "limitation_count": 9
     },
     {
@@ -946,7 +946,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-roadmap-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-roadmap-v0.metadata.json",
-      "source_count": 21,
+      "source_count": 22,
       "limitation_count": 6
     },
     {
@@ -1179,6 +1179,26 @@
       "metadata_path": "disease-programs/multiple-myeloma/reviews/review-packet-builder-recombination-handoff-v0.metadata.json",
       "source_count": 10,
       "limitation_count": 12
+    },
+    {
+      "artifact_id": "multiple-myeloma-static-synthetic-caregiver-intake-frontend-smoke-test-v0",
+      "title": "Static Synthetic Caregiver Intake Frontend Smoke Test v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "caregiver intake",
+        "static frontend prototype",
+        "smoke test",
+        "synthetic fixture",
+        "public safety",
+        "private-lab handoff"
+      ],
+      "path": "disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.metadata.json",
+      "source_count": 12,
+      "limitation_count": 25
     },
     {
       "artifact_id": "multiple-myeloma-static-synthetic-caregiver-prototype-plan-v0",
@@ -1549,8 +1569,8 @@
       ],
       "path": "disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-v0.html",
       "metadata_path": "disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-v0.metadata.json",
-      "source_count": 11,
-      "limitation_count": 26
+      "source_count": 12,
+      "limitation_count": 27
     }
   ],
   "review": {
@@ -1558,8 +1578,9 @@
     "last_reviewed": "2026-04-18",
     "review_status": "expert-review-needed",
     "review_notes": [
-      "Generated mechanically from public metadata files.",
-      "Catalog completeness is structural only and does not validate scientific or clinical claims."
+      "Generated from public artifact metadata for navigation.",
+      "Structural catalog only; inclusion does not mean expert review, clinical readiness, or publication approval.",
+      "Public boundary excludes private lab material, patient-identifying data, credentials, restricted datasets, and unreviewed exports."
     ]
   }
 }

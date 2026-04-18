@@ -3,8 +3,8 @@
   "kind": "orp_frontier_additional_items",
   "program_id": "curing-blood-cancer",
   "label": "Curing Blood Cancer",
-  "active_list_id": "public-caregiver-intake-frontend-v0",
-  "active_item_id": "static-synthetic-caregiver-intake-frontend-smoke-test-v0",
+  "active_list_id": "myeloma-machine-representation-implementation-v0",
+  "active_item_id": "myeloma-state-object-schema-v0",
   "lists": [
     {
       "id": "case-intake-frontends",
@@ -440,7 +440,7 @@
     {
       "id": "public-caregiver-intake-frontend-v0",
       "label": "Public Caregiver Intake Frontend v0",
-      "status": "active",
+      "status": "complete",
       "items": [
         {
           "id": "static-synthetic-caregiver-intake-frontend-v0",
@@ -474,7 +474,7 @@
         {
           "id": "static-synthetic-caregiver-intake-frontend-smoke-test-v0",
           "label": "Static synthetic caregiver intake frontend smoke test",
-          "status": "active",
+          "status": "complete",
           "goal": "Document public-safety smoke checks for the static synthetic caregiver intake frontend so the prototype is auditable before any future UI iteration.",
           "depends_on": [
             "static-synthetic-caregiver-intake-frontend-v0"
@@ -486,13 +486,46 @@
             "Do not use real case data, private names, identifiers, records, person-linked dates, free-text case details, patient-specific outputs, recommendations, rankings, matching, treatment guidance, trial guidance, monitoring guidance, expanded-access guidance, publication authorization, outreach, or private lab access."
           ],
           "success_criteria": [
-            "A public smoke-test report or validator note exists and is linked from the frontend metadata or case-intake README.",
-            "The report records desktop and mobile checks plus no-submit/no-storage/no-upload/no-network behavior using synthetic-only content.",
-            "Any remaining frontend risk is queued as a public-safe UI task or blocked by a named human/private/clinical/legal/publication gate.",
+            "A public smoke-test report exists and is linked from the frontend metadata and case-intake README.",
+            "The report records desktop and mobile checks plus no-submit/no-storage/no-upload/no-backend/no external image dependency behavior using synthetic-only content.",
+            "Remaining real intake, private-lab, clinical, legal, publication, outreach, and case-data work remains blocked.",
             "Validation passes after catalog and navigation updates."
           ],
           "plans": [
-            "Prefer a short markdown smoke-test report before adding executable UI tests; use Playwright screenshots only for local verification and do not introduce live intake plumbing."
+            "Completed as Static Synthetic Caregiver Intake Frontend Smoke Test v0, including static source scans, Playwright desktop/mobile checks, disabled handoff controls, storage/cookie checks, and local image/CSP repair.",
+            "Next safest public work is myeloma-state-object-schema-v0."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "myeloma-machine-representation-implementation-v0",
+      "label": "Myeloma Machine Representation Implementation v0",
+      "status": "active",
+      "items": [
+        {
+          "id": "myeloma-state-object-schema-v0",
+          "label": "Myeloma state object schema",
+          "status": "active",
+          "goal": "Define the first public, synthetic-only myeloma disease-state object schema derived from the machine representation stack.",
+          "depends_on": [
+            "myeloma-machine-representation-stack-v0",
+            "static-synthetic-caregiver-intake-frontend-smoke-test-v0"
+          ],
+          "requirements": [
+            "Represent source context, tumor genomic events, transcriptome state, marrow ecosystem state, clinical context, treatment timeline, measurement timeline, missingness, uncertainty, and review status.",
+            "Use source-scoped fields and explicit unknown/not-tested/not-collected states; never infer absence from a missing assay or modality.",
+            "Keep the artifact public-safe and synthetic-only: no real case data, identifiers, raw records, uploads, exact person-linked dates, report text, free-text case details, model weights, predictions, recommendations, matching, ranking, or clinical decisions.",
+            "Link the artifact to the machine representation stack, case-feature normalization contract, measurement normalization contract, therapy exposure timeline contract, molecular immune context contract, evidence retrieval packet, and public safety governance."
+          ],
+          "success_criteria": [
+            "A myeloma-state-object-schema-v0 artifact exists with metadata and public navigation links.",
+            "The schema separates required source/review metadata from optional modality-specific fields.",
+            "The schema includes fail-closed missingness and blocked-use rules.",
+            "Validation passes after catalog and ORP updates."
+          ],
+          "plans": [
+            "Prefer a Markdown schema contract first, then derive JSON schema and synthetic fixtures in later public-safe atoms."
           ]
         }
       ]

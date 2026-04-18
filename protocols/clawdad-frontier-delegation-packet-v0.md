@@ -101,6 +101,7 @@ Inspect these files at the start of each pass:
 - `disease-programs/multiple-myeloma/case-intake/private-intake-schema-contract-v0.md`
 - `disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-prototype-plan-v0.md`
 - `disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-v0.html`
+- `disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md`
 - `disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-validator-v0.md`
 - `disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.md`
 - `disease-programs/multiple-myeloma/case-feature-normalization-contract-v0.md`
@@ -142,37 +143,32 @@ makes another slice clearly safer.
 
 ### Active Named Phase. Case-To-Cure Adaptive Master Plan v0
 
-The current active named phase is `public-caregiver-intake-frontend-v0`
+The current active named phase is `myeloma-machine-representation-implementation-v0`
 inside `case-to-cure-adaptive-master-plan-v0`.
-The active phase is `public-caregiver-intake-frontend-v0`.
-The active additional queue is `public-caregiver-intake-frontend-v0`.
-The active additional item is `static-synthetic-caregiver-intake-frontend-smoke-test-v0`.
+The active phase is `myeloma-machine-representation-implementation-v0`.
+The active additional queue is `myeloma-machine-representation-implementation-v0`.
+The active additional item is `myeloma-state-object-schema-v0`.
 
-This phase supersedes the prior "frontier complete / no ready tasks" endpoint
-and the completed caregiver intake documentation subphase. The eight-lane
-public frontier, caregiver intake foundation, and case-to-cure master audit
-remain valuable, but the human-selected next phase is now a public static
-frontend prototype.
+This phase follows the smoke-tested static caregiver frontend prototype. The
+next public-safe work is machine-state schema plumbing derived from the
+myeloma machine representation stack, while real case data, model weights,
+patient-specific predictions, and clinical decision behavior stay blocked.
 
 Required output for the next pass:
 
-- document the smallest useful public-safety smoke-test report for the static,
-  synthetic-only public caregiver intake frontend prototype
-- use generic caregiver language only; do not use private names or private
-  relationship details
-- use the existing caregiver case intake product spec, private intake schema
-  contract, projection checklist, consent/privacy/security gate, synthetic
-  caregiver fixture, public safety governance, and private-to-public workflow
-  as boundaries
-- keep the interface as a public prototype only: no real data collection,
-  uploads, backend, auth, database, email submission, or patient-identifying
-  data
-- verify clear frg.earth stewardship, unknown/not-sure paths, final review,
-  emergency boundary, clinician-review boundary, disabled private handoff, and
-  no-advice copy
-- verify no form submission path, upload control, backend call, local storage,
-  session storage, cookies, auth, email path, database behavior, or real data
-  capture
+- define the smallest useful public `myeloma-state-object-schema-v0` artifact
+  for synthetic-only disease-state examples
+- use [Myeloma Machine Representation Stack v0](../disease-programs/multiple-myeloma/machine-representation-stack-v0.md),
+  case-feature normalization, measurement normalization, therapy exposure
+  timeline, molecular/immune context, evidence retrieval, and public safety
+  governance as boundaries
+- represent source context, tumor genomic events, transcriptome state, marrow
+  ecosystem state, clinical context, treatment timeline, measurement timeline,
+  missingness, uncertainty, and review status without accepting real case data
+- keep every field non-directive and source-scoped; use unknown/not-tested/
+  not-collected states instead of inferring absence
+- include synthetic example expectations or fixture notes only if they cannot
+  be mistaken for a real person
 - block real case data, identifiers, raw records, uploads, person-linked
   dates, free-text case details, private correspondence, patient-specific
   outputs, recommendations, rankings, matching, treatment guidance, trial

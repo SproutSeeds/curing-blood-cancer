@@ -2,8 +2,8 @@
 
 - active_version: `v2`
 - active_milestone: `case-to-cure-adaptive-master-plan-v0`
-- active_phase: `public-caregiver-intake-frontend-v0`
+- active_phase: `myeloma-machine-representation-implementation-v0`
 - band: `exact`
-- next_action: `Run static-synthetic-caregiver-intake-frontend-smoke-test-v0: document public-safety smoke checks for the static frontend, including no submit path, no storage, no uploads, no backend calls, responsive layout, refusal copy, and no-advice boundaries.`
+- next_action: `Build myeloma-state-object-schema-v0: define a synthetic-only model-facing myeloma state object schema from the machine representation stack, preserving source context, missingness, uncertainty, review status, and no patient-specific predictions or advice.`
 - blocked_by:
   - `(none)`

@@ -414,7 +414,8 @@ step.
 | `case-to-cure-public-scope-human-gate-blocker-v0` | Human gate blocker | Blocked next state after the master completion audit; no autonomous public-safe case-to-cure item remains without human phase selection or named gate clearance |
 | `public-caregiver-intake-frontend-v0` | Public static frontend | Human-selected next phase for a static, synthetic-only caregiver intake prototype that refuses real patient data and does not provide medical advice |
 | `static-synthetic-caregiver-intake-frontend-v0` | Public static frontend | Completed no-build HTML/CSS/JS caregiver intake prototype using synthetic fixture content, disabled handoff controls, and no submit, upload, backend, storage, advice, matching, ranking, or patient-specific output |
-| `static-synthetic-caregiver-intake-frontend-smoke-test-v0` | Public static frontend | Active smoke-test report item for no-submit, no-storage, no-upload, no-network, responsive layout, refusal copy, emergency boundary, clinician-review boundary, and no-advice checks |
+| `static-synthetic-caregiver-intake-frontend-smoke-test-v0` | Public static frontend | Completed smoke-test report for no-submit, no-storage, no-upload, no external network dependency, responsive layout, refusal copy, emergency boundary, clinician-review boundary, and no-advice checks |
+| `myeloma-state-object-schema-v0` | Case normalization | Next public-safe implementation atom for a synthetic-only model-facing state object schema derived from the machine representation stack |
 
 ## Clawdad Delegation Rule
 
@@ -449,6 +450,7 @@ Clawdad may stop only when:
 - [Therapy Exposure Timeline Contract v0](therapy-landscapes/therapy-exposure-timeline-contract-v0.md)
 - [Static Synthetic Caregiver Prototype Plan v0](case-intake/static-synthetic-caregiver-prototype-plan-v0.md)
 - [Static Synthetic Caregiver Intake Frontend v0](case-intake/static-synthetic-caregiver-intake-frontend-v0.html)
+- [Static Synthetic Caregiver Intake Frontend Smoke Test v0](case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md)
 - [Caregiver Intake Public Projection Validator v0](case-intake/caregiver-intake-public-projection-validator-v0.md)
 - [Consent Privacy Security Retention Gate v0](case-intake/consent-privacy-security-retention-gate-v0.md)
 - [Expert Validation Loop v0](reviews/expert-validation-loop-v0.md)

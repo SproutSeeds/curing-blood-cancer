@@ -64,6 +64,11 @@
       "accessed": "2026-04-17"
     },
     {
+      "label": "Static Synthetic Caregiver Intake Frontend Smoke Test v0",
+      "url": "static-synthetic-caregiver-intake-frontend-smoke-test-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
       "label": "Medical Care.jpg",
       "url": "https://commons.wikimedia.org/wiki/File:Medical_Care.jpg",
       "accessed": "2026-04-17"
@@ -82,6 +87,7 @@
     "Not email submission.",
     "Not save or resume storage.",
     "Not private-lab handoff.",
+    "Uses a localized static copy of a generic public Wikimedia image asset to avoid an external image request at runtime.",
     "Not medical advice.",
     "Not diagnostic guidance.",
     "Not prognosis guidance.",

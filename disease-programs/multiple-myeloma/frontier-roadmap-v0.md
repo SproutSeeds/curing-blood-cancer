@@ -79,6 +79,7 @@ The frontier loop should inspect these public artifacts before each pass:
 - [Case-To-Cure Pipeline Blueprint v0](case-to-cure-pipeline-blueprint-v0.md)
 - [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
 - [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
+- [Static Synthetic Caregiver Intake Frontend Smoke Test v0](case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md)
 - [Public Loop Completion Handoff v0](public-loop-completion-handoff-v0.md)
 - [Public Review And Release Gate v0](public-review-release-gate-v0.md)
 - [Public Inventory v0](public-inventory-v0.md)
@@ -425,6 +426,7 @@ Canonical active artifact:
 - [Therapy Exposure Timeline Contract v0](therapy-landscapes/therapy-exposure-timeline-contract-v0.md)
 - [Molecular Immune Context Contract v0](contexts/molecular-immune-context-contract-v0.md)
 - [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
+- [Static Synthetic Caregiver Intake Frontend Smoke Test v0](case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md)
 - [Evidence Retrieval Packet v0](evidence-retrieval-packet-v0.md)
 - [Trial Therapy Landscape Non-Advice Gate v0](therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md)
 - [Candidate Hypothesis Review Question Set v0](reviews/candidate-hypothesis-review-question-set-v0.md)
@@ -437,8 +439,10 @@ Canonical active artifact:
 - [Synthetic Caregiver Intake v0](../../examples/multiple-myeloma-synthetic-caregiver-intake-v0.json)
 
 The active backlog is the ORP additional list
-`public-caregiver-intake-frontend-v0`. It exists because a human selected a new
-public-safe phase after the master completion audit reached the human gate.
+`myeloma-machine-representation-implementation-v0`. It exists because the
+caregiver frontend phase reached a smoke-tested static prototype and the next
+public-safe move is to derive synthetic-only machine-state schema plumbing from
+the machine representation stack.
 
 Active loop rule:
 
@@ -482,14 +486,17 @@ The completed end-to-end synthetic dry-run item is
 The completed master audit item is `case-to-cure-master-completion-audit-v0`.
 The previously active queue item
 `case-to-cure-public-scope-human-gate-blocker-v0` recorded the safe stop after
-the master audit. A human-selected public frontend phase is now active. The
-completed frontend item is
+the master audit. A human-selected public frontend phase produced a static
+prototype. The completed frontend item is
 [Static Synthetic Caregiver Intake Frontend v0](case-intake/static-synthetic-caregiver-intake-frontend-v0.html),
-and the active queue item is now
-`static-synthetic-caregiver-intake-frontend-smoke-test-v0`, meaning the next
-autonomous public-safe move is to document no-submit, no-storage, no-upload,
-no-network, responsive layout, refusal-copy, emergency-boundary,
-clinician-review, and no-advice checks before any future frontend iteration.
+and the completed smoke-test item is
+[Static Synthetic Caregiver Intake Frontend Smoke Test v0](case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md).
+The active queue item is now `myeloma-state-object-schema-v0`, meaning the next
+autonomous public-safe move is to define a synthetic-only model-facing state
+object schema derived from
+[Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
+without model weights, real case data, patient-specific predictions, treatment
+advice, trial advice, or option ranking.
 
 Completion criteria:
 

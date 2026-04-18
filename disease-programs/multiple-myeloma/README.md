@@ -67,6 +67,7 @@ research directions deserve structured public tracking.
 - [Private Intake Schema Contract v0](case-intake/private-intake-schema-contract-v0.md)
 - [Static Synthetic Caregiver Prototype Plan v0](case-intake/static-synthetic-caregiver-prototype-plan-v0.md)
 - [Static Synthetic Caregiver Intake Frontend v0](case-intake/static-synthetic-caregiver-intake-frontend-v0.html)
+- [Static Synthetic Caregiver Intake Frontend Smoke Test v0](case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md)
 - [Caregiver Intake Public Projection Validator v0](case-intake/caregiver-intake-public-projection-validator-v0.md)
 - [Consent Privacy Security Retention Gate v0](case-intake/consent-privacy-security-retention-gate-v0.md)
 - [Case Feature Normalization Contract v0](case-feature-normalization-contract-v0.md)
