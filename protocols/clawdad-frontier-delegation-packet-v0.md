@@ -6,7 +6,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - delegate target: `curing-blood-cancer`
 - disease focus: `multiple-myeloma`
 - claim level: `open-question`
-- last reviewed: `2026-04-16`
+- last reviewed: `2026-04-18`
 - clinical boundary: research-use-only, not medical advice
 
 ## Purpose
@@ -25,8 +25,17 @@ responses, claim a cure, or produce medical advice.
 ## North Star
 
 Advance the multiple myeloma public program from completed v0 scaffolding into
-a frontier operating map that can support expert validation, public
-contribution, and future private-lab case work.
+a frontier operating map and machine-readable research substrate that can
+support expert validation, public contribution, and future private-lab case
+work.
+
+The current north-star edge is to turn
+[Myeloma Machine Representation Stack v0](../disease-programs/multiple-myeloma/machine-representation-stack-v0.md)
+into synthetic-only schema plumbing, starting with
+`myeloma-state-object-schema-v0`. This should make a future private,
+consented, access-controlled case pipeline easier to normalize and review,
+without creating a public intake path, model weights, predictions, treatment
+advice, trial advice, matching, ranking, or clinical decisions.
 
 The live operating mode is adaptive. A completed public-safe step must produce
 a handoff and a next-step synthesis. A closed subphase is not a reason to stop

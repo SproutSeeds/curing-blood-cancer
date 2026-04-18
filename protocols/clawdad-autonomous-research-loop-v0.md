@@ -6,7 +6,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - delegate target: `curing-blood-cancer`
 - disease focus: `multiple-myeloma`
 - claim level: `open-question`
-- last reviewed: `2026-04-16`
+- last reviewed: `2026-04-18`
 - clinical boundary: research-use-only, not medical advice
 
 ## Purpose
@@ -24,7 +24,7 @@ person.
 ## North Star
 
 Advance the multiple myeloma lane from a public roadmap into a working,
-source-backed research engine.
+source-backed research engine and machine-readable disease-state substrate.
 
 The original v0 public loop reached a completion handoff. The active named
 phase is now the
@@ -35,6 +35,9 @@ and the delegate should keep moving through that current plan:
 - convert roadmap items into contribution-ready task queues
 - expand source-backed myeloma maps, schemas, and review packets
 - improve synthetic case-to-cure plumbing without using real case data
+- turn machine-representation notes into synthetic-only schema and fixture
+  plumbing before any model weights, predictions, matching, ranking, or
+  clinical decision behavior
 - add validators before relying on generated outputs
 - keep every claim scoped, sourced, and modest
 - preserve the frg.earth stewardship mark where appropriate
@@ -85,6 +88,8 @@ The loop should inspect these files at the start of a pass:
 - `disease-programs/multiple-myeloma/public-loop-completion-handoff-v0.md`
 - `protocols/clawdad-frontier-delegation-packet-v0.md`
 - `disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md`
+- `disease-programs/multiple-myeloma/machine-representation-stack-v0.md`
+- `disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md`
 - `examples/multiple-myeloma-synthetic-case-to-cure-pipeline-v0.md`
 - `artifacts/public-artifact-catalog-v0.md`
 - `artifacts/public-artifact-catalog-v0.json`
@@ -101,9 +106,9 @@ The loop should inspect these files at the start of a pass:
 Work the queue in public-safe slices. Choose the highest-value item that can be
 completed, validated, and explained in one delegate pass.
 
-1. Work the active ORP additional item in
-   `case-to-cure-master-backlog-v0`, starting with the loop governor and then
-   the private intake schema/projection boundary.
+1. Work the active ORP additional item in the active ORP additional list,
+   currently `myeloma-state-object-schema-v0` inside
+   `myeloma-machine-representation-implementation-v0`.
 2. When an item completes, synthesize and activate or queue the next safe item
    before stopping.
 3. Work the expert response intake and validation ledger lane from

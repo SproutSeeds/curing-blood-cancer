@@ -34,12 +34,22 @@
     {
       "label": "Clawdad Frontier Delegation Packet v0",
       "url": "./clawdad-frontier-delegation-packet-v0.md",
-      "accessed": "2026-04-16"
+      "accessed": "2026-04-18"
     },
     {
       "label": "Case-To-Cure Pipeline Blueprint v0",
       "url": "../disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md",
       "accessed": "2026-04-15"
+    },
+    {
+      "label": "Myeloma Machine Representation Stack v0",
+      "url": "../disease-programs/multiple-myeloma/machine-representation-stack-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Static Synthetic Caregiver Intake Frontend Smoke Test v0",
+      "url": "../disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md",
+      "accessed": "2026-04-18"
     },
     {
       "label": "Multiple Myeloma Synthetic Case-To-Cure Pipeline v0",
