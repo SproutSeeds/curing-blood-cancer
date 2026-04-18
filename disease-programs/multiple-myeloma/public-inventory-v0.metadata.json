@@ -210,6 +210,46 @@
       "label": "Static Synthetic Caregiver Intake Frontend Smoke Test v0",
       "url": "case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md",
       "accessed": "2026-04-18"
+    },
+    {
+      "label": "Myeloma State Object Schema v0",
+      "url": "../../schemas/myeloma-state-object-schema-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Synthetic Myeloma State Fixture v0",
+      "url": "../../examples/synthetic-myeloma-state-fixture-v0.json",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Model Output Boundary Wrapper v0",
+      "url": "./model-output-boundary-wrapper-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Myeloma State Validator Rule Map v0",
+      "url": "./myeloma-state-validator-rule-map-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Machine Representation Source Extraction v0",
+      "url": "./machine-representation-source-extraction-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Machine Representation Source-Gap Task Queue v0",
+      "url": "./public-tasks/machine-representation-source-gap-task-queue-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Machine Representation Source-Gap Issue Draft Packet v0",
+      "url": "./public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Machine Representation Implementation Completion Audit v0",
+      "url": "./machine-representation-implementation-completion-audit-v0.md",
+      "accessed": "2026-04-18"
     }
   ],
   "limitations": [

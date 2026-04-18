@@ -4,6 +4,16 @@
   "title": "Public Artifact Catalog v0",
   "clinical_use_boundary": "research-use-only",
   "generated_from": "*.metadata.json files tracked in the public repo",
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-18",
+    "review_status": "expert-review-needed",
+    "review_notes": [
+      "Generated from public artifact metadata for navigation.",
+      "Structural catalog only; inclusion does not mean expert review, clinical readiness, or publication approval.",
+      "Public boundary excludes private lab material, patient-identifying data, credentials, restricted datasets, and unreviewed exports."
+    ]
+  },
   "entries": [
     {
       "artifact_id": "bcma-antigen-escape-claim-set-v0",
@@ -88,6 +98,48 @@
       "limitation_count": 12
     },
     {
+      "artifact_id": "machine-representation-source-extraction-v0",
+      "title": "Machine Representation Source Extraction v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "source extraction",
+        "myeloma state object",
+        "public source IDs",
+        "source-context gaps",
+        "expert review",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.metadata.json",
+      "source_count": 19,
+      "limitation_count": 23
+    },
+    {
+      "artifact_id": "machine-representation-source-gap-task-queue-v0",
+      "title": "Machine Representation Source-Gap Task Queue v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "source extraction",
+        "source-context gaps",
+        "public task queue",
+        "expert review",
+        "public contribution",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 24
+    },
+    {
       "artifact_id": "mrd-and-relapse-measurement-glossary-v0",
       "title": "MRD And Relapse Measurement Glossary v0",
       "artifact_class": "dataset",
@@ -168,7 +220,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-inventory-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-inventory-v0.metadata.json",
-      "source_count": 40,
+      "source_count": 48,
       "limitation_count": 11
     },
     {
@@ -287,6 +339,29 @@
       "limitation_count": 4
     },
     {
+      "artifact_id": "synthetic-myeloma-state-fixture-v0",
+      "title": "Synthetic Myeloma State Fixture v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "myeloma state object",
+        "synthetic fixture",
+        "missingness",
+        "genomics",
+        "transcriptomics",
+        "bone marrow microenvironment",
+        "clinical context",
+        "public safety"
+      ],
+      "path": "examples/synthetic-myeloma-state-fixture-v0.json",
+      "metadata_path": "examples/synthetic-myeloma-state-fixture-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 25
+    },
+    {
       "artifact_id": "multiple-myeloma-case-to-cure-stage-validator-map-v0",
       "title": "Case-To-Cure Stage Validator And Owner Map v0",
       "artifact_class": "map",
@@ -390,6 +465,27 @@
       "metadata_path": "disease-programs/multiple-myeloma/open-research-map-v0-1.metadata.json",
       "source_count": 15,
       "limitation_count": 12
+    },
+    {
+      "artifact_id": "myeloma-state-validator-rule-map-v0",
+      "title": "Myeloma State Validator Rule Map v0",
+      "artifact_class": "map",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "myeloma state object",
+        "validator rule map",
+        "synthetic fixture validation",
+        "model output boundary",
+        "missingness",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.metadata.json",
+      "source_count": 12,
+      "limitation_count": 23
     },
     {
       "artifact_id": "post-bcma-resistance-frontier-addendum-v0",
@@ -572,7 +668,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.metadata.json",
-      "source_count": 28,
+      "source_count": 36,
       "limitation_count": 12
     },
     {
@@ -629,7 +725,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/case-to-cure-pipeline-blueprint-v0.metadata.json",
-      "source_count": 30,
+      "source_count": 38,
       "limitation_count": 9
     },
     {
@@ -668,7 +764,7 @@
       ],
       "path": "protocols/clawdad-autonomous-research-loop-v0.md",
       "metadata_path": "protocols/clawdad-autonomous-research-loop-v0.metadata.json",
-      "source_count": 12,
+      "source_count": 14,
       "limitation_count": 9
     },
     {
@@ -685,7 +781,7 @@
       ],
       "path": "protocols/clawdad-frontier-delegation-packet-v0.md",
       "metadata_path": "protocols/clawdad-frontier-delegation-packet-v0.metadata.json",
-      "source_count": 36,
+      "source_count": 44,
       "limitation_count": 10
     },
     {
@@ -772,6 +868,73 @@
       "metadata_path": "disease-programs/multiple-myeloma/reviews/expert-validation-loop-v0.metadata.json",
       "source_count": 13,
       "limitation_count": 31
+    },
+    {
+      "artifact_id": "machine-representation-implementation-completion-audit-v0",
+      "title": "Machine Representation Implementation Completion Audit v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "completion audit",
+        "myeloma state object",
+        "synthetic fixture",
+        "model output boundary",
+        "validator rule map",
+        "source extraction",
+        "public contribution",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.metadata.json",
+      "source_count": 14,
+      "limitation_count": 30
+    },
+    {
+      "artifact_id": "machine-representation-source-gap-issue-draft-packet-v0",
+      "title": "Machine Representation Source-Gap Issue Draft Packet v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "source extraction",
+        "source-context gaps",
+        "issue draft packet",
+        "public task queue",
+        "public contribution",
+        "expert review",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 27
+    },
+    {
+      "artifact_id": "model-output-boundary-wrapper-v0",
+      "title": "Model Output Boundary Wrapper v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "model output boundary",
+        "progression head placeholder",
+        "response head placeholder",
+        "MRD head placeholder",
+        "resistance attribution placeholder",
+        "synthetic fixture validation",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.metadata.json",
+      "source_count": 13,
+      "limitation_count": 25
     },
     {
       "artifact_id": "mrd-endpoint-language-guardrail-addendum-v0",
@@ -879,7 +1042,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.metadata.json",
-      "source_count": 30,
+      "source_count": 38,
       "limitation_count": 9
     },
     {
@@ -946,7 +1109,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-roadmap-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-roadmap-v0.metadata.json",
-      "source_count": 22,
+      "source_count": 30,
       "limitation_count": 6
     },
     {
@@ -1023,7 +1186,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/machine-representation-stack-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/machine-representation-stack-v0.metadata.json",
-      "source_count": 14,
+      "source_count": 22,
       "limitation_count": 21
     },
     {
@@ -1197,7 +1360,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.metadata.json",
-      "source_count": 12,
+      "source_count": 13,
       "limitation_count": 25
     },
     {
@@ -1380,6 +1543,28 @@
       "metadata_path": "disease-programs/multiple-myeloma/contexts/molecular-immune-context-contract-v0.metadata.json",
       "source_count": 14,
       "limitation_count": 34
+    },
+    {
+      "artifact_id": "myeloma-state-object-schema-v0",
+      "title": "Myeloma State Object Schema v0",
+      "artifact_class": "schema",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "myeloma state object",
+        "synthetic fixture planning",
+        "genomics",
+        "transcriptomics",
+        "bone marrow microenvironment",
+        "clinical context",
+        "public safety"
+      ],
+      "path": "schemas/myeloma-state-object-schema-v0.md",
+      "metadata_path": "schemas/myeloma-state-object-schema-v0.metadata.json",
+      "source_count": 14,
+      "limitation_count": 21
     },
     {
       "artifact_id": "open-question-record-schema-v0",
@@ -1572,15 +1757,5 @@
       "source_count": 12,
       "limitation_count": 27
     }
-  ],
-  "review": {
-    "created": "2026-04-14",
-    "last_reviewed": "2026-04-18",
-    "review_status": "expert-review-needed",
-    "review_notes": [
-      "Generated from public artifact metadata for navigation.",
-      "Structural catalog only; inclusion does not mean expert review, clinical readiness, or publication approval.",
-      "Public boundary excludes private lab material, patient-identifying data, credentials, restricted datasets, and unreviewed exports."
-    ]
-  }
+  ]
 }

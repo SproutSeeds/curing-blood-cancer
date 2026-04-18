@@ -415,7 +415,15 @@ step.
 | `public-caregiver-intake-frontend-v0` | Public static frontend | Human-selected next phase for a static, synthetic-only caregiver intake prototype that refuses real patient data and does not provide medical advice |
 | `static-synthetic-caregiver-intake-frontend-v0` | Public static frontend | Completed no-build HTML/CSS/JS caregiver intake prototype using synthetic fixture content, disabled handoff controls, and no submit, upload, backend, storage, advice, matching, ranking, or patient-specific output |
 | `static-synthetic-caregiver-intake-frontend-smoke-test-v0` | Public static frontend | Completed smoke-test report for no-submit, no-storage, no-upload, no external network dependency, responsive layout, refusal copy, emergency boundary, clinician-review boundary, and no-advice checks |
-| `myeloma-state-object-schema-v0` | Case normalization | Next public-safe implementation atom for a synthetic-only model-facing state object schema derived from the machine representation stack |
+| `myeloma-state-object-schema-v0` | Case normalization | Completed synthetic-only model-facing state object schema contract derived from the machine representation stack |
+| `synthetic-myeloma-state-fixture-v0` | Case normalization | Completed synthetic state-object fixtures for complete multimodal, missing RNA, missing single-cell, and private-source-blocked cases |
+| `model-output-boundary-wrapper-v0` | Case normalization | Completed public-safe refusal and uncertainty wrapper for progression, response, MRD, and resistance head placeholders |
+| `myeloma-state-validator-rule-map-v0` | Case normalization | Completed no-code validator rule map for state-object schema, synthetic fixture, and model-output wrapper fail-closed checks |
+| `machine-representation-source-extraction-v0` | Source extraction | Completed public source-extraction table for machine-representation architecture claims, source-context gaps, and expert-review needs |
+| `machine-representation-source-gap-task-queue-v0` | Source extraction | Completed contribution-ready public task queue for machine-representation source-context gaps and expert-review needs |
+| `machine-representation-source-gap-issue-draft-packet-v0` | Public contribution | Completed non-submitting issue-draft packet for human-reviewed machine-representation source-gap tasks |
+| `machine-representation-implementation-completion-audit-v0` | Completion audit | Completed phase audit; machine-representation implementation phase is public-safe and human-gated |
+| `machine-representation-public-scope-human-gate-blocker-v0` | Human gate blocker | Blocked next state after the machine-representation implementation completion audit; no autonomous public-safe machine-representation implementation item remains without human phase selection or named gate clearance |
 
 ## Clawdad Delegation Rule
 
@@ -442,6 +450,12 @@ Clawdad may stop only when:
 - [Case-To-Cure Pipeline Blueprint v0](case-to-cure-pipeline-blueprint-v0.md)
 - [Case-To-Cure Stage Validator And Owner Map v0](case-to-cure-stage-validator-map-v0.md)
 - [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
+- [Model Output Boundary Wrapper v0](model-output-boundary-wrapper-v0.md)
+- [Myeloma State Validator Rule Map v0](myeloma-state-validator-rule-map-v0.md)
+- [Machine Representation Source Extraction v0](machine-representation-source-extraction-v0.md)
+- [Machine Representation Source-Gap Task Queue v0](public-tasks/machine-representation-source-gap-task-queue-v0.md)
+- [Machine Representation Source-Gap Issue Draft Packet v0](public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md)
+- [Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md)
 - [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
 - [Caregiver Intake Public Projection Checklist v0](case-intake/caregiver-intake-public-projection-checklist-v0.md)
 - [Private Intake Schema Contract v0](case-intake/private-intake-schema-contract-v0.md)

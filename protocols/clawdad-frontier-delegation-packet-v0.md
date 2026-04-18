@@ -31,11 +31,15 @@ work.
 
 The current north-star edge is to turn
 [Myeloma Machine Representation Stack v0](../disease-programs/multiple-myeloma/machine-representation-stack-v0.md)
-into synthetic-only schema plumbing, starting with
-`myeloma-state-object-schema-v0`. This should make a future private,
-consented, access-controlled case pipeline easier to normalize and review,
-without creating a public intake path, model weights, predictions, treatment
-advice, trial advice, matching, ranking, or clinical decisions.
+into synthetic-only schema plumbing. The state-object schema, synthetic
+fixture, model-output wrapper, validator rule map, source-extraction table,
+source-gap task queue, source-gap issue draft packet, and implementation
+completion audit are complete; the current edge is
+`machine-representation-public-scope-human-gate-blocker-v0`, which records
+that no autonomous public-safe machine-representation implementation item
+remains until a human selects a new named public-safe phase or clears a named
+expert-review, private-lab, clinical-team, model-governance, legal,
+regulatory, publication, or human-review gate.
 
 The live operating mode is adaptive. A completed public-safe step must produce
 a handoff and a next-step synthesis. A closed subphase is not a reason to stop
@@ -115,6 +119,14 @@ Inspect these files at the start of each pass:
 - `disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.md`
 - `disease-programs/multiple-myeloma/case-feature-normalization-contract-v0.md`
 - `disease-programs/multiple-myeloma/machine-representation-stack-v0.md`
+- `schemas/myeloma-state-object-schema-v0.md`
+- `examples/synthetic-myeloma-state-fixture-v0.json`
+- `disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md`
+- `disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md`
+- `disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md`
+- `disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md`
+- `disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md`
+- `disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md`
 - `disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md`
 - `disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md`
 - `disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md`
@@ -156,7 +168,8 @@ The current active named phase is `myeloma-machine-representation-implementation
 inside `case-to-cure-adaptive-master-plan-v0`.
 The active phase is `myeloma-machine-representation-implementation-v0`.
 The active additional queue is `myeloma-machine-representation-implementation-v0`.
-The active additional item is `myeloma-state-object-schema-v0`.
+The active additional item is
+`machine-representation-public-scope-human-gate-blocker-v0`.
 
 This phase follows the smoke-tested static caregiver frontend prototype. The
 next public-safe work is machine-state schema plumbing derived from the
@@ -165,19 +178,25 @@ patient-specific predictions, and clinical decision behavior stay blocked.
 
 Required output for the next pass:
 
-- define the smallest useful public `myeloma-state-object-schema-v0` artifact
-  for synthetic-only disease-state examples
+- stop with an explicit
+  `machine-representation-public-scope-human-gate-blocker-v0` state unless a
+  human selects a new named public-safe phase or clears a named gate
 - use [Myeloma Machine Representation Stack v0](../disease-programs/multiple-myeloma/machine-representation-stack-v0.md),
-  case-feature normalization, measurement normalization, therapy exposure
-  timeline, molecular/immune context, evidence retrieval, and public safety
-  governance as boundaries
-- represent source context, tumor genomic events, transcriptome state, marrow
-  ecosystem state, clinical context, treatment timeline, measurement timeline,
-  missingness, uncertainty, and review status without accepting real case data
-- keep every field non-directive and source-scoped; use unknown/not-tested/
-  not-collected states instead of inferring absence
-- include synthetic example expectations or fixture notes only if they cannot
-  be mistaken for a real person
+  [Myeloma State Object Schema v0](../schemas/myeloma-state-object-schema-v0.md),
+  [Synthetic Myeloma State Fixture v0](../examples/synthetic-myeloma-state-fixture-v0.json),
+  [Model Output Boundary Wrapper v0](../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md),
+  [Myeloma State Validator Rule Map v0](../disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md),
+  [Machine Representation Source Extraction v0](../disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md),
+  [Machine Representation Source-Gap Task Queue v0](../disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md),
+  [Machine Representation Source-Gap Issue Draft Packet v0](../disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md),
+  [Machine Representation Implementation Completion Audit v0](../disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md),
+  measurement normalization, therapy exposure timeline, molecular/immune
+  context, evidence retrieval, and public safety governance as boundaries
+- preserve the audit decision that the human-selected machine-representation
+  implementation phase is public-safe complete and remaining work is
+  human-gated
+- do not create another sibling schema, fixture, validator, source extraction,
+  issue draft, model, dashboard, or tool by momentum
 - block real case data, identifiers, raw records, uploads, person-linked
   dates, free-text case details, private correspondence, patient-specific
   outputs, recommendations, rankings, matching, treatment guidance, trial

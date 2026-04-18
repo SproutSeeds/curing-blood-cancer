@@ -570,7 +570,24 @@ The first public-safe queue items are:
    [Molecular Immune Context Contract v0](contexts/molecular-immune-context-contract-v0.md).
 10. Define the model-facing machine representation stack before progression,
    response, MRD, or resistance modeling heads are specified downstream.
-   Started by [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md).
+   Started by [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
+   and bounded by
+   [Myeloma State Object Schema v0](../../schemas/myeloma-state-object-schema-v0.md);
+   fixture coverage is now represented by
+   [Synthetic Myeloma State Fixture v0](../../examples/synthetic-myeloma-state-fixture-v0.json).
+   output-boundary refusal is now represented by
+   [Model Output Boundary Wrapper v0](model-output-boundary-wrapper-v0.md).
+   validator-rule coverage is now represented by
+   [Myeloma State Validator Rule Map v0](myeloma-state-validator-rule-map-v0.md).
+   source-extraction coverage is now represented by
+   [Machine Representation Source Extraction v0](machine-representation-source-extraction-v0.md).
+   source-gap task routing is now represented by
+   [Machine Representation Source-Gap Task Queue v0](public-tasks/machine-representation-source-gap-task-queue-v0.md).
+   issue-draft text is now represented by
+   [Machine Representation Source-Gap Issue Draft Packet v0](public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md).
+   phase audit is now represented by
+   [Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md).
+   The next state is a human-gated blocker, not model output.
 11. Define the evidence retrieval packet skeleton before public-source queries,
    source freshness, query records, public evidence IDs, or limitation ledgers
    are used downstream. Completed by

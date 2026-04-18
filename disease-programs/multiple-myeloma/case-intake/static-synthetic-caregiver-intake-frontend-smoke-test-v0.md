@@ -111,7 +111,9 @@ Unsafe claims:
 The next public-safe work should leave caregiver intake collection blocked and
 derive the model-facing synthetic state schema from
 [Myeloma Machine Representation Stack v0](../machine-representation-stack-v0.md).
-The expected next implementation atom is `myeloma-state-object-schema-v0`.
+That handoff is complete as
+[Myeloma State Object Schema v0](../../../schemas/myeloma-state-object-schema-v0.md);
+the current next implementation atom is `synthetic-myeloma-state-fixture-v0`.
 
 ## Public Safety Check
 

@@ -73,6 +73,11 @@
       "label": "Medical Care.jpg Wikimedia Commons page",
       "url": "https://commons.wikimedia.org/wiki/File:Medical_Care.jpg",
       "accessed": "2026-04-18"
+    },
+    {
+      "label": "Myeloma State Object Schema v0",
+      "url": "../../../schemas/myeloma-state-object-schema-v0.md",
+      "accessed": "2026-04-18"
     }
   ],
   "limitations": [

@@ -12,10 +12,12 @@ private repo context.
 - [Multiple Myeloma Roadmap Public Task Queue v0](multiple-myeloma-roadmap-public-task-queue-v0.md)
 - [BCMA Antigen Escape Public Task Queue v0](bcma-antigen-escape-public-task-queue-v0.md)
 - [Post-CAR T Relapse Mechanism Gap Public Task Queue v0](post-car-t-relapse-mechanism-gap-public-task-queue-v0.md)
+- [Machine Representation Source-Gap Task Queue v0](machine-representation-source-gap-task-queue-v0.md)
 
 ## Frontier Issue Drafts
 
 - [MRD endpoint source extraction task](issue-drafts/multiple-myeloma-mrd-endpoint-source-extraction-task-v0.md)
+- [Machine Representation Source-Gap Issue Draft Packet v0](issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md)
 
 ## Boundary
 

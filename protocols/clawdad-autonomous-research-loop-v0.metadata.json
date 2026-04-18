@@ -70,6 +70,16 @@
       "label": "Private-To-Public Workflow",
       "url": "../docs/private-to-public-workflow.md",
       "accessed": "2026-04-15"
+    },
+    {
+      "label": "Machine Representation Source-Gap Issue Draft Packet v0",
+      "url": "../disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Machine Representation Implementation Completion Audit v0",
+      "url": "../disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md",
+      "accessed": "2026-04-18"
     }
   ],
   "limitations": [

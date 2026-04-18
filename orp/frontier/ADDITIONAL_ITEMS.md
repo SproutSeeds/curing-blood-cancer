@@ -1,7 +1,7 @@
 # Additional Frontier Items: Curing Blood Cancer
 
 - active_list_id: `myeloma-machine-representation-implementation-v0`
-- active_item_id: `myeloma-state-object-schema-v0`
+- active_item_id: `machine-representation-public-scope-human-gate-blocker-v0`
 
 ## `case-intake-frontends` Human-Friendly Case Intake Front Ends (`complete`)
 
@@ -61,5 +61,21 @@
 
 ## `myeloma-machine-representation-implementation-v0` Myeloma Machine Representation Implementation v0 (`active`)
 
-- [ ] `myeloma-state-object-schema-v0` Myeloma state object schema (`active`)
+- [x] `myeloma-state-object-schema-v0` Myeloma state object schema (`complete`)
   - goal: Define the first public, synthetic-only myeloma disease-state object schema derived from the machine representation stack.
+- [x] `synthetic-myeloma-state-fixture-v0` Synthetic myeloma state fixture (`complete`)
+  - goal: Create synthetic-only myeloma state object fixtures that exercise the schema across complete multimodal, missing RNA, missing single-cell, and private-source-blocked scenarios.
+- [x] `model-output-boundary-wrapper-v0` Model output boundary wrapper (`complete`)
+  - goal: Define reusable public-safe refusal and uncertainty rules for progression, response, MRD, and resistance head placeholders before any model-facing output work.
+- [x] `myeloma-state-validator-rule-map-v0` Myeloma state validator rule map (`complete`)
+  - goal: Define no-code validator rules for myeloma state objects, synthetic fixtures, and model-output boundary wrapper fields without validating real cases or creating prediction behavior.
+- [x] `machine-representation-source-extraction-v0` Machine representation source extraction (`complete`)
+  - goal: Map myeloma machine-representation architecture claims to public source IDs, source-context gaps, extraction status, uncertainty, and expert-review needs without model code, predictions, advice, matching, or ranking.
+- [x] `machine-representation-source-gap-task-queue-v0` Machine representation source-gap task queue (`complete`)
+  - goal: Turn machine-representation source-context gaps and contribution task seeds into a public task queue without model code, predictions, advice, matching, ranking, clinical interpretation, outreach, or publication decisions.
+- [x] `machine-representation-source-gap-issue-draft-packet-v0` Machine representation source-gap issue draft packet (`complete`)
+  - goal: Prepare reusable public issue draft text for machine-representation source-gap tasks without opening issues, sending outreach, requesting private material, creating model code, predictions, advice, matching, ranking, or clinical interpretation.
+- [x] `machine-representation-implementation-completion-audit-v0` Machine representation implementation completion audit (`complete`)
+  - goal: Audit whether the human-selected machine-representation implementation phase is complete or whether another public-safe adjacent item remains, without opening issues, sending outreach, requesting private material, validating real cases, producing model outputs, advice, matching, ranking, or publication authorization.
+- [ ] `machine-representation-public-scope-human-gate-blocker-v0` Machine representation public-scope human gate blocker (`blocked`)
+  - goal: Record that no autonomous public-safe machine-representation implementation item remains after the completion audit.

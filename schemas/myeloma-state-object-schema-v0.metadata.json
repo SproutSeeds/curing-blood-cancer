@@ -1,0 +1,114 @@
+{
+  "artifact_id": "myeloma-state-object-schema-v0",
+  "title": "Myeloma State Object Schema v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "machine representation",
+    "myeloma state object",
+    "synthetic fixture planning",
+    "genomics",
+    "transcriptomics",
+    "bone marrow microenvironment",
+    "clinical context",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Myeloma Machine Representation Stack v0",
+      "url": "../disease-programs/multiple-myeloma/machine-representation-stack-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Case Feature Normalization Contract v0",
+      "url": "../disease-programs/multiple-myeloma/case-feature-normalization-contract-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "../disease-programs/multiple-myeloma/therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Molecular Immune Context Contract v0",
+      "url": "../disease-programs/multiple-myeloma/contexts/molecular-immune-context-contract-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Evidence Retrieval Packet v0",
+      "url": "../disease-programs/multiple-myeloma/evidence-retrieval-packet-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Static Synthetic Caregiver Intake Frontend Smoke Test v0",
+      "url": "../disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Private-To-Public Workflow",
+      "url": "../docs/private-to-public-workflow.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../orp/frontier/additional-items.json",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Synthetic Myeloma State Fixture v0",
+      "url": "../examples/synthetic-myeloma-state-fixture-v0.json",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Model Output Boundary Wrapper v0",
+      "url": "../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Myeloma State Validator Rule Map v0",
+      "url": "../disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Machine Representation Source Extraction v0",
+      "url": "../disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md",
+      "accessed": "2026-04-18"
+    }
+  ],
+  "limitations": [
+    "Research-use-only markdown schema contract.",
+    "Not executable JSON Schema.",
+    "Not a real myeloma state object.",
+    "Not a public intake form.",
+    "Not a normalizer.",
+    "Not a model.",
+    "Not model weights.",
+    "Not a prediction record.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not publication authorization.",
+    "Does not collect, normalize, store, transmit, train on, infer from, publish, compare, rank, or authorize use of real case data, patient-identifying data, raw records, molecular files, pathology reports, flow reports, images, notes, exact person-linked dates, private paths, private case IDs, or re-identification keys.",
+    "Does not output patient-specific progression risk, response probability, MRD interpretation, resistance attribution, treatment recommendations, trial recommendations, monitoring actions, candidate option rankings, or clinical decisions.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/myeloma-state-object-schema-v0.md"
+}

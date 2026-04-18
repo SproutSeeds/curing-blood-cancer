@@ -19,6 +19,7 @@ without weakening the repo's safety boundaries.
 - [Mechanism Map Schema](./mechanism-map.schema.json)
 - [Measurement Context Audit Schema](./measurement-context-audit.schema.json)
 - [Measurement Glossary Schema](./measurement-glossary.schema.json)
+- [Myeloma State Object Schema v0](./myeloma-state-object-schema-v0.md)
 - [Opportunity Map Schema](./opportunity-map.schema.json)
 - [Public Task Queue Schema](./public-task-queue.schema.json)
 - [Target Record Schema v0](./target-record-schema-v0.md)

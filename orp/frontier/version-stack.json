@@ -20,8 +20,17 @@
     "active_milestone": "case-to-cure-adaptive-master-plan-v0",
     "active_phase": "myeloma-machine-representation-implementation-v0",
     "band": "exact",
-    "next_action": "Build myeloma-state-object-schema-v0: define a synthetic-only model-facing myeloma state object schema from the machine representation stack, preserving source context, missingness, uncertainty, review status, and no patient-specific predictions or advice.",
-    "blocked_by": []
+    "next_action": "Blocked on human gate after machine-representation implementation completion audit: no autonomous public-safe machine-representation implementation item remains until a human selects a new named public-safe phase or clears expert-review, private-lab, clinical-team, model-governance, legal, regulatory, publication, or human-review gates.",
+    "blocked_by": [
+      "human-review-needed",
+      "expert-review-needed",
+      "private-lab-needed",
+      "clinical-team-needed",
+      "model-governance-needed",
+      "legal-needed",
+      "regulatory-needed",
+      "publication-gate-needed"
+    ]
   },
   "versions": [
     {
@@ -550,12 +559,24 @@
               ],
               "success_criteria": [
                 "A public myeloma-state-object-schema-v0 artifact exists with metadata and navigation links.",
-                "The schema preserves explicit unknown/not-tested/not-collected states and never infers absence from missing modalities.",
-                "The artifact is tied to machine representation, case-feature, measurement, therapy exposure, molecular/immune, evidence retrieval, and public safety boundaries.",
-                "Validation passes and ORP synthesizes the next public-safe implementation atom."
+                "A synthetic-myeloma-state-fixture-v0 artifact exercises complete multimodal, missing RNA, missing single-cell, and private-source-blocked scenarios.",
+                "A model-output-boundary-wrapper-v0 artifact defines refusal and uncertainty rules for progression, response, MRD, and resistance head placeholders.",
+                "A myeloma-state-validator-rule-map-v0 artifact maps schema, fixture, and wrapper rules to fail-closed public checks.",
+                "A machine-representation-source-extraction-v0 artifact maps architecture claims to source IDs, source-context gaps, uncertainty, and expert-review needs.",
+                "A machine-representation-source-gap-task-queue-v0 artifact turns source-context gaps into contribution-ready public tasks.",
+                "A machine-representation-source-gap-issue-draft-packet-v0 artifact prepares human-reviewable issue draft text without autonomous issue creation or outreach.",
+                "No real case data, identifiers, raw records, exact dates, report text, uploads, model weights, patient-specific predictions, recommendations, matching, ranking, or clinical decisions are introduced.",
+                "Validation passes after catalog and ORP updates."
               ],
               "plans": [
-                "Start with a Markdown schema contract before executable validation; add JSON schema or synthetic fixtures only after the field families and no-advice boundaries are reviewed."
+                "Completed myeloma-state-object-schema-v0 as schemas/myeloma-state-object-schema-v0.md.",
+                "Completed synthetic-myeloma-state-fixture-v0 as examples/synthetic-myeloma-state-fixture-v0.json.",
+                "Completed model-output-boundary-wrapper-v0 as disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md.",
+                "Completed myeloma-state-validator-rule-map-v0 as disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md.",
+                "Completed machine-representation-source-extraction-v0 as disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md.",
+                "Completed machine-representation-source-gap-task-queue-v0 as disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md.",
+                "Completed machine-representation-source-gap-issue-draft-packet-v0 as disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md.",
+                "Completed machine-representation-implementation-completion-audit-v0 and activated machine-representation-public-scope-human-gate-blocker-v0 because no autonomous public-safe machine-representation implementation item remains."
               ],
               "compute_hooks": []
             }

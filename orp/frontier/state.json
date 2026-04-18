@@ -5,6 +5,15 @@
   "active_milestone": "case-to-cure-adaptive-master-plan-v0",
   "active_phase": "myeloma-machine-representation-implementation-v0",
   "band": "exact",
-  "next_action": "Build myeloma-state-object-schema-v0: define a synthetic-only model-facing myeloma state object schema from the machine representation stack, preserving source context, missingness, uncertainty, review status, and no patient-specific predictions or advice.",
-  "blocked_by": []
+  "next_action": "Blocked on human gate after machine-representation implementation completion audit: no autonomous public-safe machine-representation implementation item remains until a human selects a new named public-safe phase or clears expert-review, private-lab, clinical-team, model-governance, legal, regulatory, publication, or human-review gates.",
+  "blocked_by": [
+    "human-review-needed",
+    "expert-review-needed",
+    "private-lab-needed",
+    "clinical-team-needed",
+    "model-governance-needed",
+    "legal-needed",
+    "regulatory-needed",
+    "publication-gate-needed"
+  ]
 }
