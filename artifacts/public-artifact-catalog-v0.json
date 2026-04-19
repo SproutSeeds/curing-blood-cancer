@@ -156,6 +156,24 @@
       "limitation_count": 7
     },
     {
+      "artifact_id": "mrd-resistance-geometry-coverage-v0",
+      "title": "MRD Resistance Geometry Coverage Report v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "clonal evolution",
+        "therapy resistance",
+        "mechanism extraction coverage",
+        "geometry pilot coverage"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.metadata.json",
+      "source_count": 3,
+      "limitation_count": 8
+    },
+    {
       "artifact_id": "multiple-myeloma-expert-response-validation-ledger-v0",
       "title": "Multiple Myeloma Expert Response Validation Ledger v0",
       "artifact_class": "dataset",

@@ -1,0 +1,354 @@
+{
+  "coverage_report_id": "mrd-resistance-geometry-coverage-v0",
+  "date": "2026-04-19",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Resistance Geometry Coverage Report v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "clonal evolution",
+    "therapy resistance",
+    "mechanism extraction coverage",
+    "geometry pilot coverage"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "gap_register_ids": [
+    "bcma-antigen-escape-evidence-gap-register-v0"
+  ],
+  "linked_gap_ids": [
+    "non-antigen-loss-relapse-buckets-gap-v0",
+    "expert-review-readiness-gap-v0"
+  ],
+  "linked_claim_ids": [
+    "bcma-resistance-is-multifactorial-v0"
+  ],
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma"
+  ],
+  "extraction_record_ids": [
+    "besliu-2025-treatment-landscape-geometry-v0",
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0"
+  ],
+  "coverage_basis": {
+    "map_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.json",
+    "extractions_path": "disease-programs/multiple-myeloma/mechanisms/extractions",
+    "counting_method": "Counts public extraction records and extracted signals by mechanism_group_id for the MRD Resistance Geometry Pilot.",
+    "coverage_status_rule": "Zero records means needs-first-extraction; one record means needs-second-source-extraction; two or more records means covered-for-v0-navigation. These are artifact-coverage statuses, not evidence-strength, mechanism-frequency, or clinical-readiness rankings."
+  },
+  "mechanism_coverage": [
+    {
+      "mechanism_group_id": "mrd-trajectory-split-v0",
+      "label": "MRD trajectory split",
+      "signal_count": 1,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "covered_source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0"
+      ],
+      "extraction_signal_ids": [
+        "cui-2024-mrd-trajectory-split-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for MRD trajectory split before comparison.",
+      "coverage_notes": [
+        "Current support is from one primary single-cell study.",
+        "Second-source extraction should preserve MRD method, paired sample timing, response state, and trajectory labels.",
+        "Do not infer patient-specific relapse risk or MRD meaning from this coverage count."
+      ]
+    },
+    {
+      "mechanism_group_id": "residual-transcriptional-adaptation-v0",
+      "label": "Residual transcriptional adaptation",
+      "signal_count": 1,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "covered_source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0"
+      ],
+      "extraction_signal_ids": [
+        "cui-2024-transcriptional-adaptation-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for residual transcriptional adaptation before comparison.",
+      "coverage_notes": [
+        "Current support is source-specific and should stay tied to the study method.",
+        "Next extraction should separate malignant plasma cell state, therapy exposure, and posttreatment time point.",
+        "This bucket should not be used as treatment-selection evidence."
+      ]
+    },
+    {
+      "mechanism_group_id": "metabolic-resistance-state-v0",
+      "label": "Metabolic resistance state",
+      "signal_count": 1,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "covered_source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0"
+      ],
+      "extraction_signal_ids": [
+        "cui-2024-fatty-acid-oxidation-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for metabolic resistance state before comparison.",
+      "coverage_notes": [
+        "Current support is a source-specific pathway-state signal.",
+        "Second-source extraction should preserve assay context and cell-state context.",
+        "Coverage does not support a metabolic intervention recommendation."
+      ]
+    },
+    {
+      "mechanism_group_id": "nfkb-selective-state-v0",
+      "label": "NF-kB selective state",
+      "signal_count": 1,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "covered_source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0"
+      ],
+      "extraction_signal_ids": [
+        "cui-2024-nfkb-selective-state-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for NF-kB selective state before comparison.",
+      "coverage_notes": [
+        "Current support is one study-level pathway-state signal.",
+        "Next extraction should preserve selective plasma cell context and MRD-positive context.",
+        "Coverage does not support pathway ranking or drug-target guidance."
+      ]
+    },
+    {
+      "mechanism_group_id": "genetic-nongenetic-coupling-v0",
+      "label": "Genetic and nongenetic coupling",
+      "signal_count": 1,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "covered_source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0"
+      ],
+      "extraction_signal_ids": [
+        "cui-2024-genetic-nongenetic-coupling-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for genetic and nongenetic coupling before comparison.",
+      "coverage_notes": [
+        "Current support is one source-level coupling signal.",
+        "Second-source extraction should preserve clone inference method and transcriptional-state method.",
+        "Coverage does not establish causal ranking or clinical actionability."
+      ]
+    },
+    {
+      "mechanism_group_id": "tme-shelter-interactions-v0",
+      "label": "Tumor microenvironment shelter interactions",
+      "signal_count": 2,
+      "extraction_record_count": 2,
+      "covered_source_count": 2,
+      "coverage_status": "covered-for-v0-navigation",
+      "under_coverage_flag": false,
+      "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "covered_source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "extraction_signal_ids": [
+        "cui-2024-tme-interaction-signal-v0",
+        "li-2025-microenvironment-interaction-signal-v0"
+      ],
+      "next_extraction_need": "Use current tumor microenvironment shelter interaction coverage for navigation only; do not rank biological importance from counts.",
+      "coverage_notes": [
+        "This is the only current geometry bucket with two extraction records.",
+        "Coverage combines one primary single-cell study signal and one review-level context signal.",
+        "Covered-for-v0-navigation does not mean sufficient for mechanism ranking, clinical interpretation, or education reuse."
+      ]
+    },
+    {
+      "mechanism_group_id": "subclone-diversity-v0",
+      "label": "Subclone diversity",
+      "signal_count": 1,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "covered_source_ids": [
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "extraction_record_ids": [
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "extraction_signal_ids": [
+        "li-2025-subclone-diversity-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for subclone diversity before comparison.",
+      "coverage_notes": [
+        "Current support is review-level context.",
+        "Next extraction should prioritize a primary study with explicit clone or subclone measurements.",
+        "Coverage does not support prognosis or relapse-risk scoring."
+      ]
+    },
+    {
+      "mechanism_group_id": "single-cell-translation-gap-v0",
+      "label": "Single-cell translation gap",
+      "signal_count": 1,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "covered_source_ids": [
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "extraction_record_ids": [
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "extraction_signal_ids": [
+        "li-2025-single-cell-translation-gap-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for single-cell translation gap before comparison.",
+      "coverage_notes": [
+        "This is an implementation-readiness bucket rather than a biological mechanism.",
+        "Next extraction can use another technology-review or implementation-barrier source.",
+        "Coverage does not claim single-cell analysis is routine clinical decision support."
+      ]
+    },
+    {
+      "mechanism_group_id": "t-cell-therapy-pressure-v0",
+      "label": "T-cell therapy pressure",
+      "signal_count": 1,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_besliu_2025_evolving_landscape_myeloma"
+      ],
+      "covered_source_ids": [
+        "pubmed_besliu_2025_evolving_landscape_myeloma"
+      ],
+      "extraction_record_ids": [
+        "besliu-2025-treatment-landscape-geometry-v0"
+      ],
+      "extraction_signal_ids": [
+        "besliu-2025-t-cell-therapy-pressure-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for T-cell therapy pressure before comparison.",
+      "coverage_notes": [
+        "Current support is review-level treatment-landscape context.",
+        "Second-source extraction should preserve therapy class, target class, relapse setting, and sequencing uncertainty.",
+        "Coverage does not support product comparison, target selection, or treatment sequencing."
+      ]
+    },
+    {
+      "mechanism_group_id": "unmet-high-risk-context-v0",
+      "label": "Unmet high-risk context",
+      "signal_count": 1,
+      "extraction_record_count": 1,
+      "covered_source_count": 1,
+      "coverage_status": "needs-second-source-extraction",
+      "under_coverage_flag": true,
+      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "source_ids": [
+        "pubmed_besliu_2025_evolving_landscape_myeloma"
+      ],
+      "covered_source_ids": [
+        "pubmed_besliu_2025_evolving_landscape_myeloma"
+      ],
+      "extraction_record_ids": [
+        "besliu-2025-treatment-landscape-geometry-v0"
+      ],
+      "extraction_signal_ids": [
+        "besliu-2025-unmet-high-risk-context-signal-v0"
+      ],
+      "next_extraction_need": "Add at least one additional public source extraction for unmet high-risk context before comparison.",
+      "coverage_notes": [
+        "Current support is review-level disease-context framing.",
+        "Second-source extraction should preserve disease context, high-risk context, and subtype-specific limitations.",
+        "Coverage does not support patient-specific risk assessment, prognosis, eligibility, or treatment-fit guidance."
+      ]
+    }
+  ],
+  "summary": {
+    "mechanism_bucket_count": 10,
+    "extraction_record_count": 3,
+    "extraction_signal_count": 11,
+    "needs_first_extraction_count": 0,
+    "needs_second_source_extraction_count": 9
+  },
+  "interpretation_boundary": [
+    "Coverage counts are public artifact coverage metrics only.",
+    "Coverage counts are not evidence-strength rankings.",
+    "Coverage counts are not mechanism-frequency estimates.",
+    "Coverage counts are not biological-importance rankings.",
+    "Covered-for-v0-navigation does not mean clinically ready.",
+    "Needs-second-source-extraction means more source extraction is needed before comparison; it does not mean low priority or low importance.",
+    "This report is not medical advice, diagnostic guidance, treatment guidance, trial guidance, patient-specific MRD interpretation, or a cure claim."
+  ],
+  "review": {
+    "created": "2026-04-19",
+    "last_reviewed": "2026-04-19",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from the MRD Resistance Geometry Pilot and the three current source-specific geometry extraction records.",
+      "Current coverage has zero first-extraction gaps, nine second-source gaps, and one bucket covered for v0 navigation.",
+      "Counts reflect public artifact structure, not strength of evidence, mechanism frequency, or clinical readiness."
+    ]
+  }
+}
