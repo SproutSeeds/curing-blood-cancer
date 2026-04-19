@@ -264,6 +264,16 @@
       "claim_limits": ["Flow-cytometry harmonization source; does not replace local laboratory validation or clinical interpretation."]
     },
     {
+      "source_id": "pubmed_martinez_lopez_2020_mrd_dynamics",
+      "owner": "PubMed-indexed literature / Blood Advances",
+      "source_type": "open-access observational study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32706892/",
+      "accessed": "2026-04-19",
+      "blood_cancer_scope": ["multiple myeloma", "measurable residual disease", "MRD dynamics", "serial MRD monitoring", "response depth"],
+      "claim_uses": ["literature-search", "measurement-standard", "mechanism-map"],
+      "claim_limits": ["Single-institution retrospective MRD dynamics source; use for source-specific extraction only, not patient-specific prognosis, monitoring instructions, treatment selection, or clinical decision support."]
+    },
+    {
       "source_id": "fda_mrd_cr_endpoint_guidance_2026",
       "owner": "U.S. Food and Drug Administration",
       "source_type": "draft guidance",

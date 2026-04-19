@@ -25,7 +25,7 @@ Coverage Report into contribution-ready public source-extraction tasks.
 
 | Task ID | Priority | Status | Linked Gap | Mechanism Bucket |
 | --- | --- | --- | --- | --- |
-| `mrd-trajectory-second-source-extraction-task-v0` | high | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `mrd-trajectory-split-v0` |
+| `mrd-trajectory-second-source-extraction-task-v0` | high | done | `non-antigen-loss-relapse-buckets-gap-v0` | `mrd-trajectory-split-v0` |
 | `residual-transcriptional-adaptation-second-source-extraction-task-v0` | high | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `residual-transcriptional-adaptation-v0` |
 | `genetic-nongenetic-coupling-second-source-extraction-task-v0` | high | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `genetic-nongenetic-coupling-v0` |
 | `metabolic-resistance-state-second-source-extraction-task-v0` | medium | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `metabolic-resistance-state-v0` |
@@ -47,12 +47,18 @@ Coverage Report into contribution-ready public source-extraction tasks.
 - [T-cell therapy pressure second-source extraction](issue-drafts/t-cell-therapy-pressure-second-source-extraction-task-v0.md)
 - [Unmet high-risk context second-source extraction](issue-drafts/unmet-high-risk-context-second-source-extraction-task-v0.md)
 
+## Completed Work
+
+| Task ID | Completed By | Coverage Effect |
+| --- | --- | --- |
+| `mrd-trajectory-second-source-extraction-task-v0` | `martinez-lopez-2020-mrd-dynamics-geometry-v0` | `mrd-trajectory-split-v0` is now `covered-for-v0-navigation`. |
+
 ## Priority Order
 
-1. MRD trajectory and residual-state biology, because these sit closest to the
-   durable-remission cure wedge.
-2. Genetic/nongenetic coupling and transcriptional adaptation, because they
+1. Residual-state biology and genetic/nongenetic coupling, because they
    decide whether the geometry needs separate clone and state axes.
+2. Metabolic and NF-kB selective-state buckets, because they test whether
+   pathway-state branches should remain separate or fold into residual state.
 3. Therapy pressure and high-risk context, because they protect the map from
    pretending all relapse settings are comparable.
 4. Single-cell translation gap, because it keeps research-tooling resolution
@@ -65,8 +71,10 @@ Coverage Report into contribution-ready public source-extraction tasks.
 
 ## Next Work
 
-- Select the first MRD trajectory or residual-state source.
-- Add a source-registry record for the chosen source.
-- Add one source-specific mechanism extraction.
+- Select the first residual-state or clone-state coupling source.
+- Add a source-registry record for the chosen source if needed.
+- Add one source-specific mechanism extraction for
+  `residual-transcriptional-adaptation-v0` or
+  `genetic-nongenetic-coupling-v0`.
 - Refresh the MRD Resistance Geometry Coverage Report after each accepted
   extraction.

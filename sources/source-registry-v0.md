@@ -1,7 +1,7 @@
 # Source Registry v0
 
 - registry id: `source-registry-v0`
-- date: `2026-04-18`
+- date: `2026-04-19`
 - scope: public source anchors for Curing Blood Cancer artifacts
 - status: initial registry
 
@@ -68,6 +68,7 @@ as a claim by itself.
 | `pubmed_kumar_2016_imwg_mrd_response_criteria` | PubMed-indexed literature | consensus statement | multiple myeloma, response criteria, minimal residual disease | `literature-search`, `measurement-standard` | Consensus criteria; use for public measurement definitions, not patient-specific interpretation. |
 | `pubmed_munshi_2017_mrd_survival_meta_analysis` | PubMed-indexed literature | meta-analysis | multiple myeloma, minimal residual disease, survival outcomes | `literature-search`, `measurement-standard` | Outcome association does not provide patient-specific prognosis or prove a treatment strategy. |
 | `pubmed_soh_2022_mrd_flow_harmonization` | PubMed-indexed literature | research article | multiple myeloma, measurable residual disease, flow cytometry | `literature-search`, `measurement-standard`, `data-reuse` | Flow-cytometry harmonization source; does not replace local laboratory validation or clinical interpretation. |
+| `pubmed_martinez_lopez_2020_mrd_dynamics` | PubMed-indexed literature / Blood Advances | open-access observational study | multiple myeloma, measurable residual disease, MRD dynamics, serial MRD monitoring, response depth | `literature-search`, `measurement-standard`, `mechanism-map` | Single-institution retrospective MRD dynamics source; use for source-specific extraction only, not patient-specific prognosis, monitoring instructions, treatment selection, or clinical decision support. |
 | `fda_mrd_cr_endpoint_guidance_2026` | U.S. Food and Drug Administration | draft guidance | multiple myeloma, minimal residual disease, complete response, accelerated approval endpoints | `measurement-standard`, `regulatory-context` | Draft, nonbinding regulatory context; not for implementation and not a patient-specific interpretation, product approval, availability, eligibility, treatment-selection, or trial-advice source. |
 | `nature_genetics_commpass_subtypes_2024` | MMRF CoMMpass Network / Nature Genetics | open-access research article | multiple myeloma, newly diagnosed multiple myeloma, CoMMpass, genomics, transcriptomics, longitudinal clinical data | `literature-search`, `genomics-data`, `dataset-discovery`, `machine-representation` | Cohort-level molecular profiling source; not a patient-specific prognostic model, treatment selector, trial matcher, or clinical decision system. |
 | `nature_cancer_immune_atlas_myeloma_2026` | Immune Atlas Consortium / Nature Cancer | open-access research article | multiple myeloma, newly diagnosed multiple myeloma, bone marrow microenvironment, single-cell RNA sequencing, immune atlas | `literature-search`, `genomics-data`, `context-modifier`, `machine-representation` | Cohort-level immune microenvironment source; does not establish patient-specific immune status, prognosis, treatment fit, trial fit, monitoring guidance, or intervention guidance. |
@@ -119,6 +120,7 @@ as a claim by itself.
 | `pubmed_kumar_2016_imwg_mrd_response_criteria` | https://pubmed.ncbi.nlm.nih.gov/27511158/ | 2026-04-14 |
 | `pubmed_munshi_2017_mrd_survival_meta_analysis` | https://pubmed.ncbi.nlm.nih.gov/27632282/ | 2026-04-14 |
 | `pubmed_soh_2022_mrd_flow_harmonization` | https://pubmed.ncbi.nlm.nih.gov/35005838/ | 2026-04-14 |
+| `pubmed_martinez_lopez_2020_mrd_dynamics` | https://pubmed.ncbi.nlm.nih.gov/32706892/ | 2026-04-19 |
 | `fda_mrd_cr_endpoint_guidance_2026` | https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated | 2026-04-16 |
 | `nature_genetics_commpass_subtypes_2024` | https://www.nature.com/articles/s41588-024-01853-0 | 2026-04-18 |
 | `nature_cancer_immune_atlas_myeloma_2026` | https://www.nature.com/articles/s43018-025-01072-4 | 2026-04-18 |

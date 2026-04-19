@@ -8,6 +8,15 @@ Research-use only. This task is not medical advice, diagnostic guidance,
 treatment guidance, trial guidance, patient-specific MRD interpretation, or a
 cure claim.
 
+## Completion Status
+
+Completed for v0 by
+`martinez-lopez-2020-mrd-dynamics-geometry-v0`.
+
+This draft remains as a provenance record for the completed task. A later MRD
+trajectory task should define a new source-specific gap rather than reopening
+this completed v0 task.
+
 ## Why This Matters
 
 The MRD Resistance Geometry Coverage Report currently has one extraction record
@@ -18,6 +27,7 @@ before this bucket can be compared across public sources.
 
 - `pubmed`
 - `pubmed_cui_2024_mrd_clonal_evolution`
+- `pubmed_martinez_lopez_2020_mrd_dynamics`
 
 ## Deliverables
 

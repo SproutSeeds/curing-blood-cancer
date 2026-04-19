@@ -34,7 +34,7 @@ or educational claims yet.
 
 | Geometry Bucket | Signals | Extraction Records | Status | Next Extraction Need |
 | --- | ---: | ---: | --- | --- |
-| MRD trajectory split | 1 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
+| MRD trajectory split | 2 | 2 | covered-for-v0-navigation | Use for navigation only; do not infer patient-specific MRD meaning from counts. |
 | Residual transcriptional adaptation | 1 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
 | Metabolic resistance state | 1 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
 | NF-kB selective state | 1 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
@@ -48,31 +48,31 @@ or educational claims yet.
 ## Summary
 
 - Mechanism buckets: `10`
-- Current source-specific extraction records: `3`
-- Current extracted signals: `11`
+- Current source-specific extraction records: `4`
+- Current extracted signals: `12`
 - Buckets needing first extraction: `0`
-- Buckets needing second-source extraction: `9`
-- Buckets covered for v0 navigation: `1`
+- Buckets needing second-source extraction: `8`
+- Buckets covered for v0 navigation: `2`
 
 ## What The Report Says
 
 The geometry pilot now has a first extraction for every bucket. That is enough
 to navigate the map, but not enough to compare most nodes.
 
-Only `tme-shelter-interactions-v0` currently has two extraction records:
+Two buckets currently have at least two extraction records:
 
-- `cui-2024-mrd-clonal-evolution-geometry-v0`
-- `li-2025-single-cell-myeloma-geometry-v0`
+| Bucket | Current Extraction Records |
+| --- | --- |
+| `mrd-trajectory-split-v0` | `cui-2024-mrd-clonal-evolution-geometry-v0`; `martinez-lopez-2020-mrd-dynamics-geometry-v0` |
+| `tme-shelter-interactions-v0` | `cui-2024-mrd-clonal-evolution-geometry-v0`; `li-2025-single-cell-myeloma-geometry-v0` |
 
-That does not mean tumor microenvironment interactions are more important than
-other nodes. It means this bucket currently has the cleanest public artifact
-coverage.
+That does not mean these nodes are more important than other nodes. It means
+they currently have the cleanest public artifact coverage.
 
 ## Under-Covered Buckets
 
 The following buckets need second-source extraction before comparison:
 
-- `mrd-trajectory-split-v0`
 - `residual-transcriptional-adaptation-v0`
 - `metabolic-resistance-state-v0`
 - `nfkb-selective-state-v0`
@@ -84,12 +84,12 @@ The following buckets need second-source extraction before comparison:
 
 ## Next Extraction Needs
 
-Prioritize second-source records in this order:
+Prioritize the remaining second-source records in this order:
 
-1. MRD trajectory and residual-state biology, because these sit closest to the
-   cure wedge.
-2. Genetic/nongenetic coupling and transcriptional adaptation, because they
+1. Residual-state biology and genetic/nongenetic coupling, because they
    define whether the geometry needs clone and state axes.
+2. Metabolic and NF-kB selective-state buckets, because they test whether
+   pathway-state branches should remain separate or fold into residual state.
 3. Therapy pressure and high-risk context, because they protect the map from
    pretending all relapse settings are comparable.
 4. Single-cell translation gap, because it keeps the research-tooling layer

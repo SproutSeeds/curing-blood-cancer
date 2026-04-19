@@ -192,6 +192,25 @@
       "limitation_count": 8
     },
     {
+      "artifact_id": "mrd-resistance-geometry-phase-plan-v0",
+      "title": "MRD Resistance Geometry Phase Plan v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "clonal evolution",
+        "therapy resistance",
+        "geometry pilot",
+        "source extraction",
+        "expert review"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.metadata.json",
+      "source_count": 6,
+      "limitation_count": 8
+    },
+    {
       "artifact_id": "multiple-myeloma-expert-response-validation-ledger-v0",
       "title": "Multiple Myeloma Expert Response Validation Ledger v0",
       "artifact_class": "dataset",

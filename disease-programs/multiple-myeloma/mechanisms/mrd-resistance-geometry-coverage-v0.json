@@ -24,14 +24,16 @@
     "bcma-resistance-is-multifactorial-v0"
   ],
   "source_ids": [
+    "pubmed_besliu_2025_evolving_landscape_myeloma",
     "pubmed_cui_2024_mrd_clonal_evolution",
     "pubmed_li_2025_single_cell_myeloma_review",
-    "pubmed_besliu_2025_evolving_landscape_myeloma"
+    "pubmed_martinez_lopez_2020_mrd_dynamics"
   ],
   "extraction_record_ids": [
     "besliu-2025-treatment-landscape-geometry-v0",
     "cui-2024-mrd-clonal-evolution-geometry-v0",
-    "li-2025-single-cell-myeloma-geometry-v0"
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0"
   ],
   "coverage_basis": {
     "map_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.json",
@@ -43,29 +45,33 @@
     {
       "mechanism_group_id": "mrd-trajectory-split-v0",
       "label": "MRD trajectory split",
-      "signal_count": 1,
-      "extraction_record_count": 1,
-      "covered_source_count": 1,
-      "coverage_status": "needs-second-source-extraction",
-      "under_coverage_flag": true,
-      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "signal_count": 2,
+      "extraction_record_count": 2,
+      "covered_source_count": 2,
+      "coverage_status": "covered-for-v0-navigation",
+      "under_coverage_flag": false,
+      "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
       "source_ids": [
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics"
       ],
       "covered_source_ids": [
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics"
       ],
       "extraction_record_ids": [
-        "cui-2024-mrd-clonal-evolution-geometry-v0"
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0"
       ],
       "extraction_signal_ids": [
-        "cui-2024-mrd-trajectory-split-signal-v0"
+        "cui-2024-mrd-trajectory-split-signal-v0",
+        "martinez-lopez-2020-mrd-dynamics-signal-v0"
       ],
-      "next_extraction_need": "Add at least one additional public source extraction for MRD trajectory split before comparison.",
+      "next_extraction_need": "Use current MRD trajectory split coverage for v0 navigation only; do not rank biological importance or infer patient-specific MRD meaning from counts.",
       "coverage_notes": [
-        "Current support is from one primary single-cell study.",
-        "Second-source extraction should preserve MRD method, paired sample timing, response state, and trajectory labels.",
-        "Do not infer patient-specific relapse risk or MRD meaning from this coverage count."
+        "Current coverage combines one primary single-cell residual-clone trajectory study and one retrospective NGS MRD dynamics study.",
+        "The two sources use different measurement frames; comparison must preserve assay method, specimen, threshold, time point, and trajectory label.",
+        "Covered-for-v0-navigation does not mean sufficient for prognosis, monitoring guidance, treatment choice, or cure claims."
       ]
     },
     {
@@ -327,10 +333,10 @@
   ],
   "summary": {
     "mechanism_bucket_count": 10,
-    "extraction_record_count": 3,
-    "extraction_signal_count": 11,
+    "extraction_record_count": 4,
+    "extraction_signal_count": 12,
     "needs_first_extraction_count": 0,
-    "needs_second_source_extraction_count": 9
+    "needs_second_source_extraction_count": 8
   },
   "interpretation_boundary": [
     "Coverage counts are public artifact coverage metrics only.",
@@ -346,8 +352,8 @@
     "last_reviewed": "2026-04-19",
     "review_status": "source-checked",
     "review_notes": [
-      "Built from the MRD Resistance Geometry Pilot and the three current source-specific geometry extraction records.",
-      "Current coverage has zero first-extraction gaps, nine second-source gaps, and one bucket covered for v0 navigation.",
+      "Built from the MRD Resistance Geometry Pilot and the four current source-specific geometry extraction records.",
+      "Current coverage has zero first-extraction gaps, eight second-source gaps, and two buckets covered for v0 navigation.",
       "Counts reflect public artifact structure, not strength of evidence, mechanism frequency, or clinical readiness."
     ]
   }

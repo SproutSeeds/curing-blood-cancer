@@ -1,0 +1,126 @@
+{
+  "plan_id": "mrd-resistance-geometry-phase-plan-v0",
+  "date": "2026-04-19",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Resistance Geometry Phase Plan v0",
+  "clinical_use_boundary": "research-use-only",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "besliu-2025-treatment-landscape-geometry-v0"
+  ],
+  "task_queue_ids": [
+    "mrd-resistance-geometry-second-source-task-queue-v0"
+  ],
+  "phases": [
+    {
+      "phase_id": "phase-0-foundation-v0",
+      "phase_title": "Foundation: geometry, coverage, and public task queue",
+      "status": "done",
+      "purpose": "Create a public-safe geometry pilot, first source-specific extractions, coverage report, and ready second-source queue.",
+      "public_outputs": [
+        "mrd-resistance-geometry-pilot-v0",
+        "mrd-resistance-geometry-coverage-v0",
+        "mrd-resistance-geometry-second-source-task-queue-v0"
+      ],
+      "completion_gate": [
+        "Every geometry bucket has at least one source-specific extraction.",
+        "Coverage report separates artifact coverage from evidence strength.",
+        "Public task queue exposes second-source extraction needs without medical advice."
+      ]
+    },
+    {
+      "phase_id": "phase-1-mrd-trajectory-hardening-v0",
+      "phase_title": "Phase 1: MRD trajectory hardening",
+      "status": "done-for-first-second-source",
+      "purpose": "Add a second public source extraction for mrd-trajectory-split-v0 and refresh coverage.",
+      "public_outputs": [
+        "pubmed_martinez_lopez_2020_mrd_dynamics",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+        "mrd-resistance-geometry-coverage-v0",
+        "mrd-trajectory-second-source-extraction-task-v0"
+      ],
+      "completion_gate": [
+        "Second source is in the source registry.",
+        "Extraction maps at least one signal to mrd-trajectory-split-v0.",
+        "Coverage report marks MRD trajectory split covered-for-v0-navigation.",
+        "Task queue marks the MRD trajectory second-source task done.",
+        "All MRD language preserves method, threshold, specimen, time point, and non-advice boundary."
+      ],
+      "comparison_questions": [
+        "Do the Cui 2024 single-cell trajectory labels and Martinez-Lopez 2020 serial NGS MRD dynamics labels describe compatible trajectory structure?",
+        "Which fields must remain separate because assay method, cohort, timing, or threshold differ?",
+        "Does the geometry need a trajectory sub-axis for measurement direction distinct from residual-cell biological state?"
+      ]
+    },
+    {
+      "phase_id": "phase-2-residual-state-and-coupling-v0",
+      "phase_title": "Phase 2: residual-state and clone-state coupling",
+      "status": "ready",
+      "purpose": "Second-source the buckets that decide whether the geometry needs separate clone, state, and measurement-dynamics axes.",
+      "public_outputs": [
+        "residual-transcriptional-adaptation-second-source-extraction-task-v0",
+        "genetic-nongenetic-coupling-second-source-extraction-task-v0",
+        "updated mrd-resistance-geometry-coverage-v0",
+        "geometry-axis-revision-decision-v0"
+      ],
+      "completion_gate": [
+        "Add one second-source extraction for residual-transcriptional-adaptation-v0.",
+        "Add one second-source extraction for genetic-nongenetic-coupling-v0.",
+        "Keep clone architecture, transcriptional state, therapy exposure, assay method, and posttreatment timing as separate fields.",
+        "Record whether the geometry should split measurement trajectory from biological residual state.",
+        "Do not rank mechanisms or infer clinical actionability."
+      ],
+      "comparison_questions": [
+        "Does residual disease look more like clone persistence, state adaptation, or a coupled clone-state system across sources?",
+        "Which observations are source-cohort measurements and which are review-level summaries?",
+        "Which geometry nodes should merge, split, or remain linked before expert review?"
+      ]
+    },
+    {
+      "phase_id": "phase-3-expert-review-packet-v0",
+      "phase_title": "Phase 3: expert-review packet and geometry revision",
+      "status": "queued",
+      "purpose": "Convert covered buckets and unresolved tensions into a concise expert-review packet before any claim upgrade.",
+      "public_outputs": [
+        "mrd-resistance-geometry-expert-review-packet-v0",
+        "mrd-resistance-geometry-axis-revision-v0",
+        "updated issue drafts for remaining second-source tasks"
+      ],
+      "completion_gate": [
+        "At least three high-priority buckets have two public extraction records.",
+        "Every comparison question has source IDs and extraction record IDs.",
+        "Expert-review-needed language remains explicit.",
+        "No cure, prognosis, treatment, monitoring, or trial guidance is introduced."
+      ]
+    }
+  ],
+  "safety_boundary": [
+    "Research-use only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not a patient-specific MRD interpretation.",
+    "Not a claim that multiple myeloma has been cured.",
+    "Artifact coverage is not evidence strength, mechanism frequency, biological importance, or clinical readiness."
+  ],
+  "review": {
+    "created": "2026-04-19",
+    "last_reviewed": "2026-04-19",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Plan created after the first MRD trajectory second-source extraction was added.",
+      "Phase 2 is intentionally scoped to residual-state and clone-state coupling before broader mechanism expansion.",
+      "All phase gates preserve research-only, non-advice boundaries."
+    ]
+  }
+}

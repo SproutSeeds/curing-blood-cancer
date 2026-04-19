@@ -3,7 +3,7 @@
 Stewarded by [frg.earth](https://frg.earth/).
 
 - catalog id: `public-artifact-catalog-v0`
-- date: `2026-04-18`
+- date: `2026-04-19`
 - clinical boundary: research-use-only, not medical advice
 - generated from: `*.metadata.json` files tracked in the public repo
 - review status: expert-review-needed
@@ -23,6 +23,8 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Machine Representation Source Extraction v0 | dataset | open-question | [disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md](../disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md) |
 | Machine Representation Source-Gap Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md) |
 | MRD And Relapse Measurement Glossary v0 | dataset | derived | [disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md](../disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md) |
+| MRD Resistance Geometry Coverage Report v0 | dataset | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.md) |
+| MRD Resistance Geometry Second-Source Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-second-source-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-second-source-task-queue-v0.md) |
 | Multiple Myeloma Expert Response Validation Ledger v0 | dataset | open-question | [disease-programs/multiple-myeloma/reviews/expert-response-validation-ledger-v0.md](../disease-programs/multiple-myeloma/reviews/expert-response-validation-ledger-v0.md) |
 | Multiple Myeloma Expert Validation Issue Index v0 | dataset | open-question | [disease-programs/multiple-myeloma/reviews/expert-validation-issue-index-v0.md](../disease-programs/multiple-myeloma/reviews/expert-validation-issue-index-v0.md) |
 | Multiple Myeloma Expert Validation Outreach Map v0 | dataset | open-question | [disease-programs/multiple-myeloma/reviews/expert-validation-outreach-map-v0.md](../disease-programs/multiple-myeloma/reviews/expert-validation-outreach-map-v0.md) |
@@ -76,6 +78,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Machine Representation Source-Gap Issue Draft Packet v0 | protocol | open-question | [disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md](../disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md) |
 | Model Output Boundary Wrapper v0 | protocol | open-question | [disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md](../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md) |
 | MRD Endpoint Language Guardrail Addendum v0 | protocol | open-question | [disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md](../disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md) |
+| MRD Resistance Geometry Phase Plan v0 | protocol | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md) |
 | Multidisciplinary Review Packet Builder v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md](../disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md) |
 | Multidisciplinary Review Packet Template v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md](../disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md) |
 | Multiple Myeloma Definition-Of-Complete Audit v0 | protocol | open-question | [disease-programs/multiple-myeloma/definition-of-complete-audit-v0.md](../disease-programs/multiple-myeloma/definition-of-complete-audit-v0.md) |
