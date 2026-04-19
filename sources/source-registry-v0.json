@@ -1,6 +1,6 @@
 {
   "registry_id": "source-registry-v0",
-  "date": "2026-04-18",
+  "date": "2026-04-19",
   "scope": "public source anchors for Curing Blood Cancer artifacts",
   "records": [
     {
@@ -422,6 +422,36 @@
       "blood_cancer_scope": ["multiple myeloma", "anti-BCMA T-cell redirecting therapy", "plasma-cell identity escape"],
       "claim_uses": ["literature-search", "mechanism-map"],
       "claim_limits": ["Preprint; not peer reviewed at access date. Mechanism findings require source-specific appraisal and should not be treated as clinical guidance."]
+    },
+    {
+      "source_id": "pubmed_cui_2024_mrd_clonal_evolution",
+      "owner": "PubMed-indexed literature",
+      "source_type": "open-access research article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38900040/",
+      "accessed": "2026-04-19",
+      "blood_cancer_scope": ["multiple myeloma", "measurable residual disease", "clonal evolution", "therapy resistance", "single-cell RNA sequencing"],
+      "claim_uses": ["literature-search", "mechanism-map", "geometry-pilot", "mrd-resistance-context"],
+      "claim_limits": ["Single-cell study context; use for source-specific mechanism extraction and research mapping, not patient-specific MRD interpretation, treatment selection, relapse prediction, or cure claims."]
+    },
+    {
+      "source_id": "pubmed_li_2025_single_cell_myeloma_review",
+      "owner": "PubMed-indexed literature",
+      "source_type": "review article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40002248/",
+      "accessed": "2026-04-19",
+      "blood_cancer_scope": ["multiple myeloma", "single-cell analysis", "clonal evolution", "tumor microenvironment", "therapy evasion"],
+      "claim_uses": ["literature-search", "mechanism-map", "geometry-pilot", "single-cell-context"],
+      "claim_limits": ["Review article; use for context and unresolved translation barriers, not clinical implementation claims, treatment guidance, or patient-specific interpretation."]
+    },
+    {
+      "source_id": "pubmed_besliu_2025_evolving_landscape_myeloma",
+      "owner": "PubMed-indexed literature",
+      "source_type": "review article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39941892/",
+      "accessed": "2026-04-19",
+      "blood_cancer_scope": ["multiple myeloma", "risk stratification", "T-cell-directed therapy", "BCMA", "GPRC5D", "relapsed or refractory multiple myeloma"],
+      "claim_uses": ["literature-search", "mechanism-map", "geometry-pilot", "therapy-pressure-context"],
+      "claim_limits": ["Review article; use for treatment-landscape context and open questions, not product comparison, sequencing advice, trial recommendation, or patient-specific treatment fit."]
     },
     {
       "source_id": "pubmed",

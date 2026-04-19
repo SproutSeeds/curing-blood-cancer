@@ -1,12 +1,12 @@
 {
   "catalog_id": "public-artifact-catalog-v0",
-  "date": "2026-04-18",
+  "date": "2026-04-19",
   "title": "Public Artifact Catalog v0",
   "clinical_use_boundary": "research-use-only",
   "generated_from": "*.metadata.json files tracked in the public repo",
   "review": {
     "created": "2026-04-14",
-    "last_reviewed": "2026-04-18",
+    "last_reviewed": "2026-04-19",
     "review_status": "expert-review-needed",
     "review_notes": [
       "Generated from public artifact metadata for navigation.",
@@ -434,6 +434,24 @@
       "metadata_path": "disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.metadata.json",
       "source_count": 10,
       "limitation_count": 12
+    },
+    {
+      "artifact_id": "mrd-resistance-geometry-pilot-v0",
+      "title": "MRD Resistance Geometry Pilot v0",
+      "artifact_class": "map",
+      "claim_level": "derived",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "clonal evolution",
+        "therapy resistance",
+        "tumor microenvironment",
+        "single-cell analysis"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.metadata.json",
+      "source_count": 3,
+      "limitation_count": 9
     },
     {
       "artifact_id": "multiple-myeloma-durable-mrd-negative-remission-wedge-v0",

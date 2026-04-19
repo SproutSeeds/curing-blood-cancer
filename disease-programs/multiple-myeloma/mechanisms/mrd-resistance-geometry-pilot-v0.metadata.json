@@ -1,0 +1,43 @@
+{
+  "artifact_id": "mrd-resistance-geometry-pilot-v0",
+  "title": "MRD Resistance Geometry Pilot v0",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "clonal evolution",
+    "therapy resistance",
+    "tumor microenvironment",
+    "single-cell analysis"
+  ],
+  "claim_level": "derived",
+  "sources": [
+    {
+      "label": "PubMed literature anchor: MRD clonal evolution and resistance pathways",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38900040/",
+      "accessed": "2026-04-19"
+    },
+    {
+      "label": "PubMed literature anchor: single-cell myeloma review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40002248/",
+      "accessed": "2026-04-19"
+    },
+    {
+      "label": "PubMed literature anchor: evolving multiple-myeloma treatment landscape",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39941892/",
+      "accessed": "2026-04-19"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not a patient-specific MRD interpretation.",
+    "Does not rank mechanisms by frequency or importance.",
+    "Does not establish clinical efficacy for any intervention.",
+    "Requires expert review before use as an educational anchor."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-pilot-v0.md"
+}
