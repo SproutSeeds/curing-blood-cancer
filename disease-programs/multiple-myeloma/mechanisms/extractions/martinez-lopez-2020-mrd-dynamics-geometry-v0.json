@@ -1,0 +1,74 @@
+{
+  "extraction_record_id": "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+  "date": "2026-04-19",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "source_ids": [
+    "pubmed_martinez_lopez_2020_mrd_dynamics"
+  ],
+  "mechanism_group_ids": [
+    "mrd-trajectory-split-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed open-access observational study",
+    "title": "Clinical value of measurable residual disease testing for assessing depth, duration, and direction of response in multiple myeloma",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32706892/",
+    "doi": "10.1182/bloodadvances.2020002037",
+    "pmid": "32706892",
+    "accessed": "2026-04-19",
+    "publication_year": 2020,
+    "study_context": "Blood Advances single-institution retrospective experience assessing MRD by next-generation sequencing in 234 multiple myeloma patients, including newly diagnosed and relapsed/refractory cohorts, with serial MRD monitoring in a subset."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "martinez-lopez-2020-mrd-dynamics-signal-v0",
+      "mechanism_group_id": "mrd-trajectory-split-v0",
+      "signal_summary": "The source separates serial MRD response dynamics into sustained MRD-negative assessments, continuously declining detectable clone counts, and stable or increasing clone counts in newly diagnosed patients with repeated MRD measurements.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "next-generation sequencing MRD",
+        "immunoglobulin gene clonality",
+        "bone marrow specimen",
+        "serial MRD monitoring",
+        "10^-6 sensitivity context",
+        "10^-5 threshold context",
+        "MRD-negative repeated samples",
+        "declining detectable clonal numbers",
+        "stable or increasing clonal numbers",
+        "newly diagnosed cohort",
+        "relapsed/refractory cohort"
+      ],
+      "limitations": [
+        "Single-institution retrospective study context.",
+        "Serial MRD monitoring categories are source-specific and should not be used as a patient-specific relapse forecast.",
+        "MRD dynamics are measurement trajectories, not treatment recommendations.",
+        "The extraction does not compare assay platforms or thresholds outside source context."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "The geometry pilot can represent serial MRD dynamics as source-specific trajectory states.",
+      "The first second-source MRD trajectory comparison can contrast a single-cell residual-clone trajectory source with an NGS MRD dynamics source without treating the assays as interchangeable.",
+      "Extraction templates should preserve assay method, threshold, specimen source, serial timing, and source-defined trajectory labels before comparison."
+    ],
+    "what_this_does_not_support": [
+      "It does not provide patient-specific prognosis, MRD interpretation, monitoring guidance, treatment guidance, or trial recommendation.",
+      "It does not claim that sustained MRD negativity means cure for an individual.",
+      "It does not rank MRD assays or thresholds.",
+      "It does not establish that any therapy should be changed based on MRD trajectory labels."
+    ]
+  },
+  "review": {
+    "created": "2026-04-19",
+    "last_reviewed": "2026-04-19",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built as the first second-source extraction for mrd-trajectory-split-v0.",
+      "Source details checked against PubMed and PubMed Central public records for PMID 32706892 / PMCID PMC7391154.",
+      "The extraction preserves MRD dynamics as research-map structure and does not reuse clinical-decision language as advice."
+    ]
+  }
+}

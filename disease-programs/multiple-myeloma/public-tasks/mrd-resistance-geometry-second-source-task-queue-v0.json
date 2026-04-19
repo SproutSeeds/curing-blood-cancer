@@ -17,9 +17,10 @@
   ],
   "source_ids": [
     "pubmed",
+    "pubmed_besliu_2025_evolving_landscape_myeloma",
     "pubmed_cui_2024_mrd_clonal_evolution",
     "pubmed_li_2025_single_cell_myeloma_review",
-    "pubmed_besliu_2025_evolving_landscape_myeloma"
+    "pubmed_martinez_lopez_2020_mrd_dynamics"
   ],
   "tasks": [
     {
@@ -27,7 +28,7 @@
       "task_title": "Add a second public source extraction for MRD trajectory split",
       "task_type": "source-extraction-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -43,11 +44,13 @@
         "bone-marrow-mrd"
       ],
       "extraction_record_ids": [
-        "cui-2024-mrd-clonal-evolution-geometry-v0"
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/mrd-trajectory-second-source-extraction-task-v0.md",
       "public_deliverables": [
@@ -483,8 +486,9 @@
     "review_status": "source-checked",
     "review_notes": [
       "Built from mrd-resistance-geometry-coverage-v0.",
-      "All nine ready tasks address second-source extraction needs; zero first-extraction gaps remain.",
-      "Task source_ids include pubmed as a discovery anchor when the second source has not yet been selected."
+      "The MRD trajectory second-source task is now done through martinez-lopez-2020-mrd-dynamics-geometry-v0.",
+      "Eight ready tasks remain for second-source extraction across under-covered geometry nodes.",
+      "Task source_ids include pubmed as a discovery anchor where a second source has not yet been selected."
     ]
   }
 }
