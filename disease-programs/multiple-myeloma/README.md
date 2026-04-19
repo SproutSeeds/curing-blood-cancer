@@ -115,6 +115,7 @@ research directions deserve structured public tracking.
 - [Cure Wedge v0](cure-wedge-durable-mrd-negative-remission-v0.md)
 - [Opportunity Map v0](opportunity-map-v0.json)
 - [Multiple Myeloma Roadmap Public Task Queue v0](public-tasks/multiple-myeloma-roadmap-public-task-queue-v0.md)
+- [MRD Resistance Geometry Second-Source Task Queue v0](public-tasks/mrd-resistance-geometry-second-source-task-queue-v0.md)
 - [BCMA Antigen Escape Claim Set v0](evidence-claims/bcma-antigen-escape-claim-set-v0.md)
 - [BCMA Antigen Escape Evidence Gap Register v0](evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md)
 - [BCMA Antigen Escape Public Task Queue v0](public-tasks/bcma-antigen-escape-public-task-queue-v0.md)
