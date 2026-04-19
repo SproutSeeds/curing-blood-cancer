@@ -1,0 +1,490 @@
+{
+  "task_queue_id": "mrd-resistance-geometry-second-source-task-queue-v0",
+  "date": "2026-04-19",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Resistance Geometry Second-Source Task Queue v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "clonal evolution",
+    "therapy resistance",
+    "geometry pilot coverage",
+    "source extraction"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "gap_register_ids": [
+    "bcma-antigen-escape-evidence-gap-register-v0"
+  ],
+  "source_ids": [
+    "pubmed",
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma"
+  ],
+  "tasks": [
+    {
+      "task_id": "mrd-trajectory-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for MRD trajectory split",
+      "task_type": "source-extraction-task",
+      "priority": "high",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "mrd-trajectory-split-v0"
+      ],
+      "measurement_term_ids": [
+        "mrd-negativity",
+        "mrd-sensitivity-threshold",
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/mrd-trajectory-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "One new source-specific mechanism extraction record mapping at least one signal to mrd-trajectory-split-v0.",
+        "A source note preserving MRD method, specimen, threshold, time point, and paired-sample context when available.",
+        "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
+      ],
+      "acceptance_checks": [
+        "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
+        "Any new source is added to the public source registry before its source_id is referenced.",
+        "MRD trajectory language remains source-specific and does not become patient-specific MRD interpretation.",
+        "Coverage counts are described only as public artifact coverage, not mechanism frequency or evidence strength."
+      ],
+      "what_not_to_infer": [
+        "Do not infer relapse risk from MRD trajectory labels.",
+        "Do not compare MRD assays or thresholds unless the source provides aligned measurement context.",
+        "Do not recommend treatment changes from MRD trajectory evidence."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "residual-transcriptional-adaptation-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for residual transcriptional adaptation",
+      "task_type": "source-extraction-task",
+      "priority": "high",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "residual-transcriptional-adaptation-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/residual-transcriptional-adaptation-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "One new source-specific mechanism extraction record mapping at least one signal to residual-transcriptional-adaptation-v0.",
+        "A source note separating malignant plasma cell state, therapy exposure, assay method, and posttreatment timing.",
+        "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
+      ],
+      "acceptance_checks": [
+        "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
+        "The selected source supports residual transcriptional adaptation or an equivalent source-defined residual state signal.",
+        "Review-level summaries are not treated as cohort-level measurements unless the source provides the underlying measurements.",
+        "The task does not upgrade transcriptional adaptation into treatment-selection evidence."
+      ],
+      "what_not_to_infer": [
+        "Do not infer clinical actionability from transcriptional-state labels.",
+        "Do not rank residual-state mechanisms without aligned source extraction.",
+        "Do not treat scRNA-seq findings as routine clinical decision support."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "genetic-nongenetic-coupling-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for genetic and nongenetic coupling",
+      "task_type": "source-extraction-task",
+      "priority": "high",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "genetic-nongenetic-coupling-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/genetic-nongenetic-coupling-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "One new source-specific mechanism extraction record mapping at least one signal to genetic-nongenetic-coupling-v0.",
+        "A source note preserving clone inference method, transcriptional-state method, and paired-sample context when available.",
+        "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
+      ],
+      "acceptance_checks": [
+        "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
+        "The selected source supports a link between clone architecture and nongenetic or transcriptional state.",
+        "Correlation language is preserved and not converted into causal or clinical actionability language.",
+        "Coverage counts are not used as mechanism rankings."
+      ],
+      "what_not_to_infer": [
+        "Do not infer causality from correlation.",
+        "Do not rank genetic versus nongenetic mechanisms from one extraction.",
+        "Do not use this task for patient-specific prognosis or treatment selection."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "metabolic-resistance-state-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for metabolic resistance state",
+      "task_type": "source-extraction-task",
+      "priority": "medium",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "metabolic-resistance-state-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/metabolic-resistance-state-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "One new source-specific mechanism extraction record mapping at least one signal to metabolic-resistance-state-v0.",
+        "A source note preserving assay method, cell-state context, pathway signal, and posttreatment context.",
+        "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
+      ],
+      "acceptance_checks": [
+        "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
+        "The selected source supports a metabolic resistance or residual-cell metabolic-state signal.",
+        "Metabolism is framed as research extraction context, not intervention evidence.",
+        "Coverage counts are not used as mechanism-frequency estimates."
+      ],
+      "what_not_to_infer": [
+        "Do not recommend metabolic interventions.",
+        "Do not infer that a metabolic state is dominant across relapse settings.",
+        "Do not translate pathway signals into clinical actionability without expert review."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "nfkb-selective-state-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for NF-kB selective state",
+      "task_type": "source-extraction-task",
+      "priority": "medium",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "nfkb-selective-state-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/nfkb-selective-state-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "One new source-specific mechanism extraction record mapping at least one signal to nfkb-selective-state-v0.",
+        "A source note preserving pathway-state context, selective-cell context, and assay method.",
+        "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
+      ],
+      "acceptance_checks": [
+        "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
+        "The selected source supports NF-kB pathway state in a relevant myeloma resistance or residual disease context.",
+        "Pathway-state language is not converted into drug-target guidance.",
+        "The task preserves uncertainty and expert-review need."
+      ],
+      "what_not_to_infer": [
+        "Do not recommend targeting NF-kB.",
+        "Do not rank NF-kB against other pathway states from this queue.",
+        "Do not infer patient-specific biology from pathway-state extraction."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "subclone-diversity-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for subclone diversity",
+      "task_type": "source-extraction-task",
+      "priority": "medium",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "subclone-diversity-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/subclone-diversity-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "One new source-specific mechanism extraction record mapping at least one signal to subclone-diversity-v0.",
+        "A source note preserving clone/subclone measurement method, sample context, and progression or treatment context.",
+        "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
+      ],
+      "acceptance_checks": [
+        "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
+        "The selected source supports subclone diversity or clonal heterogeneity in multiple myeloma.",
+        "Review-level context is not treated as a measured subclone denominator unless the source provides measurements.",
+        "The task does not create patient-specific prognosis claims."
+      ],
+      "what_not_to_infer": [
+        "Do not infer individual prognosis from subclone diversity.",
+        "Do not compare subclone diversity across sources without aligned methods.",
+        "Do not rank subclone diversity as a relapse mechanism from artifact coverage alone."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "single-cell-translation-gap-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for the single-cell translation gap",
+      "task_type": "source-extraction-task",
+      "priority": "medium",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "single-cell-translation-gap-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/single-cell-translation-gap-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "One new source-specific mechanism extraction record mapping at least one signal to single-cell-translation-gap-v0.",
+        "A source note preserving implementation barriers such as cost, standardization, data complexity, clinical workflow, or ethics.",
+        "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
+      ],
+      "acceptance_checks": [
+        "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
+        "The selected source supports clinical-translation or implementation-readiness limitations for single-cell technologies.",
+        "Implementation barriers remain separate from biological mechanism claims.",
+        "The task does not imply a test should be ordered for any individual."
+      ],
+      "what_not_to_infer": [
+        "Do not claim single-cell profiling is routine clinical decision support.",
+        "Do not recommend any test or platform.",
+        "Do not treat implementation barriers as evidence against the underlying biology."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "t-cell-therapy-pressure-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for T-cell therapy pressure",
+      "task_type": "source-extraction-task",
+      "priority": "medium",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [
+        "bcma-resistance-is-multifactorial-v0"
+      ],
+      "mechanism_group_ids": [
+        "t-cell-therapy-pressure-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "besliu-2025-treatment-landscape-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_besliu_2025_evolving_landscape_myeloma"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/t-cell-therapy-pressure-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "One new source-specific mechanism extraction record mapping at least one signal to t-cell-therapy-pressure-v0.",
+        "A source note preserving therapy class, target class, relapse setting, prior exposure, and sequencing uncertainty.",
+        "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
+      ],
+      "acceptance_checks": [
+        "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
+        "The selected source supports T-cell-directed therapy pressure, target sequence, or immune-redirection context.",
+        "Product and target statements remain descriptive and are not converted into treatment comparisons.",
+        "Trial or regulatory context is not treated as efficacy, eligibility, availability, or safety guidance."
+      ],
+      "what_not_to_infer": [
+        "Do not recommend CAR T, bispecific antibodies, targets, products, or treatment sequences.",
+        "Do not compare BCMA and GPRC5D approaches from this task.",
+        "Do not infer patient-specific trial fit or therapy fit."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "unmet-high-risk-context-second-source-extraction-task-v0",
+      "task_title": "Add a second public source extraction for unmet high-risk context",
+      "task_type": "source-extraction-task",
+      "priority": "medium",
+      "status": "ready",
+      "suggested_issue_form": "source-extraction-task.yml",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "unmet-high-risk-context-v0"
+      ],
+      "measurement_term_ids": [
+        "relapse-or-disease-progression"
+      ],
+      "extraction_record_ids": [
+        "besliu-2025-treatment-landscape-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_besliu_2025_evolving_landscape_myeloma"
+      ],
+      "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/unmet-high-risk-context-second-source-extraction-task-v0.md",
+      "public_deliverables": [
+        "One new source-specific mechanism extraction record mapping at least one signal to unmet-high-risk-context-v0.",
+        "A source note preserving disease context, risk context, subtype scope, and source limitations.",
+        "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
+      ],
+      "acceptance_checks": [
+        "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
+        "The selected source supports high-risk, extramedullary, plasma cell leukemia, or related unmet-need context.",
+        "Context variables are not treated as causal mechanisms unless the source explicitly supports that interpretation.",
+        "The task does not create patient-specific risk, prognosis, eligibility, or treatment-fit guidance."
+      ],
+      "what_not_to_infer": [
+        "Do not infer patient-specific prognosis.",
+        "Do not recommend treatment or trial options for high-risk contexts.",
+        "Do not compare high-risk contexts without aligned source definitions."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-19",
+    "last_reviewed": "2026-04-19",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from mrd-resistance-geometry-coverage-v0.",
+      "All nine ready tasks address second-source extraction needs; zero first-extraction gaps remain.",
+      "Task source_ids include pubmed as a discovery anchor when the second source has not yet been selected."
+    ]
+  }
+}
