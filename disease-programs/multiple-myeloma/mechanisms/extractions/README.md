@@ -17,6 +17,9 @@ Each record should:
 
 | Extraction | Primary Mechanism |
 | --- | --- |
+| [Cui 2024 MRD clonal evolution geometry](cui-2024-mrd-clonal-evolution-geometry-v0.json) | MRD trajectory split, residual transcriptional adaptation, metabolism, NF-kB state, genetic/nongenetic coupling, and TME interactions |
+| [Li 2025 single-cell myeloma geometry](li-2025-single-cell-myeloma-geometry-v0.json) | subclone diversity, microenvironment interactions, and single-cell translation gap |
+| [Besliu 2025 treatment landscape geometry](besliu-2025-treatment-landscape-geometry-v0.json) | T-cell therapy pressure and unmet high-risk context |
 | [Maura 2025 plasma-cell identity escape](maura-2025-plasma-cell-identity-escape-v0.json) | plasma-cell identity or lineage-state escape |
 | [Di Meo 2025 target-linked phenotype](di-meo-2025-target-linked-phenotype-v0.json) | target-linked phenotype fields for plasma-cell identity or lineage-state escape |
 | [Yue 2025 BCMA resistance review](yue-2025-bcma-resistance-review-v0.json) | CAR T fitness, exhaustion, expansion, or persistence |

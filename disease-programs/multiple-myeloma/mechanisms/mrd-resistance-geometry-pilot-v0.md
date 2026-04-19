@@ -73,6 +73,12 @@ This pilot uses a dynamic radial vector field.
 - JSON: [`mrd-resistance-geometry-pilot-v0.json`](mrd-resistance-geometry-pilot-v0.json)
 - Metadata: [`mrd-resistance-geometry-pilot-v0.metadata.json`](mrd-resistance-geometry-pilot-v0.metadata.json)
 
+## Source-Specific Extractions
+
+- [`cui-2024-mrd-clonal-evolution-geometry-v0`](extractions/cui-2024-mrd-clonal-evolution-geometry-v0.json): MRD trajectory split, transcriptional adaptation, metabolism, NF-kB state, genetic/nongenetic coupling, and tumor-microenvironment interaction signals.
+- [`li-2025-single-cell-myeloma-geometry-v0`](extractions/li-2025-single-cell-myeloma-geometry-v0.json): subclone diversity, tumor-microenvironment context, and single-cell translation-gap signals.
+- [`besliu-2025-treatment-landscape-geometry-v0`](extractions/besliu-2025-treatment-landscape-geometry-v0.json): T-cell therapy pressure and unmet high-risk context signals.
+
 ## Review Status
 
 This pilot is source-checked, not expert-reviewed.
