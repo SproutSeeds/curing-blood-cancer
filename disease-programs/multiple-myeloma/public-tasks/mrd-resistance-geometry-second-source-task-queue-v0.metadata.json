@@ -26,6 +26,11 @@
       "label": "BCMA Antigen Escape Evidence Gap Register v0",
       "url": "../evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
       "accessed": "2026-04-19"
+    },
+    {
+      "label": "Cohen 2021 single-cell resistance source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33619369/",
+      "accessed": "2026-04-19"
     }
   ],
   "limitations": [

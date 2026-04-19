@@ -274,6 +274,16 @@
       "claim_limits": ["Single-institution retrospective MRD dynamics source; use for source-specific extraction only, not patient-specific prognosis, monitoring instructions, treatment selection, or clinical decision support."]
     },
     {
+      "source_id": "pubmed_cohen_2021_resistance_single_cell",
+      "owner": "PubMed-indexed literature / Nature Medicine",
+      "source_type": "research article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33619369/",
+      "accessed": "2026-04-19",
+      "blood_cancer_scope": ["multiple myeloma", "primary refractory multiple myeloma", "early relapse", "single-cell RNA sequencing", "resistance pathways", "transcriptional clones"],
+      "claim_uses": ["literature-search", "mechanism-map", "genomics-data", "machine-representation"],
+      "claim_limits": ["Prospective translational-trial source; use for source-specific resistance-state and clone-state extraction only, not patient-specific prognosis, treatment selection, target actionability, monitoring guidance, or cure claims."]
+    },
+    {
       "source_id": "fda_mrd_cr_endpoint_guidance_2026",
       "owner": "U.S. Food and Drug Administration",
       "source_type": "draft guidance",

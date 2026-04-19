@@ -20,7 +20,8 @@
     "pubmed_besliu_2025_evolving_landscape_myeloma",
     "pubmed_cui_2024_mrd_clonal_evolution",
     "pubmed_li_2025_single_cell_myeloma_review",
-    "pubmed_martinez_lopez_2020_mrd_dynamics"
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_cohen_2021_resistance_single_cell"
   ],
   "tasks": [
     {
@@ -82,7 +83,7 @@
       "task_title": "Add a second public source extraction for residual transcriptional adaptation",
       "task_type": "source-extraction-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -96,16 +97,18 @@
         "bone-marrow-mrd"
       ],
       "extraction_record_ids": [
-        "cui-2024-mrd-clonal-evolution-geometry-v0"
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/residual-transcriptional-adaptation-second-source-extraction-task-v0.md",
       "public_deliverables": [
-        "One new source-specific mechanism extraction record mapping at least one signal to residual-transcriptional-adaptation-v0.",
-        "A source note separating malignant plasma cell state, therapy exposure, assay method, and posttreatment timing.",
+        "Completed through cohen-2021-resistance-single-cell-geometry-v0: one new source-specific signal maps to residual-transcriptional-adaptation-v0.",
+        "A source note preserving malignant plasma cell state, therapy exposure, assay method, sampling time point, and source-defined response context.",
         "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
       ],
       "acceptance_checks": [
@@ -132,7 +135,7 @@
       "task_title": "Add a second public source extraction for genetic and nongenetic coupling",
       "task_type": "source-extraction-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -146,16 +149,18 @@
         "bone-marrow-mrd"
       ],
       "extraction_record_ids": [
-        "cui-2024-mrd-clonal-evolution-geometry-v0"
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/genetic-nongenetic-coupling-second-source-extraction-task-v0.md",
       "public_deliverables": [
-        "One new source-specific mechanism extraction record mapping at least one signal to genetic-nongenetic-coupling-v0.",
-        "A source note preserving clone inference method, transcriptional-state method, and paired-sample context when available.",
+        "Completed through cohen-2021-resistance-single-cell-geometry-v0: one new source-specific signal maps to genetic-nongenetic-coupling-v0.",
+        "A source note preserving clone inference method, transcriptional-state method, paired-sample context when available, therapy exposure, and source-defined response context.",
         "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
       ],
       "acceptance_checks": [
@@ -486,8 +491,9 @@
     "review_status": "source-checked",
     "review_notes": [
       "Built from mrd-resistance-geometry-coverage-v0.",
-      "The MRD trajectory second-source task is now done through martinez-lopez-2020-mrd-dynamics-geometry-v0.",
-      "Eight ready tasks remain for second-source extraction across under-covered geometry nodes.",
+      "The MRD trajectory second-source task is done through martinez-lopez-2020-mrd-dynamics-geometry-v0.",
+      "The residual transcriptional adaptation and genetic/nongenetic coupling tasks are done through cohen-2021-resistance-single-cell-geometry-v0.",
+      "Six ready tasks remain for second-source extraction across under-covered geometry nodes.",
       "Task source_ids include pubmed as a discovery anchor where a second source has not yet been selected."
     ]
   }

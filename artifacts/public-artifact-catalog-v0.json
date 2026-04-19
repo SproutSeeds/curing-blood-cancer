@@ -156,6 +156,25 @@
       "limitation_count": 7
     },
     {
+      "artifact_id": "mrd-resistance-geometry-axis-revision-decision-v0",
+      "title": "MRD Resistance Geometry Axis Revision Decision v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "clonal evolution",
+        "therapy resistance",
+        "geometry pilot",
+        "axis decision",
+        "expert review"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 8
+    },
+    {
       "artifact_id": "mrd-resistance-geometry-coverage-v0",
       "title": "MRD Resistance Geometry Coverage Report v0",
       "artifact_class": "dataset",
@@ -170,7 +189,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.metadata.json",
-      "source_count": 3,
+      "source_count": 4,
       "limitation_count": 8
     },
     {
@@ -188,7 +207,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-second-source-task-queue-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-second-source-task-queue-v0.metadata.json",
-      "source_count": 3,
+      "source_count": 4,
       "limitation_count": 8
     },
     {
@@ -207,7 +226,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.metadata.json",
-      "source_count": 6,
+      "source_count": 9,
       "limitation_count": 8
     },
     {
@@ -390,7 +409,7 @@
       ],
       "path": "sources/source-registry-v0.md",
       "metadata_path": "sources/source-registry-v0.metadata.json",
-      "source_count": 30,
+      "source_count": 31,
       "limitation_count": 4
     },
     {

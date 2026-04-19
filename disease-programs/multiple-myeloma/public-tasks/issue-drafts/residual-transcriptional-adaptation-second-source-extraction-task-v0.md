@@ -18,15 +18,28 @@ compared or used in expert-review routing.
 
 - `pubmed`
 - `pubmed_cui_2024_mrd_clonal_evolution`
+- `pubmed_cohen_2021_resistance_single_cell`
+
+## Completion Status
+
+Status: `done`
+
+Completed through:
+
+- `cohen-2021-resistance-single-cell-geometry-v0`
+- signal: `cohen-2021-resistant-state-program-signal-v0`
+
+The task is complete for v0 navigation only. The bucket remains
+expert-review-needed before any claim upgrade.
 
 ## Deliverables
 
-- Add one source-specific mechanism extraction using the existing extraction
+- Added one source-specific mechanism extraction using the existing extraction
   schema.
-- Map extracted signals to `residual-transcriptional-adaptation-v0`.
-- Preserve malignant plasma cell state, therapy exposure, assay method, and
+- Mapped an extracted signal to `residual-transcriptional-adaptation-v0`.
+- Preserved malignant plasma cell state, therapy exposure, assay method, and
   posttreatment timing.
-- Refresh `mrd-resistance-geometry-coverage-v0`.
+- Refreshed `mrd-resistance-geometry-coverage-v0`.
 
 ## Acceptance Checks
 

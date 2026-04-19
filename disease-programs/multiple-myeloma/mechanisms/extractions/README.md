@@ -18,6 +18,7 @@ Each record should:
 | Extraction | Primary Mechanism |
 | --- | --- |
 | [Cui 2024 MRD clonal evolution geometry](cui-2024-mrd-clonal-evolution-geometry-v0.json) | MRD trajectory split, residual transcriptional adaptation, metabolism, NF-kB state, genetic/nongenetic coupling, and TME interactions |
+| [Cohen 2021 resistance single-cell geometry](cohen-2021-resistance-single-cell-geometry-v0.json) | residual transcriptional adaptation and clone-state coupling |
 | [Li 2025 single-cell myeloma geometry](li-2025-single-cell-myeloma-geometry-v0.json) | subclone diversity, microenvironment interactions, and single-cell translation gap |
 | [Besliu 2025 treatment landscape geometry](besliu-2025-treatment-landscape-geometry-v0.json) | T-cell therapy pressure and unmet high-risk context |
 | [Maura 2025 plasma-cell identity escape](maura-2025-plasma-cell-identity-escape-v0.json) | plasma-cell identity or lineage-state escape |
