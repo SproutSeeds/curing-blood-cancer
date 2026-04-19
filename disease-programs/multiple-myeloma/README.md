@@ -136,6 +136,7 @@ research directions deserve structured public tracking.
 - [Post-BCMA Resistance Frontier Addendum v0](mechanisms/post-bcma-resistance-frontier-addendum-v0.md)
 - [Precursor, Risk, And Interception Boundary Note v0](precursors/precursor-risk-interception-boundary-note-v0.md)
 - [High-Risk, Extramedullary, Organ, And Frailty Context Modifier Map v0](contexts/high-risk-organ-frailty-context-modifier-map-v0.md)
+- [MRD Resistance Geometry Pilot v0](mechanisms/mrd-resistance-geometry-pilot-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
 - [Post-CAR T Relapse Mechanism Coverage Report v0](mechanisms/post-car-t-relapse-mechanism-coverage-v0.md)
@@ -154,3 +155,6 @@ research directions deserve structured public tracking.
 - `pubmed_kyle_2010_mgus_smm_imwg`
 - `pubmed_mateos_2020_smm_risk_model`
 - `pubmed_palumbo_2015_imwg_frailty`
+- `pubmed_cui_2024_mrd_clonal_evolution`
+- `pubmed_li_2025_single_cell_myeloma_review`
+- `pubmed_besliu_2025_evolving_landscape_myeloma`
