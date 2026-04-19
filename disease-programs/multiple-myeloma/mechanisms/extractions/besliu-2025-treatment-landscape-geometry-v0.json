@@ -1,0 +1,89 @@
+{
+  "extraction_record_id": "besliu-2025-treatment-landscape-geometry-v0",
+  "date": "2026-04-19",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "source_ids": [
+    "pubmed_besliu_2025_evolving_landscape_myeloma"
+  ],
+  "mechanism_group_ids": [
+    "t-cell-therapy-pressure-v0",
+    "unmet-high-risk-context-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed review article",
+    "title": "The Evolving Landscape in Multiple Myeloma: From Risk Stratification to T Cell-Directed Advanced Therapies.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39941892/",
+    "doi": "10.3390/cancers17030525",
+    "pmid": "39941892",
+    "accessed": "2026-04-19",
+    "publication_year": 2025,
+    "study_context": "Cancers review article covering risk stratification, immune dysfunction, CAR T-cell therapies, bispecific antibodies, BCMA and GPRC5D targets, relapsed/refractory multiple myeloma, and high-unmet-need contexts."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "besliu-2025-t-cell-therapy-pressure-signal-v0",
+      "mechanism_group_id": "t-cell-therapy-pressure-v0",
+      "signal_summary": "The review describes T cell-directed approaches, including CAR T-cell therapies and bispecific antibodies, as part of the relapsed/refractory multiple myeloma landscape and notes BCMA and GPRC5D target contexts.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "CAR T-cell therapy context",
+        "bispecific antibody context",
+        "BCMA target context",
+        "GPRC5D target context",
+        "relapsed or refractory multiple myeloma",
+        "immune-system dysfunction context",
+        "therapy-sequencing open question"
+      ],
+      "limitations": [
+        "Review-level landscape signal.",
+        "Does not compare products or treatment classes.",
+        "Does not recommend CAR T, bispecific antibody therapy, target selection, or therapy sequence."
+      ]
+    },
+    {
+      "signal_id": "besliu-2025-unmet-high-risk-context-signal-v0",
+      "mechanism_group_id": "unmet-high-risk-context-v0",
+      "signal_summary": "The review identifies extramedullary disease and plasma cell leukemia as unmet-need contexts requiring additional strategies to improve outcomes.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "extramedullary disease context",
+        "plasma cell leukemia context",
+        "high-unmet-need context",
+        "risk stratification context",
+        "relapsed or refractory disease context"
+      ],
+      "limitations": [
+        "Review-level context, not patient-specific risk assessment.",
+        "Does not provide eligibility, prognosis, or treatment-fit guidance.",
+        "Requires subtype-specific source extraction and expert review before claim upgrade."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "The geometry pilot should include a therapy-pressure axis for T cell-directed treatment contexts without converting that axis into sequencing advice.",
+      "The geometry pilot should preserve high-unmet-need disease contexts as modifiers that can change evidence interpretation.",
+      "Review-level therapy landscape signals can guide future trial and source extraction fields."
+    ],
+    "what_this_does_not_support": [
+      "It does not recommend any therapy, target, product, trial, or sequence.",
+      "It does not compare CAR T-cell therapies, bispecific antibodies, BCMA targeting, or GPRC5D targeting.",
+      "It does not determine risk, prognosis, eligibility, or treatment fit for any individual.",
+      "It does not claim that multiple myeloma has been cured."
+    ]
+  },
+  "review": {
+    "created": "2026-04-19",
+    "last_reviewed": "2026-04-19",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from PubMed metadata and abstract-level review statements for PMID 39941892.",
+      "Review-level signals are separated from product-comparison or sequencing claims.",
+      "All extracted signals are research-map signals and are not clinical advice."
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "extraction_record_id": "li-2025-single-cell-myeloma-geometry-v0",
+  "date": "2026-04-19",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "source_ids": [
+    "pubmed_li_2025_single_cell_myeloma_review"
+  ],
+  "mechanism_group_ids": [
+    "subclone-diversity-v0",
+    "tme-shelter-interactions-v0",
+    "single-cell-translation-gap-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed review article",
+    "title": "Multiple Myeloma Insights from Single-Cell Analysis: Clonal Evolution, the Microenvironment, Therapy Evasion, and Clinical Implications.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40002248/",
+    "doi": "10.3390/cancers17040653",
+    "pmid": "40002248",
+    "accessed": "2026-04-19",
+    "publication_year": 2025,
+    "study_context": "Cancers review article summarizing single-cell analysis in multiple myeloma, including clonal evolution, microenvironment interactions, therapy evasion, and clinical-translation challenges."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "li-2025-subclone-diversity-signal-v0",
+      "mechanism_group_id": "subclone-diversity-v0",
+      "signal_summary": "The review describes multiple myeloma as heterogeneous and shaped by clonal evolution, genetic instability, and subclonal diversity across progression and treatment resistance.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "clonal evolution",
+        "genetic instability",
+        "subclonal diversity",
+        "single-cell genomics",
+        "single-cell transcriptomics",
+        "multiple myeloma progression context"
+      ],
+      "limitations": [
+        "Review-level signal, not a source-cohort measurement.",
+        "Does not quantify subclone frequency or relapse risk.",
+        "Does not provide patient-specific prognosis."
+      ]
+    },
+    {
+      "signal_id": "li-2025-microenvironment-interaction-signal-v0",
+      "mechanism_group_id": "tme-shelter-interactions-v0",
+      "signal_summary": "The review frames the bone marrow tumor microenvironment as a supportive and immune-evasion context that single-cell technologies can help resolve.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "tumor microenvironment",
+        "immune evasion",
+        "bone marrow context",
+        "single-cell technology",
+        "cellular interaction context"
+      ],
+      "limitations": [
+        "Review-level category rather than a specific cohort extraction.",
+        "Does not identify a patient-specific microenvironment mechanism.",
+        "Does not establish clinical actionability of any microenvironment signal."
+      ]
+    },
+    {
+      "signal_id": "li-2025-single-cell-translation-gap-signal-v0",
+      "mechanism_group_id": "single-cell-translation-gap-v0",
+      "signal_summary": "The review notes that advanced single-cell technologies have clinical promise but face barriers including high costs, data complexity, standardization needs, and ethical considerations.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "single-cell technology",
+        "clinical application barrier",
+        "cost barrier",
+        "data complexity",
+        "bioinformatics standardization",
+        "ethical consideration"
+      ],
+      "limitations": [
+        "This is an implementation-readiness signal, not a biological mechanism.",
+        "Does not claim single-cell profiling is routine clinical decision support.",
+        "Does not recommend any test for an individual patient."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "The geometry pilot should preserve heterogeneity, microenvironment, and technology-readiness layers as separate map dimensions.",
+      "Single-cell review context can guide extraction fields for later source-specific primary-study records.",
+      "The map should keep biological plausibility separate from clinical implementation readiness."
+    ],
+    "what_this_does_not_support": [
+      "It does not provide treatment guidance, diagnostic guidance, trial recommendations, or patient-specific interpretation.",
+      "It does not quantify mechanism frequency.",
+      "It does not establish that single-cell analysis is clinically ready for routine decision support.",
+      "It does not rank clonal, microenvironmental, or technical barriers by priority."
+    ]
+  },
+  "review": {
+    "created": "2026-04-19",
+    "last_reviewed": "2026-04-19",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built from PubMed metadata and abstract-level review statements for PMID 40002248.",
+      "Review-level signals are separated from cohort-level observations.",
+      "All extracted signals are research-map signals and are not clinical advice."
+    ]
+  }
+}

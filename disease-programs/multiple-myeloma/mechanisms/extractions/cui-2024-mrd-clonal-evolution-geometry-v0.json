@@ -1,0 +1,171 @@
+{
+  "extraction_record_id": "cui-2024-mrd-clonal-evolution-geometry-v0",
+  "date": "2026-04-19",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution"
+  ],
+  "mechanism_group_ids": [
+    "mrd-trajectory-split-v0",
+    "residual-transcriptional-adaptation-v0",
+    "metabolic-resistance-state-v0",
+    "nfkb-selective-state-v0",
+    "genetic-nongenetic-coupling-v0",
+    "tme-shelter-interactions-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed open-access research article",
+    "title": "Identification of Therapy-Induced Clonal Evolution and Resistance Pathways in Minimal Residual Clones in Multiple Myeloma through Single-Cell Sequencing.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38900040/",
+    "doi": "10.1158/1078-0432.CCR-24-0545",
+    "pmid": "38900040",
+    "accessed": "2026-04-19",
+    "publication_year": 2024,
+    "study_context": "Clinical Cancer Research article using single-cell RNA sequencing on paired diagnostic and posttreatment bone marrow samples, including MGUS, newly diagnosed multiple myeloma, posttreatment multiple myeloma, and one healthy donor sample; public extraction uses PubMed metadata, PMC full text, and abstract-level study design/results."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "cui-2024-mrd-trajectory-split-signal-v0",
+      "mechanism_group_id": "mrd-trajectory-split-v0",
+      "signal_summary": "The source reports three posttreatment transcriptional evolution patterns: clonal elimination in MRD-negative patients, and clonal stabilization or clonal selection in MRD-positive patients.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "paired diagnostic bone marrow sample",
+        "paired posttreatment bone marrow sample",
+        "single-cell RNA sequencing",
+        "next-generation flow MRD",
+        "MRD-negative context",
+        "MRD-positive context",
+        "clonal elimination",
+        "clonal stabilization",
+        "clonal selection"
+      ],
+      "limitations": [
+        "Single source study context.",
+        "Does not estimate how often each trajectory occurs across all multiple myeloma settings.",
+        "Does not interpret any individual MRD result.",
+        "Does not recommend treatment escalation, de-escalation, or sequencing."
+      ]
+    },
+    {
+      "signal_id": "cui-2024-transcriptional-adaptation-signal-v0",
+      "mechanism_group_id": "residual-transcriptional-adaptation-v0",
+      "signal_summary": "The source supports tracking transcriptional adaptation in residual malignant plasma cells as part of therapy-induced clonal evolution.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "single-cell transcriptome",
+        "residual malignant plasma cell state",
+        "posttreatment time point",
+        "therapy-induced evolution",
+        "MRD-positive context"
+      ],
+      "limitations": [
+        "Transcriptional-state findings require source-method review before cross-study scoring.",
+        "Not evidence for a specific clinical action.",
+        "Not a replacement for validated MRD or response criteria."
+      ]
+    },
+    {
+      "signal_id": "cui-2024-fatty-acid-oxidation-signal-v0",
+      "mechanism_group_id": "metabolic-resistance-state-v0",
+      "signal_summary": "The source reports a metabolic shift toward fatty acid oxidation in cycling-resistant plasma cells.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "fatty acid oxidation pathway signal",
+        "cycling-resistant plasma cell state",
+        "single-cell RNA sequencing",
+        "posttreatment bone marrow context"
+      ],
+      "limitations": [
+        "Metabolism signal is hypothesis-generating for research extraction.",
+        "Does not establish a metabolic intervention strategy.",
+        "Does not prove clinical efficacy for targeting this state."
+      ]
+    },
+    {
+      "signal_id": "cui-2024-nfkb-selective-state-signal-v0",
+      "mechanism_group_id": "nfkb-selective-state-v0",
+      "signal_summary": "The source reports that selective plasma cells favored NF-kB pathway activity.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "NF-kB pathway signal",
+        "selective plasma cell state",
+        "MRD-positive context",
+        "single-cell RNA sequencing",
+        "posttreatment bone marrow context"
+      ],
+      "limitations": [
+        "Pathway preference is not a drug-target selection rule.",
+        "Does not rank NF-kB against other resistance mechanisms.",
+        "Requires expert review before claim upgrade."
+      ]
+    },
+    {
+      "signal_id": "cui-2024-genetic-nongenetic-coupling-signal-v0",
+      "mechanism_group_id": "genetic-nongenetic-coupling-v0",
+      "signal_summary": "The source reports a close link between genetic and nongenetic mechanisms behind clonal evolution in multiple myeloma.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "genetic clone architecture",
+        "transcriptional dynamics",
+        "single-cell RNA sequencing",
+        "copy-number inference context",
+        "paired diagnosis and posttreatment context"
+      ],
+      "limitations": [
+        "Correlation does not establish a clinical intervention point.",
+        "Does not support clone-only or state-only mechanism rankings.",
+        "Cross-study comparability requires consistent methods and expert review."
+      ]
+    },
+    {
+      "signal_id": "cui-2024-tme-interaction-signal-v0",
+      "mechanism_group_id": "tme-shelter-interactions-v0",
+      "signal_summary": "The source reports variations in interactions between malignant plasma cells and the tumor microenvironment, with selective plasma cells showing strong interaction patterns.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "malignant plasma cell state",
+        "tumor microenvironment interaction",
+        "bone marrow immune microenvironment",
+        "single-cell RNA sequencing",
+        "cell-cell interaction inference"
+      ],
+      "limitations": [
+        "Cell-interaction inference is not proof of patient-specific mechanism.",
+        "Does not establish a microenvironment-targeting treatment recommendation.",
+        "Needs source-specific method extraction before comparison with other papers."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "The geometry pilot can represent MRD-positive residual disease as a moving research structure rather than a single static state.",
+      "Public extraction templates should preserve MRD method, paired sample timing, single-cell assay context, clone-state fields, pathway-state fields, and microenvironment-interaction fields.",
+      "Genetic and nongenetic mechanisms should remain linked in the map until source-specific evidence justifies separation."
+    ],
+    "what_this_does_not_support": [
+      "It does not provide treatment guidance, MRD interpretation, relapse prediction, clinical monitoring guidance, or trial recommendation.",
+      "It does not rank resistance mechanisms by frequency or importance across multiple myeloma.",
+      "It does not claim that targeting any extracted pathway cures or prevents relapse.",
+      "It does not replace expert review of MRD, response, or relapse evidence."
+    ]
+  },
+  "review": {
+    "created": "2026-04-19",
+    "last_reviewed": "2026-04-19",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built as the first source-specific extraction companion to mrd-resistance-geometry-pilot-v0.",
+      "Source details checked against PubMed/PMC indexed metadata and publicly accessible abstract/full-text snippets.",
+      "All extracted signals are research-map signals and are not clinical advice."
+    ]
+  }
+}

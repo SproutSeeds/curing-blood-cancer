@@ -34,6 +34,251 @@
     "relapse-or-rrmm": 0.8,
     "post-t-cell-directed-therapy": 0.9
   },
+  "mechanism_groups": [
+    {
+      "mechanism_id": "mrd-trajectory-split-v0",
+      "label": "MRD trajectory split",
+      "evidence_level": "observational-study",
+      "relapse_role": "Research bucket for separating posttreatment clonal elimination from MRD-positive residual-state patterns.",
+      "why_it_matters": "Durable-remission maps should not collapse deep response, MRD negativity, MRD positivity, and residual clone behavior into one undifferentiated state.",
+      "what_to_extract": [
+        "MRD method",
+        "MRD threshold",
+        "bone marrow timing",
+        "paired diagnosis and posttreatment sample availability",
+        "clonal elimination",
+        "clonal stabilization",
+        "clonal selection"
+      ],
+      "public_measurements": [
+        "next-generation flow MRD",
+        "single-cell RNA sequencing",
+        "paired bone marrow sample timing",
+        "posttreatment response state"
+      ],
+      "source_ids": ["pubmed_cui_2024_mrd_clonal_evolution"],
+      "limitations": [
+        "Single-study mechanism extraction.",
+        "Not a patient-specific MRD interpretation.",
+        "Not a relapse-risk estimate."
+      ]
+    },
+    {
+      "mechanism_id": "residual-transcriptional-adaptation-v0",
+      "label": "Residual transcriptional adaptation",
+      "evidence_level": "observational-study",
+      "relapse_role": "Research bucket for nongenetic cell-state adaptation in residual myeloma cells after treatment.",
+      "why_it_matters": "Resistance maps that only track clone genetics may miss transcriptional states that shape residual-cell fitness.",
+      "what_to_extract": [
+        "single-cell transcriptional state",
+        "paired treatment time point",
+        "MRD-positive context",
+        "residual malignant plasma cell state",
+        "therapy-exposure context"
+      ],
+      "public_measurements": [
+        "single-cell RNA sequencing",
+        "transcriptional trajectory assignment",
+        "malignant plasma cell annotation"
+      ],
+      "source_ids": ["pubmed_cui_2024_mrd_clonal_evolution"],
+      "limitations": [
+        "Transcriptional adaptation is not a treatment-selection rule.",
+        "Requires source-specific methods review before cross-study comparison."
+      ]
+    },
+    {
+      "mechanism_id": "metabolic-resistance-state-v0",
+      "label": "Metabolic resistance state",
+      "evidence_level": "observational-study",
+      "relapse_role": "Research bucket for metabolism-linked survival states in residual myeloma cells.",
+      "why_it_matters": "A metabolic branch gives the map a way to preserve non-target, non-immune resistance hypotheses without recommending interventions.",
+      "what_to_extract": [
+        "fatty-acid oxidation signal",
+        "cycling-resistant plasma cell context",
+        "single-cell pathway scoring",
+        "posttreatment sample context"
+      ],
+      "public_measurements": [
+        "scRNA-seq pathway signal",
+        "cell-cycle state",
+        "malignant plasma cell state"
+      ],
+      "source_ids": ["pubmed_cui_2024_mrd_clonal_evolution"],
+      "limitations": [
+        "Metabolic signal is hypothesis-generating.",
+        "Not evidence for a metabolic treatment recommendation."
+      ]
+    },
+    {
+      "mechanism_id": "nfkb-selective-state-v0",
+      "label": "NF-kB selective state",
+      "evidence_level": "observational-study",
+      "relapse_role": "Research bucket for pathway-state preference in selected residual plasma cells.",
+      "why_it_matters": "Pathway-state extraction helps distinguish residual-cell biology from broad relapse labels.",
+      "what_to_extract": [
+        "NF-kB pathway signal",
+        "selective plasma cell context",
+        "MRD-positive context",
+        "posttreatment time point"
+      ],
+      "public_measurements": [
+        "scRNA-seq pathway signal",
+        "plasma cell state assignment",
+        "paired sample context"
+      ],
+      "source_ids": ["pubmed_cui_2024_mrd_clonal_evolution"],
+      "limitations": [
+        "Pathway preference is not a target-selection rule.",
+        "Needs expert review before claim upgrade."
+      ]
+    },
+    {
+      "mechanism_id": "genetic-nongenetic-coupling-v0",
+      "label": "Genetic and nongenetic coupling",
+      "evidence_level": "observational-study",
+      "relapse_role": "Research bucket for correlation between clone architecture and transcriptional dynamics.",
+      "why_it_matters": "The map should preserve both genetic and nongenetic axes when representing therapy-induced evolution.",
+      "what_to_extract": [
+        "copy-number or clone-architecture signal",
+        "transcriptional trajectory",
+        "paired diagnosis and posttreatment context",
+        "correlation statement"
+      ],
+      "public_measurements": [
+        "inferCNV or related clone inference",
+        "single-cell transcriptomic state",
+        "paired sample design"
+      ],
+      "source_ids": ["pubmed_cui_2024_mrd_clonal_evolution"],
+      "limitations": [
+        "Correlation does not establish a clinical intervention point.",
+        "Not a causal mechanism ranking."
+      ]
+    },
+    {
+      "mechanism_id": "tme-shelter-interactions-v0",
+      "label": "Tumor microenvironment shelter interactions",
+      "evidence_level": "observational-study",
+      "relapse_role": "Research bucket for interactions between residual malignant plasma cells and the marrow immune microenvironment.",
+      "why_it_matters": "Residual disease may be shaped by cell interactions as well as tumor-intrinsic properties.",
+      "what_to_extract": [
+        "cellular interaction analysis",
+        "malignant plasma cell state",
+        "bone marrow microenvironment cell types",
+        "MRD-positive context",
+        "assay and inference method"
+      ],
+      "public_measurements": [
+        "single-cell RNA sequencing",
+        "cell-cell interaction inference",
+        "bone marrow immune microenvironment state"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "limitations": [
+        "Interaction inference is not proof of clinical actionability.",
+        "Requires source-specific methods and expert review."
+      ]
+    },
+    {
+      "mechanism_id": "subclone-diversity-v0",
+      "label": "Subclone diversity",
+      "evidence_level": "source-summary",
+      "relapse_role": "Research bucket for heterogeneous subclonal architecture and genomic instability across myeloma progression.",
+      "why_it_matters": "A map of durable remission needs a place for heterogeneity before assigning mechanism priority.",
+      "what_to_extract": [
+        "subclonal diversity",
+        "genomic instability",
+        "progression context",
+        "single-cell technology type"
+      ],
+      "public_measurements": [
+        "single-cell genomics",
+        "single-cell transcriptomics",
+        "multiomics review context"
+      ],
+      "source_ids": ["pubmed_li_2025_single_cell_myeloma_review"],
+      "limitations": [
+        "Review-level context.",
+        "Not a quantified prognosis or relapse-risk model."
+      ]
+    },
+    {
+      "mechanism_id": "single-cell-translation-gap-v0",
+      "label": "Single-cell translation gap",
+      "evidence_level": "source-summary",
+      "relapse_role": "Interpretation-risk bucket for separating research resolution from clinical-readiness claims.",
+      "why_it_matters": "Advanced profiling can generate rich maps while still being limited by cost, data complexity, standardization, and ethical considerations.",
+      "what_to_extract": [
+        "clinical application barrier",
+        "cost barrier",
+        "data complexity",
+        "standardization need",
+        "ethical consideration"
+      ],
+      "public_measurements": [
+        "review-level limitation statement",
+        "technology-readiness context"
+      ],
+      "source_ids": ["pubmed_li_2025_single_cell_myeloma_review"],
+      "limitations": [
+        "Not evidence that single-cell profiling is routine clinical decision support.",
+        "Not patient-specific implementation guidance."
+      ]
+    },
+    {
+      "mechanism_id": "t-cell-therapy-pressure-v0",
+      "label": "T-cell therapy pressure",
+      "evidence_level": "source-summary",
+      "relapse_role": "Research bucket for immune redirection pressure, target class, and unresolved sequencing questions in relapsed or refractory multiple myeloma.",
+      "why_it_matters": "The geometry needs a therapy-pressure axis without turning that axis into a treatment sequence recommendation.",
+      "what_to_extract": [
+        "BCMA-directed therapy context",
+        "GPRC5D-directed therapy context",
+        "CAR T context",
+        "bispecific antibody context",
+        "relapse after current therapies",
+        "sequencing question"
+      ],
+      "public_measurements": [
+        "therapy class",
+        "target class",
+        "relapsed or refractory disease context",
+        "review-level open question"
+      ],
+      "source_ids": ["pubmed_besliu_2025_evolving_landscape_myeloma"],
+      "limitations": [
+        "Review-level landscape context.",
+        "Not a product comparison or sequencing recommendation."
+      ]
+    },
+    {
+      "mechanism_id": "unmet-high-risk-context-v0",
+      "label": "Unmet high-risk context",
+      "evidence_level": "source-summary",
+      "relapse_role": "Context bucket for extramedullary disease and plasma cell leukemia as high-unmet-need settings.",
+      "why_it_matters": "Geometry maps should mark context modifiers that may affect how evidence is interpreted.",
+      "what_to_extract": [
+        "extramedullary disease context",
+        "plasma cell leukemia context",
+        "high-unmet-need statement",
+        "review-level limitation"
+      ],
+      "public_measurements": [
+        "disease context",
+        "risk or unmet-need context",
+        "review-level source statement"
+      ],
+      "source_ids": ["pubmed_besliu_2025_evolving_landscape_myeloma"],
+      "limitations": [
+        "Not a patient-specific risk assessment.",
+        "Needs subtype-specific expert review before claim upgrade."
+      ]
+    }
+  ],
   "nodes": [
     {
       "node_id": "mrd-trajectory-split",
