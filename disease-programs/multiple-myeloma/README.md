@@ -137,6 +137,7 @@ research directions deserve structured public tracking.
 - [Precursor, Risk, And Interception Boundary Note v0](precursors/precursor-risk-interception-boundary-note-v0.md)
 - [High-Risk, Extramedullary, Organ, And Frailty Context Modifier Map v0](contexts/high-risk-organ-frailty-context-modifier-map-v0.md)
 - [MRD Resistance Geometry Pilot v0](mechanisms/mrd-resistance-geometry-pilot-v0.md)
+- [MRD Resistance Geometry Coverage Report v0](mechanisms/mrd-resistance-geometry-coverage-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
 - [Post-CAR T Relapse Mechanism Coverage Report v0](mechanisms/post-car-t-relapse-mechanism-coverage-v0.md)

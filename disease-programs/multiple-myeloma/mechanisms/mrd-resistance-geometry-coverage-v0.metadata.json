@@ -1,0 +1,42 @@
+{
+  "artifact_id": "mrd-resistance-geometry-coverage-v0",
+  "title": "MRD Resistance Geometry Coverage Report v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "clonal evolution",
+    "therapy resistance",
+    "mechanism extraction coverage",
+    "geometry pilot coverage"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "MRD Resistance Geometry Pilot v0",
+      "url": "mrd-resistance-geometry-pilot-v0.md",
+      "accessed": "2026-04-19"
+    },
+    {
+      "label": "MRD geometry source-specific extraction records",
+      "url": "extractions/README.md",
+      "accessed": "2026-04-19"
+    },
+    {
+      "label": "BCMA Antigen Escape Evidence Gap Register v0",
+      "url": "../evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "accessed": "2026-04-19"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not a patient-specific MRD interpretation.",
+    "Coverage counts are not mechanism-frequency estimates.",
+    "Coverage counts are not biological-importance rankings."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-coverage-v0.md"
+}

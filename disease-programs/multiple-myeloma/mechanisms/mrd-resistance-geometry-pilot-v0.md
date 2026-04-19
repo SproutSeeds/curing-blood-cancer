@@ -72,6 +72,7 @@ This pilot uses a dynamic radial vector field.
 
 - JSON: [`mrd-resistance-geometry-pilot-v0.json`](mrd-resistance-geometry-pilot-v0.json)
 - Metadata: [`mrd-resistance-geometry-pilot-v0.metadata.json`](mrd-resistance-geometry-pilot-v0.metadata.json)
+- Coverage report: [`mrd-resistance-geometry-coverage-v0`](mrd-resistance-geometry-coverage-v0.md)
 
 ## Source-Specific Extractions
 
