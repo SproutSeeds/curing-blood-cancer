@@ -1,0 +1,95 @@
+{
+  "decision_id": "mrd-resistance-geometry-axis-revision-decision-v0",
+  "date": "2026-04-19",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Resistance Geometry Axis Revision Decision v0",
+  "clinical_use_boundary": "research-use-only",
+  "parent_plan_id": "mrd-resistance-geometry-phase-plan-v0",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_cohen_2021_resistance_single_cell"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0"
+  ],
+  "decision": {
+    "decision_summary": "Keep measurement trajectory, biological residual state, and clone architecture as separate axes, with explicit clone-state coupling edges.",
+    "axis_changes": [
+      {
+        "axis_id": "measurement-trajectory-axis-v0",
+        "status": "separate-axis",
+        "reason": "Martinez-Lopez 2020 supports serial MRD dynamics as a measurement trajectory using NGS MRD fields; those fields are not interchangeable with single-cell residual-state biology."
+      },
+      {
+        "axis_id": "residual-biological-state-axis-v0",
+        "status": "separate-axis",
+        "reason": "Cui 2024 and Cohen 2021 both support residual or resistant malignant plasma cell transcriptional-state extraction, which should remain distinct from MRD measurement direction."
+      },
+      {
+        "axis_id": "clone-architecture-axis-v0",
+        "status": "separate-axis",
+        "reason": "Cui 2024 supports clone architecture and clonal-evolution fields; Cohen 2021 adds source-defined transcriptional clone context, but does not justify merging clone identity with state labels."
+      },
+      {
+        "axis_id": "clone-state-coupling-edge-v0",
+        "status": "explicit-coupling-edge",
+        "reason": "Cui 2024 and Cohen 2021 both support a linked clone-state representation for v0 navigation, while the linkage remains source-specific and nonclinical."
+      }
+    ],
+    "phase_three_readiness": "ready"
+  },
+  "comparison_result": {
+    "high_priority_bucket_status": [
+      {
+        "mechanism_group_id": "mrd-trajectory-split-v0",
+        "phase_two_status": "covered-for-v0-navigation",
+        "source_ids": [
+          "pubmed_cui_2024_mrd_clonal_evolution",
+          "pubmed_martinez_lopez_2020_mrd_dynamics"
+        ]
+      },
+      {
+        "mechanism_group_id": "residual-transcriptional-adaptation-v0",
+        "phase_two_status": "covered-for-v0-navigation",
+        "source_ids": [
+          "pubmed_cui_2024_mrd_clonal_evolution",
+          "pubmed_cohen_2021_resistance_single_cell"
+        ]
+      },
+      {
+        "mechanism_group_id": "genetic-nongenetic-coupling-v0",
+        "phase_two_status": "covered-for-v0-navigation",
+        "source_ids": [
+          "pubmed_cui_2024_mrd_clonal_evolution",
+          "pubmed_cohen_2021_resistance_single_cell"
+        ]
+      }
+    ],
+    "expert_review_gate": "Phase 3 can assemble an expert-review packet because at least three high-priority buckets now have two public extraction records."
+  },
+  "what_this_supports": [
+    "Use a flexible geometry with separate measurement, state, and clone axes.",
+    "Add explicit coupling edges from clone architecture to transcriptional or adaptive state.",
+    "Route Phase 3 expert review around whether the coupling edges are correctly named and bounded."
+  ],
+  "what_this_does_not_support": [
+    "No patient-specific MRD interpretation.",
+    "No diagnostic, treatment, monitoring, or trial recommendation.",
+    "No mechanism ranking by evidence strength, frequency, biological importance, or actionability.",
+    "No claim that multiple myeloma has been cured."
+  ],
+  "review": {
+    "created": "2026-04-19",
+    "last_reviewed": "2026-04-19",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Decision created after adding the Cohen 2021 second-source extraction for residual-state and clone-state coupling buckets.",
+      "Axis decision is structural only and does not change evidence strength or clinical readiness.",
+      "Phase 3 should ask expert reviewers to inspect the clone-state coupling edge before any claim upgrade."
+    ]
+  }
+}

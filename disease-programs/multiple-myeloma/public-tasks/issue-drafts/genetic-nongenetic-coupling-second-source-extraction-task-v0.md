@@ -18,15 +18,28 @@ useful beyond one source.
 
 - `pubmed`
 - `pubmed_cui_2024_mrd_clonal_evolution`
+- `pubmed_cohen_2021_resistance_single_cell`
+
+## Completion Status
+
+Status: `done`
+
+Completed through:
+
+- `cohen-2021-resistance-single-cell-geometry-v0`
+- signal: `cohen-2021-clone-state-coupling-signal-v0`
+
+The task is complete for v0 navigation only. The bucket remains
+expert-review-needed before any claim upgrade.
 
 ## Deliverables
 
-- Add one source-specific mechanism extraction using the existing extraction
+- Added one source-specific mechanism extraction using the existing extraction
   schema.
-- Map extracted signals to `genetic-nongenetic-coupling-v0`.
-- Preserve clone inference method, transcriptional-state method, and
+- Mapped an extracted signal to `genetic-nongenetic-coupling-v0`.
+- Preserved clone inference method, transcriptional-state method, and
   paired-sample context when available.
-- Refresh `mrd-resistance-geometry-coverage-v0`.
+- Refreshed `mrd-resistance-geometry-coverage-v0`.
 
 ## Acceptance Checks
 

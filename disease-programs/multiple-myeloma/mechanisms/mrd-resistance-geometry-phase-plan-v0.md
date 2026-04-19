@@ -76,15 +76,19 @@ Comparison questions now available:
 
 ## Phase 2: Residual-State And Coupling
 
-Status: `ready`
+Status: `done-for-v0`
 
 Purpose: second-source the buckets that decide whether the geometry needs
 separate clone, state, and measurement-dynamics axes.
 
-Ready public tasks:
+Completed public outputs:
 
-- `residual-transcriptional-adaptation-second-source-extraction-task-v0`
-- `genetic-nongenetic-coupling-second-source-extraction-task-v0`
+- source registry ID: `pubmed_cohen_2021_resistance_single_cell`
+- extraction record: `cohen-2021-resistance-single-cell-geometry-v0`
+- refreshed coverage report: `mrd-resistance-geometry-coverage-v0`
+- completed task: `residual-transcriptional-adaptation-second-source-extraction-task-v0`
+- completed task: `genetic-nongenetic-coupling-second-source-extraction-task-v0`
+- axis decision: `mrd-resistance-geometry-axis-revision-decision-v0`
 
 Completion gate:
 
@@ -97,6 +101,14 @@ Completion gate:
   biological residual state.
 - Do not rank mechanisms or infer clinical actionability.
 
+Phase 2 result:
+
+- Keep measurement trajectory, biological residual state, and clone
+  architecture as separate axes.
+- Add explicit clone-state coupling edges.
+- Keep clone architecture, transcriptional state, therapy exposure, assay
+  method, and posttreatment timing as separate fields.
+
 Comparison questions for Phase 2:
 
 - Does residual disease look more like clone persistence, state adaptation, or
@@ -108,7 +120,7 @@ Comparison questions for Phase 2:
 
 ## Phase 3: Expert Review And Revision
 
-Status: `queued`
+Status: `ready`
 
 Completion gate:
 

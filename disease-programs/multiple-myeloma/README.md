@@ -140,6 +140,7 @@ research directions deserve structured public tracking.
 - [MRD Resistance Geometry Pilot v0](mechanisms/mrd-resistance-geometry-pilot-v0.md)
 - [MRD Resistance Geometry Coverage Report v0](mechanisms/mrd-resistance-geometry-coverage-v0.md)
 - [MRD Resistance Geometry Phase Plan v0](mechanisms/mrd-resistance-geometry-phase-plan-v0.md)
+- [MRD Resistance Geometry Axis Revision Decision v0](mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
 - [Post-CAR T Relapse Mechanism Coverage Report v0](mechanisms/post-car-t-relapse-mechanism-coverage-v0.md)
@@ -160,5 +161,6 @@ research directions deserve structured public tracking.
 - `pubmed_palumbo_2015_imwg_frailty`
 - `pubmed_cui_2024_mrd_clonal_evolution`
 - `pubmed_martinez_lopez_2020_mrd_dynamics`
+- `pubmed_cohen_2021_resistance_single_cell`
 - `pubmed_li_2025_single_cell_myeloma_review`
 - `pubmed_besliu_2025_evolving_landscape_myeloma`

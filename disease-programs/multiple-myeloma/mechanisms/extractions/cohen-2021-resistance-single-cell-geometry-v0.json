@@ -1,0 +1,102 @@
+{
+  "extraction_record_id": "cohen-2021-resistance-single-cell-geometry-v0",
+  "date": "2026-04-19",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "source_ids": [
+    "pubmed_cohen_2021_resistance_single_cell"
+  ],
+  "mechanism_group_ids": [
+    "residual-transcriptional-adaptation-v0",
+    "genetic-nongenetic-coupling-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed Nature Medicine research article",
+    "title": "Identification of resistance pathways and therapeutic targets in relapsed multiple myeloma patients through single-cell sequencing",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33619369/",
+    "doi": "10.1038/s41591-021-01232-w",
+    "pmid": "33619369",
+    "accessed": "2026-04-19",
+    "publication_year": 2021,
+    "study_context": "Nature Medicine prospective multicenter translational trial combining DARA-KRD treatment context with longitudinal single-cell RNA sequencing in primary refractory or early relapsed multiple myeloma after bortezomib-containing induction; public extraction uses PubMed, Nature, and PubMed Central public source context."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "cohen-2021-resistant-state-program-signal-v0",
+      "mechanism_group_id": "residual-transcriptional-adaptation-v0",
+      "signal_summary": "The source reports single-cell transcriptional programs and molecular pathways associated with resistant multiple myeloma, including hypoxia tolerance, protein folding, and mitochondrial respiration signals, supporting residual or resistant state extraction as a biological layer separate from MRD measurement trajectory.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "single-cell RNA sequencing",
+        "MARS-seq",
+        "bone marrow aspirate",
+        "primary refractory multiple myeloma",
+        "early relapse after bortezomib-containing induction",
+        "baseline sample context",
+        "cycle 4 and cycle 10 longitudinal sample context",
+        "malignant plasma cell transcriptional state",
+        "resistance signature",
+        "hypoxia tolerance pathway signal",
+        "protein-folding pathway signal",
+        "mitochondrial respiration pathway signal",
+        "treatment response and nonresponse context"
+      ],
+      "limitations": [
+        "Source-specific resistant-state signal in a translational-trial context.",
+        "Does not make single-cell transcriptional states routine clinical decision support.",
+        "Does not recommend a pathway, drug, target, treatment sequence, or monitoring plan.",
+        "Does not provide patient-specific MRD interpretation, prognosis, or cure evidence."
+      ]
+    },
+    {
+      "signal_id": "cohen-2021-clone-state-coupling-signal-v0",
+      "mechanism_group_id": "genetic-nongenetic-coupling-v0",
+      "signal_summary": "The source includes transcriptional clone-level data and longitudinal malignant plasma cell state analysis, supporting a narrow clone-identity-to-transcriptional-state coupling slice for the geometry while preserving genetic architecture and nongenetic state as separate fields.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "single-cell RNA sequencing",
+        "transcriptional clone-level values",
+        "malignant plasma cell state",
+        "longitudinal bone marrow sampling",
+        "baseline sample context",
+        "cycle 4 and cycle 10 sample context",
+        "resistant signature score",
+        "responder and nonresponder context",
+        "therapy exposure context",
+        "source-defined clone and state labels"
+      ],
+      "limitations": [
+        "This signal supports clone-state coupling only within the source-defined single-cell and transcriptional-clone context.",
+        "It does not establish general genetic causality or rank genetic versus nongenetic mechanisms.",
+        "It does not identify patient-specific resistance biology or clinical actionability.",
+        "Cross-source comparison must preserve clone inference method, transcriptional-state method, therapy exposure, and sampling time point."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "Phase 2 can treat residual transcriptional adaptation as a source-backed biological state axis rather than folding it into MRD measurement trajectory.",
+      "Phase 2 can represent clone-state coupling as an explicit edge while keeping clone identity, transcriptional state, therapy exposure, assay method, and sampling time point separate.",
+      "The high-priority residual-state and clone-state coupling tasks can be marked done for v0 navigation after coverage is refreshed."
+    ],
+    "what_this_does_not_support": [
+      "It does not provide medical advice, diagnostic guidance, treatment guidance, monitoring guidance, trial guidance, or patient-specific prognosis.",
+      "It does not rank resistance mechanisms or assert that any pathway is dominant across all multiple myeloma settings.",
+      "It does not claim that PPIA, protein folding, mitochondrial respiration, hypoxia tolerance, or any other extracted pathway is clinically actionable for an individual.",
+      "It does not claim that multiple myeloma has been cured."
+    ]
+  },
+  "review": {
+    "created": "2026-04-19",
+    "last_reviewed": "2026-04-19",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Built as the Phase 2 second-source extraction for residual transcriptional adaptation and clone-state coupling buckets.",
+      "Source details checked against PubMed, Nature Medicine, and PubMed Central public records for PMID 33619369 / PMCID PMC7612793.",
+      "The extraction keeps clone-state coupling as research-map structure and does not upgrade source observations into clinical actionability."
+    ]
+  }
+}
