@@ -6,7 +6,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - delegate target: `curing-blood-cancer`
 - disease focus: `multiple-myeloma`
 - claim level: `open-question`
-- last reviewed: `2026-04-18`
+- last reviewed: `2026-04-20`
 - clinical boundary: research-use-only, not medical advice
 
 ## Purpose
@@ -114,13 +114,14 @@ completed, validated, and explained in one delegate pass.
    `post-machine-representation-public-safe-research-substrate-v0`. The
    machine-representation implementation gate remains uncleared; the completed
    MRD geometry falsification phase, no-outreach expert-validation prep,
-   internal source-gap extraction pass, frontier gap sweep, and
-   residual-disease modality-discordance source extraction are public-safe
-   substrates, not expert review or authorization for outreach.
+   internal source-gap extraction pass, frontier gap sweep, residual-disease
+   modality-discordance source extraction, and assay/specimen quality
+   failure-mode checklist are public-safe substrates, not expert review or
+   authorization for outreach.
 2. When an item completes, synthesize and activate or queue the next safe item
    before stopping. After residual-disease modality-discordance extraction, the
-   next no-outreach successor candidate is
-   `assay-specimen-quality-failure-mode-checklist-v0`.
+   assay/specimen quality checklist is now complete; the next no-outreach
+   successor candidate is `measurement-state-refusal-fixture-extension-v0`.
 3. Run [ORP Frontier Gap Sweep Mode v0](../orp/modes/frontier-gap-sweep-mode-v0.md)
    when the human asks for a direction check, when a delegate sees stale state,
    or when the next public-safe item is not obvious.

@@ -28,6 +28,7 @@ and follow-up duration are visible.
 - `pubmed_kumar_2016_imwg_mrd_response_criteria`
 - `pubmed_munshi_2017_mrd_survival_meta_analysis`
 - `pubmed_soh_2022_mrd_flow_harmonization`
+- `fda_mrd_cr_endpoint_guidance_2026`
 - `pubmed_antigen_escape_bcma_directed_2024`
 - `pubmed_di_meo_2025_sema4a_low_bcma`
 - `pubmed_wang_2025_bmme_drug_resistance`
@@ -60,7 +61,8 @@ and follow-up duration are visible.
 | Blood mass spectrometry MRD | Record peripheral blood or serum mass-spectrometry assay family, timing, threshold or detection-status language, paired marrow context when source-defined, and limitations. | Do not infer substitution for marrow MRD, prognosis, monitoring action, treatment adaptation, response status, or patient-specific meaning. |
 | MRD/PET-CT modality discordance | Preserve paired marrow MRD and PET-CT categories, imaging modality, marrow method/threshold, timing alignment, cohort, and endpoint role when source-defined. | Do not interpret images, infer prognosis, guide monitoring or treatment, rank modalities, or collapse discordance into one disease-state flag. |
 | Spatial marrow architecture context | Record biopsy or trephine context, spatial method, cell or niche context, cohort scope, site/sampling limitation, and method boundary. | Do not interpret biopsy, imaging, site-specific disease state, prognosis, treatment selection, or resistance status for a person. |
-| Assay/specimen quality | Preserve method lineage, threshold status, sample adequacy, specimen quality, timing alignment, duration/follow-up, and not-reported states before comparison. | Do not compare modalities or infer response, prognosis, monitoring, or decisions when quality or timing context is missing. |
+| Assay/specimen quality | Preserve method lineage, threshold status, sample adequacy, specimen quality, timing alignment, duration/follow-up, and not-reported states before comparison; route failures through the assay/specimen quality checklist. | Do not compare modalities or infer response, prognosis, monitoring, or decisions when quality or timing context is missing. |
+| Paired-modality timing context | Record the source-defined timing relationship between residual-disease modalities before using discordance language. | Do not treat paired results as comparable when assessment timing is missing, incompatible, or not source-defined. |
 | Residual-disease modality discordance | Use as the visible uncertainty state when residual-disease modalities disagree or paired context is missing. | Do not collapse one modality into global disease status or infer patient-specific meaning, prognosis, treatment response, monitoring action, or modality ranking. |
 
 ## Minimum Fields For Future Artifacts
@@ -77,7 +79,8 @@ and follow-up duration are visible.
 - source IDs
 - measurement-term IDs when a claim set depends on these terms
 - modality family and paired-modality state when comparing residual-disease signals
-- assay/specimen quality and timing alignment before cross-modality comparison
+- assay/specimen quality, paired-modality timing alignment, and fail-closed
+  quality states before cross-modality comparison
 
 ## Structured Data
 
@@ -93,10 +96,11 @@ and follow-up duration are visible.
 
 ## Next Work
 
-Residual-disease modality-discordance extraction now adds blood mass spectrometry MRD, MRD/PET-CT discordance, spatial marrow architecture, assay/specimen quality, and explicit discordance-state terms. These terms are representation boundaries only; they do not authorize interpretation, ranking, monitoring, treatment, prognosis, or cure claims.
+Residual-disease modality-discordance extraction now adds blood mass spectrometry MRD, MRD/PET-CT discordance, spatial marrow architecture, assay/specimen quality, paired-modality timing context, and explicit discordance-state terms. The later [Assay Specimen Quality Failure Mode Checklist v0](assay-specimen-quality-failure-mode-checklist-v0.md) turns those quality requirements into fail-closed states. These terms are representation boundaries only; they do not authorize interpretation, ranking, monitoring, treatment, prognosis, or cure claims.
 
 - Add disease-state-specific endpoint tables for frontline, relapsed, and
   post-CAR T settings.
 - Link each claim set to required measurement terms.
-- Add extraction checks that flag MRD claims missing threshold, specimen, or
-  time point.
+- Add synthetic refusal fixtures that flag MRD claims missing threshold,
+  specimen, timepoint, paired-modality timing, imaging criteria, spatial
+  sampling, or public/private review boundary.

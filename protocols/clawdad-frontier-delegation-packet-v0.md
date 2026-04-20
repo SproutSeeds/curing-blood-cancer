@@ -45,11 +45,14 @@ fusion architecture remains source-context-needed. The subsequent
 `residual-disease-modality-discordance-source-extraction-v0` phase is also
 complete: blood mass spectrometry MRD, marrow MRD/PET-CT discordance, spatial
 marrow architecture, assay/specimen quality, microenvironment context, host
-context, and output-refusal states are now source-scoped public substrate. Actual
+context, and output-refusal states are now source-scoped public substrate. The
+`assay-specimen-quality-failure-mode-checklist-v0` phase is complete and makes
+method, threshold, specimen quality, timing, paired-modality, imaging, spatial,
+host-context, private-review, and modality-collapse failures explicit. Actual
 expert-validation execution, issue operations, outreach, private correspondence,
-response intake, clinical interpretation, publication, and any expert claim
-upgrade remain blocked unless a human explicitly authorizes scope or selects a
-new named no-outreach public-source extraction phase.
+response intake, real quality review, clinical interpretation, publication, and
+any expert claim upgrade remain blocked unless a human explicitly authorizes
+scope or selects a new named no-outreach public-source extraction phase.
 
 The live operating mode is adaptive. A completed public-safe step must produce
 a handoff and a next-step synthesis. A closed subphase is not a reason to stop
@@ -103,6 +106,8 @@ Stop and report a blocker instead of proceeding if a task requires:
   private lab access that is not already available
 - diagnosis, prognosis, treatment advice, trial advice, expanded-access advice,
   monitoring advice, screening advice, or candidate option ranking
+- real report review, lab-validity judgment, imaging interpretation, biopsy
+  interpretation, or exact person-linked assay/specimen quality review
 - unsupported cure, vaccine, treatment-path, or clinical-outcome claims
 - copying private expert emails or unpublished private correspondence into
   public artifacts
@@ -147,6 +152,7 @@ Inspect these files at the start of each pass:
 - `disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md`
 - `disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md`
 - `disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md`
+- `disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md`
 - `taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.md`
 - `disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md`
 - `disease-programs/multiple-myeloma/therapy-landscapes/therapy-exposure-timeline-contract-v0.md`
@@ -215,6 +221,7 @@ Required output for the next pass:
   [Machine Representation Source-Gap Issue Draft Packet v0](../disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md),
   [Machine Representation Implementation Completion Audit v0](../disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md),
   [Residual Disease Modality Discordance Source Extraction v0](../disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md),
+  [Assay Specimen Quality Failure Mode Checklist v0](../disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md),
   [MRD Geometry Falsification Matrix v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-falsification-matrix-v0.md),
   [MRD Geometry Transition Model v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.md),
   [MRD Geometry Hypothesis Candidate Ledger v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.md),
@@ -239,6 +246,12 @@ Required output for the next pass:
   public-source residual-disease modality-discordance extraction and did not
   clear expert-review, outreach, clinical, private-lab, publication, or cure
   claim gates
+- preserve that
+  `assay-specimen-quality-failure-mode-checklist-v0` completed public-source
+  failure-mode routing for missing method, threshold, specimen quality, timing,
+  paired-modality, imaging, spatial, host-context, private-review, and
+  modality-collapse states without clearing real quality review, expert-review,
+  outreach, clinical, private-lab, publication, or cure-claim gates
 - do not create another sibling schema, fixture, validator, source extraction,
   issue draft, model, dashboard, or tool by momentum
 - block real case data, identifiers, raw records, uploads, person-linked
@@ -265,7 +278,7 @@ Stop instead of proceeding if the next step requires a real case, a live
 backend, credentials, private lab access, clinical interpretation, outreach, or
 publication approval. If that happens, write the blocker and move to the next
 public-safe adjacent item when one exists. The current no-outreach public-source
-successor candidate is `assay-specimen-quality-failure-mode-checklist-v0`.
+successor candidate is `measurement-state-refusal-fixture-extension-v0`.
 
 ### 1. Expert Response Intake And Validation Ledger
 

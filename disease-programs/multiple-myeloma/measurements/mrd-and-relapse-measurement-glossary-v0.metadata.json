@@ -46,6 +46,16 @@
       "accessed": "2026-04-20"
     },
     {
+      "label": "Assay Specimen Quality Failure Mode Checklist v0",
+      "url": "assay-specimen-quality-failure-mode-checklist-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "FDA MRD And Complete Response Draft Guidance",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated",
+      "accessed": "2026-04-20"
+    },
+    {
       "label": "Blood Mass Spectrometry MRD Source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40919481/",
       "accessed": "2026-04-20"
@@ -79,7 +89,8 @@
     "Not a trial recommendation.",
     "Does not establish clinical actionability for any MRD result.",
     "Requires expert review before use as an educational anchor.",
-    "Does not establish assay interchangeability, modality ranking, prognosis, monitoring action, treatment guidance, or patient-specific residual-disease interpretation."
+    "Does not establish assay interchangeability, modality ranking, prognosis, monitoring action, treatment guidance, or patient-specific residual-disease interpretation.",
+    "Does not perform quality review of real laboratory reports, imaging reports, pathology reports, biopsy reports, raw values, exact person-linked timing, or private records."
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-and-relapse-measurement-glossary-v0.md"
 }

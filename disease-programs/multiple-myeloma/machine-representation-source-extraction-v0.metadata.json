@@ -151,6 +151,11 @@
       "accessed": "2026-04-20"
     },
     {
+      "label": "Assay Specimen Quality Failure Mode Checklist v0",
+      "url": "measurements/assay-specimen-quality-failure-mode-checklist-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
       "label": "Blood Mass Spectrometry MRD Source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40919481/",
       "accessed": "2026-04-20"
@@ -195,7 +200,8 @@
     "Does not collect, normalize, store, transmit, train on, infer from, publish, compare, rank, match, recommend, or authorize use of real case data.",
     "Does not output patient-specific progression risk, response probability, MRD interpretation, resistance attribution, treatment recommendations, trial recommendations, monitoring actions, candidate option rankings, or clinical decisions.",
     "Does not claim that multiple myeloma has been cured or that a vaccine has been found.",
-    "Does not establish residual-disease modality interpretation, modality ranking, patient-specific prognosis, monitoring, treatment guidance, model validation, or cure claims."
+    "Does not establish residual-disease modality interpretation, modality ranking, patient-specific prognosis, monitoring, treatment guidance, model validation, or cure claims.",
+    "Does not establish public assay/specimen quality interpretation, assay ranking, laboratory-validity conclusions, or real-report review."
   ],
   "private_upstream": "curing-blood-cancer-lab/export-candidates/machine-representation-source-extraction-v0.md"
 }

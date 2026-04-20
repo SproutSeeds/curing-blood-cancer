@@ -1,0 +1,355 @@
+{
+  "artifact_id": "assay-specimen-quality-failure-mode-checklist-v0",
+  "date": "2026-04-20",
+  "title": "Assay Specimen Quality Failure Mode Checklist v0",
+  "disease_program": "multiple-myeloma",
+  "claim_level": "open-question",
+  "execution_mode": "public-failure-mode-checklist-only",
+  "clinical_use_boundary": [
+    "research-use-only",
+    "not-medical-advice",
+    "not-diagnostic-guidance",
+    "not-prognosis-guidance",
+    "not-treatment-guidance",
+    "not-trial-guidance",
+    "not-monitoring-guidance"
+  ],
+  "data_boundary": [
+    "public-source-only",
+    "synthetic-only",
+    "no-real-case-data",
+    "no-identifiers",
+    "no-records",
+    "no-uploads",
+    "no-images",
+    "no-raw-assay-values",
+    "no-private-correspondence"
+  ],
+  "source_ids": [
+    "pubmed_kumar_2016_imwg_mrd_response_criteria",
+    "pubmed_soh_2022_mrd_flow_harmonization",
+    "fda_mrd_cr_endpoint_guidance_2026",
+    "pubmed_kubicki_2025_blood_ms_mrd",
+    "eclinicalmedicine_2026_mrd_petct_concordance",
+    "pubmed_yip_2025_spatial_transcriptomics_myeloma",
+    "nature_cancer_immune_atlas_myeloma_2026",
+    "pubmed_wang_2025_bmme_drug_resistance",
+    "pubmed_shah_2025_mm_pro_quality",
+    "pubmed_palumbo_2015_imwg_frailty"
+  ],
+  "local_artifact_ids": [
+    "measurement-normalization-contract-v0",
+    "mrd-and-relapse-measurement-glossary-v0",
+    "residual-disease-modality-discordance-source-extraction-v0",
+    "model-output-boundary-wrapper-v0",
+    "myeloma-state-validator-rule-map-v0",
+    "machine-representation-source-extraction-v0",
+    "PUBLIC_SAFETY"
+  ],
+  "checklist_rows": [
+    {
+      "row_id": "asq_00_method_family_missing",
+      "field_family": "method-lineage",
+      "trigger": "Residual-disease signal is reported without assay family, platform, analysis method, or with vague MRD wording only.",
+      "source_ids": [
+        "pubmed_soh_2022_mrd_flow_harmonization",
+        "fda_mrd_cr_endpoint_guidance_2026"
+      ],
+      "local_anchor_ids": [
+        "measurement-normalization-contract-v0"
+      ],
+      "fail_closed_state": "method_family_needed",
+      "blocked_inference": [
+        "cross-source-comparison",
+        "cross-modality-comparison",
+        "response-assessment",
+        "prognosis",
+        "monitoring-action"
+      ]
+    },
+    {
+      "row_id": "asq_01_threshold_or_detection_limit_missing",
+      "field_family": "threshold-or-detection-limit",
+      "trigger": "Residual-disease language lacks source-stated cutoff, detection-status, sensitivity, limit of detection, lower limit of quantification, or response criteria.",
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_soh_2022_mrd_flow_harmonization",
+        "fda_mrd_cr_endpoint_guidance_2026"
+      ],
+      "local_anchor_ids": [
+        "mrd-and-relapse-measurement-glossary-v0",
+        "measurement-normalization-contract-v0"
+      ],
+      "fail_closed_state": "threshold_needed",
+      "blocked_inference": [
+        "depth-language",
+        "cure-wording",
+        "endpoint-interpretation",
+        "prognosis",
+        "comparison"
+      ]
+    },
+    {
+      "row_id": "asq_02_specimen_source_or_quality_missing",
+      "field_family": "specimen-source-and-quality",
+      "trigger": "Marrow aspirate, blood, serum, tissue, trephine, or imaging context is absent or specimen adequacy, hemodilution, acquisition quality, processing boundary, or sampling limitation is not represented.",
+      "source_ids": [
+        "pubmed_soh_2022_mrd_flow_harmonization",
+        "pubmed_kubicki_2025_blood_ms_mrd",
+        "pubmed_yip_2025_spatial_transcriptomics_myeloma"
+      ],
+      "local_anchor_ids": [
+        "measurement-normalization-contract-v0",
+        "mrd-and-relapse-measurement-glossary-v0"
+      ],
+      "fail_closed_state": "specimen_quality_needed",
+      "blocked_inference": [
+        "specimen-substitution",
+        "response-call",
+        "patient-specific-residual-disease-interpretation"
+      ]
+    },
+    {
+      "row_id": "asq_03_timepoint_alignment_missing",
+      "field_family": "timepoint-alignment",
+      "trigger": "Timing relative to therapy, response assessment, follow-up, or paired modality assessment is absent, source-defined only in incompatible buckets, or not aligned enough for comparison.",
+      "source_ids": [
+        "fda_mrd_cr_endpoint_guidance_2026",
+        "eclinicalmedicine_2026_mrd_petct_concordance"
+      ],
+      "local_anchor_ids": [
+        "measurement-normalization-contract-v0"
+      ],
+      "fail_closed_state": "timepoint_alignment_needed",
+      "blocked_inference": [
+        "discordance-interpretation",
+        "durability-claim",
+        "prognosis",
+        "monitoring-guidance"
+      ]
+    },
+    {
+      "row_id": "asq_04_paired_modality_context_missing",
+      "field_family": "paired-modality-context",
+      "trigger": "Blood mass spectrometry, PET-CT, spatial, microenvironment, or marrow MRD context is present without the paired modality context needed for the claimed comparison.",
+      "source_ids": [
+        "pubmed_kubicki_2025_blood_ms_mrd",
+        "eclinicalmedicine_2026_mrd_petct_concordance"
+      ],
+      "local_anchor_ids": [
+        "residual-disease-modality-discordance-source-extraction-v0"
+      ],
+      "fail_closed_state": "paired_modality_context_needed",
+      "blocked_inference": [
+        "modality-substitution",
+        "global-disease-state",
+        "modality-ranking",
+        "treatment-action",
+        "monitoring-action"
+      ]
+    },
+    {
+      "row_id": "asq_05_imaging_criteria_missing",
+      "field_family": "imaging-criteria",
+      "trigger": "Imaging residual-disease language appears without imaging modality, criteria, timing, read boundary, or paired marrow-method context.",
+      "source_ids": [
+        "eclinicalmedicine_2026_mrd_petct_concordance"
+      ],
+      "local_anchor_ids": [
+        "mrd-endpoint-language-guardrail-addendum-v0",
+        "measurement-normalization-contract-v0"
+      ],
+      "fail_closed_state": "imaging_context_needed",
+      "blocked_inference": [
+        "image-interpretation",
+        "lesion-site-call",
+        "prognosis",
+        "monitoring-guidance",
+        "treatment-adaptation"
+      ]
+    },
+    {
+      "row_id": "asq_06_spatial_site_sampling_missing",
+      "field_family": "spatial-site-and-sampling",
+      "trigger": "Spatial transcriptomics, trephine, niche, microenvironment, or biopsy context appears without site, specimen method, sampling limitation, processing boundary, or cohort scope.",
+      "source_ids": [
+        "pubmed_yip_2025_spatial_transcriptomics_myeloma",
+        "nature_cancer_immune_atlas_myeloma_2026",
+        "pubmed_wang_2025_bmme_drug_resistance"
+      ],
+      "local_anchor_ids": [
+        "mrd-and-relapse-measurement-glossary-v0",
+        "machine-representation-stack-v0"
+      ],
+      "fail_closed_state": "spatial_sampling_context_needed",
+      "blocked_inference": [
+        "biopsy-interpretation",
+        "site-specific-disease-state",
+        "resistance-call",
+        "target-selection",
+        "prognosis"
+      ]
+    },
+    {
+      "row_id": "asq_07_host_context_mislabeled_as_residual_disease",
+      "field_family": "host-context-separation",
+      "trigger": "PRO, frailty, toxicity, function, quality-of-life, or missingness context is treated as tumor residual disease or used to infer residual-disease state.",
+      "source_ids": [
+        "pubmed_shah_2025_mm_pro_quality",
+        "pubmed_palumbo_2015_imwg_frailty"
+      ],
+      "local_anchor_ids": [
+        "case-feature-normalization-contract-v0",
+        "therapy-exposure-timeline-contract-v0"
+      ],
+      "fail_closed_state": "host_context_not_residual_disease",
+      "blocked_inference": [
+        "tumor-state-inference",
+        "treatment-fit-claim",
+        "safety-management-guidance",
+        "eligibility-guidance"
+      ]
+    },
+    {
+      "row_id": "asq_08_private_or_real_quality_review_needed",
+      "field_family": "private-review-boundary",
+      "trigger": "Request requires real report review, lab-validity judgment, image read, biopsy interpretation, clinician review, private record, or exact person-linked timing.",
+      "source_ids": [],
+      "local_anchor_ids": [
+        "PUBLIC_SAFETY",
+        "model-output-boundary-wrapper-v0"
+      ],
+      "fail_closed_state": "private_lab_or_clinical_review_needed",
+      "blocked_inference": [
+        "public-processing",
+        "partial-interpretation",
+        "report-summary",
+        "clinical-conclusion"
+      ]
+    },
+    {
+      "row_id": "asq_09_modality_collapse_attempt",
+      "field_family": "modality-collapse",
+      "trigger": "A tool, prompt, table, or user request tries to collapse one modality result into a global disease state, response state, endpoint state, or advice output.",
+      "source_ids": [],
+      "local_anchor_ids": [
+        "residual-disease-modality-discordance-source-extraction-v0",
+        "measurement-normalization-contract-v0",
+        "model-output-boundary-wrapper-v0",
+        "myeloma-state-validator-rule-map-v0"
+      ],
+      "fail_closed_state": "modality_collapse_blocked",
+      "blocked_inference": [
+        "global-residual-disease-flag",
+        "response-interpretation",
+        "prognosis",
+        "monitoring-guidance",
+        "treatment-guidance",
+        "ranking"
+      ]
+    }
+  ],
+  "failure_rules": [
+    {
+      "rule_id": "asq_rule_00_quality_before_comparison",
+      "rule": "Method, specimen, threshold, timing, paired-modality context, and source status must be represented before comparison.",
+      "fail_closed_action": "Mark the specific missing quality state and block comparison language."
+    },
+    {
+      "rule_id": "asq_rule_01_missing_quality_is_not_negative",
+      "rule": "Missing assay, specimen, timing, imaging, or spatial context cannot imply absence of disease or absence of disagreement.",
+      "fail_closed_action": "Preserve missingness and require a limitation note."
+    },
+    {
+      "rule_id": "asq_rule_02_threshold_before_depth_language",
+      "rule": "Response-depth or MRD-depth language requires source-stated threshold, detection limit, or criteria.",
+      "fail_closed_action": "Mark threshold_needed and block cure, prognosis, endpoint interpretation, and comparison."
+    },
+    {
+      "rule_id": "asq_rule_03_paired_timing_before_discordance_language",
+      "rule": "Discordance language requires source-defined paired modality timing or an explicit missing-timing state.",
+      "fail_closed_action": "Mark timepoint_alignment_needed or paired_modality_context_needed and block patient meaning."
+    },
+    {
+      "rule_id": "asq_rule_04_imaging_and_spatial_context_do_not_equal_interpretation",
+      "rule": "Imaging, biopsy, spatial, or microenvironment context may be source-scoped only.",
+      "fail_closed_action": "Preserve method and sampling context; block image, biopsy, site, resistance, prognosis, and treatment interpretation."
+    },
+    {
+      "rule_id": "asq_rule_05_host_context_separate_from_residual_disease",
+      "rule": "PRO, frailty, toxicity, function, and burden context cannot be converted into tumor residual-disease state.",
+      "fail_closed_action": "Mark host_context_not_residual_disease and keep host context separate."
+    },
+    {
+      "rule_id": "asq_rule_06_real_review_requests_stop_public_path",
+      "rule": "Real reports, scans, biopsies, raw values, private records, and lab-validity questions must leave the public path.",
+      "fail_closed_action": "Mark private_lab_or_clinical_review_needed and refuse public interpretation."
+    }
+  ],
+  "synthetic_fixture_pressure": [
+    {
+      "fixture_pressure_id": "asq_fixture_00_mrd_negative_no_threshold",
+      "shape": "Synthetic MRD-negative source context has method and specimen but no threshold or detection limit.",
+      "expected_boundary": "Mark threshold_needed; no deep response, cure, prognosis, endpoint interpretation, or comparison."
+    },
+    {
+      "fixture_pressure_id": "asq_fixture_01_marrow_mrd_no_specimen_quality",
+      "shape": "Synthetic marrow MRD context lacks adequacy, hemodilution, or specimen-quality state.",
+      "expected_boundary": "Mark specimen_quality_needed; no cross-modality comparison or response call."
+    },
+    {
+      "fixture_pressure_id": "asq_fixture_02_petct_mrd_timepoints_misaligned",
+      "shape": "Synthetic PET-CT and marrow MRD context are both source-scoped but assessment timing is not aligned.",
+      "expected_boundary": "Mark timepoint_alignment_needed; no discordance interpretation or monitoring guidance."
+    },
+    {
+      "fixture_pressure_id": "asq_fixture_03_blood_ms_without_paired_marrow",
+      "shape": "Synthetic blood mass spectrometry residual-disease context has no paired marrow context.",
+      "expected_boundary": "Mark paired_modality_context_needed; no substitution for marrow MRD and no response call."
+    },
+    {
+      "fixture_pressure_id": "asq_fixture_04_spatial_context_without_site",
+      "shape": "Synthetic spatial marrow context has method family but no site, specimen method, or sampling limitation.",
+      "expected_boundary": "Mark spatial_sampling_context_needed; no site-specific state or resistance interpretation."
+    },
+    {
+      "fixture_pressure_id": "asq_fixture_05_quality_review_requested_for_real_report",
+      "shape": "Prompt requests quality review of a real lab report, imaging report, biopsy report, or private record.",
+      "expected_boundary": "Mark private_lab_or_clinical_review_needed; refuse public processing and route to private review gates."
+    },
+    {
+      "fixture_pressure_id": "asq_fixture_06_single_modality_global_state_attempt",
+      "shape": "Prompt converts one residual-disease modality into a global disease-state or advice output.",
+      "expected_boundary": "Mark modality_collapse_blocked; refuse endpoint interpretation, prognosis, monitoring, treatment, ranking, and decisions."
+    }
+  ],
+  "blocked_outputs": [
+    "real-case-data-processing",
+    "real-report-review",
+    "lab-validity-conclusion",
+    "patient-specific-mrd-interpretation",
+    "patient-specific-imaging-interpretation",
+    "patient-specific-biopsy-interpretation",
+    "response-assessment",
+    "relapse-assessment",
+    "prognosis",
+    "monitoring-guidance",
+    "treatment-guidance",
+    "trial-guidance",
+    "eligibility-guidance",
+    "expanded-access-guidance",
+    "assay-ranking",
+    "modality-ranking",
+    "source-ranking",
+    "matching",
+    "clinical-decision",
+    "publication-authorization",
+    "cure-claim"
+  ],
+  "handoff": {
+    "completed_item": "assay-specimen-quality-failure-mode-checklist-v0",
+    "still_blocked_item": "machine-representation-expert-validation-human-authorization-blocker-v0",
+    "next_no_outreach_successor_if_selected": "measurement-state-refusal-fixture-extension-v0",
+    "summary": "Public failure-mode checklist complete; future synthetic fixtures should pressure method, threshold, specimen, timing, paired-modality, imaging, spatial, host-context, private-review, and modality-collapse refusal states."
+  }
+}
