@@ -350,7 +350,7 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/40991836/",
       "accessed": "2026-04-18",
       "blood_cancer_scope": ["multiple myeloma", "newly diagnosed multiple myeloma", "first relapse", "high-risk genomic staging", "next-generation sequencing"],
-      "claim_uses": ["literature-search", "genomics-data", "context-modifier", "machine-representation"],
+      "claim_uses": ["literature-search", "genomics-data", "context-modifier", "machine-representation", "mechanism-map", "high-risk-context"],
       "claim_limits": ["Cohort-level validation study; not a patient-specific prognosis tool, treatment selector, trial matcher, or clinical decision system."]
     },
     {
@@ -462,6 +462,16 @@
       "blood_cancer_scope": ["multiple myeloma", "single-cell analysis", "clonal evolution", "tumor microenvironment", "therapy evasion"],
       "claim_uses": ["literature-search", "mechanism-map", "geometry-pilot", "single-cell-context"],
       "claim_limits": ["Review article; use for context and unresolved translation barriers, not clinical implementation claims, treatment guidance, or patient-specific interpretation."]
+    },
+    {
+      "source_id": "pubmed_samur_2023_single_cell_profiling_myeloma",
+      "owner": "PubMed-indexed literature / Blood",
+      "source_type": "open-access review article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37196627/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "single-cell profiling", "single-cell sequencing", "clinical translation", "implementation challenges"],
+      "claim_uses": ["literature-search", "mechanism-map", "geometry-falsification", "single-cell-translation-context"],
+      "claim_limits": ["Review article; use for single-cell profiling problems and translation-context extraction only, not clinical implementation claims, test-ordering guidance, treatment selection, or patient-specific interpretation."]
     },
     {
       "source_id": "pubmed_bolli_2014_genomic_heterogeneity_myeloma",

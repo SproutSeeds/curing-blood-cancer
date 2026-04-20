@@ -29,6 +29,9 @@ Initial focus:
 | [Residual-State Contradiction Mining Note v0](residual-state-contradiction-mining-note-v0.md) | source-checked v0 | keeps residual state typed and source-frame separated |
 | [MRD Resistance Geometry Movement Ledger v0](mrd-resistance-geometry-movement-ledger-v0.md) | proof-readiness v0 | records geometry movement while preserving blocked outputs |
 | [MRD Geometry Claim Upgrade Blocker Ledger v0](mrd-geometry-claim-upgrade-blocker-ledger-v0.md) | source-checked v0 | keeps actionability, prognosis, sequencing, validation, and cure claims blocked |
+| [MRD Geometry Falsification Matrix v0](mrd-geometry-falsification-matrix-v0.md) | falsification v0 | names weaken, split, merge, and block tests for every geometry bucket |
+| [MRD Geometry Transition Model v0](mrd-geometry-transition-model-v0.md) | falsification v0 | defines allowed structural movement and forbidden clinical transitions |
+| [MRD Geometry Hypothesis Candidate Ledger v0](mrd-geometry-hypothesis-candidate-ledger-v0.md) | research-only v0 | generates falsifiable candidate hypotheses without clinical claim upgrades |
 
 ## Extraction Workflow
 

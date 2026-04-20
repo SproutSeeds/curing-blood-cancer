@@ -1,0 +1,209 @@
+{
+  "fixture_set_id": "mrd-geometry-benchmark-fixtures-v0",
+  "title": "MRD Geometry Benchmark Fixtures v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "clinical_boundary": "research-use-only; not medical advice",
+  "fixture_status": "synthetic-benchmark-v0",
+  "data_boundary": {
+    "uses_real_case_data": false,
+    "contains_identifiers": false,
+    "contains_predictions": false,
+    "contains_recommendations": false,
+    "contains_matching_or_ranking": false,
+    "contains_clinical_decisions": false
+  },
+  "benchmark_fixtures": [
+    {
+      "fixture_id": "benchmark-coverage-movement-single-cell-translation-v0",
+      "description": "A second review-level source supports implementation barriers for single-cell profiling.",
+      "mechanism_group_ids": [
+        "single-cell-translation-gap-v0"
+      ],
+      "source_ids": [
+        "pubmed_samur_2023_single_cell_profiling_myeloma"
+      ],
+      "extraction_record_ids": [
+        "samur-2023-single-cell-profiling-translation-geometry-v0"
+      ],
+      "expected_transition_type_id": "coverage-status-movement",
+      "expected_output_boundary": "covered-for-v0-navigation as artifact coverage only",
+      "expected_blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "fixture_id": "benchmark-coverage-movement-high-risk-context-v0",
+      "description": "A cohort-scale genomic validation source supports high-risk disease-context coverage.",
+      "mechanism_group_ids": [
+        "unmet-high-risk-context-v0"
+      ],
+      "source_ids": [
+        "pubmed_high_risk_genomic_consensus_validation_2026"
+      ],
+      "extraction_record_ids": [
+        "schavgoulidze-2026-high-risk-genomic-validation-geometry-v0"
+      ],
+      "expected_transition_type_id": "coverage-status-movement",
+      "expected_output_boundary": "covered-for-v0-navigation as artifact coverage only",
+      "expected_blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "fixture_id": "benchmark-method-mismatch-weaken-v0",
+      "description": "A hypothetical MRD signal lacks assay, threshold, specimen, or timing context.",
+      "mechanism_group_ids": [
+        "mrd-trajectory-split-v0"
+      ],
+      "source_ids": [
+        "pubmed"
+      ],
+      "extraction_record_ids": [],
+      "expected_transition_type_id": "weaken-edge",
+      "expected_output_boundary": "route to source extraction before comparison",
+      "expected_blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "fixture_id": "benchmark-pathway-actionability-block-v0",
+      "description": "A pathway label is incorrectly converted into target-selection language.",
+      "mechanism_group_ids": [
+        "nfkb-selective-state-v0",
+        "metabolic-resistance-state-v0"
+      ],
+      "source_ids": [
+        "pubmed_lu_2024_myeloma_signaling_pathways",
+        "pubmed_wang_2025_lipid_metabolism_myeloma"
+      ],
+      "extraction_record_ids": [
+        "lu-2024-signaling-pathways-geometry-v0",
+        "wang-2025-lipid-metabolism-geometry-v0"
+      ],
+      "expected_transition_type_id": "block-claim",
+      "expected_output_boundary": "unsafe actionability claim blocked",
+      "expected_blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "fixture_id": "benchmark-review-only-no-merge-v0",
+      "description": "A review-level microenvironment signal should remain source-bounded unless primary context is aligned.",
+      "mechanism_group_ids": [
+        "tme-shelter-interactions-v0"
+      ],
+      "source_ids": [
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "extraction_record_ids": [
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "expected_transition_type_id": "retain-source-bounded-state",
+      "expected_output_boundary": "no merge into clinical or patient-specific mechanism",
+      "expected_blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "fixture_id": "benchmark-subclone-prognosis-block-v0",
+      "description": "A subclone-diversity signal is incorrectly treated as a prognosis forecast.",
+      "mechanism_group_ids": [
+        "subclone-diversity-v0"
+      ],
+      "source_ids": [
+        "pubmed_bolli_2014_genomic_heterogeneity_myeloma"
+      ],
+      "extraction_record_ids": [
+        "bolli-2014-genomic-heterogeneity-geometry-v0"
+      ],
+      "expected_transition_type_id": "block-claim",
+      "expected_output_boundary": "prognosis and relapse-risk claim blocked",
+      "expected_blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "All benchmark fixtures are synthetic and contain no real case data.",
+      "Fixtures test structural transitions, not clinical validity.",
+      "Unsafe scenarios must resolve to block-claim or route-to-source-extraction."
+    ]
+  }
+}

@@ -201,3 +201,33 @@ make diff-mrd-geometry-state ARGS="--json"
 
 The tool does not validate clinical utility, rank mechanisms, interpret MRD,
 recommend therapy, match a patient, or claim a cure.
+
+### MRD Geometry Falsification Check
+
+Run:
+
+```bash
+python3 tools/check_mrd_geometry_falsification.py
+```
+
+Or:
+
+```bash
+make check-mrd-geometry-falsification
+```
+
+The falsification check reads the MRD geometry coverage report, falsification
+matrix, transition model, hypothesis candidate ledger, and benchmark fixtures.
+It verifies that every geometry bucket is covered for v0 navigation, every
+bucket has weakening/splitting/merging/blocking tests, transition links resolve,
+hypotheses remain research-only, and benchmark fixtures fail closed.
+
+Machine-readable output:
+
+```bash
+make check-mrd-geometry-falsification ARGS="--json"
+```
+
+The tool checks structural research invariants only. It does not validate
+clinical utility, rank mechanisms, interpret MRD, recommend therapy, match a
+patient, or claim a cure.

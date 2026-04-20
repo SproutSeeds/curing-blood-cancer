@@ -1,0 +1,49 @@
+{
+  "artifact_id": "mrd-geometry-falsification-matrix-v0",
+  "title": "MRD Geometry Falsification Matrix v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "therapy resistance",
+    "falsification matrix",
+    "hypothesis generation",
+    "no human outreach"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "MRD Resistance Geometry Coverage Report v0",
+      "url": "mrd-resistance-geometry-coverage-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Claim Upgrade Blocker Ledger v0",
+      "url": "mrd-geometry-claim-upgrade-blocker-ledger-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Samur 2023 single-cell profiling source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37196627/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Schavgoulidze 2026 high-risk genomic validation source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40991836/",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a monitoring recommendation.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not a patient-specific MRD interpretation.",
+    "Does not rank mechanisms, evidence, therapies, assays, or sources.",
+    "Does not validate clinical use.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-6-falsification-v0.md"
+}

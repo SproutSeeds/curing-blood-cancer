@@ -51,6 +51,21 @@
       "label": "Ledergor 2024 CD4 CAR T exhaustion source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Samur 2023 single-cell profiling source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37196627/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Schavgoulidze 2026 high-risk genomic validation source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40991836/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Falsification Matrix v0",
+      "url": "mrd-geometry-falsification-matrix-v0.md",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -63,5 +78,5 @@
     "Coverage counts are not mechanism-frequency estimates.",
     "Coverage counts are not biological-importance rankings."
   ],
-  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-5-discrimination-v0.md"
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-6-falsification-v0.md"
 }

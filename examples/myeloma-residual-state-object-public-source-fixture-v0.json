@@ -37,7 +37,9 @@
       "pubmed_wang_2025_lipid_metabolism_myeloma",
       "pubmed_lu_2024_myeloma_signaling_pathways",
       "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
-      "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+      "pubmed_samur_2023_single_cell_profiling_myeloma",
+      "pubmed_high_risk_genomic_consensus_validation_2026"
     ],
     "extraction_record_ids": [
       "cui-2024-mrd-clonal-evolution-geometry-v0",
@@ -48,7 +50,9 @@
       "wang-2025-lipid-metabolism-geometry-v0",
       "lu-2024-signaling-pathways-geometry-v0",
       "bolli-2014-genomic-heterogeneity-geometry-v0",
-      "ledergor-2024-car-t-pressure-geometry-v0"
+      "ledergor-2024-car-t-pressure-geometry-v0",
+      "samur-2023-single-cell-profiling-translation-geometry-v0",
+      "schavgoulidze-2026-high-risk-genomic-validation-geometry-v0"
     ],
     "source_type": "public_source_summary",
     "source_status": "public_source_only",
@@ -62,7 +66,12 @@
       "mrd-resistance-geometry-movement-ledger-v0",
       "residual-state-contradiction-mining-note-v0",
       "mrd-geometry-claim-upgrade-blocker-ledger-v0",
-      "mrd-geometry-negative-safety-fixtures-v0"
+      "mrd-geometry-negative-safety-fixtures-v0",
+      "mrd-geometry-falsification-matrix-v0",
+      "mrd-geometry-hypothesis-candidate-ledger-v0",
+      "mrd-geometry-transition-model-v0",
+      "mrd-geometry-benchmark-fixtures-v0",
+      "mrd-geometry-falsification-check-v0"
     ]
   },
   "measurement_trajectory_state": {
@@ -149,16 +158,18 @@
       "microenvironment_context",
       "therapy_pressure_context",
       "car_t_immune_state_context",
-      "high_unmet_need_context",
-      "single_cell_translation_readiness_gap",
-      "remaining_context_second_source_needed"
+      "high_risk_genomic_context",
+      "single_cell_translation_readiness_context",
+      "falsification_ready_context"
     ],
     "source_basis": [
       "li-2025-single-cell-myeloma-geometry-v0",
       "besliu-2025-treatment-landscape-geometry-v0",
       "wang-2025-lipid-metabolism-geometry-v0",
       "lu-2024-signaling-pathways-geometry-v0",
-      "ledergor-2024-car-t-pressure-geometry-v0"
+      "ledergor-2024-car-t-pressure-geometry-v0",
+      "samur-2023-single-cell-profiling-translation-geometry-v0",
+      "schavgoulidze-2026-high-risk-genomic-validation-geometry-v0"
     ],
     "boundary": "Support layers modify research interpretation needs only and cannot rank, recommend, or match."
   },
@@ -172,8 +183,9 @@
       "expert_review_needed"
     ],
     "open_gaps": [
-      "single-cell-translation-gap-v0 remains under-covered for translation readiness",
-      "unmet-high-risk-context-v0 remains under-covered for disease-context support"
+      "all geometry buckets are covered-for-v0-navigation as public artifact coverage",
+      "claim upgrades remain blocked until falsification, transition, validation, and expert-review gates are satisfied",
+      "coverage does not establish clinical readiness, mechanism frequency, biological importance, or cure progress"
     ],
     "absence_inference_allowed": false,
     "clinical_use_allowed": false
@@ -184,7 +196,7 @@
     "clinician_review_needed": true,
     "source_appraisal_needed": true,
     "publication_gate_needed": true,
-    "allowed_public_successor": "discrimination-invariant-and-diff-check-only"
+    "allowed_public_successor": "falsification-and-transition-check-only"
   },
   "blocked_output_manifest": {
     "diagnosis": "blocked",

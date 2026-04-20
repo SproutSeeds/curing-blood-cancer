@@ -1,0 +1,50 @@
+{
+  "artifact_id": "mrd-geometry-falsification-check-v0",
+  "title": "MRD Geometry Falsification Check v0",
+  "artifact_class": "tool",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "falsification",
+    "hypothesis generation",
+    "benchmark fixtures",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "MRD Geometry Falsification Matrix v0",
+      "url": "../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-falsification-matrix-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Transition Model v0",
+      "url": "../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Hypothesis Candidate Ledger v0",
+      "url": "../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Benchmark Fixtures v0",
+      "url": "../examples/mrd-geometry-benchmark-fixtures-v0.json",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Structural research check only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a monitoring recommendation.",
+    "Not a trial recommendation.",
+    "Not patient-specific MRD interpretation.",
+    "Does not validate evidence strength, biological importance, clinical actionability, or clinical utility.",
+    "Does not rank mechanisms, sources, assays, therapies, or tasks.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Reads public repository files only and uses the Python standard library."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-6-falsification-v0.md"
+}

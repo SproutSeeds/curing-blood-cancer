@@ -25,6 +25,8 @@ Each record should:
 | [Lu 2024 signaling pathways geometry](lu-2024-signaling-pathways-geometry-v0.json) | NF-kB selective state, review-level signaling-pathway navigation context |
 | [Bolli 2014 genomic heterogeneity geometry](bolli-2014-genomic-heterogeneity-geometry-v0.json) | subclone diversity and genomic heterogeneity context |
 | [Ledergor 2024 CAR T pressure geometry](ledergor-2024-car-t-pressure-geometry-v0.json) | T-cell therapy pressure and CAR T immune-state context |
+| [Samur 2023 single-cell profiling translation geometry](samur-2023-single-cell-profiling-translation-geometry-v0.json) | single-cell translation gap and implementation-readiness context |
+| [Schavgoulidze 2026 high-risk genomic validation geometry](schavgoulidze-2026-high-risk-genomic-validation-geometry-v0.json) | unmet high-risk context and genomic high-risk modifier boundaries |
 | [Maura 2025 plasma-cell identity escape](maura-2025-plasma-cell-identity-escape-v0.json) | plasma-cell identity or lineage-state escape |
 | [Di Meo 2025 target-linked phenotype](di-meo-2025-target-linked-phenotype-v0.json) | target-linked phenotype fields for plasma-cell identity or lineage-state escape |
 | [Yue 2025 BCMA resistance review](yue-2025-bcma-resistance-review-v0.json) | CAR T fitness, exhaustion, expansion, or persistence |

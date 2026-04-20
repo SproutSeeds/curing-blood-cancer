@@ -25,7 +25,9 @@
     "pubmed_wang_2025_lipid_metabolism_myeloma",
     "pubmed_lu_2024_myeloma_signaling_pathways",
     "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
-    "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+    "pubmed_samur_2023_single_cell_profiling_myeloma",
+    "pubmed_high_risk_genomic_consensus_validation_2026"
   ],
   "tasks": [
     {
@@ -347,7 +349,7 @@
       "task_title": "Add a second public source extraction for the single-cell translation gap",
       "task_type": "source-extraction-task",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -361,16 +363,18 @@
         "bone-marrow-mrd"
       ],
       "extraction_record_ids": [
-        "li-2025-single-cell-myeloma-geometry-v0"
+        "li-2025-single-cell-myeloma-geometry-v0",
+        "samur-2023-single-cell-profiling-translation-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
-        "pubmed_li_2025_single_cell_myeloma_review"
+        "pubmed_li_2025_single_cell_myeloma_review",
+        "pubmed_samur_2023_single_cell_profiling_myeloma"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/single-cell-translation-gap-second-source-extraction-task-v0.md",
       "public_deliverables": [
-        "One new source-specific mechanism extraction record mapping at least one signal to single-cell-translation-gap-v0.",
-        "A source note preserving implementation barriers such as cost, standardization, data complexity, clinical workflow, or ethics.",
+        "Completed through samur-2023-single-cell-profiling-translation-geometry-v0: one new review-level signal maps to single-cell-translation-gap-v0.",
+        "A source note preserving implementation barriers such as cost, standardization, data complexity, workflow, validation, and clinical-translation uncertainty.",
         "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
       ],
       "acceptance_checks": [
@@ -451,7 +455,7 @@
       "task_title": "Add a second public source extraction for unmet high-risk context",
       "task_type": "source-extraction-task",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -465,21 +469,23 @@
         "relapse-or-disease-progression"
       ],
       "extraction_record_ids": [
-        "besliu-2025-treatment-landscape-geometry-v0"
+        "besliu-2025-treatment-landscape-geometry-v0",
+        "schavgoulidze-2026-high-risk-genomic-validation-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
-        "pubmed_besliu_2025_evolving_landscape_myeloma"
+        "pubmed_besliu_2025_evolving_landscape_myeloma",
+        "pubmed_high_risk_genomic_consensus_validation_2026"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/unmet-high-risk-context-second-source-extraction-task-v0.md",
       "public_deliverables": [
-        "One new source-specific mechanism extraction record mapping at least one signal to unmet-high-risk-context-v0.",
-        "A source note preserving disease context, risk context, subtype scope, and source limitations.",
+        "Completed through schavgoulidze-2026-high-risk-genomic-validation-geometry-v0: one new cohort-scale genomic validation signal maps to unmet-high-risk-context-v0.",
+        "A source note preserving disease context, genomic risk context, disease timing, cohort scope, and source limitations.",
         "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
       ],
       "acceptance_checks": [
         "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
-        "The selected source supports high-risk, extramedullary, plasma cell leukemia, or related unmet-need context.",
+        "The selected source supports high-risk genomic disease context in multiple myeloma.",
         "Context variables are not treated as causal mechanisms unless the source explicitly supports that interpretation.",
         "The task does not create patient-specific risk, prognosis, eligibility, or treatment-fit guidance."
       ],
@@ -508,9 +514,10 @@
       "The metabolic and NF-kB second-source tasks are done through review-level Phase 4 proof extractions; both remain non-actionable navigation coverage only.",
       "The subclone diversity task is done through bolli-2014-genomic-heterogeneity-geometry-v0.",
       "The T-cell therapy pressure task is done through ledergor-2024-car-t-pressure-geometry-v0.",
-      "Two ready tasks remain for second-source extraction across under-covered geometry nodes.",
-      "Task source_ids include pubmed as a discovery anchor where a second source has not yet been selected.",
-      "No external human outreach is required for remaining tasks; source extraction feeds internal adversarial intelligence audit."
+      "The single-cell translation gap task is done through samur-2023-single-cell-profiling-translation-geometry-v0.",
+      "The unmet high-risk context task is done through schavgoulidze-2026-high-risk-genomic-validation-geometry-v0.",
+      "No ready second-source extraction tasks remain in this queue.",
+      "No external human outreach is required for remaining geometry movement; Phase 6 routes next work through falsification, benchmark fixtures, and transition modeling."
     ]
   }
 }

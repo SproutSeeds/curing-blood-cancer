@@ -175,6 +175,24 @@
       "limitation_count": 7
     },
     {
+      "artifact_id": "mrd-geometry-benchmark-fixtures-v0",
+      "title": "MRD Geometry Benchmark Fixtures v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "geometry benchmark",
+        "synthetic fixture",
+        "falsification",
+        "safety boundary"
+      ],
+      "path": "examples/mrd-geometry-benchmark-fixtures-v0.json",
+      "metadata_path": "examples/mrd-geometry-benchmark-fixtures-v0.metadata.json",
+      "source_count": 3,
+      "limitation_count": 11
+    },
+    {
       "artifact_id": "mrd-geometry-claim-upgrade-blocker-ledger-v0",
       "title": "MRD Geometry Claim Upgrade Blocker Ledger v0",
       "artifact_class": "dataset",
@@ -190,6 +208,42 @@
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-geometry-claim-upgrade-blocker-ledger-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-geometry-claim-upgrade-blocker-ledger-v0.metadata.json",
       "source_count": 6,
+      "limitation_count": 10
+    },
+    {
+      "artifact_id": "mrd-geometry-falsification-matrix-v0",
+      "title": "MRD Geometry Falsification Matrix v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "therapy resistance",
+        "falsification matrix",
+        "hypothesis generation",
+        "no human outreach"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-geometry-falsification-matrix-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-geometry-falsification-matrix-v0.metadata.json",
+      "source_count": 4,
+      "limitation_count": 10
+    },
+    {
+      "artifact_id": "mrd-geometry-hypothesis-candidate-ledger-v0",
+      "title": "MRD Geometry Hypothesis Candidate Ledger v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "therapy resistance",
+        "research hypothesis",
+        "falsification",
+        "no human outreach"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.metadata.json",
+      "source_count": 3,
       "limitation_count": 10
     },
     {
@@ -243,7 +297,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.metadata.json",
-      "source_count": 8,
+      "source_count": 11,
       "limitation_count": 8
     },
     {
@@ -300,7 +354,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-second-source-task-queue-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-second-source-task-queue-v0.metadata.json",
-      "source_count": 8,
+      "source_count": 10,
       "limitation_count": 8
     },
     {
@@ -458,7 +512,7 @@
       ],
       "path": "examples/myeloma-residual-state-object-public-source-fixture-v0.json",
       "metadata_path": "examples/myeloma-residual-state-object-public-source-fixture-v0.metadata.json",
-      "source_count": 13,
+      "source_count": 16,
       "limitation_count": 20
     },
     {
@@ -638,6 +692,24 @@
       "metadata_path": "disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.metadata.json",
       "source_count": 10,
       "limitation_count": 12
+    },
+    {
+      "artifact_id": "mrd-geometry-transition-model-v0",
+      "title": "MRD Geometry Transition Model v0",
+      "artifact_class": "map",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "geometry transition model",
+        "falsification",
+        "hypothesis generation",
+        "safety boundary"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.metadata.json",
+      "source_count": 3,
+      "limitation_count": 10
     },
     {
       "artifact_id": "mrd-resistance-geometry-axis-revision-v0",
@@ -1251,7 +1323,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.metadata.json",
-      "source_count": 28,
+      "source_count": 35,
       "limitation_count": 9
     },
     {
@@ -2060,6 +2132,24 @@
       "metadata_path": "taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.metadata.json",
       "source_count": 4,
       "limitation_count": 4
+    },
+    {
+      "artifact_id": "mrd-geometry-falsification-check-v0",
+      "title": "MRD Geometry Falsification Check v0",
+      "artifact_class": "tool",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "falsification",
+        "hypothesis generation",
+        "benchmark fixtures",
+        "public safety"
+      ],
+      "path": "tools/check_mrd_geometry_falsification.py",
+      "metadata_path": "tools/check_mrd_geometry_falsification.metadata.json",
+      "source_count": 4,
+      "limitation_count": 11
     },
     {
       "artifact_id": "mrd-geometry-proof-invariant-check-v0",

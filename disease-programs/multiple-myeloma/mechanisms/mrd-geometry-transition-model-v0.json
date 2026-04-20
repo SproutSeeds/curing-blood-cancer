@@ -1,0 +1,160 @@
+{
+  "transition_model_id": "mrd-geometry-transition-model-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Geometry Transition Model v0",
+  "clinical_use_boundary": "research-use-only",
+  "parent_phase_plan_id": "mrd-resistance-geometry-phase-plan-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways",
+    "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+    "pubmed_samur_2023_single_cell_profiling_myeloma",
+    "pubmed_high_risk_genomic_consensus_validation_2026"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "besliu-2025-treatment-landscape-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "wang-2025-lipid-metabolism-geometry-v0",
+    "lu-2024-signaling-pathways-geometry-v0",
+    "bolli-2014-genomic-heterogeneity-geometry-v0",
+    "ledergor-2024-car-t-pressure-geometry-v0",
+    "samur-2023-single-cell-profiling-translation-geometry-v0",
+    "schavgoulidze-2026-high-risk-genomic-validation-geometry-v0"
+  ],
+  "allowed_transition_types": [
+    {
+      "transition_type_id": "coverage-status-movement",
+      "label": "coverage status movement",
+      "allowed_when": "A source-specific extraction adds a second public source for a mechanism bucket.",
+      "required_boundary": "Artifact coverage only; not evidence strength or clinical readiness."
+    },
+    {
+      "transition_type_id": "weaken-edge",
+      "label": "weaken edge",
+      "allowed_when": "A new source introduces method, cohort, timing, or source-type tension that reduces comparability.",
+      "required_boundary": "Weakening is structural and cannot become clinical negative evidence."
+    },
+    {
+      "transition_type_id": "split-node",
+      "label": "split node",
+      "allowed_when": "A bucket contains distinguishable source frames that should not be represented as one state.",
+      "required_boundary": "Splitting improves source traceability and does not rank branches."
+    },
+    {
+      "transition_type_id": "merge-linked-context",
+      "label": "merge linked context",
+      "allowed_when": "Independent sources align method, context, and uncertainty enough to share a source-bounded context.",
+      "required_boundary": "Merge is structural context linking only, not claim strengthening."
+    },
+    {
+      "transition_type_id": "block-claim",
+      "label": "block claim",
+      "allowed_when": "An output tries to infer clinical advice, ranking, prognosis, validation, or cure.",
+      "required_boundary": "Unsafe claim remains blocked."
+    },
+    {
+      "transition_type_id": "retain-source-bounded-state",
+      "label": "retain source-bounded state",
+      "allowed_when": "Evidence supports the current structure but not a stronger movement.",
+      "required_boundary": "No claim upgrade."
+    },
+    {
+      "transition_type_id": "route-to-source-extraction",
+      "label": "route to source extraction",
+      "allowed_when": "A question lacks source-specific extraction, aligned method context, or contradiction review.",
+      "required_boundary": "Routes work to source extraction instead of inference."
+    }
+  ],
+  "transition_rules": [
+    {
+      "rule_id": "second-source-coverage-movement-rule-v0",
+      "if_source_condition": "A mechanism bucket has one extraction record and a new accepted extraction adds a second source-specific signal.",
+      "then_transition_type_id": "coverage-status-movement",
+      "required_checks": [
+        "source_id exists in source registry",
+        "extraction_record_id validates",
+        "coverage wording says artifact coverage only"
+      ]
+    },
+    {
+      "rule_id": "method-tension-weaken-rule-v0",
+      "if_source_condition": "A new source supports a bucket but conflicts by assay, platform, specimen, disease timing, therapy exposure, source type, or cohort frame.",
+      "then_transition_type_id": "weaken-edge",
+      "required_checks": [
+        "record source-frame mismatch",
+        "preserve uncertainty",
+        "block clinical interpretation"
+      ]
+    },
+    {
+      "rule_id": "typed-substructure-split-rule-v0",
+      "if_source_condition": "A bucket contains multiple distinguishable state types or support contexts.",
+      "then_transition_type_id": "split-node",
+      "required_checks": [
+        "name typed substructure",
+        "preserve parent relationship",
+        "avoid mechanism ranking"
+      ]
+    },
+    {
+      "rule_id": "unsafe-output-block-rule-v0",
+      "if_source_condition": "Any output field contains diagnosis, prognosis, MRD interpretation, monitoring, treatment, trial, target, ranking, validation, or cure content.",
+      "then_transition_type_id": "block-claim",
+      "required_checks": [
+        "refuse unsafe output",
+        "route back to research artifact boundary",
+        "keep blocked_output_manifest populated with blocked values"
+      ]
+    },
+    {
+      "rule_id": "insufficient-context-route-rule-v0",
+      "if_source_condition": "A hypothesis lacks aligned source extraction, method context, or contradiction review.",
+      "then_transition_type_id": "route-to-source-extraction",
+      "required_checks": [
+        "record missing context",
+        "do not infer absence",
+        "do not upgrade claim"
+      ]
+    }
+  ],
+  "forbidden_transitions": [
+    "artifact coverage to clinical readiness",
+    "source signal to patient-specific MRD interpretation",
+    "pathway context to target selection",
+    "high-risk context to personal prognosis",
+    "therapy-pressure context to treatment sequencing",
+    "hypothesis candidate to treatment advice",
+    "geometry movement to cure claim"
+  ],
+  "axis_state_groups": [
+    "measurement-trajectory-axis-v0",
+    "residual-biological-state-axis-v0",
+    "clone-architecture-axis-v0",
+    "clone-state-coupling-edge-axis-v0",
+    "therapy-pressure-context-layer-v0",
+    "microenvironment-context-layer-v0",
+    "single-cell-translation-readiness-layer-v0",
+    "high-risk-context-modifier-layer-v0",
+    "safety-boundary-layer-v0"
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created for Phase 6 falsification and hypothesis generation.",
+      "Transition types are structural only.",
+      "Forbidden transitions explicitly block clinical, ranking, and cure outputs."
+    ]
+  }
+}
