@@ -118,6 +118,8 @@ clinical meaning.
 now completes that routing layer as refusal metadata only.
 The follow-on [Measurement Refusal Validator Skeleton v0](measurement-refusal-validator-skeleton-v0.md)
 is also complete as a synthetic-only structural report over those routes.
+The follow-on [Measurement Refusal Negative Safety Fixtures v0](measurement-refusal-negative-safety-fixtures-v0.md)
+are complete as synthetic fail-closed checks for unsafe route mutations.
 
 ## Handoff State
 
@@ -131,7 +133,7 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-negative-safety-fixtures-v0`.
+`measurement-refusal-wrapper-integration-dry-run-v0`.
 
 ## Public Safety Check
 

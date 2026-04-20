@@ -91,6 +91,8 @@ The skeleton must not emit:
 `measurement-refusal-validator-skeleton-v0` is complete when the executable
 validator, report fixture, metadata, navigation, inventory, and ORP state are
 all wired and `make validate` passes.
+The follow-on [Measurement Refusal Negative Safety Fixtures v0](measurement-refusal-negative-safety-fixtures-v0.md)
+are now complete as synthetic fail-closed tests for the validator.
 
 ORP should keep the active blocker at
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
@@ -99,7 +101,7 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-negative-safety-fixtures-v0`.
+`measurement-refusal-wrapper-integration-dry-run-v0`.
 
 ## Public Safety Check
 

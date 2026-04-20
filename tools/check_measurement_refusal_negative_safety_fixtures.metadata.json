@@ -1,0 +1,69 @@
+{
+  "artifact_id": "measurement-refusal-negative-safety-fixture-check-v0",
+  "title": "Measurement Refusal Negative Safety Fixture Check v0",
+  "artifact_class": "tool",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "measurable residual disease",
+    "measurement state",
+    "assay quality",
+    "specimen quality",
+    "synthetic fixture",
+    "negative safety fixture",
+    "validator skeleton",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Measurement Refusal Negative Safety Fixtures v0",
+      "url": "../examples/measurement-refusal-negative-safety-fixtures-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Negative Safety Fixture Protocol v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-negative-safety-fixtures-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Validator Skeleton Tool v0",
+      "url": "./measurement_refusal_validator_skeleton.py",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Validator Skeleton v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-validator-skeleton-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Output Route Table v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.md",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Research-use-only negative safety fixture checker.",
+    "Synthetic fail-closed validation only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not MRD interpretation.",
+    "Not response assessment.",
+    "Not prognosis guidance.",
+    "Not monitoring guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not matching or ranking.",
+    "Not report interpretation.",
+    "Not laboratory validation.",
+    "Not imaging interpretation.",
+    "Not biopsy interpretation.",
+    "Not publication authorization.",
+    "Does not process real reports, raw values, scans, biopsies, exact person-linked dates, private paths, accessions, or records.",
+    "Does not implement executable clinical validation, model scoring, prediction, calibration, benchmarking, or deployment.",
+    "Does not clear human-review, expert-review, private-lab, clinical-team, legal, regulatory, publication, or model-governance gates.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-negative-safety-fixture-check-v0.py"
+}

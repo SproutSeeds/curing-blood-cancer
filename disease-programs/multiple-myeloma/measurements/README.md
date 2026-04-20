@@ -15,6 +15,7 @@ the multiple myeloma disease program.
 - [Assay Specimen Quality Failure Mode Checklist v0](assay-specimen-quality-failure-mode-checklist-v0.md)
 - [Measurement Refusal Output Route Table v0](measurement-refusal-output-route-table-v0.md)
 - [Measurement Refusal Validator Skeleton v0](measurement-refusal-validator-skeleton-v0.md)
+- [Measurement Refusal Negative Safety Fixtures v0](measurement-refusal-negative-safety-fixtures-v0.md)
 
 ## Boundary
 
@@ -40,3 +41,6 @@ the multiple myeloma disease program.
 - Measurement-refusal validator skeletons may emit structural validation
   reports only; they must not emit MRD interpretation, assay validity,
   comparison, ranking, advice, publication, decision, or cure outputs.
+- Measurement-refusal negative safety fixtures may mutate synthetic route
+  tables only to prove fail-closed behavior; they must not contain real reports,
+  raw values, advice, ranking, publication, decision, or cure outputs.
