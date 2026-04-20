@@ -278,7 +278,7 @@ Stop instead of proceeding if the next step requires a real case, a live
 backend, credentials, private lab access, clinical interpretation, outreach, or
 publication approval. If that happens, write the blocker and move to the next
 public-safe adjacent item when one exists. The current no-outreach public-source
-successor candidate is `measurement-refusal-output-schema-v0`.
+successor candidate is `measurement-refusal-output-route-table-v0`.
 
 ### 1. Expert Response Intake And Validation Ledger
 

@@ -1,4 +1,4 @@
-.PHONY: help validate list-artifacts list-public-artifacts list-claim-sets list-evidence-gaps list-mechanism-extractions list-mechanism-coverage list-public-tasks list-review-packets review-packet-route-table check-mrd-geometry-proof diff-mrd-geometry-state check-mrd-geometry-falsification check-measurement-state-refusal-fixtures
+.PHONY: help validate list-artifacts list-public-artifacts list-claim-sets list-evidence-gaps list-mechanism-extractions list-mechanism-coverage list-public-tasks list-review-packets review-packet-route-table check-mrd-geometry-proof diff-mrd-geometry-state check-mrd-geometry-falsification check-measurement-state-refusal-fixtures check-measurement-refusal-output-schema
 
 help:
 	@printf '%s\n' 'Available targets:'
@@ -16,6 +16,7 @@ help:
 	@printf '  %-28s %s\n' 'diff-mrd-geometry-state' 'Diff MRD geometry coverage state movement'
 	@printf '  %-28s %s\n' 'check-mrd-geometry-falsification' 'Check MRD geometry falsification invariants'
 	@printf '  %-28s %s\n' 'check-measurement-state-refusal-fixtures' 'Check measurement-state refusal fixture invariants'
+	@printf '  %-28s %s\n' 'check-measurement-refusal-output-schema' 'Check measurement-refusal output schema invariants'
 
 validate:
 	python3 tools/validate_public_artifacts.py
@@ -58,3 +59,6 @@ check-mrd-geometry-falsification:
 
 check-measurement-state-refusal-fixtures:
 	python3 tools/check_measurement_state_refusal_fixtures.py $(ARGS)
+
+check-measurement-refusal-output-schema:
+	python3 tools/check_measurement_refusal_output_schema.py $(ARGS)

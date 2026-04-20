@@ -25,6 +25,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Machine Representation Source Extraction v0 | dataset | open-question | [disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md](../disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md) |
 | Machine Representation Source-Gap Internal Extraction v0 | dataset | open-question | [disease-programs/multiple-myeloma/machine-representation-source-gap-internal-extraction-v0.md](../disease-programs/multiple-myeloma/machine-representation-source-gap-internal-extraction-v0.md) |
 | Machine Representation Source-Gap Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md) |
+| Measurement Refusal Output Fixture v0 | dataset | open-question | [examples/measurement-refusal-output-fixture-v0.json](../examples/measurement-refusal-output-fixture-v0.json) |
 | Measurement State Refusal Fixtures v0 | dataset | open-question | [examples/measurement-state-refusal-fixtures-v0.json](../examples/measurement-state-refusal-fixtures-v0.json) |
 | MRD And Relapse Measurement Glossary v0 | dataset | derived | [disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md](../disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md) |
 | MRD Geometry Benchmark Fixtures v0 | dataset | open-question | [examples/mrd-geometry-benchmark-fixtures-v0.json](../examples/mrd-geometry-benchmark-fixtures-v0.json) |
@@ -140,6 +141,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Evidence Claim Schema v0 | schema | derived | [schemas/evidence-claim-schema-v0.md](../schemas/evidence-claim-schema-v0.md) |
 | Evidence Retrieval Packet v0 | schema | open-question | [disease-programs/multiple-myeloma/evidence-retrieval-packet-v0.md](../disease-programs/multiple-myeloma/evidence-retrieval-packet-v0.md) |
 | Measurement Normalization Contract v0 | schema | open-question | [disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md](../disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md) |
+| Measurement Refusal Output Schema v0 | schema | open-question | [schemas/measurement-refusal-output-schema-v0.md](../schemas/measurement-refusal-output-schema-v0.md) |
 | Molecular Immune Context Contract v0 | schema | open-question | [disease-programs/multiple-myeloma/contexts/molecular-immune-context-contract-v0.md](../disease-programs/multiple-myeloma/contexts/molecular-immune-context-contract-v0.md) |
 | Myeloma Residual State Object v0 | schema | open-question | [disease-programs/multiple-myeloma/mechanisms/myeloma-residual-state-object-v0.md](../disease-programs/multiple-myeloma/mechanisms/myeloma-residual-state-object-v0.md) |
 | Myeloma State Object Schema v0 | schema | open-question | [schemas/myeloma-state-object-schema-v0.md](../schemas/myeloma-state-object-schema-v0.md) |
@@ -162,6 +164,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 
 | Artifact | Class | Claim Level | Path |
 | --- | --- | --- | --- |
+| Measurement Refusal Output Schema Check v0 | tool | open-question | [tools/check_measurement_refusal_output_schema.py](../tools/check_measurement_refusal_output_schema.py) |
 | Measurement State Refusal Fixture Check v0 | tool | open-question | [tools/check_measurement_state_refusal_fixtures.py](../tools/check_measurement_state_refusal_fixtures.py) |
 | MRD Geometry Falsification Check v0 | tool | open-question | [tools/check_mrd_geometry_falsification.py](../tools/check_mrd_geometry_falsification.py) |
 | MRD Geometry Proof Invariant Check v0 | tool | open-question | [tools/check_mrd_geometry_proof_invariants.py](../tools/check_mrd_geometry_proof_invariants.py) |

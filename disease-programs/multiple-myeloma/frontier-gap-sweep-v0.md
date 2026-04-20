@@ -87,7 +87,7 @@ source extraction.
 | `fgs_01_modality_discordance` | Discordance among marrow MRD, blood-based residual disease, imaging, and spatial/marrow-biopsy signals. | A patient-state engine that collapses discordant residual-disease modalities into one flag will be brittle. | Completed as `residual-disease-modality-discordance-source-extraction-v0`; next pressure is synthetic refusal fixtures. | No patient MRD interpretation, monitoring advice, imaging advice, or prognosis. |
 | `fgs_02_spatial_and_site_state` | Spatial marrow architecture, focal lesions, and extramedullary disease as separate disease-site context. | Single-cell abundance and bulk molecular state can miss site structure and disease outside sampled marrow. | Create a spatial/imaging context map that is explicitly separate from treatment selection. | No diagnostic imaging recommendation, lesion interpretation, staging advice, or urgency guidance. |
 | `fgs_03_blood_based_residual_disease` | Peripheral blood residual-disease assays, especially mass spectrometry, as complementary research signals. | Blood-based signals may complement marrow-based MRD but require assay, method, threshold, and endpoint boundaries. | Extend the measurement normalization contract with a blood-based residual-disease candidate field group. | No substitution of blood tests for marrow MRD, no monitoring plan, no response call. |
-| `fgs_04_assay_and_specimen_quality` | Sample quality, hemodilution, missingness, failed assays, sensitivity, threshold, timing, and method lineage. | The machine stack needs refusal reasons for bad or incomplete measurement context before it needs better prediction heads. | Completed as `assay-specimen-quality-failure-mode-checklist-v0` and `measurement-state-refusal-fixture-extension-v0`; next pressure is `measurement-refusal-output-schema-v0`. | No lab interpretation or test-ordering advice. |
+| `fgs_04_assay_and_specimen_quality` | Sample quality, hemodilution, missingness, failed assays, sensitivity, threshold, timing, and method lineage. | The machine stack needs refusal reasons for bad or incomplete measurement context before it needs better prediction heads. | Completed as `assay-specimen-quality-failure-mode-checklist-v0`, `measurement-state-refusal-fixture-extension-v0`, and `measurement-refusal-output-schema-v0`; next pressure is `measurement-refusal-output-route-table-v0`. | No lab interpretation or test-ordering advice. |
 | `fgs_05_human_fitness_and_toxicity` | Frailty, infection risk, toxicity history, neuropathy, renal function, patient-reported outcomes, and ability to sustain therapy. | A "cure" path is not only tumor control; durable benefit depends on host resilience and lived burden. | Create a PRO/toxicity/frailty source-context lane tied to caregiver intake and therapy-exposure contracts. | No fitness-for-treatment, dose, safety, or transplant/CAR-T eligibility guidance. |
 | `fgs_06_transportability_and_bias` | External validation, real-world data quality, calendar-time drift, center effects, access bias, and missing-modality bias. | CoMMpass-style molecular richness is powerful but not automatically transportable to every future case or care setting. | Create a model-validation transportability and bias checklist grounded in TRIPOD+AI, PROBAST, GMLP, and DECIDE-AI anchors. | No model validation claim, clinical utility claim, or deployment claim. |
 | `fgs_07_fusion_architecture_evidence` | Direct method evidence for the proposed graph/set/dense/sparse/temporal fusion architecture. | Governance sources constrain validation, but they do not prove the named architecture is correct. | Keep `mse_09` source-context-needed and run a future method-source extraction if selected. | No model implementation, benchmark, scoring, prediction, or model comparison. |
@@ -99,7 +99,7 @@ source extraction.
 If the human does not authorize outreach, the next public-safe work should be
 one of these no-outreach phases:
 
-1. `measurement-refusal-output-schema-v0`
+1. `measurement-refusal-output-route-table-v0`
 2. `spatial-imaging-residual-disease-context-v0`
 3. `blood-based-mrd-mass-spectrometry-context-v0`
 4. `fitness-toxicity-pro-context-source-extraction-v0`
@@ -109,11 +109,11 @@ one of these no-outreach phases:
 The prior top recommendation,
 `residual-disease-modality-discordance-source-extraction-v0`, and its
 assay/specimen quality successor are now complete. The later
-`measurement-state-refusal-fixture-extension-v0` synthetic fixture pressure is
-also complete. The top remaining recommendation is
-`measurement-refusal-output-schema-v0`, because the checked refusal states need
-a small output contract before any executable validator or model-output path can
-emit them.
+`measurement-state-refusal-fixture-extension-v0` synthetic fixture pressure and
+`measurement-refusal-output-schema-v0` are also complete. The top remaining
+recommendation is `measurement-refusal-output-route-table-v0`, because the
+checked refusal output records now need deterministic routing before any
+executable validator or model-output path can emit them.
 
 ## ORP Mode Decision
 

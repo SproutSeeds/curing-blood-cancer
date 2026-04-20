@@ -122,7 +122,7 @@ completed, validated, and explained in one delegate pass.
    before stopping. After residual-disease modality-discordance extraction, the
    assay/specimen quality checklist and measurement-state refusal fixtures are
    now complete; the next no-outreach successor candidate is
-   `measurement-refusal-output-schema-v0`.
+   `measurement-refusal-output-route-table-v0`.
 3. Run [ORP Frontier Gap Sweep Mode v0](../orp/modes/frontier-gap-sweep-mode-v0.md)
    when the human asks for a direction check, when a delegate sees stale state,
    or when the next public-safe item is not obvious.

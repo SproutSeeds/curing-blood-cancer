@@ -261,3 +261,35 @@ make check-measurement-state-refusal-fixtures ARGS="--json"
 The tool checks structural synthetic fixture invariants only. It does not
 validate clinical utility, interpret MRD, validate assays or specimens, review
 reports, recommend therapy, rank modalities, match a patient, or claim a cure.
+
+### Measurement Refusal Output Schema Check
+
+Run:
+
+```bash
+python3 tools/check_measurement_refusal_output_schema.py
+```
+
+Or:
+
+```bash
+make check-measurement-refusal-output-schema
+```
+
+The measurement-refusal output schema check reads the output schema, the
+synthetic measurement-refusal output fixture, and the upstream
+measurement-state refusal fixtures. It verifies that every source refusal
+fixture has exactly one refused output, the full blocked downstream-use set is
+carried on each output, private/real quality-review requests stop public
+processing, and forbidden clinical, ranking, prediction, and recommendation
+fields stay absent.
+
+Machine-readable output:
+
+```bash
+make check-measurement-refusal-output-schema ARGS="--json"
+```
+
+The tool checks structural synthetic output invariants only. It does not
+validate clinical utility, interpret MRD, validate assays or specimens, review
+reports, recommend therapy, rank modalities, match a patient, or claim a cure.

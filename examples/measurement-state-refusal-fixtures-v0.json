@@ -525,7 +525,8 @@
   "handoff": {
     "completed_phase": "measurement-state-refusal-fixture-extension-v0",
     "status": "complete-as-synthetic-fixture-pressure",
-    "recommended_next_no_outreach_successor": "measurement-refusal-output-schema-v0",
+    "recommended_next_no_outreach_successor": "measurement-refusal-output-route-table-v0",
+    "completed_successor": "measurement-refusal-output-schema-v0",
     "active_blocker_remains": "machine-representation-expert-validation-human-authorization-blocker-v0",
     "summary": "Every assay/specimen quality checklist state has a public synthetic refusal fixture that blocks residual-disease comparison, endpoint interpretation, prognosis, monitoring, treatment, ranking, matching, real-report review, and cure claims."
   }
