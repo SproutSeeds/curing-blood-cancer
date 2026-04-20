@@ -96,11 +96,10 @@ and follow-up duration are visible.
 
 ## Next Work
 
-Residual-disease modality-discordance extraction now adds blood mass spectrometry MRD, MRD/PET-CT discordance, spatial marrow architecture, assay/specimen quality, paired-modality timing context, and explicit discordance-state terms. The later [Assay Specimen Quality Failure Mode Checklist v0](assay-specimen-quality-failure-mode-checklist-v0.md) turns those quality requirements into fail-closed states. These terms are representation boundaries only; they do not authorize interpretation, ranking, monitoring, treatment, prognosis, or cure claims.
+Residual-disease modality-discordance extraction now adds blood mass spectrometry MRD, MRD/PET-CT discordance, spatial marrow architecture, assay/specimen quality, paired-modality timing context, and explicit discordance-state terms. The later [Assay Specimen Quality Failure Mode Checklist v0](assay-specimen-quality-failure-mode-checklist-v0.md) turns those quality requirements into fail-closed states, and [Measurement State Refusal Fixtures v0](../../../examples/measurement-state-refusal-fixtures-v0.json) pressure-tests those states with synthetic inputs. These terms are representation boundaries only; they do not authorize interpretation, ranking, monitoring, treatment, prognosis, or cure claims.
 
 - Add disease-state-specific endpoint tables for frontline, relapsed, and
   post-CAR T settings.
 - Link each claim set to required measurement terms.
-- Add synthetic refusal fixtures that flag MRD claims missing threshold,
-  specimen, timepoint, paired-modality timing, imaging criteria, spatial
-  sampling, or public/private review boundary.
+- Extend the refusal output schema so future tools can emit the synthetic
+  refusal states without returning clinical meaning.

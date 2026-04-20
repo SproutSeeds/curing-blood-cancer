@@ -106,6 +106,16 @@
       "label": "Bone Marrow Microenvironment Drug Resistance Source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40440932/",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement State Refusal Fixtures v0",
+      "url": "../../../examples/measurement-state-refusal-fixtures-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement State Refusal Fixture Check v0",
+      "url": "../../../tools/check_measurement_state_refusal_fixtures.py",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -137,7 +147,8 @@
     "Does not validate therapy exposure, molecular, immune, evidence retrieval, trial, therapy landscape, candidate hypothesis, multidisciplinary review, monitoring-plan, or public-learning extraction semantics.",
     "Does not claim that multiple myeloma has been cured or that a vaccine has been found.",
     "Does not establish residual-disease modality interchangeability, cross-modality prognosis, monitoring guidance, treatment guidance, modality ranking, or patient-specific interpretation.",
-    "Does not perform public quality review of real laboratory reports, imaging reports, pathology reports, biopsy reports, raw values, exact person-linked timing, or private records."
+    "Does not perform public quality review of real laboratory reports, imaging reports, pathology reports, biopsy reports, raw values, exact person-linked timing, or private records.",
+    "Does not execute refusal fixtures against real measurement records."
   ],
   "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-measurement-normalization-contract-v0.md"
 }

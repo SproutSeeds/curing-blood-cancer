@@ -250,6 +250,16 @@
       "label": "Machine Representation Implementation Completion Audit v0",
       "url": "./machine-representation-implementation-completion-audit-v0.md",
       "accessed": "2026-04-18"
+    },
+    {
+      "label": "Measurement State Refusal Fixtures v0",
+      "url": "../../examples/measurement-state-refusal-fixtures-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement State Refusal Fixture Check v0",
+      "url": "../../tools/check_measurement_state_refusal_fixtures.py",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -263,7 +273,8 @@
     "Does not complete expert review or clinical review.",
     "Does not prove source coverage is comprehensive or grade evidence quality.",
     "Does not inspect private lab records or real case data.",
-    "Does not authorize generated claims, ranking, recommendation behavior, patient matching, trial matching, review-packet assembly, or publication workflow."
+    "Does not authorize generated claims, ranking, recommendation behavior, patient matching, trial matching, review-packet assembly, or publication workflow.",
+    "Inventory inclusion does not mean measurement refusal outputs are production-ready."
   ],
   "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-public-inventory-v0.md"
 }

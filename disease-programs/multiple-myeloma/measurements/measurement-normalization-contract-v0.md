@@ -170,10 +170,18 @@ A later public-source extraction pass completed [Residual Disease Modality Disco
 [Assay Specimen Quality Failure Mode Checklist v0](assay-specimen-quality-failure-mode-checklist-v0.md)
 is now complete and turns method, threshold, specimen quality, timing, paired
 context, imaging criteria, spatial sampling, host-context separation, private
-review, and modality-collapse failures into explicit refusal states. The next
-no-outreach successor, if selected, is
-`measurement-state-refusal-fixture-extension-v0` so these states can be
-pressure-tested in synthetic fixtures.
+review, and modality-collapse failures into explicit refusal states. The
+selected no-outreach successor,
+`measurement-state-refusal-fixture-extension-v0`, pressure-tests these states in
+synthetic fixtures.
+
+[Measurement State Refusal Fixtures v0](../../../examples/measurement-state-refusal-fixtures-v0.json)
+now completes that synthetic pressure layer. The fixture set covers every
+assay/specimen quality fail-closed state and the companion checker verifies
+that residual-disease comparison, endpoint interpretation, prognosis,
+monitoring, treatment, ranking, matching, real-report review, lab-validity
+conclusion, imaging interpretation, biopsy interpretation, and cure claims
+remain blocked.
 
 The safest next public step is therefore
 `therapy-exposure-timeline-contract-v0`: a shape-only contract for prior
@@ -203,10 +211,12 @@ ORP should mark this item complete and activate
 
 A later residual-disease modality-discordance update and assay/specimen quality
 checklist extend this complete shape contract without clearing any human gate.
+The later measurement-state refusal fixtures make those extensions
+machine-checkable for synthetic inputs only.
 ORP should keep
 `machine-representation-expert-validation-human-authorization-blocker-v0`
-active while treating `measurement-state-refusal-fixture-extension-v0` as the
-next no-outreach public-source successor if selected.
+active while treating `measurement-refusal-output-schema-v0` as the next
+no-outreach public-source successor if selected.
 
 ## Public Safety Check
 

@@ -1,0 +1,45 @@
+{
+  "artifact_id": "measurement-state-refusal-fixture-check-v0",
+  "title": "Measurement State Refusal Fixture Check v0",
+  "artifact_class": "tool",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "measurement state",
+    "assay quality",
+    "specimen quality",
+    "synthetic fixture",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Measurement State Refusal Fixtures v0",
+      "url": "../examples/measurement-state-refusal-fixtures-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Assay Specimen Quality Failure Mode Checklist v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Myeloma State Validator Rule Map v0",
+      "url": "../disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Structural public checker only.",
+    "Uses synthetic fixture files only.",
+    "Does not process real case data.",
+    "Does not validate clinical utility.",
+    "Does not interpret MRD.",
+    "Does not validate assays or specimens.",
+    "Does not review reports, images, biopsies, or raw values.",
+    "Does not rank assays, modalities, sources, mechanisms, treatments, trials, or options.",
+    "Does not generate predictions, recommendations, matching, or clinical decisions.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-state-refusal-fixture-extension-v0.md"
+}

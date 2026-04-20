@@ -84,6 +84,11 @@
       "label": "ORP Frontier Additional Items",
       "url": "../../../orp/frontier/additional-items.json",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement State Refusal Fixtures v0",
+      "url": "../../../examples/measurement-state-refusal-fixtures-v0.json",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -107,7 +112,8 @@
     "Does not collect, normalize, store, transmit, infer from, publish, compare, rank, match, recommend, or authorize use of real case data.",
     "Does not establish assay interchangeability, endpoint acceptance, prognosis, clinical utility, model validity, deployment readiness, or publication readiness.",
     "Does not claim that multiple myeloma has been cured or that a vaccine has been found.",
-    "Does not perform public assay/specimen quality review, laboratory-validity review, imaging review, biopsy review, or real-report interpretation."
+    "Does not perform public assay/specimen quality review, laboratory-validity review, imaging review, biopsy review, or real-report interpretation.",
+    "Does not define a production refusal-output schema."
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/residual-disease-modality-discordance-source-extraction-v0.md"
 }

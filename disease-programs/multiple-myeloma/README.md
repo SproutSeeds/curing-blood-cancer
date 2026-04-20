@@ -74,6 +74,7 @@ research directions deserve structured public tracking.
 - [Machine Representation Source-Gap Internal Extraction v0](machine-representation-source-gap-internal-extraction-v0.md)
 - [Residual Disease Modality Discordance Source Extraction v0](measurements/residual-disease-modality-discordance-source-extraction-v0.md)
 - [Assay Specimen Quality Failure Mode Checklist v0](measurements/assay-specimen-quality-failure-mode-checklist-v0.md)
+- [Measurement State Refusal Fixtures v0](../../examples/measurement-state-refusal-fixtures-v0.json)
 - [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
 - [Caregiver Intake Public Projection Checklist v0](case-intake/caregiver-intake-public-projection-checklist-v0.md)
 - [Private Intake Schema Contract v0](case-intake/private-intake-schema-contract-v0.md)
