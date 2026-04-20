@@ -22,6 +22,9 @@ unsafe output is requested.
 The fifth phase stress-tests discrimination: nearby states must stay separate,
 two more coverage gaps close under source evidence, unsafe outputs fail closed,
 and claim-upgrade blockers become explicit.
+The sixth phase closes the remaining second-source coverage gaps and turns the
+geometry into a falsification engine: every node must name what would weaken,
+split, merge, or block it before it can generate research-only hypotheses.
 
 External human outreach is not part of this execution path. The replacement
 gate is stricter internal review: source-trace audits, contradiction hunts,
@@ -256,6 +259,60 @@ Phase 5 result:
   clinical validation, and cure claims blocked.
 - No clinical, ranking, patient-matching, treatment, monitoring, trial, or cure
   output is introduced.
+
+## Phase 6: Falsification And Hypothesis Generation
+
+Status: `complete-for-falsification-v0`
+
+Purpose: close remaining second-source gaps and turn the geometry into a
+falsifiable research-hypothesis engine without upgrading any clinical claim.
+
+Completed public outputs:
+
+- `samur-2023-single-cell-profiling-translation-geometry-v0`
+- `schavgoulidze-2026-high-risk-genomic-validation-geometry-v0`
+- `mrd-geometry-falsification-matrix-v0`
+- `mrd-geometry-hypothesis-candidate-ledger-v0`
+- `mrd-geometry-transition-model-v0`
+- `mrd-geometry-benchmark-fixtures-v0`
+- `mrd-geometry-falsification-check-v0`
+- refreshed `mrd-resistance-geometry-coverage-v0`
+- refreshed `mrd-resistance-geometry-second-source-task-queue-v0`
+
+Completion gate:
+
+- Close `single-cell-translation-gap-v0` with a second public source
+  extraction.
+- Close `unmet-high-risk-context-v0` with a second public source extraction.
+- Create a falsification matrix covering every geometry bucket.
+- Create a hypothesis candidate ledger with falsification conditions and
+  prohibited inferences.
+- Create a transition model defining allowed structural movements and forbidden
+  clinical transitions.
+- Create benchmark fixtures for coverage movement, weakening, claim blocking,
+  and source-bounded retention.
+- Create a checker that verifies full bucket coverage, falsification coverage,
+  transition links, benchmark safety, and research-only hypotheses.
+- Preserve research-use-only, non-advice, non-ranking, no-human-outreach, and
+  no-cure boundaries.
+
+Phase 6 result:
+
+- All ten MRD geometry buckets now have at least two public extraction records
+  for v0 navigation.
+- Single-cell translation readiness remains a tooling and implementation layer,
+  not a clinical testing recommendation.
+- Unmet high-risk context remains a disease-context modifier, not
+  patient-specific prognosis or treatment fit.
+- Every bucket has explicit falsification tests for weakening, splitting,
+  merging, and claim blocking.
+- The hypothesis ledger generates research-only candidate hypotheses linked to
+  falsification and transition rules.
+- The transition model defines allowed structural movements and forbidden
+  clinical transitions.
+- Benchmark fixtures test expected transitions without real case data.
+- The falsification checker passes only if hypotheses and fixtures remain
+  nonclinical and fail closed.
 
 ## Structured Data
 

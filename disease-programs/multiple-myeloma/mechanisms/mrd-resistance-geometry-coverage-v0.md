@@ -41,25 +41,27 @@ or educational claims yet.
 | Genetic and nongenetic coupling | 2 | 2 | covered-for-v0-navigation | Use for navigation only; keep clone identity and transcriptional state as separate linked fields. |
 | Tumor microenvironment shelter interactions | 2 | 2 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
 | Subclone diversity | 2 | 2 | covered-for-v0-navigation | Use for navigation only; do not infer prognosis, relapse risk, treatment choice, or mechanism ranking from counts. |
-| Single-cell translation gap | 1 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
+| Single-cell translation gap | 2 | 2 | covered-for-v0-navigation | Use for navigation only; do not infer clinical implementation readiness, test ordering, platform selection, monitoring guidance, or treatment guidance. |
 | T-cell therapy pressure | 2 | 2 | covered-for-v0-navigation | Use for navigation only; do not infer product comparison, target selection, treatment sequencing, patient-specific therapy fit, or trial fit. |
-| Unmet high-risk context | 1 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
+| Unmet high-risk context | 2 | 2 | covered-for-v0-navigation | Use for navigation only; do not infer patient-specific prognosis, eligibility, therapy fit, trial fit, monitoring guidance, or treatment selection. |
 
 ## Summary
 
 - Mechanism buckets: `10`
-- Current source-specific extraction records: `9`
-- Current extracted signals: `18`
+- Current source-specific extraction records: `11`
+- Current extracted signals: `20`
 - Buckets needing first extraction: `0`
-- Buckets needing second-source extraction: `2`
-- Buckets covered for v0 navigation: `8`
+- Buckets needing second-source extraction: `0`
+- Buckets covered for v0 navigation: `10`
 
 ## What The Report Says
 
-The geometry pilot now has a first extraction for every bucket. That is enough
-to navigate the map, but not enough to compare most nodes.
+The geometry pilot now has at least two public extraction records for every
+bucket. That is enough for v0 navigation and falsification testing, but not
+enough for clinical readiness, patient interpretation, mechanism ranking, or
+claim upgrades.
 
-Eight buckets currently have at least two extraction records:
+Ten buckets currently have at least two extraction records:
 
 | Bucket | Current Extraction Records |
 | --- | --- |
@@ -70,31 +72,32 @@ Eight buckets currently have at least two extraction records:
 | `genetic-nongenetic-coupling-v0` | `cui-2024-mrd-clonal-evolution-geometry-v0`; `cohen-2021-resistance-single-cell-geometry-v0` |
 | `tme-shelter-interactions-v0` | `cui-2024-mrd-clonal-evolution-geometry-v0`; `li-2025-single-cell-myeloma-geometry-v0` |
 | `subclone-diversity-v0` | `li-2025-single-cell-myeloma-geometry-v0`; `bolli-2014-genomic-heterogeneity-geometry-v0` |
+| `single-cell-translation-gap-v0` | `li-2025-single-cell-myeloma-geometry-v0`; `samur-2023-single-cell-profiling-translation-geometry-v0` |
 | `t-cell-therapy-pressure-v0` | `besliu-2025-treatment-landscape-geometry-v0`; `ledergor-2024-car-t-pressure-geometry-v0` |
+| `unmet-high-risk-context-v0` | `besliu-2025-treatment-landscape-geometry-v0`; `schavgoulidze-2026-high-risk-genomic-validation-geometry-v0` |
 
 That does not mean these nodes are more important than other nodes. It means
 they currently have the cleanest public artifact coverage.
 
 ## Under-Covered Buckets
 
-The following buckets need second-source extraction before comparison:
+No MRD geometry buckets currently need first-source or second-source extraction
+for v0 navigation.
 
-- `single-cell-translation-gap-v0`
-- `unmet-high-risk-context-v0`
+This is a coverage milestone only. It does not mean the geometry is clinically
+validated, evidence-ranked, patient-ready, or able to support actionability,
+monitoring, therapy, trial, prognosis, or cure claims.
 
 ## Next Extraction Needs
 
-The metabolic, NF-kB, subclone-diversity, and T-cell therapy pressure
-second-source records are now complete for v0 navigation only. These records do
-not upgrade any pathway, clone, therapy, biomarker, prognosis, treatment, target,
-or sequence claim.
+The next high-value work is no longer more second-source extraction. It is
+falsification work:
 
-Prioritize the remaining second-source records in this order:
-
-1. Unmet high-risk context, because it protects the map from pretending all
-   relapse settings are comparable.
-2. Single-cell translation gap, because it keeps the research-tooling layer
-   separate from clinical readiness.
+1. Keep all bucket movement inside the MRD Geometry Falsification Matrix.
+2. Route candidate hypotheses through the MRD Geometry Transition Model.
+3. Use benchmark fixtures and invariant checks to block unsafe outputs.
+4. Add new source extraction only when a hypothesis lacks aligned method,
+   cohort, timing, or context fields.
 
 ## Structured Data
 

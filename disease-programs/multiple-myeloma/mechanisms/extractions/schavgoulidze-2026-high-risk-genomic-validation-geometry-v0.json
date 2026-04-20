@@ -1,0 +1,70 @@
+{
+  "extraction_record_id": "schavgoulidze-2026-high-risk-genomic-validation-geometry-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "source_ids": [
+    "pubmed_high_risk_genomic_consensus_validation_2026"
+  ],
+  "mechanism_group_ids": [
+    "unmet-high-risk-context-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed validation study",
+    "title": "High-risk genomic consensus validation for patients with newly diagnosed multiple myeloma using next-generation sequencing.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40991836/",
+    "doi": "10.1182/blood.2025029999",
+    "pmid": "40991836",
+    "accessed": "2026-04-20",
+    "publication_year": 2026,
+    "study_context": "Blood validation study of high-risk genomic consensus staging using next-generation sequencing in newly diagnosed multiple myeloma and first-relapse contexts. This public extraction uses the source as high-risk disease-context support only."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "schavgoulidze-2026-high-risk-context-signal-v0",
+      "mechanism_group_id": "unmet-high-risk-context-v0",
+      "signal_summary": "The source validates a high-risk genomic consensus framework in a large cohort context and reports high-risk classification in newly diagnosed and first-relapse samples, supporting unmet high-risk context as a disease-context modifier while preserving genomic method, cohort, disease timing, and non-prognostic public-artifact boundaries.",
+      "evidence_level": "observational-study",
+      "direction": "supports",
+      "measurement_fields": [
+        "high-risk genomic staging",
+        "next-generation sequencing panel",
+        "newly diagnosed multiple myeloma",
+        "first relapse context",
+        "cohort-level validation",
+        "genomic risk context",
+        "source-defined outcome context"
+      ],
+      "limitations": [
+        "Cohort-level validation source; not a patient-specific prognosis tool.",
+        "Does not establish treatment selection, trial eligibility, monitoring guidance, or therapy fit.",
+        "High-risk context is a modifier in this geometry, not a causal mechanism by itself.",
+        "Requires aligned genomic definitions and disease timing before comparison with other high-risk sources."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "The unmet-high-risk-context-v0 branch can move to covered-for-v0-navigation as public artifact coverage because it now has one review-level disease-context source and one cohort-scale genomic validation source.",
+      "The geometry should preserve high-risk context as a modifier that affects interpretation needs, not as a treatment selector.",
+      "High-risk context should remain linked to genomic method, disease timing, cohort definition, and uncertainty."
+    ],
+    "what_this_does_not_support": [
+      "It does not predict prognosis for any person.",
+      "It does not recommend treatment, trial enrollment, monitoring, transplant, or product selection.",
+      "It does not rank high-risk features or substitute for clinical genomic interpretation.",
+      "It does not validate clinical actionability or cure claims."
+    ]
+  },
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created for Phase 6 falsification and hypothesis generation.",
+      "Source details checked against PubMed metadata for PMID 40991836.",
+      "The extraction intentionally keeps high-risk context non-prognostic and non-actionable."
+    ]
+  }
+}

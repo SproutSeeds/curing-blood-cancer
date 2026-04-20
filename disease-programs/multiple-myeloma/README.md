@@ -152,10 +152,15 @@ research directions deserve structured public tracking.
 - [Residual-State Contradiction Mining Note v0](mechanisms/residual-state-contradiction-mining-note-v0.md)
 - [MRD Resistance Geometry Movement Ledger v0](mechanisms/mrd-resistance-geometry-movement-ledger-v0.md)
 - [MRD Geometry Claim Upgrade Blocker Ledger v0](mechanisms/mrd-geometry-claim-upgrade-blocker-ledger-v0.md)
+- [MRD Geometry Falsification Matrix v0](mechanisms/mrd-geometry-falsification-matrix-v0.md)
+- [MRD Geometry Transition Model v0](mechanisms/mrd-geometry-transition-model-v0.md)
+- [MRD Geometry Hypothesis Candidate Ledger v0](mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.md)
+- [MRD Geometry Benchmark Fixtures v0](../../examples/mrd-geometry-benchmark-fixtures-v0.json)
 - [Myeloma Residual State Object Public Source Fixture v0](../../examples/myeloma-residual-state-object-public-source-fixture-v0.json)
 - [MRD Geometry Negative Safety Fixtures v0](../../examples/mrd-geometry-negative-safety-fixtures-v0.json)
 - [MRD Geometry Proof Invariant Check v0](../../tools/check_mrd_geometry_proof_invariants.py)
 - [MRD Geometry State Diff Tool v0](../../tools/diff_mrd_geometry_state.py)
+- [MRD Geometry Falsification Check v0](../../tools/check_mrd_geometry_falsification.py)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
 - [Post-CAR T Relapse Mechanism Coverage Report v0](mechanisms/post-car-t-relapse-mechanism-coverage-v0.md)
@@ -183,3 +188,5 @@ research directions deserve structured public tracking.
 - `pubmed_lu_2024_myeloma_signaling_pathways`
 - `pubmed_bolli_2014_genomic_heterogeneity_myeloma`
 - `pubmed_ledergor_2024_cd4_car_t_exhaustion`
+- `pubmed_samur_2023_single_cell_profiling_myeloma`
+- `pubmed_high_risk_genomic_consensus_validation_2026`

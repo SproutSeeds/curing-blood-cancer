@@ -1,0 +1,501 @@
+{
+  "matrix_id": "mrd-geometry-falsification-matrix-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Geometry Falsification Matrix v0",
+  "clinical_use_boundary": "research-use-only",
+  "parent_phase_plan_id": "mrd-resistance-geometry-phase-plan-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways",
+    "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+    "pubmed_samur_2023_single_cell_profiling_myeloma",
+    "pubmed_high_risk_genomic_consensus_validation_2026"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "besliu-2025-treatment-landscape-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "wang-2025-lipid-metabolism-geometry-v0",
+    "lu-2024-signaling-pathways-geometry-v0",
+    "bolli-2014-genomic-heterogeneity-geometry-v0",
+    "ledergor-2024-car-t-pressure-geometry-v0",
+    "samur-2023-single-cell-profiling-translation-geometry-v0",
+    "schavgoulidze-2026-high-risk-genomic-validation-geometry-v0"
+  ],
+  "mechanism_group_ids": [
+    "mrd-trajectory-split-v0",
+    "residual-transcriptional-adaptation-v0",
+    "metabolic-resistance-state-v0",
+    "nfkb-selective-state-v0",
+    "genetic-nongenetic-coupling-v0",
+    "tme-shelter-interactions-v0",
+    "subclone-diversity-v0",
+    "single-cell-translation-gap-v0",
+    "t-cell-therapy-pressure-v0",
+    "unmet-high-risk-context-v0"
+  ],
+  "falsification_rule": "Every geometry node must name what would weaken, split, merge, or block it before hypothesis generation is allowed. These are research-structure tests only.",
+  "matrix_rows": [
+    {
+      "mechanism_group_id": "mrd-trajectory-split-v0",
+      "label": "MRD trajectory split",
+      "current_coverage_status": "covered-for-v0-navigation",
+      "hypothesis_scope": "measurement movement under assay, specimen, threshold, timing, and cohort constraints",
+      "falsification_tests": {
+        "evidence_that_would_weaken": [
+          "a new source shows trajectory labels are assay artifacts without aligned method context",
+          "paired samples show discordant movement across assay frames"
+        ],
+        "evidence_that_would_split": [
+          "different MRD methods produce distinct trajectory categories that should not share one edge",
+          "bone marrow and non-bone-marrow contexts require separate measurement trajectories"
+        ],
+        "evidence_that_would_merge": [
+          "independent sources align assay, threshold, specimen, timing, and response labels closely enough for a shared source-bounded trajectory state"
+        ],
+        "evidence_that_would_block": [
+          "relapse risk, monitoring, treatment, or patient-specific MRD interpretation is inferred from trajectory labels"
+        ]
+      },
+      "allowed_movement_type_ids": [
+        "weaken-edge",
+        "split-node",
+        "merge-linked-context",
+        "block-claim",
+        "retain-source-bounded-state",
+        "route-to-source-extraction"
+      ],
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "mechanism_group_id": "residual-transcriptional-adaptation-v0",
+      "label": "Residual transcriptional adaptation",
+      "current_coverage_status": "covered-for-v0-navigation",
+      "hypothesis_scope": "residual malignant plasma-cell state under method, exposure, and timing constraints",
+      "falsification_tests": {
+        "evidence_that_would_weaken": [
+          "state labels are not reproducible across source-defined methods or therapy exposures",
+          "signals collapse into batch, sampling, or annotation effects"
+        ],
+        "evidence_that_would_split": [
+          "adaptive state, pathway context, and therapy-exposure context require separate typed subnodes",
+          "single-cell state and bulk pathway evidence diverge"
+        ],
+        "evidence_that_would_merge": [
+          "independent sources align residual-state labels, therapy exposure, and sampling frame without clinical overread"
+        ],
+        "evidence_that_would_block": [
+          "state labels are used as treatment selectors, target selectors, prognosis tools, or monitoring rules"
+        ]
+      },
+      "allowed_movement_type_ids": [
+        "weaken-edge",
+        "split-node",
+        "merge-linked-context",
+        "block-claim",
+        "retain-source-bounded-state",
+        "route-to-source-extraction"
+      ],
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "mechanism_group_id": "metabolic-resistance-state-v0",
+      "label": "Metabolic resistance state",
+      "current_coverage_status": "covered-for-v0-navigation",
+      "hypothesis_scope": "metabolic pathway context as a residual-state branch, not an intervention claim",
+      "falsification_tests": {
+        "evidence_that_would_weaken": [
+          "metabolic findings are review-only or source-general and cannot be tied to residual disease context",
+          "primary sources contradict direction or cell-state specificity"
+        ],
+        "evidence_that_would_split": [
+          "fatty-acid oxidation, lipid uptake, adipocyte interaction, and metabolic stress require separate typed contexts"
+        ],
+        "evidence_that_would_merge": [
+          "primary residual-state sources align metabolic markers, methods, and sampling frames"
+        ],
+        "evidence_that_would_block": [
+          "metabolic context becomes supplement guidance, biomarker use, target selection, prognosis, or treatment advice"
+        ]
+      },
+      "allowed_movement_type_ids": [
+        "weaken-edge",
+        "split-node",
+        "merge-linked-context",
+        "block-claim",
+        "retain-source-bounded-state",
+        "route-to-source-extraction"
+      ],
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "mechanism_group_id": "nfkb-selective-state-v0",
+      "label": "NF-kB selective state",
+      "current_coverage_status": "covered-for-v0-navigation",
+      "hypothesis_scope": "NF-kB pathway context as a source-bounded residual-state branch",
+      "falsification_tests": {
+        "evidence_that_would_weaken": [
+          "NF-kB signal is broad pathway review context without selective residual-cell support",
+          "source-specific pathway labels conflict across methods"
+        ],
+        "evidence_that_would_split": [
+          "canonical/noncanonical pathway context or malignant/TME context requires separation"
+        ],
+        "evidence_that_would_merge": [
+          "primary residual-cell sources align NF-kB state, assay method, and response context"
+        ],
+        "evidence_that_would_block": [
+          "NF-kB context becomes target selection, pathway ranking, drug guidance, prognosis, or actionability"
+        ]
+      },
+      "allowed_movement_type_ids": [
+        "weaken-edge",
+        "split-node",
+        "merge-linked-context",
+        "block-claim",
+        "retain-source-bounded-state",
+        "route-to-source-extraction"
+      ],
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "mechanism_group_id": "genetic-nongenetic-coupling-v0",
+      "label": "Genetic and nongenetic coupling",
+      "current_coverage_status": "covered-for-v0-navigation",
+      "hypothesis_scope": "provisional clone-state coupling edge, not causality or dominance",
+      "falsification_tests": {
+        "evidence_that_would_weaken": [
+          "clone identity and transcriptional state fail to co-vary in aligned source frames",
+          "coupling appears method-specific or sampling-specific"
+        ],
+        "evidence_that_would_split": [
+          "genetic clone architecture, transcriptional state, and therapy exposure require independent transition tracks"
+        ],
+        "evidence_that_would_merge": [
+          "paired sources align clone architecture and state movement while preserving correlation language"
+        ],
+        "evidence_that_would_block": [
+          "coupling becomes causal ranking, genetic-versus-nongenetic dominance, patient-specific resistance attribution, or treatment guidance"
+        ]
+      },
+      "allowed_movement_type_ids": [
+        "weaken-edge",
+        "split-node",
+        "merge-linked-context",
+        "block-claim",
+        "retain-source-bounded-state",
+        "route-to-source-extraction"
+      ],
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "mechanism_group_id": "tme-shelter-interactions-v0",
+      "label": "Tumor microenvironment shelter interactions",
+      "current_coverage_status": "covered-for-v0-navigation",
+      "hypothesis_scope": "microenvironment support context with explicit inference-method limits",
+      "falsification_tests": {
+        "evidence_that_would_weaken": [
+          "cell-interaction inference is review-level or computational-only without source support",
+          "TME signal fails to map to malignant plasma-cell context"
+        ],
+        "evidence_that_would_split": [
+          "immune, stromal, adipocyte, cytokine, and spatial contexts require separate support layers"
+        ],
+        "evidence_that_would_merge": [
+          "primary and review sources align interaction context without implying patient-specific mechanism"
+        ],
+        "evidence_that_would_block": [
+          "TME context becomes microenvironment-targeting recommendation, mechanism ranking, or patient-specific biology"
+        ]
+      },
+      "allowed_movement_type_ids": [
+        "weaken-edge",
+        "split-node",
+        "merge-linked-context",
+        "block-claim",
+        "retain-source-bounded-state",
+        "route-to-source-extraction"
+      ],
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "mechanism_group_id": "subclone-diversity-v0",
+      "label": "Subclone diversity",
+      "current_coverage_status": "covered-for-v0-navigation",
+      "hypothesis_scope": "clone-architecture diversity under genomic method and sampling constraints",
+      "falsification_tests": {
+        "evidence_that_would_weaken": [
+          "subclone diversity differs by platform or sampling frame enough to block comparison",
+          "genomic heterogeneity is not linked to the intended disease context"
+        ],
+        "evidence_that_would_split": [
+          "newly diagnosed, residual, relapse, and first-relapse clone architecture require separate contexts"
+        ],
+        "evidence_that_would_merge": [
+          "sources align clone/subclone method, sampling, disease timing, and uncertainty"
+        ],
+        "evidence_that_would_block": [
+          "subclone diversity becomes prognosis, relapse risk, treatment selection, or mechanism ranking"
+        ]
+      },
+      "allowed_movement_type_ids": [
+        "weaken-edge",
+        "split-node",
+        "merge-linked-context",
+        "block-claim",
+        "retain-source-bounded-state",
+        "route-to-source-extraction"
+      ],
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "mechanism_group_id": "single-cell-translation-gap-v0",
+      "label": "Single-cell translation gap",
+      "current_coverage_status": "covered-for-v0-navigation",
+      "hypothesis_scope": "technology-readiness and implementation context, separate from biology",
+      "falsification_tests": {
+        "evidence_that_would_weaken": [
+          "a source claims clinical readiness without platform, workflow, validation, or implementation context",
+          "translation barriers are too generic for multiple myeloma context"
+        ],
+        "evidence_that_would_split": [
+          "cost, standardization, data complexity, ethics, workflow, and validation require separate readiness blockers"
+        ],
+        "evidence_that_would_merge": [
+          "multiple sources identify the same implementation blocker class with compatible context"
+        ],
+        "evidence_that_would_block": [
+          "translation context becomes test-ordering guidance, platform recommendation, monitoring guidance, or treatment guidance"
+        ]
+      },
+      "allowed_movement_type_ids": [
+        "weaken-edge",
+        "split-node",
+        "merge-linked-context",
+        "block-claim",
+        "retain-source-bounded-state",
+        "route-to-source-extraction"
+      ],
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "mechanism_group_id": "t-cell-therapy-pressure-v0",
+      "label": "T-cell therapy pressure",
+      "current_coverage_status": "covered-for-v0-navigation",
+      "hypothesis_scope": "immune-redirection and therapy-exposure context, not product or sequence advice",
+      "falsification_tests": {
+        "evidence_that_would_weaken": [
+          "immune-state association is not reproducible across product, timing, or response contexts",
+          "therapy-pressure signal cannot be separated from disease burden or sampling frame"
+        ],
+        "evidence_that_would_split": [
+          "BCMA, non-BCMA, CAR T, bispecific, persistence, exhaustion, and niche contexts require separate support layers"
+        ],
+        "evidence_that_would_merge": [
+          "sources align therapy class, target class, response timing, and immune-state language"
+        ],
+        "evidence_that_would_block": [
+          "therapy pressure becomes product comparison, target selection, treatment sequencing, trial fit, or prognosis"
+        ]
+      },
+      "allowed_movement_type_ids": [
+        "weaken-edge",
+        "split-node",
+        "merge-linked-context",
+        "block-claim",
+        "retain-source-bounded-state",
+        "route-to-source-extraction"
+      ],
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "mechanism_group_id": "unmet-high-risk-context-v0",
+      "label": "Unmet high-risk context",
+      "current_coverage_status": "covered-for-v0-navigation",
+      "hypothesis_scope": "high-risk disease-context modifier, not personal risk or treatment fit",
+      "falsification_tests": {
+        "evidence_that_would_weaken": [
+          "high-risk definitions differ enough that sources cannot be compared",
+          "risk context is not tied to source-defined disease timing or genomic method"
+        ],
+        "evidence_that_would_split": [
+          "genomic, functional, extramedullary, plasma-cell leukemia, early-relapse, and treatment-refractory contexts require separate modifiers"
+        ],
+        "evidence_that_would_merge": [
+          "sources align high-risk definition, disease timing, genomic method, and cohort frame"
+        ],
+        "evidence_that_would_block": [
+          "high-risk context becomes personal prognosis, eligibility, treatment selection, transplant fit, trial fit, or monitoring guidance"
+        ]
+      },
+      "allowed_movement_type_ids": [
+        "weaken-edge",
+        "split-node",
+        "merge-linked-context",
+        "block-claim",
+        "retain-source-bounded-state",
+        "route-to-source-extraction"
+      ],
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created for Phase 6 falsification and hypothesis generation.",
+      "Every current MRD geometry bucket has a falsification row.",
+      "The matrix does not upgrade any claim beyond research-map navigation."
+    ]
+  }
+}

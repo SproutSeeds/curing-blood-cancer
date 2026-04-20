@@ -1,0 +1,311 @@
+{
+  "ledger_id": "mrd-geometry-hypothesis-candidate-ledger-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Geometry Hypothesis Candidate Ledger v0",
+  "clinical_use_boundary": "research-use-only",
+  "parent_phase_plan_id": "mrd-resistance-geometry-phase-plan-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways",
+    "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+    "pubmed_samur_2023_single_cell_profiling_myeloma",
+    "pubmed_high_risk_genomic_consensus_validation_2026"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "besliu-2025-treatment-landscape-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "wang-2025-lipid-metabolism-geometry-v0",
+    "lu-2024-signaling-pathways-geometry-v0",
+    "bolli-2014-genomic-heterogeneity-geometry-v0",
+    "ledergor-2024-car-t-pressure-geometry-v0",
+    "samur-2023-single-cell-profiling-translation-geometry-v0",
+    "schavgoulidze-2026-high-risk-genomic-validation-geometry-v0"
+  ],
+  "hypothesis_generation_rule": "Hypotheses are structural research candidates only. They must name falsification conditions, transition links, required next evidence, and prohibited inferences.",
+  "hypotheses": [
+    {
+      "hypothesis_id": "residual-metabolic-clone-context-hypothesis-v0",
+      "title": "Residual metabolic-state context may matter most when clone architecture and therapy exposure are preserved together.",
+      "mechanism_group_ids": [
+        "metabolic-resistance-state-v0",
+        "subclone-diversity-v0",
+        "genetic-nongenetic-coupling-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_wang_2025_lipid_metabolism_myeloma",
+        "pubmed_bolli_2014_genomic_heterogeneity_myeloma"
+      ],
+      "falsification_conditions": [
+        "metabolic state does not co-vary with clone architecture in aligned source frames",
+        "metabolic context remains review-level without residual-cell support"
+      ],
+      "transition_model_links": [
+        "weaken-edge",
+        "split-node",
+        "route-to-source-extraction"
+      ],
+      "status": "candidate-research-hypothesis-only",
+      "claim_level": "open-question",
+      "required_next_evidence": [
+        "source-specific extraction",
+        "aligned method context",
+        "contradiction review",
+        "blocked-output audit"
+      ],
+      "prohibited_inferences": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "hypothesis_id": "therapy-pressure-immune-state-timing-hypothesis-v0",
+      "title": "Therapy-pressure context may require post-infusion timing before immune-state signals can be compared.",
+      "mechanism_group_ids": [
+        "t-cell-therapy-pressure-v0"
+      ],
+      "source_ids": [
+        "pubmed_besliu_2025_evolving_landscape_myeloma",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "falsification_conditions": [
+        "immune-state association disappears after timing or product context is preserved",
+        "therapy-pressure language cannot be separated from response group definition"
+      ],
+      "transition_model_links": [
+        "split-node",
+        "retain-source-bounded-state",
+        "block-claim"
+      ],
+      "status": "candidate-research-hypothesis-only",
+      "claim_level": "open-question",
+      "required_next_evidence": [
+        "source-specific extraction",
+        "aligned method context",
+        "contradiction review",
+        "blocked-output audit"
+      ],
+      "prohibited_inferences": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "hypothesis_id": "high-risk-context-modifier-hypothesis-v0",
+      "title": "High-risk genomic context should modify interpretation needs without becoming a patient-level prognosis or treatment selector.",
+      "mechanism_group_ids": [
+        "unmet-high-risk-context-v0"
+      ],
+      "source_ids": [
+        "pubmed_besliu_2025_evolving_landscape_myeloma",
+        "pubmed_high_risk_genomic_consensus_validation_2026"
+      ],
+      "falsification_conditions": [
+        "high-risk definitions diverge across sources",
+        "disease timing or genomic method is missing"
+      ],
+      "transition_model_links": [
+        "split-node",
+        "route-to-source-extraction",
+        "block-claim"
+      ],
+      "status": "candidate-research-hypothesis-only",
+      "claim_level": "open-question",
+      "required_next_evidence": [
+        "source-specific extraction",
+        "aligned method context",
+        "contradiction review",
+        "blocked-output audit"
+      ],
+      "prohibited_inferences": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "hypothesis_id": "single-cell-readiness-is-separate-from-biology-hypothesis-v0",
+      "title": "Single-cell translation readiness should remain a tooling layer rather than a biological mechanism.",
+      "mechanism_group_ids": [
+        "single-cell-translation-gap-v0"
+      ],
+      "source_ids": [
+        "pubmed_li_2025_single_cell_myeloma_review",
+        "pubmed_samur_2023_single_cell_profiling_myeloma"
+      ],
+      "falsification_conditions": [
+        "a source treats platform readiness as biological evidence without implementation context",
+        "cost, data complexity, ethics, and workflow barriers require separate blockers"
+      ],
+      "transition_model_links": [
+        "split-node",
+        "retain-source-bounded-state",
+        "block-claim"
+      ],
+      "status": "candidate-research-hypothesis-only",
+      "claim_level": "open-question",
+      "required_next_evidence": [
+        "source-specific extraction",
+        "aligned method context",
+        "contradiction review",
+        "blocked-output audit"
+      ],
+      "prohibited_inferences": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "hypothesis_id": "measurement-trajectory-discordance-hypothesis-v0",
+      "title": "MRD trajectory discordance may be a source-frame warning rather than a biological movement.",
+      "mechanism_group_ids": [
+        "mrd-trajectory-split-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics"
+      ],
+      "falsification_conditions": [
+        "assay, threshold, specimen, and timing are aligned and discordance persists",
+        "trajectory labels become interchangeable only after method context is preserved"
+      ],
+      "transition_model_links": [
+        "weaken-edge",
+        "split-node",
+        "route-to-source-extraction"
+      ],
+      "status": "candidate-research-hypothesis-only",
+      "claim_level": "open-question",
+      "required_next_evidence": [
+        "source-specific extraction",
+        "aligned method context",
+        "contradiction review",
+        "blocked-output audit"
+      ],
+      "prohibited_inferences": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    },
+    {
+      "hypothesis_id": "pathway-state-actionability-block-hypothesis-v0",
+      "title": "Pathway-state labels should generate falsification questions before any target or intervention language is allowed.",
+      "mechanism_group_ids": [
+        "metabolic-resistance-state-v0",
+        "nfkb-selective-state-v0",
+        "residual-transcriptional-adaptation-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_wang_2025_lipid_metabolism_myeloma",
+        "pubmed_lu_2024_myeloma_signaling_pathways"
+      ],
+      "falsification_conditions": [
+        "pathway context remains review-level",
+        "source-specific pathway labels conflict by method or cell context"
+      ],
+      "transition_model_links": [
+        "block-claim",
+        "weaken-edge",
+        "split-node"
+      ],
+      "status": "candidate-research-hypothesis-only",
+      "claim_level": "open-question",
+      "required_next_evidence": [
+        "source-specific extraction",
+        "aligned method context",
+        "contradiction review",
+        "blocked-output audit"
+      ],
+      "prohibited_inferences": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created for Phase 6 falsification and hypothesis generation.",
+      "Every hypothesis is explicitly research-only and nonclinical.",
+      "Hypotheses route to falsification and extraction, not advice or cure claims."
+    ]
+  }
+}

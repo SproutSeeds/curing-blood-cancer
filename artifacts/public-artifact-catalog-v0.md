@@ -24,7 +24,10 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Machine Representation Source Extraction v0 | dataset | open-question | [disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md](../disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md) |
 | Machine Representation Source-Gap Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md) |
 | MRD And Relapse Measurement Glossary v0 | dataset | derived | [disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md](../disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md) |
+| MRD Geometry Benchmark Fixtures v0 | dataset | open-question | [examples/mrd-geometry-benchmark-fixtures-v0.json](../examples/mrd-geometry-benchmark-fixtures-v0.json) |
 | MRD Geometry Claim Upgrade Blocker Ledger v0 | dataset | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-geometry-claim-upgrade-blocker-ledger-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-claim-upgrade-blocker-ledger-v0.md) |
+| MRD Geometry Falsification Matrix v0 | dataset | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-geometry-falsification-matrix-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-falsification-matrix-v0.md) |
+| MRD Geometry Hypothesis Candidate Ledger v0 | dataset | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.md) |
 | MRD Geometry Negative Safety Fixtures v0 | dataset | open-question | [examples/mrd-geometry-negative-safety-fixtures-v0.json](../examples/mrd-geometry-negative-safety-fixtures-v0.json) |
 | MRD Resistance Geometry Contradiction Mining Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-contradiction-mining-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-contradiction-mining-task-queue-v0.md) |
 | MRD Resistance Geometry Coverage Report v0 | dataset | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.md) |
@@ -55,6 +58,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Curing Blood Cancer Concept Map v0 | map | derived | [artifacts/curing-blood-cancer-concept-map-v0.md](../artifacts/curing-blood-cancer-concept-map-v0.md) |
 | High-Risk, Extramedullary, Organ, And Frailty Context Modifier Map v0 | map | open-question | [disease-programs/multiple-myeloma/contexts/high-risk-organ-frailty-context-modifier-map-v0.md](../disease-programs/multiple-myeloma/contexts/high-risk-organ-frailty-context-modifier-map-v0.md) |
 | Immune Therapy Sequencing And Access Boundary v0 | map | open-question | [disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md](../disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md) |
+| MRD Geometry Transition Model v0 | map | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.md) |
 | MRD Resistance Geometry Axis Revision v0 | map | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-v0.md) |
 | MRD Resistance Geometry Pilot v0 | map | derived | [disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.md) |
 | Multiple Myeloma Durable MRD-Negative Remission Cure Wedge v0 | map | open-question | [disease-programs/multiple-myeloma/cure-wedge-durable-mrd-negative-remission-v0.md](../disease-programs/multiple-myeloma/cure-wedge-durable-mrd-negative-remission-v0.md) |
@@ -151,6 +155,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 
 | Artifact | Class | Claim Level | Path |
 | --- | --- | --- | --- |
+| MRD Geometry Falsification Check v0 | tool | open-question | [tools/check_mrd_geometry_falsification.py](../tools/check_mrd_geometry_falsification.py) |
 | MRD Geometry Proof Invariant Check v0 | tool | open-question | [tools/check_mrd_geometry_proof_invariants.py](../tools/check_mrd_geometry_proof_invariants.py) |
 | MRD Geometry State Diff Tool v0 | tool | open-question | [tools/diff_mrd_geometry_state.py](../tools/diff_mrd_geometry_state.py) |
 | Review-Packet Manifest Route-Table Dry-Run Tool v0 | tool | open-question | [tools/review_packet_manifest_route_table.py](../tools/review_packet_manifest_route_table.py) |

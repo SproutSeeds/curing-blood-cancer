@@ -14,7 +14,9 @@
     "pubmed_wang_2025_lipid_metabolism_myeloma",
     "pubmed_lu_2024_myeloma_signaling_pathways",
     "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
-    "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion",
+    "pubmed_samur_2023_single_cell_profiling_myeloma",
+    "pubmed_high_risk_genomic_consensus_validation_2026"
   ],
   "extraction_record_ids": [
     "cui-2024-mrd-clonal-evolution-geometry-v0",
@@ -25,7 +27,9 @@
     "wang-2025-lipid-metabolism-geometry-v0",
     "lu-2024-signaling-pathways-geometry-v0",
     "bolli-2014-genomic-heterogeneity-geometry-v0",
-    "ledergor-2024-car-t-pressure-geometry-v0"
+    "ledergor-2024-car-t-pressure-geometry-v0",
+    "samur-2023-single-cell-profiling-translation-geometry-v0",
+    "schavgoulidze-2026-high-risk-genomic-validation-geometry-v0"
   ],
   "task_queue_ids": [
     "mrd-resistance-geometry-second-source-task-queue-v0",
@@ -230,6 +234,43 @@
         "The claim-upgrade blocker ledger keeps actionability, prognosis, sequencing, clinical validation, and cure claims blocked.",
         "No clinical, ranking, patient-matching, treatment, monitoring, trial, or cure output is introduced."
       ]
+    },
+    {
+      "phase_id": "phase-6-falsification-and-hypothesis-generation-v0",
+      "phase_title": "Phase 6: falsification and hypothesis generation",
+      "status": "complete-for-falsification-v0",
+      "purpose": "Close remaining second-source gaps and turn the geometry into a falsifiable research-hypothesis engine without upgrading any clinical claim.",
+      "public_outputs": [
+        "samur-2023-single-cell-profiling-translation-geometry-v0",
+        "schavgoulidze-2026-high-risk-genomic-validation-geometry-v0",
+        "mrd-geometry-falsification-matrix-v0",
+        "mrd-geometry-hypothesis-candidate-ledger-v0",
+        "mrd-geometry-transition-model-v0",
+        "mrd-geometry-benchmark-fixtures-v0",
+        "mrd-geometry-falsification-check-v0",
+        "mrd-resistance-geometry-coverage-v0",
+        "mrd-resistance-geometry-second-source-task-queue-v0"
+      ],
+      "completion_gate": [
+        "Close single-cell-translation-gap-v0 with a second public source extraction.",
+        "Close unmet-high-risk-context-v0 with a second public source extraction.",
+        "Create a falsification matrix covering every geometry bucket.",
+        "Create a hypothesis candidate ledger with falsification conditions and prohibited inferences.",
+        "Create a transition model defining allowed structural movements and forbidden clinical transitions.",
+        "Create benchmark fixtures for coverage movement, weakening, claim blocking, and source-bounded retention.",
+        "Create a checker that verifies full bucket coverage, falsification coverage, transition links, benchmark safety, and research-only hypotheses.",
+        "Preserve research-use-only, non-advice, non-ranking, no-human-outreach, and no-cure boundaries."
+      ],
+      "completion_result": [
+        "All ten MRD geometry buckets now have at least two public extraction records for v0 navigation.",
+        "Single-cell translation readiness remains a tooling and implementation layer, not a clinical testing recommendation.",
+        "Unmet high-risk context remains a disease-context modifier, not patient-specific prognosis or treatment fit.",
+        "Every bucket has explicit falsification tests for weakening, splitting, merging, and claim blocking.",
+        "The hypothesis ledger generates research-only candidate hypotheses linked to falsification and transition rules.",
+        "The transition model defines allowed structural movements and forbidden clinical transitions.",
+        "Benchmark fixtures test expected transitions without real case data.",
+        "The falsification checker passes only if hypotheses and fixtures remain nonclinical and fail closed."
+      ]
     }
   ],
   "safety_boundary": [
@@ -254,7 +295,8 @@
       "Phase 3 is complete for v0 through mrd-resistance-geometry-axis-revision-v0 and myeloma-residual-state-object-v0.",
       "Phase 4 is complete for proof-readiness-v0 through contradiction notes, review-level pathway second-source extractions, movement ledger, public-source fixture, and invariant checker.",
       "Phase 5 is complete for discrimination-v0 through residual-state contradiction mining, subclone and T-cell pressure second-source extraction, negative safety fixtures, a state diff tool, and a claim-upgrade blocker ledger.",
-      "External human outreach is intentionally skipped; claim upgrades stay blocked by source-trace, contradiction, and boundary-audit gates.",
+      "Phase 6 is complete for falsification-v0 through final second-source gap closure, falsification matrix, hypothesis ledger, transition model, benchmark fixtures, and falsification checker.",
+      "External human outreach is intentionally skipped; claim upgrades stay blocked by source-trace, contradiction, falsification, transition, and boundary-audit gates.",
       "All phase gates preserve research-only, non-advice boundaries."
     ]
   }
