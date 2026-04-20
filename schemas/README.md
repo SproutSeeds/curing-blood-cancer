@@ -28,6 +28,7 @@ without weakening the repo's safety boundaries.
 - [Open-Question Record Schema v0](./open-question-record-schema-v0.md)
 - [Review-Packet Builder Manifest Schema v0](./review-packet-builder-manifest-schema-v0.md)
 - [Review-Packet Route-Table Output Schema v0](./review-packet-route-table-output-schema-v0.md)
+- [Measurement Refusal Output Schema v0](./measurement-refusal-output-schema-v0.md)
 
 ## Templates And Examples
 

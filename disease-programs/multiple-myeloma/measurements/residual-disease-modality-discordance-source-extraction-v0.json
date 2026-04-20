@@ -248,7 +248,7 @@
   "handoff": {
     "status": "complete-public-source-extraction-table",
     "active_blocker_remains": "machine-representation-expert-validation-human-authorization-blocker-v0",
-    "recommended_next_no_outreach_successor": "measurement-refusal-output-schema-v0",
+    "recommended_next_no_outreach_successor": "measurement-refusal-output-route-table-v0",
     "blocked_until_human_authorization": [
       "expert-validation-execution",
       "outreach",
@@ -259,8 +259,8 @@
       "claim-upgrade",
       "publication"
     ],
-    "completed_successor": "measurement-state-refusal-fixture-extension-v0",
-    "next_no_outreach_successor_if_selected": "measurement-refusal-output-schema-v0",
-    "summary": "Residual-disease modality discordance extraction is complete; assay/specimen quality failure-mode checklist and measurement-state refusal fixtures now cover method, threshold, specimen, timing, paired-modality, imaging, spatial, host-context, private-review, and modality-collapse refusal states."
+    "completed_successor": "measurement-refusal-output-schema-v0",
+    "next_no_outreach_successor_if_selected": "measurement-refusal-output-route-table-v0",
+    "summary": "Residual-disease modality discordance extraction is complete; assay/specimen quality failure-mode checklist, measurement-state refusal fixtures, and measurement-refusal output schema now cover method, threshold, specimen, timing, paired-modality, imaging, spatial, host-context, private-review, and modality-collapse refusal states as refused synthetic output records."
   }
 }

@@ -96,6 +96,21 @@
       "label": "Measurement State Refusal Fixtures v0",
       "url": "../../../examples/measurement-state-refusal-fixtures-v0.json",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Output Schema v0",
+      "url": "../../../schemas/measurement-refusal-output-schema-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Output Fixture v0",
+      "url": "../../../examples/measurement-refusal-output-fixture-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Output Schema Check v0",
+      "url": "../../../tools/check_measurement_refusal_output_schema.py",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

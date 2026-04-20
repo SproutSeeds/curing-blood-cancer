@@ -183,11 +183,15 @@ monitoring, treatment, ranking, matching, real-report review, lab-validity
 conclusion, imaging interpretation, biopsy interpretation, and cure claims
 remain blocked.
 
+[Measurement Refusal Output Schema v0](../../../schemas/measurement-refusal-output-schema-v0.md)
+now completes the next output-contract layer. Its synthetic output fixture maps
+each refusal fixture to one refused record with the same assay/specimen quality
+state, complete blocked downstream uses, and no interpretive text.
+
 The safest next public step is therefore
-`therapy-exposure-timeline-contract-v0`: a shape-only contract for prior
-therapies, exposure classes, line or timing context, response linkage, toxicity
-or constraint labels, source status, timepoint buckets, and limitations without
-sequencing advice or ranking.
+`measurement-refusal-output-route-table-v0`: a shape-only routing table for
+moving refused measurement-state records into future validators or wrappers
+without producing interpretation, advice, ranking, or clinical meaning.
 
 ## Handoff State
 
@@ -206,16 +210,13 @@ The following remain blocked outside this artifact:
 - publication of case-derived measurement learning without privacy, clinician,
   source, and publication gates
 
-ORP should mark this item complete and activate
-`therapy-exposure-timeline-contract-v0` next.
-
 A later residual-disease modality-discordance update and assay/specimen quality
 checklist extend this complete shape contract without clearing any human gate.
-The later measurement-state refusal fixtures make those extensions
-machine-checkable for synthetic inputs only.
+The later measurement-state refusal fixtures and measurement-refusal output
+schema make those extensions machine-checkable for synthetic inputs only.
 ORP should keep
 `machine-representation-expert-validation-human-authorization-blocker-v0`
-active while treating `measurement-refusal-output-schema-v0` as the next
+active while treating `measurement-refusal-output-route-table-v0` as the next
 no-outreach public-source successor if selected.
 
 ## Public Safety Check

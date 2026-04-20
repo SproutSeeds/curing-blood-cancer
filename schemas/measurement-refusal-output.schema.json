@@ -1,0 +1,338 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/curing-blood-cancer/measurement-refusal-output.schema.json",
+  "title": "Curing Blood Cancer Measurement Refusal Output",
+  "type": "object",
+  "required": [
+    "measurement_refusal_output_set_id",
+    "schema_id",
+    "title",
+    "disease_program",
+    "fixture_status",
+    "clinical_use_boundary",
+    "data_boundary",
+    "source_fixture_set_id",
+    "shared_blocked_downstream_uses",
+    "outputs",
+    "forbidden_output_fields",
+    "do_not_infer",
+    "handoff"
+  ],
+  "properties": {
+    "measurement_refusal_output_set_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-v[0-9]+$"
+    },
+    "schema_id": {
+      "type": "string",
+      "enum": [
+        "measurement-refusal-output-schema-v0"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disease_program": {
+      "type": "string",
+      "enum": [
+        "multiple-myeloma"
+      ]
+    },
+    "fixture_status": {
+      "type": "string",
+      "enum": [
+        "synthetic-only-public-v0"
+      ]
+    },
+    "clinical_use_boundary": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "not-medical-advice",
+          "not-diagnostic",
+          "not-treatment-recommendation",
+          "not-trial-recommendation",
+          "research-use-only"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "data_boundary": {
+      "type": "object",
+      "required": [
+        "uses_real_case_data",
+        "contains_identifiers",
+        "contains_raw_records",
+        "contains_uploads",
+        "contains_exact_person_linked_dates",
+        "contains_free_text_case_details",
+        "contains_private_correspondence",
+        "contains_model_weights",
+        "contains_predictions",
+        "contains_recommendations",
+        "contains_matching_or_ranking",
+        "contains_clinical_decisions"
+      ],
+      "properties": {
+        "uses_real_case_data": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_identifiers": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_raw_records": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_uploads": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_exact_person_linked_dates": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_free_text_case_details": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_private_correspondence": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_model_weights": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_predictions": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_recommendations": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_matching_or_ranking": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "contains_clinical_decisions": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_fixture_set_id": {
+      "type": "string",
+      "enum": [
+        "measurement-state-refusal-fixtures-v0"
+      ]
+    },
+    "shared_blocked_downstream_uses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "output_id",
+          "source_fixture_id",
+          "source_checklist_row_id",
+          "output_family",
+          "output_status",
+          "clinical_use_boundary",
+          "wrapper_state",
+          "assay_specimen_quality_state",
+          "refusal_reason",
+          "public_processing_allowed",
+          "comparison_allowed",
+          "clinical_output_allowed",
+          "limitation_note_required",
+          "no_interpretive_text",
+          "blocked_downstream_uses"
+        ],
+        "properties": {
+          "output_id": {
+            "type": "string",
+            "pattern": "^mro_[a-z0-9_]+_v0$"
+          },
+          "source_fixture_id": {
+            "type": "string",
+            "pattern": "^msrf_[0-9]{2}_[a-z0-9_]+_v0$"
+          },
+          "source_checklist_row_id": {
+            "type": "string",
+            "pattern": "^asq_[0-9]{2}_[a-z0-9_]+$"
+          },
+          "output_family": {
+            "type": "string",
+            "enum": [
+              "measurement_state_refusal"
+            ]
+          },
+          "output_status": {
+            "type": "string",
+            "enum": [
+              "refused"
+            ]
+          },
+          "clinical_use_boundary": {
+            "type": "string",
+            "enum": [
+              "research-use-only"
+            ]
+          },
+          "wrapper_state": {
+            "type": "string",
+            "enum": [
+              "assay_specimen_quality_needed"
+            ]
+          },
+          "assay_specimen_quality_state": {
+            "type": "string",
+            "enum": [
+              "method_family_needed",
+              "threshold_needed",
+              "specimen_quality_needed",
+              "timepoint_alignment_needed",
+              "paired_modality_context_needed",
+              "imaging_context_needed",
+              "spatial_sampling_context_needed",
+              "host_context_not_residual_disease",
+              "private_lab_or_clinical_review_needed",
+              "modality_collapse_blocked"
+            ]
+          },
+          "refusal_reason": {
+            "type": "string",
+            "enum": [
+              "method_family_needed",
+              "threshold_needed",
+              "specimen_quality_needed",
+              "timepoint_alignment_needed",
+              "paired_modality_context_needed",
+              "imaging_context_needed",
+              "spatial_sampling_context_needed",
+              "host_context_not_residual_disease",
+              "private_lab_or_clinical_review_needed",
+              "modality_collapse_blocked"
+            ]
+          },
+          "public_processing_allowed": {
+            "type": "boolean"
+          },
+          "comparison_allowed": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "clinical_output_allowed": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "limitation_note_required": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "no_interpretive_text": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "blocked_downstream_uses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "forbidden_output_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "do_not_infer": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "handoff": {
+      "type": "object",
+      "required": [
+        "completed_phase",
+        "next_no_outreach_successor_if_selected",
+        "human_gate_state",
+        "blocked_actions"
+      ],
+      "properties": {
+        "completed_phase": {
+          "type": "string"
+        },
+        "next_no_outreach_successor_if_selected": {
+          "type": "string"
+        },
+        "human_gate_state": {
+          "type": "string"
+        },
+        "blocked_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
