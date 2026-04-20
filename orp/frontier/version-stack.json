@@ -18,12 +18,13 @@
   "current_frontier": {
     "active_version": "v2",
     "active_milestone": "case-to-cure-adaptive-master-plan-v0",
-    "active_phase": "myeloma-machine-representation-implementation-v0",
+    "active_phase": "machine-representation-expert-validation-execution-v0",
     "band": "exact",
-    "next_action": "Blocked on human gate after machine-representation implementation completion audit: no autonomous public-safe machine-representation implementation item remains until a human selects a new named public-safe phase or clears expert-review, private-lab, clinical-team, model-governance, legal, regulatory, publication, or human-review gates.",
+    "next_action": "MRD resistance geometry falsification v0 was human-selected as a public-safe research-substrate phase and completed in PR #55; the prior machine-representation human gate remains uncleared. Next exact phase is machine-representation-expert-validation-execution-v0, blocked for external outreach and expert review; autonomous work is limited to public-safe issue/status preparation unless a human explicitly authorizes outreach or clears a named gate.",
     "blocked_by": [
       "human-review-needed",
       "expert-review-needed",
+      "external-outreach-not-authorized",
       "private-lab-needed",
       "clinical-team-needed",
       "model-governance-needed",
@@ -545,7 +546,7 @@
             {
               "id": "myeloma-machine-representation-implementation-v0",
               "label": "Myeloma Machine Representation Implementation v0",
-              "status": "active",
+              "status": "complete",
               "goal": "Turn the myeloma machine representation architecture into synthetic-only, public-safe schema and fixture artifacts without model weights, real case data, patient-specific predictions, treatment advice, trial advice, or option ranking.",
               "depends_on": [
                 "myeloma-machine-representation-stack-v0",
@@ -576,7 +577,64 @@
                 "Completed machine-representation-source-extraction-v0 as disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md.",
                 "Completed machine-representation-source-gap-task-queue-v0 as disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md.",
                 "Completed machine-representation-source-gap-issue-draft-packet-v0 as disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md.",
-                "Completed machine-representation-implementation-completion-audit-v0 and activated machine-representation-public-scope-human-gate-blocker-v0 because no autonomous public-safe machine-representation implementation item remains."
+                "Completed machine-representation-implementation-completion-audit-v0 and activated machine-representation-public-scope-human-gate-blocker-v0 because no autonomous public-safe machine-representation implementation item remains.",
+                "Marked complete-human-gated after the completion audit; later MRD geometry work did not clear this gate."
+              ],
+              "compute_hooks": []
+            },
+            {
+              "id": "mrd-resistance-geometry-falsification-v0",
+              "label": "MRD Resistance Geometry Falsification v0",
+              "status": "complete",
+              "goal": "Record the human-selected public-safe MRD resistance geometry falsification lane after the machine-representation human gate, without clearing that gate or creating clinical claims.",
+              "depends_on": [
+                "machine-representation-public-scope-human-gate-blocker-v0",
+                "mrd-resistance-geometry-phase-plan-v0"
+              ],
+              "requirements": [
+                "Use public sources only and preserve the no-human-outreach execution path.",
+                "Close the remaining MRD geometry second-source coverage gaps without upgrading clinical claims.",
+                "Add falsification matrix, transition model, hypothesis candidate ledger, benchmark fixtures, and invariant checker.",
+                "Do not use real case data, patient-specific interpretation, advice, ranking, outreach, private correspondence, or cure claims."
+              ],
+              "success_criteria": [
+                "All ten MRD geometry buckets have at least two public extraction records for v0 navigation.",
+                "Every geometry bucket has weaken, split, merge, and block tests.",
+                "Candidate hypotheses remain research-only and link to transition rules and prohibited inferences.",
+                "Benchmark fixtures and invariant checks fail closed without real case data.",
+                "The machine-representation human gate remains explicitly unresolved."
+              ],
+              "plans": [
+                "Completed by PR #55 as a public-safe research substrate phase.",
+                "This phase did not clear expert-review, human-review, private-lab, clinical-team, model-governance, legal, regulatory, or publication gates."
+              ],
+              "compute_hooks": [
+                "python3 tools/check_mrd_geometry_falsification.py"
+              ]
+            },
+            {
+              "id": "machine-representation-expert-validation-execution-v0",
+              "label": "Machine Representation Expert Validation Execution v0",
+              "status": "blocked",
+              "goal": "Resume the machine-representation expert-validation lane by opening or tracking public-safe source-gap review issues only after human authorization, while keeping external outreach and expert-review gates explicit.",
+              "depends_on": [
+                "machine-representation-public-scope-human-gate-blocker-v0",
+                "mrd-resistance-geometry-falsification-v0"
+              ],
+              "requirements": [
+                "Do not treat MRD geometry falsification as expert review or human gate clearance.",
+                "Do not send outreach, copy private correspondence, request private material, or publish private responses without explicit human authorization.",
+                "Allowed autonomous preparation is limited to public-safe issue/status tracking, wording pressure tests, and source-gap disposition scaffolding.",
+                "Preserve no advice, no ranking, no patient matching, no clinical validation, and no cure-claim boundaries."
+              ],
+              "success_criteria": [
+                "Human authorization either permits a no-outreach public-safe issue/status execution pass or explicitly keeps the phase blocked.",
+                "Machine-representation source-gap expert-validation items are tracked without private correspondence or clinical claims.",
+                "Any future expert response remains represented as safe public disposition until permission and source context exist."
+              ],
+              "plans": [
+                "Blocked until a human selects the exact no-outreach execution scope or explicitly authorizes outreach.",
+                "MRD geometry falsification outputs can sharpen future review questions but do not replace expert validation."
               ],
               "compute_hooks": []
             }
