@@ -1,0 +1,59 @@
+{
+  "artifact_id": "mrd-geometry-claim-upgrade-blocker-ledger-v0",
+  "title": "MRD Geometry Claim Upgrade Blocker Ledger v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "therapy resistance",
+    "claim boundary",
+    "geometry proof",
+    "no human outreach"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "MRD Resistance Geometry Phase Plan v0",
+      "url": "mrd-resistance-geometry-phase-plan-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Movement Ledger v0",
+      "url": "mrd-resistance-geometry-movement-ledger-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Residual-State Contradiction Mining Note v0",
+      "url": "residual-state-contradiction-mining-note-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Bolli 2014 genomic heterogeneity source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24429703/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Ledergor 2024 CD4 CAR T exhaustion source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Negative Safety Fixtures v0",
+      "url": "../../../examples/mrd-geometry-negative-safety-fixtures-v0.json",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a monitoring recommendation.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not a patient-specific MRD interpretation.",
+    "Does not rank mechanisms, evidence, therapies, assays, or sources.",
+    "Does not claim clinical validation.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-5-discrimination-v0.md"
+}

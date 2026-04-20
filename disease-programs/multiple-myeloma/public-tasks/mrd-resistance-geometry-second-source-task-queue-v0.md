@@ -30,9 +30,9 @@ Coverage Report into contribution-ready public source-extraction tasks.
 | `genetic-nongenetic-coupling-second-source-extraction-task-v0` | high | done | `non-antigen-loss-relapse-buckets-gap-v0` | `genetic-nongenetic-coupling-v0` |
 | `metabolic-resistance-state-second-source-extraction-task-v0` | medium | done | `non-antigen-loss-relapse-buckets-gap-v0` | `metabolic-resistance-state-v0` |
 | `nfkb-selective-state-second-source-extraction-task-v0` | medium | done | `non-antigen-loss-relapse-buckets-gap-v0` | `nfkb-selective-state-v0` |
-| `subclone-diversity-second-source-extraction-task-v0` | medium | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `subclone-diversity-v0` |
+| `subclone-diversity-second-source-extraction-task-v0` | medium | done | `non-antigen-loss-relapse-buckets-gap-v0` | `subclone-diversity-v0` |
 | `single-cell-translation-gap-second-source-extraction-task-v0` | medium | ready | `expert-review-readiness-gap-v0` | `single-cell-translation-gap-v0` |
-| `t-cell-therapy-pressure-second-source-extraction-task-v0` | medium | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `t-cell-therapy-pressure-v0` |
+| `t-cell-therapy-pressure-second-source-extraction-task-v0` | medium | done | `non-antigen-loss-relapse-buckets-gap-v0` | `t-cell-therapy-pressure-v0` |
 | `unmet-high-risk-context-second-source-extraction-task-v0` | medium | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `unmet-high-risk-context-v0` |
 
 ## Issue Drafts
@@ -56,14 +56,14 @@ Coverage Report into contribution-ready public source-extraction tasks.
 | `genetic-nongenetic-coupling-second-source-extraction-task-v0` | `cohen-2021-resistance-single-cell-geometry-v0` | `genetic-nongenetic-coupling-v0` is now `covered-for-v0-navigation`. |
 | `metabolic-resistance-state-second-source-extraction-task-v0` | `wang-2025-lipid-metabolism-geometry-v0` | `metabolic-resistance-state-v0` is now `covered-for-v0-navigation` as artifact coverage only. |
 | `nfkb-selective-state-second-source-extraction-task-v0` | `lu-2024-signaling-pathways-geometry-v0` | `nfkb-selective-state-v0` is now `covered-for-v0-navigation` as artifact coverage only. |
+| `subclone-diversity-second-source-extraction-task-v0` | `bolli-2014-genomic-heterogeneity-geometry-v0` | `subclone-diversity-v0` is now `covered-for-v0-navigation` as artifact coverage only. |
+| `t-cell-therapy-pressure-second-source-extraction-task-v0` | `ledergor-2024-car-t-pressure-geometry-v0` | `t-cell-therapy-pressure-v0` is now `covered-for-v0-navigation` as artifact coverage only. |
 
 ## Priority Order
 
-1. Therapy pressure and high-risk context, because they protect the map from
-   pretending all relapse settings are comparable.
-2. Subclone diversity, because it tests whether clone architecture needs more
-   explicit branching before internal adversarial review.
-3. Single-cell translation gap, because it keeps research-tooling resolution
+1. Unmet high-risk context, because it protects the map from pretending all
+   relapse settings are comparable.
+2. Single-cell translation gap, because it keeps research-tooling resolution
    separate from clinical readiness.
 
 ## Structured Data
@@ -73,7 +73,7 @@ Coverage Report into contribution-ready public source-extraction tasks.
 
 ## Next Work
 
-- Add source-specific mechanism extractions for therapy pressure, high-risk
-  context, subclone diversity, and the single-cell translation gap.
+- Add source-specific mechanism extractions for unmet high-risk context and the
+  single-cell translation gap.
 - Refresh the MRD Resistance Geometry Coverage Report after each accepted
   extraction.

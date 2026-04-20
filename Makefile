@@ -1,4 +1,4 @@
-.PHONY: help validate list-artifacts list-public-artifacts list-claim-sets list-evidence-gaps list-mechanism-extractions list-mechanism-coverage list-public-tasks list-review-packets review-packet-route-table check-mrd-geometry-proof
+.PHONY: help validate list-artifacts list-public-artifacts list-claim-sets list-evidence-gaps list-mechanism-extractions list-mechanism-coverage list-public-tasks list-review-packets review-packet-route-table check-mrd-geometry-proof diff-mrd-geometry-state
 
 help:
 	@printf '%s\n' 'Available targets:'
@@ -13,6 +13,7 @@ help:
 	@printf '  %-28s %s\n' 'list-review-packets' 'List expert-review packets and review items'
 	@printf '  %-28s %s\n' 'review-packet-route-table' 'Dry-run copied-reference review-packet manifest routing'
 	@printf '  %-28s %s\n' 'check-mrd-geometry-proof' 'Check MRD geometry proof-readiness invariants'
+	@printf '  %-28s %s\n' 'diff-mrd-geometry-state' 'Diff MRD geometry coverage state movement'
 
 validate:
 	python3 tools/validate_public_artifacts.py
@@ -46,3 +47,6 @@ review-packet-route-table:
 
 check-mrd-geometry-proof:
 	python3 tools/check_mrd_geometry_proof_invariants.py $(ARGS)
+
+diff-mrd-geometry-state:
+	python3 tools/diff_mrd_geometry_state.py $(ARGS)

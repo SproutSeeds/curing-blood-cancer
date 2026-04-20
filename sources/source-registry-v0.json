@@ -400,8 +400,8 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
       "accessed": "2026-04-14",
       "blood_cancer_scope": ["multiple myeloma", "BCMA-targeted CAR T-cell therapy", "T-cell exhaustion"],
-      "claim_uses": ["literature-search", "mechanism-map"],
-      "claim_limits": ["Study context and cohort details require paper-level appraisal before strong claims."]
+      "claim_uses": ["literature-search", "mechanism-map", "therapy-pressure-context"],
+      "claim_limits": ["Study context and cohort details require paper-level appraisal before strong claims; not product comparison, therapy sequencing, patient-specific prognosis, or treatment guidance."]
     },
     {
       "source_id": "pubmed_antigen_escape_bcma_directed_2024",
@@ -462,6 +462,16 @@
       "blood_cancer_scope": ["multiple myeloma", "single-cell analysis", "clonal evolution", "tumor microenvironment", "therapy evasion"],
       "claim_uses": ["literature-search", "mechanism-map", "geometry-pilot", "single-cell-context"],
       "claim_limits": ["Review article; use for context and unresolved translation barriers, not clinical implementation claims, treatment guidance, or patient-specific interpretation."]
+    },
+    {
+      "source_id": "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
+      "owner": "PubMed-indexed literature / Nature Communications",
+      "source_type": "open-access research article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24429703/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "clonal heterogeneity", "subclone diversity", "genomic evolution", "mutational profiles"],
+      "claim_uses": ["literature-search", "mechanism-map", "geometry-discrimination", "subclone-context"],
+      "claim_limits": ["Primary genomic evolution study; use for cohort/source-specific subclone-diversity extraction only, not patient-specific prognosis, relapse prediction, treatment selection, or cure claims."]
     },
     {
       "source_id": "pubmed_besliu_2025_evolving_landscape_myeloma",

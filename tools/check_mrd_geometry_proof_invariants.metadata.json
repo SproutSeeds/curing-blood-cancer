@@ -42,6 +42,11 @@
       "label": "Myeloma Residual State Object Public Source Fixture v0",
       "url": "../examples/myeloma-residual-state-object-public-source-fixture-v0.json",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Negative Safety Fixtures v0",
+      "url": "../examples/mrd-geometry-negative-safety-fixtures-v0.json",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

@@ -23,7 +23,9 @@
     "pubmed_martinez_lopez_2020_mrd_dynamics",
     "pubmed_cohen_2021_resistance_single_cell",
     "pubmed_wang_2025_lipid_metabolism_myeloma",
-    "pubmed_lu_2024_myeloma_signaling_pathways"
+    "pubmed_lu_2024_myeloma_signaling_pathways",
+    "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion"
   ],
   "tasks": [
     {
@@ -293,7 +295,7 @@
       "task_title": "Add a second public source extraction for subclone diversity",
       "task_type": "source-extraction-task",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -307,16 +309,18 @@
         "bone-marrow-mrd"
       ],
       "extraction_record_ids": [
-        "li-2025-single-cell-myeloma-geometry-v0"
+        "li-2025-single-cell-myeloma-geometry-v0",
+        "bolli-2014-genomic-heterogeneity-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
-        "pubmed_li_2025_single_cell_myeloma_review"
+        "pubmed_li_2025_single_cell_myeloma_review",
+        "pubmed_bolli_2014_genomic_heterogeneity_myeloma"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/subclone-diversity-second-source-extraction-task-v0.md",
       "public_deliverables": [
-        "One new source-specific mechanism extraction record mapping at least one signal to subclone-diversity-v0.",
-        "A source note preserving clone/subclone measurement method, sample context, and progression or treatment context.",
+        "Completed through bolli-2014-genomic-heterogeneity-geometry-v0: one new primary genomic evolution signal maps to subclone-diversity-v0.",
+        "A source note preserving clone/subclone measurement method, genomic study context, sampling context, and non-prognostic boundary.",
         "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
       ],
       "acceptance_checks": [
@@ -393,7 +397,7 @@
       "task_title": "Add a second public source extraction for T-cell therapy pressure",
       "task_type": "source-extraction-task",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -409,21 +413,23 @@
         "relapse-or-disease-progression"
       ],
       "extraction_record_ids": [
-        "besliu-2025-treatment-landscape-geometry-v0"
+        "besliu-2025-treatment-landscape-geometry-v0",
+        "ledergor-2024-car-t-pressure-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
-        "pubmed_besliu_2025_evolving_landscape_myeloma"
+        "pubmed_besliu_2025_evolving_landscape_myeloma",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/t-cell-therapy-pressure-second-source-extraction-task-v0.md",
       "public_deliverables": [
-        "One new source-specific mechanism extraction record mapping at least one signal to t-cell-therapy-pressure-v0.",
-        "A source note preserving therapy class, target class, relapse setting, prior exposure, and sequencing uncertainty.",
+        "Completed through ledergor-2024-car-t-pressure-geometry-v0: one new observational immune-state signal maps to t-cell-therapy-pressure-v0.",
+        "A source note preserving therapy class, target class, response context, post-infusion timing, and sequencing uncertainty.",
         "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
       ],
       "acceptance_checks": [
         "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
-        "The selected source supports T-cell-directed therapy pressure, target sequence, or immune-redirection context.",
+        "The selected source supports T-cell-directed therapy pressure, immune-redirection context, or post-CAR T immune-state context.",
         "Product and target statements remain descriptive and are not converted into treatment comparisons.",
         "Trial or regulatory context is not treated as efficacy, eligibility, availability, or safety guidance."
       ],
@@ -499,8 +505,10 @@
       "Built from mrd-resistance-geometry-coverage-v0.",
       "The MRD trajectory second-source task is done through martinez-lopez-2020-mrd-dynamics-geometry-v0.",
       "The residual transcriptional adaptation and genetic/nongenetic coupling tasks are done through cohen-2021-resistance-single-cell-geometry-v0.",
-      "Four ready tasks remain for second-source extraction across under-covered geometry nodes.",
       "The metabolic and NF-kB second-source tasks are done through review-level Phase 4 proof extractions; both remain non-actionable navigation coverage only.",
+      "The subclone diversity task is done through bolli-2014-genomic-heterogeneity-geometry-v0.",
+      "The T-cell therapy pressure task is done through ledergor-2024-car-t-pressure-geometry-v0.",
+      "Two ready tasks remain for second-source extraction across under-covered geometry nodes.",
       "Task source_ids include pubmed as a discovery anchor where a second source has not yet been selected.",
       "No external human outreach is required for remaining tasks; source extraction feeds internal adversarial intelligence audit."
     ]

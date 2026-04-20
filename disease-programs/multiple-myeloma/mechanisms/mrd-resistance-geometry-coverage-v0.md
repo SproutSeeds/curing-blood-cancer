@@ -6,7 +6,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - parent map: `mrd-resistance-geometry-pilot-v0`
 - linked gaps: `non-antigen-loss-relapse-buckets-gap-v0`, `expert-review-readiness-gap-v0`
 - clinical boundary: research-use-only, not medical advice
-- last reviewed: `2026-04-19`
+- last reviewed: `2026-04-20`
 
 ## Purpose
 
@@ -40,26 +40,26 @@ or educational claims yet.
 | NF-kB selective state | 2 | 2 | covered-for-v0-navigation | Use for navigation only; do not infer target selection, pathway ranking, prognosis, or actionability meaning from counts. |
 | Genetic and nongenetic coupling | 2 | 2 | covered-for-v0-navigation | Use for navigation only; keep clone identity and transcriptional state as separate linked fields. |
 | Tumor microenvironment shelter interactions | 2 | 2 | covered-for-v0-navigation | Use for navigation only; do not rank biological importance from counts. |
-| Subclone diversity | 1 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
+| Subclone diversity | 2 | 2 | covered-for-v0-navigation | Use for navigation only; do not infer prognosis, relapse risk, treatment choice, or mechanism ranking from counts. |
 | Single-cell translation gap | 1 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
-| T-cell therapy pressure | 1 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
+| T-cell therapy pressure | 2 | 2 | covered-for-v0-navigation | Use for navigation only; do not infer product comparison, target selection, treatment sequencing, patient-specific therapy fit, or trial fit. |
 | Unmet high-risk context | 1 | 1 | needs-second-source-extraction | Add at least one additional public source extraction before comparison. |
 
 ## Summary
 
 - Mechanism buckets: `10`
-- Current source-specific extraction records: `7`
-- Current extracted signals: `16`
+- Current source-specific extraction records: `9`
+- Current extracted signals: `18`
 - Buckets needing first extraction: `0`
-- Buckets needing second-source extraction: `4`
-- Buckets covered for v0 navigation: `6`
+- Buckets needing second-source extraction: `2`
+- Buckets covered for v0 navigation: `8`
 
 ## What The Report Says
 
 The geometry pilot now has a first extraction for every bucket. That is enough
 to navigate the map, but not enough to compare most nodes.
 
-Six buckets currently have at least two extraction records:
+Eight buckets currently have at least two extraction records:
 
 | Bucket | Current Extraction Records |
 | --- | --- |
@@ -69,6 +69,8 @@ Six buckets currently have at least two extraction records:
 | `nfkb-selective-state-v0` | `cui-2024-mrd-clonal-evolution-geometry-v0`; `lu-2024-signaling-pathways-geometry-v0` |
 | `genetic-nongenetic-coupling-v0` | `cui-2024-mrd-clonal-evolution-geometry-v0`; `cohen-2021-resistance-single-cell-geometry-v0` |
 | `tme-shelter-interactions-v0` | `cui-2024-mrd-clonal-evolution-geometry-v0`; `li-2025-single-cell-myeloma-geometry-v0` |
+| `subclone-diversity-v0` | `li-2025-single-cell-myeloma-geometry-v0`; `bolli-2014-genomic-heterogeneity-geometry-v0` |
+| `t-cell-therapy-pressure-v0` | `besliu-2025-treatment-landscape-geometry-v0`; `ledergor-2024-car-t-pressure-geometry-v0` |
 
 That does not mean these nodes are more important than other nodes. It means
 they currently have the cleanest public artifact coverage.
@@ -77,24 +79,21 @@ they currently have the cleanest public artifact coverage.
 
 The following buckets need second-source extraction before comparison:
 
-- `subclone-diversity-v0`
 - `single-cell-translation-gap-v0`
-- `t-cell-therapy-pressure-v0`
 - `unmet-high-risk-context-v0`
 
 ## Next Extraction Needs
 
-The metabolic and NF-kB second-source records are now complete for v0
-navigation only. The review-level second sources do not upgrade either pathway
-branch into actionability, biomarker, treatment, or target evidence.
+The metabolic, NF-kB, subclone-diversity, and T-cell therapy pressure
+second-source records are now complete for v0 navigation only. These records do
+not upgrade any pathway, clone, therapy, biomarker, prognosis, treatment, target,
+or sequence claim.
 
 Prioritize the remaining second-source records in this order:
 
-1. Therapy pressure and high-risk context, because they protect the map from
-   pretending all relapse settings are comparable.
-2. Subclone diversity, because it tests whether clone architecture needs more
-   explicit branching before internal adversarial review.
-3. Single-cell translation gap, because it keeps the research-tooling layer
+1. Unmet high-risk context, because it protects the map from pretending all
+   relapse settings are comparable.
+2. Single-cell translation gap, because it keeps the research-tooling layer
    separate from clinical readiness.
 
 ## Structured Data

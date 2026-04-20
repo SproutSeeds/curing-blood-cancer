@@ -149,9 +149,13 @@ research directions deserve structured public tracking.
 - [MRD Resistance Geometry Proof Plan v0](mechanisms/mrd-resistance-geometry-proof-plan-v0.md)
 - [MRD Trajectory Contradiction Mining Note v0](mechanisms/mrd-trajectory-contradiction-mining-note-v0.md)
 - [Clone-State Coupling Contradiction Mining Note v0](mechanisms/clone-state-coupling-contradiction-mining-note-v0.md)
+- [Residual-State Contradiction Mining Note v0](mechanisms/residual-state-contradiction-mining-note-v0.md)
 - [MRD Resistance Geometry Movement Ledger v0](mechanisms/mrd-resistance-geometry-movement-ledger-v0.md)
+- [MRD Geometry Claim Upgrade Blocker Ledger v0](mechanisms/mrd-geometry-claim-upgrade-blocker-ledger-v0.md)
 - [Myeloma Residual State Object Public Source Fixture v0](../../examples/myeloma-residual-state-object-public-source-fixture-v0.json)
+- [MRD Geometry Negative Safety Fixtures v0](../../examples/mrd-geometry-negative-safety-fixtures-v0.json)
 - [MRD Geometry Proof Invariant Check v0](../../tools/check_mrd_geometry_proof_invariants.py)
+- [MRD Geometry State Diff Tool v0](../../tools/diff_mrd_geometry_state.py)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
 - [Post-CAR T Relapse Mechanism Coverage Report v0](mechanisms/post-car-t-relapse-mechanism-coverage-v0.md)
@@ -175,3 +179,7 @@ research directions deserve structured public tracking.
 - `pubmed_cohen_2021_resistance_single_cell`
 - `pubmed_li_2025_single_cell_myeloma_review`
 - `pubmed_besliu_2025_evolving_landscape_myeloma`
+- `pubmed_wang_2025_lipid_metabolism_myeloma`
+- `pubmed_lu_2024_myeloma_signaling_pathways`
+- `pubmed_bolli_2014_genomic_heterogeneity_myeloma`
+- `pubmed_ledergor_2024_cd4_car_t_exhaustion`

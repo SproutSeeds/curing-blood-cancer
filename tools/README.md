@@ -173,3 +173,31 @@ make check-mrd-geometry-proof ARGS="--json"
 The tool checks research-structure invariants only. It does not validate
 clinical utility, rank mechanisms, interpret MRD, recommend therapy, match a
 patient, or claim a cure.
+
+### MRD Geometry State Diff
+
+Run:
+
+```bash
+python3 tools/diff_mrd_geometry_state.py
+```
+
+Or:
+
+```bash
+make diff-mrd-geometry-state
+```
+
+The state diff compares the current MRD resistance geometry coverage report
+against a prior report or, by default, the same path at `HEAD`. It reports
+coverage-status, source, extraction-record, and signal movement as structural
+artifact changes only.
+
+Machine-readable output:
+
+```bash
+make diff-mrd-geometry-state ARGS="--json"
+```
+
+The tool does not validate clinical utility, rank mechanisms, interpret MRD,
+recommend therapy, match a patient, or claim a cure.
