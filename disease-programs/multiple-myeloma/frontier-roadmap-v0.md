@@ -439,10 +439,12 @@ Canonical active artifact:
 - [Synthetic Caregiver Intake v0](../../examples/multiple-myeloma-synthetic-caregiver-intake-v0.json)
 
 The active backlog is the ORP additional list
-`myeloma-machine-representation-implementation-v0`. It exists because the
-caregiver frontend phase reached a smoke-tested static prototype and the next
-public-safe move is to derive synthetic-only machine-state schema plumbing from
-the machine representation stack.
+`post-machine-representation-public-safe-research-substrate-v0`, with active
+item `machine-representation-expert-validation-human-authorization-blocker-v0`.
+It exists because machine-representation implementation, MRD resistance geometry
+falsification, and no-outreach expert-validation prep are complete for their
+named public-safe scopes, while expert-validation execution and outreach remain
+human-gated.
 
 Active loop rule:
 
@@ -527,9 +529,20 @@ human-review, private-lab, clinical-team, model-governance, legal, regulatory,
 publication, or outreach gates.
 
 The current active queue item is
-`machine-representation-expert-validation-execution-v0`, blocked for external
-outreach and expert-review execution unless a human selects the exact
-no-outreach scope, explicitly authorizes outreach, or clears a named gate.
+`machine-representation-expert-validation-human-authorization-blocker-v0`.
+The no-outreach machine-representation source-gap prep is complete, and the
+subsequent internal source-gap extraction added therapy-exposure and
+validation-governance anchors, but actual expert-validation execution,
+external outreach, response intake, issue operations, private-lab work,
+clinical interpretation, publication, and expert-review claim upgrades remain
+blocked unless a human explicitly authorizes scope or selects a new named
+no-outreach public-source phase.
+
+The current direction-check artifact is
+[Multiple Myeloma Frontier Gap Sweep v0](frontier-gap-sweep-v0.md), which
+promotes residual-disease modality discordance, spatial/imaging context,
+blood-based MRD, assay/specimen quality, human fitness/toxicity, and
+transportability/bias as the next obvious public-safe research gaps.
 
 Completion criteria:
 

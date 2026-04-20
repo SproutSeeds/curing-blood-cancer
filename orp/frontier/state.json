@@ -5,7 +5,7 @@
   "active_milestone": "case-to-cure-adaptive-master-plan-v0",
   "active_phase": "machine-representation-expert-validation-human-authorization-blocker-v0",
   "band": "exact",
-  "next_action": "No-outreach execution prep for machine-representation expert validation is complete as machine-representation-expert-validation-no-outreach-execution-packet-v0. It did not open issues, send outreach, ingest responses, or clear expert review. Next exact state is machine-representation-expert-validation-human-authorization-blocker-v0; autonomous work remains limited to a newly named no-outreach public-source extraction phase or public-safe status prep unless a human explicitly authorizes outreach or clears a named gate.",
+  "next_action": "Machine-representation source-gap internal extraction and the ORP frontier gap sweep mode are complete. The sweep recommends residual-disease-modality-discordance-source-extraction-v0 as the next no-outreach public-source phase if selected. Active state remains machine-representation-expert-validation-human-authorization-blocker-v0; actual expert-validation execution, issue operations, outreach, response intake, claim upgrade, clinical interpretation, model-governance clearance, and publication remain blocked unless a human explicitly authorizes scope or selects another named no-outreach public-source phase.",
   "blocked_by": [
     "human-review-needed",
     "expert-review-needed",

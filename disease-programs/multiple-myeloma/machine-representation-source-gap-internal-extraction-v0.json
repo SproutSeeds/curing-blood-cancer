@@ -1,0 +1,126 @@
+{
+  "artifact_id": "machine-representation-source-gap-internal-extraction-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "claim_level": "open-question",
+  "execution_mode": "public-source-internal-extraction-only",
+  "communication_boundary": {
+    "outreach_performed": false,
+    "new_issues_opened": false,
+    "private_correspondence_used": false,
+    "expert_review_claimed": false
+  },
+  "source_ids": [
+    "nci_pdq_myeloma_hp",
+    "nci_cancer_drug_dictionary",
+    "fda_drugs_at_fda",
+    "dailymed",
+    "pubmed_moreau_2021_imwg_rrmm_recommendations",
+    "pubmed_laubach_2016_imwg_relapsed_management",
+    "pubmed_kumar_2016_imwg_mrd_response_criteria",
+    "fda_mrd_cr_endpoint_guidance_2026",
+    "pubmed_tripod_ai_2024_prediction_model_reporting",
+    "pubmed_probast_2019_prediction_model_risk_of_bias",
+    "fda_imdrf_gmlp_guiding_principles_2025",
+    "pmc_decide_ai_2022_early_clinical_eval"
+  ],
+  "row_dispositions": [
+    {
+      "row_id": "mse_05_treatment_exposure_context",
+      "prior_state": "source_context_needed",
+      "new_state": "source_id_mapped_with_scope_gap",
+      "source_ids": [
+        "nci_pdq_myeloma_hp",
+        "nci_cancer_drug_dictionary",
+        "fda_drugs_at_fda",
+        "dailymed",
+        "pubmed_moreau_2021_imwg_rrmm_recommendations",
+        "pubmed_laubach_2016_imwg_relapsed_management",
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "fda_mrd_cr_endpoint_guidance_2026"
+      ],
+      "remaining_blockers": [
+        "no exact exposure interpretation",
+        "no refractory assessment",
+        "no toxicity management",
+        "no treatment sequencing",
+        "no eligibility or access guidance",
+        "no patient-specific response linkage"
+      ]
+    },
+    {
+      "row_id": "mse_09_fusion_model_architecture",
+      "prior_state": "source_context_needed",
+      "new_state": "source_context_needed",
+      "source_ids": [],
+      "remaining_blockers": [
+        "no direct public method anchor accepted for the proposed fusion architecture",
+        "no implementation approval",
+        "no model comparison",
+        "no scoring",
+        "no prediction",
+        "no clinical deployment"
+      ]
+    },
+    {
+      "row_id": "mse_11_training_and_validation_standard",
+      "prior_state": "source_context_needed",
+      "new_state": "source_id_mapped_with_scope_gap",
+      "source_ids": [
+        "pubmed_tripod_ai_2024_prediction_model_reporting",
+        "pubmed_probast_2019_prediction_model_risk_of_bias",
+        "fda_imdrf_gmlp_guiding_principles_2025",
+        "pmc_decide_ai_2022_early_clinical_eval"
+      ],
+      "remaining_blockers": [
+        "no benchmark evidence",
+        "no calibration evidence",
+        "no clinical utility claim",
+        "no deployment readiness",
+        "no publication authorization"
+      ]
+    }
+  ],
+  "task_dispositions": [
+    {
+      "task_id": "mr-therapy-exposure-source-gap-task-v0",
+      "disposition": "done-for-v0-source-anchors"
+    },
+    {
+      "task_id": "mr-fusion-validation-method-source-gap-task-v0",
+      "disposition": "partial-method-governance-mapped"
+    },
+    {
+      "task_id": "mr-output-wrapper-review-question-task-v0",
+      "disposition": "ready-after-source-delta"
+    }
+  ],
+  "blocked_outputs": [
+    "outreach",
+    "issue creation",
+    "expert-review claim",
+    "real case data",
+    "model code",
+    "model validation claim",
+    "clinical utility claim",
+    "diagnosis",
+    "prognosis",
+    "treatment guidance",
+    "trial guidance",
+    "eligibility guidance",
+    "expanded-access guidance",
+    "monitoring guidance",
+    "ranking",
+    "matching",
+    "publication authorization",
+    "cure claim"
+  ],
+  "handoff": {
+    "completed_item": "machine-representation-source-gap-internal-extraction-v0",
+    "active_blocker": "machine-representation-expert-validation-human-authorization-blocker-v0",
+    "recommended_no_outreach_successors": [
+      "machine-representation-fusion-architecture-method-source-extraction-v0",
+      "machine-representation-output-wrapper-boundary-audit-v0"
+    ]
+  }
+}

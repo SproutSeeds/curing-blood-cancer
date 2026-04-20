@@ -95,6 +95,7 @@ The loop should inspect these files at the start of a pass:
 - `artifacts/public-artifact-catalog-v0.json`
 - `orp/frontier/state.json`
 - `orp/frontier/additional-items.json`
+- `orp/modes/frontier-gap-sweep-mode-v0.md`
 - `sources/source-registry-v0.md`
 - `schemas/`
 - `tools/validate_public_artifacts.py`
@@ -108,23 +109,28 @@ completed, validated, and explained in one delegate pass.
 
 1. Work the active ORP additional item in the active ORP additional list,
    currently
-   `machine-representation-expert-validation-execution-v0` inside
+   `machine-representation-expert-validation-human-authorization-blocker-v0`
+   inside
    `post-machine-representation-public-safe-research-substrate-v0`. The
    machine-representation implementation gate remains uncleared; the completed
-   MRD geometry falsification phase is a human-selected public-safe substrate,
-   not expert review or authorization for outreach.
+   MRD geometry falsification phase, no-outreach expert-validation prep, and
+   internal source-gap extraction pass are public-safe substrates, not expert
+   review or authorization for outreach.
 2. When an item completes, synthesize and activate or queue the next safe item
    before stopping.
-3. Work the expert response intake and validation ledger lane from
+3. Run [ORP Frontier Gap Sweep Mode v0](../orp/modes/frontier-gap-sweep-mode-v0.md)
+   when the human asks for a direction check, when a delegate sees stale state,
+   or when the next public-safe item is not obvious.
+4. Work the expert response intake and validation ledger lane from
    `disease-programs/multiple-myeloma/frontier-roadmap-v0.md`.
-4. Work the MRD, deep response, and endpoint language lane.
-5. Work the immune therapy sequencing and access boundary lane.
-6. Work the post-BCMA resistance and relapse mechanisms lane.
-7. Work the precursor, risk, and interception questions lane.
-8. Work the high-risk, extramedullary, organ, and frailty context lane.
-9. Work the case-to-cure pipeline plumbing lane.
-10. Work the public translation and contribution surface lane.
-11. Add tooling only when the relevant frontier lane says the validated input
+5. Work the MRD, deep response, and endpoint language lane.
+6. Work the immune therapy sequencing and access boundary lane.
+7. Work the post-BCMA resistance and relapse mechanisms lane.
+8. Work the precursor, risk, and interception questions lane.
+9. Work the high-risk, extramedullary, organ, and frailty context lane.
+10. Work the case-to-cure pipeline plumbing lane.
+11. Work the public translation and contribution surface lane.
+12. Add tooling only when the relevant frontier lane says the validated input
    shape, safety boundary, and public artifact path are unblocked.
 
 ## Loop Algorithm

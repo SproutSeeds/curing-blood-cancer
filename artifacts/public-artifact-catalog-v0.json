@@ -134,8 +134,29 @@
       ],
       "path": "disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.metadata.json",
-      "source_count": 19,
+      "source_count": 26,
       "limitation_count": 23
+    },
+    {
+      "artifact_id": "machine-representation-source-gap-internal-extraction-v0",
+      "title": "Machine Representation Source-Gap Internal Extraction v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "source extraction",
+        "therapy exposure",
+        "model validation",
+        "model governance",
+        "no human outreach",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/machine-representation-source-gap-internal-extraction-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/machine-representation-source-gap-internal-extraction-v0.metadata.json",
+      "source_count": 13,
+      "limitation_count": 29
     },
     {
       "artifact_id": "machine-representation-source-gap-task-queue-v0",
@@ -155,7 +176,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.metadata.json",
-      "source_count": 10,
+      "source_count": 17,
       "limitation_count": 24
     },
     {
@@ -593,7 +614,7 @@
       ],
       "path": "sources/source-registry-v0.md",
       "metadata_path": "sources/source-registry-v0.metadata.json",
-      "source_count": 31,
+      "source_count": 37,
       "limitation_count": 4
     },
     {
@@ -762,6 +783,26 @@
       "metadata_path": "disease-programs/multiple-myeloma/cure-wedge-durable-mrd-negative-remission-v0.metadata.json",
       "source_count": 5,
       "limitation_count": 5
+    },
+    {
+      "artifact_id": "multiple-myeloma-frontier-gap-sweep-v0",
+      "title": "Multiple Myeloma Frontier Gap Sweep v0",
+      "artifact_class": "map",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "frontier gap sweep",
+        "machine representation",
+        "measurable residual disease",
+        "residual disease modality discordance",
+        "public safety",
+        "ORP mode"
+      ],
+      "path": "disease-programs/multiple-myeloma/frontier-gap-sweep-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/frontier-gap-sweep-v0.metadata.json",
+      "source_count": 15,
+      "limitation_count": 22
     },
     {
       "artifact_id": "multiple-myeloma-open-research-map-v0-1",
@@ -1601,6 +1642,25 @@
       "metadata_path": "disease-programs/multiple-myeloma/machine-representation-stack-v0.metadata.json",
       "source_count": 22,
       "limitation_count": 21
+    },
+    {
+      "artifact_id": "orp-frontier-gap-sweep-mode-v0",
+      "title": "ORP Frontier Gap Sweep Mode v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "ORP mode",
+        "frontier gap sweep",
+        "adaptive research loop",
+        "public safety",
+        "research tooling"
+      ],
+      "path": "orp/modes/frontier-gap-sweep-mode-v0.md",
+      "metadata_path": "orp/modes/frontier-gap-sweep-mode-v0.metadata.json",
+      "source_count": 9,
+      "limitation_count": 22
     },
     {
       "artifact_id": "post-car-t-relapse-extraction-guide-v0",

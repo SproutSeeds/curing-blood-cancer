@@ -56,24 +56,17 @@ The live ORP phase is now the
 [Case-To-Cure Adaptive Master Plan v0](disease-programs/multiple-myeloma/case-to-cure-adaptive-master-plan-v0.md),
 which keeps a durable backlog and requires every completed step to synthesize
 the next safest public step.
-The current active backlog item is the case-to-cure master completion audit,
-unlocked by the completed
-[End-To-End Synthetic Case Dry Run v0](disease-programs/multiple-myeloma/end-to-end-synthetic-case-dry-run-v0.md),
-[Case-To-Public Learning Extraction Gate v0](disease-programs/multiple-myeloma/case-to-public-learning-extraction-gate-v0.md),
-[Expert Validation Loop v0](disease-programs/multiple-myeloma/reviews/expert-validation-loop-v0.md),
-[Multidisciplinary Review Packet Builder v0](disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md),
-[Candidate Hypothesis Review Question Set v0](disease-programs/multiple-myeloma/reviews/candidate-hypothesis-review-question-set-v0.md),
-[Trial Therapy Landscape Non-Advice Gate v0](disease-programs/multiple-myeloma/therapy-landscapes/trial-therapy-landscape-non-advice-gate-v0.md),
-[Evidence Retrieval Packet v0](disease-programs/multiple-myeloma/evidence-retrieval-packet-v0.md),
-[Molecular Immune Context Contract v0](disease-programs/multiple-myeloma/contexts/molecular-immune-context-contract-v0.md),
-[Therapy Exposure Timeline Contract v0](disease-programs/multiple-myeloma/therapy-landscapes/therapy-exposure-timeline-contract-v0.md),
-[Measurement Normalization Contract v0](disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md),
-[Case Feature Normalization Contract v0](disease-programs/multiple-myeloma/case-feature-normalization-contract-v0.md),
-[Consent Privacy Security Retention Gate v0](disease-programs/multiple-myeloma/case-intake/consent-privacy-security-retention-gate-v0.md),
-[Caregiver Intake Public Projection Validator v0](disease-programs/multiple-myeloma/case-intake/caregiver-intake-public-projection-validator-v0.md),
-[Static Synthetic Caregiver Prototype Plan v0](disease-programs/multiple-myeloma/case-intake/static-synthetic-caregiver-prototype-plan-v0.md)
-and
-[Private Intake Schema Contract v0](disease-programs/multiple-myeloma/case-intake/private-intake-schema-contract-v0.md).
+The current active ORP phase is
+`machine-representation-expert-validation-human-authorization-blocker-v0`.
+Machine-representation implementation, MRD geometry falsification,
+no-outreach expert-validation prep, and internal source-gap extraction are
+complete for their named public-safe scopes, but actual expert validation,
+outreach, response intake, private-lab work, clinical interpretation,
+model-governance clearance, publication, and claim upgrades remain human-gated.
+The reusable
+[ORP Frontier Gap Sweep Mode v0](orp/modes/frontier-gap-sweep-mode-v0.md)
+now captures how to check for drift, blind spots, and the next safest
+public-source phase.
 The saved Clawdad delegation brief for that map is
 [Clawdad Frontier Delegation Packet v0](protocols/clawdad-frontier-delegation-packet-v0.md).
 The caregiver case intake foundation is the completed first subphase,
@@ -88,6 +81,7 @@ anchored by the
 - `docs/`: public documentation and workflow notes
 - `examples/`: small worked examples
 - `governance/`: contribution, safety, and publication rules
+- `orp/`: live ORP frontier state, queues, and reusable operating modes
 - `protocols/`: reusable research and review workflows
 - `schemas/`: structured data contracts
 - `sources/`: stable public source registries

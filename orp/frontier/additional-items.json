@@ -820,6 +820,67 @@
           ]
         },
         {
+          "id": "machine-representation-source-gap-internal-extraction-v0",
+          "label": "Machine Representation Source-Gap Internal Extraction v0",
+          "status": "complete",
+          "goal": "Complete a no-outreach, public-source-only extraction pass for machine-representation source-gap pressure points, mapping therapy-exposure context and validation-governance anchors while preserving the fusion-architecture source-context-needed blocker.",
+          "depends_on": [
+            "machine-representation-expert-validation-no-outreach-prep-v0",
+            "machine-representation-source-gap-task-queue-v0",
+            "machine-representation-source-extraction-v0"
+          ],
+          "requirements": [
+            "Use only public sources and public repo artifacts.",
+            "Do not open issues, send outreach, tag reviewers, request private material, copy private correspondence, ingest response content, or claim expert review.",
+            "Keep therapy-exposure anchors descriptive only: no sequencing, access, eligibility, refractory assessment, toxicity management, treatment advice, trial advice, ranking, or patient-specific response linkage.",
+            "Use model-governance and reporting sources only as validation-pressure anchors, not as model validation, clinical utility, benchmark evidence, deployment readiness, or regulatory clearance.",
+            "Keep fusion architecture source-context-needed unless direct public method sources are extracted later."
+          ],
+          "success_criteria": [
+            "A source-gap internal extraction artifact exists with metadata and catalog coverage.",
+            "Machine-representation source extraction rows distinguish therapy-exposure mapped-with-scope-gap, validation-governance mapped-with-scope-gap, and fusion-architecture source-context-needed.",
+            "The source-gap task queue records the therapy-exposure task as complete-for-v0-source-anchors and the fusion/validation task as partial-method-governance-mapped.",
+            "ORP state keeps external expert-validation execution and outreach blocked."
+          ],
+          "plans": [
+            "Completed as disease-programs/multiple-myeloma/machine-representation-source-gap-internal-extraction-v0.md.",
+            "Next autonomous work, if selected, should remain no-outreach and public-source-only, such as fusion-architecture method-source extraction or output-wrapper boundary audit."
+          ],
+          "compute_hooks": [
+            "python3 tools/validate_public_artifacts.py"
+          ]
+        },
+        {
+          "id": "orp-frontier-gap-sweep-mode-v0",
+          "label": "ORP Frontier Gap Sweep Mode v0",
+          "status": "complete",
+          "goal": "Add a reusable ORP mode and first multiple myeloma sweep for direction checks, stale-state drift, current-source blind spots, and next public-safe queue synthesis without outreach or clinical claims.",
+          "depends_on": [
+            "machine-representation-source-gap-internal-extraction-v0",
+            "machine-representation-expert-validation-human-authorization-blocker-v0"
+          ],
+          "requirements": [
+            "Use only public sources and public repo artifacts.",
+            "Do not use real case data, private records, restricted datasets, private correspondence, credentials, outreach, issue operations, or expert-response intake.",
+            "Keep current-source research as public source context only; no diagnosis, prognosis, treatment, trial, monitoring, eligibility, expanded-access, ranking, matching, model-validation, or cure claims.",
+            "Preserve the machine-representation expert-validation human-authorization blocker."
+          ],
+          "success_criteria": [
+            "A reusable ORP mode exists under orp/modes/ with metadata and catalog coverage.",
+            "A multiple myeloma frontier gap sweep records direction status, drift found, blind spots, hard boundaries, and next public-safe queue candidates.",
+            "Clawdad delegation references the mode for future direction checks.",
+            "ORP state keeps external expert-validation execution and outreach blocked."
+          ],
+          "plans": [
+            "Completed as orp/modes/frontier-gap-sweep-mode-v0.md.",
+            "First disease-program run completed as disease-programs/multiple-myeloma/frontier-gap-sweep-v0.md.",
+            "Recommended next no-outreach successor, if selected, is residual-disease-modality-discordance-source-extraction-v0."
+          ],
+          "compute_hooks": [
+            "python3 tools/validate_public_artifacts.py"
+          ]
+        },
+        {
           "id": "machine-representation-expert-validation-execution-v0",
           "label": "Machine Representation Expert Validation Execution v0",
           "status": "blocked",
@@ -849,9 +910,11 @@
           "id": "machine-representation-expert-validation-human-authorization-blocker-v0",
           "label": "Machine Representation Expert Validation Human Authorization Blocker v0",
           "status": "blocked",
-          "goal": "Record that no outreach, public issue operation, response intake, expert-review claim upgrade, or external validation execution is authorized after the no-outreach prep packet; the next autonomous step must be a newly named no-outreach public-source extraction phase or another public-safe status-prep item.",
+          "goal": "Record that no outreach, public issue operation, response intake, expert-review claim upgrade, or external validation execution is authorized after the no-outreach prep packet, internal public-source extraction pass, and frontier gap sweep mode; the next autonomous step must be a newly named no-outreach public-source extraction phase or another public-safe status-prep item.",
           "depends_on": [
-            "machine-representation-expert-validation-no-outreach-prep-v0"
+            "machine-representation-expert-validation-no-outreach-prep-v0",
+            "machine-representation-source-gap-internal-extraction-v0",
+            "orp-frontier-gap-sweep-mode-v0"
           ],
           "requirements": [
             "Do not contact reviewers, tag people, open public issues, refresh issue metadata as an operation, copy private correspondence, or ingest expert-response content.",
@@ -864,7 +927,8 @@
             "External validation and expert-review claim upgrades remain blocked until explicit human authorization."
           ],
           "plans": [
-            "Next best no-outreach successor, if selected, is an internal public-source extraction phase for the machine-representation source-gap pressure matrix."
+            "Internal source-gap extraction and frontier gap sweep are complete and did not clear the expert-validation gate.",
+            "Recommended next no-outreach public-source phase is residual-disease-modality-discordance-source-extraction-v0."
           ]
         }
       ]
