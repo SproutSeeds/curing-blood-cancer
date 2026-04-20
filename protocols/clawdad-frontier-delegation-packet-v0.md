@@ -29,17 +29,17 @@ a frontier operating map and machine-readable research substrate that can
 support expert validation, public contribution, and future private-lab case
 work.
 
-The current north-star edge is to turn
-[Myeloma Machine Representation Stack v0](../disease-programs/multiple-myeloma/machine-representation-stack-v0.md)
-into synthetic-only schema plumbing. The state-object schema, synthetic
-fixture, model-output wrapper, validator rule map, source-extraction table,
-source-gap task queue, source-gap issue draft packet, and implementation
-completion audit are complete; the current edge is
-`machine-representation-public-scope-human-gate-blocker-v0`, which records
-that no autonomous public-safe machine-representation implementation item
-remains until a human selects a new named public-safe phase or clears a named
-expert-review, private-lab, clinical-team, model-governance, legal,
-regulatory, publication, or human-review gate.
+The machine-representation implementation phase is complete and remains
+human-gated. A human then selected `mrd-resistance-geometry-falsification-v0`
+as a new public-safe research-substrate phase; that phase is complete through
+PR #55 and did not clear the machine-representation human gate.
+
+The current north-star edge is
+`machine-representation-expert-validation-execution-v0`: resume expert
+validation only through public-safe issue/status plumbing unless a human
+explicitly authorizes outreach or clears a named gate. External outreach,
+private correspondence, clinical interpretation, publication, and any expert
+claim upgrade remain blocked.
 
 The live operating mode is adaptive. A completed public-safe step must produce
 a handoff and a next-step synthesis. A closed subphase is not a reason to stop
@@ -164,23 +164,27 @@ makes another slice clearly safer.
 
 ### Active Named Phase. Case-To-Cure Adaptive Master Plan v0
 
-The current active named phase is `myeloma-machine-representation-implementation-v0`
-inside `case-to-cure-adaptive-master-plan-v0`.
-The active phase is `myeloma-machine-representation-implementation-v0`.
-The active additional queue is `myeloma-machine-representation-implementation-v0`.
+The current active named phase is
+`machine-representation-expert-validation-execution-v0` inside
+`case-to-cure-adaptive-master-plan-v0`.
+The active phase is `machine-representation-expert-validation-execution-v0`.
+The active additional queue is
+`post-machine-representation-public-safe-research-substrate-v0`.
 The active additional item is
-`machine-representation-public-scope-human-gate-blocker-v0`.
+`machine-representation-expert-validation-execution-v0`.
 
-This phase follows the smoke-tested static caregiver frontend prototype. The
-next public-safe work is machine-state schema plumbing derived from the
-myeloma machine representation stack, while real case data, model weights,
-patient-specific predictions, and clinical decision behavior stay blocked.
+This phase follows the completed machine-representation implementation audit
+and the human-selected MRD resistance geometry falsification lane. The MRD
+geometry work is valuable public-safe falsification substrate, but it did not
+clear expert-review, human-review, private-lab, clinical-team,
+model-governance, legal, regulatory, or publication gates.
 
 Required output for the next pass:
 
 - stop with an explicit
-  `machine-representation-public-scope-human-gate-blocker-v0` state unless a
-  human selects a new named public-safe phase or clears a named gate
+  `machine-representation-expert-validation-execution-v0` blocker unless a
+  human selects an exact no-outreach execution scope, explicitly authorizes
+  outreach, or clears a named gate
 - use [Myeloma Machine Representation Stack v0](../disease-programs/multiple-myeloma/machine-representation-stack-v0.md),
   [Myeloma State Object Schema v0](../schemas/myeloma-state-object-schema-v0.md),
   [Synthetic Myeloma State Fixture v0](../examples/synthetic-myeloma-state-fixture-v0.json),
@@ -190,19 +194,25 @@ Required output for the next pass:
   [Machine Representation Source-Gap Task Queue v0](../disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md),
   [Machine Representation Source-Gap Issue Draft Packet v0](../disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md),
   [Machine Representation Implementation Completion Audit v0](../disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md),
+  [MRD Geometry Falsification Matrix v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-falsification-matrix-v0.md),
+  [MRD Geometry Transition Model v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.md),
+  [MRD Geometry Hypothesis Candidate Ledger v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.md),
   measurement normalization, therapy exposure timeline, molecular/immune
   context, evidence retrieval, and public safety governance as boundaries
 - preserve the audit decision that the human-selected machine-representation
   implementation phase is public-safe complete and remaining work is
   human-gated
+- preserve that `mrd-resistance-geometry-falsification-v0` was selected as a
+  public-safe phase and completed without clearing expert-review or human
+  outreach gates
 - do not create another sibling schema, fixture, validator, source extraction,
   issue draft, model, dashboard, or tool by momentum
 - block real case data, identifiers, raw records, uploads, person-linked
   dates, free-text case details, private correspondence, patient-specific
   outputs, recommendations, rankings, matching, treatment guidance, trial
   guidance, expanded-access guidance, monitoring guidance, publication
-  authorization, clinical judgment, outreach, private lab access, and
-  publication decisions
+  authorization, clinical judgment, autonomous outreach, private lab access,
+  and publication decisions
 
 Done when:
 

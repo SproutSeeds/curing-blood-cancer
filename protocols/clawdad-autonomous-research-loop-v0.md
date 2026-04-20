@@ -108,10 +108,11 @@ completed, validated, and explained in one delegate pass.
 
 1. Work the active ORP additional item in the active ORP additional list,
    currently
-   `machine-representation-public-scope-human-gate-blocker-v0` inside
-   `myeloma-machine-representation-implementation-v0`, which means no further
-   autonomous machine-representation implementation pass should run until a
-   human selects a new named public-safe phase or clears a named gate.
+   `machine-representation-expert-validation-execution-v0` inside
+   `post-machine-representation-public-safe-research-substrate-v0`. The
+   machine-representation implementation gate remains uncleared; the completed
+   MRD geometry falsification phase is a human-selected public-safe substrate,
+   not expert review or authorization for outreach.
 2. When an item completes, synthesize and activate or queue the next safe item
    before stopping.
 3. Work the expert response intake and validation ledger lane from

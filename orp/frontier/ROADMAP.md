@@ -2,8 +2,9 @@
 
 - active_version: `v2`
 - active_milestone: `case-to-cure-adaptive-master-plan-v0`
+- active_phase: `machine-representation-expert-validation-execution-v0`
 - band: `exact`
-- next_action: `Blocked on human gate after machine-representation implementation completion audit: no autonomous public-safe machine-representation implementation item remains until a human selects a new named public-safe phase or clears expert-review, private-lab, clinical-team, model-governance, legal, regulatory, publication, or human-review gates.`
+- next_action: `MRD resistance geometry falsification v0 was human-selected as a public-safe research-substrate phase and completed in PR #55; the prior machine-representation human gate remains uncleared. Next exact phase is machine-representation-expert-validation-execution-v0, blocked for external outreach and expert review; autonomous work is limited to public-safe issue/status preparation unless a human explicitly authorizes outreach or clears a named gate.`
 
 ## Phases
 
@@ -20,10 +21,12 @@
 - [x] **Phase trial-therapy-landscape-non-advice-gate-v0: Trial Therapy Landscape Non-Advice Gate v0** - Define how trial, therapy, product, target, and access context can be extracted as landscape information without advice.
 - [x] **Phase candidate-hypothesis-review-question-set-v0: Candidate Hypothesis Review Question Set v0** - Represent candidate hypotheses as source-scoped review questions for qualified humans, not recommendations, rankings, or patient-action outputs.
 - [x] **Phase multidisciplinary-review-packet-builder-v0: Multidisciplinary Review Packet Builder v0** - Define the public-safe packet builder skeleton and route rules for multidisciplinary review under private and clinical gates.
-- [x] **Phase expert-validation-loop-v0: Expert Validation Loop v0** - Make expert validation issue updates and response dispositions part of the recurring public loop without private correspondence or clinical decisions.
+- [x] **Phase expert-validation-loop-v0: Expert Validation Loop v0** - Make expert validation issue updates and response dispositions part of the recurring public loop without publishing private correspondence or implying expert review is complete.
 - [x] **Phase case-to-public-learning-extraction-gate-v0: Case-To-Public Learning Extraction Gate v0** - Define the sanitation, aggregation, source-scope, uncertainty, privacy, review, and publication gate for any future public learning extracted from a private case.
 - [x] **Phase end-to-end-synthetic-case-dry-run-v0: End-To-End Synthetic Case Dry Run v0** - Dry-run the complete case-to-cure path with synthetic-only artifacts from caregiver intake through publication gate.
 - [x] **Phase case-to-cure-master-completion-audit-v0: Case-To-Cure Master Completion Audit v0** - Audit whether the adaptive master plan is complete, safely blocked, or ready for a new named phase.
 - [ ] **Phase case-to-cure-public-scope-human-gate-blocker-v0: Case-To-Cure Public-Scope Human Gate Blocker v0** - Block further autonomous case-to-cure work until a human selects a new named public-safe phase or clears a named gate.
 - [x] **Phase public-caregiver-intake-frontend-v0: Public Caregiver Intake Frontend v0** - Created and smoke-tested the public-facing, static, synthetic-only caregiver intake frontend prototype for multiple myeloma case organization without collecting real patient data or providing medical advice.
-- [ ] **Phase myeloma-machine-representation-implementation-v0: Myeloma Machine Representation Implementation v0** - Public-safe implementation audit is complete and the active state is blocked on human selection of a new named public-safe phase or clearance of named expert-review, private-lab, clinical-team, model-governance, legal, regulatory, publication, or human-review gates.
+- [x] **Phase myeloma-machine-representation-implementation-v0: Myeloma Machine Representation Implementation v0** - Turn the myeloma machine representation architecture into synthetic-only, public-safe schema and fixture artifacts without model weights, real case data, patient-specific predictions, treatment advice, trial advice, or option ranking.
+- [x] **Phase mrd-resistance-geometry-falsification-v0: MRD Resistance Geometry Falsification v0** - Record the human-selected public-safe MRD resistance geometry falsification lane after the machine-representation human gate, without clearing that gate or creating clinical claims.
+- [ ] **Phase machine-representation-expert-validation-execution-v0: Machine Representation Expert Validation Execution v0** - Resume the machine-representation expert-validation lane by opening or tracking public-safe source-gap review issues only after human authorization, while keeping external outreach and expert-review gates explicit.

@@ -514,10 +514,22 @@ The completed queue item now also includes
 The completed queue item now also includes
 `machine-representation-implementation-completion-audit-v0`, captured as
 [Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md).
-The active queue item is now blocked as
+The machine-representation implementation queue closed as
 `machine-representation-public-scope-human-gate-blocker-v0`, meaning no further
 autonomous public-safe machine-representation implementation item remains
 without human selection of a new named phase or clearance of a named gate.
+
+A human later selected `mrd-resistance-geometry-falsification-v0` as a
+public-safe research-substrate phase. That phase completed through public
+source extraction, falsification matrix, transition model, hypothesis ledger,
+benchmark fixtures, and invariant checks. It did not clear expert-review,
+human-review, private-lab, clinical-team, model-governance, legal, regulatory,
+publication, or outreach gates.
+
+The current active queue item is
+`machine-representation-expert-validation-execution-v0`, blocked for external
+outreach and expert-review execution unless a human selects the exact
+no-outreach scope, explicitly authorizes outreach, or clears a named gate.
 
 Completion criteria:
 

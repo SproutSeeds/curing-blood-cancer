@@ -1,7 +1,7 @@
 # Additional Frontier Items: Curing Blood Cancer
 
-- active_list_id: `myeloma-machine-representation-implementation-v0`
-- active_item_id: `machine-representation-public-scope-human-gate-blocker-v0`
+- active_list_id: `post-machine-representation-public-safe-research-substrate-v0`
+- active_item_id: `machine-representation-expert-validation-execution-v0`
 
 ## `case-intake-frontends` Human-Friendly Case Intake Front Ends (`complete`)
 
@@ -59,7 +59,7 @@
 - [x] `static-synthetic-caregiver-intake-frontend-smoke-test-v0` Static synthetic caregiver intake frontend smoke test (`complete`)
   - goal: Document public-safety smoke checks for the static synthetic caregiver intake frontend so the prototype is auditable before any future UI iteration.
 
-## `myeloma-machine-representation-implementation-v0` Myeloma Machine Representation Implementation v0 (`active`)
+## `myeloma-machine-representation-implementation-v0` Myeloma Machine Representation Implementation v0 (`complete`)
 
 - [x] `myeloma-state-object-schema-v0` Myeloma state object schema (`complete`)
   - goal: Define the first public, synthetic-only myeloma disease-state object schema derived from the machine representation stack.
@@ -79,3 +79,12 @@
   - goal: Audit whether the human-selected machine-representation implementation phase is complete or whether another public-safe adjacent item remains, without opening issues, sending outreach, requesting private material, validating real cases, producing model outputs, advice, matching, ranking, or publication authorization.
 - [ ] `machine-representation-public-scope-human-gate-blocker-v0` Machine representation public-scope human gate blocker (`blocked`)
   - goal: Record that no autonomous public-safe machine-representation implementation item remains after the completion audit.
+
+## `post-machine-representation-public-safe-research-substrate-v0` Post-Machine-Representation Public-Safe Research Substrate v0 (`active`)
+
+- [x] `mrd-resistance-geometry-falsification-v0` MRD Resistance Geometry Falsification v0 (`complete`)
+  - goal: Record the human-selected public-safe MRD resistance geometry falsification lane after the machine-representation human gate, without clearing that gate or creating clinical claims.
+- [x] `orp-clawdad-phase-6-control-plane-reconciliation-v0` ORP/Clawdad Phase 6 Control-Plane Reconciliation v0 (`complete`)
+  - goal: Reconcile ORP and Clawdad state after the human-selected MRD geometry falsification phase so the machine-representation human gate is not silently treated as cleared.
+- [ ] `machine-representation-expert-validation-execution-v0` Machine Representation Expert Validation Execution v0 (`blocked`)
+  - goal: Resume the machine-representation expert-validation lane by opening or tracking public-safe source-gap review issues only after human authorization, while keeping external outreach and expert-review gates explicit.
