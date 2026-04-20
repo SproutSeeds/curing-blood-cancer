@@ -13,6 +13,7 @@ traceable, and safer to do in public.
 | [Candidate Hypothesis Review Question Set v0](candidate-hypothesis-review-question-set-v0.md) | public-shape-only | question scaffold only; no candidate options, rankings, recommendations, or patient-action output |
 | [Multidisciplinary Review Packet Builder v0](multidisciplinary-review-packet-builder-v0.md) | public-shape-only | route-rule skeleton only; copy, reference, omit, or refuse; no generated prose or packet assembly |
 | [Expert Validation Loop v0](expert-validation-loop-v0.md) | public-shape-only | disposition loop only; no outreach, private correspondence, copied expert replies, recommendations, rankings, or publication authorization |
+| [Machine Representation Expert Validation No-Outreach Execution Packet v0](machine-representation-expert-validation-no-outreach-execution-packet-v0.md) | no-outreach prep complete | public source-gap pressure mapping only; no outreach, issue creation, response intake, expert-review substitution, claim upgrade, advice, ranking, or publication authorization |
 | [BCMA Claim Set Expert Review Packet v0](bcma-claim-set-expert-review-packet-v0.md) | expert-review-needed | source-checked is separate from expert-reviewed |
 | [Multidisciplinary Review Packet Template v0](multidisciplinary-review-packet-template-v0.md) | expert-review-needed | do not fill public template with real case facts |
 
@@ -22,6 +23,7 @@ traceable, and safer to do in public.
 | --- | --- | --- |
 | [Expert Validation Issue Index v0](expert-validation-issue-index-v0.md) | 13 public issues opened | issue creation does not complete expert review |
 | [Expert Validation Loop v0](expert-validation-loop-v0.md) | public disposition loop drafted | maps issue state, review lenses, source-context needs, allowed dispositions, blocked uses, and next public actions without private correspondence |
+| [Machine Representation Expert Validation No-Outreach Execution Packet v0](machine-representation-expert-validation-no-outreach-execution-packet-v0.md) | no-outreach execution prep complete | maps machine-representation source-gap tasks to pressure questions while preserving the expert-validation gate |
 | [Expert Validation Outreach Map v0](expert-validation-outreach-map-v0.md) | public shortlist drafted | named people are candidates, not endorsers or participants |
 
 ## Current Builder Specs

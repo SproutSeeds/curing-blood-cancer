@@ -2,9 +2,9 @@
 
 - active_version: `v2`
 - active_milestone: `case-to-cure-adaptive-master-plan-v0`
-- active_phase: `machine-representation-expert-validation-execution-v0`
+- active_phase: `machine-representation-expert-validation-human-authorization-blocker-v0`
 - band: `exact`
-- next_action: `MRD resistance geometry falsification v0 was human-selected as a public-safe research-substrate phase and completed in PR #55; the prior machine-representation human gate remains uncleared. Next exact phase is machine-representation-expert-validation-execution-v0, blocked for external outreach and expert review; autonomous work is limited to public-safe issue/status preparation unless a human explicitly authorizes outreach or clears a named gate.`
+- next_action: `No-outreach execution prep for machine-representation expert validation is complete as machine-representation-expert-validation-no-outreach-execution-packet-v0. It did not open issues, send outreach, ingest responses, or clear expert review. Next exact state is machine-representation-expert-validation-human-authorization-blocker-v0; autonomous work remains limited to a newly named no-outreach public-source extraction phase or public-safe status prep unless a human explicitly authorizes outreach or clears a named gate.`
 
 ## Phases
 
@@ -30,3 +30,5 @@
 - [x] **Phase myeloma-machine-representation-implementation-v0: Myeloma Machine Representation Implementation v0** - Turn the myeloma machine representation architecture into synthetic-only, public-safe schema and fixture artifacts without model weights, real case data, patient-specific predictions, treatment advice, trial advice, or option ranking.
 - [x] **Phase mrd-resistance-geometry-falsification-v0: MRD Resistance Geometry Falsification v0** - Record the human-selected public-safe MRD resistance geometry falsification lane after the machine-representation human gate, without clearing that gate or creating clinical claims.
 - [ ] **Phase machine-representation-expert-validation-execution-v0: Machine Representation Expert Validation Execution v0** - Resume the machine-representation expert-validation lane by opening or tracking public-safe source-gap review issues only after human authorization, while keeping external outreach and expert-review gates explicit.
+- [x] **Phase machine-representation-expert-validation-no-outreach-prep-v0: Machine Representation Expert Validation No-Outreach Prep v0** - Complete the autonomous public-safe prep portion by mapping source-gap tasks to pressure questions without outreach, issue creation, response intake, expert-review substitution, claim upgrade, or advice.
+- [ ] **Phase machine-representation-expert-validation-human-authorization-blocker-v0: Machine Representation Expert Validation Human Authorization Blocker v0** - Block actual external expert-validation execution, outreach, private correspondence, issue operations, response intake, and expert-review claim upgrades unless a human explicitly authorizes scope or selects a new named no-outreach public-source phase.

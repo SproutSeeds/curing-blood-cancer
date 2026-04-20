@@ -69,6 +69,7 @@ research directions deserve structured public tracking.
 - [Machine Representation Source-Gap Task Queue v0](public-tasks/machine-representation-source-gap-task-queue-v0.md)
 - [Machine Representation Source-Gap Issue Draft Packet v0](public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md)
 - [Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md)
+- [Machine Representation Expert Validation No-Outreach Execution Packet v0](reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.md)
 - [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
 - [Caregiver Intake Public Projection Checklist v0](case-intake/caregiver-intake-public-projection-checklist-v0.md)
 - [Private Intake Schema Contract v0](case-intake/private-intake-schema-contract-v0.md)

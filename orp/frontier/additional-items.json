@@ -4,7 +4,7 @@
   "program_id": "curing-blood-cancer",
   "label": "Curing Blood Cancer",
   "active_list_id": "post-machine-representation-public-safe-research-substrate-v0",
-  "active_item_id": "machine-representation-expert-validation-execution-v0",
+  "active_item_id": "machine-representation-expert-validation-human-authorization-blocker-v0",
   "lists": [
     {
       "id": "case-intake-frontends",
@@ -796,10 +796,34 @@
           ]
         },
         {
+          "id": "machine-representation-expert-validation-no-outreach-prep-v0",
+          "label": "Machine Representation Expert Validation No-Outreach Prep v0",
+          "status": "complete",
+          "goal": "Complete the autonomous public-safe prep portion of machine-representation expert validation by mapping source-gap tasks to pressure questions without outreach, issue creation, response intake, expert-review substitution, claim upgrade, advice, ranking, or publication authorization.",
+          "depends_on": [
+            "machine-representation-expert-validation-execution-v0",
+            "mrd-resistance-geometry-falsification-v0",
+            "orp-clawdad-phase-6-control-plane-reconciliation-v0"
+          ],
+          "requirements": [
+            "Use the machine-representation source extraction table, source-gap task queue, issue draft packet, expert-validation ledger, expert-validation loop, and MRD geometry falsification artifacts as public inputs.",
+            "Do not open issues, send outreach, tag reviewers, request private material, copy private correspondence, ingest response content, or claim expert review.",
+            "Preserve all no-advice, no-ranking, no-matching, no-publication, and no-cure boundaries."
+          ],
+          "success_criteria": [
+            "A no-outreach execution packet exists with metadata and catalog coverage.",
+            "Each machine-representation source-gap task has a sharper pressure question and blocked inference.",
+            "ORP state records that actual external expert validation remains blocked."
+          ],
+          "plans": [
+            "Completed as disease-programs/multiple-myeloma/reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.md."
+          ]
+        },
+        {
           "id": "machine-representation-expert-validation-execution-v0",
           "label": "Machine Representation Expert Validation Execution v0",
           "status": "blocked",
-          "goal": "Resume the machine-representation expert-validation lane by opening or tracking public-safe source-gap review issues only after human authorization, while keeping external outreach and expert-review gates explicit.",
+          "goal": "Resume actual external machine-representation expert-validation execution only after human authorization, while keeping outreach, public issue operations, response intake, expert-review claim upgrades, private correspondence, and clinical interpretation blocked until then.",
           "depends_on": [
             "machine-representation-public-scope-human-gate-blocker-v0",
             "mrd-resistance-geometry-falsification-v0"
@@ -820,6 +844,28 @@
             "MRD geometry falsification outputs can sharpen future review questions but do not replace expert validation."
           ],
           "compute_hooks": []
+        },
+        {
+          "id": "machine-representation-expert-validation-human-authorization-blocker-v0",
+          "label": "Machine Representation Expert Validation Human Authorization Blocker v0",
+          "status": "blocked",
+          "goal": "Record that no outreach, public issue operation, response intake, expert-review claim upgrade, or external validation execution is authorized after the no-outreach prep packet; the next autonomous step must be a newly named no-outreach public-source extraction phase or another public-safe status-prep item.",
+          "depends_on": [
+            "machine-representation-expert-validation-no-outreach-prep-v0"
+          ],
+          "requirements": [
+            "Do not contact reviewers, tag people, open public issues, refresh issue metadata as an operation, copy private correspondence, or ingest expert-response content.",
+            "Do not mark any artifact expert-reviewed, clinically valid, endorsed, consensus-backed, publication-ready, actionable, or cured.",
+            "Proceed autonomously only if a new named no-outreach public-source extraction phase or public-safe status-prep item is selected."
+          ],
+          "success_criteria": [
+            "The blocker is active in ORP.",
+            "The no-outreach prep packet remains linked as completed allowed work.",
+            "External validation and expert-review claim upgrades remain blocked until explicit human authorization."
+          ],
+          "plans": [
+            "Next best no-outreach successor, if selected, is an internal public-source extraction phase for the machine-representation source-gap pressure matrix."
+          ]
         }
       ]
     }

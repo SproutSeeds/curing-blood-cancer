@@ -1,7 +1,7 @@
 # Additional Frontier Items: Curing Blood Cancer
 
 - active_list_id: `post-machine-representation-public-safe-research-substrate-v0`
-- active_item_id: `machine-representation-expert-validation-execution-v0`
+- active_item_id: `machine-representation-expert-validation-human-authorization-blocker-v0`
 
 ## `case-intake-frontends` Human-Friendly Case Intake Front Ends (`complete`)
 
@@ -86,5 +86,9 @@
   - goal: Record the human-selected public-safe MRD resistance geometry falsification lane after the machine-representation human gate, without clearing that gate or creating clinical claims.
 - [x] `orp-clawdad-phase-6-control-plane-reconciliation-v0` ORP/Clawdad Phase 6 Control-Plane Reconciliation v0 (`complete`)
   - goal: Reconcile ORP and Clawdad state after the human-selected MRD geometry falsification phase so the machine-representation human gate is not silently treated as cleared.
+- [x] `machine-representation-expert-validation-no-outreach-prep-v0` Machine Representation Expert Validation No-Outreach Prep v0 (`complete`)
+  - goal: Complete the autonomous public-safe prep portion of machine-representation expert validation by mapping source-gap tasks to pressure questions without outreach, issue creation, response intake, expert-review substitution, claim upgrade, advice, ranking, or publication authorization.
 - [ ] `machine-representation-expert-validation-execution-v0` Machine Representation Expert Validation Execution v0 (`blocked`)
-  - goal: Resume the machine-representation expert-validation lane by opening or tracking public-safe source-gap review issues only after human authorization, while keeping external outreach and expert-review gates explicit.
+  - goal: Resume actual external machine-representation expert-validation execution only after human authorization, while keeping outreach, public issue operations, response intake, expert-review claim upgrades, private correspondence, and clinical interpretation blocked until then.
+- [ ] `machine-representation-expert-validation-human-authorization-blocker-v0` Machine Representation Expert Validation Human Authorization Blocker v0 (`blocked`)
+  - goal: Record that no outreach, public issue operation, response intake, expert-review claim upgrade, or external validation execution is authorized after the no-outreach prep packet; the next autonomous step must be a newly named no-outreach public-source extraction phase or another public-safe status-prep item.
