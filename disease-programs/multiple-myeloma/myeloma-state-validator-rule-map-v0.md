@@ -12,7 +12,7 @@ Stewarded by [frg.earth](https://frg.earth/).
   identifiers, raw records, uploads, exact person-linked dates, free-text case
   details, private correspondence, model weights, predictions,
   recommendations, matching, ranking, or clinical decisions
-- last reviewed: `2026-04-18`
+- last reviewed: `2026-04-20`
 
 ## Purpose
 
@@ -90,6 +90,7 @@ before implementation.
 | `msv_12_blocked_use_manifest_required` | `model-output-boundary-wrapper-v0` | `mob_09_no_clinical_guidance` | `blocked_output_manifest`, `blocked_downstream_uses` | all fixture IDs | All diagnosis, prognosis, treatment, trial, monitoring, expanded-access, matching, ranking, publication, and decision outputs are visibly blocked. | Add or preserve blocked-use labels; refuse downstream use. | all blocked-use labels | `validator_implementation_plan` |
 | `msv_13_review_gate_required` | `myeloma-state-object-schema-v0` and `model-output-boundary-wrapper-v0` | `mso_09_review_gate_required`, `mob_08_review_gate_required` | `review_and_gate_state`, `review_status`, `gate_status`, `allowed_public_successor` | all fixture IDs | Review and gate states are visible before reuse. | Default to `review_needed` or `publication_gate_needed`. | `decision_authorization_blocked` | `expert_review_question` |
 | `msv_14_no_cure_or_clinical_guidance` | `model-output-boundary-wrapper-v0` | `mob_10_no_cure_claim` | `clinical_use_status`, `refusal_reason`, `blocked_downstream_uses` | all fixture IDs | No cure, vaccine, diagnosis, prognosis, treatment, trial, monitoring, urgency, or clinical-decision language appears. | Refuse unsafe language and require expert/publication review. | `diagnosis_or_classification_blocked`, `prognosis_or_monitoring_blocked`, `endpoint_interpretation_blocked`, `treatment_guidance_blocked`, `trial_or_access_guidance_blocked`, `decision_authorization_blocked` | `expert_review_question` |
+| `msv_15_residual_modality_discordance_visible` | `residual-disease-modality-discordance-source-extraction-v0`, `measurement-normalization-contract-v0`, and `model-output-boundary-wrapper-v0` | `mnc_12_no_single_modality_global_state`, `mnc_13_modality_discordance_visible`, `mob_11_modality_discordance_refusal` | `residual_disease_modality_state`, modality family, method, sample/specimen, threshold or detection status, timepoint bucket, paired-state context, source context, `limitation_note_required` | residual modality discordance fixture needed | Discordance or missing modality context remains visible and no single modality becomes a global disease-state claim. | Preserve discordance, mark `modality_collapse_blocked`, and refuse output meaning. | `endpoint_interpretation_blocked`, `prognosis_or_monitoring_blocked`, `treatment_guidance_blocked`, `matching_or_ranking_blocked`, `decision_authorization_blocked` | `synthetic_fixture_update` |
 
 ## Synthetic Scenario Coverage
 
@@ -99,6 +100,7 @@ before implementation.
 | `synthetic_state_missing_rna_v0` | `msv_00`, `msv_01`, `msv_02`, `msv_03`, `msv_04`, `msv_08`, `msv_10` through `msv_14`. | Missing RNA remains visible and cannot be treated as normal expression, lower risk, treatment fit, or no need for review. |
 | `synthetic_state_missing_single_cell_v0` | `msv_00`, `msv_01`, `msv_02`, `msv_03`, `msv_04`, `msv_08`, `msv_10` through `msv_14`. | Missing single-cell marrow state remains visible and cannot imply immune normality or block the whole synthetic state. |
 | `synthetic_state_private_source_blocked_v0` | `msv_00`, `msv_02`, `msv_05`, `msv_10`, `msv_11`, `msv_12`, `msv_13`, and `msv_14`. | Public export stays blocked; private-source status exposes no private content and cannot produce public interpretation. |
+| `synthetic_state_residual_modality_discordance_v0` | `msv_00`, `msv_01`, `msv_02`, `msv_03`, `msv_06`, `msv_10` through `msv_15`. | Residual-disease modalities remain source-scoped and discordant/missing context refuses endpoint interpretation, prognosis, monitoring, treatment, ranking, and decisions. |
 
 ## Validator Implementation Boundary
 
@@ -118,6 +120,8 @@ Any request outside those boundaries must return a blocker state, not a partial
 or inferred result.
 
 ## What This Step Revealed
+
+Residual-disease modality-discordance extraction adds one important validator pressure: future checks must preserve modality disagreement as visible structure, not normalize it away. `msv_15` therefore bridges the measurement contract, output wrapper, and source extraction table before any executable validator or synthetic fixture can reuse discordant residual-disease context.
 
 The state-object schema, synthetic fixture, and output wrapper now form a
 coherent public substrate, but their rules need explicit IDs before future

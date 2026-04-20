@@ -71,6 +71,36 @@
       "label": "Public Safety",
       "url": "../../../governance/PUBLIC_SAFETY.md",
       "accessed": "2026-04-16"
+    },
+    {
+      "label": "Residual Disease Modality Discordance Source Extraction v0",
+      "url": "residual-disease-modality-discordance-source-extraction-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Blood Mass Spectrometry MRD Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40919481/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD/PET-CT Concordance And Discordance Source",
+      "url": "https://www.sciencedirect.com/science/article/pii/S258953702600115X",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Spatial Transcriptomics Myeloma Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40643106/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Multiple Myeloma PRO Quality Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40729465/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Bone Marrow Microenvironment Drug Resistance Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40440932/",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -100,7 +130,8 @@
     "Does not contain patient-identifying data, private records, portal exports, reports, images, raw lab values, notes, exact dates tied to a person, contact details, private case IDs, private workspace paths, or re-identification keys.",
     "Does not authorize clinical interpretation, lab validity review, imaging interpretation, response assessment, relapse assessment, patient matching, trial matching, evidence ranking, option ranking, private-lab work, legal clearance, regulatory readiness, security readiness, retention decisions, emergency handling, or publication of case-derived learning.",
     "Does not validate therapy exposure, molecular, immune, evidence retrieval, trial, therapy landscape, candidate hypothesis, multidisciplinary review, monitoring-plan, or public-learning extraction semantics.",
-    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found.",
+    "Does not establish residual-disease modality interchangeability, cross-modality prognosis, monitoring guidance, treatment guidance, modality ranking, or patient-specific interpretation."
   ],
   "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-measurement-normalization-contract-v0.md"
 }

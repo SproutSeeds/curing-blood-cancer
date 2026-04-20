@@ -30,6 +30,11 @@ and follow-up duration are visible.
 - `pubmed_soh_2022_mrd_flow_harmonization`
 - `pubmed_antigen_escape_bcma_directed_2024`
 - `pubmed_di_meo_2025_sema4a_low_bcma`
+- `pubmed_wang_2025_bmme_drug_resistance`
+- `pubmed_shah_2025_mm_pro_quality`
+- `pubmed_yip_2025_spatial_transcriptomics_myeloma`
+- `eclinicalmedicine_2026_mrd_petct_concordance`
+- `pubmed_kubicki_2025_blood_ms_mrd`
 
 ## Core Terms
 
@@ -52,6 +57,11 @@ and follow-up duration are visible.
 | Antigen density | Record target name, density unit or scoring method, specimen or model context, and comparator target. | Do not infer clinical efficacy from target density. |
 | Soluble BCMA | Record blood assay, timing, paired marrow target status, and therapy sequence. | Do not use soluble BCMA alone for patient-specific interpretation. |
 | Normal-tissue reactivity screen | Record target, model system, tissue panel, assay method, and clinical translation status. | Do not treat a preclinical screen as proof of patient safety. |
+| Blood mass spectrometry MRD | Record peripheral blood or serum mass-spectrometry assay family, timing, threshold or detection-status language, paired marrow context when source-defined, and limitations. | Do not infer substitution for marrow MRD, prognosis, monitoring action, treatment adaptation, response status, or patient-specific meaning. |
+| MRD/PET-CT modality discordance | Preserve paired marrow MRD and PET-CT categories, imaging modality, marrow method/threshold, timing alignment, cohort, and endpoint role when source-defined. | Do not interpret images, infer prognosis, guide monitoring or treatment, rank modalities, or collapse discordance into one disease-state flag. |
+| Spatial marrow architecture context | Record biopsy or trephine context, spatial method, cell or niche context, cohort scope, site/sampling limitation, and method boundary. | Do not interpret biopsy, imaging, site-specific disease state, prognosis, treatment selection, or resistance status for a person. |
+| Assay/specimen quality | Preserve method lineage, threshold status, sample adequacy, specimen quality, timing alignment, duration/follow-up, and not-reported states before comparison. | Do not compare modalities or infer response, prognosis, monitoring, or decisions when quality or timing context is missing. |
+| Residual-disease modality discordance | Use as the visible uncertainty state when residual-disease modalities disagree or paired context is missing. | Do not collapse one modality into global disease status or infer patient-specific meaning, prognosis, treatment response, monitoring action, or modality ranking. |
 
 ## Minimum Fields For Future Artifacts
 
@@ -66,6 +76,8 @@ and follow-up duration are visible.
 - follow-up duration
 - source IDs
 - measurement-term IDs when a claim set depends on these terms
+- modality family and paired-modality state when comparing residual-disease signals
+- assay/specimen quality and timing alignment before cross-modality comparison
 
 ## Structured Data
 
@@ -80,6 +92,8 @@ and follow-up duration are visible.
   regulatory endpoint language in downstream artifacts.
 
 ## Next Work
+
+Residual-disease modality-discordance extraction now adds blood mass spectrometry MRD, MRD/PET-CT discordance, spatial marrow architecture, assay/specimen quality, and explicit discordance-state terms. These terms are representation boundaries only; they do not authorize interpretation, ranking, monitoring, treatment, prognosis, or cure claims.
 
 - Add disease-state-specific endpoint tables for frontline, relapsed, and
   post-CAR T settings.

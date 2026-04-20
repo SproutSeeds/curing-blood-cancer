@@ -1,0 +1,107 @@
+{
+  "artifact_id": "residual-disease-modality-discordance-source-extraction-v0",
+  "title": "Residual Disease Modality Discordance Source Extraction v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "residual disease",
+    "MRD",
+    "PET-CT",
+    "blood mass spectrometry",
+    "spatial marrow architecture",
+    "measurement discordance",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Source Registry v0",
+      "url": "../../../sources/source-registry-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Frontier Gap Sweep v0",
+      "url": "../frontier-gap-sweep-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD And Relapse Measurement Glossary v0",
+      "url": "mrd-and-relapse-measurement-glossary-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Model Output Boundary Wrapper v0",
+      "url": "../model-output-boundary-wrapper-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Myeloma State Validator Rule Map v0",
+      "url": "../myeloma-state-validator-rule-map-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Blood Mass Spectrometry MRD Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40919481/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD/PET-CT Concordance And Discordance Source",
+      "url": "https://www.sciencedirect.com/science/article/pii/S258953702600115X",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Spatial Transcriptomics Myeloma Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40643106/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Multiple Myeloma PRO Quality Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40729465/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Bone Marrow Microenvironment Drug Resistance Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40440932/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../../../orp/frontier/additional-items.json",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Public source-extraction table only.",
+    "Not a systematic review.",
+    "Not evidence ranking.",
+    "Not source ranking.",
+    "Not a response assessment.",
+    "Not an imaging interpretation.",
+    "Not a biopsy interpretation.",
+    "Not a lab-result interpretation.",
+    "Not a monitoring plan.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Does not contain patient-identifying data, real case data, raw records, images, reports, notes, exact dates tied to a person, private paths, private correspondence, or re-identification keys.",
+    "Does not collect, normalize, store, transmit, infer from, publish, compare, rank, match, recommend, or authorize use of real case data.",
+    "Does not establish assay interchangeability, endpoint acceptance, prognosis, clinical utility, model validity, deployment readiness, or publication readiness.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/residual-disease-modality-discordance-source-extraction-v0.md"
+}

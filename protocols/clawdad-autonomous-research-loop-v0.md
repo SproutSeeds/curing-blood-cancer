@@ -113,11 +113,14 @@ completed, validated, and explained in one delegate pass.
    inside
    `post-machine-representation-public-safe-research-substrate-v0`. The
    machine-representation implementation gate remains uncleared; the completed
-   MRD geometry falsification phase, no-outreach expert-validation prep, and
-   internal source-gap extraction pass are public-safe substrates, not expert
-   review or authorization for outreach.
+   MRD geometry falsification phase, no-outreach expert-validation prep,
+   internal source-gap extraction pass, frontier gap sweep, and
+   residual-disease modality-discordance source extraction are public-safe
+   substrates, not expert review or authorization for outreach.
 2. When an item completes, synthesize and activate or queue the next safe item
-   before stopping.
+   before stopping. After residual-disease modality-discordance extraction, the
+   next no-outreach successor candidate is
+   `assay-specimen-quality-failure-mode-checklist-v0`.
 3. Run [ORP Frontier Gap Sweep Mode v0](../orp/modes/frontier-gap-sweep-mode-v0.md)
    when the human asks for a direction check, when a delegate sees stale state,
    or when the next public-safe item is not obvious.

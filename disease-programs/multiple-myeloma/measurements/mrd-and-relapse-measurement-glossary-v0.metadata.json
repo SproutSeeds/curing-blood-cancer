@@ -39,6 +39,36 @@
       "label": "PubMed literature anchor: SEMA4A and low BCMA antigen density",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41072416/",
       "accessed": "2026-04-14"
+    },
+    {
+      "label": "Residual Disease Modality Discordance Source Extraction v0",
+      "url": "residual-disease-modality-discordance-source-extraction-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Blood Mass Spectrometry MRD Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40919481/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD/PET-CT Concordance And Discordance Source",
+      "url": "https://www.sciencedirect.com/science/article/pii/S258953702600115X",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Spatial Transcriptomics Myeloma Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40643106/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Multiple Myeloma PRO Quality Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40729465/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Bone Marrow Microenvironment Drug Resistance Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40440932/",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -48,7 +78,8 @@
     "Not a treatment recommendation.",
     "Not a trial recommendation.",
     "Does not establish clinical actionability for any MRD result.",
-    "Requires expert review before use as an educational anchor."
+    "Requires expert review before use as an educational anchor.",
+    "Does not establish assay interchangeability, modality ranking, prognosis, monitoring action, treatment guidance, or patient-specific residual-disease interpretation."
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-and-relapse-measurement-glossary-v0.md"
 }

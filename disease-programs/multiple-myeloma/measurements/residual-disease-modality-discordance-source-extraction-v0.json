@@ -1,0 +1,262 @@
+{
+  "artifact_id": "residual-disease-modality-discordance-source-extraction-v0",
+  "date": "2026-04-20",
+  "title": "Residual Disease Modality Discordance Source Extraction v0",
+  "disease_program": "multiple-myeloma",
+  "claim_level": "open-question",
+  "execution_mode": "public-source-extraction-only",
+  "clinical_use_boundary": [
+    "research-use-only",
+    "not-medical-advice",
+    "not-diagnostic-guidance",
+    "not-prognosis-guidance",
+    "not-treatment-guidance",
+    "not-trial-guidance",
+    "not-monitoring-guidance"
+  ],
+  "data_boundary": [
+    "public-source-only",
+    "synthetic-only",
+    "no-real-case-data",
+    "no-identifiers",
+    "no-records",
+    "no-uploads",
+    "no-images",
+    "no-raw-values",
+    "no-private-correspondence"
+  ],
+  "source_ids": [
+    "pubmed_kumar_2016_imwg_mrd_response_criteria",
+    "pubmed_soh_2022_mrd_flow_harmonization",
+    "fda_mrd_cr_endpoint_guidance_2026",
+    "pubmed_kubicki_2025_blood_ms_mrd",
+    "eclinicalmedicine_2026_mrd_petct_concordance",
+    "pubmed_yip_2025_spatial_transcriptomics_myeloma",
+    "nature_cancer_immune_atlas_myeloma_2026",
+    "pubmed_wang_2025_bmme_drug_resistance",
+    "pubmed_shah_2025_mm_pro_quality",
+    "pubmed_palumbo_2015_imwg_frailty"
+  ],
+  "local_artifact_ids": [
+    "mrd-and-relapse-measurement-glossary-v0",
+    "measurement-normalization-contract-v0",
+    "mrd-endpoint-language-guardrail-addendum-v0",
+    "model-output-boundary-wrapper-v0",
+    "myeloma-state-validator-rule-map-v0",
+    "machine-representation-source-extraction-v0",
+    "machine-representation-stack-v0",
+    "mrd-resistance-geometry-transition-model-v0",
+    "myeloma-residual-state-object-v0",
+    "case-feature-normalization-contract-v0",
+    "therapy-exposure-timeline-contract-v0"
+  ],
+  "modality_records": [
+    {
+      "record_id": "rdm_00_marrow_mrd_anchor",
+      "modality_or_context": "bone-marrow-mrd",
+      "source_ids": [
+        "pubmed_kumar_2016_imwg_mrd_response_criteria",
+        "pubmed_soh_2022_mrd_flow_harmonization",
+        "fda_mrd_cr_endpoint_guidance_2026"
+      ],
+      "local_anchor_ids": [
+        "mrd-and-relapse-measurement-glossary-v0",
+        "measurement-normalization-contract-v0"
+      ],
+      "required_state": "marrow_mrd_source_scoped",
+      "public_extraction": "Preserve method, sample, threshold, timepoint, disease-state context, endpoint role, source status, and limitation note.",
+      "blocked_inference": "No cure claim, no no-disease-anywhere claim, no patient MRD interpretation, and no monitoring action."
+    },
+    {
+      "record_id": "rdm_01_blood_mass_spectrometry_anchor",
+      "modality_or_context": "blood-mass-spectrometry-residual-disease-context",
+      "source_ids": [
+        "pubmed_kubicki_2025_blood_ms_mrd"
+      ],
+      "local_anchor_ids": [
+        "mrd-and-relapse-measurement-glossary-v0",
+        "measurement-normalization-contract-v0"
+      ],
+      "required_state": "blood_ms_complementary_context",
+      "public_extraction": "Preserve assay family, serum or peripheral-blood context, paired marrow context when source-defined, timing, cohort, threshold or detection-status language, and limitation note.",
+      "blocked_inference": "No substitution for marrow MRD, monitoring plan, prognosis, treatment adaptation, or response call."
+    },
+    {
+      "record_id": "rdm_02_pet_ct_imaging_anchor",
+      "modality_or_context": "pet-ct-residual-disease-context",
+      "source_ids": [
+        "eclinicalmedicine_2026_mrd_petct_concordance"
+      ],
+      "local_anchor_ids": [
+        "mrd-and-relapse-measurement-glossary-v0",
+        "mrd-endpoint-language-guardrail-addendum-v0",
+        "measurement-normalization-contract-v0"
+      ],
+      "required_state": "mrd_petct_discordance_visible",
+      "public_extraction": "Preserve paired modality state, imaging modality, timing alignment, marrow MRD method and threshold, cohort, endpoint role, and source-defined discordance category.",
+      "blocked_inference": "No image interpretation, prognosis for a person, monitoring advice, treatment adaptation, or lesion/site call."
+    },
+    {
+      "record_id": "rdm_03_spatial_trephine_anchor",
+      "modality_or_context": "spatial-marrow-architecture-context",
+      "source_ids": [
+        "pubmed_yip_2025_spatial_transcriptomics_myeloma",
+        "nature_cancer_immune_atlas_myeloma_2026"
+      ],
+      "local_anchor_ids": [
+        "machine-representation-stack-v0"
+      ],
+      "required_state": "spatial_context_research_only",
+      "public_extraction": "Preserve biopsy/specimen context, spatial method, cell or niche context, cohort scope, site/sampling limitation, and method boundary.",
+      "blocked_inference": "No biopsy interpretation, diagnostic site call, imaging advice, treatment selection, or prognosis."
+    },
+    {
+      "record_id": "rdm_04_microenvironment_niche_anchor",
+      "modality_or_context": "microenvironment-niche-context",
+      "source_ids": [
+        "nature_cancer_immune_atlas_myeloma_2026",
+        "pubmed_wang_2025_bmme_drug_resistance"
+      ],
+      "local_anchor_ids": [
+        "mrd-resistance-geometry-transition-model-v0",
+        "myeloma-residual-state-object-v0"
+      ],
+      "required_state": "microenvironment_context_source_scoped",
+      "public_extraction": "Preserve microenvironment, immune, stromal, niche, and resistance context as cohort/source-level biology only.",
+      "blocked_inference": "No mechanism ranking, target selection, treatment guidance, or resistance call for a person."
+    },
+    {
+      "record_id": "rdm_05_assay_quality_timing_anchor",
+      "modality_or_context": "assay-specimen-quality-and-timing-context",
+      "source_ids": [
+        "pubmed_soh_2022_mrd_flow_harmonization",
+        "fda_mrd_cr_endpoint_guidance_2026",
+        "eclinicalmedicine_2026_mrd_petct_concordance"
+      ],
+      "local_anchor_ids": [
+        "measurement-normalization-contract-v0"
+      ],
+      "required_state": "assay_quality_or_timing_needed",
+      "public_extraction": "Preserve method lineage, threshold status, sample context, timing alignment, duration/follow-up, and not-reported states before comparison.",
+      "blocked_inference": "No cross-modality comparison, response call, monitoring action, or clinical decision."
+    },
+    {
+      "record_id": "rdm_06_host_burden_context_anchor",
+      "modality_or_context": "host-burden-non-tumor-context",
+      "source_ids": [
+        "pubmed_shah_2025_mm_pro_quality",
+        "pubmed_palumbo_2015_imwg_frailty"
+      ],
+      "local_anchor_ids": [
+        "case-feature-normalization-contract-v0",
+        "therapy-exposure-timeline-contract-v0"
+      ],
+      "required_state": "host_context_not_residual_disease",
+      "public_extraction": "Preserve PRO, frailty, toxicity-burden, function, and missingness context as host-state context separate from residual-disease measurement.",
+      "blocked_inference": "No fitness-for-treatment, safety management, dose guidance, eligibility guidance, or patient-specific burden assessment."
+    },
+    {
+      "record_id": "rdm_07_output_refusal_anchor",
+      "modality_or_context": "output-wrapper-and-validator-refusal-context",
+      "source_ids": [],
+      "local_anchor_ids": [
+        "model-output-boundary-wrapper-v0",
+        "myeloma-state-validator-rule-map-v0",
+        "residual-disease-modality-discordance-source-extraction-v0"
+      ],
+      "required_state": "modality_discordance_visible",
+      "public_extraction": "Preserve discordance as a visible uncertainty and refusal reason.",
+      "blocked_inference": "No score, probability, MRD interpretation, response probability, progression risk, treatment recommendation, or monitoring recommendation."
+    }
+  ],
+  "discordance_rules": [
+    {
+      "rule_id": "rdm_rule_00_no_single_modality_global_state",
+      "rule": "A negative or positive residual-disease signal in one modality cannot become a global disease-state claim.",
+      "fail_closed_action": "Preserve modality family and mark cross-modality state not_established."
+    },
+    {
+      "rule_id": "rdm_rule_01_paired_modalities_stay_paired",
+      "rule": "Paired marrow MRD and PET-CT categories must remain paired and source-defined when a source reports them.",
+      "fail_closed_action": "Keep all reported paired states distinct; do not collapse into one binary flag."
+    },
+    {
+      "rule_id": "rdm_rule_02_blood_ms_is_complementary_context",
+      "rule": "Peripheral blood mass spectrometry may be represented as complementary source context only.",
+      "fail_closed_action": "Block substitution for marrow MRD and require assay, threshold or detection-status, timing, and limitation notes."
+    },
+    {
+      "rule_id": "rdm_rule_03_spatial_missingness_not_absence",
+      "rule": "Missing spatial or site-state context cannot imply absence of focal, spatially restricted, or extramedullary disease.",
+      "fail_closed_action": "Preserve spatial_context_missing and block interpretation."
+    },
+    {
+      "rule_id": "rdm_rule_04_assay_quality_before_comparison",
+      "rule": "Cross-modality comparison requires method, threshold, sample or specimen, timing, and source status.",
+      "fail_closed_action": "Mark assay_quality_or_timing_needed and block comparison language."
+    },
+    {
+      "rule_id": "rdm_rule_05_output_wrapper_refuses_meaning",
+      "rule": "A future output wrapper can expose discordance or missingness state but cannot explain what it means for a person.",
+      "fail_closed_action": "Return refusal labels for prognosis, endpoint interpretation, monitoring, treatment, ranking, and decisions."
+    }
+  ],
+  "synthetic_fixture_pressure": [
+    {
+      "fixture_pressure_id": "rdm_fixture_00_marrow_negative_pet_positive",
+      "shape": "Synthetic source context where marrow MRD is negative and PET-CT is positive in a source-defined paired category.",
+      "expected_boundary": "Preserve discordance; no prognosis, monitoring, imaging interpretation, or treatment action."
+    },
+    {
+      "fixture_pressure_id": "rdm_fixture_01_marrow_positive_pet_negative",
+      "shape": "Synthetic source context where marrow MRD is positive and PET-CT is negative.",
+      "expected_boundary": "Preserve discordance; no modality ranking or clinical inference."
+    },
+    {
+      "fixture_pressure_id": "rdm_fixture_02_blood_ms_negative_marrow_missing",
+      "shape": "Blood mass-spectrometry negativity with marrow context missing.",
+      "expected_boundary": "Mark complementary context only; block substitution and response call."
+    },
+    {
+      "fixture_pressure_id": "rdm_fixture_03_spatial_context_missing",
+      "shape": "Synthetic state has marrow MRD and immune context but no spatial or site-state data.",
+      "expected_boundary": "Missing spatial context remains visible and cannot imply absence of focal disease."
+    },
+    {
+      "fixture_pressure_id": "rdm_fixture_04_assay_quality_missing",
+      "shape": "MRD status reported without threshold, sample quality, or timing alignment.",
+      "expected_boundary": "Mark source-context-needed; block cross-modality comparison."
+    }
+  ],
+  "blocked_outputs": [
+    "real-case-data-processing",
+    "patient-specific-mrd-interpretation",
+    "patient-specific-imaging-interpretation",
+    "prognosis",
+    "monitoring-guidance",
+    "treatment-guidance",
+    "trial-guidance",
+    "eligibility-guidance",
+    "expanded-access-guidance",
+    "ranking",
+    "matching",
+    "model-validation",
+    "publication-authorization",
+    "cure-claim"
+  ],
+  "handoff": {
+    "status": "complete-public-source-extraction-table",
+    "active_blocker_remains": "machine-representation-expert-validation-human-authorization-blocker-v0",
+    "recommended_next_no_outreach_successor": "assay-specimen-quality-failure-mode-checklist-v0",
+    "blocked_until_human_authorization": [
+      "expert-validation-execution",
+      "outreach",
+      "issue-operations",
+      "response-intake",
+      "private-lab-work",
+      "clinical-interpretation",
+      "claim-upgrade",
+      "publication"
+    ]
+  }
+}

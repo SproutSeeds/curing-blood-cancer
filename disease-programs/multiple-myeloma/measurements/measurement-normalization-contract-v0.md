@@ -10,13 +10,14 @@ Stewarded by [frg.earth](https://frg.earth/).
 - clinical boundary: research-use-only, not medical advice
 - data boundary: no real case data, no identifiers, no records, no images,
   no raw lab values, no exact dates, no fillable public measurement record
-- last reviewed: `2026-04-16`
+- last reviewed: `2026-04-20`
 
 ## Purpose
 
 This contract defines the public-safe shape for MRD, response, relapse, lab,
-imaging, target-measurement, and endpoint-context fields that may later be used
-inside a governed private multiple myeloma case-to-cure workflow.
+imaging, target-measurement, residual-disease modality-discordance, and
+endpoint-context fields that may later be used inside a governed private
+multiple myeloma case-to-cure workflow.
 
 It exists so downstream artifacts can preserve method, threshold, sample,
 timepoint, durability, endpoint role, source context, uncertainty, and
@@ -77,6 +78,7 @@ before any downstream artifact reuses it:
 | `disease_state_context` | Source-defined cohort or case-feature context bucket, or `disease_state_needed`. | Do not infer personal diagnosis, stage, relapse, or refractory status. |
 | `treatment_context_state` | `class_context_source_defined`, `study_arm_context_source_defined`, `treatment_context_needed`, `no_treatment_context_present`, or `private_only`. | Treatment context supports provenance only; it cannot become treatment guidance. |
 | `source_ids` | Public source IDs, artifact IDs, or `provenance_needed`. | Public source IDs are required before reuse. |
+| `residual_disease_modality_state` | `single_modality_source_scoped`, `paired_modality_source_scoped`, `modality_discordance_visible`, `modality_missing`, `modality_comparison_blocked`, or `private_only`. | Cross-modality state is a representation boundary only; it cannot become prognosis, monitoring, treatment, response, or global disease-state interpretation. |
 | `review_status` | `not_reviewed`, `measurement_review_needed`, `lab_validity_review_needed`, `clinician_review_needed`, `privacy_review_needed`, `publication_gate_needed`, `reviewed_private`, or `public_shape_only`. | Missing review blocks interpretation. |
 | `limitation_note_required` | `true`. | Every measurement group needs a limitation note before downstream reuse. |
 | `allowed_public_successor` | `schema_improvement`, `synthetic_fixture`, `public_task`, `therapy_timeline_contract`, `molecular_immune_contract`, `evidence_packet_skeleton`, or `none`. | Successor must match the missing dependency and cannot bypass gates. |
@@ -93,6 +95,7 @@ before any downstream artifact reuses it:
 | Imaging measurement | Imaging-context field name, source-defined response or lesion context, and limitation note. | Modality/source context, timepoint bucket, review status, and privacy gate. | Do not publish images, read scans, identify sites, infer progression, or guide monitoring. |
 | Endpoint context | Study-level endpoint role, population denominator, source status, duration, and limitation note. | Endpoint role, denominator, source IDs, follow-up or duration, and public-source date. | Do not convert population endpoints into individual prognosis, product status, availability, or treatment guidance. |
 | Target or antigen measurement | Source-defined target assay, antigen density, soluble marker, or normal-tissue screen context. | Target name, method, sample or model context, comparator, timepoint, and source limitations. | Do not infer actionability, treatment fit, test need, safety, efficacy, or trial fit. |
+| Residual-disease modality comparison | Source-defined comparison context across marrow MRD, blood mass spectrometry, PET-CT/imaging, spatial marrow architecture, microenvironment, and host-context fields. | Modality family, method, specimen/sample, threshold or detection-status, timing alignment, paired-state context, source IDs, assay/specimen quality, review status, and limitation note. | Do not create a global disease-state flag, substitute one modality for another, interpret images or biopsies, rank modalities, infer prognosis, guide monitoring, guide treatment, or make patient-specific response calls. |
 
 ## Unknown And Missing-State Rules
 
@@ -109,6 +112,7 @@ Unknown and missing measurement states must remain first-class values:
 | `numeric_private` | A numeric value may exist privately. | Do not project the value publicly. |
 | `qualitative_private` | A qualitative interpretation may exist privately. | Do not project the interpretation publicly. |
 | `blocked_from_public` | The field is unsafe to reuse publicly. | Remove, rewrite as a generic task, or keep private. |
+| `modality_discordance_visible` | Residual-disease modalities disagree or paired context is incomplete. | Preserve the discordance state and block patient-specific meaning, prognosis, monitoring, treatment, and ranking. |
 
 Missing data is never evidence of no disease, absence of relapse, safety,
 efficacy, prognosis, treatment fit, trial fit, monitoring need, urgency, or
@@ -130,6 +134,8 @@ cure.
 | `mnc_09_population_not_prognosis` | PFS, OS, response rates, or study endpoints cannot become patient-specific prognosis or option ranking. | Rewrite as population-level source context only. |
 | `mnc_10_regulatory_context_non_advisory` | Draft, nonbinding, or regulatory endpoint context cannot imply product status, availability, eligibility, or treatment choice. | Add limitation text or block. |
 | `mnc_11_successor_match` | Measurement gaps must route to the correct public-safe successor. | Route therapy context to `therapy-exposure-timeline-contract-v0`, molecular context to `molecular-immune-context-contract-v0`, and evidence context to `evidence-retrieval-packet-v0` only after prerequisites close. |
+| `mnc_12_no_single_modality_global_state` | A residual-disease signal from one modality cannot become a global disease-state, response, prognosis, treatment, monitoring, or cure claim. | Preserve modality family and mark cross-modality state `not_established` or `modality_discordance_visible`. |
+| `mnc_13_modality_discordance_visible` | Paired residual-disease modalities, blood-based assays, spatial context, and host context must keep disagreement or missingness visible before reuse. | Route to `residual-disease-modality-discordance-source-extraction-v0`, require assay/specimen quality context, and block interpretation. |
 
 ## Synthetic Test Cases
 
@@ -144,12 +150,16 @@ These cases describe validator expectations. They are not real case records.
 | `mnc_test_05_relapse_undefined` | Relapse term lacks event definition or measurement trigger. | Mark `source-context-needed`; block cross-source comparison. |
 | `mnc_test_06_pfs_population_only` | PFS endpoint from a study is reused in a case-feature context. | Preserve population endpoint context; block patient-specific prognosis. |
 | `mnc_test_07_public_shape_ok` | Generic measurement group with source term, method state, sample context, threshold status, timepoint bucket, endpoint role, source IDs, review status, and limitation note. | Allow as schema planning or public-source extraction shape only. |
+| `mnc_test_08_marrow_petct_discordance` | Source-defined paired context has marrow MRD negative and PET-CT positive, or the reverse. | Preserve `modality_discordance_visible`; block prognosis, monitoring, imaging interpretation, treatment action, and modality ranking. |
+| `mnc_test_09_blood_ms_without_marrow` | Blood mass spectrometry residual-disease result is reported while marrow context is missing. | Mark `blood_ms_complementary_context`; block substitution for marrow MRD, response calls, monitoring, prognosis, and treatment adaptation. |
 
 ## What This Step Revealed
 
 The public repo can safely define a measurement envelope, but measurement terms
 depend on therapy timing, exposure, line context, and source-defined treatment
 context before downstream evidence retrieval can be meaningful.
+
+A later public-source extraction pass completed [Residual Disease Modality Discordance Source Extraction v0](residual-disease-modality-discordance-source-extraction-v0.md). This contract now treats cross-modality residual-disease disagreement as a first-class visible state rather than a field to collapse. The next no-outreach successor, if selected, is `assay-specimen-quality-failure-mode-checklist-v0` so method, specimen, threshold, timing, and quality failures stay explicit before any future synthetic fixture or validator work.
 
 The safest next public step is therefore
 `therapy-exposure-timeline-contract-v0`: a shape-only contract for prior
@@ -176,6 +186,8 @@ The following remain blocked outside this artifact:
 
 ORP should mark this item complete and activate
 `therapy-exposure-timeline-contract-v0` next.
+
+A later residual-disease modality-discordance update extends this complete shape contract without clearing any human gate. ORP should keep `machine-representation-expert-validation-human-authorization-blocker-v0` active while treating `assay-specimen-quality-failure-mode-checklist-v0` as the next no-outreach public-source successor if selected.
 
 ## Public Safety Check
 

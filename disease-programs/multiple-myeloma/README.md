@@ -72,6 +72,7 @@ research directions deserve structured public tracking.
 - [Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md)
 - [Machine Representation Expert Validation No-Outreach Execution Packet v0](reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.md)
 - [Machine Representation Source-Gap Internal Extraction v0](machine-representation-source-gap-internal-extraction-v0.md)
+- [Residual Disease Modality Discordance Source Extraction v0](measurements/residual-disease-modality-discordance-source-extraction-v0.md)
 - [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
 - [Caregiver Intake Public Projection Checklist v0](case-intake/caregiver-intake-public-projection-checklist-v0.md)
 - [Private Intake Schema Contract v0](case-intake/private-intake-schema-contract-v0.md)
@@ -127,6 +128,7 @@ research directions deserve structured public tracking.
 - [MRD And Relapse Measurement Glossary v0](measurements/mrd-and-relapse-measurement-glossary-v0.md)
 - [MRD Endpoint Language Guardrail Addendum v0](measurements/mrd-endpoint-language-guardrail-addendum-v0.md)
 - [Measurement Normalization Contract v0](measurements/measurement-normalization-contract-v0.md)
+- [Residual Disease Modality Discordance Source Extraction v0](measurements/residual-disease-modality-discordance-source-extraction-v0.md)
 - [MRD Endpoint Source Extraction Task Draft v0](public-tasks/issue-drafts/multiple-myeloma-mrd-endpoint-source-extraction-task-v0.md)
 - [Immune Therapy Sequencing And Access Boundary v0](therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md)
 - [Therapy Exposure Timeline Contract v0](therapy-landscapes/therapy-exposure-timeline-contract-v0.md)
@@ -200,3 +202,8 @@ research directions deserve structured public tracking.
 - `pubmed_probast_2019_prediction_model_risk_of_bias`
 - `fda_imdrf_gmlp_guiding_principles_2025`
 - `pmc_decide_ai_2022_early_clinical_eval`
+- `pubmed_wang_2025_bmme_drug_resistance`
+- `pubmed_shah_2025_mm_pro_quality`
+- `pubmed_yip_2025_spatial_transcriptomics_myeloma`
+- `eclinicalmedicine_2026_mrd_petct_concordance`
+- `pubmed_kubicki_2025_blood_ms_mrd`

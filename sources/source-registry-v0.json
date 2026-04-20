@@ -574,6 +574,56 @@
       "claim_limits": ["IMWG policy review; use for source-defined relapsed/refractory and prior-line context only, not patient-specific treatment selection, sequencing, access, eligibility, prognosis, or trial guidance."]
     },
     {
+      "source_id": "pubmed_kubicki_2025_blood_ms_mrd",
+      "owner": "Kubicki et al. / Blood Neoplasia",
+      "source_type": "open-access clinical-trial pooled analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40919481/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "minimal residual disease", "peripheral blood", "mass spectrometry", "LC-MS", "EXENT"],
+      "claim_uses": ["literature-search", "measurement-standard", "residual-disease-modality-context", "blood-mrd-context"],
+      "claim_limits": ["Blood mass-spectrometry MRD source; use for source-specific modality context only, not as a substitute for marrow MRD, monitoring advice, prognosis, treatment selection, or patient-specific interpretation."]
+    },
+    {
+      "source_id": "eclinicalmedicine_2026_mrd_petct_concordance",
+      "owner": "eClinicalMedicine",
+      "source_type": "systematic review and meta-analysis",
+      "url": "https://www.sciencedirect.com/science/article/pii/S258953702600115X",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "bone marrow MRD", "PET-CT", "modality concordance", "modality discordance", "response assessment"],
+      "claim_uses": ["literature-search", "measurement-standard", "residual-disease-modality-context", "imaging-residual-disease-context"],
+      "claim_limits": ["Study-level systematic review/meta-analysis; use for public modality-discordance context only, not patient-specific prognosis, imaging interpretation, monitoring guidance, treatment adaptation, or response calls."]
+    },
+    {
+      "source_id": "pubmed_yip_2025_spatial_transcriptomics_myeloma",
+      "owner": "Yip et al. / Blood",
+      "source_type": "open-access research article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40643106/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "bone marrow trephine biopsy", "spatial transcriptomics", "marrow architecture", "plasma-cell niches"],
+      "claim_uses": ["literature-search", "genomics-data", "spatial-context", "residual-disease-modality-context", "machine-representation"],
+      "claim_limits": ["Spatial transcriptomics cohort source; use for public spatial/marrow-architecture context only, not diagnostic imaging or biopsy interpretation, site-specific disease calls, treatment selection, prognosis, or patient-specific interpretation."]
+    },
+    {
+      "source_id": "pubmed_shah_2025_mm_pro_quality",
+      "owner": "Shah et al. / European Journal of Haematology",
+      "source_type": "systematic review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40729465/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "patient-reported outcomes", "quality of life", "trial protocols", "missing data"],
+      "claim_uses": ["literature-search", "context-modifier", "patient-reported-outcome-context", "model-validation"],
+      "claim_limits": ["PRO methodology source; use for public source-context and missingness language only, not quality-of-life prediction, treatment fit, safety management, or patient-specific guidance."]
+    },
+    {
+      "source_id": "pubmed_wang_2025_bmme_drug_resistance",
+      "owner": "Wang et al. / Seminars in Diagnostic Pathology",
+      "source_type": "review article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40440932/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "bone marrow microenvironment", "niches", "drug resistance", "disease progression"],
+      "claim_uses": ["literature-search", "mechanism-map", "spatial-context", "residual-disease-modality-context", "microenvironment-context"],
+      "claim_limits": ["Review article; use for public microenvironment and niche-context framing only, not mechanism ranking, treatment targeting, prognosis, or patient-specific interpretation."]
+    },
+    {
       "source_id": "pubmed",
       "owner": "U.S. National Library of Medicine",
       "source_type": "literature index",

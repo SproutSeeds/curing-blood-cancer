@@ -5,7 +5,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - disease program: `multiple-myeloma`
 - roadmap status: `active-frontier-v0`
 - claim level: `open-question`
-- last reviewed: `2026-04-16`
+- last reviewed: `2026-04-20`
 - clinical boundary: research-use-only, not medical advice
 
 ## Purpose
@@ -78,6 +78,7 @@ The frontier loop should inspect these public artifacts before each pass:
 - [Case-To-Cure Adaptive Master Plan v0](case-to-cure-adaptive-master-plan-v0.md)
 - [Case-To-Cure Pipeline Blueprint v0](case-to-cure-pipeline-blueprint-v0.md)
 - [Myeloma Machine Representation Stack v0](machine-representation-stack-v0.md)
+- [Residual Disease Modality Discordance Source Extraction v0](measurements/residual-disease-modality-discordance-source-extraction-v0.md)
 - [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
 - [Static Synthetic Caregiver Intake Frontend Smoke Test v0](case-intake/static-synthetic-caregiver-intake-frontend-smoke-test-v0.md)
 - [Public Loop Completion Handoff v0](public-loop-completion-handoff-v0.md)
@@ -393,7 +394,7 @@ Completion criteria:
 | Lane | First Frontier Artifact | Next Shape Or Tooling Need | Validation | Done Criteria |
 | --- | --- | --- | --- | --- |
 | Expert response intake | [Expert Response Validation Ledger v0](reviews/expert-response-validation-ledger-v0.md) | future disposition schema or issue-update task, only after public-source-backed responses are triaged | metadata, catalog, link check | all validation issues have status and next action; expert-review-needed remains until a safe public disposition is recorded |
-| MRD and endpoints | [MRD Endpoint Language Guardrail Addendum v0](measurements/mrd-endpoint-language-guardrail-addendum-v0.md) | source extraction task, then measurement-context record shape | `make validate` plus source IDs | response depth cannot be read as cure claim |
+| MRD and endpoints | [MRD Endpoint Language Guardrail Addendum v0](measurements/mrd-endpoint-language-guardrail-addendum-v0.md) plus [Residual Disease Modality Discordance Source Extraction v0](measurements/residual-disease-modality-discordance-source-extraction-v0.md) | assay/specimen quality failure-mode checklist, then synthetic fixture pressure | `make validate` plus source IDs | response depth and residual-disease modality context cannot be read as cure, prognosis, monitoring, treatment, or global disease-state claims |
 | Immune therapy sequencing | [Immune Therapy Sequencing And Access Boundary v0](therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md) | validated therapy landscape record shape | metadata, catalog, source IDs | no treatment, trial, or access advice |
 | Post-BCMA resistance | [Post-BCMA Resistance Frontier Addendum v0](mechanisms/post-bcma-resistance-frontier-addendum-v0.md) | validated contradiction-register shape before any dashboard or scoring work | metadata, catalog, claim-level, and gap reference validation | mechanisms link to public gaps and cannot imply patient options |
 | Precursor/interception | [Precursor, Risk, And Interception Boundary Note v0](precursors/precursor-risk-interception-boundary-note-v0.md) | source extraction issue drafts and no-calculator risk-context shape | metadata, catalog, source registry, and source review | no screening or personal risk tooling |
@@ -538,11 +539,18 @@ clinical interpretation, publication, and expert-review claim upgrades remain
 blocked unless a human explicitly authorizes scope or selects a new named
 no-outreach public-source phase.
 
+The completed queue item now also includes
+`residual-disease-modality-discordance-source-extraction-v0`, captured as
+[Residual Disease Modality Discordance Source Extraction v0](measurements/residual-disease-modality-discordance-source-extraction-v0.md).
+
 The current direction-check artifact is
 [Multiple Myeloma Frontier Gap Sweep v0](frontier-gap-sweep-v0.md), which
-promotes residual-disease modality discordance, spatial/imaging context,
+promoted residual-disease modality discordance, spatial/imaging context,
 blood-based MRD, assay/specimen quality, human fitness/toxicity, and
-transportability/bias as the next obvious public-safe research gaps.
+transportability/bias as the next obvious public-safe research gaps. The
+selected residual-disease modality-discordance source extraction is now
+complete; the next no-outreach public-source successor, if selected, is
+`assay-specimen-quality-failure-mode-checklist-v0`.
 
 Completion criteria:
 
@@ -650,6 +658,11 @@ This frontier phase is complete when:
 
 - [NCI Plasma Cell Neoplasms / Multiple Myeloma Treatment PDQ](https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq)
 - [FDA Draft Guidance On MRD And Complete Response In Multiple Myeloma](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated)
+- [Bone Marrow Microenvironment Drug Resistance Source](https://pubmed.ncbi.nlm.nih.gov/40440932/)
+- [Multiple Myeloma PRO Quality Source](https://pubmed.ncbi.nlm.nih.gov/40729465/)
+- [Spatial Transcriptomics Myeloma Source](https://pubmed.ncbi.nlm.nih.gov/40643106/)
+- [MRD/PET-CT Concordance And Discordance Source](https://www.sciencedirect.com/science/article/pii/S258953702600115X)
+- [Blood Mass Spectrometry MRD Source](https://pubmed.ncbi.nlm.nih.gov/40919481/)
 - [FDA Linvoseltamab Accelerated Approval Notice](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-linvoseltamab-gcpt-relapsed-or-refractory-multiple-myeloma)
 - [Dana-Farber Multiple Myeloma CAR T-Cell Therapy Update](https://www.dana-farber.org/for-physicians/clinical-resources/hematologic-malignancies/advances-newsletter/2025-issue-20/multiple-myeloma-cart-t-cell-therapy-update)
 - [IMWG Frailty Report](https://pubmed.ncbi.nlm.nih.gov/25628469/)

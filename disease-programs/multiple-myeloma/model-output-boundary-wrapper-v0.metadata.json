@@ -80,6 +80,31 @@
       "label": "Machine Representation Source Extraction v0",
       "url": "machine-representation-source-extraction-v0.md",
       "accessed": "2026-04-18"
+    },
+    {
+      "label": "Residual Disease Modality Discordance Source Extraction v0",
+      "url": "measurements/residual-disease-modality-discordance-source-extraction-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Blood Mass Spectrometry MRD Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40919481/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD/PET-CT Concordance And Discordance Source",
+      "url": "https://www.sciencedirect.com/science/article/pii/S258953702600115X",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Spatial Transcriptomics Myeloma Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40643106/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Bone Marrow Microenvironment Drug Resistance Source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40440932/",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -107,7 +132,8 @@
     "Does not contain patient-identifying data, real case data, raw records, molecular reports, pathology reports, flow reports, images, notes, exact dates tied to a person, private paths, private case IDs, private correspondence, or re-identification keys.",
     "Does not collect, normalize, store, transmit, train on, infer from, publish, compare, rank, match, recommend, or authorize use of real case data.",
     "Does not output patient-specific progression risk, response probability, MRD interpretation, resistance attribution, treatment recommendations, trial recommendations, monitoring actions, candidate option rankings, or clinical decisions.",
-    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found.",
+    "Does not interpret residual-disease modality discordance or missing modality context for a person."
   ],
   "private_upstream": "curing-blood-cancer-lab/export-candidates/model-output-boundary-wrapper-v0.md"
 }

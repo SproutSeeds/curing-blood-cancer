@@ -1,6 +1,6 @@
 {
   "glossary_id": "mrd-and-relapse-measurement-glossary-v0",
-  "date": "2026-04-14",
+  "date": "2026-04-20",
   "disease_program": "multiple-myeloma",
   "title": "MRD And Relapse Measurement Glossary v0",
   "blood_cancer_scope": [
@@ -16,7 +16,12 @@
     "pubmed_munshi_2017_mrd_survival_meta_analysis",
     "pubmed_soh_2022_mrd_flow_harmonization",
     "pubmed_antigen_escape_bcma_directed_2024",
-    "pubmed_di_meo_2025_sema4a_low_bcma"
+    "pubmed_di_meo_2025_sema4a_low_bcma",
+    "pubmed_kubicki_2025_blood_ms_mrd",
+    "eclinicalmedicine_2026_mrd_petct_concordance",
+    "pubmed_yip_2025_spatial_transcriptomics_myeloma",
+    "pubmed_shah_2025_mm_pro_quality",
+    "pubmed_wang_2025_bmme_drug_resistance"
   ],
   "terms": [
     {
@@ -512,15 +517,169 @@
       "limitations": [
         "Preclinical safety-context assays do not replace clinical safety evidence."
       ]
+    },
+    {
+      "term_id": "blood-mass-spectrometry-mrd",
+      "label": "Blood mass spectrometry MRD",
+      "term_kind": "assay-context",
+      "definition": "A source-defined peripheral blood or serum residual-disease measurement context using mass spectrometry methods.",
+      "measurement_context": [
+        "Record assay family, peripheral blood or serum context, threshold or detection-status wording, timing, cohort, and paired marrow context when source-defined.",
+        "Use as complementary residual-disease source context, not as a public substitute for marrow MRD."
+      ],
+      "source_ids": [
+        "pubmed_kubicki_2025_blood_ms_mrd"
+      ],
+      "related_term_ids": [
+        "bone-marrow-mrd",
+        "mrd-negativity",
+        "residual-disease-modality-discordance"
+      ],
+      "use_in_public_artifacts": [
+        "Use when a public source reports blood-based mass spectrometry residual-disease context.",
+        "Keep the assay family and limitation note visible before downstream reuse."
+      ],
+      "what_not_to_infer": [
+        "Do not infer substitution for marrow MRD.",
+        "Do not infer prognosis, monitoring action, treatment adaptation, response status, or patient-specific meaning."
+      ],
+      "limitations": [
+        "Blood mass spectrometry context depends on assay method, timing, threshold or detection status, cohort, and paired-modality context."
+      ]
+    },
+    {
+      "term_id": "mrd-petct-modality-discordance",
+      "label": "MRD/PET-CT modality discordance",
+      "term_kind": "measurement-boundary",
+      "definition": "A source-defined paired-modality state where marrow MRD and PET-CT or imaging residual-disease context do not collapse into a single global disease flag.",
+      "measurement_context": [
+        "Record paired marrow MRD method, threshold, imaging modality, timing alignment, cohort, endpoint role, and source-defined category.",
+        "Keep marrow-positive/PET-negative and marrow-negative/PET-positive categories distinct when a source defines them."
+      ],
+      "source_ids": [
+        "eclinicalmedicine_2026_mrd_petct_concordance"
+      ],
+      "related_term_ids": [
+        "imaging-plus-mrd",
+        "bone-marrow-mrd",
+        "residual-disease-modality-discordance"
+      ],
+      "use_in_public_artifacts": [
+        "Use to preserve visible cross-modality discordance and missingness.",
+        "Route downstream output to refusal or source-context-needed states when a user asks for patient meaning."
+      ],
+      "what_not_to_infer": [
+        "Do not interpret images or lesion sites.",
+        "Do not infer prognosis, monitoring action, response status, treatment adaptation, modality ranking, or patient-specific meaning."
+      ],
+      "limitations": [
+        "Discordance meaning depends on study design, modality timing, marrow method, threshold, imaging criteria, and cohort context."
+      ]
+    },
+    {
+      "term_id": "spatial-marrow-architecture-context",
+      "label": "Spatial marrow architecture context",
+      "term_kind": "specimen-context",
+      "definition": "A research context for spatial transcriptomics, trephine biopsy, marrow architecture, cellular niches, and site-limited sampling in myeloma.",
+      "measurement_context": [
+        "Record biopsy/specimen context, spatial method, cell or niche context, cohort scope, site/sampling limitation, and method boundary.",
+        "Use missing spatial state as visible missingness, not as absence of spatially restricted or extramedullary disease."
+      ],
+      "source_ids": [
+        "pubmed_yip_2025_spatial_transcriptomics_myeloma",
+        "nature_cancer_immune_atlas_myeloma_2026",
+        "pubmed_wang_2025_bmme_drug_resistance"
+      ],
+      "related_term_ids": [
+        "bone-marrow-mrd",
+        "residual-disease-modality-discordance"
+      ],
+      "use_in_public_artifacts": [
+        "Use for source-level marrow architecture and microenvironment context.",
+        "Keep spatial context separate from imaging, marrow aspirate MRD, and blood assay context."
+      ],
+      "what_not_to_infer": [
+        "Do not interpret a biopsy, image, or site-specific disease state for a person.",
+        "Do not infer prognosis, treatment selection, target selection, or patient-specific resistance status."
+      ],
+      "limitations": [
+        "Spatial context is method-, specimen-, site-, and cohort-scoped and may be absent from otherwise multimodal records."
+      ]
+    },
+    {
+      "term_id": "assay-specimen-quality",
+      "label": "Assay/specimen quality",
+      "term_kind": "assay-context",
+      "definition": "A required source-context field family for method lineage, threshold status, sample adequacy, specimen quality, and timing before residual-disease comparison.",
+      "measurement_context": [
+        "Record method, threshold, sample or specimen context, timing alignment, duration/follow-up, and not-reported states before comparison.",
+        "Use as a fail-closed prerequisite for cross-modality residual-disease claims."
+      ],
+      "source_ids": [
+        "pubmed_soh_2022_mrd_flow_harmonization",
+        "fda_mrd_cr_endpoint_guidance_2026",
+        "eclinicalmedicine_2026_mrd_petct_concordance"
+      ],
+      "related_term_ids": [
+        "mrd-sensitivity-threshold",
+        "bone-marrow-mrd",
+        "mrd-petct-modality-discordance"
+      ],
+      "use_in_public_artifacts": [
+        "Use to block comparison when method, threshold, specimen, or timing context is missing.",
+        "Expose assay-quality missingness as a limitation before downstream reuse."
+      ],
+      "what_not_to_infer": [
+        "Do not compare modalities when quality, threshold, specimen, or timing context is missing.",
+        "Do not infer response status, prognosis, monitoring action, or clinical decision."
+      ],
+      "limitations": [
+        "Quality and timing fields are source-context fields only and do not establish lab validity for a person."
+      ]
+    },
+    {
+      "term_id": "residual-disease-modality-discordance",
+      "label": "Residual-disease modality discordance",
+      "term_kind": "measurement-boundary",
+      "definition": "A public-safe uncertainty state for source-scoped residual-disease signals that are measured by different modalities or have missing paired-modality context.",
+      "measurement_context": [
+        "Record modality family, method, specimen, threshold or detection status, timing, paired-state context, source IDs, and limitation notes.",
+        "Expose discordance or missingness as a refusal reason instead of converting it into a global disease-state claim."
+      ],
+      "source_ids": [
+        "pubmed_kubicki_2025_blood_ms_mrd",
+        "eclinicalmedicine_2026_mrd_petct_concordance",
+        "pubmed_yip_2025_spatial_transcriptomics_myeloma",
+        "pubmed_wang_2025_bmme_drug_resistance"
+      ],
+      "related_term_ids": [
+        "bone-marrow-mrd",
+        "blood-mass-spectrometry-mrd",
+        "mrd-petct-modality-discordance",
+        "spatial-marrow-architecture-context",
+        "assay-specimen-quality"
+      ],
+      "use_in_public_artifacts": [
+        "Use as the explicit state when residual-disease modalities disagree or are incomplete.",
+        "Route model-output and validator behavior to visible uncertainty, source-context-needed, or refusal states."
+      ],
+      "what_not_to_infer": [
+        "Do not collapse one modality into a global disease status.",
+        "Do not infer prognosis, treatment response, monitoring action, modality ranking, or patient-specific meaning."
+      ],
+      "limitations": [
+        "Discordance is a representation boundary, not a clinical interpretation or evidence grade."
+      ]
     }
   ],
   "review": {
     "created": "2026-04-14",
-    "last_reviewed": "2026-04-14",
+    "last_reviewed": "2026-04-20",
     "review_status": "source-checked",
     "review_notes": [
       "Built from NCI PDQ context plus PubMed-indexed IMWG response criteria, MRD survival meta-analysis, and flow-cytometry harmonization sources.",
-      "Designed as a public measurement guardrail for later durable-remission, relapse, and claim-set artifacts."
+      "Designed as a public measurement guardrail for later durable-remission, relapse, and claim-set artifacts.",
+      "Updated with residual-disease modality-discordance terms for blood mass spectrometry MRD, MRD/PET-CT discordance, spatial marrow architecture, assay/specimen quality, and fail-closed modality-discordance handling."
     ]
   }
 }

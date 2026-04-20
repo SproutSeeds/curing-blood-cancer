@@ -41,11 +41,15 @@ The no-outreach prep portion is complete as
 The no-outreach public-source extraction pass is complete as
 `machine-representation-source-gap-internal-extraction-v0`: therapy-exposure
 context and validation-governance anchors are mapped with scope gaps, while
-fusion architecture remains source-context-needed. Actual expert-validation
-execution, issue operations, outreach, private correspondence, response intake,
-clinical interpretation, publication, and any expert claim upgrade remain
-blocked unless a human explicitly authorizes scope or selects a new named
-no-outreach public-source extraction phase.
+fusion architecture remains source-context-needed. The subsequent
+`residual-disease-modality-discordance-source-extraction-v0` phase is also
+complete: blood mass spectrometry MRD, marrow MRD/PET-CT discordance, spatial
+marrow architecture, assay/specimen quality, microenvironment context, host
+context, and output-refusal states are now source-scoped public substrate. Actual
+expert-validation execution, issue operations, outreach, private correspondence,
+response intake, clinical interpretation, publication, and any expert claim
+upgrade remain blocked unless a human explicitly authorizes scope or selects a
+new named no-outreach public-source extraction phase.
 
 The live operating mode is adaptive. A completed public-safe step must produce
 a handoff and a next-step synthesis. A closed subphase is not a reason to stop
@@ -142,6 +146,7 @@ Inspect these files at the start of each pass:
 - `disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md`
 - `disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md`
 - `disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md`
+- `disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md`
 - `taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.md`
 - `disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md`
 - `disease-programs/multiple-myeloma/therapy-landscapes/therapy-exposure-timeline-contract-v0.md`
@@ -209,6 +214,7 @@ Required output for the next pass:
   [Machine Representation Source-Gap Task Queue v0](../disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md),
   [Machine Representation Source-Gap Issue Draft Packet v0](../disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md),
   [Machine Representation Implementation Completion Audit v0](../disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md),
+  [Residual Disease Modality Discordance Source Extraction v0](../disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md),
   [MRD Geometry Falsification Matrix v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-falsification-matrix-v0.md),
   [MRD Geometry Transition Model v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.md),
   [MRD Geometry Hypothesis Candidate Ledger v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.md),
@@ -228,6 +234,11 @@ Required output for the next pass:
   `machine-representation-source-gap-internal-extraction-v0` completed a
   public-source-only extraction pass without outreach, while keeping fusion
   architecture source-context-needed and external validation blocked
+- preserve that
+  `residual-disease-modality-discordance-source-extraction-v0` completed
+  public-source residual-disease modality-discordance extraction and did not
+  clear expert-review, outreach, clinical, private-lab, publication, or cure
+  claim gates
 - do not create another sibling schema, fixture, validator, source extraction,
   issue draft, model, dashboard, or tool by momentum
 - block real case data, identifiers, raw records, uploads, person-linked
@@ -253,7 +264,8 @@ Done when:
 Stop instead of proceeding if the next step requires a real case, a live
 backend, credentials, private lab access, clinical interpretation, outreach, or
 publication approval. If that happens, write the blocker and move to the next
-public-safe adjacent item when one exists.
+public-safe adjacent item when one exists. The current no-outreach public-source
+successor candidate is `assay-specimen-quality-failure-mode-checklist-v0`.
 
 ### 1. Expert Response Intake And Validation Ledger
 
