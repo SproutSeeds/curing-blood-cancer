@@ -23,6 +23,7 @@ Initial focus:
 | [MRD Resistance Geometry Intelligence Audit Packet v0](mrd-resistance-geometry-intelligence-audit-packet-v0.md) | source-checked v0 | internal audit gate, no human outreach, not clinical validation |
 | [MRD Resistance Geometry Intelligence Audit Results v0](mrd-resistance-geometry-intelligence-audit-results-v0.md) | source-checked v0 | audit statuses for research-map continuation only |
 | [Myeloma Residual State Object v0](myeloma-residual-state-object-v0.md) | source-checked v0 | public-source-only residual-state object contract |
+| [MRD Resistance Geometry Proof Plan v0](mrd-resistance-geometry-proof-plan-v0.md) | source-checked v0 | proof means research-structure tests, not clinical validation |
 
 ## Extraction Workflow
 
