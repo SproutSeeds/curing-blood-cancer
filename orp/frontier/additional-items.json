@@ -854,15 +854,14 @@
           "id": "orp-frontier-gap-sweep-mode-v0",
           "label": "ORP Frontier Gap Sweep Mode v0",
           "status": "complete",
-          "goal": "Create a reusable ORP mode and first multiple myeloma sweep for deep direction checks, stale-state drift detection, public-source blind-spot discovery, and next public-safe queue synthesis.",
+          "goal": "Add a reusable ORP mode and first multiple myeloma sweep for direction checks, stale-state drift, current-source blind spots, and next public-safe queue synthesis without outreach or clinical claims.",
           "depends_on": [
             "machine-representation-source-gap-internal-extraction-v0",
             "machine-representation-expert-validation-human-authorization-blocker-v0"
           ],
           "requirements": [
             "Use only public sources and public repo artifacts.",
-            "Do not use real case data, identifiers, private records, restricted datasets, private correspondence, or credentials.",
-            "Do not send outreach, open issues, tag reviewers, ingest expert responses, publish, push, release, or clear expert-review gates.",
+            "Do not use real case data, private records, restricted datasets, private correspondence, credentials, outreach, issue operations, or expert-response intake.",
             "Keep current-source research as public source context only; no diagnosis, prognosis, treatment, trial, monitoring, eligibility, expanded-access, ranking, matching, model-validation, or cure claims.",
             "Preserve the machine-representation expert-validation human-authorization blocker."
           ],
@@ -928,9 +927,8 @@
             "External validation and expert-review claim upgrades remain blocked until explicit human authorization."
           ],
           "plans": [
-            "Internal source-gap extraction is complete and did not clear the expert-validation gate.",
-            "Frontier gap sweep mode is complete and did not clear the expert-validation gate.",
-            "Next best no-outreach successor, if selected, is residual-disease-modality-discordance-source-extraction-v0, public-source fusion-architecture method extraction, output-wrapper boundary audit, or another status-prep item."
+            "Internal source-gap extraction and frontier gap sweep are complete and did not clear the expert-validation gate.",
+            "Recommended next no-outreach public-source phase is residual-disease-modality-discordance-source-extraction-v0."
           ]
         }
       ]
