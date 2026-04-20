@@ -40,6 +40,11 @@
       "accessed": "2026-04-20"
     },
     {
+      "label": "Assay Specimen Quality Failure Mode Checklist v0",
+      "url": "measurements/assay-specimen-quality-failure-mode-checklist-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
       "label": "MRD Geometry Falsification Matrix v0",
       "url": "mechanisms/mrd-geometry-falsification-matrix-v0.md",
       "accessed": "2026-04-20"
@@ -112,7 +117,8 @@
     "Does not collect, normalize, store, transmit, train on, infer from, publish, compare, rank, match, recommend, or authorize use of real case data.",
     "Does not output patient-specific progression risk, response probability, MRD interpretation, resistance attribution, treatment recommendations, trial recommendations, monitoring actions, candidate option rankings, or clinical decisions.",
     "Does not clear human review, expert review, outreach, private-lab, clinical, legal, regulatory, model-governance, or publication gates.",
-    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found.",
+    "Does not authorize public real-report quality review, laboratory-validity review, imaging interpretation, biopsy interpretation, or assay/specimen quality interpretation for a person."
   ],
   "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-frontier-gap-sweep-v0.md"
 }

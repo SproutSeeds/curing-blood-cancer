@@ -899,11 +899,43 @@
           "success_criteria": [
             "A residual-disease modality-discordance source extraction artifact exists with JSON companion, metadata, catalog coverage, and navigation links.",
             "Measurement, glossary, model-output wrapper, validator, and machine-representation source extraction artifacts expose discordance and missing modality context as fail-closed states.",
-            "ORP state keeps external expert-validation execution and outreach blocked and recommends a no-outreach assay/specimen quality successor."
+            "ORP state keeps external expert-validation execution and outreach blocked and records the assay/specimen quality checklist successor as complete."
           ],
           "plans": [
             "Completed as disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md.",
-            "Recommended next no-outreach public-source successor, if selected, is assay-specimen-quality-failure-mode-checklist-v0."
+            "Recommended successor assay-specimen-quality-failure-mode-checklist-v0 was selected and completed.",
+            "Recommended next no-outreach public-source successor, if selected, is measurement-state-refusal-fixture-extension-v0."
+          ],
+          "compute_hooks": [
+            "python3 tools/validate_public_artifacts.py"
+          ]
+        },
+        {
+          "id": "assay-specimen-quality-failure-mode-checklist-v0",
+          "label": "Assay Specimen Quality Failure Mode Checklist v0",
+          "status": "complete",
+          "goal": "Complete a no-outreach, public-source-only failure-mode checklist for assay/specimen quality before residual-disease modality comparison, without lab-validity review, real case interpretation, advice, ranking, outreach, or claim upgrade.",
+          "depends_on": [
+            "residual-disease-modality-discordance-source-extraction-v0",
+            "measurement-normalization-contract-v0",
+            "model-output-boundary-wrapper-v0",
+            "myeloma-state-validator-rule-map-v0"
+          ],
+          "requirements": [
+            "Use only public sources and public repo artifacts.",
+            "Do not use real case data, private records, restricted datasets, private correspondence, credentials, outreach, issue operations, or expert-response intake.",
+            "Preserve missing method, threshold, specimen quality, timing alignment, paired-modality, imaging, spatial, host-context, private-review, and modality-collapse states as public fail-closed states.",
+            "Do not provide lab-validity conclusions, MRD interpretation, imaging interpretation, biopsy interpretation, prognosis, monitoring guidance, treatment guidance, trial guidance, matching, ranking, model validation, publication authorization, or cure claims.",
+            "Preserve the machine-representation expert-validation human-authorization blocker."
+          ],
+          "success_criteria": [
+            "An assay/specimen quality failure-mode checklist artifact exists with JSON companion, metadata, catalog coverage, and navigation links.",
+            "Measurement, glossary, residual-disease modality extraction, model-output wrapper, validator, and machine-representation source extraction artifacts expose quality failure modes as fail-closed states.",
+            "ORP state keeps external expert-validation execution, outreach, issue operations, response intake, real quality review, and private-lab work blocked and recommends a no-outreach synthetic refusal fixture successor."
+          ],
+          "plans": [
+            "Completed as disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md.",
+            "Recommended next no-outreach public-source successor, if selected, is measurement-state-refusal-fixture-extension-v0."
           ],
           "compute_hooks": [
             "python3 tools/validate_public_artifacts.py"
@@ -939,17 +971,19 @@
           "id": "machine-representation-expert-validation-human-authorization-blocker-v0",
           "label": "Machine Representation Expert Validation Human Authorization Blocker v0",
           "status": "blocked",
-          "goal": "Record that no outreach, public issue operation, response intake, expert-review claim upgrade, or external validation execution is authorized after the no-outreach prep packet, internal public-source extraction pass, frontier gap sweep mode, and residual-disease modality-discordance source extraction; the next autonomous step must be a newly named no-outreach public-source extraction phase or another public-safe status-prep item.",
+          "goal": "Block actual external expert-validation execution, outreach, private correspondence, issue operations, response intake, expert-review claim upgrades, real quality review, and clinical interpretation unless a human explicitly authorizes scope or selects a new named no-outreach public-source phase.",
           "depends_on": [
             "machine-representation-expert-validation-no-outreach-prep-v0",
             "machine-representation-source-gap-internal-extraction-v0",
             "orp-frontier-gap-sweep-mode-v0",
-            "residual-disease-modality-discordance-source-extraction-v0"
+            "residual-disease-modality-discordance-source-extraction-v0",
+            "assay-specimen-quality-failure-mode-checklist-v0"
           ],
           "requirements": [
             "Do not contact reviewers, tag people, open public issues, refresh issue metadata as an operation, copy private correspondence, or ingest expert-response content.",
             "Do not mark any artifact expert-reviewed, clinically valid, endorsed, consensus-backed, publication-ready, actionable, or cured.",
-            "Proceed autonomously only if a new named no-outreach public-source extraction phase or public-safe status-prep item is selected."
+            "Proceed autonomously only if a new named no-outreach public-source extraction phase or public-safe status-prep item is selected.",
+            "Do not review real reports, scans, biopsies, raw values, private records, or exact person-linked timing in public."
           ],
           "success_criteria": [
             "The blocker is active in ORP.",
@@ -957,8 +991,8 @@
             "External validation and expert-review claim upgrades remain blocked until explicit human authorization."
           ],
           "plans": [
-            "Internal source-gap extraction, frontier gap sweep, and residual-disease modality-discordance source extraction are complete and did not clear the expert-validation gate.",
-            "Recommended next no-outreach public-source successor, if selected, is assay-specimen-quality-failure-mode-checklist-v0."
+            "Residual-disease modality-discordance source extraction and assay/specimen quality failure-mode checklist are complete and did not clear the expert-validation gate.",
+            "Recommended next no-outreach public-source successor, if selected, is measurement-state-refusal-fixture-extension-v0."
           ]
         }
       ]

@@ -105,10 +105,12 @@ not a model. It is a stronger measurement and output boundary:
 - wrapper/validator rules that refuse prediction or advice when modalities
   disagree or are missing
 
-The next no-outreach successor, if selected, is
-`assay-specimen-quality-failure-mode-checklist-v0`, because modality
-discordance is only useful if method, specimen, threshold, timing, and sample
-quality are represented explicitly.
+The no-outreach successor
+[Assay Specimen Quality Failure Mode Checklist v0](assay-specimen-quality-failure-mode-checklist-v0.md)
+is now complete. It makes modality discordance more useful by turning missing
+method, specimen, threshold, timing, sample quality, paired modality, imaging,
+spatial, host-context, private-review, and modality-collapse conditions into
+explicit fail-closed states.
 
 ## Handoff State
 
@@ -120,6 +122,9 @@ ORP should keep the active blocker at
 Actual expert-validation execution, outreach, issue operations, response
 intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, and publication remain blocked.
+
+The next no-outreach public-source successor, if selected, is
+`measurement-state-refusal-fixture-extension-v0`.
 
 ## Public Safety Check
 

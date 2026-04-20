@@ -237,6 +237,11 @@
       "accessed": "2026-04-20"
     },
     {
+      "label": "Assay Specimen Quality Failure Mode Checklist v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
       "label": "ORP Frontier Gap Sweep Mode v0",
       "url": "../orp/modes/frontier-gap-sweep-mode-v0.md",
       "accessed": "2026-04-20"
@@ -258,7 +263,8 @@
     "Source-backed public artifacts can still be incomplete, stale, or wrong.",
     "The loop must stop on public-safety blockers instead of improvising around them.",
     "A completed subphase is not a completed initiative; the adaptive master backlog remains live until completion audit or explicit blocker.",
-    "Does not authorize residual-disease modality interpretation, outreach, public issue operations, expert-review claim upgrades, private-lab work, clinical interpretation, or publication."
+    "Does not authorize residual-disease modality interpretation, outreach, public issue operations, expert-review claim upgrades, private-lab work, clinical interpretation, or publication.",
+    "Does not authorize public real-report quality review, laboratory-validity review, imaging interpretation, biopsy interpretation, or assay/specimen quality interpretation for a person."
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/clawdad-frontier-delegation-packet-v0.md"
 }

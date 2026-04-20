@@ -12,6 +12,7 @@ the multiple myeloma disease program.
 - [Measurement Normalization Contract v0](measurement-normalization-contract-v0.md)
 - [BCMA Measurement Context Audit v0](bcma-measurement-context-audit-v0.md)
 - [Residual Disease Modality Discordance Source Extraction v0](residual-disease-modality-discordance-source-extraction-v0.md)
+- [Assay Specimen Quality Failure Mode Checklist v0](assay-specimen-quality-failure-mode-checklist-v0.md)
 
 ## Boundary
 
@@ -25,3 +26,6 @@ the multiple myeloma disease program.
   assay/specimen quality, and uncertainty when available.
 - Residual-disease modality-discordance artifacts must expose disagreement or
   missing context as a boundary, not as patient-specific meaning.
+- Assay/specimen quality artifacts must expose missing method, threshold,
+  specimen quality, timing, paired-modality, imaging, spatial, host-context,
+  private-review, and modality-collapse states as fail-closed boundaries.

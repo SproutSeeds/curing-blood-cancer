@@ -15,6 +15,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 
 | Artifact | Class | Claim Level | Path |
 | --- | --- | --- | --- |
+| Assay Specimen Quality Failure Mode Checklist v0 | dataset | open-question | [disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md](../disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md) |
 | BCMA Antigen Escape Claim Set v0 | dataset | derived | [disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.md](../disease-programs/multiple-myeloma/evidence-claims/bcma-antigen-escape-claim-set-v0.md) |
 | BCMA Antigen Escape Evidence Gap Register v0 | dataset | open-question | [disease-programs/multiple-myeloma/evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md](../disease-programs/multiple-myeloma/evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md) |
 | BCMA Antigen Escape Public Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/bcma-antigen-escape-public-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/bcma-antigen-escape-public-task-queue-v0.md) |

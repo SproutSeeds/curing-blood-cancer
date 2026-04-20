@@ -15,6 +15,7 @@
     "pubmed_kumar_2016_imwg_mrd_response_criteria",
     "pubmed_munshi_2017_mrd_survival_meta_analysis",
     "pubmed_soh_2022_mrd_flow_harmonization",
+    "fda_mrd_cr_endpoint_guidance_2026",
     "pubmed_antigen_escape_bcma_directed_2024",
     "pubmed_di_meo_2025_sema4a_low_bcma",
     "pubmed_kubicki_2025_blood_ms_mrd",
@@ -562,7 +563,8 @@
       "related_term_ids": [
         "imaging-plus-mrd",
         "bone-marrow-mrd",
-        "residual-disease-modality-discordance"
+        "residual-disease-modality-discordance",
+        "paired-modality-timing-context"
       ],
       "use_in_public_artifacts": [
         "Use to preserve visible cross-modality discordance and missingness.",
@@ -610,31 +612,65 @@
       "term_id": "assay-specimen-quality",
       "label": "Assay/specimen quality",
       "term_kind": "assay-context",
-      "definition": "A required source-context field family for method lineage, threshold status, sample adequacy, specimen quality, and timing before residual-disease comparison.",
+      "definition": "A required source-context field family for method lineage, threshold status, sample adequacy, specimen quality, timing, paired-modality context, imaging criteria, spatial sampling, host-context separation, and private-review boundaries before residual-disease comparison.",
       "measurement_context": [
-        "Record method, threshold, sample or specimen context, timing alignment, duration/follow-up, and not-reported states before comparison.",
-        "Use as a fail-closed prerequisite for cross-modality residual-disease claims."
+        "Record method, threshold, sample or specimen context, timing alignment, paired-modality context, duration/follow-up, and not-reported states before comparison.",
+        "Use the assay/specimen quality failure-mode checklist to route missing method, threshold, specimen, timing, paired modality, imaging, spatial, host-context, private-review, and modality-collapse states."
       ],
       "source_ids": [
         "pubmed_soh_2022_mrd_flow_harmonization",
         "fda_mrd_cr_endpoint_guidance_2026",
-        "eclinicalmedicine_2026_mrd_petct_concordance"
+        "eclinicalmedicine_2026_mrd_petct_concordance",
+        "pubmed_kubicki_2025_blood_ms_mrd",
+        "pubmed_yip_2025_spatial_transcriptomics_myeloma"
       ],
       "related_term_ids": [
         "mrd-sensitivity-threshold",
         "bone-marrow-mrd",
-        "mrd-petct-modality-discordance"
+        "mrd-petct-modality-discordance",
+        "paired-modality-timing-context"
       ],
       "use_in_public_artifacts": [
-        "Use to block comparison when method, threshold, specimen, or timing context is missing.",
-        "Expose assay-quality missingness as a limitation before downstream reuse."
+        "Use to block comparison when method, threshold, specimen, paired modality, imaging, spatial, or timing context is missing.",
+        "Expose assay-quality missingness as a limitation before downstream reuse.",
+        "Route real-report or lab-validity review requests to private_lab_or_clinical_review_needed."
       ],
       "what_not_to_infer": [
-        "Do not compare modalities when quality, threshold, specimen, or timing context is missing.",
-        "Do not infer response status, prognosis, monitoring action, or clinical decision."
+        "Do not compare modalities when quality, threshold, specimen, paired context, imaging criteria, spatial sampling, or timing context is missing.",
+        "Do not infer response status, prognosis, monitoring action, lab validity, or clinical decision."
       ],
       "limitations": [
         "Quality and timing fields are source-context fields only and do not establish lab validity for a person."
+      ]
+    },
+    {
+      "term_id": "paired-modality-timing-context",
+      "label": "Paired-modality timing context",
+      "term_kind": "time-window",
+      "definition": "A source-defined timing relationship between residual-disease modalities that must be visible before discordance language or comparison is reused.",
+      "measurement_context": [
+        "Record whether modalities were assessed at the same source-defined timepoint, within a reported window, or in incompatible or missing timing buckets.",
+        "Use timepoint_alignment_needed when paired assessment timing is absent or not comparable enough for the requested public-source comparison."
+      ],
+      "source_ids": [
+        "fda_mrd_cr_endpoint_guidance_2026",
+        "eclinicalmedicine_2026_mrd_petct_concordance"
+      ],
+      "related_term_ids": [
+        "mrd-petct-modality-discordance",
+        "assay-specimen-quality",
+        "residual-disease-modality-discordance"
+      ],
+      "use_in_public_artifacts": [
+        "Use before describing cross-modality concordance or discordance.",
+        "Use as a fail-closed timing state for future synthetic refusal fixtures."
+      ],
+      "what_not_to_infer": [
+        "Do not treat paired results as comparable when assessment timing is missing, incompatible, or not source-defined.",
+        "Do not infer durability, prognosis, monitoring action, treatment action, or patient-specific meaning from timing context."
+      ],
+      "limitations": [
+        "Timing context is a source-scoped representation field and does not establish clinical comparability or endpoint validity."
       ]
     },
     {
@@ -657,7 +693,8 @@
         "blood-mass-spectrometry-mrd",
         "mrd-petct-modality-discordance",
         "spatial-marrow-architecture-context",
-        "assay-specimen-quality"
+        "assay-specimen-quality",
+        "paired-modality-timing-context"
       ],
       "use_in_public_artifacts": [
         "Use as the explicit state when residual-disease modalities disagree or are incomplete.",
@@ -679,7 +716,8 @@
     "review_notes": [
       "Built from NCI PDQ context plus PubMed-indexed IMWG response criteria, MRD survival meta-analysis, and flow-cytometry harmonization sources.",
       "Designed as a public measurement guardrail for later durable-remission, relapse, and claim-set artifacts.",
-      "Updated with residual-disease modality-discordance terms for blood mass spectrometry MRD, MRD/PET-CT discordance, spatial marrow architecture, assay/specimen quality, and fail-closed modality-discordance handling."
+      "Updated with residual-disease modality-discordance terms for blood mass spectrometry MRD, MRD/PET-CT discordance, spatial marrow architecture, assay/specimen quality, and fail-closed modality-discordance handling.",
+      "Updated with assay/specimen quality failure-mode checklist and paired-modality timing context so missing method, threshold, specimen quality, timing, paired modality, imaging, spatial, host-context, private-review, and modality-collapse states remain explicit before comparison."
     ]
   }
 }

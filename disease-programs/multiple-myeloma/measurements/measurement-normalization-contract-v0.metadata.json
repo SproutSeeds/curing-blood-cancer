@@ -78,6 +78,11 @@
       "accessed": "2026-04-20"
     },
     {
+      "label": "Assay Specimen Quality Failure Mode Checklist v0",
+      "url": "assay-specimen-quality-failure-mode-checklist-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
       "label": "Blood Mass Spectrometry MRD Source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40919481/",
       "accessed": "2026-04-20"
@@ -131,7 +136,8 @@
     "Does not authorize clinical interpretation, lab validity review, imaging interpretation, response assessment, relapse assessment, patient matching, trial matching, evidence ranking, option ranking, private-lab work, legal clearance, regulatory readiness, security readiness, retention decisions, emergency handling, or publication of case-derived learning.",
     "Does not validate therapy exposure, molecular, immune, evidence retrieval, trial, therapy landscape, candidate hypothesis, multidisciplinary review, monitoring-plan, or public-learning extraction semantics.",
     "Does not claim that multiple myeloma has been cured or that a vaccine has been found.",
-    "Does not establish residual-disease modality interchangeability, cross-modality prognosis, monitoring guidance, treatment guidance, modality ranking, or patient-specific interpretation."
+    "Does not establish residual-disease modality interchangeability, cross-modality prognosis, monitoring guidance, treatment guidance, modality ranking, or patient-specific interpretation.",
+    "Does not perform public quality review of real laboratory reports, imaging reports, pathology reports, biopsy reports, raw values, exact person-linked timing, or private records."
   ],
   "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-measurement-normalization-contract-v0.md"
 }
