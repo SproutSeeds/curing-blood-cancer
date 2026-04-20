@@ -252,7 +252,7 @@
       "next_extraction_need": "Add at least one additional public source extraction for subclone diversity before comparison.",
       "coverage_notes": [
         "Current support is review-level context.",
-        "Next extraction should prioritize a primary study with explicit clone or subclone measurements.",
+        "Next extraction should prioritize a primary study with explicit clone or subclone measurements before internal adversarial review.",
         "Coverage does not support prognosis or relapse-risk scoring."
       ]
     },
@@ -359,13 +359,14 @@
   ],
   "review": {
     "created": "2026-04-19",
-    "last_reviewed": "2026-04-19",
+    "last_reviewed": "2026-04-20",
     "review_status": "source-checked",
     "review_notes": [
       "Built from the MRD Resistance Geometry Pilot and the five current source-specific geometry extraction records.",
       "Phase 2 adds Cohen 2021 as a second-source extraction for residual-state biology and clone-state coupling.",
       "Current coverage has zero first-extraction gaps, six second-source gaps, and four buckets covered for v0 navigation.",
-      "Counts reflect public artifact structure, not strength of evidence, mechanism frequency, or clinical readiness."
+      "Counts reflect public artifact structure, not strength of evidence, mechanism frequency, or clinical readiness.",
+      "External human outreach is not required for the next gate; unresolved tensions route to internal adversarial intelligence audit."
     ]
   }
 }

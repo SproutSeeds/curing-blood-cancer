@@ -5,7 +5,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - disease program: `multiple-myeloma`
 - parent map: `mrd-resistance-geometry-pilot-v0`
 - clinical boundary: research-use-only, not medical advice
-- last reviewed: `2026-04-19`
+- last reviewed: `2026-04-20`
 
 ## Purpose
 
@@ -14,7 +14,11 @@ source-hardening workflow.
 
 The first step hardens the MRD trajectory bucket with a second public source.
 The second phase hardens residual-state biology and clone-state coupling before
-the geometry is revised or sent to expert review.
+the geometry is revised through internal adversarial intelligence review.
+
+External human outreach is not part of this execution path. The replacement
+gate is stricter internal review: source-trace audits, contradiction hunts,
+claim-boundary checks, and uncertainty preservation before any claim upgrade.
 
 ## Boundary
 
@@ -115,10 +119,10 @@ Comparison questions for Phase 2:
   a coupled clone-state system across sources?
 - Which observations are source-cohort measurements and which are review-level
   summaries?
-- Which geometry nodes should merge, split, or remain linked before expert
-  review?
+- Which geometry nodes should merge, split, or remain linked before internal
+  adversarial review?
 
-## Phase 3: Expert Review And Revision
+## Phase 3: Intelligence Audit And Revision
 
 Status: `ready`
 
@@ -126,12 +130,13 @@ Completion gate:
 
 - At least three high-priority buckets have two public extraction records.
 - Every comparison question has source IDs and extraction record IDs.
-- Expert-review-needed language remains explicit.
+- Internal adversarial-audit language remains explicit.
+- No external human outreach is required or scheduled.
 - No cure, prognosis, treatment, monitoring, or trial guidance is introduced.
 
 Expected public outputs:
 
-- `mrd-resistance-geometry-expert-review-packet-v0`
+- `mrd-resistance-geometry-intelligence-audit-packet-v0`
 - `mrd-resistance-geometry-axis-revision-v0`
 - updated issue drafts for remaining second-source tasks
 

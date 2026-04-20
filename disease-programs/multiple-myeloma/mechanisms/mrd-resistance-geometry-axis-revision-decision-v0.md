@@ -6,7 +6,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - parent map: `mrd-resistance-geometry-pilot-v0`
 - parent plan: `mrd-resistance-geometry-phase-plan-v0`
 - clinical boundary: research-use-only, not medical advice
-- last reviewed: `2026-04-19`
+- last reviewed: `2026-04-20`
 
 ## Purpose
 
@@ -49,7 +49,8 @@ The second-source pass separates the evidence frames:
 - `genetic-nongenetic-coupling-v0` moves to
   `covered-for-v0-navigation`.
 - Phase 2 is done for v0.
-- Phase 3 is ready to assemble an expert-review packet.
+- Phase 3 is ready to assemble an internal intelligence-audit packet.
+- External human outreach is skipped by design.
 
 ## What Does Not Change
 
@@ -63,14 +64,15 @@ The second-source pass separates the evidence frames:
 
 ## Phase 3 Gate
 
-Phase 3 can now ask expert reviewers a sharper question:
+Phase 3 can now ask the internal adversarial intelligence loop a sharper
+question:
 
 > Are measurement trajectory, residual biological state, clone architecture,
 > and clone-state coupling named and bounded correctly for a public research
 > geometry?
 
-Until that review happens, the geometry remains source-checked and
-expert-review-needed.
+Until that audit passes, the geometry remains source-checked,
+claim-upgrade-blocked, and research-use-only.
 
 ## Structured Data
 

@@ -69,12 +69,13 @@
         ]
       }
     ],
-    "expert_review_gate": "Phase 3 can assemble an expert-review packet because at least three high-priority buckets now have two public extraction records."
+    "intelligence_audit_gate": "Phase 3 can assemble an internal adversarial intelligence-audit packet because at least three high-priority buckets now have two public extraction records."
   },
   "what_this_supports": [
     "Use a flexible geometry with separate measurement, state, and clone axes.",
     "Add explicit coupling edges from clone architecture to transcriptional or adaptive state.",
-    "Route Phase 3 expert review around whether the coupling edges are correctly named and bounded."
+    "Route Phase 3 internal adversarial intelligence review around whether the coupling edges are correctly named and bounded.",
+    "Skip external human outreach while preserving claim-upgrade blocks and research-use boundaries."
   ],
   "what_this_does_not_support": [
     "No patient-specific MRD interpretation.",
@@ -84,12 +85,13 @@
   ],
   "review": {
     "created": "2026-04-19",
-    "last_reviewed": "2026-04-19",
+    "last_reviewed": "2026-04-20",
     "review_status": "source-checked",
     "review_notes": [
       "Decision created after adding the Cohen 2021 second-source extraction for residual-state and clone-state coupling buckets.",
       "Axis decision is structural only and does not change evidence strength or clinical readiness.",
-      "Phase 3 should ask expert reviewers to inspect the clone-state coupling edge before any claim upgrade."
+      "Phase 3 should use internal adversarial intelligence review to inspect the clone-state coupling edge before any claim upgrade.",
+      "External human outreach is not part of the execution path."
     ]
   }
 }
