@@ -1,0 +1,264 @@
+{
+  "axis_revision_id": "mrd-resistance-geometry-axis-revision-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Resistance Geometry Axis Revision v0",
+  "clinical_use_boundary": "research-use-only",
+  "human_outreach_policy": "none",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "parent_decision_id": "mrd-resistance-geometry-axis-revision-decision-v0",
+  "parent_audit_results_id": "mrd-resistance-geometry-intelligence-audit-results-v0",
+  "linked_contradiction_queue_id": "mrd-resistance-geometry-contradiction-mining-task-queue-v0",
+  "linked_residual_state_object_id": "myeloma-residual-state-object-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "besliu-2025-treatment-landscape-geometry-v0"
+  ],
+  "revision_result": {
+    "status": "source-bounded-axis-revision-v0",
+    "claim_upgrade_status": "blocked",
+    "clinical_use_status": "blocked",
+    "summary": "The v0 geometry is revised from a single radial map into a flexible four-axis structure: measurement trajectory, residual biological state, clone architecture, and provisional clone-state coupling edges. Microenvironment, therapy pressure, disease context, and translation-readiness remain support layers."
+  },
+  "revised_axes": [
+    {
+      "axis_id": "measurement-trajectory-axis-v0",
+      "axis_label": "Measurement trajectory",
+      "axis_role": "Track source-defined MRD and response dynamics without interpreting an individual result.",
+      "mechanism_group_ids": [
+        "mrd-trajectory-split-v0",
+        "single-cell-translation-gap-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "allowed_movement": [
+        "Split by assay method when MRD measurement methods are not comparable.",
+        "Split by specimen, threshold, sensitivity context, or timepoint when source context differs.",
+        "Move single-cell resolution into translation-readiness context rather than clinical readiness."
+      ],
+      "blocked_inferences": [
+        "No patient-specific MRD interpretation.",
+        "No relapse forecast.",
+        "No monitoring recommendation.",
+        "No assay ranking."
+      ]
+    },
+    {
+      "axis_id": "residual-biological-state-axis-v0",
+      "axis_label": "Residual biological state",
+      "axis_role": "Track source-defined residual malignant plasma-cell states and pathway-state observations without actionability.",
+      "mechanism_group_ids": [
+        "residual-transcriptional-adaptation-v0",
+        "metabolic-resistance-state-v0",
+        "nfkb-selective-state-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0"
+      ],
+      "allowed_movement": [
+        "Split residual state by therapy exposure, sampling time, or source-defined response context.",
+        "Keep metabolic and NF-kB pathway states as under-covered branches until second-source extraction is complete.",
+        "Fold pathway labels into residual-state context if contradiction mining shows that separate branches overstate support."
+      ],
+      "blocked_inferences": [
+        "No target recommendation.",
+        "No treatment recommendation.",
+        "No supplement or metabolic intervention suggestion.",
+        "No routine clinical single-cell decision support claim."
+      ]
+    },
+    {
+      "axis_id": "clone-architecture-axis-v0",
+      "axis_label": "Clone architecture",
+      "axis_role": "Track clone identity, clone architecture, subclone diversity, and source-defined clone-inference context without prognosis.",
+      "mechanism_group_ids": [
+        "genetic-nongenetic-coupling-v0",
+        "subclone-diversity-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0",
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "allowed_movement": [
+        "Split by clone-inference method when methods differ.",
+        "Keep review-level subclone diversity separate from cohort-level clone measurements.",
+        "Move clone labels only when source-defined clone identity and sample timing are preserved."
+      ],
+      "blocked_inferences": [
+        "No individual prognosis.",
+        "No causal dominance claim.",
+        "No genetic-versus-nongenetic ranking.",
+        "No patient-specific resistance attribution."
+      ]
+    },
+    {
+      "axis_id": "clone-state-coupling-edge-axis-v0",
+      "axis_label": "Clone-state coupling edges",
+      "axis_role": "Link clone architecture to residual biological state while preserving clone and state as separate fields.",
+      "mechanism_group_ids": [
+        "genetic-nongenetic-coupling-v0",
+        "residual-transcriptional-adaptation-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0"
+      ],
+      "allowed_movement": [
+        "Remain provisional and source-specific.",
+        "Split into clone-inference and transcriptional-state subedges if contradiction mining weakens a unified edge.",
+        "Route any causal-sounding language to the contradiction-mining queue before reuse."
+      ],
+      "blocked_inferences": [
+        "No causal ranking.",
+        "No actionability claim.",
+        "No clinical resistance call.",
+        "No patient-specific target selection."
+      ]
+    }
+  ],
+  "support_layers": [
+    {
+      "layer_id": "microenvironment-support-layer-v0",
+      "layer_label": "Tumor microenvironment support layer",
+      "mechanism_group_ids": [
+        "tme-shelter-interactions-v0"
+      ],
+      "role": "Keep marrow interaction context visible without treating cell-interaction inference as a patient-specific mechanism.",
+      "status": "covered-for-v0-navigation"
+    },
+    {
+      "layer_id": "therapy-pressure-support-layer-v0",
+      "layer_label": "Therapy pressure support layer",
+      "mechanism_group_ids": [
+        "t-cell-therapy-pressure-v0"
+      ],
+      "role": "Represent immune-redirection and target-class context without sequencing advice.",
+      "status": "needs-second-source-extraction"
+    },
+    {
+      "layer_id": "disease-context-support-layer-v0",
+      "layer_label": "Disease context support layer",
+      "mechanism_group_ids": [
+        "unmet-high-risk-context-v0"
+      ],
+      "role": "Preserve high-unmet-need contexts as interpretation modifiers, not patient-specific risk calls.",
+      "status": "needs-second-source-extraction"
+    },
+    {
+      "layer_id": "translation-readiness-support-layer-v0",
+      "layer_label": "Translation readiness support layer",
+      "mechanism_group_ids": [
+        "single-cell-translation-gap-v0"
+      ],
+      "role": "Separate research resolution from clinical readiness.",
+      "status": "needs-second-source-extraction"
+    }
+  ],
+  "revised_edges": [
+    {
+      "edge_id": "measurement-to-residual-state-separation-edge-v0",
+      "from_axis_id": "measurement-trajectory-axis-v0",
+      "to_axis_id": "residual-biological-state-axis-v0",
+      "edge_type": "separation-with-aligned-context",
+      "status": "source-bounded",
+      "rule": "Compare only when assay, specimen, threshold or sensitivity context, sample timing, cohort, and response context are visible."
+    },
+    {
+      "edge_id": "clone-to-state-coupling-edge-v0",
+      "from_axis_id": "clone-architecture-axis-v0",
+      "to_axis_id": "residual-biological-state-axis-v0",
+      "edge_type": "provisional-source-specific-coupling",
+      "status": "source-bounded",
+      "rule": "Keep clone identity and transcriptional state separate; do not convert correlation into causality."
+    },
+    {
+      "edge_id": "residual-state-to-pathway-branch-edge-v0",
+      "from_axis_id": "residual-biological-state-axis-v0",
+      "to_axis_id": "residual-biological-state-axis-v0",
+      "edge_type": "branch-with-undercovered-pathway-nodes",
+      "status": "under-covered",
+      "rule": "Metabolic and NF-kB branches remain descriptive research branches until second-source extraction matures them."
+    },
+    {
+      "edge_id": "context-to-axis-modifier-edge-v0",
+      "from_layer_ids": [
+        "microenvironment-support-layer-v0",
+        "therapy-pressure-support-layer-v0",
+        "disease-context-support-layer-v0",
+        "translation-readiness-support-layer-v0"
+      ],
+      "to_axis_ids": [
+        "measurement-trajectory-axis-v0",
+        "residual-biological-state-axis-v0",
+        "clone-architecture-axis-v0"
+      ],
+      "edge_type": "modifier-not-ranker",
+      "status": "source-bounded",
+      "rule": "Support layers can change interpretation needs, but they cannot rank mechanisms or create clinical recommendations."
+    }
+  ],
+  "movement_rules": [
+    "New public source extraction may move a node from under-covered to covered-for-v0-navigation only as artifact coverage.",
+    "Contradiction mining may split or weaken an edge before any claim upgrade.",
+    "Measurement trajectory can move independently from residual biological state.",
+    "Residual biological state can branch by pathway, therapy exposure, or source-defined cell state.",
+    "Clone architecture can branch by clone-inference method and subclone context.",
+    "No movement rule can create clinical guidance, patient-specific interpretation, mechanism ranking, or cure language."
+  ],
+  "completed_gate_checks": [
+    "At least three high-priority buckets have two public extraction records.",
+    "Every comparison axis cites source IDs and extraction record IDs.",
+    "Internal adversarial audit results are recorded.",
+    "Contradiction mining is routed to a no-human-outreach task queue.",
+    "No cure, prognosis, diagnosis, treatment, monitoring, trial, or patient-specific guidance is introduced."
+  ],
+  "remaining_open_work": [
+    "Run contradiction-mining tasks before any claim upgrade.",
+    "Add second-source extraction for metabolic resistance state.",
+    "Add second-source extraction for NF-kB selective state.",
+    "Add second-source extraction for therapy pressure, high-risk context, subclone diversity, and single-cell translation gaps."
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created after mrd-resistance-geometry-intelligence-audit-results-v0 passed all six audit items for research-map continuation only.",
+      "This revision implements the four-axis structure promised by the Phase 2 decision.",
+      "This revision does not upgrade any claim and does not create clinical guidance."
+    ]
+  }
+}

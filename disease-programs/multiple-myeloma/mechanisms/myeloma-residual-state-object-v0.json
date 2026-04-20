@@ -1,0 +1,166 @@
+{
+  "residual_state_object_id": "myeloma-residual-state-object-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "Myeloma Residual State Object v0",
+  "clinical_use_boundary": "research-use-only",
+  "data_boundary": "public-source-only-no-real-case-data",
+  "parent_axis_revision_id": "mrd-resistance-geometry-axis-revision-v0",
+  "parent_schema_id": "myeloma-state-object-schema-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma"
+  ],
+  "object_kind": "public_source_summary",
+  "synthetic_status": "public_source_only",
+  "public_export_allowed": true,
+  "state_families": [
+    {
+      "family_id": "source_context",
+      "required": true,
+      "purpose": "Carry source IDs, extraction records, assay context, specimen or model context, timepoint bucket, and provenance review status.",
+      "field_groups": [
+        "source_ids",
+        "extraction_record_ids",
+        "method_state",
+        "specimen_or_model_context",
+        "timepoint_bucket",
+        "provenance_review_status"
+      ],
+      "boundary": "Missing source context blocks interpretation and downstream reuse."
+    },
+    {
+      "family_id": "measurement_trajectory_state",
+      "required": true,
+      "purpose": "Represent source-defined MRD and response trajectory labels as measurement context, not patient interpretation.",
+      "axis_id": "measurement-trajectory-axis-v0",
+      "allowed_public_values": [
+        "source_defined_mrd_negative_context",
+        "source_defined_mrd_positive_context",
+        "source_defined_serial_declining_context",
+        "source_defined_stable_or_increasing_context",
+        "assay_context_needed",
+        "threshold_context_needed",
+        "timepoint_context_needed"
+      ],
+      "boundary": "No relapse forecast, monitoring recommendation, or patient-specific MRD interpretation."
+    },
+    {
+      "family_id": "residual_biological_state",
+      "required": true,
+      "purpose": "Represent source-defined residual malignant plasma-cell states and resistant-state programs.",
+      "axis_id": "residual-biological-state-axis-v0",
+      "allowed_public_values": [
+        "source_defined_transcriptional_adaptation_context",
+        "source_defined_resistant_state_context",
+        "source_defined_pathway_state_context",
+        "metabolic_branch_undercovered",
+        "nfkb_branch_undercovered",
+        "state_context_needed"
+      ],
+      "boundary": "No treatment, target, supplement, monitoring, or actionability output."
+    },
+    {
+      "family_id": "clone_architecture_state",
+      "required": true,
+      "purpose": "Represent clone identity, clone architecture, subclone diversity, and clone-inference context.",
+      "axis_id": "clone-architecture-axis-v0",
+      "allowed_public_values": [
+        "source_defined_clone_architecture_context",
+        "source_defined_transcriptional_clone_context",
+        "review_level_subclone_diversity_context",
+        "clone_inference_method_needed",
+        "subclone_second_source_needed"
+      ],
+      "boundary": "No patient-specific resistance attribution, prognosis, or causal ranking."
+    },
+    {
+      "family_id": "clone_state_coupling_state",
+      "required": true,
+      "purpose": "Represent provisional links between clone architecture and residual biological state.",
+      "axis_id": "clone-state-coupling-edge-axis-v0",
+      "allowed_public_values": [
+        "provisional_source_specific_coupling",
+        "coupling_context_needed",
+        "contradiction_mining_needed",
+        "split_edge_if_weakened"
+      ],
+      "boundary": "Coupling is an edge, not a merged axis, causal ranking, or clinical resistance call."
+    },
+    {
+      "family_id": "support_context_layers",
+      "required": false,
+      "purpose": "Preserve microenvironment, therapy pressure, disease context, and translation-readiness modifiers.",
+      "allowed_public_values": [
+        "microenvironment_context",
+        "therapy_pressure_context",
+        "high_unmet_need_context",
+        "single_cell_translation_readiness_gap",
+        "context_second_source_needed"
+      ],
+      "boundary": "Support layers modify research interpretation needs only; they cannot rank or recommend."
+    },
+    {
+      "family_id": "missingness_and_uncertainty",
+      "required": true,
+      "purpose": "Carry missing modality, under-covered branch, assay mismatch, source limitation, and contradiction-mining state.",
+      "allowed_public_values": [
+        "unknown",
+        "not_reported_by_source",
+        "source_limit",
+        "assay_limit",
+        "method_limit",
+        "missing_modality",
+        "undercovered_branch",
+        "contradiction_mining_needed",
+        "expert_review_needed"
+      ],
+      "boundary": "Missingness is never evidence of absence, lower risk, treatment fit, trial fit, monitoring need, or cure."
+    },
+    {
+      "family_id": "blocked_output_manifest",
+      "required": true,
+      "purpose": "Make unsafe outputs fail closed.",
+      "blocked_outputs": [
+        "diagnosis",
+        "prognosis",
+        "relapse_risk",
+        "mrd_interpretation",
+        "monitoring_guidance",
+        "treatment_guidance",
+        "target_selection",
+        "trial_guidance",
+        "patient_matching",
+        "mechanism_ranking",
+        "evidence_ranking",
+        "clinical_validation",
+        "cure_claim"
+      ],
+      "boundary": "Any blocked output must refuse and route back to source extraction, contradiction mining, private governance, or clinical review outside the public artifact stream."
+    }
+  ],
+  "minimum_public_object": {
+    "schema_id": "myeloma-state-object-schema-v0",
+    "residual_state_object_id": "myeloma-residual-state-object-v0",
+    "source_context_required": true,
+    "measurement_trajectory_state_required": true,
+    "residual_biological_state_required": true,
+    "clone_architecture_state_required": true,
+    "clone_state_coupling_state_required": true,
+    "missingness_and_uncertainty_required": true,
+    "blocked_output_manifest_required": true
+  },
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created as the structured companion to mrd-resistance-geometry-axis-revision-v0.",
+      "This is a public-source-only object contract, not a real case object.",
+      "All prediction, interpretation, ranking, recommendation, and cure outputs remain blocked."
+    ]
+  }
+}
