@@ -22,7 +22,9 @@
     "pubmed_martinez_lopez_2020_mrd_dynamics",
     "pubmed_cohen_2021_resistance_single_cell",
     "pubmed_li_2025_single_cell_myeloma_review",
-    "pubmed_besliu_2025_evolving_landscape_myeloma"
+    "pubmed_besliu_2025_evolving_landscape_myeloma",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways"
   ],
   "tasks": [
     {
@@ -30,7 +32,7 @@
       "task_title": "Mine counterevidence for the MRD trajectory edge",
       "task_type": "source-extraction-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "pull-request-only",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -55,9 +57,9 @@
         "pubmed_martinez_lopez_2020_mrd_dynamics"
       ],
       "public_deliverables": [
-        "One source-specific contradiction note or extraction that tests whether MRD trajectory labels remain comparable across assay method, specimen, threshold, timing, and cohort context.",
-        "A decision on whether the MRD trajectory edge should remain unified, split by assay frame, or stay provisional.",
-        "A public update to the MRD geometry audit results or axis revision if the edge needs weakening."
+        "Completed through mrd-trajectory-contradiction-mining-note-v0: one contradiction note tests MRD trajectory comparability across assay method, specimen, threshold, timing, and cohort context.",
+        "Decision: keep measurement trajectory separate from residual biological state and preserve assay-frame split.",
+        "Movement ledger records the edge as source-bounded and comparison-provisional."
       ],
       "acceptance_checks": [
         "The work uses public sources only and passes python3 tools/validate_public_artifacts.py.",
@@ -136,7 +138,7 @@
       "task_title": "Mine counterevidence for clone-state coupling",
       "task_type": "source-extraction-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "pull-request-only",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -162,9 +164,9 @@
         "pubmed_li_2025_single_cell_myeloma_review"
       ],
       "public_deliverables": [
-        "One source-specific contradiction note or extraction that tests whether clone-state coupling is over-broad, causal-sounding, or method-specific.",
-        "A decision on whether the coupling edge should remain one provisional edge or split into clone-inference and transcriptional-state subedges.",
-        "A public update if subclone diversity needs a separate branch before further axis revision."
+        "Completed through clone-state-coupling-contradiction-mining-note-v0: one contradiction note tests whether clone-state coupling is over-broad, causal-sounding, or method-specific.",
+        "Decision: keep the coupling edge provisional, source-specific, and split-ready.",
+        "Movement ledger records that clone architecture and transcriptional state remain separate."
       ],
       "acceptance_checks": [
         "The work uses public sources only and passes python3 tools/validate_public_artifacts.py.",
@@ -260,12 +262,16 @@
       ],
       "extraction_record_ids": [
         "cui-2024-mrd-clonal-evolution-geometry-v0",
-        "cohen-2021-resistance-single-cell-geometry-v0"
+        "cohen-2021-resistance-single-cell-geometry-v0",
+        "wang-2025-lipid-metabolism-geometry-v0",
+        "lu-2024-signaling-pathways-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
         "pubmed_cui_2024_mrd_clonal_evolution",
-        "pubmed_cohen_2021_resistance_single_cell"
+        "pubmed_cohen_2021_resistance_single_cell",
+        "pubmed_wang_2025_lipid_metabolism_myeloma",
+        "pubmed_lu_2024_myeloma_signaling_pathways"
       ],
       "public_deliverables": [
         "One source-specific contradiction note or extraction that tests whether pathway labels are too broad, source-specific, or vulnerable to actionability overread.",
@@ -275,7 +281,7 @@
       "acceptance_checks": [
         "The work uses public sources only and passes python3 tools/validate_public_artifacts.py.",
         "Pathway labels remain research-map signals.",
-        "Metabolic and NF-kB branches remain under-covered until second-source extraction is added.",
+        "Metabolic and NF-kB branches remain non-actionable even after review-level second-source extraction.",
         "No pathway is promoted to clinical actionability."
       ],
       "what_not_to_infer": [
@@ -299,6 +305,7 @@
     "review_status": "source-checked",
     "review_notes": [
       "Created as the concrete counterevidence route required by mrd-resistance-geometry-intelligence-audit-packet-v0.",
+      "The MRD trajectory and clone-state coupling contradiction tasks are complete for proof-readiness-v0.",
       "Tasks are pull-request-only internal research tasks; no external human outreach is required or scheduled.",
       "Tasks route uncertainty into source extraction and contradiction notes, not clinical advice."
     ]

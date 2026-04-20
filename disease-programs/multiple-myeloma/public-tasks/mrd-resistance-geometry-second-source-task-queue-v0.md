@@ -28,8 +28,8 @@ Coverage Report into contribution-ready public source-extraction tasks.
 | `mrd-trajectory-second-source-extraction-task-v0` | high | done | `non-antigen-loss-relapse-buckets-gap-v0` | `mrd-trajectory-split-v0` |
 | `residual-transcriptional-adaptation-second-source-extraction-task-v0` | high | done | `non-antigen-loss-relapse-buckets-gap-v0` | `residual-transcriptional-adaptation-v0` |
 | `genetic-nongenetic-coupling-second-source-extraction-task-v0` | high | done | `non-antigen-loss-relapse-buckets-gap-v0` | `genetic-nongenetic-coupling-v0` |
-| `metabolic-resistance-state-second-source-extraction-task-v0` | medium | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `metabolic-resistance-state-v0` |
-| `nfkb-selective-state-second-source-extraction-task-v0` | medium | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `nfkb-selective-state-v0` |
+| `metabolic-resistance-state-second-source-extraction-task-v0` | medium | done | `non-antigen-loss-relapse-buckets-gap-v0` | `metabolic-resistance-state-v0` |
+| `nfkb-selective-state-second-source-extraction-task-v0` | medium | done | `non-antigen-loss-relapse-buckets-gap-v0` | `nfkb-selective-state-v0` |
 | `subclone-diversity-second-source-extraction-task-v0` | medium | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `subclone-diversity-v0` |
 | `single-cell-translation-gap-second-source-extraction-task-v0` | medium | ready | `expert-review-readiness-gap-v0` | `single-cell-translation-gap-v0` |
 | `t-cell-therapy-pressure-second-source-extraction-task-v0` | medium | ready | `non-antigen-loss-relapse-buckets-gap-v0` | `t-cell-therapy-pressure-v0` |
@@ -54,16 +54,16 @@ Coverage Report into contribution-ready public source-extraction tasks.
 | `mrd-trajectory-second-source-extraction-task-v0` | `martinez-lopez-2020-mrd-dynamics-geometry-v0` | `mrd-trajectory-split-v0` is now `covered-for-v0-navigation`. |
 | `residual-transcriptional-adaptation-second-source-extraction-task-v0` | `cohen-2021-resistance-single-cell-geometry-v0` | `residual-transcriptional-adaptation-v0` is now `covered-for-v0-navigation`. |
 | `genetic-nongenetic-coupling-second-source-extraction-task-v0` | `cohen-2021-resistance-single-cell-geometry-v0` | `genetic-nongenetic-coupling-v0` is now `covered-for-v0-navigation`. |
+| `metabolic-resistance-state-second-source-extraction-task-v0` | `wang-2025-lipid-metabolism-geometry-v0` | `metabolic-resistance-state-v0` is now `covered-for-v0-navigation` as artifact coverage only. |
+| `nfkb-selective-state-second-source-extraction-task-v0` | `lu-2024-signaling-pathways-geometry-v0` | `nfkb-selective-state-v0` is now `covered-for-v0-navigation` as artifact coverage only. |
 
 ## Priority Order
 
-1. Metabolic and NF-kB selective-state buckets, because they test whether
-   pathway-state branches should remain separate or fold into residual state.
-2. Therapy pressure and high-risk context, because they protect the map from
+1. Therapy pressure and high-risk context, because they protect the map from
    pretending all relapse settings are comparable.
-3. Subclone diversity, because it tests whether clone architecture needs more
+2. Subclone diversity, because it tests whether clone architecture needs more
    explicit branching before internal adversarial review.
-4. Single-cell translation gap, because it keeps research-tooling resolution
+3. Single-cell translation gap, because it keeps research-tooling resolution
    separate from clinical readiness.
 
 ## Structured Data
@@ -73,9 +73,7 @@ Coverage Report into contribution-ready public source-extraction tasks.
 
 ## Next Work
 
-- Select the first metabolic or NF-kB selective-state source.
-- Add a source-registry record for the chosen source if needed.
-- Add one source-specific mechanism extraction for
-  `metabolic-resistance-state-v0` or `nfkb-selective-state-v0`.
+- Add source-specific mechanism extractions for therapy pressure, high-risk
+  context, subclone diversity, and the single-cell translation gap.
 - Refresh the MRD Resistance Geometry Coverage Report after each accepted
   extraction.

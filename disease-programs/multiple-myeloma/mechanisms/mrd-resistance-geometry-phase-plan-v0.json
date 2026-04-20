@@ -10,14 +10,18 @@
     "pubmed_martinez_lopez_2020_mrd_dynamics",
     "pubmed_li_2025_single_cell_myeloma_review",
     "pubmed_besliu_2025_evolving_landscape_myeloma",
-    "pubmed_cohen_2021_resistance_single_cell"
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways"
   ],
   "extraction_record_ids": [
     "cui-2024-mrd-clonal-evolution-geometry-v0",
     "martinez-lopez-2020-mrd-dynamics-geometry-v0",
     "li-2025-single-cell-myeloma-geometry-v0",
     "besliu-2025-treatment-landscape-geometry-v0",
-    "cohen-2021-resistance-single-cell-geometry-v0"
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "wang-2025-lipid-metabolism-geometry-v0",
+    "lu-2024-signaling-pathways-geometry-v0"
   ],
   "task_queue_ids": [
     "mrd-resistance-geometry-second-source-task-queue-v0",
@@ -142,10 +146,17 @@
     {
       "phase_id": "phase-4-geometry-proof-v0",
       "phase_title": "Phase 4: geometry proof",
-      "status": "ready",
+      "status": "complete-for-proof-readiness-v0",
       "purpose": "Test whether the revised geometry works as a moving research structure, not whether it validates any clinical claim.",
       "public_outputs": [
-        "mrd-resistance-geometry-proof-plan-v0"
+        "mrd-resistance-geometry-proof-plan-v0",
+        "mrd-trajectory-contradiction-mining-note-v0",
+        "clone-state-coupling-contradiction-mining-note-v0",
+        "wang-2025-lipid-metabolism-geometry-v0",
+        "lu-2024-signaling-pathways-geometry-v0",
+        "mrd-resistance-geometry-movement-ledger-v0",
+        "myeloma-residual-state-object-public-source-fixture-v0",
+        "mrd-geometry-proof-invariant-check-v0"
       ],
       "expected_outputs": [
         "mrd-resistance-geometry-movement-ledger-v0",
@@ -170,6 +181,15 @@
         "Record movement, split, weaken, and blocked-output decisions in a movement ledger.",
         "Create a public-source-only residual-state object fixture without real case data.",
         "Preserve research-use-only, non-advice, non-ranking, and no-cure boundaries."
+      ],
+      "completion_result": [
+        "MRD trajectory contradiction mining is complete and keeps measurement trajectory separate from residual biological state.",
+        "Clone-state coupling contradiction mining is complete and keeps the coupling edge provisional, source-specific, and split-ready.",
+        "Metabolic resistance state and NF-kB selective state now have review-level second-source extraction records for v0 navigation.",
+        "Movement ledger records the proof movements and blocked inferences.",
+        "Public-source-only residual-state fixture exercises the state object without real case data.",
+        "Invariant checker repeats structural and blocked-output checks.",
+        "No clinical, ranking, patient-matching, treatment, monitoring, or cure output is introduced."
       ]
     }
   ],
@@ -193,7 +213,7 @@
       "Phase 3 now has mrd-resistance-geometry-intelligence-audit-packet-v0 as its internal no-human-outreach audit gate.",
       "Phase 3 now has mrd-resistance-geometry-intelligence-audit-results-v0 and mrd-resistance-geometry-contradiction-mining-task-queue-v0 as the audit result and unresolved counterevidence route.",
       "Phase 3 is complete for v0 through mrd-resistance-geometry-axis-revision-v0 and myeloma-residual-state-object-v0.",
-      "Phase 4 is ready through mrd-resistance-geometry-proof-plan-v0 and defines proof as research-structure performance, not clinical validation.",
+      "Phase 4 is complete for proof-readiness-v0 through contradiction notes, review-level pathway second-source extractions, movement ledger, public-source fixture, and invariant checker.",
       "External human outreach is intentionally skipped; claim upgrades stay blocked by source-trace, contradiction, and boundary-audit gates.",
       "All phase gates preserve research-only, non-advice boundaries."
     ]

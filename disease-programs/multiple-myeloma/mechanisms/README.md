@@ -24,6 +24,9 @@ Initial focus:
 | [MRD Resistance Geometry Intelligence Audit Results v0](mrd-resistance-geometry-intelligence-audit-results-v0.md) | source-checked v0 | audit statuses for research-map continuation only |
 | [Myeloma Residual State Object v0](myeloma-residual-state-object-v0.md) | source-checked v0 | public-source-only residual-state object contract |
 | [MRD Resistance Geometry Proof Plan v0](mrd-resistance-geometry-proof-plan-v0.md) | source-checked v0 | proof means research-structure tests, not clinical validation |
+| [MRD Trajectory Contradiction Mining Note v0](mrd-trajectory-contradiction-mining-note-v0.md) | source-checked v0 | keeps MRD measurement movement separate from residual biology |
+| [Clone-State Coupling Contradiction Mining Note v0](clone-state-coupling-contradiction-mining-note-v0.md) | source-checked v0 | keeps clone-state coupling provisional and split-ready |
+| [MRD Resistance Geometry Movement Ledger v0](mrd-resistance-geometry-movement-ledger-v0.md) | proof-readiness v0 | records geometry movement while preserving blocked outputs |
 
 ## Extraction Workflow
 

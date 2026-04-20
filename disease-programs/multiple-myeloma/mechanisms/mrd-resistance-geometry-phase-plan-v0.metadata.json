@@ -88,6 +88,41 @@
       "label": "MRD Resistance Geometry Proof Plan v0",
       "url": "mrd-resistance-geometry-proof-plan-v0.md",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Trajectory Contradiction Mining Note v0",
+      "url": "mrd-trajectory-contradiction-mining-note-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Clone-State Coupling Contradiction Mining Note v0",
+      "url": "clone-state-coupling-contradiction-mining-note-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Wang 2025 lipid metabolism source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40110197/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Lu 2024 signaling pathways source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38961036/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Movement Ledger v0",
+      "url": "mrd-resistance-geometry-movement-ledger-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Myeloma Residual State Object Public Source Fixture v0",
+      "url": "../../../examples/myeloma-residual-state-object-public-source-fixture-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Proof Invariant Check v0",
+      "url": "../../../tools/check_mrd_geometry_proof_invariants.py",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

@@ -1,0 +1,62 @@
+{
+  "artifact_id": "mrd-geometry-proof-invariant-check-v0",
+  "title": "MRD Geometry Proof Invariant Check v0",
+  "artifact_class": "tool",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "clonal evolution",
+    "therapy resistance",
+    "geometry proof",
+    "public safety",
+    "research tooling"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "MRD Resistance Geometry Proof Plan v0",
+      "url": "../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-proof-plan-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Coverage Report v0",
+      "url": "../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Contradiction Mining Task Queue v0",
+      "url": "../disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-contradiction-mining-task-queue-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Second-Source Task Queue v0",
+      "url": "../disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-second-source-task-queue-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Movement Ledger v0",
+      "url": "../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-movement-ledger-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Myeloma Residual State Object Public Source Fixture v0",
+      "url": "../examples/myeloma-residual-state-object-public-source-fixture-v0.json",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Structural research check only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a monitoring recommendation.",
+    "Not a trial recommendation.",
+    "Not patient-specific MRD interpretation.",
+    "Does not validate evidence strength, biological importance, clinical actionability, or clinical utility.",
+    "Does not rank mechanisms, sources, assays, therapies, or tasks.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Reads public repository files only and uses the Python standard library.",
+    "A passing result means v0 research-structure invariants are present, not that the geometry is clinically validated."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-proof-implementation-v0.md"
+}

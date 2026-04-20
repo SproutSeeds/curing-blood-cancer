@@ -14,14 +14,18 @@
     "pubmed_martinez_lopez_2020_mrd_dynamics",
     "pubmed_cohen_2021_resistance_single_cell",
     "pubmed_li_2025_single_cell_myeloma_review",
-    "pubmed_besliu_2025_evolving_landscape_myeloma"
+    "pubmed_besliu_2025_evolving_landscape_myeloma",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways"
   ],
   "extraction_record_ids": [
     "cui-2024-mrd-clonal-evolution-geometry-v0",
     "martinez-lopez-2020-mrd-dynamics-geometry-v0",
     "cohen-2021-resistance-single-cell-geometry-v0",
     "li-2025-single-cell-myeloma-geometry-v0",
-    "besliu-2025-treatment-landscape-geometry-v0"
+    "besliu-2025-treatment-landscape-geometry-v0",
+    "wang-2025-lipid-metabolism-geometry-v0",
+    "lu-2024-signaling-pathways-geometry-v0"
   ],
   "current_system_layers": [
     {
@@ -73,6 +77,21 @@
       "layer_id": "structured-pocket-v0",
       "artifact_id": "myeloma-residual-state-object-v0",
       "role": "Public-source-only state object that keeps missingness and blocked outputs visible."
+    },
+    {
+      "layer_id": "movement-ledger-v0",
+      "artifact_id": "mrd-resistance-geometry-movement-ledger-v0",
+      "role": "Records proof movements, source reasons, weakened edges, coverage moves, and blocked inferences."
+    },
+    {
+      "layer_id": "public-source-fixture-v0",
+      "artifact_id": "myeloma-residual-state-object-public-source-fixture-v0",
+      "role": "Exercises the residual-state object with public source context and no real case data."
+    },
+    {
+      "layer_id": "proof-invariant-check-v0",
+      "artifact_id": "mrd-geometry-proof-invariant-check-v0",
+      "role": "Repeats v0 structural and safety checks before later geometry movement."
     }
   ],
   "proof_tests": [
@@ -191,7 +210,7 @@
     }
   ],
   "proof_readiness_gate": {
-    "status": "not-yet-ready",
+    "status": "proof-readiness-v0",
     "target_status": "proof-readiness-v0",
     "required_completion_items": [
       "mrd-trajectory-contradiction-mining-task-v0 is run.",
@@ -201,6 +220,15 @@
       "A movement ledger records at least one movement, split, weaken, or blocked movement decision.",
       "A public-source-only residual-state fixture represents one existing extraction record without real case data.",
       "The safety-invariance test blocks clinical, ranking, patient-specific, and cure outputs."
+    ],
+    "completed_output_ids": [
+      "mrd-trajectory-contradiction-mining-note-v0",
+      "clone-state-coupling-contradiction-mining-note-v0",
+      "wang-2025-lipid-metabolism-geometry-v0",
+      "lu-2024-signaling-pathways-geometry-v0",
+      "mrd-resistance-geometry-movement-ledger-v0",
+      "myeloma-residual-state-object-public-source-fixture-v0",
+      "mrd-geometry-proof-invariant-check-v0"
     ]
   },
   "blocked_outputs": [
@@ -225,7 +253,8 @@
     "review_notes": [
       "Created after Phase 3 completed the no-human-outreach intelligence audit, axis revision, contradiction queue, and residual-state object.",
       "Defines proof as research-structure performance, not clinical validation.",
-      "Keeps claim upgrades blocked until contradiction mining, second-source movement, state-object fixture work, and safety-invariance checks are complete."
+      "Phase 4 proof-readiness-v0 is complete through contradiction notes, two review-level second-source pathway extractions, movement ledger, public-source fixture, and invariant checker.",
+      "Claim upgrades remain blocked; proof-readiness-v0 means research-structure readiness only."
     ]
   }
 }

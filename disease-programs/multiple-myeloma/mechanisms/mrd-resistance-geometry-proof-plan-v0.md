@@ -8,6 +8,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - parent axis revision: `mrd-resistance-geometry-axis-revision-v0`
 - companion object: `myeloma-residual-state-object-v0`
 - human outreach policy: none
+- proof-readiness status: `proof-readiness-v0`
 - clinical boundary: research-use-only, not medical advice
 - last reviewed: `2026-04-20`
 
@@ -39,6 +40,9 @@ research machine:
 | Counterevidence queue | `mrd-resistance-geometry-contradiction-mining-task-queue-v0` | Pull-request-only tasks for unresolved contradiction work. |
 | Revised geometry | `mrd-resistance-geometry-axis-revision-v0` | Four-axis geometry plus support layers and movement rules. |
 | Structured pocket | `myeloma-residual-state-object-v0` | Public-source-only state object that keeps missingness and blocked outputs visible. |
+| Movement ledger | `mrd-resistance-geometry-movement-ledger-v0` | Records proof movements, source reasons, weakened edges, coverage moves, and blocked inferences. |
+| Public-source fixture | `myeloma-residual-state-object-public-source-fixture-v0` | Exercises the residual-state object with public source context and no real case data. |
+| Invariant check | `mrd-geometry-proof-invariant-check-v0` | Repeats v0 structural and safety checks before later geometry movement. |
 
 ## What Proof Means Here
 
@@ -67,8 +71,10 @@ does not validate any clinical claim.
 
 ## Proof-Readiness Gate
 
-The geometry reaches `proof-readiness-v0` only after all of the following are
-complete:
+Status: `proof-readiness-v0`
+
+The geometry has reached v0 research-structure proof-readiness because the
+following are complete:
 
 - `mrd-trajectory-contradiction-mining-task-v0` is run.
 - `clone-state-coupling-contradiction-mining-task-v0` is run.
@@ -80,6 +86,16 @@ complete:
   extraction record without real case data.
 - The safety-invariance test blocks clinical, ranking, patient-specific, and
   cure outputs.
+
+Completed outputs:
+
+- `mrd-trajectory-contradiction-mining-note-v0`
+- `clone-state-coupling-contradiction-mining-note-v0`
+- `wang-2025-lipid-metabolism-geometry-v0`
+- `lu-2024-signaling-pathways-geometry-v0`
+- `mrd-resistance-geometry-movement-ledger-v0`
+- `myeloma-residual-state-object-public-source-fixture-v0`
+- `mrd-geometry-proof-invariant-check-v0`
 
 ## Frontier Progress
 
@@ -117,15 +133,15 @@ remains blocked?
 - It does not rank mechanisms by clinical importance.
 - It does not replace clinical review or expert validation.
 
-## Next Outputs
+## Completed Phase 4 Outputs
 
 - `mrd-resistance-geometry-movement-ledger-v0`
 - `mrd-trajectory-contradiction-mining-note-v0`
 - `clone-state-coupling-contradiction-mining-note-v0`
-- `metabolic-resistance-state-second-source-extraction-v0`
-- `nfkb-selective-state-second-source-extraction-v0`
+- `wang-2025-lipid-metabolism-geometry-v0`
+- `lu-2024-signaling-pathways-geometry-v0`
 - `myeloma-residual-state-object-public-source-fixture-v0`
-- optional proof-invariant validator or listing tool
+- `mrd-geometry-proof-invariant-check-v0`
 
 ## Structured Data
 

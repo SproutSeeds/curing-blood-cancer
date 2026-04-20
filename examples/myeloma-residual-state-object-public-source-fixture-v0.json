@@ -1,0 +1,196 @@
+{
+  "artifact_id": "myeloma-residual-state-object-public-source-fixture-v0",
+  "title": "Myeloma Residual State Object Public Source Fixture v0",
+  "disease_program": "multiple-myeloma",
+  "fixture_status": "public-source-only-v0",
+  "schema_id": "myeloma-state-object-schema-v0",
+  "schema_version": "v0",
+  "residual_state_object_id": "myeloma-residual-state-object-v0",
+  "clinical_boundary": "research-use-only; not medical advice",
+  "data_boundary": {
+    "uses_real_case_data": false,
+    "contains_identifiers": false,
+    "contains_raw_records": false,
+    "contains_uploads": false,
+    "contains_exact_person_linked_dates": false,
+    "contains_free_text_case_details": false,
+    "contains_private_correspondence": false,
+    "contains_model_weights": false,
+    "contains_predictions": false,
+    "contains_recommendations": false,
+    "contains_matching_or_ranking": false,
+    "contains_clinical_decisions": false
+  },
+  "fixture_purpose": [
+    "exercise the public-source-only residual-state object contract",
+    "show how measurement trajectory, residual biological state, clone architecture, and clone-state coupling remain separate",
+    "preserve missingness and uncertainty while representing public extraction context",
+    "make blocked clinical outputs machine-checkable before later geometry movement"
+  ],
+  "source_context": {
+    "source_ids": [
+      "pubmed_cui_2024_mrd_clonal_evolution",
+      "pubmed_martinez_lopez_2020_mrd_dynamics",
+      "pubmed_cohen_2021_resistance_single_cell",
+      "pubmed_li_2025_single_cell_myeloma_review",
+      "pubmed_besliu_2025_evolving_landscape_myeloma",
+      "pubmed_wang_2025_lipid_metabolism_myeloma",
+      "pubmed_lu_2024_myeloma_signaling_pathways"
+    ],
+    "extraction_record_ids": [
+      "cui-2024-mrd-clonal-evolution-geometry-v0",
+      "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+      "cohen-2021-resistance-single-cell-geometry-v0",
+      "li-2025-single-cell-myeloma-geometry-v0",
+      "besliu-2025-treatment-landscape-geometry-v0",
+      "wang-2025-lipid-metabolism-geometry-v0",
+      "lu-2024-signaling-pathways-geometry-v0"
+    ],
+    "source_type": "public_source_summary",
+    "source_status": "public_source_only",
+    "method_state": "source_defined_method_or_review_level",
+    "specimen_or_model_context": "public_source_defined",
+    "timepoint_bucket": "source_defined_or_review_level",
+    "provenance_review_status": "source_checked_public_only",
+    "public_artifact_ids": [
+      "myeloma-residual-state-object-v0",
+      "mrd-resistance-geometry-proof-plan-v0",
+      "mrd-resistance-geometry-movement-ledger-v0"
+    ]
+  },
+  "measurement_trajectory_state": {
+    "field_group_id": "measurement_trajectory_state",
+    "axis_id": "measurement-trajectory-axis-v0",
+    "value_states": [
+      "source_defined_mrd_positive_context",
+      "source_defined_serial_declining_context",
+      "assay_context_needed",
+      "threshold_context_needed",
+      "timepoint_context_needed"
+    ],
+    "source_basis": [
+      "cui-2024-mrd-clonal-evolution-geometry-v0",
+      "martinez-lopez-2020-mrd-dynamics-geometry-v0"
+    ],
+    "separation_rule": "MRD measurement movement stays separate from residual-cell biological state.",
+    "blocked_interpretation": true
+  },
+  "residual_biological_state": {
+    "field_group_id": "residual_biological_state",
+    "axis_id": "residual-biological-state-axis-v0",
+    "value_states": [
+      "source_defined_transcriptional_adaptation_context",
+      "source_defined_resistant_state_context",
+      "source_defined_pathway_state_context"
+    ],
+    "source_basis": [
+      "cui-2024-mrd-clonal-evolution-geometry-v0",
+      "cohen-2021-resistance-single-cell-geometry-v0",
+      "wang-2025-lipid-metabolism-geometry-v0",
+      "lu-2024-signaling-pathways-geometry-v0"
+    ],
+    "pathway_branch_states": [
+      {
+        "mechanism_group_id": "metabolic-resistance-state-v0",
+        "coverage_state": "covered-for-v0-navigation",
+        "evidence_boundary": "review-level second-source navigation only; no actionability"
+      },
+      {
+        "mechanism_group_id": "nfkb-selective-state-v0",
+        "coverage_state": "covered-for-v0-navigation",
+        "evidence_boundary": "review-level second-source navigation only; no target selection"
+      }
+    ],
+    "blocked_interpretation": true
+  },
+  "clone_architecture_state": {
+    "field_group_id": "clone_architecture_state",
+    "axis_id": "clone-architecture-axis-v0",
+    "value_states": [
+      "source_defined_clone_architecture_context",
+      "source_defined_transcriptional_clone_context",
+      "review_level_subclone_diversity_context",
+      "clone_inference_method_needed",
+      "subclone_second_source_needed"
+    ],
+    "source_basis": [
+      "cui-2024-mrd-clonal-evolution-geometry-v0",
+      "cohen-2021-resistance-single-cell-geometry-v0",
+      "li-2025-single-cell-myeloma-geometry-v0"
+    ],
+    "separation_rule": "Clone architecture is not collapsed into residual biological state or therapy response.",
+    "blocked_interpretation": true
+  },
+  "clone_state_coupling_state": {
+    "field_group_id": "clone_state_coupling_state",
+    "axis_id": "clone-state-coupling-edge-axis-v0",
+    "value_states": [
+      "provisional_source_specific_coupling",
+      "split_edge_if_weakened"
+    ],
+    "source_basis": [
+      "cui-2024-mrd-clonal-evolution-geometry-v0",
+      "cohen-2021-resistance-single-cell-geometry-v0"
+    ],
+    "edge_rule": "Coupling is represented as a provisional edge, not as a causal ranking.",
+    "blocked_interpretation": true
+  },
+  "support_context_layers": {
+    "field_group_id": "support_context_layers",
+    "value_states": [
+      "microenvironment_context",
+      "therapy_pressure_context",
+      "high_unmet_need_context",
+      "single_cell_translation_readiness_gap",
+      "context_second_source_needed"
+    ],
+    "source_basis": [
+      "li-2025-single-cell-myeloma-geometry-v0",
+      "besliu-2025-treatment-landscape-geometry-v0",
+      "wang-2025-lipid-metabolism-geometry-v0",
+      "lu-2024-signaling-pathways-geometry-v0"
+    ],
+    "boundary": "Support layers modify research interpretation needs only and cannot rank, recommend, or match."
+  },
+  "missingness_and_uncertainty": {
+    "field_group_id": "missingness_and_uncertainty",
+    "value_states": [
+      "source_limit",
+      "assay_limit",
+      "method_limit",
+      "undercovered_branch",
+      "expert_review_needed"
+    ],
+    "open_gaps": [
+      "subclone-diversity-v0 remains under-covered for second-source navigation",
+      "single-cell-translation-gap-v0 remains under-covered for translation readiness",
+      "t-cell-therapy-pressure-v0 remains under-covered for therapy-pressure context",
+      "unmet-high-risk-context-v0 remains under-covered for disease-context support"
+    ],
+    "absence_inference_allowed": false,
+    "clinical_use_allowed": false
+  },
+  "review_and_gate_state": {
+    "review_status": "public_source_shape_only",
+    "private_lab_needed": false,
+    "clinician_review_needed": true,
+    "source_appraisal_needed": true,
+    "publication_gate_needed": true,
+    "allowed_public_successor": "proof-invariant-check-only"
+  },
+  "blocked_output_manifest": {
+    "diagnosis": "blocked",
+    "prognosis": "blocked",
+    "relapse_risk": "blocked",
+    "mrd_interpretation": "blocked",
+    "monitoring_guidance": "blocked",
+    "treatment_guidance": "blocked",
+    "target_selection": "blocked",
+    "trial_guidance": "blocked",
+    "patient_matching": "blocked",
+    "mechanism_ranking": "blocked",
+    "evidence_ranking": "blocked",
+    "clinical_validation": "blocked",
+    "cure_claim": "blocked"
+  }
+}
