@@ -30,9 +30,9 @@ No external human outreach is required or scheduled.
 
 | Task ID | Priority | Status | Mechanism Bucket |
 | --- | --- | --- | --- |
-| `mrd-trajectory-contradiction-mining-task-v0` | high | ready | `mrd-trajectory-split-v0` |
+| `mrd-trajectory-contradiction-mining-task-v0` | high | done | `mrd-trajectory-split-v0` |
 | `residual-state-contradiction-mining-task-v0` | high | ready | `residual-transcriptional-adaptation-v0` |
-| `clone-state-coupling-contradiction-mining-task-v0` | high | ready | `genetic-nongenetic-coupling-v0`, `subclone-diversity-v0` |
+| `clone-state-coupling-contradiction-mining-task-v0` | high | done | `genetic-nongenetic-coupling-v0`, `subclone-diversity-v0` |
 | `tme-shelter-contradiction-mining-task-v0` | medium | ready | `tme-shelter-interactions-v0` |
 | `pathway-actionability-contradiction-mining-task-v0` | medium | ready | `metabolic-resistance-state-v0`, `nfkb-selective-state-v0`, `residual-transcriptional-adaptation-v0` |
 
@@ -60,6 +60,13 @@ The work must preserve:
 - It does not create treatment, monitoring, diagnostic, trial, prognosis, or
   patient-specific guidance.
 
+## Completed Work
+
+| Task ID | Completed By | Decision |
+| --- | --- | --- |
+| `mrd-trajectory-contradiction-mining-task-v0` | `mrd-trajectory-contradiction-mining-note-v0` | Keep measurement trajectory separate from residual biological state; preserve assay-frame split. |
+| `clone-state-coupling-contradiction-mining-task-v0` | `clone-state-coupling-contradiction-mining-note-v0` | Keep clone-state coupling as a provisional, source-specific, split-ready edge. |
+
 ## Structured Data
 
 - JSON: [`mrd-resistance-geometry-contradiction-mining-task-queue-v0.json`](mrd-resistance-geometry-contradiction-mining-task-queue-v0.json)
@@ -69,6 +76,6 @@ The work must preserve:
 
 - Use this queue as unresolved follow-up in
   `mrd-resistance-geometry-axis-revision-v0`.
-- Start with `mrd-trajectory-contradiction-mining-task-v0` and
-  `clone-state-coupling-contradiction-mining-task-v0`, because those are the
-  two highest-risk edges for axis collapse.
+- Continue with `residual-state-contradiction-mining-task-v0`,
+  `tme-shelter-contradiction-mining-task-v0`, and
+  `pathway-actionability-contradiction-mining-task-v0`.

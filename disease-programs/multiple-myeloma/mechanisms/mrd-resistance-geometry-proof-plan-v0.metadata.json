@@ -60,6 +60,31 @@
       "accessed": "2026-04-20"
     },
     {
+      "label": "MRD Trajectory Contradiction Mining Note v0",
+      "url": "mrd-trajectory-contradiction-mining-note-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Clone-State Coupling Contradiction Mining Note v0",
+      "url": "clone-state-coupling-contradiction-mining-note-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Movement Ledger v0",
+      "url": "mrd-resistance-geometry-movement-ledger-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Myeloma Residual State Object Public Source Fixture v0",
+      "url": "../../../examples/myeloma-residual-state-object-public-source-fixture-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Proof Invariant Check v0",
+      "url": "../../../tools/check_mrd_geometry_proof_invariants.py",
+      "accessed": "2026-04-20"
+    },
+    {
       "label": "Cui 2024 MRD clonal evolution source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38900040/",
       "accessed": "2026-04-19"
@@ -83,6 +108,16 @@
       "label": "Besliu 2025 evolving myeloma landscape source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/39941892/",
       "accessed": "2026-04-19"
+    },
+    {
+      "label": "Wang 2025 lipid metabolism source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40110197/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Lu 2024 signaling pathways source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38961036/",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -97,7 +132,7 @@
     "Does not claim that multiple myeloma has been cured.",
     "No external human outreach is required or scheduled.",
     "Proof-readiness means research-structure readiness, not clinical validation.",
-    "Claim upgrades remain blocked until contradiction mining and safety-invariance checks are complete."
+    "Contradiction mining and safety-invariance checks are complete for v0 but claim upgrades remain blocked pending deeper validation."
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-proof-plan-v0.md"
 }

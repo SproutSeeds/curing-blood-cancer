@@ -1,0 +1,69 @@
+{
+  "extraction_record_id": "lu-2024-signaling-pathways-geometry-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "source_ids": [
+    "pubmed_lu_2024_myeloma_signaling_pathways"
+  ],
+  "mechanism_group_ids": [
+    "nfkb-selective-state-v0"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "source_record": {
+    "source_type": "PubMed-indexed open-access review article",
+    "title": "Multiple myeloma: signaling pathways and targeted therapy.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38961036/",
+    "doi": "10.1186/s43556-024-00188-w",
+    "pmid": "38961036",
+    "accessed": "2026-04-20",
+    "publication_year": 2024,
+    "study_context": "Molecular Biomedicine review discussing signaling pathways in multiple myeloma, including NF-kB pathway activation, bone marrow microenvironment interaction, proliferation, survival, migration, drug-resistance context, and limitations of approved pathway-targeted drugs. This public extraction uses the review only as second-source pathway-state navigation context."
+  },
+  "extracted_signals": [
+    {
+      "signal_id": "lu-2024-nfkb-pathway-state-signal-v0",
+      "mechanism_group_id": "nfkb-selective-state-v0",
+      "signal_summary": "The source describes NF-kB as one of the signaling pathways activated through myeloma cell and bone marrow microenvironment interaction, with aberrant activation linked to proliferation, survival, migration, angiogenesis, drug-resistance context, and multiple myeloma pathogenesis.",
+      "evidence_level": "source-summary",
+      "direction": "supports",
+      "measurement_fields": [
+        "review-level NF-kB pathway context",
+        "bone marrow microenvironment interaction",
+        "myeloma cell survival context",
+        "drug resistance context",
+        "canonical and non-canonical NF-kB pathway discussion",
+        "pathway activation context"
+      ],
+      "limitations": [
+        "Review-level source; not a cohort-level MRD-positive selective plasma cell measurement.",
+        "Does not second-source the exact Cui 2024 posttreatment selective-cell state.",
+        "Supports pathway branch navigation only, not target selection, treatment recommendation, biomarker use, prognosis, monitoring, or clinical actionability.",
+        "Requires primary-source extraction before any claim upgrade."
+      ]
+    }
+  ],
+  "evidence_boundary": {
+    "what_this_supports": [
+      "The nfkb-selective-state-v0 branch can move to covered-for-v0-navigation as public artifact coverage because it now has one single-cell study signal and one review-level pathway context source.",
+      "The geometry should preserve NF-kB as a residual biological state branch while keeping the exact MRD-positive selective-cell signal source-specific.",
+      "NF-kB pathway context should stay descriptive and routed through contradiction and safety-invariance checks before reuse."
+    ],
+    "what_this_does_not_support": [
+      "It does not recommend targeting NF-kB or any signaling pathway.",
+      "It does not rank NF-kB against other residual-state branches.",
+      "It does not interpret any patient MRD result or residual disease state.",
+      "It does not validate clinical actionability or cure claims."
+    ]
+  },
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created for Phase 4 productive-movement testing in mrd-resistance-geometry-proof-plan-v0.",
+      "Source details checked against the publisher page and PubMed-indexed metadata visible through search results.",
+      "The extraction intentionally weakens actionability language and uses the source as review-level navigation context only."
+    ]
+  }
+}

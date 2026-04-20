@@ -474,6 +474,26 @@
       "claim_limits": ["Review article; use for treatment-landscape context and open questions, not product comparison, sequencing advice, trial recommendation, or patient-specific treatment fit."]
     },
     {
+      "source_id": "pubmed_wang_2025_lipid_metabolism_myeloma",
+      "owner": "PubMed-indexed literature / Frontiers in Oncology",
+      "source_type": "open-access review article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40110197/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "lipid metabolism", "tumor microenvironment", "drug resistance", "metabolic reprogramming"],
+      "claim_uses": ["literature-search", "mechanism-map", "geometry-proof", "metabolic-context"],
+      "claim_limits": ["Review article; use for metabolic pathway context and public artifact coverage only, not metabolic intervention guidance, biomarker use, prognosis, treatment selection, or patient-specific interpretation."]
+    },
+    {
+      "source_id": "pubmed_lu_2024_myeloma_signaling_pathways",
+      "owner": "PubMed-indexed literature / Molecular Biomedicine",
+      "source_type": "open-access review article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38961036/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "signaling pathways", "NF-kB pathway", "drug resistance", "bone marrow microenvironment"],
+      "claim_uses": ["literature-search", "mechanism-map", "geometry-proof", "pathway-context"],
+      "claim_limits": ["Review article; use for NF-kB pathway context and public artifact coverage only, not target selection, pathway ranking, treatment guidance, prognosis, or patient-specific interpretation."]
+    },
+    {
       "source_id": "pubmed",
       "owner": "U.S. National Library of Medicine",
       "source_type": "literature index",

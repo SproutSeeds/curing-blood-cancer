@@ -1,0 +1,66 @@
+{
+  "contradiction_note_id": "clone-state-coupling-contradiction-mining-note-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "Clone-State Coupling Contradiction Mining Note v0",
+  "clinical_use_boundary": "research-use-only",
+  "parent_proof_plan_id": "mrd-resistance-geometry-proof-plan-v0",
+  "source_task_id": "clone-state-coupling-contradiction-mining-task-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_li_2025_single_cell_myeloma_review"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0"
+  ],
+  "mechanism_group_ids": [
+    "genetic-nongenetic-coupling-v0",
+    "subclone-diversity-v0"
+  ],
+  "contradiction_result": {
+    "status": "pass-with-provisional-edge-only",
+    "summary": "Clone-state coupling survives as a source-specific edge, not a merged axis, causal ranking, or patient-specific resistance attribution.",
+    "required_separations": [
+      "clone identity",
+      "clone architecture",
+      "transcriptional state",
+      "therapy exposure",
+      "sample timing",
+      "review-level subclone context"
+    ],
+    "weakening_rule": "If future contradiction weakens the current edge, split it into clone-inference and transcriptional-state subedges before any reuse."
+  },
+  "movement_decision": {
+    "geometry_element_id": "clone-state-coupling-edge-axis-v0",
+    "decision": "keep-provisional-edge",
+    "edge_status": "source-specific-split-ready",
+    "required_movement": "split-into-clone-inference-and-transcriptional-state-subedges-if-weakened",
+    "proof_test_ids": [
+      "structural-separability-test-v0",
+      "contradiction-response-test-v0",
+      "safety-invariance-test-v0"
+    ]
+  },
+  "blocked_inferences": [
+    "causal ranking",
+    "genetic-versus-nongenetic dominance claim",
+    "patient-specific resistance attribution",
+    "prognosis",
+    "target selection",
+    "treatment recommendation",
+    "cure claim"
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created for Phase 4 contradiction-response testing.",
+      "The note preserves clone architecture and transcriptional state as separate fields linked by a provisional edge.",
+      "No claim upgrade or clinical interpretation is introduced."
+    ]
+  }
+}

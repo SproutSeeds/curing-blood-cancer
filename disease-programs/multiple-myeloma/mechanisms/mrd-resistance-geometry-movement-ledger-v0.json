@@ -1,0 +1,197 @@
+{
+  "movement_ledger_id": "mrd-resistance-geometry-movement-ledger-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Resistance Geometry Movement Ledger v0",
+  "clinical_use_boundary": "research-use-only",
+  "parent_proof_plan_id": "mrd-resistance-geometry-proof-plan-v0",
+  "ledger_status": "proof-readiness-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "wang-2025-lipid-metabolism-geometry-v0",
+    "lu-2024-signaling-pathways-geometry-v0"
+  ],
+  "completed_output_ids": [
+    "mrd-trajectory-contradiction-mining-note-v0",
+    "clone-state-coupling-contradiction-mining-note-v0",
+    "wang-2025-lipid-metabolism-geometry-v0",
+    "lu-2024-signaling-pathways-geometry-v0",
+    "myeloma-residual-state-object-public-source-fixture-v0",
+    "mrd-geometry-proof-invariant-check-v0"
+  ],
+  "movement_records": [
+    {
+      "movement_id": "mrd-trajectory-separation-movement-v0",
+      "geometry_element_id": "measurement-trajectory-axis-v0",
+      "movement_type": "edge-preserved-with-separation",
+      "from_status": "source-bounded",
+      "to_status": "source-bounded-comparison-provisional",
+      "source_reason": "Contradiction mining found that Cui 2024 and Martinez-Lopez 2020 can both support MRD trajectory navigation only when assay method, specimen, threshold or sensitivity, timing, and cohort frame stay visible.",
+      "proof_test_ids": [
+        "structural-separability-test-v0",
+        "contradiction-response-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "proof_result": "pass-with-separation-required",
+      "blocked_inferences": [
+        "patient-specific MRD interpretation",
+        "relapse forecast",
+        "monitoring recommendation",
+        "treatment recommendation",
+        "assay ranking",
+        "cure claim"
+      ]
+    },
+    {
+      "movement_id": "clone-state-coupling-provisional-edge-movement-v0",
+      "geometry_element_id": "clone-state-coupling-edge-axis-v0",
+      "movement_type": "edge-preserved-as-provisional",
+      "from_status": "provisional-source-specific",
+      "to_status": "source-specific-split-ready",
+      "source_reason": "Contradiction mining supports keeping clone architecture and residual biological state linked only as a provisional edge; clone identity, transcriptional state, therapy exposure, and sample timing remain separate fields.",
+      "proof_test_ids": [
+        "structural-separability-test-v0",
+        "contradiction-response-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "proof_result": "pass-with-provisional-edge-only",
+      "blocked_inferences": [
+        "causal ranking",
+        "genetic-versus-nongenetic dominance claim",
+        "patient-specific resistance attribution",
+        "prognosis",
+        "target selection",
+        "treatment recommendation",
+        "cure claim"
+      ]
+    },
+    {
+      "movement_id": "metabolic-branch-coverage-movement-v0",
+      "geometry_element_id": "metabolic-resistance-state-v0",
+      "movement_type": "coverage-status-movement",
+      "from_status": "needs-second-source-extraction",
+      "to_status": "covered-for-v0-navigation",
+      "source_reason": "Wang 2025 adds review-level lipid-metabolism context as a second public source alongside the Cui 2024 single-cell fatty-acid oxidation signal.",
+      "proof_test_ids": [
+        "productive-movement-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "proof_result": "pass-with-review-level-caveat",
+      "blocked_inferences": [
+        "metabolic intervention recommendation",
+        "supplement guidance",
+        "biomarker use",
+        "prognosis",
+        "treatment recommendation",
+        "clinical actionability",
+        "cure claim"
+      ]
+    },
+    {
+      "movement_id": "nfkb-branch-coverage-movement-v0",
+      "geometry_element_id": "nfkb-selective-state-v0",
+      "movement_type": "coverage-status-movement",
+      "from_status": "needs-second-source-extraction",
+      "to_status": "covered-for-v0-navigation",
+      "source_reason": "Lu 2024 adds review-level NF-kB and signaling-pathway context as a second public source alongside the Cui 2024 selective-cell NF-kB pathway signal.",
+      "proof_test_ids": [
+        "productive-movement-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "proof_result": "pass-with-review-level-caveat",
+      "blocked_inferences": [
+        "target selection",
+        "pathway ranking",
+        "biomarker use",
+        "prognosis",
+        "treatment recommendation",
+        "clinical actionability",
+        "cure claim"
+      ]
+    },
+    {
+      "movement_id": "residual-state-object-fixture-movement-v0",
+      "geometry_element_id": "myeloma-residual-state-object-v0",
+      "movement_type": "state-object-fixture-added",
+      "from_status": "object-contract-only",
+      "to_status": "public-source-only-fixture-added",
+      "source_reason": "A public-source-only residual-state fixture represents existing extraction record context without real case data and preserves missingness, uncertainty, and blocked outputs.",
+      "proof_test_ids": [
+        "state-object-fit-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "proof_result": "pass",
+      "blocked_inferences": [
+        "real case representation",
+        "patient matching",
+        "MRD interpretation",
+        "resistance attribution",
+        "prognosis",
+        "treatment recommendation",
+        "clinical decision",
+        "cure claim"
+      ]
+    },
+    {
+      "movement_id": "safety-invariance-movement-v0",
+      "geometry_element_id": "blocked-output-manifest",
+      "movement_type": "blocked-output-preservation",
+      "from_status": "blocked",
+      "to_status": "blocked",
+      "source_reason": "All Phase 4 movements preserve diagnosis, prognosis, MRD interpretation, monitoring, treatment, trial, ranking, validation, and cure blocks.",
+      "proof_test_ids": [
+        "safety-invariance-test-v0"
+      ],
+      "proof_result": "pass",
+      "blocked_inferences": [
+        "diagnosis",
+        "prognosis",
+        "relapse risk",
+        "MRD interpretation",
+        "monitoring guidance",
+        "treatment guidance",
+        "target selection",
+        "trial guidance",
+        "patient matching",
+        "mechanism ranking",
+        "evidence ranking",
+        "clinical validation",
+        "cure claim"
+      ]
+    }
+  ],
+  "proof_readiness_result": {
+    "status": "proof-readiness-v0",
+    "clinical_validation_status": "not-clinically-validated",
+    "completion_items": [
+      "mrd-trajectory-contradiction-mining-task-v0 complete",
+      "clone-state-coupling-contradiction-mining-task-v0 complete",
+      "metabolic-resistance-state-v0 second-source extraction complete",
+      "nfkb-selective-state-v0 second-source extraction complete",
+      "movement ledger complete",
+      "public-source-only residual-state fixture complete",
+      "proof-invariant check tool complete"
+    ]
+  },
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created as the Phase 4 movement ledger required by mrd-resistance-geometry-proof-plan-v0.",
+      "Every movement preserves research-use-only boundaries and blocked clinical outputs.",
+      "Proof-readiness-v0 means research-structure readiness only."
+    ]
+  }
+}

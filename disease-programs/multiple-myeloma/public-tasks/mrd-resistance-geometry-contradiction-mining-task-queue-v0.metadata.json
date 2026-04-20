@@ -52,6 +52,26 @@
       "label": "Li 2025 single-cell myeloma review source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40002248/",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Trajectory Contradiction Mining Note v0",
+      "url": "../mechanisms/mrd-trajectory-contradiction-mining-note-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Clone-State Coupling Contradiction Mining Note v0",
+      "url": "../mechanisms/clone-state-coupling-contradiction-mining-note-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Wang 2025 lipid metabolism source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40110197/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Lu 2024 signaling pathways source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38961036/",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

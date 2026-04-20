@@ -1,0 +1,65 @@
+{
+  "contradiction_note_id": "mrd-trajectory-contradiction-mining-note-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Trajectory Contradiction Mining Note v0",
+  "clinical_use_boundary": "research-use-only",
+  "parent_proof_plan_id": "mrd-resistance-geometry-proof-plan-v0",
+  "source_task_id": "mrd-trajectory-contradiction-mining-task-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0"
+  ],
+  "mechanism_group_ids": [
+    "mrd-trajectory-split-v0"
+  ],
+  "contradiction_result": {
+    "status": "pass-with-separation-required",
+    "summary": "The MRD trajectory edge survives contradiction pressure only if the geometry keeps measurement trajectory separate from residual biological state.",
+    "source_frame_difference": [
+      "Cui 2024 contributes single-cell residual malignant plasma-cell and transcriptional evolution context.",
+      "Martinez-Lopez 2020 contributes serial NGS MRD dynamics context using a different measurement frame."
+    ],
+    "required_context_fields": [
+      "assay method",
+      "specimen",
+      "threshold or sensitivity",
+      "source-defined timing",
+      "cohort context",
+      "response context"
+    ]
+  },
+  "movement_decision": {
+    "geometry_element_id": "measurement-trajectory-axis-v0",
+    "decision": "keep-axis-preserve-assay-frame-split",
+    "edge_status": "source-bounded-comparison-provisional",
+    "required_movement": "do-not-merge-with-residual-biological-state",
+    "proof_test_ids": [
+      "structural-separability-test-v0",
+      "contradiction-response-test-v0",
+      "safety-invariance-test-v0"
+    ]
+  },
+  "blocked_inferences": [
+    "patient-specific MRD interpretation",
+    "relapse forecast",
+    "monitoring recommendation",
+    "treatment recommendation",
+    "assay or threshold ranking",
+    "cure claim"
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created for Phase 4 contradiction-response testing.",
+      "The note preserves source-frame mismatch rather than treating the two extraction records as interchangeable.",
+      "No claim upgrade or clinical interpretation is introduced."
+    ]
+  }
+}

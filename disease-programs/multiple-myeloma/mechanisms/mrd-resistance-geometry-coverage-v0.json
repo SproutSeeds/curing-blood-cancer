@@ -28,14 +28,18 @@
     "pubmed_cui_2024_mrd_clonal_evolution",
     "pubmed_li_2025_single_cell_myeloma_review",
     "pubmed_martinez_lopez_2020_mrd_dynamics",
-    "pubmed_cohen_2021_resistance_single_cell"
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways"
   ],
   "extraction_record_ids": [
     "besliu-2025-treatment-landscape-geometry-v0",
     "cui-2024-mrd-clonal-evolution-geometry-v0",
     "li-2025-single-cell-myeloma-geometry-v0",
     "martinez-lopez-2020-mrd-dynamics-geometry-v0",
-    "cohen-2021-resistance-single-cell-geometry-v0"
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "wang-2025-lipid-metabolism-geometry-v0",
+    "lu-2024-signaling-pathways-geometry-v0"
   ],
   "coverage_basis": {
     "map_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.json",
@@ -111,57 +115,65 @@
     {
       "mechanism_group_id": "metabolic-resistance-state-v0",
       "label": "Metabolic resistance state",
-      "signal_count": 1,
-      "extraction_record_count": 1,
-      "covered_source_count": 1,
-      "coverage_status": "needs-second-source-extraction",
-      "under_coverage_flag": true,
-      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "signal_count": 2,
+      "extraction_record_count": 2,
+      "covered_source_count": 2,
+      "coverage_status": "covered-for-v0-navigation",
+      "under_coverage_flag": false,
+      "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
       "source_ids": [
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_wang_2025_lipid_metabolism_myeloma"
       ],
       "covered_source_ids": [
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_wang_2025_lipid_metabolism_myeloma"
       ],
       "extraction_record_ids": [
-        "cui-2024-mrd-clonal-evolution-geometry-v0"
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "wang-2025-lipid-metabolism-geometry-v0"
       ],
       "extraction_signal_ids": [
-        "cui-2024-fatty-acid-oxidation-signal-v0"
+        "cui-2024-fatty-acid-oxidation-signal-v0",
+        "wang-2025-lipid-metabolic-reprogramming-signal-v0"
       ],
-      "next_extraction_need": "Add at least one additional public source extraction for metabolic resistance state before comparison.",
+      "next_extraction_need": "Use current metabolic resistance state coverage for v0 navigation only; do not infer intervention, biomarker, prognosis, or actionability meaning from counts.",
       "coverage_notes": [
-        "Current support is a source-specific pathway-state signal.",
-        "Second-source extraction should preserve assay context and cell-state context.",
-        "Coverage does not support a metabolic intervention recommendation."
+        "Current coverage combines one primary single-cell residual-clone pathway signal and one review-level lipid-metabolism context source.",
+        "The Wang 2025 source does not second-source the exact posttreatment MRD-positive fatty-acid oxidation state; it supports broader metabolic branch navigation.",
+        "Coverage does not support a metabolic intervention recommendation, biomarker use, prognosis, or clinical actionability."
       ]
     },
     {
       "mechanism_group_id": "nfkb-selective-state-v0",
       "label": "NF-kB selective state",
-      "signal_count": 1,
-      "extraction_record_count": 1,
-      "covered_source_count": 1,
-      "coverage_status": "needs-second-source-extraction",
-      "under_coverage_flag": true,
-      "under_coverage_reason": "Only one extraction record currently maps to this mechanism bucket.",
+      "signal_count": 2,
+      "extraction_record_count": 2,
+      "covered_source_count": 2,
+      "coverage_status": "covered-for-v0-navigation",
+      "under_coverage_flag": false,
+      "under_coverage_reason": "At least two extraction records currently map to this mechanism bucket.",
       "source_ids": [
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_lu_2024_myeloma_signaling_pathways"
       ],
       "covered_source_ids": [
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_lu_2024_myeloma_signaling_pathways"
       ],
       "extraction_record_ids": [
-        "cui-2024-mrd-clonal-evolution-geometry-v0"
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "lu-2024-signaling-pathways-geometry-v0"
       ],
       "extraction_signal_ids": [
-        "cui-2024-nfkb-selective-state-signal-v0"
+        "cui-2024-nfkb-selective-state-signal-v0",
+        "lu-2024-nfkb-pathway-state-signal-v0"
       ],
-      "next_extraction_need": "Add at least one additional public source extraction for NF-kB selective state before comparison.",
+      "next_extraction_need": "Use current NF-kB selective state coverage for v0 navigation only; do not infer target selection, pathway ranking, prognosis, or actionability meaning from counts.",
       "coverage_notes": [
-        "Current support is one study-level pathway-state signal.",
-        "Next extraction should preserve selective plasma cell context and MRD-positive context.",
-        "Coverage does not support pathway ranking or drug-target guidance."
+        "Current coverage combines one primary single-cell MRD-positive selective-cell pathway signal and one review-level NF-kB signaling context source.",
+        "The Lu 2024 source does not second-source the exact posttreatment selective plasma cell state; it supports broader NF-kB pathway branch navigation.",
+        "Coverage does not support pathway ranking, drug-target guidance, biomarker use, prognosis, or clinical actionability."
       ]
     },
     {
@@ -343,10 +355,10 @@
   ],
   "summary": {
     "mechanism_bucket_count": 10,
-    "extraction_record_count": 5,
-    "extraction_signal_count": 14,
+    "extraction_record_count": 7,
+    "extraction_signal_count": 16,
     "needs_first_extraction_count": 0,
-    "needs_second_source_extraction_count": 6
+    "needs_second_source_extraction_count": 4
   },
   "interpretation_boundary": [
     "Coverage counts are public artifact coverage metrics only.",
@@ -364,7 +376,8 @@
     "review_notes": [
       "Built from the MRD Resistance Geometry Pilot and the five current source-specific geometry extraction records.",
       "Phase 2 adds Cohen 2021 as a second-source extraction for residual-state biology and clone-state coupling.",
-      "Current coverage has zero first-extraction gaps, six second-source gaps, and four buckets covered for v0 navigation.",
+      "Phase 4 adds Wang 2025 and Lu 2024 as review-level second-source extractions for metabolic and NF-kB pathway-state branches.",
+      "Current coverage has zero first-extraction gaps, four second-source gaps, and six buckets covered for v0 navigation.",
       "Counts reflect public artifact structure, not strength of evidence, mechanism frequency, or clinical readiness.",
       "External human outreach is not required for the next gate; unresolved tensions route to internal adversarial intelligence audit."
     ]

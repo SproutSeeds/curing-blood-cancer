@@ -31,6 +31,16 @@
       "label": "Cohen 2021 single-cell resistance source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/33619369/",
       "accessed": "2026-04-19"
+    },
+    {
+      "label": "Wang 2025 lipid metabolism source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40110197/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Lu 2024 signaling pathways source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38961036/",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

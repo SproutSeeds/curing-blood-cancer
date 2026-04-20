@@ -21,6 +21,8 @@ Each record should:
 | [Cohen 2021 resistance single-cell geometry](cohen-2021-resistance-single-cell-geometry-v0.json) | residual transcriptional adaptation and clone-state coupling |
 | [Li 2025 single-cell myeloma geometry](li-2025-single-cell-myeloma-geometry-v0.json) | subclone diversity, microenvironment interactions, and single-cell translation gap |
 | [Besliu 2025 treatment landscape geometry](besliu-2025-treatment-landscape-geometry-v0.json) | T-cell therapy pressure and unmet high-risk context |
+| [Wang 2025 lipid metabolism geometry](wang-2025-lipid-metabolism-geometry-v0.json) | metabolic resistance state, review-level lipid-metabolism navigation context |
+| [Lu 2024 signaling pathways geometry](lu-2024-signaling-pathways-geometry-v0.json) | NF-kB selective state, review-level signaling-pathway navigation context |
 | [Maura 2025 plasma-cell identity escape](maura-2025-plasma-cell-identity-escape-v0.json) | plasma-cell identity or lineage-state escape |
 | [Di Meo 2025 target-linked phenotype](di-meo-2025-target-linked-phenotype-v0.json) | target-linked phenotype fields for plasma-cell identity or lineage-state escape |
 | [Yue 2025 BCMA resistance review](yue-2025-bcma-resistance-review-v0.json) | CAR T fitness, exhaustion, expansion, or persistence |

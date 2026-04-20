@@ -21,7 +21,9 @@
     "pubmed_cui_2024_mrd_clonal_evolution",
     "pubmed_li_2025_single_cell_myeloma_review",
     "pubmed_martinez_lopez_2020_mrd_dynamics",
-    "pubmed_cohen_2021_resistance_single_cell"
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways"
   ],
   "tasks": [
     {
@@ -187,7 +189,7 @@
       "task_title": "Add a second public source extraction for metabolic resistance state",
       "task_type": "source-extraction-task",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -201,16 +203,18 @@
         "bone-marrow-mrd"
       ],
       "extraction_record_ids": [
-        "cui-2024-mrd-clonal-evolution-geometry-v0"
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "wang-2025-lipid-metabolism-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_wang_2025_lipid_metabolism_myeloma"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/metabolic-resistance-state-second-source-extraction-task-v0.md",
       "public_deliverables": [
-        "One new source-specific mechanism extraction record mapping at least one signal to metabolic-resistance-state-v0.",
-        "A source note preserving assay method, cell-state context, pathway signal, and posttreatment context.",
+        "Completed through wang-2025-lipid-metabolism-geometry-v0: one new review-level signal maps to metabolic-resistance-state-v0.",
+        "A source note preserving review-level context, cell-state context, pathway signal, and non-actionability boundary.",
         "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
       ],
       "acceptance_checks": [
@@ -237,7 +241,7 @@
       "task_title": "Add a second public source extraction for NF-kB selective state",
       "task_type": "source-extraction-task",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "source-extraction-task.yml",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -251,16 +255,18 @@
         "bone-marrow-mrd"
       ],
       "extraction_record_ids": [
-        "cui-2024-mrd-clonal-evolution-geometry-v0"
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "lu-2024-signaling-pathways-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
-        "pubmed_cui_2024_mrd_clonal_evolution"
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_lu_2024_myeloma_signaling_pathways"
       ],
       "issue_draft_path": "disease-programs/multiple-myeloma/public-tasks/issue-drafts/nfkb-selective-state-second-source-extraction-task-v0.md",
       "public_deliverables": [
-        "One new source-specific mechanism extraction record mapping at least one signal to nfkb-selective-state-v0.",
-        "A source note preserving pathway-state context, selective-cell context, and assay method.",
+        "Completed through lu-2024-signaling-pathways-geometry-v0: one new review-level signal maps to nfkb-selective-state-v0.",
+        "A source note preserving review-level pathway-state context, selective-cell caveat, and non-actionability boundary.",
         "An updated MRD Resistance Geometry Coverage Report after the extraction is accepted."
       ],
       "acceptance_checks": [
@@ -493,7 +499,8 @@
       "Built from mrd-resistance-geometry-coverage-v0.",
       "The MRD trajectory second-source task is done through martinez-lopez-2020-mrd-dynamics-geometry-v0.",
       "The residual transcriptional adaptation and genetic/nongenetic coupling tasks are done through cohen-2021-resistance-single-cell-geometry-v0.",
-      "Six ready tasks remain for second-source extraction across under-covered geometry nodes.",
+      "Four ready tasks remain for second-source extraction across under-covered geometry nodes.",
+      "The metabolic and NF-kB second-source tasks are done through review-level Phase 4 proof extractions; both remain non-actionable navigation coverage only.",
       "Task source_ids include pubmed as a discovery anchor where a second source has not yet been selected.",
       "No external human outreach is required for remaining tasks; source extraction feeds internal adversarial intelligence audit."
     ]

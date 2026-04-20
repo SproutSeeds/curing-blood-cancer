@@ -144,3 +144,32 @@ boundary. Route-table outputs validate against
 [`Review-Packet Route-Table Output Schema v0`](../schemas/review-packet-route-table-output-schema-v0.md).
 The tool uses only the Python standard library and reads only public repository
 files.
+
+### MRD Geometry Proof Invariant Check
+
+Run:
+
+```bash
+python3 tools/check_mrd_geometry_proof_invariants.py
+```
+
+Or:
+
+```bash
+make check-mrd-geometry-proof
+```
+
+The invariant check reads the public MRD geometry proof plan, coverage report,
+task queues, movement ledger, and public-source residual-state fixture. It
+verifies that Phase 4 proof-readiness structure is present and that blocked
+clinical outputs remain blocked.
+
+Machine-readable output:
+
+```bash
+make check-mrd-geometry-proof ARGS="--json"
+```
+
+The tool checks research-structure invariants only. It does not validate
+clinical utility, rank mechanisms, interpret MRD, recommend therapy, match a
+patient, or claim a cure.

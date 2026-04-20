@@ -153,24 +153,21 @@ Remaining public follow-up:
 
 ## Phase 4: Geometry Proof
 
-Status: `ready`
+Status: `complete-for-proof-readiness-v0`
 
 Purpose: test whether the revised geometry works as a moving research
 structure, not whether it validates any clinical claim.
 
-Ready public output:
+Completed public outputs:
 
 - `mrd-resistance-geometry-proof-plan-v0`
-
-Expected outputs:
-
-- `mrd-resistance-geometry-movement-ledger-v0`
 - `mrd-trajectory-contradiction-mining-note-v0`
 - `clone-state-coupling-contradiction-mining-note-v0`
-- `metabolic-resistance-state-second-source-extraction-v0`
-- `nfkb-selective-state-second-source-extraction-v0`
+- `wang-2025-lipid-metabolism-geometry-v0`
+- `lu-2024-signaling-pathways-geometry-v0`
+- `mrd-resistance-geometry-movement-ledger-v0`
 - `myeloma-residual-state-object-public-source-fixture-v0`
-- optional proof-invariant validator or listing tool
+- `mrd-geometry-proof-invariant-check-v0`
 
 Proof tests:
 
@@ -190,6 +187,22 @@ Completion gate:
 - Create a public-source-only residual-state object fixture without real case
   data.
 - Preserve research-use-only, non-advice, non-ranking, and no-cure boundaries.
+
+Phase 4 result:
+
+- MRD trajectory contradiction mining keeps measurement trajectory separate
+  from residual biological state.
+- Clone-state coupling contradiction mining keeps the coupling edge
+  provisional, source-specific, and split-ready.
+- Metabolic resistance state and NF-kB selective state moved to
+  `covered-for-v0-navigation` through review-level second-source extraction
+  records.
+- The movement ledger records proof movements and blocked inferences.
+- The public-source-only fixture exercises the residual-state object without
+  real case data.
+- The invariant checker repeats structural and blocked-output checks.
+- No clinical, ranking, patient-matching, treatment, monitoring, or cure output
+  is introduced.
 
 ## Structured Data
 

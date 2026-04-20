@@ -1,0 +1,91 @@
+{
+  "artifact_id": "myeloma-residual-state-object-public-source-fixture-v0",
+  "title": "Myeloma Residual State Object Public Source Fixture v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "clonal evolution",
+    "therapy resistance",
+    "geometry proof",
+    "residual-state object",
+    "public-source fixture",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Myeloma Residual State Object v0",
+      "url": "../disease-programs/multiple-myeloma/mechanisms/myeloma-residual-state-object-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Proof Plan v0",
+      "url": "../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-proof-plan-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Movement Ledger v0",
+      "url": "../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-movement-ledger-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Cui 2024 MRD clonal evolution source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38900040/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Martinez-Lopez 2020 MRD dynamics source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32706892/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Cohen 2021 single-cell resistance source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33619369/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Li 2025 single-cell myeloma review source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40002248/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Besliu 2025 evolving myeloma landscape source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39941892/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Wang 2025 lipid metabolism source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40110197/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Lu 2024 signaling pathways source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38961036/",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Public-source-only fixture.",
+    "Not real case data.",
+    "Not patient-identifying data.",
+    "Not raw records.",
+    "Not report text.",
+    "Not molecular results from any person.",
+    "Not a public intake form.",
+    "Not a model.",
+    "Not model weights.",
+    "Not a prediction record.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not monitoring guidance.",
+    "Does not match patients, rank mechanisms, rank evidence, select targets, or recommend actions.",
+    "Does not claim clinical validation.",
+    "Does not claim that multiple myeloma has been cured.",
+    "Second-source pathway entries are review-level navigation signals only and require deeper extraction before any claim upgrade."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-proof-implementation-v0.md"
+}
