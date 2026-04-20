@@ -1,12 +1,12 @@
 {
   "catalog_id": "public-artifact-catalog-v0",
-  "date": "2026-04-19",
+  "date": "2026-04-20",
   "title": "Public Artifact Catalog v0",
   "clinical_use_boundary": "research-use-only",
   "generated_from": "*.metadata.json files tracked in the public repo",
   "review": {
     "created": "2026-04-14",
-    "last_reviewed": "2026-04-19",
+    "last_reviewed": "2026-04-20",
     "review_status": "expert-review-needed",
     "review_notes": [
       "Generated from public artifact metadata for navigation.",
@@ -171,7 +171,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.metadata.json",
-      "source_count": 5,
+      "source_count": 6,
       "limitation_count": 9
     },
     {
@@ -211,6 +211,25 @@
       "limitation_count": 8
     },
     {
+      "artifact_id": "mrd-resistance-geometry-intelligence-audit-packet-v0",
+      "title": "MRD Resistance Geometry Intelligence Audit Packet v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "clonal evolution",
+        "therapy resistance",
+        "geometry pilot",
+        "internal adversarial intelligence audit",
+        "no human outreach"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-intelligence-audit-packet-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-intelligence-audit-packet-v0.metadata.json",
+      "source_count": 8,
+      "limitation_count": 10
+    },
+    {
       "artifact_id": "mrd-resistance-geometry-phase-plan-v0",
       "title": "MRD Resistance Geometry Phase Plan v0",
       "artifact_class": "protocol",
@@ -226,7 +245,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.metadata.json",
-      "source_count": 9,
+      "source_count": 10,
       "limitation_count": 9
     },
     {

@@ -124,7 +124,11 @@ Comparison questions for Phase 2:
 
 ## Phase 3: Intelligence Audit And Revision
 
-Status: `ready`
+Status: `in-progress`
+
+Completed public outputs:
+
+- `mrd-resistance-geometry-intelligence-audit-packet-v0`
 
 Completion gate:
 
@@ -136,8 +140,9 @@ Completion gate:
 
 Expected public outputs:
 
-- `mrd-resistance-geometry-intelligence-audit-packet-v0`
 - `mrd-resistance-geometry-axis-revision-v0`
+- `mrd-resistance-geometry-contradiction-mining-task-queue-v0`
+- `myeloma-residual-state-object-v0`
 - updated issue drafts for remaining second-source tasks
 
 ## Structured Data

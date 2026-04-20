@@ -141,6 +141,7 @@ research directions deserve structured public tracking.
 - [MRD Resistance Geometry Coverage Report v0](mechanisms/mrd-resistance-geometry-coverage-v0.md)
 - [MRD Resistance Geometry Phase Plan v0](mechanisms/mrd-resistance-geometry-phase-plan-v0.md)
 - [MRD Resistance Geometry Axis Revision Decision v0](mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.md)
+- [MRD Resistance Geometry Intelligence Audit Packet v0](mechanisms/mrd-resistance-geometry-intelligence-audit-packet-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
 - [Post-CAR T Relapse Mechanism Coverage Report v0](mechanisms/post-car-t-relapse-mechanism-coverage-v0.md)

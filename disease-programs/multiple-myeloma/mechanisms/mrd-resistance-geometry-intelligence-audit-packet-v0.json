@@ -1,0 +1,268 @@
+{
+  "audit_packet_id": "mrd-resistance-geometry-intelligence-audit-packet-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Resistance Geometry Intelligence Audit Packet v0",
+  "clinical_use_boundary": "research-use-only",
+  "human_outreach_policy": "none",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "parent_plan_id": "mrd-resistance-geometry-phase-plan-v0",
+  "parent_decision_id": "mrd-resistance-geometry-axis-revision-decision-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "besliu-2025-treatment-landscape-geometry-v0"
+  ],
+  "target_artifacts": [
+    {
+      "artifact_id": "mrd-resistance-geometry-pilot-v0",
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.md",
+      "audit_goal": "Confirm the geometry buckets and edges remain source-bounded and nonclinical."
+    },
+    {
+      "artifact_id": "mrd-resistance-geometry-coverage-v0",
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.md",
+      "audit_goal": "Confirm coverage counts are not treated as evidence strength, frequency, importance, or clinical readiness."
+    },
+    {
+      "artifact_id": "mrd-resistance-geometry-axis-revision-decision-v0",
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.md",
+      "audit_goal": "Pressure-test the decision to keep measurement trajectory, residual biological state, and clone architecture separate while linking clone-state coupling edges."
+    },
+    {
+      "artifact_id": "mrd-resistance-geometry-second-source-task-queue-v0",
+      "path": "disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-second-source-task-queue-v0.md",
+      "audit_goal": "Confirm remaining tasks route uncertainty into source extraction rather than advice, outreach, or claim upgrade."
+    }
+  ],
+  "audit_scope": [
+    "source-trace completeness",
+    "contradiction search",
+    "axis-collapse pressure test",
+    "claim-boundary red team",
+    "coverage-count misuse check",
+    "remaining-gap routing",
+    "no-human-outreach compliance"
+  ],
+  "audit_items": [
+    {
+      "audit_item_id": "measurement-state-separation-audit-v0",
+      "audit_focus": "axis-separation",
+      "linked_mechanism_group_ids": [
+        "mrd-trajectory-split-v0",
+        "residual-transcriptional-adaptation-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics",
+        "pubmed_cohen_2021_resistance_single_cell"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0"
+      ],
+      "attack_questions": [
+        "Does any artifact collapse NGS or flow MRD measurement trajectory into single-cell residual-cell biology?",
+        "Are assay method, specimen, threshold, sampling time, and response context preserved before comparison?",
+        "Would a reader mistake MRD trajectory labels for patient-specific interpretation?"
+      ],
+      "pass_condition": "Measurement trajectory and residual biological state stay separate, and every comparison carries assay, specimen, timing, and non-advice boundaries.",
+      "failure_action": "Split or weaken the affected geometry edge and add a source-specific gap before any axis revision."
+    },
+    {
+      "audit_item_id": "clone-state-coupling-edge-audit-v0",
+      "audit_focus": "coupling-edge-pressure-test",
+      "linked_mechanism_group_ids": [
+        "genetic-nongenetic-coupling-v0",
+        "subclone-diversity-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0",
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "attack_questions": [
+        "Does clone-state coupling overstate causality from source-specific single-cell observations?",
+        "Do clone identity and transcriptional state remain separate fields?",
+        "Does the geometry need subclone diversity branching before the edge is named more strongly?"
+      ],
+      "pass_condition": "Clone-state coupling remains an explicit but source-specific edge, not a causal mechanism ranking or clinical actionability claim.",
+      "failure_action": "Rename the edge as provisional, split it into source-specific edges, or return to second-source extraction for subclone diversity."
+    },
+    {
+      "audit_item_id": "pathway-actionability-overreach-audit-v0",
+      "audit_focus": "pathway-overreach",
+      "linked_mechanism_group_ids": [
+        "residual-transcriptional-adaptation-v0",
+        "metabolic-resistance-state-v0",
+        "nfkb-selective-state-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0"
+      ],
+      "attack_questions": [
+        "Does any pathway signal become a treatment, target, supplement, or monitoring suggestion?",
+        "Are metabolic, NF-kB, hypoxia, protein-folding, and mitochondrial-respiration signals marked as research-map signals only?",
+        "Are the remaining metabolic and NF-kB second-source gaps kept visible?"
+      ],
+      "pass_condition": "Pathway-state language remains research-use-only, source-specific, and blocked from clinical actionability.",
+      "failure_action": "Downgrade pathway language, add an explicit actionability boundary, and route the bucket to second-source extraction."
+    },
+    {
+      "audit_item_id": "coverage-count-misuse-audit-v0",
+      "audit_focus": "coverage-boundary",
+      "linked_mechanism_group_ids": [
+        "mrd-trajectory-split-v0",
+        "residual-transcriptional-adaptation-v0",
+        "genetic-nongenetic-coupling-v0",
+        "tme-shelter-interactions-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics",
+        "pubmed_cohen_2021_resistance_single_cell",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0",
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "attack_questions": [
+        "Does covered-for-v0-navigation imply stronger evidence, higher frequency, or clinical readiness anywhere?",
+        "Are under-covered buckets protected from being treated as lower biological priority?",
+        "Are the remaining six second-source gaps still visible?"
+      ],
+      "pass_condition": "Coverage remains an artifact-readiness metric only.",
+      "failure_action": "Add stronger boundary language and block any artifact that ranks mechanisms from coverage counts."
+    },
+    {
+      "audit_item_id": "contradiction-mining-queue-audit-v0",
+      "audit_focus": "counterevidence-routing",
+      "linked_mechanism_group_ids": [
+        "mrd-trajectory-split-v0",
+        "residual-transcriptional-adaptation-v0",
+        "genetic-nongenetic-coupling-v0",
+        "tme-shelter-interactions-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics",
+        "pubmed_cohen_2021_resistance_single_cell",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0",
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "attack_questions": [
+        "What sources would weaken or contradict each covered edge?",
+        "Which assay, cohort, therapy, or timing mismatch could make two sources non-comparable?",
+        "Which currently covered edge is most likely to split after contradiction mining?"
+      ],
+      "pass_condition": "Each covered edge has a documented contradiction-search task or a reason why contradiction search is not yet possible.",
+      "failure_action": "Create a contradiction-mining task before producing an axis revision."
+    },
+    {
+      "audit_item_id": "clinical-boundary-red-team-audit-v0",
+      "audit_focus": "public-safety-boundary",
+      "linked_mechanism_group_ids": [
+        "mrd-trajectory-split-v0",
+        "residual-transcriptional-adaptation-v0",
+        "genetic-nongenetic-coupling-v0",
+        "t-cell-therapy-pressure-v0",
+        "unmet-high-risk-context-v0"
+      ],
+      "source_ids": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics",
+        "pubmed_cohen_2021_resistance_single_cell",
+        "pubmed_besliu_2025_evolving_landscape_myeloma"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0",
+        "besliu-2025-treatment-landscape-geometry-v0"
+      ],
+      "attack_questions": [
+        "Could any wording be read as prognosis, treatment selection, monitoring guidance, trial guidance, or cure claim?",
+        "Does the phrase cure-oriented remain clearly distinct from claiming cure?",
+        "Does no-human-outreach mode accidentally remove scientific caution?"
+      ],
+      "pass_condition": "All artifacts remain research-use-only, nonclinical, and claim-upgrade-blocked.",
+      "failure_action": "Weaken public wording, add a blocker note, and keep the affected claim or edge out of the axis revision."
+    }
+  ],
+  "completion_gate": [
+    "Every audit item has a pass, fail, or blocked status before mrd-resistance-geometry-axis-revision-v0 is created.",
+    "Every pass decision cites source IDs and extraction record IDs.",
+    "Every fail decision produces one of: weaken wording, split edge, add gap, add contradiction-mining task, or block claim upgrade.",
+    "No external human outreach is required or scheduled.",
+    "No cure, prognosis, treatment, monitoring, diagnostic, or trial guidance is introduced."
+  ],
+  "initial_risk_register": [
+    {
+      "risk_id": "cohen-therapeutic-target-title-overread-risk-v0",
+      "severity": "high",
+      "risk": "The Cohen 2021 source title includes therapeutic targets, which could be overread as actionability.",
+      "mitigation": "Keep target and pathway language as source-specific research context only."
+    },
+    {
+      "risk_id": "assay-frame-collapse-risk-v0",
+      "severity": "high",
+      "risk": "Single-cell residual-state observations and NGS MRD dynamics could be collapsed into one trajectory.",
+      "mitigation": "Keep assay, specimen, timing, and threshold fields explicit in every comparison."
+    },
+    {
+      "risk_id": "clone-state-causality-overread-risk-v0",
+      "severity": "high",
+      "risk": "Clone-state coupling could be mistaken for causal ranking or clinical mechanism dominance.",
+      "mitigation": "Keep coupling edges explicit, provisional, and source-specific."
+    },
+    {
+      "risk_id": "coverage-count-ranking-risk-v0",
+      "severity": "medium",
+      "risk": "Covered-for-v0-navigation could be mistaken for higher evidence strength or biological importance.",
+      "mitigation": "Keep coverage framed as public artifact coverage only."
+    }
+  ],
+  "next_outputs_after_audit": [
+    "mrd-resistance-geometry-axis-revision-v0",
+    "mrd-resistance-geometry-contradiction-mining-task-queue-v0",
+    "myeloma-residual-state-object-v0"
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created as the Phase 3 internal adversarial intelligence-audit packet promised by mrd-resistance-geometry-phase-plan-v0.",
+      "This packet replaces external human outreach with source-trace, contradiction, boundary, and uncertainty gates.",
+      "The packet does not upgrade any claim and does not create clinical guidance."
+    ]
+  }
+}
