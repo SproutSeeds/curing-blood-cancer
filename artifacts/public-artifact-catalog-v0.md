@@ -63,6 +63,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Curing Blood Cancer Concept Map v0 | map | derived | [artifacts/curing-blood-cancer-concept-map-v0.md](../artifacts/curing-blood-cancer-concept-map-v0.md) |
 | High-Risk, Extramedullary, Organ, And Frailty Context Modifier Map v0 | map | open-question | [disease-programs/multiple-myeloma/contexts/high-risk-organ-frailty-context-modifier-map-v0.md](../disease-programs/multiple-myeloma/contexts/high-risk-organ-frailty-context-modifier-map-v0.md) |
 | Immune Therapy Sequencing And Access Boundary v0 | map | open-question | [disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md](../disease-programs/multiple-myeloma/therapy-landscapes/immune-therapy-sequencing-access-boundary-v0.md) |
+| Measurement Refusal Output Route Table v0 | map | open-question | [disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.md](../disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.md) |
 | MRD Geometry Transition Model v0 | map | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.md) |
 | MRD Resistance Geometry Axis Revision v0 | map | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-v0.md) |
 | MRD Resistance Geometry Pilot v0 | map | derived | [disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.md) |
@@ -164,6 +165,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 
 | Artifact | Class | Claim Level | Path |
 | --- | --- | --- | --- |
+| Measurement Refusal Output Route Table Check v0 | tool | open-question | [tools/check_measurement_refusal_output_route_table.py](../tools/check_measurement_refusal_output_route_table.py) |
 | Measurement Refusal Output Schema Check v0 | tool | open-question | [tools/check_measurement_refusal_output_schema.py](../tools/check_measurement_refusal_output_schema.py) |
 | Measurement State Refusal Fixture Check v0 | tool | open-question | [tools/check_measurement_state_refusal_fixtures.py](../tools/check_measurement_state_refusal_fixtures.py) |
 | MRD Geometry Falsification Check v0 | tool | open-question | [tools/check_mrd_geometry_falsification.py](../tools/check_mrd_geometry_falsification.py) |

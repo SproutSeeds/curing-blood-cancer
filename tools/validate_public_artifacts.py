@@ -76,6 +76,7 @@ class Validator:
         self.validate_review_packet_builder_manifest_records(source_ids, artifact_metadata)
         self.validate_review_packet_route_table_outputs()
         self.validate_measurement_refusal_outputs()
+        self.validate_measurement_refusal_route_tables()
         self.validate_case_to_cure_synthetic_pipelines()
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
@@ -1791,6 +1792,192 @@ class Validator:
                     if location.startswith("$.forbidden_output_fields"):
                         continue
                     self.add_error(path, f"{location} is not allowed in public measurement-refusal output records")
+
+    def validate_measurement_refusal_route_tables(self) -> None:
+        forbidden_keys = {
+            "accession",
+            "accession_number",
+            "actionability",
+            "actionability_score",
+            "assay_rank",
+            "biopsy_interpretation",
+            "case_id",
+            "clinical_decision",
+            "clinical_guidance",
+            "clinical_interpretation",
+            "clinical_priority",
+            "clinical_priority_score",
+            "date_of_birth",
+            "diagnosis",
+            "dose",
+            "dosing",
+            "eligibility",
+            "eligibility_guidance",
+            "endpoint_interpretation",
+            "evidence_rank",
+            "evidence_strength",
+            "evidence_strength_score",
+            "free_text_note",
+            "image_interpretation",
+            "interpretation",
+            "lab_validity_conclusion",
+            "medical_record_number",
+            "modality_rank",
+            "monitoring_guidance",
+            "monitoring_plan",
+            "mrd_interpretation",
+            "mrd_label",
+            "option_rank",
+            "patient_fit",
+            "patient_id",
+            "patient_matching",
+            "patient_relevance",
+            "probability",
+            "prognosis",
+            "prognosis_text",
+            "publication_authorization",
+            "ranking",
+            "raw_record",
+            "recommendation",
+            "residual_disease_comparison",
+            "response_category",
+            "risk_category",
+            "risk_score",
+            "score",
+            "treatment_action",
+            "treatment_choice",
+            "treatment_guidance",
+            "treatment_recommendation",
+            "trial_guidance",
+            "trial_match",
+            "trial_matching",
+            "trial_recommendation",
+            "urgency",
+            "urgency_score",
+        }
+        required_false_boundary_fields = {
+            "uses_real_case_data",
+            "contains_identifiers",
+            "contains_raw_records",
+            "contains_uploads",
+            "contains_exact_person_linked_dates",
+            "contains_free_text_case_details",
+            "contains_private_correspondence",
+            "contains_model_weights",
+            "contains_predictions",
+            "contains_recommendations",
+            "contains_matching_or_ranking",
+            "contains_clinical_decisions",
+        }
+        required_clinical_boundaries = {
+            "not-medical-advice",
+            "not-diagnostic",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        required_blocked_routes = {
+            "diagnosis",
+            "prognosis",
+            "endpoint_interpretation",
+            "mrd_interpretation",
+            "residual_disease_comparison",
+            "monitoring_guidance",
+            "treatment_guidance",
+            "trial_guidance",
+            "patient_matching",
+            "assay_ranking",
+            "modality_ranking",
+            "evidence_ranking",
+            "clinical_decision",
+            "publication_authorization",
+            "cure_claim",
+            "report_interpretation",
+            "lab_validity_conclusion",
+            "image_interpretation",
+            "biopsy_interpretation",
+        }
+        allowed_route_families = {
+            "structural_validator_input",
+            "model_output_boundary_refusal_surface",
+            "public_navigation_index",
+            "synthetic_regression_fixture",
+            "private_review_blocker_notice",
+        }
+        seen_records: set[str] = set()
+
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "measurement_refusal_route_table_id" not in doc:
+                continue
+
+            record_id = doc.get("measurement_refusal_route_table_id")
+            if isinstance(record_id, str):
+                if record_id in seen_records:
+                    self.add_error(path, f"duplicate measurement_refusal_route_table_id: {record_id}")
+                seen_records.add(record_id)
+
+            clinical_boundaries = doc.get("clinical_use_boundary")
+            if isinstance(clinical_boundaries, list):
+                missing = sorted(required_clinical_boundaries - {value for value in clinical_boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+            else:
+                self.add_error(path, "measurement-refusal route table must include clinical_use_boundary")
+
+            data_boundary = doc.get("data_boundary")
+            if isinstance(data_boundary, dict):
+                missing_false = sorted(field for field in required_false_boundary_fields if data_boundary.get(field) is not False)
+                if missing_false:
+                    self.add_error(path, f"data_boundary fields must be false: {', '.join(missing_false)}")
+            else:
+                self.add_error(path, "measurement-refusal route table must include data_boundary")
+
+            allowed = doc.get("allowed_route_families")
+            if isinstance(allowed, list):
+                unknown = sorted({value for value in allowed if isinstance(value, str)} - allowed_route_families)
+                if unknown:
+                    self.add_error(path, f"allowed_route_families contains unknown values: {', '.join(unknown)}")
+
+            manifest = doc.get("blocked_route_manifest")
+            if isinstance(manifest, list):
+                blocked = {
+                    row.get("blocked_route")
+                    for row in manifest
+                    if isinstance(row, dict) and row.get("status") == "blocked" and isinstance(row.get("blocked_route"), str)
+                }
+                missing_blocks = sorted(required_blocked_routes - blocked)
+                if missing_blocks:
+                    self.add_error(path, f"blocked_route_manifest missing required values: {', '.join(missing_blocks)}")
+
+            routes = doc.get("route_records")
+            if isinstance(routes, list):
+                for index, route in enumerate(routes):
+                    if not isinstance(route, dict):
+                        continue
+                    if route.get("clinical_output_allowed") is not False:
+                        self.add_error(path, f"route_records[{index}].clinical_output_allowed must be false")
+                    if route.get("comparison_allowed") is not False:
+                        self.add_error(path, f"route_records[{index}].comparison_allowed must be false")
+                    if route.get("no_interpretive_text") is not True:
+                        self.add_error(path, f"route_records[{index}].no_interpretive_text must be true")
+                    if route.get("route_boundary") != "refusal-metadata-only":
+                        self.add_error(path, f"route_records[{index}].route_boundary must be refusal-metadata-only")
+                    route_families = route.get("allowed_route_families")
+                    if isinstance(route_families, list):
+                        unknown = sorted({value for value in route_families if isinstance(value, str)} - allowed_route_families)
+                        if unknown:
+                            self.add_error(path, f"route_records[{index}].allowed_route_families contains unknown values: {', '.join(unknown)}")
+                    blocked_routes = route.get("blocked_routes")
+                    if isinstance(blocked_routes, list):
+                        missing_blocks = sorted(required_blocked_routes - {value for value in blocked_routes if isinstance(value, str)})
+                        if missing_blocks:
+                            self.add_error(path, f"route_records[{index}].blocked_routes missing required values: {', '.join(missing_blocks)}")
+
+            for key in sorted(forbidden_keys):
+                for location, _value in self.find_key(doc, key):
+                    if location.startswith("$.forbidden_route_fields"):
+                        continue
+                    self.add_error(path, f"{location} is not allowed in public measurement-refusal route-table records")
 
     def validate_case_to_cure_synthetic_pipelines(self) -> None:
         schema_path = self.root / "schemas" / "case-to-cure-synthetic-pipeline.schema.json"

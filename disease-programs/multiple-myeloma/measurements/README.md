@@ -13,6 +13,7 @@ the multiple myeloma disease program.
 - [BCMA Measurement Context Audit v0](bcma-measurement-context-audit-v0.md)
 - [Residual Disease Modality Discordance Source Extraction v0](residual-disease-modality-discordance-source-extraction-v0.md)
 - [Assay Specimen Quality Failure Mode Checklist v0](assay-specimen-quality-failure-mode-checklist-v0.md)
+- [Measurement Refusal Output Route Table v0](measurement-refusal-output-route-table-v0.md)
 
 ## Boundary
 
@@ -32,3 +33,6 @@ the multiple myeloma disease program.
 - Synthetic measurement-state refusal fixtures live in
   [`examples/measurement-state-refusal-fixtures-v0.json`](../../../examples/measurement-state-refusal-fixtures-v0.json)
   so those boundaries can be checked without real records or clinical output.
+- Measurement-refusal route tables may route refusal metadata only; they must
+  not emit interpretation, comparison, ranking, treatment, trial, monitoring,
+  publication, decision, or cure outputs.

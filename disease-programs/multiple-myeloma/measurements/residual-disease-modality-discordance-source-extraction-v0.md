@@ -124,9 +124,9 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, and publication remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-output-route-table-v0`, after the assay/specimen quality
-checklist, measurement-state refusal fixture extension, and
-measurement-refusal output schema.
+`measurement-refusal-validator-skeleton-v0`, after the assay/specimen quality
+checklist, measurement-state refusal fixture extension, measurement-refusal
+output schema, and measurement-refusal output route table.
 
 ## Public Safety Check
 

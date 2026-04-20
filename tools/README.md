@@ -293,3 +293,34 @@ make check-measurement-refusal-output-schema ARGS="--json"
 The tool checks structural synthetic output invariants only. It does not
 validate clinical utility, interpret MRD, validate assays or specimens, review
 reports, recommend therapy, rank modalities, match a patient, or claim a cure.
+
+### Measurement Refusal Output Route-Table Check
+
+Run:
+
+```bash
+python3 tools/check_measurement_refusal_output_route_table.py
+```
+
+Or:
+
+```bash
+make check-measurement-refusal-output-route-table
+```
+
+The measurement-refusal output route-table check reads the synthetic refused
+output fixture and the measurement-refusal route table. It verifies that every
+refused output has exactly one route, the route preserves the source output and
+assay/specimen quality state, the full blocked downstream-use set travels with
+each route, normal synthetic refusals route only to safe refusal surfaces, and
+private/real quality-review requests route only as public blocker notices.
+
+Machine-readable output:
+
+```bash
+make check-measurement-refusal-output-route-table ARGS="--json"
+```
+
+The tool checks structural synthetic routing invariants only. It does not
+validate clinical utility, interpret MRD, validate assays or specimens, review
+reports, recommend therapy, rank modalities, match a patient, or claim a cure.

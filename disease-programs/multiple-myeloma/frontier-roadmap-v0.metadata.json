@@ -225,6 +225,16 @@
       "label": "Measurement Refusal Output Schema Check v0",
       "url": "../../tools/check_measurement_refusal_output_schema.py",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Output Route Table v0",
+      "url": "./measurements/measurement-refusal-output-route-table-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Output Route Table Check v0",
+      "url": "../../tools/check_measurement_refusal_output_route_table.py",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

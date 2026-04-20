@@ -100,6 +100,8 @@
   - goal: Complete a no-outreach, synthetic-only fixture extension that pressure-tests assay/specimen quality fail-closed measurement states before residual-disease comparison, model-output reuse, or validator implementation.
 - [x] `measurement-refusal-output-schema-v0` Measurement Refusal Output Schema v0 (`complete`)
   - goal: Complete a no-outreach, synthetic-only output schema, fixture, and checker for assay/specimen quality refusal states before any route table, validator, or model-output reuse.
+- [x] `measurement-refusal-output-route-table-v0` Measurement Refusal Output Route Table v0 (`complete`)
+  - goal: Complete a no-outreach, synthetic-only route table and checker for measurement-refusal output records before any validator skeleton or model-output reuse.
 - [ ] `machine-representation-expert-validation-execution-v0` Machine Representation Expert Validation Execution v0 (`blocked`)
   - goal: Resume actual external machine-representation expert-validation execution only after human authorization, while keeping outreach, public issue operations, response intake, expert-review claim upgrades, private correspondence, and clinical interpretation blocked until then.
 - [ ] `machine-representation-expert-validation-human-authorization-blocker-v0` Machine Representation Expert Validation Human Authorization Blocker v0 (`blocked`)
