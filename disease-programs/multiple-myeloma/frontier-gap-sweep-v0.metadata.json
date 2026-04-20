@@ -93,6 +93,16 @@
       "label": "ORP Frontier Gap Sweep Mode v0",
       "url": "../../orp/modes/frontier-gap-sweep-mode-v0.md",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement State Refusal Fixtures v0",
+      "url": "../../examples/measurement-state-refusal-fixtures-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement State Refusal Fixture Check v0",
+      "url": "../../tools/check_measurement_state_refusal_fixtures.py",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -118,7 +128,8 @@
     "Does not output patient-specific progression risk, response probability, MRD interpretation, resistance attribution, treatment recommendations, trial recommendations, monitoring actions, candidate option rankings, or clinical decisions.",
     "Does not clear human review, expert review, outreach, private-lab, clinical, legal, regulatory, model-governance, or publication gates.",
     "Does not claim that multiple myeloma has been cured or that a vaccine has been found.",
-    "Does not authorize public real-report quality review, laboratory-validity review, imaging interpretation, biopsy interpretation, or assay/specimen quality interpretation for a person."
+    "Does not authorize public real-report quality review, laboratory-validity review, imaging interpretation, biopsy interpretation, or assay/specimen quality interpretation for a person.",
+    "Does not authorize production refusal-output generation."
   ],
   "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-frontier-gap-sweep-v0.md"
 }

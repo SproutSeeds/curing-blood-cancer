@@ -8,7 +8,7 @@
   "active_milestone": "case-to-cure-adaptive-master-plan-v0",
   "active_milestone_label": "Case-To-Cure Adaptive Master Plan v0",
   "band": "exact",
-  "next_action": "Assay/specimen quality failure-mode checklist is complete and wired into measurement, glossary, residual-disease modality extraction, model-output wrapper, validator, machine-representation source extraction, navigation, and ORP boundaries. The next no-outreach public-source successor, if selected, is measurement-state-refusal-fixture-extension-v0. Active state remains machine-representation-expert-validation-human-authorization-blocker-v0; actual expert-validation execution, issue operations, outreach, response intake, claim upgrade, clinical interpretation, model-governance clearance, publication, real-report quality review, and private-lab work remain blocked unless a human explicitly authorizes scope or selects another named no-outreach public-source phase.",
+  "next_action": "Measurement-state refusal fixture extension is complete and wired into examples, tools, measurement, glossary, model-output wrapper, validator, navigation, and ORP boundaries. The next no-outreach public-source successor, if selected, is measurement-refusal-output-schema-v0. Active state remains machine-representation-expert-validation-human-authorization-blocker-v0; actual expert-validation execution, issue operations, outreach, response intake, claim upgrade, clinical interpretation, model-governance clearance, publication, real-report quality review, and private-lab work remain blocked unless a human explicitly authorizes scope or selects another named no-outreach public-source phase.",
   "phases": [
     {
       "id": "case-to-cure-loop-governor-v0",
@@ -386,7 +386,8 @@
       "plans": [
         "Completed as disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md.",
         "Recommended successor assay-specimen-quality-failure-mode-checklist-v0 was selected and completed.",
-        "Recommended next no-outreach public-source successor, if selected, is measurement-state-refusal-fixture-extension-v0."
+        "Recommended successor measurement-state-refusal-fixture-extension-v0 was selected and completed.",
+        "Recommended next no-outreach public-source successor, if selected, is measurement-refusal-output-schema-v0."
       ],
       "compute_hooks": [
         "python3 tools/validate_public_artifacts.py"
@@ -417,10 +418,45 @@
       ],
       "plans": [
         "Completed as disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md.",
-        "Recommended next no-outreach public-source successor, if selected, is measurement-state-refusal-fixture-extension-v0."
+        "Recommended successor measurement-state-refusal-fixture-extension-v0 was selected and completed.",
+        "Recommended next no-outreach public-source successor, if selected, is measurement-refusal-output-schema-v0."
       ],
       "compute_hooks": [
         "python3 tools/validate_public_artifacts.py"
+      ]
+    },
+    {
+      "id": "measurement-state-refusal-fixture-extension-v0",
+      "label": "Measurement State Refusal Fixture Extension v0",
+      "status": "complete",
+      "goal": "Complete a no-outreach, synthetic-only fixture extension that pressure-tests assay/specimen quality fail-closed measurement states before residual-disease comparison, model-output reuse, or validator implementation.",
+      "depends_on": [
+        "assay-specimen-quality-failure-mode-checklist-v0",
+        "measurement-normalization-contract-v0",
+        "model-output-boundary-wrapper-v0",
+        "myeloma-state-validator-rule-map-v0"
+      ],
+      "requirements": [
+        "Use only public repo artifacts and synthetic fixture shapes.",
+        "Do not use real case data, private records, restricted datasets, private correspondence, credentials, outreach, issue operations, expert-response intake, or real-report content.",
+        "Cover missing method family, threshold or detection limit, specimen quality, timepoint alignment, paired modality context, imaging criteria, spatial sampling, host-context separation, private/real quality review need, and modality collapse as fail-closed states.",
+        "Do not provide lab-validity conclusions, MRD interpretation, imaging interpretation, biopsy interpretation, prognosis, monitoring guidance, treatment guidance, trial guidance, matching, ranking, model validation, publication authorization, or cure claims.",
+        "Preserve the machine-representation expert-validation human-authorization blocker."
+      ],
+      "success_criteria": [
+        "A measurement-state refusal fixture artifact exists with metadata, catalog coverage, and navigation links.",
+        "A public checker verifies that every assay/specimen quality checklist state has synthetic fixture coverage and blocked outputs remain complete.",
+        "Measurement, glossary, model-output wrapper, validator, ORP, and navigation artifacts point at the synthetic fixture pressure layer.",
+        "ORP state keeps external expert-validation execution, outreach, issue operations, response intake, real quality review, and private-lab work blocked and recommends a no-outreach refusal-output schema successor."
+      ],
+      "plans": [
+        "Completed as examples/measurement-state-refusal-fixtures-v0.json.",
+        "Completed checker tools/check_measurement_state_refusal_fixtures.py.",
+        "Recommended next no-outreach public-source successor, if selected, is measurement-refusal-output-schema-v0."
+      ],
+      "compute_hooks": [
+        "python3 tools/validate_public_artifacts.py",
+        "python3 tools/check_measurement_state_refusal_fixtures.py"
       ]
     },
     {
@@ -544,7 +580,8 @@
         "machine-representation-source-gap-internal-extraction-v0",
         "orp-frontier-gap-sweep-mode-v0",
         "residual-disease-modality-discordance-source-extraction-v0",
-        "assay-specimen-quality-failure-mode-checklist-v0"
+        "assay-specimen-quality-failure-mode-checklist-v0",
+        "measurement-state-refusal-fixture-extension-v0"
       ],
       "requirements": [
         "Do not contact reviewers, tag people, open new issues, update issue state, copy private correspondence, or ingest response content.",
@@ -558,8 +595,8 @@
         "No artifact language implies expert-review completion, endorsement, consensus, clinical validity, publication readiness, advice, ranking, matching, or cure."
       ],
       "plans": [
-        "Residual-disease modality-discordance source extraction and assay/specimen quality failure-mode checklist are complete and did not clear the expert-validation gate.",
-        "Recommended next no-outreach public-source successor, if selected, is measurement-state-refusal-fixture-extension-v0."
+        "Residual-disease modality-discordance source extraction, assay/specimen quality failure-mode checklist, and measurement-state refusal fixture extension are complete and did not clear the expert-validation gate.",
+        "Recommended next no-outreach public-source successor, if selected, is measurement-refusal-output-schema-v0."
       ],
       "compute_hooks": []
     }

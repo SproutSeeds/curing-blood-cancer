@@ -25,6 +25,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Machine Representation Source Extraction v0 | dataset | open-question | [disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md](../disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md) |
 | Machine Representation Source-Gap Internal Extraction v0 | dataset | open-question | [disease-programs/multiple-myeloma/machine-representation-source-gap-internal-extraction-v0.md](../disease-programs/multiple-myeloma/machine-representation-source-gap-internal-extraction-v0.md) |
 | Machine Representation Source-Gap Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md) |
+| Measurement State Refusal Fixtures v0 | dataset | open-question | [examples/measurement-state-refusal-fixtures-v0.json](../examples/measurement-state-refusal-fixtures-v0.json) |
 | MRD And Relapse Measurement Glossary v0 | dataset | derived | [disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md](../disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md) |
 | MRD Geometry Benchmark Fixtures v0 | dataset | open-question | [examples/mrd-geometry-benchmark-fixtures-v0.json](../examples/mrd-geometry-benchmark-fixtures-v0.json) |
 | MRD Geometry Claim Upgrade Blocker Ledger v0 | dataset | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-geometry-claim-upgrade-blocker-ledger-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-claim-upgrade-blocker-ledger-v0.md) |
@@ -161,6 +162,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 
 | Artifact | Class | Claim Level | Path |
 | --- | --- | --- | --- |
+| Measurement State Refusal Fixture Check v0 | tool | open-question | [tools/check_measurement_state_refusal_fixtures.py](../tools/check_measurement_state_refusal_fixtures.py) |
 | MRD Geometry Falsification Check v0 | tool | open-question | [tools/check_mrd_geometry_falsification.py](../tools/check_mrd_geometry_falsification.py) |
 | MRD Geometry Proof Invariant Check v0 | tool | open-question | [tools/check_mrd_geometry_proof_invariants.py](../tools/check_mrd_geometry_proof_invariants.py) |
 | MRD Geometry State Diff Tool v0 | tool | open-question | [tools/diff_mrd_geometry_state.py](../tools/diff_mrd_geometry_state.py) |

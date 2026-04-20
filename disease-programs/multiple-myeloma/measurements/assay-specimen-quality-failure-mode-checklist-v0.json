@@ -349,7 +349,8 @@
   "handoff": {
     "completed_item": "assay-specimen-quality-failure-mode-checklist-v0",
     "still_blocked_item": "machine-representation-expert-validation-human-authorization-blocker-v0",
-    "next_no_outreach_successor_if_selected": "measurement-state-refusal-fixture-extension-v0",
-    "summary": "Public failure-mode checklist complete; future synthetic fixtures should pressure method, threshold, specimen, timing, paired-modality, imaging, spatial, host-context, private-review, and modality-collapse refusal states."
+    "next_no_outreach_successor_if_selected": "measurement-refusal-output-schema-v0",
+    "summary": "Public failure-mode checklist complete; measurement-state refusal fixtures now pressure method, threshold, specimen, timing, paired-modality, imaging, spatial, host-context, private-review, and modality-collapse refusal states. The next no-outreach successor is a refusal-output schema.",
+    "completed_successor": "measurement-state-refusal-fixture-extension-v0"
   }
 }

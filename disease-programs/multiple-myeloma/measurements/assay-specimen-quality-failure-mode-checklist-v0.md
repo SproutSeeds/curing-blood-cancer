@@ -107,10 +107,12 @@ geometry. A visible modality-discordance state is not enough unless method
 family, threshold, specimen quality, timing alignment, paired context, imaging
 criteria, spatial sampling, and host-context separation are visible first.
 
-The highest-value public successor is therefore
-`measurement-state-refusal-fixture-extension-v0`: extend synthetic fixture and
-wrapper pressure so the states in this checklist are mechanically testable
-without outreach, real case data, clinical interpretation, or model outputs.
+The highest-value public successor was therefore
+`measurement-state-refusal-fixture-extension-v0`, which is now complete as
+[Measurement State Refusal Fixtures v0](../../../examples/measurement-state-refusal-fixtures-v0.json)
+and a companion structural checker. The next no-outreach successor is a
+refusal-output schema so future tools can emit these states without returning
+clinical meaning.
 
 ## Handoff State
 
@@ -124,7 +126,7 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-state-refusal-fixture-extension-v0`.
+`measurement-refusal-output-schema-v0`.
 
 ## Public Safety Check
 

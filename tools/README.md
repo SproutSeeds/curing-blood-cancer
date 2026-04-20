@@ -231,3 +231,33 @@ make check-mrd-geometry-falsification ARGS="--json"
 The tool checks structural research invariants only. It does not validate
 clinical utility, rank mechanisms, interpret MRD, recommend therapy, match a
 patient, or claim a cure.
+
+### Measurement State Refusal Fixture Check
+
+Run:
+
+```bash
+python3 tools/check_measurement_state_refusal_fixtures.py
+```
+
+Or:
+
+```bash
+make check-measurement-state-refusal-fixtures
+```
+
+The measurement-state refusal fixture check reads the assay/specimen quality
+failure-mode checklist and the synthetic measurement-state refusal fixtures. It
+verifies that every checklist fail-closed state has fixture coverage, all
+fixture data-boundary fields remain public synthetic only, blocked outputs are
+complete, and real/private quality-review requests stop the public path.
+
+Machine-readable output:
+
+```bash
+make check-measurement-state-refusal-fixtures ARGS="--json"
+```
+
+The tool checks structural synthetic fixture invariants only. It does not
+validate clinical utility, interpret MRD, validate assays or specimens, review
+reports, recommend therapy, rank modalities, match a patient, or claim a cure.

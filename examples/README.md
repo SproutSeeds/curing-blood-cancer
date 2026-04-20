@@ -14,6 +14,7 @@ Examples should use public or synthetic data only.
 - [Myeloma residual-state object public-source fixture v0](./myeloma-residual-state-object-public-source-fixture-v0.json)
 - [MRD geometry negative safety fixtures v0](./mrd-geometry-negative-safety-fixtures-v0.json)
 - [MRD geometry benchmark fixtures v0](./mrd-geometry-benchmark-fixtures-v0.json)
+- [Measurement state refusal fixtures v0](./measurement-state-refusal-fixtures-v0.json)
 - [Review-packet builder route-table placeholder fixture v0](./review-packet-builder-route-table-placeholder-fixture-v0.json)
 - [Review-packet builder forbidden input fixture v0](./review-packet-builder-forbidden-input-fixture-v0.json)
 - [Review-packet route-table output fixture v0](./review-packet-route-table-output-fixture-v0.json)

@@ -96,6 +96,8 @@
   - goal: Complete a no-outreach, public-source-only extraction pass for residual-disease modality discordance across marrow MRD, blood mass spectrometry, PET-CT/imaging, spatial marrow architecture, assay/specimen quality, microenvironment context, host context, and model-output refusal states.
 - [x] `assay-specimen-quality-failure-mode-checklist-v0` Assay Specimen Quality Failure Mode Checklist v0 (`complete`)
   - goal: Complete a no-outreach, public-source-only failure-mode checklist for assay/specimen quality before residual-disease modality comparison, without lab-validity review, real case interpretation, advice, ranking, outreach, or claim upgrade.
+- [x] `measurement-state-refusal-fixture-extension-v0` Measurement State Refusal Fixture Extension v0 (`complete`)
+  - goal: Complete a no-outreach, synthetic-only fixture extension that pressure-tests assay/specimen quality fail-closed measurement states before residual-disease comparison, model-output reuse, or validator implementation.
 - [ ] `machine-representation-expert-validation-execution-v0` Machine Representation Expert Validation Execution v0 (`blocked`)
   - goal: Resume actual external machine-representation expert-validation execution only after human authorization, while keeping outreach, public issue operations, response intake, expert-review claim upgrades, private correspondence, and clinical interpretation blocked until then.
 - [ ] `machine-representation-expert-validation-human-authorization-blocker-v0` Machine Representation Expert Validation Human Authorization Blocker v0 (`blocked`)

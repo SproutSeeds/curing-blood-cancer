@@ -29,3 +29,6 @@ the multiple myeloma disease program.
 - Assay/specimen quality artifacts must expose missing method, threshold,
   specimen quality, timing, paired-modality, imaging, spatial, host-context,
   private-review, and modality-collapse states as fail-closed boundaries.
+- Synthetic measurement-state refusal fixtures live in
+  [`examples/measurement-state-refusal-fixtures-v0.json`](../../../examples/measurement-state-refusal-fixtures-v0.json)
+  so those boundaries can be checked without real records or clinical output.

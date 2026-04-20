@@ -200,6 +200,16 @@
       "label": "Machine Representation Implementation Completion Audit v0",
       "url": "./machine-representation-implementation-completion-audit-v0.md",
       "accessed": "2026-04-18"
+    },
+    {
+      "label": "Measurement State Refusal Fixtures v0",
+      "url": "../../examples/measurement-state-refusal-fixtures-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement State Refusal Fixture Check v0",
+      "url": "../../tools/check_measurement_state_refusal_fixtures.py",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -211,7 +221,8 @@
     "Does not claim that multiple myeloma has been cured.",
     "Does not use or authorize public use of patient-identifying data or real case data.",
     "Some frontier lanes may remain blocked until expert review, private-lab review, or source extraction is complete.",
-    "Regulatory, trial, product, and evidence landscapes can change after the access date."
+    "Regulatory, trial, product, and evidence landscapes can change after the access date.",
+    "Does not clear the measurement-refusal output schema or executable validator gate."
   ],
   "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-frontier-roadmap-v0.md"
 }
