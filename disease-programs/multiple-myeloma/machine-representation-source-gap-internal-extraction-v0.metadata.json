@@ -1,0 +1,116 @@
+{
+  "artifact_id": "machine-representation-source-gap-internal-extraction-v0",
+  "title": "Machine Representation Source-Gap Internal Extraction v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "machine representation",
+    "source extraction",
+    "therapy exposure",
+    "model validation",
+    "model governance",
+    "no human outreach",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Machine Representation Expert Validation No-Outreach Execution Packet v0",
+      "url": "reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Machine Representation Source Extraction v0",
+      "url": "machine-representation-source-extraction-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Machine Representation Source-Gap Task Queue v0",
+      "url": "public-tasks/machine-representation-source-gap-task-queue-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Source Registry v0",
+      "url": "../../sources/source-registry-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Treatment of relapsed and refractory multiple myeloma: recommendations from the International Myeloma Working Group",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33662288/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Management of relapsed multiple myeloma: recommendations of the International Myeloma Working Group",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26710887/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "TRIPOD+AI statement",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38626948/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "PROBAST prediction model risk of bias tool",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30596875/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "FDA Good Machine Learning Practice guiding principles",
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/good-machine-learning-practice-medical-device-development-guiding-principles",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "DECIDE-AI early clinical evaluation reporting guideline",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9116198/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../../orp/frontier/additional-items.json",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Public source extraction only.",
+    "Not a systematic review.",
+    "Not expert review.",
+    "Not external outreach.",
+    "Not new GitHub issue creation.",
+    "Not live issue status refresh.",
+    "Not expert-response intake.",
+    "Not a source ranking.",
+    "Not evidence ranking.",
+    "Not model governance clearance.",
+    "Not a clinical model.",
+    "Not model validation.",
+    "Not a prediction record.",
+    "Not a scoring function.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not publication authorization.",
+    "Does not contain patient-identifying data, real case data, raw records, molecular reports, pathology reports, flow reports, images, notes, exact dates tied to a person, private paths, private case IDs, private correspondence, or re-identification keys.",
+    "Does not collect, normalize, store, transmit, train on, infer from, publish, compare, rank, match, recommend, or authorize use of real case data.",
+    "Does not output patient-specific progression risk, response probability, MRD interpretation, resistance attribution, treatment recommendations, trial recommendations, monitoring actions, candidate option rankings, or clinical decisions.",
+    "Does not claim that expert review, clinical review, endorsement, consensus, publication readiness, model validity, clinical utility, deployment readiness, or clinical validity has been achieved.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/machine-representation-source-gap-internal-extraction-v0.md"
+}

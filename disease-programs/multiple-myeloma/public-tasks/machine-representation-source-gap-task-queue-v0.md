@@ -12,7 +12,7 @@ Stewarded by [frg.earth](https://frg.earth/).
   records, uploads, exact person-linked dates, free-text case details, private
   correspondence, model weights, predictions, recommendations, matching,
   ranking, or clinical decisions
-- last reviewed: `2026-04-18`
+- last reviewed: `2026-04-20`
 
 ## Purpose
 
@@ -49,6 +49,7 @@ monitoring tool, publication decision, or claim that a cure has been found.
 ## Source Artifacts
 
 - [Machine Representation Source Extraction v0](../machine-representation-source-extraction-v0.md)
+- [Machine Representation Source-Gap Internal Extraction v0](../machine-representation-source-gap-internal-extraction-v0.md)
 - [Myeloma Machine Representation Stack v0](../machine-representation-stack-v0.md)
 - [Myeloma State Validator Rule Map v0](../myeloma-state-validator-rule-map-v0.md)
 - [Model Output Boundary Wrapper v0](../model-output-boundary-wrapper-v0.md)
@@ -75,10 +76,10 @@ monitoring tool, publication decision, or claim that a cure has been found.
 | `mr-modality-scope-source-extraction-task-v0` | high | ready | `mse_00`, `mse_01`, `mse_02` | `source_id_mapped_with_scope_gap` | `nature_genetics_commpass_subtypes_2024`, source registry, machine stack, state schema | prognosis, treatment, trial, monitoring, matching, ranking, model validation | Extract modality coverage, cohort scope, longitudinal follow-up limits, and source-defined feature families, or record a no-add reason. | `issue_draft` |
 | `mr-immune-atlas-field-source-extraction-task-v0` | high | ready | `mse_03` | `source_id_mapped_with_scope_gap` | `nature_cancer_immune_atlas_myeloma_2026`, source registry, synthetic fixture, validator map | immune-status advice, prognosis, treatment fit, trial fit, monitoring guidance | Extract public immune-atlas field families, missingness labels, method context, and limitation text for synthetic-only reuse. | `issue_draft` |
 | `mr-context-crosswalk-source-task-v0` | high | ready | `mse_04`, `mse_07` | `source_id_mapped_with_scope_gap` | `nci_pdq_myeloma_hp`, `jco_ims_imwg_high_risk_consensus_2025`, `pubmed_high_risk_genomic_consensus_validation_2026`, `nature_genetics_mm_precursor_genomic_landscape_2025`, context contracts | diagnosis, prognosis, eligibility, screening advice, personal risk advice, treatment guidance, trial guidance | Crosswalk source-defined clinical, high-risk, organ, frailty, and precursor labels to public context contracts without calculator fields. | `issue_draft` |
-| `mr-therapy-exposure-source-gap-task-v0` | high | ready | `mse_05` | `source_context_needed` | therapy exposure timeline contract, treatment-class taxonomy, immune therapy boundary, source registry | sequencing, eligibility, availability, access guidance, treatment advice, trial advice, ranking | Identify public source IDs for therapy-exposure vocabulary, class labels, response linkage, refractory context, and limitations, or keep `source_context_needed`. | `source_registry_delta` |
+| `mr-therapy-exposure-source-gap-task-v0` | high | complete-for-v0-source-anchors | `mse_05` | `source_id_mapped_with_scope_gap` | `nci_pdq_myeloma_hp`, `nci_cancer_drug_dictionary`, `fda_drugs_at_fda`, `dailymed`, `pubmed_moreau_2021_imwg_rrmm_recommendations`, `pubmed_laubach_2016_imwg_relapsed_management`, `pubmed_kumar_2016_imwg_mrd_response_criteria`, `fda_mrd_cr_endpoint_guidance_2026`, therapy exposure timeline contract, treatment-class taxonomy, immune therapy boundary, source registry | sequencing, eligibility, availability, access guidance, treatment advice, trial advice, ranking, refractory assessment, toxicity management | V0 source anchors are recorded in [Machine Representation Source-Gap Internal Extraction v0](../machine-representation-source-gap-internal-extraction-v0.md); exact exposure, toxicity, access, eligibility, sequencing, and patient-specific response linkage remain blocked. | `artifact_update` |
 | `mr-endpoint-field-source-task-v0` | high | ready | `mse_06` | `source_id_mapped` | `fda_mrd_cr_endpoint_guidance_2026`, measurement normalization contract, MRD glossary, MRD endpoint guardrail | cure claim, endpoint interpretation, prognosis, monitoring guidance, treatment guidance, trial guidance | Extract method, threshold, sample, timepoint, durability, endpoint role, and limitation fields into source-scoped measurement task language. | `artifact_update` |
 | `mr-relapse-resistance-scope-task-v0` | medium | ready | `mse_08` | `source_id_mapped_with_scope_gap` | `nature_communications_rrmm_resistance_2022`, post-BCMA frontier addendum, post-CAR T mechanism map | resistance diagnosis, treatment ranking, trial matching, mechanism ranking, actionability | Extract relapse/resistance feature families as cohort-level mechanism context and map unresolved gaps to mechanism task surfaces. | `issue_draft` |
-| `mr-fusion-validation-method-source-gap-task-v0` | medium | ready | `mse_09`, `mse_11` | `source_context_needed` | machine stack, source registry, validator map, public method sources if found | model implementation, model comparison, scoring, prediction, clinical deployment, clinical utility claim | Find public method or governance sources for fusion architecture and validation standards, or record `source_context_needed` and expert-review-needed. | `expert_review_question` |
+| `mr-fusion-validation-method-source-gap-task-v0` | medium | partial-method-governance-mapped | `mse_09`, `mse_11` | `mse_09`: `source_context_needed`; `mse_11`: `source_id_mapped_with_scope_gap` | `pubmed_tripod_ai_2024_prediction_model_reporting`, `pubmed_probast_2019_prediction_model_risk_of_bias`, `fda_imdrf_gmlp_guiding_principles_2025`, `pmc_decide_ai_2022_early_clinical_eval`, machine stack, source registry, validator map | model implementation, model comparison, scoring, prediction, clinical deployment, clinical utility claim, benchmark claim, regulatory clearance claim | Governance sources are mapped for validation-standard pressure fields, but no direct method source validates the proposed fusion architecture or encoder families. | `expert_review_question` |
 | `mr-output-wrapper-review-question-task-v0` | medium | ready | `mse_10`, `mse_12` | `boundary_only` and `expert_review_needed` | model-output boundary wrapper, validator rule map, source extraction table, case-to-cure gates | progression risk output, response probability, MRD interpretation, resistance attribution, recommendation, ranking, publication authorization | Draft public expert-review questions about wrapper refusals, blocked-use labels, and case-to-cure linkage without requesting real cases or clinical decisions. | `expert_review_question` |
 
 ## Public Issue Draft Packet Seed
@@ -95,22 +96,31 @@ created.
 ## What This Step Revealed
 
 The source-extraction table already provides enough structure for a task
-queue. The remaining gap is not more architecture prose; it is issue-draft
-scaffolding that makes each task easy for contributors while preserving the
-no-advice, no-ranking, no-real-data boundary.
+queue. The later
+[Machine Representation Source-Gap Internal Extraction v0](../machine-representation-source-gap-internal-extraction-v0.md)
+closes the therapy-exposure source-anchor slice for v0 and partially closes
+the validation-governance slice. It also confirms an important no-add result:
+the fusion architecture row remains source-context-needed because general
+model-governance sources do not justify the specific graph, set, dense,
+sparse-aware, or temporal encoder families proposed in the machine stack.
 
 The implementation completion audit is now complete as
 [Machine Representation Implementation Completion Audit v0](../machine-representation-implementation-completion-audit-v0.md).
-The next state is therefore
-`machine-representation-public-scope-human-gate-blocker-v0`.
+The no-outreach expert-validation preparation packet is now complete as
+[Machine Representation Expert Validation No-Outreach Execution Packet v0](../reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.md).
+The next state remains
+`machine-representation-expert-validation-human-authorization-blocker-v0`
+unless a new no-outreach, public-source-only phase is explicitly selected.
 
 ## Handoff State
 
 `machine-representation-source-gap-task-queue-v0` is complete as a public task
 queue.
 
-ORP should mark this item complete and activate
-`machine-representation-public-scope-human-gate-blocker-v0`.
+ORP should keep this item complete and keep the active blocker at
+`machine-representation-expert-validation-human-authorization-blocker-v0`.
+Actual expert-validation execution, issue operations, outreach, response intake,
+claim upgrade, and clinical interpretation remain blocked.
 
 ## Public Safety Check
 

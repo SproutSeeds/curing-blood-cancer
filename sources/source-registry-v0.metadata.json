@@ -66,19 +66,19 @@
       "url": "https://www.ncbi.nlm.nih.gov/geo/info/overview.html",
       "accessed": "2026-04-15"
     },
-        {
-            "label": "NCI Genomic Data Commons",
-            "url": "https://gdc.cancer.gov/",
-            "accessed": "2026-04-15"
-        },
-        {
-            "label": "Dana-Farber Multiple Myeloma CAR T-Cell Therapy Update",
-            "url": "https://www.dana-farber.org/for-physicians/clinical-resources/hematologic-malignancies/advances-newsletter/2025-issue-20/multiple-myeloma-cart-t-cell-therapy-update",
-            "accessed": "2026-04-16"
-        },
-        {
-            "label": "PubMed",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    {
+      "label": "NCI Genomic Data Commons",
+      "url": "https://gdc.cancer.gov/",
+      "accessed": "2026-04-15"
+    },
+    {
+      "label": "Dana-Farber Multiple Myeloma CAR T-Cell Therapy Update",
+      "url": "https://www.dana-farber.org/for-physicians/clinical-resources/hematologic-malignancies/advances-newsletter/2025-issue-20/multiple-myeloma-cart-t-cell-therapy-update",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
       "accessed": "2026-04-14"
     },
     {
@@ -91,80 +91,110 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/27632282/",
       "accessed": "2026-04-14"
     },
-        {
-            "label": "PubMed literature anchor: MRD flow cytometry harmonization",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/35005838/",
-            "accessed": "2026-04-14"
-        },
-        {
-            "label": "PubMed literature anchor: single-cell resistance pathways in primary refractory or early relapse multiple myeloma",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/33619369/",
-            "accessed": "2026-04-19"
-        },
-        {
-            "label": "FDA Draft Guidance On MRD And Complete Response In Multiple Myeloma",
-            "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated",
-            "accessed": "2026-04-16"
-        },
-        {
-            "label": "Comprehensive Molecular Profiling Of Multiple Myeloma Identifies Refined Copy Number And Expression Subtypes",
-            "url": "https://www.nature.com/articles/s41588-024-01853-0",
-            "accessed": "2026-04-18"
-        },
-        {
-            "label": "A Single-Cell Atlas Characterizes Dysregulation Of The Bone Marrow Immune Microenvironment Associated With Outcomes In Multiple Myeloma",
-            "url": "https://www.nature.com/articles/s43018-025-01072-4",
-            "accessed": "2026-04-18"
-        },
-        {
-            "label": "Genomic Landscape Of Multiple Myeloma And Its Precursor Conditions",
-            "url": "https://www.nature.com/articles/s41588-025-02196-0",
-            "accessed": "2026-04-18"
-        },
-        {
-            "label": "The Genetic Heterogeneity And Drug Resistance Mechanisms Of Relapsed Refractory Multiple Myeloma",
-            "url": "https://www.nature.com/articles/s41467-022-31430-0",
-            "accessed": "2026-04-18"
-        },
-        {
-            "label": "International Myeloma Society/International Myeloma Working Group Consensus Recommendations On The Definition Of High-Risk Multiple Myeloma",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/40489728/",
-            "accessed": "2026-04-18"
-        },
-        {
-            "label": "High-Risk Genomic Consensus Validation For Patients With Newly Diagnosed Multiple Myeloma Using Next-Generation Sequencing",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/40991836/",
-            "accessed": "2026-04-18"
-        },
-        {
-            "label": "PubMed literature anchor: IMWG MGUS and smoldering myeloma consensus perspectives",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/20410922/",
-            "accessed": "2026-04-16"
-        },
-        {
-            "label": "IMWG risk stratification model for smoldering multiple myeloma",
-            "url": "https://www.nature.com/articles/s41408-020-00366-3",
-            "accessed": "2026-04-16"
-        },
-        {
-            "label": "PubMed literature anchor: IMWG frailty report",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/25628469/",
-            "accessed": "2026-04-16"
-        },
-        {
-            "label": "Drugs@FDA",
-            "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database",
-            "accessed": "2026-04-11"
-        },
-        {
-            "label": "FDA Linvoseltamab Accelerated Approval Notice",
-            "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-linvoseltamab-gcpt-relapsed-or-refractory-multiple-myeloma",
-            "accessed": "2026-04-16"
-        },
-        {
-            "label": "NCI SEER Cancer Stat Facts",
+    {
+      "label": "PubMed literature anchor: MRD flow cytometry harmonization",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35005838/",
+      "accessed": "2026-04-14"
+    },
+    {
+      "label": "PubMed literature anchor: single-cell resistance pathways in primary refractory or early relapse multiple myeloma",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33619369/",
+      "accessed": "2026-04-19"
+    },
+    {
+      "label": "FDA Draft Guidance On MRD And Complete Response In Multiple Myeloma",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Comprehensive Molecular Profiling Of Multiple Myeloma Identifies Refined Copy Number And Expression Subtypes",
+      "url": "https://www.nature.com/articles/s41588-024-01853-0",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "A Single-Cell Atlas Characterizes Dysregulation Of The Bone Marrow Immune Microenvironment Associated With Outcomes In Multiple Myeloma",
+      "url": "https://www.nature.com/articles/s43018-025-01072-4",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "Genomic Landscape Of Multiple Myeloma And Its Precursor Conditions",
+      "url": "https://www.nature.com/articles/s41588-025-02196-0",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "The Genetic Heterogeneity And Drug Resistance Mechanisms Of Relapsed Refractory Multiple Myeloma",
+      "url": "https://www.nature.com/articles/s41467-022-31430-0",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "International Myeloma Society/International Myeloma Working Group Consensus Recommendations On The Definition Of High-Risk Multiple Myeloma",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40489728/",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "High-Risk Genomic Consensus Validation For Patients With Newly Diagnosed Multiple Myeloma Using Next-Generation Sequencing",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40991836/",
+      "accessed": "2026-04-18"
+    },
+    {
+      "label": "PubMed literature anchor: IMWG MGUS and smoldering myeloma consensus perspectives",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20410922/",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "IMWG risk stratification model for smoldering multiple myeloma",
+      "url": "https://www.nature.com/articles/s41408-020-00366-3",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "PubMed literature anchor: IMWG frailty report",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25628469/",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "Drugs@FDA",
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database",
+      "accessed": "2026-04-11"
+    },
+    {
+      "label": "FDA Linvoseltamab Accelerated Approval Notice",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-linvoseltamab-gcpt-relapsed-or-refractory-multiple-myeloma",
+      "accessed": "2026-04-16"
+    },
+    {
+      "label": "NCI SEER Cancer Stat Facts",
       "url": "https://seer.cancer.gov/statfacts/",
       "accessed": "2026-04-11"
+    },
+    {
+      "label": "International Myeloma Working Group / Lancet Oncology: pubmed_moreau_2021_imwg_rrmm_recommendations",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33662288/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "International Myeloma Working Group / Leukemia: pubmed_laubach_2016_imwg_relapsed_management",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26710887/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "TRIPOD+AI Steering Group / BMJ: pubmed_tripod_ai_2024_prediction_model_reporting",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38626948/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "PROBAST Group / Annals of Internal Medicine: pubmed_probast_2019_prediction_model_risk_of_bias",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30596875/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "U.S. Food and Drug Administration / IMDRF: fda_imdrf_gmlp_guiding_principles_2025",
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/good-machine-learning-practice-medical-device-development-guiding-principles",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "DECIDE-AI Expert Group / Nature Medicine: pmc_decide_ai_2022_early_clinical_eval",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9116198/",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

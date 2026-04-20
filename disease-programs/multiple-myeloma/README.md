@@ -45,6 +45,7 @@ research directions deserve structured public tracking.
 
 - [Public Roadmap v0](public-roadmap-v0.md)
 - [Frontier Roadmap v0](frontier-roadmap-v0.md)
+- [Frontier Gap Sweep v0](frontier-gap-sweep-v0.md)
 - [Frontier Completion Audit Handoff v0](frontier-completion-audit-handoff-v0.md)
 - [Open Research Map v0.1](open-research-map-v0-1.md)
 - [Open Research Map v0.1 JSON Companion](open-research-map-v0-1.json)
@@ -70,6 +71,7 @@ research directions deserve structured public tracking.
 - [Machine Representation Source-Gap Issue Draft Packet v0](public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md)
 - [Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md)
 - [Machine Representation Expert Validation No-Outreach Execution Packet v0](reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.md)
+- [Machine Representation Source-Gap Internal Extraction v0](machine-representation-source-gap-internal-extraction-v0.md)
 - [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
 - [Caregiver Intake Public Projection Checklist v0](case-intake/caregiver-intake-public-projection-checklist-v0.md)
 - [Private Intake Schema Contract v0](case-intake/private-intake-schema-contract-v0.md)
@@ -96,6 +98,7 @@ research directions deserve structured public tracking.
 - [Machine Representation Source-Gap Task Queue v0](public-tasks/machine-representation-source-gap-task-queue-v0.md)
 - [Machine Representation Source-Gap Issue Draft Packet v0](public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md)
 - [Machine Representation Implementation Completion Audit v0](machine-representation-implementation-completion-audit-v0.md)
+- [Machine Representation Source-Gap Internal Extraction v0](machine-representation-source-gap-internal-extraction-v0.md)
 - [Expert Validation Outreach Map v0](reviews/expert-validation-outreach-map-v0.md)
 - [Review-Packet Builder Input Manifest Spec v0](reviews/review-packet-builder-manifest-spec-v0.md)
 - [Review-Packet Builder Dry-Run Plan v0](reviews/review-packet-builder-dry-run-plan-v0.md)
@@ -191,3 +194,9 @@ research directions deserve structured public tracking.
 - `pubmed_ledergor_2024_cd4_car_t_exhaustion`
 - `pubmed_samur_2023_single_cell_profiling_myeloma`
 - `pubmed_high_risk_genomic_consensus_validation_2026`
+- `pubmed_moreau_2021_imwg_rrmm_recommendations`
+- `pubmed_laubach_2016_imwg_relapsed_management`
+- `pubmed_tripod_ai_2024_prediction_model_reporting`
+- `pubmed_probast_2019_prediction_model_risk_of_bias`
+- `fda_imdrf_gmlp_guiding_principles_2025`
+- `pmc_decide_ai_2022_early_clinical_eval`

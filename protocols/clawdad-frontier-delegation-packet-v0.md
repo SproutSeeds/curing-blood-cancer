@@ -38,10 +38,14 @@ The current north-star edge is
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
 The no-outreach prep portion is complete as
 `machine-representation-expert-validation-no-outreach-execution-packet-v0`.
-Actual expert-validation execution, issue operations, outreach, private
-correspondence, response intake, clinical interpretation, publication, and any
-expert claim upgrade remain blocked unless a human explicitly authorizes scope
-or selects a new named no-outreach public-source extraction phase.
+The no-outreach public-source extraction pass is complete as
+`machine-representation-source-gap-internal-extraction-v0`: therapy-exposure
+context and validation-governance anchors are mapped with scope gaps, while
+fusion architecture remains source-context-needed. Actual expert-validation
+execution, issue operations, outreach, private correspondence, response intake,
+clinical interpretation, publication, and any expert claim upgrade remain
+blocked unless a human explicitly authorizes scope or selects a new named
+no-outreach public-source extraction phase.
 
 The live operating mode is adaptive. A completed public-safe step must produce
 a handoff and a next-step synthesis. A closed subphase is not a reason to stop
@@ -73,6 +77,11 @@ For every pass:
 5. write or update a completion handoff when a step or subplan closes
 6. synthesize the next safest public step
 7. queue, activate, or block that step explicitly
+
+When a human asks whether the direction is off-base, what is missing, or why a
+delegation run appears too small, run
+[ORP Frontier Gap Sweep Mode v0](../orp/modes/frontier-gap-sweep-mode-v0.md)
+before selecting the next public-safe phase.
 
 Do not mark the multiple myeloma initiative complete because the case-intake
 phase, frontier lanes, or a small additional item completed. Those are
@@ -126,6 +135,7 @@ Inspect these files at the start of each pass:
 - `disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md`
 - `disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md`
 - `disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md`
+- `disease-programs/multiple-myeloma/machine-representation-source-gap-internal-extraction-v0.md`
 - `disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md`
 - `disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md`
 - `disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md`
@@ -152,6 +162,8 @@ Inspect these files at the start of each pass:
 - `orp/frontier/state.json`
 - `orp/frontier/version-stack.json`
 - `orp/frontier/additional-items.json`
+- `orp/modes/frontier-gap-sweep-mode-v0.md`
+- `disease-programs/multiple-myeloma/frontier-gap-sweep-v0.md`
 - `sources/source-registry-v0.md`
 - `schemas/`
 - `tools/validate_public_artifacts.py`
@@ -212,6 +224,10 @@ Required output for the next pass:
   `machine-representation-expert-validation-no-outreach-prep-v0` completed
   public source-gap pressure mapping without opening issues, sending outreach,
   ingesting responses, or clearing expert review
+- preserve that
+  `machine-representation-source-gap-internal-extraction-v0` completed a
+  public-source-only extraction pass without outreach, while keeping fusion
+  architecture source-context-needed and external validation blocked
 - do not create another sibling schema, fixture, validator, source extraction,
   issue draft, model, dashboard, or tool by momentum
 - block real case data, identifiers, raw records, uploads, person-linked

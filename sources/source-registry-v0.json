@@ -1,6 +1,6 @@
 {
   "registry_id": "source-registry-v0",
-  "date": "2026-04-19",
+  "date": "2026-04-20",
   "scope": "public source anchors for Curing Blood Cancer artifacts",
   "records": [
     {
@@ -512,6 +512,66 @@
       "blood_cancer_scope": ["multiple myeloma", "signaling pathways", "NF-kB pathway", "drug resistance", "bone marrow microenvironment"],
       "claim_uses": ["literature-search", "mechanism-map", "geometry-proof", "pathway-context"],
       "claim_limits": ["Review article; use for NF-kB pathway context and public artifact coverage only, not target selection, pathway ranking, treatment guidance, prognosis, or patient-specific interpretation."]
+    },
+    {
+      "source_id": "pmc_decide_ai_2022_early_clinical_eval",
+      "owner": "DECIDE-AI Expert Group / Nature Medicine",
+      "source_type": "reporting guideline",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9116198/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["clinical decision support", "artificial intelligence", "early clinical evaluation", "human factors", "dataset shift"],
+      "claim_uses": ["literature-search", "model-governance", "model-validation", "machine-representation"],
+      "claim_limits": ["Early clinical evaluation reporting guideline; use for future live-evaluation gate language only, not authorization for live use, clinical trial operation, deployment, or patient-specific decision support."]
+    },
+    {
+      "source_id": "fda_imdrf_gmlp_guiding_principles_2025",
+      "owner": "U.S. Food and Drug Administration / IMDRF",
+      "source_type": "AI/ML medical device guiding principles",
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/good-machine-learning-practice-medical-device-development-guiding-principles",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["AI/ML medical devices", "machine learning", "model lifecycle", "digital health"],
+      "claim_uses": ["model-governance", "model-validation", "machine-representation"],
+      "claim_limits": ["General AI/ML medical-device lifecycle guidance; not myeloma-specific, not regulatory clearance, not model validation, not deployment authorization, and not clinical advice."]
+    },
+    {
+      "source_id": "pubmed_probast_2019_prediction_model_risk_of_bias",
+      "owner": "PROBAST Group / Annals of Internal Medicine",
+      "source_type": "risk-of-bias assessment tool",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30596875/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["clinical prediction models", "risk of bias", "applicability", "model appraisal"],
+      "claim_uses": ["literature-search", "model-validation", "model-governance", "machine-representation"],
+      "claim_limits": ["Prediction-model appraisal tool; does not validate any model, rank evidence, establish clinical utility, authorize deployment, or provide patient-specific prediction."]
+    },
+    {
+      "source_id": "pubmed_tripod_ai_2024_prediction_model_reporting",
+      "owner": "TRIPOD+AI Steering Group / BMJ",
+      "source_type": "reporting guideline",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38626948/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["clinical prediction models", "machine learning", "artificial intelligence", "reporting guidance"],
+      "claim_uses": ["literature-search", "model-validation", "model-governance", "machine-representation"],
+      "claim_limits": ["Reporting guideline; useful for future prediction-model reporting pressure only, not evidence that any myeloma model is valid, calibrated, clinically useful, deployable, or safe."]
+    },
+    {
+      "source_id": "pubmed_laubach_2016_imwg_relapsed_management",
+      "owner": "International Myeloma Working Group / Leukemia",
+      "source_type": "consensus recommendations",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26710887/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "relapsed multiple myeloma", "relapsed/refractory context", "therapy exposure context"],
+      "claim_uses": ["literature-search", "therapy-exposure-context", "context-modifier"],
+      "claim_limits": ["Consensus recommendations; use for public relapse/refractory terminology and broad context only, not individual relapse diagnosis, refractory assessment, treatment selection, sequencing, or patient-specific guidance."]
+    },
+    {
+      "source_id": "pubmed_moreau_2021_imwg_rrmm_recommendations",
+      "owner": "International Myeloma Working Group / Lancet Oncology",
+      "source_type": "policy review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33662288/",
+      "accessed": "2026-04-20",
+      "blood_cancer_scope": ["multiple myeloma", "relapsed multiple myeloma", "refractory multiple myeloma", "prior therapy context"],
+      "claim_uses": ["literature-search", "therapy-exposure-context", "context-modifier"],
+      "claim_limits": ["IMWG policy review; use for source-defined relapsed/refractory and prior-line context only, not patient-specific treatment selection, sequencing, access, eligibility, prognosis, or trial guidance."]
     },
     {
       "source_id": "pubmed",

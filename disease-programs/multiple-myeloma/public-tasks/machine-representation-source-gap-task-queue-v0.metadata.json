@@ -18,7 +18,12 @@
     {
       "label": "Machine Representation Source Extraction v0",
       "url": "../machine-representation-source-extraction-v0.md",
-      "accessed": "2026-04-18"
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Machine Representation Source-Gap Internal Extraction v0",
+      "url": "../machine-representation-source-gap-internal-extraction-v0.md",
+      "accessed": "2026-04-20"
     },
     {
       "label": "Myeloma Machine Representation Stack v0",
@@ -43,7 +48,37 @@
     {
       "label": "Source Registry v0",
       "url": "../../../sources/source-registry-v0.md",
-      "accessed": "2026-04-18"
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Treatment of Relapsed and Refractory Multiple Myeloma: Recommendations from the International Myeloma Working Group",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33662288/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Management of Relapsed Multiple Myeloma: Recommendations of the International Myeloma Working Group",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26710887/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "TRIPOD+AI Statement",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38626948/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "PROBAST Prediction Model Risk of Bias Tool",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30596875/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "FDA Good Machine Learning Practice Guiding Principles",
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/good-machine-learning-practice-medical-device-development-guiding-principles",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "DECIDE-AI Early Clinical Evaluation Reporting Guideline",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9116198/",
+      "accessed": "2026-04-20"
     },
     {
       "label": "Public Safety",

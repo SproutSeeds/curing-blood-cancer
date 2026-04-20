@@ -1,0 +1,118 @@
+{
+  "artifact_id": "multiple-myeloma-frontier-gap-sweep-v0",
+  "title": "Multiple Myeloma Frontier Gap Sweep v0",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "frontier gap sweep",
+    "machine representation",
+    "measurable residual disease",
+    "residual disease modality discordance",
+    "public safety",
+    "ORP mode"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "ORP Frontier State",
+      "url": "../../orp/frontier/state.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../../orp/frontier/additional-items.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Clawdad Frontier Delegation Packet v0",
+      "url": "../../protocols/clawdad-frontier-delegation-packet-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Machine Representation Expert Validation No-Outreach Execution Packet v0",
+      "url": "reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Machine Representation Source-Gap Internal Extraction v0",
+      "url": "machine-representation-source-gap-internal-extraction-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Falsification Matrix v0",
+      "url": "mechanisms/mrd-geometry-falsification-matrix-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Transition Model v0",
+      "url": "mechanisms/mrd-geometry-transition-model-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "FDA Draft Guidance On MRD And Complete Response In Multiple Myeloma",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/minimal-residual-disease-and-complete-response-multiple-myeloma-use-endpoints-support-accelerated",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Nature Cancer Immune Atlas Myeloma 2026",
+      "url": "https://www.nature.com/articles/s43018-025-01072-4",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Minimal residual disease measurement in blood by mass spectrometry identifies long-term responders in multiple myeloma",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2950328025000597",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Concordance and prognostic value of bone-marrow MRD and PET-CT in multiple myeloma",
+      "url": "https://www.sciencedirect.com/science/article/pii/S258953702600115X",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Profiling the spatial architecture of multiple myeloma in human bone marrow trephine biopsy specimens with spatial transcriptomics",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40643106/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Quality of Patient-Reported Outcomes in Multiple Myeloma Randomized Controlled Trial Protocols and Publications",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40729465/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Role of the bone marrow microenvironment in multiple myeloma",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40440932/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "ORP Frontier Gap Sweep Mode v0",
+      "url": "../../orp/modes/frontier-gap-sweep-mode-v0.md",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Source-informed gap sweep only.",
+    "Not a systematic review.",
+    "Not expert review.",
+    "Not evidence ranking.",
+    "Not source ranking.",
+    "Not a model plan approval.",
+    "Not model validation.",
+    "Not clinical utility evidence.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Does not contain patient-identifying data, real case data, raw records, molecular reports, pathology reports, flow reports, images, notes, exact dates tied to a person, private paths, private case IDs, private correspondence, or re-identification keys.",
+    "Does not collect, normalize, store, transmit, train on, infer from, publish, compare, rank, match, recommend, or authorize use of real case data.",
+    "Does not output patient-specific progression risk, response probability, MRD interpretation, resistance attribution, treatment recommendations, trial recommendations, monitoring actions, candidate option rankings, or clinical decisions.",
+    "Does not clear human review, expert review, outreach, private-lab, clinical, legal, regulatory, model-governance, or publication gates.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/multiple-myeloma-frontier-gap-sweep-v0.md"
+}
