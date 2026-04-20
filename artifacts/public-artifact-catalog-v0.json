@@ -1184,6 +1184,27 @@
       "limitation_count": 31
     },
     {
+      "artifact_id": "machine-representation-expert-validation-no-outreach-execution-packet-v0",
+      "title": "Machine Representation Expert Validation No-Outreach Execution Packet v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "machine representation",
+        "expert validation",
+        "source-context gaps",
+        "MRD resistance geometry",
+        "falsification",
+        "no human outreach",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.metadata.json",
+      "source_count": 12,
+      "limitation_count": 28
+    },
+    {
       "artifact_id": "machine-representation-implementation-completion-audit-v0",
       "title": "Machine Representation Implementation Completion Audit v0",
       "artifact_class": "protocol",

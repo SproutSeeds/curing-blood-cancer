@@ -18,9 +18,9 @@
   "current_frontier": {
     "active_version": "v2",
     "active_milestone": "case-to-cure-adaptive-master-plan-v0",
-    "active_phase": "machine-representation-expert-validation-execution-v0",
+    "active_phase": "machine-representation-expert-validation-human-authorization-blocker-v0",
     "band": "exact",
-    "next_action": "MRD resistance geometry falsification v0 was human-selected as a public-safe research-substrate phase and completed in PR #55; the prior machine-representation human gate remains uncleared. Next exact phase is machine-representation-expert-validation-execution-v0, blocked for external outreach and expert review; autonomous work is limited to public-safe issue/status preparation unless a human explicitly authorizes outreach or clears a named gate.",
+    "next_action": "No-outreach execution prep for machine-representation expert validation is complete as machine-representation-expert-validation-no-outreach-execution-packet-v0. It did not open issues, send outreach, ingest responses, or clear expert review. Next exact state is machine-representation-expert-validation-human-authorization-blocker-v0; autonomous work remains limited to a newly named no-outreach public-source extraction phase or public-safe status prep unless a human explicitly authorizes outreach or clears a named gate.",
     "blocked_by": [
       "human-review-needed",
       "expert-review-needed",
@@ -616,7 +616,7 @@
               "id": "machine-representation-expert-validation-execution-v0",
               "label": "Machine Representation Expert Validation Execution v0",
               "status": "blocked",
-              "goal": "Resume the machine-representation expert-validation lane by opening or tracking public-safe source-gap review issues only after human authorization, while keeping external outreach and expert-review gates explicit.",
+              "goal": "Resume actual external machine-representation expert-validation execution only after human authorization, while keeping outreach, public issue operations, response intake, expert-review claim upgrades, private correspondence, and clinical interpretation blocked until then.",
               "depends_on": [
                 "machine-representation-public-scope-human-gate-blocker-v0",
                 "mrd-resistance-geometry-falsification-v0"
@@ -633,8 +633,55 @@
                 "Any future expert response remains represented as safe public disposition until permission and source context exist."
               ],
               "plans": [
-                "Blocked until a human selects the exact no-outreach execution scope or explicitly authorizes outreach.",
-                "MRD geometry falsification outputs can sharpen future review questions but do not replace expert validation."
+                "No-outreach prep completed as machine-representation-expert-validation-no-outreach-prep-v0.",
+                "Actual external expert validation remains blocked until human authorization."
+              ],
+              "compute_hooks": []
+            },
+            {
+              "id": "machine-representation-expert-validation-no-outreach-prep-v0",
+              "label": "Machine Representation Expert Validation No-Outreach Prep v0",
+              "status": "complete",
+              "goal": "Complete the autonomous public-safe prep portion by mapping source-gap tasks to pressure questions without outreach, issue creation, response intake, expert-review substitution, claim upgrade, or advice.",
+              "depends_on": [
+                "machine-representation-expert-validation-execution-v0",
+                "mrd-resistance-geometry-falsification-v0"
+              ],
+              "requirements": [
+                "Use only public artifacts and source-gap task records.",
+                "Do not open issues, send outreach, request private material, ingest expert responses, or claim expert review.",
+                "Preserve no-advice, no-ranking, no-matching, no-publication, and no-cure boundaries."
+              ],
+              "success_criteria": [
+                "A public-safe no-outreach execution packet exists with metadata and catalog coverage.",
+                "Source-gap tasks map to sharper pressure questions and blocked inferences.",
+                "ORP state keeps external expert-validation execution and outreach blocked."
+              ],
+              "plans": [
+                "Completed as Machine Representation Expert Validation No-Outreach Execution Packet v0."
+              ],
+              "compute_hooks": []
+            },
+            {
+              "id": "machine-representation-expert-validation-human-authorization-blocker-v0",
+              "label": "Machine Representation Expert Validation Human Authorization Blocker v0",
+              "status": "blocked",
+              "goal": "Block actual external expert-validation execution, outreach, private correspondence, issue operations, response intake, and expert-review claim upgrades unless a human explicitly authorizes scope or selects a new named no-outreach public-source phase.",
+              "depends_on": [
+                "machine-representation-expert-validation-no-outreach-prep-v0"
+              ],
+              "requirements": [
+                "Do not contact reviewers, tag people, open new issues, update issue state, copy private correspondence, or ingest response content.",
+                "Keep all expert-review, clinical, private-lab, legal, regulatory, and publication gates explicit.",
+                "Allow only a newly named no-outreach public-source extraction phase or public-safe status-prep item to proceed autonomously."
+              ],
+              "success_criteria": [
+                "The blocker is the active ORP state after no-outreach prep.",
+                "The prior machine-representation expert-validation execution item remains blocked for actual external validation.",
+                "No artifact language implies expert-review completion, endorsement, consensus, clinical validity, publication readiness, advice, ranking, matching, or cure."
+              ],
+              "plans": [
+                "Stop here unless the operator selects the next no-outreach public-source extraction phase or authorizes a named external expert-validation scope."
               ],
               "compute_hooks": []
             }

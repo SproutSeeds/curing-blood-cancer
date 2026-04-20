@@ -1,0 +1,110 @@
+{
+  "artifact_id": "machine-representation-expert-validation-no-outreach-execution-packet-v0",
+  "title": "Machine Representation Expert Validation No-Outreach Execution Packet v0",
+  "artifact_class": "protocol",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "machine representation",
+    "expert validation",
+    "source-context gaps",
+    "MRD resistance geometry",
+    "falsification",
+    "no human outreach",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Machine Representation Source Extraction v0",
+      "url": "../machine-representation-source-extraction-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Machine Representation Source-Gap Task Queue v0",
+      "url": "../public-tasks/machine-representation-source-gap-task-queue-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Machine Representation Source-Gap Issue Draft Packet v0",
+      "url": "../public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Multiple Myeloma Expert Validation Issue Index v0",
+      "url": "./expert-validation-issue-index-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Multiple Myeloma Expert Response Validation Ledger v0",
+      "url": "./expert-response-validation-ledger-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Expert Validation Loop v0",
+      "url": "./expert-validation-loop-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Falsification Matrix v0",
+      "url": "../mechanisms/mrd-geometry-falsification-matrix-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Transition Model v0",
+      "url": "../mechanisms/mrd-geometry-transition-model-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Hypothesis Candidate Ledger v0",
+      "url": "../mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Public Safety",
+      "url": "../../../governance/PUBLIC_SAFETY.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "ORP Frontier State",
+      "url": "../../../orp/frontier/state.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "ORP Frontier Additional Items",
+      "url": "../../../orp/frontier/additional-items.json",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Public no-outreach execution-prep packet only.",
+    "Not expert review.",
+    "Not external outreach.",
+    "Not new GitHub issue creation.",
+    "Not live issue status refresh.",
+    "Not expert-response intake.",
+    "Not completed source extraction.",
+    "Not a source ranking.",
+    "Not evidence ranking.",
+    "Not a clinical model.",
+    "Not model validation.",
+    "Not a prediction record.",
+    "Not a scoring function.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not prognosis guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not expanded-access guidance.",
+    "Not monitoring guidance.",
+    "Not urgency or emergency guidance.",
+    "Not publication authorization.",
+    "Does not contain patient-identifying data, real case data, raw records, molecular reports, pathology reports, flow reports, images, notes, exact dates tied to a person, private paths, private case IDs, private correspondence, or re-identification keys.",
+    "Does not collect, normalize, store, transmit, train on, infer from, publish, compare, rank, match, recommend, or authorize use of real case data.",
+    "Does not output patient-specific progression risk, response probability, MRD interpretation, resistance attribution, treatment recommendations, trial recommendations, monitoring actions, candidate option rankings, or clinical decisions.",
+    "Does not claim that expert review, clinical review, endorsement, consensus, publication readiness, or clinical validity has been achieved.",
+    "Does not claim that multiple myeloma has been cured or that a vaccine has been found."
+  ],
+  "private_upstream": "curing-blood-cancer-lab/export-candidates/machine-representation-expert-validation-no-outreach-execution-packet-v0.md"
+}

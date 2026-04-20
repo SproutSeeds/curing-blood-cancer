@@ -6,7 +6,7 @@ Stewarded by [frg.earth](https://frg.earth/).
 - delegate target: `curing-blood-cancer`
 - disease focus: `multiple-myeloma`
 - claim level: `open-question`
-- last reviewed: `2026-04-18`
+- last reviewed: `2026-04-20`
 - clinical boundary: research-use-only, not medical advice
 
 ## Purpose
@@ -35,11 +35,13 @@ as a new public-safe research-substrate phase; that phase is complete through
 PR #55 and did not clear the machine-representation human gate.
 
 The current north-star edge is
-`machine-representation-expert-validation-execution-v0`: resume expert
-validation only through public-safe issue/status plumbing unless a human
-explicitly authorizes outreach or clears a named gate. External outreach,
-private correspondence, clinical interpretation, publication, and any expert
-claim upgrade remain blocked.
+`machine-representation-expert-validation-human-authorization-blocker-v0`.
+The no-outreach prep portion is complete as
+`machine-representation-expert-validation-no-outreach-execution-packet-v0`.
+Actual expert-validation execution, issue operations, outreach, private
+correspondence, response intake, clinical interpretation, publication, and any
+expert claim upgrade remain blocked unless a human explicitly authorizes scope
+or selects a new named no-outreach public-source extraction phase.
 
 The live operating mode is adaptive. A completed public-safe step must produce
 a handoff and a next-step synthesis. A closed subphase is not a reason to stop
@@ -165,13 +167,14 @@ makes another slice clearly safer.
 ### Active Named Phase. Case-To-Cure Adaptive Master Plan v0
 
 The current active named phase is
-`machine-representation-expert-validation-execution-v0` inside
+`machine-representation-expert-validation-human-authorization-blocker-v0` inside
 `case-to-cure-adaptive-master-plan-v0`.
-The active phase is `machine-representation-expert-validation-execution-v0`.
+The active phase is
+`machine-representation-expert-validation-human-authorization-blocker-v0`.
 The active additional queue is
 `post-machine-representation-public-safe-research-substrate-v0`.
 The active additional item is
-`machine-representation-expert-validation-execution-v0`.
+`machine-representation-expert-validation-human-authorization-blocker-v0`.
 
 This phase follows the completed machine-representation implementation audit
 and the human-selected MRD resistance geometry falsification lane. The MRD
@@ -182,9 +185,9 @@ model-governance, legal, regulatory, or publication gates.
 Required output for the next pass:
 
 - stop with an explicit
-  `machine-representation-expert-validation-execution-v0` blocker unless a
-  human selects an exact no-outreach execution scope, explicitly authorizes
-  outreach, or clears a named gate
+  `machine-representation-expert-validation-human-authorization-blocker-v0`
+  blocker unless a human selects a named no-outreach public-source extraction
+  phase, explicitly authorizes outreach, or clears a named gate
 - use [Myeloma Machine Representation Stack v0](../disease-programs/multiple-myeloma/machine-representation-stack-v0.md),
   [Myeloma State Object Schema v0](../schemas/myeloma-state-object-schema-v0.md),
   [Synthetic Myeloma State Fixture v0](../examples/synthetic-myeloma-state-fixture-v0.json),
@@ -205,6 +208,10 @@ Required output for the next pass:
 - preserve that `mrd-resistance-geometry-falsification-v0` was selected as a
   public-safe phase and completed without clearing expert-review or human
   outreach gates
+- preserve that
+  `machine-representation-expert-validation-no-outreach-prep-v0` completed
+  public source-gap pressure mapping without opening issues, sending outreach,
+  ingesting responses, or clearing expert review
 - do not create another sibling schema, fixture, validator, source extraction,
   issue draft, model, dashboard, or tool by momentum
 - block real case data, identifiers, raw records, uploads, person-linked
