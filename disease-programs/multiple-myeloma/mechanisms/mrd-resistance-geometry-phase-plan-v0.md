@@ -15,6 +15,10 @@ source-hardening workflow.
 The first step hardens the MRD trajectory bucket with a second public source.
 The second phase hardens residual-state biology and clone-state coupling before
 the geometry is revised through internal adversarial intelligence review.
+The fourth phase turns the revised geometry into a proof workflow: the system
+must preserve axis separation, move only under source-backed evidence, survive
+contradiction mining, fit the residual-state object, and fail closed when an
+unsafe output is requested.
 
 External human outreach is not part of this execution path. The replacement
 gate is stricter internal review: source-trace audits, contradiction hunts,
@@ -146,6 +150,46 @@ Remaining public follow-up:
 
 - run contradiction-mining tasks before any claim upgrade
 - continue second-source extraction for under-covered branches
+
+## Phase 4: Geometry Proof
+
+Status: `ready`
+
+Purpose: test whether the revised geometry works as a moving research
+structure, not whether it validates any clinical claim.
+
+Ready public output:
+
+- `mrd-resistance-geometry-proof-plan-v0`
+
+Expected outputs:
+
+- `mrd-resistance-geometry-movement-ledger-v0`
+- `mrd-trajectory-contradiction-mining-note-v0`
+- `clone-state-coupling-contradiction-mining-note-v0`
+- `metabolic-resistance-state-second-source-extraction-v0`
+- `nfkb-selective-state-second-source-extraction-v0`
+- `myeloma-residual-state-object-public-source-fixture-v0`
+- optional proof-invariant validator or listing tool
+
+Proof tests:
+
+- structural separability
+- productive movement under new public evidence
+- contradiction response
+- residual-state object fit
+- safety invariance
+
+Completion gate:
+
+- Run the MRD trajectory and clone-state coupling contradiction-mining tasks.
+- Add second-source extraction for metabolic resistance state.
+- Add second-source extraction for NF-kB selective state.
+- Record movement, split, weaken, and blocked-output decisions in a movement
+  ledger.
+- Create a public-source-only residual-state object fixture without real case
+  data.
+- Preserve research-use-only, non-advice, non-ranking, and no-cure boundaries.
 
 ## Structured Data
 

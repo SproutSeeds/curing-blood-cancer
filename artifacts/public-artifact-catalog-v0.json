@@ -300,12 +300,33 @@
         "therapy resistance",
         "geometry pilot",
         "source extraction",
-        "internal adversarial intelligence audit"
+        "internal adversarial intelligence audit",
+        "proof plan"
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.metadata.json",
-      "source_count": 14,
+      "source_count": 15,
       "limitation_count": 9
+    },
+    {
+      "artifact_id": "mrd-resistance-geometry-proof-plan-v0",
+      "title": "MRD Resistance Geometry Proof Plan v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "clonal evolution",
+        "therapy resistance",
+        "geometry pilot",
+        "proof plan",
+        "internal adversarial intelligence audit",
+        "no human outreach"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-proof-plan-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-proof-plan-v0.metadata.json",
+      "source_count": 14,
+      "limitation_count": 12
     },
     {
       "artifact_id": "multiple-myeloma-expert-response-validation-ledger-v0",

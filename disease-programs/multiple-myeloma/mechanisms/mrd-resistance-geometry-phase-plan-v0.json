@@ -20,7 +20,8 @@
     "cohen-2021-resistance-single-cell-geometry-v0"
   ],
   "task_queue_ids": [
-    "mrd-resistance-geometry-second-source-task-queue-v0"
+    "mrd-resistance-geometry-second-source-task-queue-v0",
+    "mrd-resistance-geometry-contradiction-mining-task-queue-v0"
   ],
   "phases": [
     {
@@ -101,8 +102,11 @@
       "status": "complete-for-v0",
       "purpose": "Convert covered buckets and unresolved tensions into a concise internal adversarial intelligence-audit packet before any claim upgrade.",
       "public_outputs": [
-        "run contradiction-mining tasks before any claim upgrade",
-        "continue second-source extraction for under-covered branches"
+        "mrd-resistance-geometry-intelligence-audit-packet-v0",
+        "mrd-resistance-geometry-intelligence-audit-results-v0",
+        "mrd-resistance-geometry-contradiction-mining-task-queue-v0",
+        "mrd-resistance-geometry-axis-revision-v0",
+        "myeloma-residual-state-object-v0"
       ],
       "completion_gate": [
         "At least three high-priority buckets have two public extraction records.",
@@ -129,6 +133,43 @@
         "mrd-resistance-geometry-contradiction-mining-task-queue-v0",
         "mrd-resistance-geometry-axis-revision-v0",
         "myeloma-residual-state-object-v0"
+      ],
+      "remaining_public_follow_up": [
+        "run contradiction-mining tasks before any claim upgrade",
+        "continue second-source extraction for under-covered branches"
+      ]
+    },
+    {
+      "phase_id": "phase-4-geometry-proof-v0",
+      "phase_title": "Phase 4: geometry proof",
+      "status": "ready",
+      "purpose": "Test whether the revised geometry works as a moving research structure, not whether it validates any clinical claim.",
+      "public_outputs": [
+        "mrd-resistance-geometry-proof-plan-v0"
+      ],
+      "expected_outputs": [
+        "mrd-resistance-geometry-movement-ledger-v0",
+        "mrd-trajectory-contradiction-mining-note-v0",
+        "clone-state-coupling-contradiction-mining-note-v0",
+        "metabolic-resistance-state-second-source-extraction-v0",
+        "nfkb-selective-state-second-source-extraction-v0",
+        "myeloma-residual-state-object-public-source-fixture-v0",
+        "optional proof-invariant validator or listing tool"
+      ],
+      "proof_tests": [
+        "structural separability",
+        "productive movement under new public evidence",
+        "contradiction response",
+        "residual-state object fit",
+        "safety invariance"
+      ],
+      "completion_gate": [
+        "Run the MRD trajectory and clone-state coupling contradiction-mining tasks.",
+        "Add second-source extraction for metabolic resistance state.",
+        "Add second-source extraction for NF-kB selective state.",
+        "Record movement, split, weaken, and blocked-output decisions in a movement ledger.",
+        "Create a public-source-only residual-state object fixture without real case data.",
+        "Preserve research-use-only, non-advice, non-ranking, and no-cure boundaries."
       ]
     }
   ],
@@ -152,6 +193,7 @@
       "Phase 3 now has mrd-resistance-geometry-intelligence-audit-packet-v0 as its internal no-human-outreach audit gate.",
       "Phase 3 now has mrd-resistance-geometry-intelligence-audit-results-v0 and mrd-resistance-geometry-contradiction-mining-task-queue-v0 as the audit result and unresolved counterevidence route.",
       "Phase 3 is complete for v0 through mrd-resistance-geometry-axis-revision-v0 and myeloma-residual-state-object-v0.",
+      "Phase 4 is ready through mrd-resistance-geometry-proof-plan-v0 and defines proof as research-structure performance, not clinical validation.",
       "External human outreach is intentionally skipped; claim upgrades stay blocked by source-trace, contradiction, and boundary-audit gates.",
       "All phase gates preserve research-only, non-advice boundaries."
     ]

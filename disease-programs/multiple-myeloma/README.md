@@ -146,6 +146,7 @@ research directions deserve structured public tracking.
 - [MRD Resistance Geometry Intelligence Audit Results v0](mechanisms/mrd-resistance-geometry-intelligence-audit-results-v0.md)
 - [MRD Resistance Geometry Contradiction Mining Task Queue v0](public-tasks/mrd-resistance-geometry-contradiction-mining-task-queue-v0.md)
 - [Myeloma Residual State Object v0](mechanisms/myeloma-residual-state-object-v0.md)
+- [MRD Resistance Geometry Proof Plan v0](mechanisms/mrd-resistance-geometry-proof-plan-v0.md)
 - [Post-CAR T Relapse Mechanism Map v0](mechanisms/post-car-t-relapse-mechanism-map-v0.md)
 - [Post-CAR T Relapse Extraction Guide v0](mechanisms/post-car-t-relapse-extraction-guide-v0.md)
 - [Post-CAR T Relapse Mechanism Coverage Report v0](mechanisms/post-car-t-relapse-mechanism-coverage-v0.md)

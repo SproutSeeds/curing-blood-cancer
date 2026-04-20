@@ -1,0 +1,231 @@
+{
+  "proof_plan_id": "mrd-resistance-geometry-proof-plan-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Resistance Geometry Proof Plan v0",
+  "clinical_use_boundary": "research-use-only",
+  "human_outreach_policy": "none",
+  "parent_map_id": "mrd-resistance-geometry-pilot-v0",
+  "parent_phase_plan_id": "mrd-resistance-geometry-phase-plan-v0",
+  "parent_axis_revision_id": "mrd-resistance-geometry-axis-revision-v0",
+  "companion_object_id": "myeloma-residual-state-object-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "besliu-2025-treatment-landscape-geometry-v0"
+  ],
+  "current_system_layers": [
+    {
+      "layer_id": "geometry-seed-v0",
+      "artifact_id": "mrd-resistance-geometry-pilot-v0",
+      "role": "Dynamic radial vector-field template for MRD resistance navigation."
+    },
+    {
+      "layer_id": "evidence-trace-v0",
+      "artifact_id": "source-extraction-records",
+      "role": "Source-specific signals mapped to geometry buckets without ranking."
+    },
+    {
+      "layer_id": "coverage-accounting-v0",
+      "artifact_id": "mrd-resistance-geometry-coverage-v0",
+      "role": "Artifact coverage counts separated from evidence strength or biology frequency."
+    },
+    {
+      "layer_id": "execution-plan-v0",
+      "artifact_id": "mrd-resistance-geometry-phase-plan-v0",
+      "role": "Phased source-hardening path with no external human outreach."
+    },
+    {
+      "layer_id": "axis-decision-v0",
+      "artifact_id": "mrd-resistance-geometry-axis-revision-decision-v0",
+      "role": "Decision to keep measurement, residual-state, clone, and coupling structure separate."
+    },
+    {
+      "layer_id": "internal-attack-loop-v0",
+      "artifact_id": "mrd-resistance-geometry-intelligence-audit-packet-v0",
+      "role": "Source-trace, contradiction, axis-collapse, and boundary pressure tests."
+    },
+    {
+      "layer_id": "audit-result-v0",
+      "artifact_id": "mrd-resistance-geometry-intelligence-audit-results-v0",
+      "role": "Passes for research-map continuation only, with claim upgrades still blocked."
+    },
+    {
+      "layer_id": "counterevidence-queue-v0",
+      "artifact_id": "mrd-resistance-geometry-contradiction-mining-task-queue-v0",
+      "role": "Pull-request-only tasks for unresolved contradiction work."
+    },
+    {
+      "layer_id": "revised-geometry-v0",
+      "artifact_id": "mrd-resistance-geometry-axis-revision-v0",
+      "role": "Four-axis geometry plus support layers and movement rules."
+    },
+    {
+      "layer_id": "structured-pocket-v0",
+      "artifact_id": "myeloma-residual-state-object-v0",
+      "role": "Public-source-only state object that keeps missingness and blocked outputs visible."
+    }
+  ],
+  "proof_tests": [
+    {
+      "test_id": "structural-separability-test-v0",
+      "pass_condition": "Measurement trajectory, residual biological state, clone architecture, and clone-state coupling remain separate when new sources are added.",
+      "failure_action": "Split the overloaded node or edge and block claim upgrade."
+    },
+    {
+      "test_id": "productive-movement-test-v0",
+      "pass_condition": "A new public extraction can move an under-covered node to covered-for-v0-navigation while preserving source context and nonclinical boundaries.",
+      "failure_action": "Keep the node under-covered and add a source-specific gap."
+    },
+    {
+      "test_id": "contradiction-response-test-v0",
+      "pass_condition": "Contradiction mining can weaken, split, or block an edge without breaking the whole geometry.",
+      "failure_action": "Downgrade the affected edge and route a follow-up extraction."
+    },
+    {
+      "test_id": "state-object-fit-test-v0",
+      "pass_condition": "The residual-state object can represent source extraction context without losing uncertainty, missingness, or blocked outputs.",
+      "failure_action": "Add required fields or tighten the object boundary."
+    },
+    {
+      "test_id": "safety-invariance-test-v0",
+      "pass_condition": "No geometry movement produces diagnosis, prognosis, treatment, monitoring, trial, ranking, patient matching, clinical validation, or cure output.",
+      "failure_action": "Block the output and revise the boundary language."
+    }
+  ],
+  "highest_value_implementation_order": [
+    {
+      "order": 1,
+      "work_item_id": "mrd-trajectory-contradiction-mining-task-v0",
+      "mechanism_group_ids": [
+        "mrd-trajectory-split-v0"
+      ],
+      "output": "Source-specific contradiction note or extraction.",
+      "proof_test_ids": [
+        "structural-separability-test-v0",
+        "contradiction-response-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "reason": "Tests the highest-risk collapse between MRD measurement movement and residual-cell biology."
+    },
+    {
+      "order": 2,
+      "work_item_id": "clone-state-coupling-contradiction-mining-task-v0",
+      "mechanism_group_ids": [
+        "genetic-nongenetic-coupling-v0",
+        "subclone-diversity-v0"
+      ],
+      "output": "Source-specific contradiction note or extraction.",
+      "proof_test_ids": [
+        "structural-separability-test-v0",
+        "contradiction-response-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "reason": "Tests whether clone-state coupling stays an edge instead of becoming a causal ranking."
+    },
+    {
+      "order": 3,
+      "work_item_id": "metabolic-resistance-state-second-source-extraction-v0",
+      "mechanism_group_ids": [
+        "metabolic-resistance-state-v0"
+      ],
+      "output": "Extraction record plus coverage refresh.",
+      "proof_test_ids": [
+        "productive-movement-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "reason": "Tests whether an under-covered pathway branch can move without actionability language."
+    },
+    {
+      "order": 4,
+      "work_item_id": "nfkb-selective-state-second-source-extraction-v0",
+      "mechanism_group_ids": [
+        "nfkb-selective-state-v0"
+      ],
+      "output": "Extraction record plus coverage refresh.",
+      "proof_test_ids": [
+        "productive-movement-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "reason": "Tests the second pathway branch most likely to invite target or treatment overreach."
+    },
+    {
+      "order": 5,
+      "work_item_id": "mrd-resistance-geometry-movement-ledger-v0",
+      "output": "Movement ledger.",
+      "proof_test_ids": [
+        "productive-movement-test-v0",
+        "contradiction-response-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "reason": "Records every node or edge move, source reason, blocked inference, and proof-test result."
+    },
+    {
+      "order": 6,
+      "work_item_id": "myeloma-residual-state-object-public-source-fixture-v0",
+      "output": "Synthetic fixture tied to existing extraction records.",
+      "proof_test_ids": [
+        "state-object-fit-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "reason": "Tests whether the state object can hold the geometry without real case data."
+    },
+    {
+      "order": 7,
+      "work_item_id": "mrd-resistance-geometry-proof-invariant-validator-v0",
+      "output": "Small tool or checklist.",
+      "proof_test_ids": [
+        "structural-separability-test-v0",
+        "safety-invariance-test-v0"
+      ],
+      "reason": "Makes safety and structure checks repeatable before any later claim upgrade."
+    }
+  ],
+  "proof_readiness_gate": {
+    "status": "not-yet-ready",
+    "target_status": "proof-readiness-v0",
+    "required_completion_items": [
+      "mrd-trajectory-contradiction-mining-task-v0 is run.",
+      "clone-state-coupling-contradiction-mining-task-v0 is run.",
+      "metabolic-resistance-state-v0 has one added second-source extraction.",
+      "nfkb-selective-state-v0 has one added second-source extraction.",
+      "A movement ledger records at least one movement, split, weaken, or blocked movement decision.",
+      "A public-source-only residual-state fixture represents one existing extraction record without real case data.",
+      "The safety-invariance test blocks clinical, ranking, patient-specific, and cure outputs."
+    ]
+  },
+  "blocked_outputs": [
+    "diagnosis",
+    "prognosis",
+    "relapse risk",
+    "MRD interpretation",
+    "monitoring guidance",
+    "treatment guidance",
+    "target selection",
+    "trial guidance",
+    "patient matching",
+    "mechanism ranking",
+    "evidence ranking",
+    "clinical validation",
+    "cure claim"
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created after Phase 3 completed the no-human-outreach intelligence audit, axis revision, contradiction queue, and residual-state object.",
+      "Defines proof as research-structure performance, not clinical validation.",
+      "Keeps claim upgrades blocked until contradiction mining, second-source movement, state-object fixture work, and safety-invariance checks are complete."
+    ]
+  }
+}
