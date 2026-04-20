@@ -19,8 +19,10 @@ Initial focus:
 | [Post-BCMA Resistance Frontier Addendum v0](post-bcma-resistance-frontier-addendum-v0.md) | frontier v0 | claim-level and uncertainty map, not patient-option guidance |
 | [MRD Resistance Geometry Pilot v0](mrd-resistance-geometry-pilot-v0.md) | source-checked v0 | geometry map, not patient-specific MRD interpretation |
 | [MRD Resistance Geometry Coverage Report v0](mrd-resistance-geometry-coverage-v0.md) | source-checked v0 | coverage counts, not evidence-strength rankings |
+| [MRD Resistance Geometry Axis Revision v0](mrd-resistance-geometry-axis-revision-v0.md) | source-checked v0 | four-axis research geometry, no clinical guidance |
 | [MRD Resistance Geometry Intelligence Audit Packet v0](mrd-resistance-geometry-intelligence-audit-packet-v0.md) | source-checked v0 | internal audit gate, no human outreach, not clinical validation |
 | [MRD Resistance Geometry Intelligence Audit Results v0](mrd-resistance-geometry-intelligence-audit-results-v0.md) | source-checked v0 | audit statuses for research-map continuation only |
+| [Myeloma Residual State Object v0](myeloma-residual-state-object-v0.md) | source-checked v0 | public-source-only residual-state object contract |
 
 ## Extraction Workflow
 

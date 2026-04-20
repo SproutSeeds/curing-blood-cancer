@@ -159,9 +159,13 @@
     "Link the contradiction-mining queue as unresolved follow-up.",
     "Do not introduce cure, prognosis, diagnosis, treatment, monitoring, trial, or patient-specific claims."
   ],
-  "next_outputs": [
+  "completed_follow_on_outputs": [
     "mrd-resistance-geometry-axis-revision-v0",
     "myeloma-residual-state-object-v0"
+  ],
+  "remaining_follow_on_work": [
+    "Run contradiction-mining tasks before any claim upgrade.",
+    "Continue second-source extraction for under-covered branches."
   ],
   "review": {
     "created": "2026-04-20",

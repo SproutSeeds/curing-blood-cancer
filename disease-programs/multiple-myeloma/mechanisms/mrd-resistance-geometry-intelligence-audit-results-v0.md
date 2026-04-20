@@ -81,10 +81,15 @@ literature synthesis:
 - Mechanism-frequency or evidence-strength rankings.
 - Any claim that multiple myeloma has been cured.
 
-## Next Outputs
+## Completed Follow-On Outputs
 
 - `mrd-resistance-geometry-axis-revision-v0`
 - `myeloma-residual-state-object-v0`
+
+## Remaining Follow-On Work
+
+- Run contradiction-mining tasks before any claim upgrade.
+- Continue second-source extraction for under-covered branches.
 
 ## Structured Data
 

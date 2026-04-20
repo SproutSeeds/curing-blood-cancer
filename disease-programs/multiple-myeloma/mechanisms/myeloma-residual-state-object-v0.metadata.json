@@ -1,0 +1,78 @@
+{
+  "artifact_id": "myeloma-residual-state-object-v0",
+  "title": "Myeloma Residual State Object v0",
+  "artifact_class": "schema",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "residual disease state",
+    "clonal evolution",
+    "therapy resistance",
+    "geometry pilot",
+    "myeloma state object",
+    "public source summary"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "MRD Resistance Geometry Axis Revision v0",
+      "url": "mrd-resistance-geometry-axis-revision-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Intelligence Audit Results v0",
+      "url": "mrd-resistance-geometry-intelligence-audit-results-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Myeloma State Object Schema v0",
+      "url": "../../../schemas/myeloma-state-object-schema-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Normalization Contract v0",
+      "url": "../measurements/measurement-normalization-contract-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Molecular Immune Context Contract v0",
+      "url": "../contexts/molecular-immune-context-contract-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Therapy Exposure Timeline Contract v0",
+      "url": "../therapy-landscapes/therapy-exposure-timeline-contract-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Cui 2024 MRD clonal evolution source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38900040/",
+      "accessed": "2026-04-19"
+    },
+    {
+      "label": "Martinez-Lopez 2020 MRD dynamics source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32706892/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Cohen 2021 single-cell resistance source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33619369/",
+      "accessed": "2026-04-19"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Public-source-only object contract, not a real case object.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a monitoring recommendation.",
+    "Not a trial recommendation.",
+    "Not a patient-specific MRD interpretation.",
+    "Does not rank mechanisms, assays, therapies, sources, or tasks by clinical importance.",
+    "Does not claim that multiple myeloma has been cured.",
+    "No external human outreach is required or scheduled.",
+    "Does not collect, normalize, store, or publish real case data."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/myeloma-residual-state-object-v0.md"
+}

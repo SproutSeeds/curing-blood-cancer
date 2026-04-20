@@ -1,0 +1,82 @@
+{
+  "artifact_id": "mrd-resistance-geometry-axis-revision-v0",
+  "title": "MRD Resistance Geometry Axis Revision v0",
+  "artifact_class": "map",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "clonal evolution",
+    "therapy resistance",
+    "geometry pilot",
+    "axis revision",
+    "internal adversarial intelligence audit",
+    "no human outreach"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "MRD Resistance Geometry Pilot v0",
+      "url": "mrd-resistance-geometry-pilot-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Axis Revision Decision v0",
+      "url": "mrd-resistance-geometry-axis-revision-decision-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Intelligence Audit Results v0",
+      "url": "mrd-resistance-geometry-intelligence-audit-results-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Contradiction Mining Task Queue v0",
+      "url": "../public-tasks/mrd-resistance-geometry-contradiction-mining-task-queue-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Coverage Report v0",
+      "url": "mrd-resistance-geometry-coverage-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Cui 2024 MRD clonal evolution source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38900040/",
+      "accessed": "2026-04-19"
+    },
+    {
+      "label": "Martinez-Lopez 2020 MRD dynamics source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32706892/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Cohen 2021 single-cell resistance source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33619369/",
+      "accessed": "2026-04-19"
+    },
+    {
+      "label": "Li 2025 single-cell myeloma review source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40002248/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Besliu 2025 evolving myeloma landscape source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39941892/",
+      "accessed": "2026-04-19"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a treatment recommendation.",
+    "Not a monitoring recommendation.",
+    "Not a trial recommendation.",
+    "Not a patient-specific MRD interpretation.",
+    "Does not rank mechanisms, assays, therapies, sources, or tasks by clinical importance.",
+    "Does not claim that multiple myeloma has been cured.",
+    "No external human outreach is required or scheduled.",
+    "Internal audit status is not clinical validation."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-axis-revision-v0.md"
+}

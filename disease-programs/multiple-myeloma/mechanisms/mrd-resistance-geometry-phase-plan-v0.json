@@ -98,12 +98,11 @@
     {
       "phase_id": "phase-3-intelligence-audit-packet-v0",
       "phase_title": "Phase 3: intelligence audit packet and geometry revision",
-      "status": "in-progress",
+      "status": "complete-for-v0",
       "purpose": "Convert covered buckets and unresolved tensions into a concise internal adversarial intelligence-audit packet before any claim upgrade.",
       "public_outputs": [
-        "mrd-resistance-geometry-axis-revision-v0",
-        "myeloma-residual-state-object-v0",
-        "updated issue drafts for remaining second-source tasks"
+        "run contradiction-mining tasks before any claim upgrade",
+        "continue second-source extraction for under-covered branches"
       ],
       "completion_gate": [
         "At least three high-priority buckets have two public extraction records.",
@@ -120,12 +119,16 @@
         "mrd-resistance-geometry-intelligence-audit-packet-v0 defines the no-human-outreach internal audit gate.",
         "mrd-resistance-geometry-intelligence-audit-results-v0 records pass statuses for research-map continuation only.",
         "mrd-resistance-geometry-contradiction-mining-task-queue-v0 routes unresolved counterevidence work without external human outreach.",
+        "mrd-resistance-geometry-axis-revision-v0 implements the four-axis source-bounded geometry.",
+        "myeloma-residual-state-object-v0 implements the public-source-only residual-state object companion.",
         "The execution path uses internal adversarial intelligence review instead of external human outreach."
       ],
       "completed_public_outputs": [
         "mrd-resistance-geometry-intelligence-audit-packet-v0",
         "mrd-resistance-geometry-intelligence-audit-results-v0",
-        "mrd-resistance-geometry-contradiction-mining-task-queue-v0"
+        "mrd-resistance-geometry-contradiction-mining-task-queue-v0",
+        "mrd-resistance-geometry-axis-revision-v0",
+        "myeloma-residual-state-object-v0"
       ]
     }
   ],
@@ -148,6 +151,7 @@
       "Phase 2 is done for v0 through the Cohen 2021 second-source extraction and axis decision artifact.",
       "Phase 3 now has mrd-resistance-geometry-intelligence-audit-packet-v0 as its internal no-human-outreach audit gate.",
       "Phase 3 now has mrd-resistance-geometry-intelligence-audit-results-v0 and mrd-resistance-geometry-contradiction-mining-task-queue-v0 as the audit result and unresolved counterevidence route.",
+      "Phase 3 is complete for v0 through mrd-resistance-geometry-axis-revision-v0 and myeloma-residual-state-object-v0.",
       "External human outreach is intentionally skipped; claim upgrades stay blocked by source-trace, contradiction, and boundary-audit gates.",
       "All phase gates preserve research-only, non-advice boundaries."
     ]

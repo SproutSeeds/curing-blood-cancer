@@ -194,6 +194,26 @@
       "limitation_count": 9
     },
     {
+      "artifact_id": "mrd-resistance-geometry-axis-revision-v0",
+      "title": "MRD Resistance Geometry Axis Revision v0",
+      "artifact_class": "map",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "clonal evolution",
+        "therapy resistance",
+        "geometry pilot",
+        "axis revision",
+        "internal adversarial intelligence audit",
+        "no human outreach"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-v0.metadata.json",
+      "source_count": 10,
+      "limitation_count": 11
+    },
+    {
       "artifact_id": "mrd-resistance-geometry-coverage-v0",
       "title": "MRD Resistance Geometry Coverage Report v0",
       "artifact_class": "dataset",
@@ -284,7 +304,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.metadata.json",
-      "source_count": 12,
+      "source_count": 14,
       "limitation_count": 9
     },
     {
@@ -584,6 +604,26 @@
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-pilot-v0.metadata.json",
       "source_count": 3,
       "limitation_count": 9
+    },
+    {
+      "artifact_id": "myeloma-residual-state-object-v0",
+      "title": "Myeloma Residual State Object v0",
+      "artifact_class": "schema",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "residual disease state",
+        "clonal evolution",
+        "therapy resistance",
+        "geometry pilot",
+        "myeloma state object",
+        "public source summary"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/myeloma-residual-state-object-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/myeloma-residual-state-object-v0.metadata.json",
+      "source_count": 9,
+      "limitation_count": 12
     },
     {
       "artifact_id": "multiple-myeloma-durable-mrd-negative-remission-wedge-v0",
