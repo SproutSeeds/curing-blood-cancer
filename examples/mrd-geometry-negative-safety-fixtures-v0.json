@@ -1,0 +1,179 @@
+{
+  "fixture_set_id": "mrd-geometry-negative-safety-fixtures-v0",
+  "title": "MRD Geometry Negative Safety Fixtures v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "clinical_boundary": "research-use-only; not medical advice",
+  "fixture_status": "negative-fail-closed-v0",
+  "data_boundary": {
+    "uses_real_case_data": false,
+    "contains_identifiers": false,
+    "contains_raw_records": false,
+    "contains_uploads": false,
+    "contains_exact_person_linked_dates": false,
+    "contains_free_text_case_details": false,
+    "contains_private_correspondence": false,
+    "contains_model_weights": false
+  },
+  "fixture_purpose": [
+    "exercise unsafe-output refusal checks without real case data",
+    "prove the invariant checker fails closed when clinical output fields are populated",
+    "keep geometry proof testing separate from patient-specific advice"
+  ],
+  "negative_fixtures": [
+    {
+      "fixture_id": "negative-fixture-prediction-output-v0",
+      "description": "Intentionally unsafe because it marks a prediction field true.",
+      "data_boundary": {
+        "contains_predictions": true,
+        "contains_recommendations": false,
+        "contains_matching_or_ranking": false,
+        "contains_clinical_decisions": false
+      },
+      "blocked_output_manifest": {
+        "diagnosis": "blocked",
+        "prognosis": "blocked",
+        "relapse_risk": "blocked",
+        "mrd_interpretation": "blocked",
+        "monitoring_guidance": "blocked",
+        "treatment_guidance": "blocked",
+        "target_selection": "blocked",
+        "trial_guidance": "blocked",
+        "patient_matching": "blocked",
+        "mechanism_ranking": "blocked",
+        "evidence_ranking": "blocked",
+        "clinical_validation": "blocked",
+        "cure_claim": "blocked"
+      },
+      "expected_failed_check_ids": [
+        "fixture-data-boundary-fail-closed"
+      ]
+    },
+    {
+      "fixture_id": "negative-fixture-treatment-guidance-v0",
+      "description": "Intentionally unsafe because treatment guidance is populated.",
+      "data_boundary": {
+        "contains_predictions": false,
+        "contains_recommendations": true,
+        "contains_matching_or_ranking": false,
+        "contains_clinical_decisions": true
+      },
+      "blocked_output_manifest": {
+        "diagnosis": "blocked",
+        "prognosis": "blocked",
+        "relapse_risk": "blocked",
+        "mrd_interpretation": "blocked",
+        "monitoring_guidance": "blocked",
+        "treatment_guidance": "populated",
+        "target_selection": "blocked",
+        "trial_guidance": "blocked",
+        "patient_matching": "blocked",
+        "mechanism_ranking": "blocked",
+        "evidence_ranking": "blocked",
+        "clinical_validation": "blocked",
+        "cure_claim": "blocked"
+      },
+      "expected_failed_check_ids": [
+        "fixture-data-boundary-fail-closed",
+        "fixture-blocked-output-manifest"
+      ]
+    },
+    {
+      "fixture_id": "negative-fixture-pathway-target-selection-v0",
+      "description": "Intentionally unsafe because pathway context is converted into target selection and mechanism ranking.",
+      "data_boundary": {
+        "contains_predictions": false,
+        "contains_recommendations": true,
+        "contains_matching_or_ranking": true,
+        "contains_clinical_decisions": true
+      },
+      "blocked_output_manifest": {
+        "diagnosis": "blocked",
+        "prognosis": "blocked",
+        "relapse_risk": "blocked",
+        "mrd_interpretation": "blocked",
+        "monitoring_guidance": "blocked",
+        "treatment_guidance": "blocked",
+        "target_selection": "populated",
+        "trial_guidance": "blocked",
+        "patient_matching": "blocked",
+        "mechanism_ranking": "populated",
+        "evidence_ranking": "blocked",
+        "clinical_validation": "blocked",
+        "cure_claim": "blocked"
+      },
+      "expected_failed_check_ids": [
+        "fixture-data-boundary-fail-closed",
+        "fixture-blocked-output-manifest"
+      ]
+    },
+    {
+      "fixture_id": "negative-fixture-mrd-relapse-risk-v0",
+      "description": "Intentionally unsafe because MRD interpretation and relapse risk are populated.",
+      "data_boundary": {
+        "contains_predictions": true,
+        "contains_recommendations": false,
+        "contains_matching_or_ranking": false,
+        "contains_clinical_decisions": true
+      },
+      "blocked_output_manifest": {
+        "diagnosis": "blocked",
+        "prognosis": "populated",
+        "relapse_risk": "populated",
+        "mrd_interpretation": "populated",
+        "monitoring_guidance": "blocked",
+        "treatment_guidance": "blocked",
+        "target_selection": "blocked",
+        "trial_guidance": "blocked",
+        "patient_matching": "blocked",
+        "mechanism_ranking": "blocked",
+        "evidence_ranking": "blocked",
+        "clinical_validation": "blocked",
+        "cure_claim": "blocked"
+      },
+      "expected_failed_check_ids": [
+        "fixture-data-boundary-fail-closed",
+        "fixture-blocked-output-manifest"
+      ]
+    },
+    {
+      "fixture_id": "negative-fixture-patient-matching-v0",
+      "description": "Intentionally unsafe because patient matching and evidence ranking are populated.",
+      "data_boundary": {
+        "contains_predictions": false,
+        "contains_recommendations": false,
+        "contains_matching_or_ranking": true,
+        "contains_clinical_decisions": true
+      },
+      "blocked_output_manifest": {
+        "diagnosis": "blocked",
+        "prognosis": "blocked",
+        "relapse_risk": "blocked",
+        "mrd_interpretation": "blocked",
+        "monitoring_guidance": "blocked",
+        "treatment_guidance": "blocked",
+        "target_selection": "blocked",
+        "trial_guidance": "blocked",
+        "patient_matching": "populated",
+        "mechanism_ranking": "blocked",
+        "evidence_ranking": "populated",
+        "clinical_validation": "blocked",
+        "cure_claim": "blocked"
+      },
+      "expected_failed_check_ids": [
+        "fixture-data-boundary-fail-closed",
+        "fixture-blocked-output-manifest"
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "All negative fixtures are synthetic safety fixtures and contain no real case data.",
+      "Expected failures are intentional and should be detected by tools/check_mrd_geometry_proof_invariants.py.",
+      "The fixture set does not validate clinical use; it validates refusal structure."
+    ]
+  }
+}

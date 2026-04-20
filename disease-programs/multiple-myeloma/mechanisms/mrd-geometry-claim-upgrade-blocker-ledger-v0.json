@@ -1,0 +1,298 @@
+{
+  "ledger_id": "mrd-geometry-claim-upgrade-blocker-ledger-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Geometry Claim Upgrade Blocker Ledger v0",
+  "clinical_use_boundary": "research-use-only",
+  "parent_phase_plan_id": "mrd-resistance-geometry-phase-plan-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways",
+    "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
+    "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "besliu-2025-treatment-landscape-geometry-v0",
+    "wang-2025-lipid-metabolism-geometry-v0",
+    "lu-2024-signaling-pathways-geometry-v0",
+    "bolli-2014-genomic-heterogeneity-geometry-v0",
+    "ledergor-2024-car-t-pressure-geometry-v0"
+  ],
+  "blockers": [
+    {
+      "blocker_id": "residual-state-actionability-claim-block-v0",
+      "current_status": "blocked",
+      "current_claim_level": "open-question",
+      "blocked_outputs": [
+        "residual-state actionability",
+        "patient-specific MRD interpretation",
+        "treatment selection"
+      ],
+      "required_evidence_before_upgrade": [
+        "source-aligned residual-state measurements",
+        "independent replication",
+        "method, specimen, timepoint, therapy-exposure, and response context",
+        "contradiction review",
+        "clinical validation design"
+      ],
+      "breaking_contradictions": [
+        "residual-state labels are source-method specific",
+        "pathway context and transcriptional state are not interchangeable",
+        "coverage count is not clinical readiness"
+      ],
+      "current_sources": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell",
+        "pubmed_wang_2025_lipid_metabolism_myeloma",
+        "pubmed_lu_2024_myeloma_signaling_pathways"
+      ],
+      "current_extraction_records": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0",
+        "wang-2025-lipid-metabolism-geometry-v0",
+        "lu-2024-signaling-pathways-geometry-v0"
+      ]
+    },
+    {
+      "blocker_id": "nfkb-target-selection-claim-block-v0",
+      "current_status": "blocked",
+      "current_claim_level": "open-question",
+      "blocked_outputs": [
+        "target selection",
+        "pathway ranking",
+        "treatment guidance"
+      ],
+      "required_evidence_before_upgrade": [
+        "primary source extraction tied to the exact residual setting",
+        "intervention evidence in the relevant myeloma context",
+        "safety context",
+        "expert review"
+      ],
+      "breaking_contradictions": [
+        "Lu 2024 is review-level pathway context",
+        "Cui 2024 is source-specific selective-cell pathway context",
+        "pathway labels do not imply target actionability"
+      ],
+      "current_sources": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_lu_2024_myeloma_signaling_pathways"
+      ],
+      "current_extraction_records": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "lu-2024-signaling-pathways-geometry-v0"
+      ]
+    },
+    {
+      "blocker_id": "metabolic-intervention-claim-block-v0",
+      "current_status": "blocked",
+      "current_claim_level": "open-question",
+      "blocked_outputs": [
+        "metabolic intervention guidance",
+        "supplement guidance",
+        "biomarker use"
+      ],
+      "required_evidence_before_upgrade": [
+        "primary residual-state evidence",
+        "intervention-specific data",
+        "safety evidence",
+        "nonclinical-to-clinical translation review"
+      ],
+      "breaking_contradictions": [
+        "Wang 2025 is review-level lipid-metabolism context",
+        "Cui 2024 is source-specific single-cell pathway signal",
+        "metabolic branch coverage does not imply intervention readiness"
+      ],
+      "current_sources": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_wang_2025_lipid_metabolism_myeloma"
+      ],
+      "current_extraction_records": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "wang-2025-lipid-metabolism-geometry-v0"
+      ]
+    },
+    {
+      "blocker_id": "subclone-prognosis-claim-block-v0",
+      "current_status": "blocked",
+      "current_claim_level": "open-question",
+      "blocked_outputs": [
+        "patient-specific prognosis",
+        "relapse risk",
+        "mechanism ranking"
+      ],
+      "required_evidence_before_upgrade": [
+        "aligned genomic methods",
+        "longitudinal outcome design",
+        "external validation",
+        "patient-level calibration review"
+      ],
+      "breaking_contradictions": [
+        "Bolli 2014 supports genomic heterogeneity context, not personal prognosis",
+        "Li 2025 is review-level single-cell context",
+        "subclone diversity may be method and sampling dependent"
+      ],
+      "current_sources": [
+        "pubmed_li_2025_single_cell_myeloma_review",
+        "pubmed_bolli_2014_genomic_heterogeneity_myeloma"
+      ],
+      "current_extraction_records": [
+        "li-2025-single-cell-myeloma-geometry-v0",
+        "bolli-2014-genomic-heterogeneity-geometry-v0"
+      ]
+    },
+    {
+      "blocker_id": "car-t-pressure-sequencing-claim-block-v0",
+      "current_status": "blocked",
+      "current_claim_level": "open-question",
+      "blocked_outputs": [
+        "CAR T recommendation",
+        "target or product comparison",
+        "therapy sequencing"
+      ],
+      "required_evidence_before_upgrade": [
+        "comparative therapy evidence",
+        "product and target context",
+        "eligibility and safety review",
+        "clinical guideline appraisal"
+      ],
+      "breaking_contradictions": [
+        "Besliu 2025 is review-level treatment-landscape context",
+        "Ledergor 2024 is observational immune-state context after BCMA CAR T",
+        "therapy pressure context is not a sequence rule"
+      ],
+      "current_sources": [
+        "pubmed_besliu_2025_evolving_landscape_myeloma",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "current_extraction_records": [
+        "besliu-2025-treatment-landscape-geometry-v0",
+        "ledergor-2024-car-t-pressure-geometry-v0"
+      ]
+    },
+    {
+      "blocker_id": "mrd-trajectory-relapse-risk-claim-block-v0",
+      "current_status": "blocked",
+      "current_claim_level": "open-question",
+      "blocked_outputs": [
+        "relapse-risk forecast",
+        "monitoring guidance",
+        "patient-specific MRD interpretation"
+      ],
+      "required_evidence_before_upgrade": [
+        "assay-aligned serial MRD evidence",
+        "threshold context",
+        "specimen context",
+        "model validation",
+        "clinical calibration"
+      ],
+      "breaking_contradictions": [
+        "single-cell residual-state signals and serial NGS MRD dynamics are not interchangeable",
+        "assay, threshold, specimen, and timing must stay visible",
+        "coverage is not a risk model"
+      ],
+      "current_sources": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics"
+      ],
+      "current_extraction_records": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0"
+      ]
+    },
+    {
+      "blocker_id": "geometry-clinical-validation-claim-block-v0",
+      "current_status": "blocked",
+      "current_claim_level": "do-not-use-clinically",
+      "blocked_outputs": [
+        "clinical validation",
+        "patient matching",
+        "evidence ranking"
+      ],
+      "required_evidence_before_upgrade": [
+        "prespecified validation protocol",
+        "external datasets",
+        "locked outputs",
+        "error analysis",
+        "expert review"
+      ],
+      "breaking_contradictions": [
+        "the geometry is a research structure",
+        "negative safety fixtures intentionally fail closed",
+        "no patient data or clinical validation dataset is present"
+      ],
+      "current_sources": [
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics",
+        "pubmed_cohen_2021_resistance_single_cell",
+        "pubmed_li_2025_single_cell_myeloma_review",
+        "pubmed_besliu_2025_evolving_landscape_myeloma",
+        "pubmed_wang_2025_lipid_metabolism_myeloma",
+        "pubmed_lu_2024_myeloma_signaling_pathways",
+        "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
+        "pubmed_ledergor_2024_cd4_car_t_exhaustion"
+      ],
+      "current_extraction_records": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0",
+        "li-2025-single-cell-myeloma-geometry-v0",
+        "besliu-2025-treatment-landscape-geometry-v0",
+        "wang-2025-lipid-metabolism-geometry-v0",
+        "lu-2024-signaling-pathways-geometry-v0",
+        "bolli-2014-genomic-heterogeneity-geometry-v0",
+        "ledergor-2024-car-t-pressure-geometry-v0"
+      ]
+    },
+    {
+      "blocker_id": "cure-claim-block-v0",
+      "current_status": "blocked",
+      "current_claim_level": "do-not-use-clinically",
+      "blocked_outputs": [
+        "cure claim",
+        "clinical efficacy claim",
+        "patient-specific hope framing"
+      ],
+      "required_evidence_before_upgrade": [
+        "durable outcome evidence",
+        "subtype scope",
+        "treatment context",
+        "time horizon",
+        "independent review",
+        "explicit uncertainty"
+      ],
+      "breaking_contradictions": [
+        "source extraction coverage is not cure evidence",
+        "geometry movement is not clinical efficacy",
+        "no clinical validation or patient outcome claim is present"
+      ],
+      "current_sources": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics"
+      ],
+      "current_extraction_records": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0"
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created for Phase 5 discrimination and stress testing.",
+      "No blocker is cleared by this ledger.",
+      "The ledger is designed to prevent source coverage from being misread as claim strength."
+    ]
+  }
+}

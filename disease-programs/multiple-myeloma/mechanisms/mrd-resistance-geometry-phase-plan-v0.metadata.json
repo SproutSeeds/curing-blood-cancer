@@ -123,6 +123,36 @@
       "label": "MRD Geometry Proof Invariant Check v0",
       "url": "../../../tools/check_mrd_geometry_proof_invariants.py",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Residual-State Contradiction Mining Note v0",
+      "url": "residual-state-contradiction-mining-note-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Bolli 2014 genomic heterogeneity source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24429703/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Ledergor 2024 CD4 CAR T exhaustion source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry State Diff Tool v0",
+      "url": "../../../tools/diff_mrd_geometry_state.py",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Negative Safety Fixtures v0",
+      "url": "../../../examples/mrd-geometry-negative-safety-fixtures-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Claim Upgrade Blocker Ledger v0",
+      "url": "mrd-geometry-claim-upgrade-blocker-ledger-v0.md",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -136,5 +166,5 @@
     "Does not claim that multiple myeloma has been cured.",
     "No external human outreach is required or scheduled."
   ],
-  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-plan-v0.md"
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-5-discrimination-v0.md"
 }

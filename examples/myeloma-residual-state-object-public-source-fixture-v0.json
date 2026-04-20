@@ -35,7 +35,9 @@
       "pubmed_li_2025_single_cell_myeloma_review",
       "pubmed_besliu_2025_evolving_landscape_myeloma",
       "pubmed_wang_2025_lipid_metabolism_myeloma",
-      "pubmed_lu_2024_myeloma_signaling_pathways"
+      "pubmed_lu_2024_myeloma_signaling_pathways",
+      "pubmed_bolli_2014_genomic_heterogeneity_myeloma",
+      "pubmed_ledergor_2024_cd4_car_t_exhaustion"
     ],
     "extraction_record_ids": [
       "cui-2024-mrd-clonal-evolution-geometry-v0",
@@ -44,7 +46,9 @@
       "li-2025-single-cell-myeloma-geometry-v0",
       "besliu-2025-treatment-landscape-geometry-v0",
       "wang-2025-lipid-metabolism-geometry-v0",
-      "lu-2024-signaling-pathways-geometry-v0"
+      "lu-2024-signaling-pathways-geometry-v0",
+      "bolli-2014-genomic-heterogeneity-geometry-v0",
+      "ledergor-2024-car-t-pressure-geometry-v0"
     ],
     "source_type": "public_source_summary",
     "source_status": "public_source_only",
@@ -55,7 +59,10 @@
     "public_artifact_ids": [
       "myeloma-residual-state-object-v0",
       "mrd-resistance-geometry-proof-plan-v0",
-      "mrd-resistance-geometry-movement-ledger-v0"
+      "mrd-resistance-geometry-movement-ledger-v0",
+      "residual-state-contradiction-mining-note-v0",
+      "mrd-geometry-claim-upgrade-blocker-ledger-v0",
+      "mrd-geometry-negative-safety-fixtures-v0"
     ]
   },
   "measurement_trajectory_state": {
@@ -110,13 +117,14 @@
       "source_defined_clone_architecture_context",
       "source_defined_transcriptional_clone_context",
       "review_level_subclone_diversity_context",
-      "clone_inference_method_needed",
-      "subclone_second_source_needed"
+      "genomic_heterogeneity_context",
+      "clone_inference_method_needed"
     ],
     "source_basis": [
       "cui-2024-mrd-clonal-evolution-geometry-v0",
       "cohen-2021-resistance-single-cell-geometry-v0",
-      "li-2025-single-cell-myeloma-geometry-v0"
+      "li-2025-single-cell-myeloma-geometry-v0",
+      "bolli-2014-genomic-heterogeneity-geometry-v0"
     ],
     "separation_rule": "Clone architecture is not collapsed into residual biological state or therapy response.",
     "blocked_interpretation": true
@@ -140,15 +148,17 @@
     "value_states": [
       "microenvironment_context",
       "therapy_pressure_context",
+      "car_t_immune_state_context",
       "high_unmet_need_context",
       "single_cell_translation_readiness_gap",
-      "context_second_source_needed"
+      "remaining_context_second_source_needed"
     ],
     "source_basis": [
       "li-2025-single-cell-myeloma-geometry-v0",
       "besliu-2025-treatment-landscape-geometry-v0",
       "wang-2025-lipid-metabolism-geometry-v0",
-      "lu-2024-signaling-pathways-geometry-v0"
+      "lu-2024-signaling-pathways-geometry-v0",
+      "ledergor-2024-car-t-pressure-geometry-v0"
     ],
     "boundary": "Support layers modify research interpretation needs only and cannot rank, recommend, or match."
   },
@@ -162,9 +172,7 @@
       "expert_review_needed"
     ],
     "open_gaps": [
-      "subclone-diversity-v0 remains under-covered for second-source navigation",
       "single-cell-translation-gap-v0 remains under-covered for translation readiness",
-      "t-cell-therapy-pressure-v0 remains under-covered for therapy-pressure context",
       "unmet-high-risk-context-v0 remains under-covered for disease-context support"
     ],
     "absence_inference_allowed": false,
@@ -176,7 +184,7 @@
     "clinician_review_needed": true,
     "source_appraisal_needed": true,
     "publication_gate_needed": true,
-    "allowed_public_successor": "proof-invariant-check-only"
+    "allowed_public_successor": "discrimination-invariant-and-diff-check-only"
   },
   "blocked_output_manifest": {
     "diagnosis": "blocked",

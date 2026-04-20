@@ -86,7 +86,7 @@
       "task_title": "Mine counterevidence for residual biological state",
       "task_type": "source-extraction-task",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "suggested_issue_form": "pull-request-only",
       "linked_gap_ids": [
         "non-antigen-loss-relapse-buckets-gap-v0",
@@ -101,22 +101,26 @@
       ],
       "extraction_record_ids": [
         "cui-2024-mrd-clonal-evolution-geometry-v0",
-        "cohen-2021-resistance-single-cell-geometry-v0"
+        "cohen-2021-resistance-single-cell-geometry-v0",
+        "wang-2025-lipid-metabolism-geometry-v0",
+        "lu-2024-signaling-pathways-geometry-v0"
       ],
       "source_ids": [
         "pubmed",
         "pubmed_cui_2024_mrd_clonal_evolution",
-        "pubmed_cohen_2021_resistance_single_cell"
+        "pubmed_cohen_2021_resistance_single_cell",
+        "pubmed_wang_2025_lipid_metabolism_myeloma",
+        "pubmed_lu_2024_myeloma_signaling_pathways"
       ],
       "public_deliverables": [
-        "One source-specific contradiction note or extraction that tests whether resistant transcriptional-state signals are cohort-specific, treatment-specific, or assay-specific.",
-        "A decision on whether residual biological state should remain a single axis or split into narrower therapy-exposure or assay-context branches.",
-        "A public update to the axis revision if the state axis needs narrowing."
+        "Completed through residual-state-contradiction-mining-note-v0: one contradiction note tests whether residual biological state is too broad unless typed by pathway, clone, therapy, microenvironment, and measurement context.",
+        "Decision: keep residual biological state as an axis, but require typed substructure and source-frame separation.",
+        "Claim-upgrade blockers keep pathway and state language non-actionable."
       ],
       "acceptance_checks": [
         "The work uses public sources only and passes python3 tools/validate_public_artifacts.py.",
         "Single-cell resistant-state language stays separate from MRD measurement trajectory.",
-        "Treatment exposure, sample timing, and response context are preserved.",
+        "Treatment exposure, sample timing, source type, and response context are preserved.",
         "Pathway and state signals are not converted into target or treatment guidance."
       ],
       "what_not_to_infer": [
@@ -305,7 +309,7 @@
     "review_status": "source-checked",
     "review_notes": [
       "Created as the concrete counterevidence route required by mrd-resistance-geometry-intelligence-audit-packet-v0.",
-      "The MRD trajectory and clone-state coupling contradiction tasks are complete for proof-readiness-v0.",
+      "The MRD trajectory, residual-state, and clone-state coupling contradiction tasks are complete for proof and discrimination readiness.",
       "Tasks are pull-request-only internal research tasks; no external human outreach is required or scheduled.",
       "Tasks route uncertainty into source extraction and contradiction notes, not clinical advice."
     ]

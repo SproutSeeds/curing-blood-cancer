@@ -12,6 +12,7 @@ Examples should use public or synthetic data only.
 - [Multiple myeloma CAR T query record v0](./multiple-myeloma-car-t-query-record-v0.json)
 - [Multiple myeloma CAR T durability evidence claim v0](./myeloma-car-t-durability-question-v0.json)
 - [Myeloma residual-state object public-source fixture v0](./myeloma-residual-state-object-public-source-fixture-v0.json)
+- [MRD geometry negative safety fixtures v0](./mrd-geometry-negative-safety-fixtures-v0.json)
 - [Review-packet builder route-table placeholder fixture v0](./review-packet-builder-route-table-placeholder-fixture-v0.json)
 - [Review-packet builder forbidden input fixture v0](./review-packet-builder-forbidden-input-fixture-v0.json)
 - [Review-packet route-table output fixture v0](./review-packet-route-table-output-fixture-v0.json)

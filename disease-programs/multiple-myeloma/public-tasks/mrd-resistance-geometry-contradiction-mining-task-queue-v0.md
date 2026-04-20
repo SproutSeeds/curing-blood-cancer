@@ -31,7 +31,7 @@ No external human outreach is required or scheduled.
 | Task ID | Priority | Status | Mechanism Bucket |
 | --- | --- | --- | --- |
 | `mrd-trajectory-contradiction-mining-task-v0` | high | done | `mrd-trajectory-split-v0` |
-| `residual-state-contradiction-mining-task-v0` | high | ready | `residual-transcriptional-adaptation-v0` |
+| `residual-state-contradiction-mining-task-v0` | high | done | `residual-transcriptional-adaptation-v0` |
 | `clone-state-coupling-contradiction-mining-task-v0` | high | done | `genetic-nongenetic-coupling-v0`, `subclone-diversity-v0` |
 | `tme-shelter-contradiction-mining-task-v0` | medium | ready | `tme-shelter-interactions-v0` |
 | `pathway-actionability-contradiction-mining-task-v0` | medium | ready | `metabolic-resistance-state-v0`, `nfkb-selective-state-v0`, `residual-transcriptional-adaptation-v0` |
@@ -65,6 +65,7 @@ The work must preserve:
 | Task ID | Completed By | Decision |
 | --- | --- | --- |
 | `mrd-trajectory-contradiction-mining-task-v0` | `mrd-trajectory-contradiction-mining-note-v0` | Keep measurement trajectory separate from residual biological state; preserve assay-frame split. |
+| `residual-state-contradiction-mining-task-v0` | `residual-state-contradiction-mining-note-v0` | Keep residual biological state as an axis only with typed substructure and source-frame separation. |
 | `clone-state-coupling-contradiction-mining-task-v0` | `clone-state-coupling-contradiction-mining-note-v0` | Keep clone-state coupling as a provisional, source-specific, split-ready edge. |
 
 ## Structured Data
@@ -76,6 +77,5 @@ The work must preserve:
 
 - Use this queue as unresolved follow-up in
   `mrd-resistance-geometry-axis-revision-v0`.
-- Continue with `residual-state-contradiction-mining-task-v0`,
-  `tme-shelter-contradiction-mining-task-v0`, and
+- Continue with `tme-shelter-contradiction-mining-task-v0` and
   `pathway-actionability-contradiction-mining-task-v0`.

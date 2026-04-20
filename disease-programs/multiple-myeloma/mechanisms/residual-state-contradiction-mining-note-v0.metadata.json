@@ -1,30 +1,30 @@
 {
-  "artifact_id": "mrd-resistance-geometry-second-source-task-queue-v0",
-  "title": "MRD Resistance Geometry Second-Source Task Queue v0",
+  "artifact_id": "residual-state-contradiction-mining-note-v0",
+  "title": "Residual-State Contradiction Mining Note v0",
   "artifact_class": "dataset",
   "blood_cancer_scope": [
     "multiple myeloma",
     "measurable residual disease",
-    "clonal evolution",
-    "therapy resistance",
-    "geometry pilot coverage",
-    "source extraction"
+    "residual biological state",
+    "contradiction mining",
+    "geometry proof",
+    "no human outreach"
   ],
   "claim_level": "open-question",
   "sources": [
     {
-      "label": "MRD Resistance Geometry Coverage Report v0",
-      "url": "../mechanisms/mrd-resistance-geometry-coverage-v0.md",
-      "accessed": "2026-04-19"
+      "label": "MRD Resistance Geometry Proof Plan v0",
+      "url": "mrd-resistance-geometry-proof-plan-v0.md",
+      "accessed": "2026-04-20"
     },
     {
-      "label": "MRD Resistance Geometry Pilot v0",
-      "url": "../mechanisms/mrd-resistance-geometry-pilot-v0.md",
-      "accessed": "2026-04-19"
+      "label": "MRD Resistance Geometry Contradiction Mining Task Queue v0",
+      "url": "../public-tasks/mrd-resistance-geometry-contradiction-mining-task-queue-v0.md",
+      "accessed": "2026-04-20"
     },
     {
-      "label": "BCMA Antigen Escape Evidence Gap Register v0",
-      "url": "../evidence-gaps/bcma-antigen-escape-evidence-gap-register-v0.md",
+      "label": "Cui 2024 MRD clonal evolution source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38900040/",
       "accessed": "2026-04-19"
     },
     {
@@ -41,26 +41,18 @@
       "label": "Lu 2024 signaling pathways source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38961036/",
       "accessed": "2026-04-20"
-    },
-    {
-      "label": "Bolli 2014 genomic heterogeneity source",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/24429703/",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Ledergor 2024 CD4 CAR T exhaustion source",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
-      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
     "Research artifact only.",
     "Not medical advice.",
     "Not diagnostic guidance.",
+    "Not a monitoring recommendation.",
     "Not a treatment recommendation.",
     "Not a trial recommendation.",
     "Not a patient-specific MRD interpretation.",
-    "Coverage status is not evidence strength, biological priority, clinical readiness, or mechanism frequency.",
+    "Does not rank pathways, mechanisms, sources, assays, or therapies.",
+    "Does not claim clinical validation.",
     "Does not claim that multiple myeloma has been cured."
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-5-discrimination-v0.md"

@@ -26,6 +26,7 @@ CONTRADICTION_QUEUE = TASKS / "mrd-resistance-geometry-contradiction-mining-task
 SECOND_SOURCE_QUEUE = TASKS / "mrd-resistance-geometry-second-source-task-queue-v0.json"
 MOVEMENT_LEDGER = MECHANISMS / "mrd-resistance-geometry-movement-ledger-v0.json"
 FIXTURE = EXAMPLES / "myeloma-residual-state-object-public-source-fixture-v0.json"
+NEGATIVE_FIXTURES = EXAMPLES / "mrd-geometry-negative-safety-fixtures-v0.json"
 
 REQUIRED_PROOF_TESTS = {
     "structural-separability-test-v0",
@@ -134,6 +135,35 @@ def coverage_statuses(report: dict[str, Any]) -> dict[str, str]:
     return statuses
 
 
+def boundary_failures(data_boundary: dict[str, Any] | None) -> list[str]:
+    if not isinstance(data_boundary, dict):
+        return sorted(REQUIRED_FALSE_BOUNDARY_FIELDS)
+    return sorted(field for field in REQUIRED_FALSE_BOUNDARY_FIELDS if data_boundary.get(field) is not False)
+
+
+def blocked_output_failures(blocked_manifest: dict[str, Any] | None) -> list[str]:
+    if not isinstance(blocked_manifest, dict):
+        return sorted(REQUIRED_BLOCKED_OUTPUTS)
+    return sorted(output for output in REQUIRED_BLOCKED_OUTPUTS if blocked_manifest.get(output) != "blocked")
+
+
+def negative_fixture_failed_check_ids(fixture_pack: dict[str, Any], fixture: dict[str, Any]) -> set[str]:
+    pack_boundary = fixture_pack.get("data_boundary")
+    fixture_boundary = fixture.get("data_boundary")
+    merged_boundary: dict[str, Any] = {}
+    if isinstance(pack_boundary, dict):
+        merged_boundary.update(pack_boundary)
+    if isinstance(fixture_boundary, dict):
+        merged_boundary.update(fixture_boundary)
+
+    failed: set[str] = set()
+    if boundary_failures(merged_boundary):
+        failed.add("fixture-data-boundary-fail-closed")
+    if blocked_output_failures(fixture.get("blocked_output_manifest")):
+        failed.add("fixture-blocked-output-manifest")
+    return failed
+
+
 def has_required_set(found: set[str], required: set[str]) -> tuple[bool, str]:
     missing = sorted(required - found)
     if missing:
@@ -148,6 +178,7 @@ def run_checks(root: Path) -> list[CheckResult]:
     second_source_queue = load_json(root, SECOND_SOURCE_QUEUE)
     movement_ledger = load_json(root, MOVEMENT_LEDGER)
     fixture = load_json(root, FIXTURE)
+    negative_fixture_pack = load_json(root, NEGATIVE_FIXTURES)
 
     results: list[CheckResult] = []
 
@@ -210,14 +241,7 @@ def run_checks(root: Path) -> list[CheckResult]:
     passed, detail = has_required_set(completed_outputs, REQUIRED_COMPLETED_OUTPUTS)
     results.append(CheckResult("movement-ledger-required-outputs", passed, detail))
 
-    data_boundary = fixture.get("data_boundary")
-    false_failures: list[str] = []
-    if not isinstance(data_boundary, dict):
-        false_failures = sorted(REQUIRED_FALSE_BOUNDARY_FIELDS)
-    else:
-        false_failures = sorted(
-            field for field in REQUIRED_FALSE_BOUNDARY_FIELDS if data_boundary.get(field) is not False
-        )
+    false_failures = boundary_failures(fixture.get("data_boundary"))
     results.append(
         CheckResult(
             "fixture-data-boundary-fail-closed",
@@ -226,19 +250,45 @@ def run_checks(root: Path) -> list[CheckResult]:
         )
     )
 
-    blocked_manifest = fixture.get("blocked_output_manifest")
-    blocked_failures: list[str] = []
-    if not isinstance(blocked_manifest, dict):
-        blocked_failures = sorted(REQUIRED_BLOCKED_OUTPUTS)
-    else:
-        blocked_failures = sorted(
-            output for output in REQUIRED_BLOCKED_OUTPUTS if blocked_manifest.get(output) != "blocked"
-        )
+    blocked_failures = blocked_output_failures(fixture.get("blocked_output_manifest"))
     results.append(
         CheckResult(
             "fixture-blocked-output-manifest",
             not blocked_failures,
             "all required outputs blocked" if not blocked_failures else f"not blocked: {', '.join(blocked_failures)}",
+        )
+    )
+
+    negative_fixture_failures: list[str] = []
+    negative_fixtures = negative_fixture_pack.get("negative_fixtures")
+    if not isinstance(negative_fixtures, list) or not negative_fixtures:
+        negative_fixture_failures.append("negative_fixtures missing or empty")
+    else:
+        for fixture_index, negative_fixture in enumerate(negative_fixtures):
+            if not isinstance(negative_fixture, dict):
+                negative_fixture_failures.append(f"negative_fixtures[{fixture_index}] must be an object")
+                continue
+            fixture_id = negative_fixture.get("fixture_id", f"negative_fixtures[{fixture_index}]")
+            expected = set(values(negative_fixture, "expected_failed_check_ids"))
+            actual = negative_fixture_failed_check_ids(negative_fixture_pack, negative_fixture)
+            if not expected:
+                negative_fixture_failures.append(f"{fixture_id}: no expected_failed_check_ids")
+            missing = sorted(expected - actual)
+            if missing:
+                negative_fixture_failures.append(
+                    f"{fixture_id}: expected failures not detected: {', '.join(missing)}"
+                )
+            if not actual:
+                negative_fixture_failures.append(f"{fixture_id}: no fail-closed checks triggered")
+    results.append(
+        CheckResult(
+            "negative-fixtures-fail-closed",
+            not negative_fixture_failures,
+            (
+                f"{len(negative_fixtures)} negative fixtures fail closed"
+                if isinstance(negative_fixtures, list) and not negative_fixture_failures
+                else "; ".join(negative_fixture_failures)
+            ),
         )
     )
 

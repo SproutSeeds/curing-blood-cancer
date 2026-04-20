@@ -19,6 +19,9 @@ The fourth phase turns the revised geometry into a proof workflow: the system
 must preserve axis separation, move only under source-backed evidence, survive
 contradiction mining, fit the residual-state object, and fail closed when an
 unsafe output is requested.
+The fifth phase stress-tests discrimination: nearby states must stay separate,
+two more coverage gaps close under source evidence, unsafe outputs fail closed,
+and claim-upgrade blockers become explicit.
 
 External human outreach is not part of this execution path. The replacement
 gate is stricter internal review: source-trace audits, contradiction hunts,
@@ -203,6 +206,56 @@ Phase 4 result:
 - The invariant checker repeats structural and blocked-output checks.
 - No clinical, ranking, patient-matching, treatment, monitoring, or cure output
   is introduced.
+
+## Phase 5: Discrimination And Stress Testing
+
+Status: `complete-for-discrimination-v0`
+
+Purpose: test whether the geometry can discriminate adjacent states, close two
+more second-source gaps, fail closed on unsafe outputs, and make claim-upgrade
+blockers explicit.
+
+Completed public outputs:
+
+- `residual-state-contradiction-mining-note-v0`
+- `bolli-2014-genomic-heterogeneity-geometry-v0`
+- `ledergor-2024-car-t-pressure-geometry-v0`
+- `mrd-geometry-state-diff-tool-v0`
+- `mrd-geometry-negative-safety-fixtures-v0`
+- `mrd-geometry-claim-upgrade-blocker-ledger-v0`
+- refreshed `mrd-resistance-geometry-coverage-v0`
+- refreshed `mrd-resistance-geometry-second-source-task-queue-v0`
+- refreshed `mrd-resistance-geometry-contradiction-mining-task-queue-v0`
+
+Completion gate:
+
+- Run residual-state contradiction mining and preserve typed residual-state
+  substructure.
+- Add second-source extraction for `subclone-diversity-v0`.
+- Add second-source extraction for `t-cell-therapy-pressure-v0`.
+- Add a structural diff tool for coverage-state movement.
+- Add negative safety fixtures and make the invariant checker prove they fail
+  closed.
+- Create a claim-upgrade blocker ledger before any claim upgrade.
+- Preserve research-use-only, non-advice, non-ranking, no-human-outreach, and
+  no-cure boundaries.
+
+Phase 5 result:
+
+- Residual biological state remains an axis only with typed substructure and
+  source-frame separation.
+- Subclone diversity moved to `covered-for-v0-navigation` through Bolli 2014
+  genomic heterogeneity extraction.
+- T-cell therapy pressure moved to `covered-for-v0-navigation` through
+  Ledergor 2024 CAR T immune-state extraction.
+- The state diff tool reports source-backed coverage movement without clinical
+  interpretation.
+- Negative safety fixtures intentionally populate unsafe fields and the
+  invariant checker confirms fail-closed behavior.
+- The claim-upgrade blocker ledger keeps actionability, prognosis, sequencing,
+  clinical validation, and cure claims blocked.
+- No clinical, ranking, patient-matching, treatment, monitoring, trial, or cure
+  output is introduced.
 
 ## Structured Data
 

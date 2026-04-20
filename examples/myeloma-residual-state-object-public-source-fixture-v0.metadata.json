@@ -63,6 +63,21 @@
       "label": "Lu 2024 signaling pathways source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38961036/",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Bolli 2014 genomic heterogeneity source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24429703/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Ledergor 2024 CD4 CAR T exhaustion source",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38574299/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Negative Safety Fixtures v0",
+      "url": "mrd-geometry-negative-safety-fixtures-v0.json",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -87,5 +102,5 @@
     "Does not claim that multiple myeloma has been cured.",
     "Second-source pathway entries are review-level navigation signals only and require deeper extraction before any claim upgrade."
   ],
-  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-proof-implementation-v0.md"
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-5-discrimination-v0.md"
 }

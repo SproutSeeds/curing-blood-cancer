@@ -1,0 +1,85 @@
+{
+  "contradiction_note_id": "residual-state-contradiction-mining-note-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "Residual-State Contradiction Mining Note v0",
+  "clinical_use_boundary": "research-use-only",
+  "parent_proof_plan_id": "mrd-resistance-geometry-proof-plan-v0",
+  "source_task_id": "residual-state-contradiction-mining-task-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_wang_2025_lipid_metabolism_myeloma",
+    "pubmed_lu_2024_myeloma_signaling_pathways"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "wang-2025-lipid-metabolism-geometry-v0",
+    "lu-2024-signaling-pathways-geometry-v0"
+  ],
+  "mechanism_group_ids": [
+    "residual-transcriptional-adaptation-v0",
+    "metabolic-resistance-state-v0",
+    "nfkb-selective-state-v0",
+    "genetic-nongenetic-coupling-v0"
+  ],
+  "contradiction_result": {
+    "status": "pass-with-substructure-required",
+    "summary": "Residual biological state remains useful only if the geometry treats it as an internally typed axis rather than one undifferentiated mechanism label.",
+    "source_frame_difference": [
+      "Cui 2024 contributes single-cell residual malignant plasma-cell state and pathway context.",
+      "Cohen 2021 contributes resistant transcriptional-state and clone-state coupling context.",
+      "Wang 2025 contributes review-level metabolic pathway context rather than the exact MRD residual clone measurement.",
+      "Lu 2024 contributes review-level NF-kB and signaling-pathway context rather than target-selection evidence."
+    ],
+    "required_context_fields": [
+      "source method",
+      "source type",
+      "therapy exposure",
+      "sampling or review context",
+      "pathway-state label",
+      "clone-state coupling context",
+      "measurement trajectory context"
+    ]
+  },
+  "movement_decision": {
+    "geometry_element_id": "residual-biological-state-axis-v0",
+    "decision": "keep-axis-require-typed-substructure",
+    "edge_status": "source-bounded-split-ready",
+    "required_movement": "do-not-collapse-pathway-clone-therapy-pressure-tme-or-measurement-context",
+    "proof_test_ids": [
+      "structural-separability-test-v0",
+      "contradiction-response-test-v0",
+      "safety-invariance-test-v0"
+    ]
+  },
+  "required_substructure": [
+    "transcriptional-adaptation-state-v0",
+    "metabolic-pathway-state-context-v0",
+    "nfkb-pathway-state-context-v0",
+    "clone-state-coupling-context-v0",
+    "therapy-pressure-context-v0",
+    "microenvironment-context-v0",
+    "measurement-trajectory-context-v0"
+  ],
+  "blocked_inferences": [
+    "patient-specific residual-state interpretation",
+    "pathway actionability",
+    "target selection",
+    "treatment or supplement suggestion",
+    "MRD relapse-risk forecast",
+    "mechanism ranking",
+    "cure claim"
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created for Phase 5 discrimination and stress testing.",
+      "The note preserves residual-state usefulness while requiring typed substructure.",
+      "No claim upgrade or clinical interpretation is introduced."
+    ]
+  }
+}

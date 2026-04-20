@@ -1,0 +1,43 @@
+{
+  "artifact_id": "mrd-geometry-negative-safety-fixtures-v0",
+  "title": "MRD Geometry Negative Safety Fixtures v0",
+  "artifact_class": "dataset",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "geometry proof",
+    "safety invariance",
+    "synthetic fixture"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Myeloma Residual State Object Public Source Fixture v0",
+      "url": "myeloma-residual-state-object-public-source-fixture-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Proof Invariant Check v0",
+      "url": "../tools/check_mrd_geometry_proof_invariants.py",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Claim Upgrade Blocker Ledger v0",
+      "url": "../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-claim-upgrade-blocker-ledger-v0.md",
+      "accessed": "2026-04-20"
+    }
+  ],
+  "limitations": [
+    "Research artifact only.",
+    "Synthetic safety fixtures only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not a monitoring recommendation.",
+    "Not a treatment recommendation.",
+    "Not a trial recommendation.",
+    "Not a patient-specific MRD interpretation.",
+    "Does not validate clinical use.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-5-discrimination-v0.md"
+}

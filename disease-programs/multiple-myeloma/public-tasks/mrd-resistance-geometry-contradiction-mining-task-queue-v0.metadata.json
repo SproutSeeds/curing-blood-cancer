@@ -72,6 +72,16 @@
       "label": "Lu 2024 signaling pathways source",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38961036/",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Residual-State Contradiction Mining Note v0",
+      "url": "../mechanisms/residual-state-contradiction-mining-note-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Geometry Claim Upgrade Blocker Ledger v0",
+      "url": "../mechanisms/mrd-geometry-claim-upgrade-blocker-ledger-v0.md",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -86,5 +96,5 @@
     "Does not claim that multiple myeloma has been cured.",
     "No external human outreach is required or scheduled."
   ],
-  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-contradiction-mining-task-queue-v0.md"
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-phase-5-discrimination-v0.md"
 }
