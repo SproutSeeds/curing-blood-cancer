@@ -59,14 +59,18 @@ the next safest public step.
 The current active ORP phase is
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
 Machine-representation implementation, MRD geometry falsification,
-no-outreach expert-validation prep, and internal source-gap extraction are
-complete for their named public-safe scopes, but actual expert validation,
-outreach, response intake, private-lab work, clinical interpretation,
-model-governance clearance, publication, and claim upgrades remain human-gated.
+no-outreach expert-validation prep, internal source-gap extraction, frontier
+sweep, and residual-disease modality-discordance source extraction are complete
+for their named public-safe scopes, but actual expert validation, outreach,
+response intake, private-lab work, clinical interpretation, model-governance
+clearance, publication, and claim upgrades remain human-gated.
 The reusable
 [ORP Frontier Gap Sweep Mode v0](orp/modes/frontier-gap-sweep-mode-v0.md)
 now captures how to check for drift, blind spots, and the next safest
 public-source phase.
+The current no-outreach public-source successor, if selected, is
+`assay-specimen-quality-failure-mode-checklist-v0`, while the live blocker stays
+`machine-representation-expert-validation-human-authorization-blocker-v0`.
 The saved Clawdad delegation brief for that map is
 [Clawdad Frontier Delegation Packet v0](protocols/clawdad-frontier-delegation-packet-v0.md).
 The caregiver case intake foundation is the completed first subphase,

@@ -12,7 +12,7 @@ Stewarded by [frg.earth](https://frg.earth/).
   identifiers, raw records, uploads, exact person-linked dates, free-text case
   details, model weights, predictions, recommendations, matching, ranking, or
   clinical decisions
-- last reviewed: `2026-04-18`
+- last reviewed: `2026-04-20`
 
 ## Purpose
 
@@ -67,6 +67,8 @@ The wrapper must not be used for:
 | `review_needed` | Expert, molecular, measurement, clinical, privacy, publication, or model-governance review is missing. | Block interpretation and downstream publication. |
 | `private_lab_needed` | The requested use would require governed private data or lab access. | Keep public output as a blocker only. |
 | `blocked_patient_specific` | The requested use would apply to a person, case, record, option, trial, or clinical decision. | Refuse and route to the relevant private, clinical, legal, regulatory, or publication gate. |
+| `modality_discordance_visible` | Residual-disease modality context disagrees or paired state is incomplete. | Preserve discordance as an uncertainty/refusal state; do not explain patient meaning. |
+| `modality_context_missing` | Required modality family, method, specimen, threshold, timing, paired-state, or source context is missing. | Route to source-context-needed or private-lab-needed without inference. |
 
 ## Required Wrapper Fields
 
@@ -84,7 +86,8 @@ can reference it.
 | `head_status` | One of the allowed placeholder states. | Public status cannot contain a prediction. |
 | `source_context_state` | `public_source_scoped`, `synthetic_source`, `source_context_needed`, `private_source_needed`, or `blocked_private_source`. | Missing source context blocks reuse. |
 | `input_missingness_state` | `complete_synthetic`, `missing_modality_visible`, `unknown_visible`, `not_tested_visible`, `not_collected_visible`, or `blocked_private_missingness`. | Missingness cannot imply absence, normality, risk level, safety, fit, or no need for review. |
-| `uncertainty_state` | `calibration_needed`, `assay_limit`, `method_limit`, `population_mismatch`, `cohort_shift_warning`, `expert_review_needed`, or `source_limit`. | Uncertainty must travel with the placeholder. |
+| `residual_disease_modality_state` | `not_applicable`, `single_modality_source_scoped`, `paired_modality_source_scoped`, `modality_discordance_visible`, `modality_context_missing`, `modality_collapse_blocked`, or `private_lab_needed`. | Modality state can only explain why output is refused or incomplete. |
+| `uncertainty_state` | `calibration_needed`, `assay_limit`, `method_limit`, `population_mismatch`, `cohort_shift_warning`, `expert_review_needed`, `source_limit`, `modality_discordance_visible`, or `modality_context_missing`. | Uncertainty must travel with the placeholder; residual-disease modality disagreement is not patient meaning. |
 | `review_status` | `public_shape_only`, `source_appraisal_needed`, `molecular_review_needed`, `measurement_review_needed`, `clinician_review_needed`, `privacy_review_needed`, `publication_gate_needed`, or `model_governance_needed`. | Missing review defaults to blocked. |
 | `gate_status` | `public_schema_only`, `public_fixture_only`, `private_lab_needed`, `clinical_team_needed`, `legal_needed`, `regulatory_needed`, `publication_gate_needed`, or `blocked_patient_specific`. | Gate labels do not authorize public output. |
 | `refusal_reason` | Stable refusal code such as `no_model_weights`, `no_prediction_allowed`, `real_case_blocked`, `clinical_use_blocked`, or `publication_gate_needed`. | Refusal must be explicit, not implied. |
@@ -121,6 +124,7 @@ The wrapper must refuse any request that asks for or implies:
 | `mob_08_review_gate_required` | Source appraisal, expert review, molecular review, measurement review, clinician review, privacy review, publication gate, and model governance states must remain visible. | Default to `review_needed` or `publication_gate_needed`. |
 | `mob_09_no_clinical_guidance` | No placeholder output can provide diagnosis, prognosis, treatment, trial, expanded-access, monitoring, urgency, safety-management, publication, or clinical-decision output. | Refuse and route to the appropriate gate label. |
 | `mob_10_no_cure_claim` | MRD negativity, complete response, response depth, resistance mechanism, or modeled trajectory language cannot be converted into a cure or vaccine claim. | Refuse cure wording and require expert review. |
+| `mob_11_modality_discordance_refusal` | A future wrapper may expose residual-disease modality discordance or missing modality context, but it cannot output what that means for a person. | Preserve `modality_discordance_visible` or `modality_context_missing`; refuse prognosis, endpoint interpretation, monitoring, treatment, ranking, matching, and decisions. |
 
 ## Synthetic Fixture Alignment
 
@@ -130,8 +134,11 @@ The wrapper must refuse any request that asks for or implies:
 | `synthetic_state_missing_rna_v0` | Transcriptome-dependent placeholders must carry `missing_modality_visible` and `calibration_needed`. | Missing RNA is visible and cannot be treated as normal expression. |
 | `synthetic_state_missing_single_cell_v0` | Marrow ecosystem placeholders must carry `missing_modality_visible`; other families remain review-gated. | Optional single-cell data can be absent without implying immune normality. |
 | `synthetic_state_private_source_blocked_v0` | Every output family must carry `blocked_private_source`, `publication_gate_needed`, and `blocked_patient_specific` where applicable. | Private-source status blocks public interpretation and publication. |
+| `synthetic_state_residual_modality_discordance_v0` | MRD-family placeholders must carry `modality_discordance_visible`, `modality_context_missing`, or `modality_collapse_blocked`; no values are populated. | Discordance is visible as a refusal reason and cannot produce endpoint interpretation, prognosis, monitoring, treatment, ranking, or decisions. |
 
 ## What This Step Revealed
+
+The residual-disease modality-discordance source extraction adds a more precise MRD-head refusal state: one modality cannot stand in for all residual-disease context. The wrapper may expose `modality_discordance_visible` or `modality_context_missing`, but only as a reason to refuse interpretation, prediction, monitoring, treatment, ranking, matching, or decisions.
 
 The synthetic fixture repeats the same blocked-output manifest across scenarios.
 That repetition is useful: the safest reusable unit is a small wrapper that

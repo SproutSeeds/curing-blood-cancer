@@ -134,8 +134,8 @@
       ],
       "path": "disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.metadata.json",
-      "source_count": 26,
-      "limitation_count": 23
+      "source_count": 31,
+      "limitation_count": 24
     },
     {
       "artifact_id": "machine-representation-source-gap-internal-extraction-v0",
@@ -192,8 +192,8 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.metadata.json",
-      "source_count": 6,
-      "limitation_count": 7
+      "source_count": 12,
+      "limitation_count": 8
     },
     {
       "artifact_id": "mrd-geometry-benchmark-fixtures-v0",
@@ -583,6 +583,27 @@
       "limitation_count": 4
     },
     {
+      "artifact_id": "residual-disease-modality-discordance-source-extraction-v0",
+      "title": "Residual Disease Modality Discordance Source Extraction v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "residual disease",
+        "MRD",
+        "PET-CT",
+        "blood mass spectrometry",
+        "spatial marrow architecture",
+        "measurement discordance",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.metadata.json",
+      "source_count": 13,
+      "limitation_count": 20
+    },
+    {
       "artifact_id": "residual-state-contradiction-mining-note-v0",
       "title": "Residual-State Contradiction Mining Note v0",
       "artifact_class": "dataset",
@@ -614,7 +635,7 @@
       ],
       "path": "sources/source-registry-v0.md",
       "metadata_path": "sources/source-registry-v0.metadata.json",
-      "source_count": 37,
+      "source_count": 42,
       "limitation_count": 4
     },
     {
@@ -839,8 +860,8 @@
       ],
       "path": "disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.metadata.json",
-      "source_count": 12,
-      "limitation_count": 23
+      "source_count": 17,
+      "limitation_count": 24
     },
     {
       "artifact_id": "post-bcma-resistance-frontier-addendum-v0",
@@ -1119,8 +1140,8 @@
       ],
       "path": "protocols/clawdad-autonomous-research-loop-v0.md",
       "metadata_path": "protocols/clawdad-autonomous-research-loop-v0.metadata.json",
-      "source_count": 14,
-      "limitation_count": 9
+      "source_count": 16,
+      "limitation_count": 10
     },
     {
       "artifact_id": "clawdad-frontier-delegation-packet-v0",
@@ -1136,8 +1157,8 @@
       ],
       "path": "protocols/clawdad-frontier-delegation-packet-v0.md",
       "metadata_path": "protocols/clawdad-frontier-delegation-packet-v0.metadata.json",
-      "source_count": 44,
-      "limitation_count": 10
+      "source_count": 47,
+      "limitation_count": 11
     },
     {
       "artifact_id": "clinicaltrials-gov-query-protocol-v0",
@@ -1309,8 +1330,8 @@
       ],
       "path": "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.metadata.json",
-      "source_count": 13,
-      "limitation_count": 25
+      "source_count": 18,
+      "limitation_count": 26
     },
     {
       "artifact_id": "mrd-endpoint-language-guardrail-addendum-v0",
@@ -1988,8 +2009,8 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.metadata.json",
-      "source_count": 11,
-      "limitation_count": 27
+      "source_count": 17,
+      "limitation_count": 28
     },
     {
       "artifact_id": "multiple-myeloma-molecular-immune-context-contract-v0",

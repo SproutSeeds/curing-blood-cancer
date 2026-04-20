@@ -195,6 +195,31 @@
       "label": "DECIDE-AI Expert Group / Nature Medicine: pmc_decide_ai_2022_early_clinical_eval",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9116198/",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Kubicki et al. / Blood Neoplasia: pubmed_kubicki_2025_blood_ms_mrd",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40919481/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "eClinicalMedicine: eclinicalmedicine_2026_mrd_petct_concordance",
+      "url": "https://www.sciencedirect.com/science/article/pii/S258953702600115X",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Yip et al. / Blood: pubmed_yip_2025_spatial_transcriptomics_myeloma",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40643106/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Shah et al. / European Journal of Haematology: pubmed_shah_2025_mm_pro_quality",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40729465/",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Wang et al. / Seminars in Diagnostic Pathology: pubmed_wang_2025_bmme_drug_resistance",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40440932/",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

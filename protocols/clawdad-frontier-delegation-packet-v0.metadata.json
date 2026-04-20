@@ -230,6 +230,21 @@
       "label": "Machine Representation Implementation Completion Audit v0",
       "url": "../disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md",
       "accessed": "2026-04-18"
+    },
+    {
+      "label": "Residual Disease Modality Discordance Source Extraction v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "ORP Frontier Gap Sweep Mode v0",
+      "url": "../orp/modes/frontier-gap-sweep-mode-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Multiple Myeloma Frontier Gap Sweep v0",
+      "url": "../disease-programs/multiple-myeloma/frontier-gap-sweep-v0.md",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
@@ -242,7 +257,8 @@
     "Delegate outputs require validation and review before publication or reuse.",
     "Source-backed public artifacts can still be incomplete, stale, or wrong.",
     "The loop must stop on public-safety blockers instead of improvising around them.",
-    "A completed subphase is not a completed initiative; the adaptive master backlog remains live until completion audit or explicit blocker."
+    "A completed subphase is not a completed initiative; the adaptive master backlog remains live until completion audit or explicit blocker.",
+    "Does not authorize residual-disease modality interpretation, outreach, public issue operations, expert-review claim upgrades, private-lab work, clinical interpretation, or publication."
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/clawdad-frontier-delegation-packet-v0.md"
 }

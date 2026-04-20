@@ -20,7 +20,7 @@
     "active_milestone": "case-to-cure-adaptive-master-plan-v0",
     "active_phase": "machine-representation-expert-validation-human-authorization-blocker-v0",
     "band": "exact",
-    "next_action": "Machine-representation source-gap internal extraction and the ORP frontier gap sweep mode are complete. The sweep recommends residual-disease-modality-discordance-source-extraction-v0 as the next no-outreach public-source phase if selected. Active state remains machine-representation-expert-validation-human-authorization-blocker-v0; actual expert-validation execution, issue operations, outreach, response intake, claim upgrade, clinical interpretation, model-governance clearance, and publication remain blocked unless a human explicitly authorizes scope or selects another named no-outreach public-source phase.",
+    "next_action": "Residual-disease modality discordance source extraction is complete and wired into measurement, glossary, model-output wrapper, validator, machine-representation source extraction, and ORP boundaries. The next no-outreach public-source successor, if selected, is assay-specimen-quality-failure-mode-checklist-v0. Active state remains machine-representation-expert-validation-human-authorization-blocker-v0; actual expert-validation execution, issue operations, outreach, response intake, claim upgrade, clinical interpretation, model-governance clearance, publication, and private-lab work remain blocked unless a human explicitly authorizes scope or selects another named no-outreach public-source phase.",
     "blocked_by": [
       "human-review-needed",
       "expert-review-needed",
@@ -717,7 +717,36 @@
               "plans": [
                 "Completed as orp/modes/frontier-gap-sweep-mode-v0.md.",
                 "First disease-program run completed as disease-programs/multiple-myeloma/frontier-gap-sweep-v0.md.",
-                "Recommended next no-outreach successor, if selected, is residual-disease-modality-discordance-source-extraction-v0."
+                "Recommended next no-outreach successor was selected and completed as residual-disease-modality-discordance-source-extraction-v0."
+              ],
+              "compute_hooks": [
+                "python3 tools/validate_public_artifacts.py"
+              ]
+            },
+            {
+              "id": "residual-disease-modality-discordance-source-extraction-v0",
+              "label": "Residual Disease Modality Discordance Source Extraction v0",
+              "status": "complete",
+              "goal": "Complete a no-outreach, public-source-only extraction pass for residual-disease modality discordance across marrow MRD, blood mass spectrometry, PET-CT/imaging, spatial marrow architecture, assay/specimen quality, microenvironment context, host context, and model-output refusal states.",
+              "depends_on": [
+                "orp-frontier-gap-sweep-mode-v0",
+                "measurement-normalization-contract-v0",
+                "machine-representation-source-extraction-v0"
+              ],
+              "requirements": [
+                "Use only public sources and public repo artifacts.",
+                "Do not use real case data, private records, restricted datasets, private correspondence, credentials, outreach, issue operations, or expert-response intake.",
+                "Keep residual-disease modality context as source-scoped representation only: no MRD interpretation, imaging interpretation, biopsy interpretation, prognosis, monitoring guidance, treatment guidance, trial guidance, matching, ranking, model validation, publication authorization, or cure claims.",
+                "Preserve the machine-representation expert-validation human-authorization blocker."
+              ],
+              "success_criteria": [
+                "A residual-disease modality-discordance source extraction artifact exists with JSON companion, metadata, catalog coverage, and navigation links.",
+                "Measurement, glossary, model-output wrapper, validator, and machine-representation source extraction artifacts expose discordance and missing modality context as fail-closed states.",
+                "ORP state keeps external expert-validation execution and outreach blocked and recommends a no-outreach assay/specimen quality successor."
+              ],
+              "plans": [
+                "Completed as disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md.",
+                "Recommended next no-outreach public-source successor, if selected, is assay-specimen-quality-failure-mode-checklist-v0."
               ],
               "compute_hooks": [
                 "python3 tools/validate_public_artifacts.py"
@@ -731,7 +760,8 @@
               "depends_on": [
                 "machine-representation-expert-validation-no-outreach-prep-v0",
                 "machine-representation-source-gap-internal-extraction-v0",
-                "orp-frontier-gap-sweep-mode-v0"
+                "orp-frontier-gap-sweep-mode-v0",
+                "residual-disease-modality-discordance-source-extraction-v0"
               ],
               "requirements": [
                 "Do not contact reviewers, tag people, open new issues, update issue state, copy private correspondence, or ingest response content.",
@@ -744,8 +774,8 @@
                 "No artifact language implies expert-review completion, endorsement, consensus, clinical validity, publication readiness, advice, ranking, matching, or cure."
               ],
               "plans": [
-                "Stop here unless the operator selects the next no-outreach public-source extraction phase or authorizes a named external expert-validation scope.",
-                "Recommended next no-outreach public-source phase is residual-disease-modality-discordance-source-extraction-v0."
+                "Residual-disease modality-discordance source extraction is complete and did not clear the expert-validation gate.",
+                "Recommended next no-outreach public-source successor, if selected, is assay-specimen-quality-failure-mode-checklist-v0."
               ],
               "compute_hooks": []
             }

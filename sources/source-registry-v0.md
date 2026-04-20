@@ -40,6 +40,12 @@ as a claim by itself.
 | `therapy-exposure-context` | Useful for source-defined therapy class, prior-line, relapsed/refractory, response-linkage, and product/status vocabulary without sequencing, access, eligibility, or treatment guidance. |
 | `model-validation` | Useful for prediction-model reporting, risk-of-bias, applicability, calibration, missingness, dataset-shift, and validation-design review without proving model validity or clinical utility. |
 | `model-governance` | Useful for AI/ML lifecycle, transparency, monitoring, human-AI team, and regulatory-governance context without authorizing deployment or clinical use. |
+| `patient-reported-outcome-context` | Useful for PRO, quality-of-life, function, toxicity-burden, and missingness context without patient-specific assessment or treatment-fit guidance. |
+| `microenvironment-context` | Useful for bone marrow niche and microenvironment source context without mechanism ranking or treatment guidance. |
+| `spatial-context` | Useful for marrow architecture, spatial transcriptomics, biopsy-site, and niche-context language without diagnostic or site-specific interpretation. |
+| `imaging-residual-disease-context` | Useful for PET-CT, MRI, and imaging-linked residual-disease context without image interpretation, monitoring advice, or prognosis. |
+| `blood-mrd-context` | Useful for source-defined peripheral blood residual-disease assay context without substituting for marrow MRD or creating monitoring guidance. |
+| `residual-disease-modality-context` | Useful for marrow MRD, blood residual-disease assays, imaging, spatial biopsy, and modality-discordance context without patient-specific interpretation. |
 
 ## Records
 
@@ -102,6 +108,11 @@ as a claim by itself.
 | `pubmed_tripod_ai_2024_prediction_model_reporting` | TRIPOD+AI Steering Group / BMJ | reporting guideline | clinical prediction models, machine learning, artificial intelligence, reporting guidance | `literature-search`, `model-validation`, `model-governance`, `machine-representation` | Reporting guideline; useful for future prediction-model reporting pressure only, not evidence that any myeloma model is valid, calibrated, clinically useful, deployable, or safe. |
 | `pubmed_laubach_2016_imwg_relapsed_management` | International Myeloma Working Group / Leukemia | consensus recommendations | multiple myeloma, relapsed multiple myeloma, relapsed/refractory context, therapy exposure context | `literature-search`, `therapy-exposure-context`, `context-modifier` | Consensus recommendations; use for public relapse/refractory terminology and broad context only, not individual relapse diagnosis, refractory assessment, treatment selection, sequencing, or patient-specific guidance. |
 | `pubmed_moreau_2021_imwg_rrmm_recommendations` | International Myeloma Working Group / Lancet Oncology | policy review | multiple myeloma, relapsed multiple myeloma, refractory multiple myeloma, prior therapy context | `literature-search`, `therapy-exposure-context`, `context-modifier` | IMWG policy review; use for source-defined relapsed/refractory and prior-line context only, not patient-specific treatment selection, sequencing, access, eligibility, prognosis, or trial guidance. |
+| `pubmed_kubicki_2025_blood_ms_mrd` | Kubicki et al. / Blood Neoplasia | open-access clinical-trial pooled analysis | multiple myeloma, minimal residual disease, peripheral blood, mass spectrometry, LC-MS, EXENT | `literature-search`, `measurement-standard`, `residual-disease-modality-context`, `blood-mrd-context` | Blood mass-spectrometry MRD source; use for source-specific modality context only, not as a substitute for marrow MRD, monitoring advice, prognosis, treatment selection, or patient-specific interpretation. |
+| `eclinicalmedicine_2026_mrd_petct_concordance` | eClinicalMedicine | systematic review and meta-analysis | multiple myeloma, bone marrow MRD, PET-CT, modality concordance, modality discordance, response assessment | `literature-search`, `measurement-standard`, `residual-disease-modality-context`, `imaging-residual-disease-context` | Study-level systematic review/meta-analysis; use for public modality-discordance context only, not patient-specific prognosis, imaging interpretation, monitoring guidance, treatment adaptation, or response calls. |
+| `pubmed_yip_2025_spatial_transcriptomics_myeloma` | Yip et al. / Blood | open-access research article | multiple myeloma, bone marrow trephine biopsy, spatial transcriptomics, marrow architecture, plasma-cell niches | `literature-search`, `genomics-data`, `spatial-context`, `residual-disease-modality-context`, `machine-representation` | Spatial transcriptomics cohort source; use for public spatial/marrow-architecture context only, not diagnostic imaging or biopsy interpretation, site-specific disease calls, treatment selection, prognosis, or patient-specific interpretation. |
+| `pubmed_shah_2025_mm_pro_quality` | Shah et al. / European Journal of Haematology | systematic review | multiple myeloma, patient-reported outcomes, quality of life, trial protocols, missing data | `literature-search`, `context-modifier`, `patient-reported-outcome-context`, `model-validation` | PRO methodology source; use for public source-context and missingness language only, not quality-of-life prediction, treatment fit, safety management, or patient-specific guidance. |
+| `pubmed_wang_2025_bmme_drug_resistance` | Wang et al. / Seminars in Diagnostic Pathology | review article | multiple myeloma, bone marrow microenvironment, niches, drug resistance, disease progression | `literature-search`, `mechanism-map`, `spatial-context`, `residual-disease-modality-context`, `microenvironment-context` | Review article; use for public microenvironment and niche-context framing only, not mechanism ranking, treatment targeting, prognosis, or patient-specific interpretation. |
 | `pubmed` | U.S. National Library of Medicine | literature index | all blood-cancer subtypes | `literature-search` | Indexing a paper does not validate study quality or clinical actionability. |
 | `fda_drugs_at_fda` | U.S. Food and Drug Administration | regulatory database | approved drugs and therapeutic biologics | `regulatory-status` | Approval status is not patient-specific appropriateness or comparative effectiveness. |
 | `fda_linvoseltamab_accelerated_approval_2025` | U.S. Food and Drug Administration | regulatory notice | multiple myeloma, BCMA, bispecific antibody, accelerated approval | `regulatory-status`, `therapy-reference` | Product-specific regulatory notice; does not establish availability, eligibility, treatment selection, comparative efficacy, sequencing, or patient fit. |
@@ -168,19 +179,12 @@ as a claim by itself.
 | `pubmed_tripod_ai_2024_prediction_model_reporting` | https://pubmed.ncbi.nlm.nih.gov/38626948/ | 2026-04-20 |
 | `pubmed_laubach_2016_imwg_relapsed_management` | https://pubmed.ncbi.nlm.nih.gov/26710887/ | 2026-04-20 |
 | `pubmed_moreau_2021_imwg_rrmm_recommendations` | https://pubmed.ncbi.nlm.nih.gov/33662288/ | 2026-04-20 |
+| `pubmed_kubicki_2025_blood_ms_mrd` | https://pubmed.ncbi.nlm.nih.gov/40919481/ | 2026-04-20 |
+| `eclinicalmedicine_2026_mrd_petct_concordance` | https://www.sciencedirect.com/science/article/pii/S258953702600115X | 2026-04-20 |
+| `pubmed_yip_2025_spatial_transcriptomics_myeloma` | https://pubmed.ncbi.nlm.nih.gov/40643106/ | 2026-04-20 |
+| `pubmed_shah_2025_mm_pro_quality` | https://pubmed.ncbi.nlm.nih.gov/40729465/ | 2026-04-20 |
+| `pubmed_wang_2025_bmme_drug_resistance` | https://pubmed.ncbi.nlm.nih.gov/40440932/ | 2026-04-20 |
 | `pubmed` | https://pubmed.ncbi.nlm.nih.gov/ | 2026-04-11 |
 | `fda_drugs_at_fda` | https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-database | 2026-04-11 |
 | `fda_linvoseltamab_accelerated_approval_2025` | https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-linvoseltamab-gcpt-relapsed-or-refractory-multiple-myeloma | 2026-04-16 |
 | `seer_cancer_stat_facts` | https://seer.cancer.gov/statfacts/ | 2026-04-11 |
-
-## Initial Use Policy
-
-- Prefer NCI PDQ health-professional summaries for condition and treatment
-  context in public artifacts.
-- Prefer ClinicalTrials.gov for trial discovery, then verify specific trial
-  status and eligibility before making any claim about availability.
-- Prefer PubMed for literature discovery only; appraise the actual paper before
-  using it as evidence.
-- Prefer FDA sources for approval status, labeling, and regulatory context.
-- Prefer ACS and SEER for public-friendly overview and population-level
-  statistics.

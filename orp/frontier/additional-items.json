@@ -874,7 +874,36 @@
           "plans": [
             "Completed as orp/modes/frontier-gap-sweep-mode-v0.md.",
             "First disease-program run completed as disease-programs/multiple-myeloma/frontier-gap-sweep-v0.md.",
-            "Recommended next no-outreach successor, if selected, is residual-disease-modality-discordance-source-extraction-v0."
+            "Recommended next no-outreach successor was selected and completed as residual-disease-modality-discordance-source-extraction-v0."
+          ],
+          "compute_hooks": [
+            "python3 tools/validate_public_artifacts.py"
+          ]
+        },
+        {
+          "id": "residual-disease-modality-discordance-source-extraction-v0",
+          "label": "Residual Disease Modality Discordance Source Extraction v0",
+          "status": "complete",
+          "goal": "Complete a no-outreach, public-source-only extraction pass for residual-disease modality discordance across marrow MRD, blood mass spectrometry, PET-CT/imaging, spatial marrow architecture, assay/specimen quality, microenvironment context, host context, and model-output refusal states.",
+          "depends_on": [
+            "orp-frontier-gap-sweep-mode-v0",
+            "measurement-normalization-contract-v0",
+            "machine-representation-source-extraction-v0"
+          ],
+          "requirements": [
+            "Use only public sources and public repo artifacts.",
+            "Do not use real case data, private records, restricted datasets, private correspondence, credentials, outreach, issue operations, or expert-response intake.",
+            "Keep residual-disease modality context as source-scoped representation only: no MRD interpretation, imaging interpretation, biopsy interpretation, prognosis, monitoring guidance, treatment guidance, trial guidance, matching, ranking, model validation, publication authorization, or cure claims.",
+            "Preserve the machine-representation expert-validation human-authorization blocker."
+          ],
+          "success_criteria": [
+            "A residual-disease modality-discordance source extraction artifact exists with JSON companion, metadata, catalog coverage, and navigation links.",
+            "Measurement, glossary, model-output wrapper, validator, and machine-representation source extraction artifacts expose discordance and missing modality context as fail-closed states.",
+            "ORP state keeps external expert-validation execution and outreach blocked and recommends a no-outreach assay/specimen quality successor."
+          ],
+          "plans": [
+            "Completed as disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md.",
+            "Recommended next no-outreach public-source successor, if selected, is assay-specimen-quality-failure-mode-checklist-v0."
           ],
           "compute_hooks": [
             "python3 tools/validate_public_artifacts.py"
@@ -910,11 +939,12 @@
           "id": "machine-representation-expert-validation-human-authorization-blocker-v0",
           "label": "Machine Representation Expert Validation Human Authorization Blocker v0",
           "status": "blocked",
-          "goal": "Record that no outreach, public issue operation, response intake, expert-review claim upgrade, or external validation execution is authorized after the no-outreach prep packet, internal public-source extraction pass, and frontier gap sweep mode; the next autonomous step must be a newly named no-outreach public-source extraction phase or another public-safe status-prep item.",
+          "goal": "Record that no outreach, public issue operation, response intake, expert-review claim upgrade, or external validation execution is authorized after the no-outreach prep packet, internal public-source extraction pass, frontier gap sweep mode, and residual-disease modality-discordance source extraction; the next autonomous step must be a newly named no-outreach public-source extraction phase or another public-safe status-prep item.",
           "depends_on": [
             "machine-representation-expert-validation-no-outreach-prep-v0",
             "machine-representation-source-gap-internal-extraction-v0",
-            "orp-frontier-gap-sweep-mode-v0"
+            "orp-frontier-gap-sweep-mode-v0",
+            "residual-disease-modality-discordance-source-extraction-v0"
           ],
           "requirements": [
             "Do not contact reviewers, tag people, open public issues, refresh issue metadata as an operation, copy private correspondence, or ingest expert-response content.",
@@ -927,8 +957,8 @@
             "External validation and expert-review claim upgrades remain blocked until explicit human authorization."
           ],
           "plans": [
-            "Internal source-gap extraction and frontier gap sweep are complete and did not clear the expert-validation gate.",
-            "Recommended next no-outreach public-source phase is residual-disease-modality-discordance-source-extraction-v0."
+            "Internal source-gap extraction, frontier gap sweep, and residual-disease modality-discordance source extraction are complete and did not clear the expert-validation gate.",
+            "Recommended next no-outreach public-source successor, if selected, is assay-specimen-quality-failure-mode-checklist-v0."
           ]
         }
       ]
