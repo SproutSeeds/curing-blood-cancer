@@ -80,6 +80,8 @@ fixture records.
 
 `measurement-refusal-output-route-table-v0` is complete as a public synthetic
 route table.
+The follow-on [Measurement Refusal Validator Skeleton v0](measurement-refusal-validator-skeleton-v0.md)
+is also complete as a structural, synthetic-only report over the route table.
 
 ORP should keep the active blocker at
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
@@ -88,7 +90,7 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-validator-skeleton-v0`.
+`measurement-refusal-negative-safety-fixtures-v0`.
 
 ## Public Safety Check
 

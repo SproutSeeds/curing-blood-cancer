@@ -324,3 +324,39 @@ make check-measurement-refusal-output-route-table ARGS="--json"
 The tool checks structural synthetic routing invariants only. It does not
 validate clinical utility, interpret MRD, validate assays or specimens, review
 reports, recommend therapy, rank modalities, match a patient, or claim a cure.
+
+### Measurement Refusal Validator Skeleton
+
+Run:
+
+```bash
+python3 tools/measurement_refusal_validator_skeleton.py
+```
+
+Or:
+
+```bash
+make check-measurement-refusal-validator-skeleton
+```
+
+The measurement-refusal validator skeleton reads the synthetic refused output
+fixture and the measurement-refusal route table. It verifies public synthetic
+boundaries, no-advice labels, one route per refused output, complete blocked
+route manifests, required destination contracts, private-review blocker
+routing, and refusal-metadata-only emitted route fields.
+
+Machine-readable report:
+
+```bash
+make check-measurement-refusal-validator-skeleton ARGS="--json"
+```
+
+Refresh the public synthetic report fixture:
+
+```bash
+make check-measurement-refusal-validator-skeleton ARGS="--write-report"
+```
+
+The validator skeleton checks structural synthetic routing only. It does not
+validate clinical utility, interpret MRD, validate assays or specimens, review
+reports, recommend therapy, rank modalities, match a patient, or claim a cure.

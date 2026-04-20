@@ -1,7 +1,7 @@
 {
-  "artifact_id": "measurement-refusal-output-route-table-v0",
-  "title": "Measurement Refusal Output Route Table v0",
-  "artifact_class": "map",
+  "artifact_id": "measurement-refusal-validator-skeleton-v0",
+  "title": "Measurement Refusal Validator Skeleton v0",
+  "artifact_class": "protocol",
   "blood_cancer_scope": [
     "multiple myeloma",
     "plasma-cell disease",
@@ -10,14 +10,14 @@
     "assay quality",
     "specimen quality",
     "model-output refusal",
-    "validator pressure",
+    "validator skeleton",
     "public safety"
   ],
   "claim_level": "open-question",
   "sources": [
     {
-      "label": "Measurement Refusal Output Schema v0",
-      "url": "../../../schemas/measurement-refusal-output-schema-v0.md",
+      "label": "Measurement Refusal Output Route Table v0",
+      "url": "./measurement-refusal-output-route-table-v0.md",
       "accessed": "2026-04-20"
     },
     {
@@ -26,28 +26,8 @@
       "accessed": "2026-04-20"
     },
     {
-      "label": "Measurement State Refusal Fixtures v0",
-      "url": "../../../examples/measurement-state-refusal-fixtures-v0.json",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Output Schema Check v0",
-      "url": "../../../tools/check_measurement_refusal_output_schema.py",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Model Output Boundary Wrapper v0",
-      "url": "../model-output-boundary-wrapper-v0.md",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Myeloma State Validator Rule Map v0",
-      "url": "../myeloma-state-validator-rule-map-v0.md",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Validator Skeleton v0",
-      "url": "./measurement-refusal-validator-skeleton-v0.md",
+      "label": "Measurement Refusal Validator Skeleton Tool v0",
+      "url": "../../../tools/measurement_refusal_validator_skeleton.py",
       "accessed": "2026-04-20"
     },
     {
@@ -56,14 +36,14 @@
       "accessed": "2026-04-20"
     },
     {
-      "label": "Measurement Refusal Validator Skeleton Tool v0",
-      "url": "../../../tools/measurement_refusal_validator_skeleton.py",
+      "label": "Myeloma State Validator Rule Map v0",
+      "url": "../myeloma-state-validator-rule-map-v0.md",
       "accessed": "2026-04-20"
     }
   ],
   "limitations": [
-    "Research-use-only route table.",
-    "Synthetic fixture routing only.",
+    "Research-use-only validator skeleton.",
+    "Synthetic structural validation only.",
     "Not medical advice.",
     "Not diagnostic guidance.",
     "Not MRD interpretation.",
@@ -84,5 +64,5 @@
     "Does not clear human-review, expert-review, private-lab, clinical-team, legal, regulatory, publication, or model-governance gates.",
     "Does not claim that multiple myeloma has been cured."
   ],
-  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-output-route-table-v0.md"
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-validator-skeleton-v0.md"
 }
