@@ -3,7 +3,7 @@
 Stewarded by [frg.earth](https://frg.earth/).
 
 - catalog id: `public-artifact-catalog-v0`
-- date: `2026-04-19`
+- date: `2026-04-20`
 - clinical boundary: research-use-only, not medical advice
 - generated from: `*.metadata.json` files tracked in the public repo
 - review status: expert-review-needed
@@ -79,6 +79,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Model Output Boundary Wrapper v0 | protocol | open-question | [disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md](../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md) |
 | MRD Endpoint Language Guardrail Addendum v0 | protocol | open-question | [disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md](../disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md) |
 | MRD Resistance Geometry Axis Revision Decision v0 | protocol | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.md) |
+| MRD Resistance Geometry Intelligence Audit Packet v0 | protocol | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-intelligence-audit-packet-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-intelligence-audit-packet-v0.md) |
 | MRD Resistance Geometry Phase Plan v0 | protocol | open-question | [disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md](../disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md) |
 | Multidisciplinary Review Packet Builder v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md](../disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-builder-v0.md) |
 | Multidisciplinary Review Packet Template v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md](../disease-programs/multiple-myeloma/reviews/multidisciplinary-review-packet-template-v0.md) |

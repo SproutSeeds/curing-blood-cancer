@@ -49,7 +49,7 @@ The second-source pass separates the evidence frames:
 - `genetic-nongenetic-coupling-v0` moves to
   `covered-for-v0-navigation`.
 - Phase 2 is done for v0.
-- Phase 3 is ready to assemble an internal intelligence-audit packet.
+- Phase 3 has an internal intelligence-audit packet.
 - External human outreach is skipped by design.
 
 ## What Does Not Change
