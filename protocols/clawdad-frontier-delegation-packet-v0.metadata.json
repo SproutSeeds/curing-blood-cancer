@@ -260,6 +260,11 @@
       "label": "Measurement State Refusal Fixture Check v0",
       "url": "../tools/check_measurement_state_refusal_fixtures.py",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Output Route Table v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.md",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

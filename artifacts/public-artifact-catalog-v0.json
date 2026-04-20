@@ -35,7 +35,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.metadata.json",
-      "source_count": 19,
+      "source_count": 21,
       "limitation_count": 24
     },
     {
@@ -259,7 +259,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.metadata.json",
-      "source_count": 17,
+      "source_count": 18,
       "limitation_count": 10
     },
     {
@@ -528,7 +528,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-inventory-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-inventory-v0.metadata.json",
-      "source_count": 53,
+      "source_count": 55,
       "limitation_count": 12
     },
     {
@@ -667,7 +667,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.metadata.json",
-      "source_count": 17,
+      "source_count": 19,
       "limitation_count": 22
     },
     {
@@ -803,6 +803,27 @@
       "limitation_count": 12
     },
     {
+      "artifact_id": "measurement-refusal-output-route-table-v0",
+      "title": "Measurement Refusal Output Route Table v0",
+      "artifact_class": "map",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "measurable residual disease",
+        "measurement state",
+        "assay quality",
+        "specimen quality",
+        "model-output refusal",
+        "validator pressure",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.metadata.json",
+      "source_count": 6,
+      "limitation_count": 21
+    },
+    {
       "artifact_id": "mrd-geometry-transition-model-v0",
       "title": "MRD Geometry Transition Model v0",
       "artifact_class": "map",
@@ -889,7 +910,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/frontier-gap-sweep-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/frontier-gap-sweep-v0.metadata.json",
-      "source_count": 18,
+      "source_count": 20,
       "limitation_count": 24
     },
     {
@@ -927,7 +948,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.metadata.json",
-      "source_count": 23,
+      "source_count": 25,
       "limitation_count": 26
     },
     {
@@ -1207,7 +1228,7 @@
       ],
       "path": "protocols/clawdad-autonomous-research-loop-v0.md",
       "metadata_path": "protocols/clawdad-autonomous-research-loop-v0.metadata.json",
-      "source_count": 19,
+      "source_count": 20,
       "limitation_count": 12
     },
     {
@@ -1224,7 +1245,7 @@
       ],
       "path": "protocols/clawdad-frontier-delegation-packet-v0.md",
       "metadata_path": "protocols/clawdad-frontier-delegation-packet-v0.metadata.json",
-      "source_count": 50,
+      "source_count": 51,
       "limitation_count": 13
     },
     {
@@ -1397,7 +1418,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.metadata.json",
-      "source_count": 23,
+      "source_count": 24,
       "limitation_count": 28
     },
     {
@@ -1584,7 +1605,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.metadata.json",
-      "source_count": 43,
+      "source_count": 45,
       "limitation_count": 10
     },
     {
@@ -2076,7 +2097,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.metadata.json",
-      "source_count": 23,
+      "source_count": 25,
       "limitation_count": 30
     },
     {
@@ -2322,6 +2343,28 @@
       "metadata_path": "taxonomies/multiple-myeloma-treatment-class-taxonomy-v0.metadata.json",
       "source_count": 4,
       "limitation_count": 4
+    },
+    {
+      "artifact_id": "measurement-refusal-output-route-table-check-v0",
+      "title": "Measurement Refusal Output Route Table Check v0",
+      "artifact_class": "tool",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "measurable residual disease",
+        "measurement state",
+        "assay quality",
+        "specimen quality",
+        "synthetic fixture",
+        "model-output refusal",
+        "validator pressure",
+        "public safety"
+      ],
+      "path": "tools/check_measurement_refusal_output_route_table.py",
+      "metadata_path": "tools/check_measurement_refusal_output_route_table.metadata.json",
+      "source_count": 4,
+      "limitation_count": 21
     },
     {
       "artifact_id": "measurement-refusal-output-schema-check-v0",

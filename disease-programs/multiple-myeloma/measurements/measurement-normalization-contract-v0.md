@@ -188,10 +188,16 @@ now completes the next output-contract layer. Its synthetic output fixture maps
 each refusal fixture to one refused record with the same assay/specimen quality
 state, complete blocked downstream uses, and no interpretive text.
 
+[Measurement Refusal Output Route Table v0](measurement-refusal-output-route-table-v0.md)
+now completes the routing layer. It moves refused measurement-state records
+only as refusal metadata into safe route families, while blocking
+interpretation, advice, ranking, clinical meaning, and private/real quality
+review.
+
 The safest next public step is therefore
-`measurement-refusal-output-route-table-v0`: a shape-only routing table for
-moving refused measurement-state records into future validators or wrappers
-without producing interpretation, advice, ranking, or clinical meaning.
+`measurement-refusal-validator-skeleton-v0`: a synthetic-only executable
+skeleton that checks the routed refusal records without producing
+interpretation, advice, ranking, or clinical meaning.
 
 ## Handoff State
 
@@ -212,11 +218,12 @@ The following remain blocked outside this artifact:
 
 A later residual-disease modality-discordance update and assay/specimen quality
 checklist extend this complete shape contract without clearing any human gate.
-The later measurement-state refusal fixtures and measurement-refusal output
-schema make those extensions machine-checkable for synthetic inputs only.
+The later measurement-state refusal fixtures, measurement-refusal output
+schema, and measurement-refusal output route table make those extensions
+machine-checkable for synthetic inputs only.
 ORP should keep
 `machine-representation-expert-validation-human-authorization-blocker-v0`
-active while treating `measurement-refusal-output-route-table-v0` as the next
+active while treating `measurement-refusal-validator-skeleton-v0` as the next
 no-outreach public-source successor if selected.
 
 ## Public Safety Check
