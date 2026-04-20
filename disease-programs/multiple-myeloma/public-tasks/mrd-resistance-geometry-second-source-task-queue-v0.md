@@ -62,7 +62,7 @@ Coverage Report into contribution-ready public source-extraction tasks.
 2. Therapy pressure and high-risk context, because they protect the map from
    pretending all relapse settings are comparable.
 3. Subclone diversity, because it tests whether clone architecture needs more
-   explicit branching before expert review.
+   explicit branching before internal adversarial review.
 4. Single-cell translation gap, because it keeps research-tooling resolution
    separate from clinical readiness.
 

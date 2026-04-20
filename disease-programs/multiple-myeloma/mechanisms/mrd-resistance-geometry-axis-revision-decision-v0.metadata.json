@@ -9,7 +9,7 @@
     "therapy resistance",
     "geometry pilot",
     "axis decision",
-    "expert review"
+    "internal adversarial intelligence audit"
   ],
   "claim_level": "open-question",
   "sources": [
@@ -47,7 +47,8 @@
     "Not a trial recommendation.",
     "Not a patient-specific MRD interpretation.",
     "Does not rank mechanisms, assays, therapies, or sources by clinical importance.",
-    "Does not claim that multiple myeloma has been cured."
+    "Does not claim that multiple myeloma has been cured.",
+    "No external human outreach is required or scheduled."
   ],
   "private_upstream": "../curing-blood-cancer-lab/export-candidates/mrd-resistance-geometry-axis-revision-decision-v0.md"
 }

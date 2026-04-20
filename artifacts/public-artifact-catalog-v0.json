@@ -167,12 +167,12 @@
         "therapy resistance",
         "geometry pilot",
         "axis decision",
-        "expert review"
+        "internal adversarial intelligence audit"
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-axis-revision-decision-v0.metadata.json",
       "source_count": 5,
-      "limitation_count": 8
+      "limitation_count": 9
     },
     {
       "artifact_id": "mrd-resistance-geometry-coverage-v0",
@@ -222,12 +222,12 @@
         "therapy resistance",
         "geometry pilot",
         "source extraction",
-        "expert review"
+        "internal adversarial intelligence audit"
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.metadata.json",
       "source_count": 9,
-      "limitation_count": 8
+      "limitation_count": 9
     },
     {
       "artifact_id": "multiple-myeloma-expert-response-validation-ledger-v0",

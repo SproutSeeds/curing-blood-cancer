@@ -86,7 +86,7 @@
       "comparison_questions": [
         "Does residual disease look more like clone persistence, state adaptation, or a coupled clone-state system across sources?",
         "Which observations are source-cohort measurements and which are review-level summaries?",
-        "Which geometry nodes should merge, split, or remain linked before expert review?"
+        "Which geometry nodes should merge, split, or remain linked before internal adversarial review?"
       ],
       "completion_result": [
         "Second-source extraction added for residual-transcriptional-adaptation-v0.",
@@ -96,26 +96,28 @@
       ]
     },
     {
-      "phase_id": "phase-3-expert-review-packet-v0",
-      "phase_title": "Phase 3: expert-review packet and geometry revision",
+      "phase_id": "phase-3-intelligence-audit-packet-v0",
+      "phase_title": "Phase 3: intelligence audit packet and geometry revision",
       "status": "ready",
-      "purpose": "Convert covered buckets and unresolved tensions into a concise expert-review packet before any claim upgrade.",
+      "purpose": "Convert covered buckets and unresolved tensions into a concise internal adversarial intelligence-audit packet before any claim upgrade.",
       "public_outputs": [
-        "mrd-resistance-geometry-expert-review-packet-v0",
+        "mrd-resistance-geometry-intelligence-audit-packet-v0",
         "mrd-resistance-geometry-axis-revision-v0",
         "updated issue drafts for remaining second-source tasks"
       ],
       "completion_gate": [
         "At least three high-priority buckets have two public extraction records.",
         "Every comparison question has source IDs and extraction record IDs.",
-        "Expert-review-needed language remains explicit.",
+        "Internal adversarial-audit language remains explicit.",
+        "No external human outreach is required or scheduled.",
         "No cure, prognosis, treatment, monitoring, or trial guidance is introduced."
       ],
       "ready_inputs": [
         "mrd-trajectory-split-v0 has two extraction records.",
         "residual-transcriptional-adaptation-v0 has two extraction records.",
         "genetic-nongenetic-coupling-v0 has two extraction records.",
-        "mrd-resistance-geometry-axis-revision-decision-v0 records the Phase 2 structural decision."
+        "mrd-resistance-geometry-axis-revision-decision-v0 records the Phase 2 structural decision.",
+        "The execution path uses internal adversarial intelligence review instead of external human outreach."
       ]
     }
   ],
@@ -131,12 +133,13 @@
   ],
   "review": {
     "created": "2026-04-19",
-    "last_reviewed": "2026-04-19",
+    "last_reviewed": "2026-04-20",
     "review_status": "source-checked",
     "review_notes": [
       "Plan created after the first MRD trajectory second-source extraction was added.",
       "Phase 2 is done for v0 through the Cohen 2021 second-source extraction and axis decision artifact.",
-      "Phase 3 is ready to assemble an expert-review packet around the separate measurement, residual-state, clone, and coupling structure.",
+      "Phase 3 is ready to assemble an internal adversarial intelligence-audit packet around the separate measurement, residual-state, clone, and coupling structure.",
+      "External human outreach is intentionally skipped; claim upgrades stay blocked by source-trace, contradiction, and boundary-audit gates.",
       "All phase gates preserve research-only, non-advice boundaries."
     ]
   }

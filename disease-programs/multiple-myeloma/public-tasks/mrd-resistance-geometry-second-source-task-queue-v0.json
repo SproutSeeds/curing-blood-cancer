@@ -222,7 +222,7 @@
       "what_not_to_infer": [
         "Do not recommend metabolic interventions.",
         "Do not infer that a metabolic state is dominant across relapse settings.",
-        "Do not translate pathway signals into clinical actionability without expert review."
+        "Do not translate pathway signals into clinical actionability without internal adversarial audit."
       ],
       "safety_boundary": [
         "No patient-specific interpretation.",
@@ -267,7 +267,7 @@
         "The extraction uses the mechanism extraction schema and passes python3 tools/validate_public_artifacts.py.",
         "The selected source supports NF-kB pathway state in a relevant myeloma resistance or residual disease context.",
         "Pathway-state language is not converted into drug-target guidance.",
-        "The task preserves uncertainty and expert-review need."
+        "The task preserves uncertainty and internal adversarial-audit need."
       ],
       "what_not_to_infer": [
         "Do not recommend targeting NF-kB.",
@@ -487,14 +487,15 @@
   ],
   "review": {
     "created": "2026-04-19",
-    "last_reviewed": "2026-04-19",
+    "last_reviewed": "2026-04-20",
     "review_status": "source-checked",
     "review_notes": [
       "Built from mrd-resistance-geometry-coverage-v0.",
       "The MRD trajectory second-source task is done through martinez-lopez-2020-mrd-dynamics-geometry-v0.",
       "The residual transcriptional adaptation and genetic/nongenetic coupling tasks are done through cohen-2021-resistance-single-cell-geometry-v0.",
       "Six ready tasks remain for second-source extraction across under-covered geometry nodes.",
-      "Task source_ids include pubmed as a discovery anchor where a second source has not yet been selected."
+      "Task source_ids include pubmed as a discovery anchor where a second source has not yet been selected.",
+      "No external human outreach is required for remaining tasks; source extraction feeds internal adversarial intelligence audit."
     ]
   }
 }
