@@ -26,7 +26,7 @@ DEFAULT_REPORT = EXAMPLES / "measurement-refusal-validator-skeleton-report-v0.js
 
 VALIDATOR_ID = "measurement-refusal-validator-skeleton-v0"
 REPORT_ID = "measurement-refusal-validator-skeleton-report-v0"
-NEXT_SUCCESSOR = "measurement-refusal-negative-safety-fixtures-v0"
+NEXT_SUCCESSOR = "measurement-refusal-wrapper-integration-dry-run-v0"
 HUMAN_GATE = "machine-representation-expert-validation-human-authorization-blocker-v0"
 
 REQUIRED_FALSE_BOUNDARY_FIELDS = {
@@ -285,9 +285,7 @@ def emitted_route_record(route: dict[str, Any]) -> dict[str, Any]:
     return emitted
 
 
-def build_validator_report(root: Path) -> dict[str, Any]:
-    output_doc = load_json(root, OUTPUT_FIXTURE)
-    route_doc = load_json(root, ROUTE_TABLE)
+def build_validator_report_from_docs(output_doc: dict[str, Any], route_doc: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(output_doc, dict) or not isinstance(route_doc, dict):
         raise ValueError("validator inputs must be JSON objects")
 
@@ -374,6 +372,12 @@ def build_validator_report(root: Path) -> dict[str, Any]:
 
     route_failures: list[str] = []
     route_results: list[dict[str, Any]] = []
+    for key in sorted(FORBIDDEN_KEYS):
+        for location in find_key(output_doc, key):
+            route_failures.append(f"output fixture forbidden key {location} ({key})")
+        for location in find_key(route_doc, key):
+            route_failures.append(f"route table forbidden key {location} ({key})")
+
     for output_id, output in sorted(outputs_by_id.items()):
         route = routes_by_output.get(output_id)
         if not isinstance(route, dict):
@@ -507,11 +511,20 @@ def build_validator_report(root: Path) -> dict[str, Any]:
         "forbidden_output_fields": sorted(FORBIDDEN_KEYS),
         "handoff": {
             "completed_phase": VALIDATOR_ID,
+            "completed_successor": "measurement-refusal-negative-safety-fixtures-v0",
             "next_no_outreach_successor_if_selected": NEXT_SUCCESSOR,
             "human_gate_state": HUMAN_GATE,
             "blocked_actions": BLOCKED_ACTIONS,
         },
     }
+
+
+def build_validator_report(root: Path) -> dict[str, Any]:
+    output_doc = load_json(root, OUTPUT_FIXTURE)
+    route_doc = load_json(root, ROUTE_TABLE)
+    if not isinstance(output_doc, dict) or not isinstance(route_doc, dict):
+        raise ValueError("validator inputs must be JSON objects")
+    return build_validator_report_from_docs(output_doc, route_doc)
 
 
 def print_text(report: dict[str, Any]) -> None:

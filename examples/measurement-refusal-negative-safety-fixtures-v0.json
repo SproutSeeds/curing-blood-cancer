@@ -1,0 +1,279 @@
+{
+  "fixture_set_id": "measurement-refusal-negative-safety-fixtures-v0",
+  "title": "Measurement Refusal Negative Safety Fixtures v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "clinical_boundary": "research-use-only; not medical advice",
+  "fixture_status": "negative-fail-closed-v0",
+  "target_validator_id": "measurement-refusal-validator-skeleton-v0",
+  "target_report_id": "measurement-refusal-validator-skeleton-report-v0",
+  "source_artifacts": [
+    "examples/measurement-refusal-output-fixture-v0.json",
+    "disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.json",
+    "tools/measurement_refusal_validator_skeleton.py"
+  ],
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "data_boundary": {
+    "uses_real_case_data": false,
+    "contains_identifiers": false,
+    "contains_raw_records": false,
+    "contains_uploads": false,
+    "contains_exact_person_linked_dates": false,
+    "contains_free_text_case_details": false,
+    "contains_private_correspondence": false,
+    "contains_model_weights": false,
+    "contains_predictions": false,
+    "contains_recommendations": false,
+    "contains_matching_or_ranking": false,
+    "contains_clinical_decisions": false
+  },
+  "fixture_purpose": [
+    "exercise measurement-refusal validator fail-closed behavior without real case data",
+    "prove missing routes, duplicated routes, unsafe contracts, unsafe route families, and forbidden fields are rejected",
+    "keep negative testing separate from interpretation, advice, ranking, report review, publication authorization, or cure claims"
+  ],
+  "negative_fixtures": [
+    {
+      "fixture_id": "mrns_00_prediction_boundary_flag_v0",
+      "description": "Intentionally unsafe because the route table claims prediction content is present.",
+      "mutations": [
+        {
+          "op": "set",
+          "artifact": "route_table",
+          "path": [
+            "data_boundary",
+            "contains_predictions"
+          ],
+          "value": true
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_00_public_synthetic_only"
+      ],
+      "blocked_if_not_detected": [
+        "validator_report_blocked",
+        "public_export_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrns_01_clinical_boundary_missing_v0",
+      "description": "Intentionally unsafe because the route table omits a required no-advice boundary label.",
+      "mutations": [
+        {
+          "op": "remove_list_value",
+          "artifact": "route_table",
+          "path": [
+            "clinical_use_boundary"
+          ],
+          "value": "not-treatment-recommendation"
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_01_clinical_boundary_complete"
+      ],
+      "blocked_if_not_detected": [
+        "clinical_output_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrns_02_missing_route_v0",
+      "description": "Intentionally unsafe because one refused output has no route.",
+      "mutations": [
+        {
+          "op": "drop_route",
+          "source_output_id": "mro_00_method_family_missing_v0"
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_02_every_refused_output_has_one_route"
+      ],
+      "blocked_if_not_detected": [
+        "validator_report_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrns_03_duplicate_route_v0",
+      "description": "Intentionally unsafe because one refused output is routed twice.",
+      "mutations": [
+        {
+          "op": "duplicate_route",
+          "source_output_id": "mro_01_threshold_or_detection_limit_missing_v0",
+          "new_route_id": "mror_negative_duplicate_threshold_route_v0"
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_02_every_refused_output_has_one_route"
+      ],
+      "blocked_if_not_detected": [
+        "validator_report_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrns_04_blocked_manifest_gap_v0",
+      "description": "Intentionally unsafe because a required blocked downstream use is missing from the manifest.",
+      "mutations": [
+        {
+          "op": "remove_blocked_manifest_entry",
+          "blocked_route": "treatment_guidance"
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_03_blocked_route_manifest_complete"
+      ],
+      "blocked_if_not_detected": [
+        "downstream_route_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrns_05_destination_contract_gap_v0",
+      "description": "Intentionally unsafe because the model-output boundary contract is removed from route-table and route records.",
+      "mutations": [
+        {
+          "op": "remove_destination_contract",
+          "contract": "model-output-boundary-wrapper-v0",
+          "scope": "all"
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_04_destination_contracts_present",
+        "mrvs_05_routes_preserve_refusal_metadata_only"
+      ],
+      "blocked_if_not_detected": [
+        "validator_report_blocked",
+        "downstream_route_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrns_06_unsafe_route_family_v0",
+      "description": "Intentionally unsafe because a route family tries to point at a clinical interpretation surface.",
+      "mutations": [
+        {
+          "op": "add_route_family",
+          "source_output_id": "mro_02_specimen_source_or_quality_missing_v0",
+          "route_family": "clinical_interpretation_surface"
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_05_routes_preserve_refusal_metadata_only"
+      ],
+      "blocked_if_not_detected": [
+        "downstream_route_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrns_07_clinical_output_enabled_v0",
+      "description": "Intentionally unsafe because a route enables clinical output.",
+      "mutations": [
+        {
+          "op": "set_route_field",
+          "source_output_id": "mro_03_timepoint_alignment_missing_v0",
+          "field": "clinical_output_allowed",
+          "value": true
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_05_routes_preserve_refusal_metadata_only"
+      ],
+      "blocked_if_not_detected": [
+        "clinical_output_blocked",
+        "downstream_route_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrns_08_private_review_unblocked_v0",
+      "description": "Intentionally unsafe because a private or real quality-review route is made publicly processable.",
+      "mutations": [
+        {
+          "op": "set_route_field",
+          "source_output_id": "mro_08_private_or_real_quality_review_needed_v0",
+          "field": "public_processing_allowed",
+          "value": true
+        },
+        {
+          "op": "set_route_field",
+          "source_output_id": "mro_08_private_or_real_quality_review_needed_v0",
+          "field": "route_status",
+          "value": "routed_refusal_only"
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_05_routes_preserve_refusal_metadata_only"
+      ],
+      "blocked_if_not_detected": [
+        "private_review_needed",
+        "public_export_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrns_09_forbidden_clinical_field_v0",
+      "description": "Intentionally unsafe because a route carries a forbidden clinical guidance field.",
+      "mutations": [
+        {
+          "op": "set_route_field",
+          "source_output_id": "mro_04_paired_modality_context_missing_v0",
+          "field": "clinical_guidance",
+          "value": "intentionally unsafe synthetic placeholder"
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_05_routes_preserve_refusal_metadata_only"
+      ],
+      "blocked_if_not_detected": [
+        "clinical_output_blocked",
+        "downstream_route_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrns_10_forbidden_ranking_field_v0",
+      "description": "Intentionally unsafe because a route carries a forbidden ranking field.",
+      "mutations": [
+        {
+          "op": "set_route_field",
+          "source_output_id": "mro_05_imaging_criteria_missing_v0",
+          "field": "ranking",
+          "value": "intentionally unsafe synthetic placeholder"
+        }
+      ],
+      "expected_failed_rule_ids": [
+        "mrvs_05_routes_preserve_refusal_metadata_only"
+      ],
+      "blocked_if_not_detected": [
+        "matching_or_ranking_blocked",
+        "downstream_route_blocked"
+      ]
+    }
+  ],
+  "handoff": {
+    "completed_phase": "measurement-refusal-negative-safety-fixtures-v0",
+    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-integration-dry-run-v0",
+    "human_gate_state": "machine-representation-expert-validation-human-authorization-blocker-v0",
+    "blocked_actions": [
+      "expert-validation execution",
+      "issue operations",
+      "outreach",
+      "response intake",
+      "real-report quality review",
+      "private-lab work",
+      "clinical interpretation",
+      "model-governance clearance",
+      "publication authorization",
+      "claim upgrade"
+    ]
+  },
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "All negative fixtures are synthetic safety fixtures and contain no real case data.",
+      "Expected failures are intentional and should be detected by tools/check_measurement_refusal_negative_safety_fixtures.py.",
+      "The fixture set validates fail-closed refusal structure only, not clinical use."
+    ]
+  }
+}

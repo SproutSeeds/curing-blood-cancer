@@ -25,6 +25,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Machine Representation Source Extraction v0 | dataset | open-question | [disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md](../disease-programs/multiple-myeloma/machine-representation-source-extraction-v0.md) |
 | Machine Representation Source-Gap Internal Extraction v0 | dataset | open-question | [disease-programs/multiple-myeloma/machine-representation-source-gap-internal-extraction-v0.md](../disease-programs/multiple-myeloma/machine-representation-source-gap-internal-extraction-v0.md) |
 | Machine Representation Source-Gap Task Queue v0 | dataset | open-question | [disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md](../disease-programs/multiple-myeloma/public-tasks/machine-representation-source-gap-task-queue-v0.md) |
+| Measurement Refusal Negative Safety Fixtures v0 | dataset | open-question | [examples/measurement-refusal-negative-safety-fixtures-v0.json](../examples/measurement-refusal-negative-safety-fixtures-v0.json) |
 | Measurement Refusal Output Fixture v0 | dataset | open-question | [examples/measurement-refusal-output-fixture-v0.json](../examples/measurement-refusal-output-fixture-v0.json) |
 | Measurement Refusal Validator Skeleton Report v0 | dataset | open-question | [examples/measurement-refusal-validator-skeleton-report-v0.json](../examples/measurement-refusal-validator-skeleton-report-v0.json) |
 | Measurement State Refusal Fixtures v0 | dataset | open-question | [examples/measurement-state-refusal-fixtures-v0.json](../examples/measurement-state-refusal-fixtures-v0.json) |
@@ -100,6 +101,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 | Machine Representation Expert Validation No-Outreach Execution Packet v0 | protocol | open-question | [disease-programs/multiple-myeloma/reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.md](../disease-programs/multiple-myeloma/reviews/machine-representation-expert-validation-no-outreach-execution-packet-v0.md) |
 | Machine Representation Implementation Completion Audit v0 | protocol | open-question | [disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md](../disease-programs/multiple-myeloma/machine-representation-implementation-completion-audit-v0.md) |
 | Machine Representation Source-Gap Issue Draft Packet v0 | protocol | open-question | [disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md](../disease-programs/multiple-myeloma/public-tasks/issue-drafts/machine-representation-source-gap-issue-draft-packet-v0.md) |
+| Measurement Refusal Negative Safety Fixtures v0 | protocol | open-question | [disease-programs/multiple-myeloma/measurements/measurement-refusal-negative-safety-fixtures-v0.md](../disease-programs/multiple-myeloma/measurements/measurement-refusal-negative-safety-fixtures-v0.md) |
 | Measurement Refusal Validator Skeleton v0 | protocol | open-question | [disease-programs/multiple-myeloma/measurements/measurement-refusal-validator-skeleton-v0.md](../disease-programs/multiple-myeloma/measurements/measurement-refusal-validator-skeleton-v0.md) |
 | Model Output Boundary Wrapper v0 | protocol | open-question | [disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md](../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md) |
 | MRD Endpoint Language Guardrail Addendum v0 | protocol | open-question | [disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md](../disease-programs/multiple-myeloma/measurements/mrd-endpoint-language-guardrail-addendum-v0.md) |
@@ -167,6 +169,7 @@ claim for clinical use, or authorize patient-specific interpretation.
 
 | Artifact | Class | Claim Level | Path |
 | --- | --- | --- | --- |
+| Measurement Refusal Negative Safety Fixture Check v0 | tool | open-question | [tools/check_measurement_refusal_negative_safety_fixtures.py](../tools/check_measurement_refusal_negative_safety_fixtures.py) |
 | Measurement Refusal Output Route Table Check v0 | tool | open-question | [tools/check_measurement_refusal_output_route_table.py](../tools/check_measurement_refusal_output_route_table.py) |
 | Measurement Refusal Output Schema Check v0 | tool | open-question | [tools/check_measurement_refusal_output_schema.py](../tools/check_measurement_refusal_output_schema.py) |
 | Measurement Refusal Validator Skeleton Tool v0 | tool | open-question | [tools/measurement_refusal_validator_skeleton.py](../tools/measurement_refusal_validator_skeleton.py) |

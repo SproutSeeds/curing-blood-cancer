@@ -4,16 +4,6 @@
   "title": "Public Artifact Catalog v0",
   "clinical_use_boundary": "research-use-only",
   "generated_from": "*.metadata.json files tracked in the public repo",
-  "review": {
-    "created": "2026-04-14",
-    "last_reviewed": "2026-04-20",
-    "review_status": "expert-review-needed",
-    "review_notes": [
-      "Generated from public artifact metadata for navigation.",
-      "Structural catalog only; inclusion does not mean expert review, clinical readiness, or publication approval.",
-      "Public boundary excludes private lab material, patient-identifying data, credentials, restricted datasets, and unreviewed exports."
-    ]
-  },
   "entries": [
     {
       "artifact_id": "assay-specimen-quality-failure-mode-checklist-v0",
@@ -35,7 +25,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.metadata.json",
-      "source_count": 24,
+      "source_count": 27,
       "limitation_count": 24
     },
     {
@@ -203,6 +193,28 @@
       "limitation_count": 24
     },
     {
+      "artifact_id": "measurement-refusal-negative-safety-fixtures-dataset-v0",
+      "title": "Measurement Refusal Negative Safety Fixtures v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "measurable residual disease",
+        "measurement state",
+        "assay quality",
+        "specimen quality",
+        "synthetic fixture",
+        "negative safety fixture",
+        "validator skeleton",
+        "public safety"
+      ],
+      "path": "examples/measurement-refusal-negative-safety-fixtures-v0.json",
+      "metadata_path": "examples/measurement-refusal-negative-safety-fixtures-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 21
+    },
+    {
       "artifact_id": "measurement-refusal-output-fixture-v0",
       "title": "Measurement Refusal Output Fixture v0",
       "artifact_class": "dataset",
@@ -221,7 +233,7 @@
       ],
       "path": "examples/measurement-refusal-output-fixture-v0.json",
       "metadata_path": "examples/measurement-refusal-output-fixture-v0.metadata.json",
-      "source_count": 8,
+      "source_count": 11,
       "limitation_count": 24
     },
     {
@@ -242,7 +254,7 @@
       ],
       "path": "examples/measurement-refusal-validator-skeleton-report-v0.json",
       "metadata_path": "examples/measurement-refusal-validator-skeleton-report-v0.metadata.json",
-      "source_count": 4,
+      "source_count": 7,
       "limitation_count": 21
     },
     {
@@ -264,7 +276,7 @@
       ],
       "path": "examples/measurement-state-refusal-fixtures-v0.json",
       "metadata_path": "examples/measurement-state-refusal-fixtures-v0.metadata.json",
-      "source_count": 8,
+      "source_count": 11,
       "limitation_count": 24
     },
     {
@@ -280,7 +292,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.metadata.json",
-      "source_count": 21,
+      "source_count": 24,
       "limitation_count": 10
     },
     {
@@ -549,7 +561,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-inventory-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-inventory-v0.metadata.json",
-      "source_count": 58,
+      "source_count": 61,
       "limitation_count": 12
     },
     {
@@ -688,7 +700,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.metadata.json",
-      "source_count": 22,
+      "source_count": 25,
       "limitation_count": 22
     },
     {
@@ -841,7 +853,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.metadata.json",
-      "source_count": 9,
+      "source_count": 12,
       "limitation_count": 21
     },
     {
@@ -931,7 +943,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/frontier-gap-sweep-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/frontier-gap-sweep-v0.metadata.json",
-      "source_count": 23,
+      "source_count": 26,
       "limitation_count": 24
     },
     {
@@ -969,7 +981,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.metadata.json",
-      "source_count": 28,
+      "source_count": 31,
       "limitation_count": 26
     },
     {
@@ -1249,7 +1261,7 @@
       ],
       "path": "protocols/clawdad-autonomous-research-loop-v0.md",
       "metadata_path": "protocols/clawdad-autonomous-research-loop-v0.metadata.json",
-      "source_count": 23,
+      "source_count": 26,
       "limitation_count": 12
     },
     {
@@ -1266,7 +1278,7 @@
       ],
       "path": "protocols/clawdad-frontier-delegation-packet-v0.md",
       "metadata_path": "protocols/clawdad-frontier-delegation-packet-v0.metadata.json",
-      "source_count": 54,
+      "source_count": 57,
       "limitation_count": 13
     },
     {
@@ -1421,6 +1433,28 @@
       "limitation_count": 27
     },
     {
+      "artifact_id": "measurement-refusal-negative-safety-fixtures-v0",
+      "title": "Measurement Refusal Negative Safety Fixtures v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "measurable residual disease",
+        "measurement state",
+        "assay quality",
+        "specimen quality",
+        "model-output refusal",
+        "negative safety fixture",
+        "validator skeleton",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-negative-safety-fixtures-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-negative-safety-fixtures-v0.metadata.json",
+      "source_count": 5,
+      "limitation_count": 21
+    },
+    {
       "artifact_id": "measurement-refusal-validator-skeleton-v0",
       "title": "Measurement Refusal Validator Skeleton v0",
       "artifact_class": "protocol",
@@ -1438,7 +1472,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-validator-skeleton-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-validator-skeleton-v0.metadata.json",
-      "source_count": 5,
+      "source_count": 8,
       "limitation_count": 21
     },
     {
@@ -1460,7 +1494,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.metadata.json",
-      "source_count": 27,
+      "source_count": 30,
       "limitation_count": 28
     },
     {
@@ -1647,7 +1681,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.metadata.json",
-      "source_count": 48,
+      "source_count": 51,
       "limitation_count": 10
     },
     {
@@ -2139,7 +2173,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.metadata.json",
-      "source_count": 28,
+      "source_count": 31,
       "limitation_count": 30
     },
     {
@@ -2387,6 +2421,28 @@
       "limitation_count": 4
     },
     {
+      "artifact_id": "measurement-refusal-negative-safety-fixture-check-v0",
+      "title": "Measurement Refusal Negative Safety Fixture Check v0",
+      "artifact_class": "tool",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "measurable residual disease",
+        "measurement state",
+        "assay quality",
+        "specimen quality",
+        "synthetic fixture",
+        "negative safety fixture",
+        "validator skeleton",
+        "public safety"
+      ],
+      "path": "tools/check_measurement_refusal_negative_safety_fixtures.py",
+      "metadata_path": "tools/check_measurement_refusal_negative_safety_fixtures.metadata.json",
+      "source_count": 5,
+      "limitation_count": 21
+    },
+    {
       "artifact_id": "measurement-refusal-output-route-table-check-v0",
       "title": "Measurement Refusal Output Route Table Check v0",
       "artifact_class": "tool",
@@ -2448,7 +2504,7 @@
       ],
       "path": "tools/measurement_refusal_validator_skeleton.py",
       "metadata_path": "tools/measurement_refusal_validator_skeleton.metadata.json",
-      "source_count": 6,
+      "source_count": 9,
       "limitation_count": 21
     },
     {
@@ -2560,5 +2616,15 @@
       "source_count": 12,
       "limitation_count": 27
     }
-  ]
+  ],
+  "review": {
+    "created": "2026-04-14",
+    "last_reviewed": "2026-04-20",
+    "review_status": "expert-review-needed",
+    "review_notes": [
+      "Generated from public artifact metadata for navigation.",
+      "Structural catalog only; inclusion does not mean expert review, clinical readiness, or publication approval.",
+      "Public boundary excludes private lab material, patient-identifying data, credentials, restricted datasets, and unreviewed exports."
+    ]
+  }
 }

@@ -17,6 +17,7 @@ Examples should use public or synthetic data only.
 - [Measurement state refusal fixtures v0](./measurement-state-refusal-fixtures-v0.json)
 - [Measurement refusal output fixture v0](./measurement-refusal-output-fixture-v0.json)
 - [Measurement refusal validator skeleton report v0](./measurement-refusal-validator-skeleton-report-v0.json)
+- [Measurement refusal negative safety fixtures v0](./measurement-refusal-negative-safety-fixtures-v0.json)
 - [Review-packet builder route-table placeholder fixture v0](./review-packet-builder-route-table-placeholder-fixture-v0.json)
 - [Review-packet builder forbidden input fixture v0](./review-packet-builder-forbidden-input-fixture-v0.json)
 - [Review-packet route-table output fixture v0](./review-packet-route-table-output-fixture-v0.json)

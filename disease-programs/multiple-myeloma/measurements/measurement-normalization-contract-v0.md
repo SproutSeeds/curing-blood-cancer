@@ -199,11 +199,17 @@ now completes the first executable validator layer. Its synthetic report checks
 the routed refusal records structurally and emits no interpretation, advice,
 ranking, clinical meaning, or private-review output.
 
+[Measurement Refusal Negative Safety Fixtures v0](measurement-refusal-negative-safety-fixtures-v0.md)
+now completes adversarial fail-closed coverage. The checker proves the
+validator rejects missing routes, duplicated routes, unsafe destination
+contracts, unsafe route families, clinical fields, ranking fields, and public
+processing of private or real quality-review routes.
+
 The safest next public step is therefore
-`measurement-refusal-negative-safety-fixtures-v0`: synthetic negative fixtures
-that make the validator prove it rejects missing routes, duplicated routes,
-unsafe destination contracts, clinical fields, ranking fields, and real-review
-requests.
+`measurement-refusal-wrapper-integration-dry-run-v0`: a synthetic dry run that
+shows how validated refusal metadata reaches the model-output boundary wrapper
+without creating model output, interpretation, advice, ranking, or clinical
+meaning.
 
 ## Handoff State
 
@@ -227,11 +233,12 @@ checklist extend this complete shape contract without clearing any human gate.
 The later measurement-state refusal fixtures, measurement-refusal output
 schema, measurement-refusal output route table, and measurement-refusal
 validator skeleton make those extensions machine-checkable for synthetic inputs
-only.
+only. The later measurement-refusal negative safety fixtures prove those
+checks fail closed under synthetic bad-route mutations.
 ORP should keep
 `machine-representation-expert-validation-human-authorization-blocker-v0`
-active while treating `measurement-refusal-negative-safety-fixtures-v0` as the
-next no-outreach public-source successor if selected.
+active while treating `measurement-refusal-wrapper-integration-dry-run-v0` as
+the next no-outreach public-source successor if selected.
 
 ## Public Safety Check
 

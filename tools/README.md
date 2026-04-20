@@ -360,3 +360,32 @@ make check-measurement-refusal-validator-skeleton ARGS="--write-report"
 The validator skeleton checks structural synthetic routing only. It does not
 validate clinical utility, interpret MRD, validate assays or specimens, review
 reports, recommend therapy, rank modalities, match a patient, or claim a cure.
+
+### Measurement Refusal Negative Safety Fixtures
+
+Run:
+
+```bash
+python3 tools/check_measurement_refusal_negative_safety_fixtures.py
+```
+
+Or:
+
+```bash
+make check-measurement-refusal-negative-safety-fixtures
+```
+
+The negative-safety checker reads
+`examples/measurement-refusal-negative-safety-fixtures-v0.json`, mutates the
+public synthetic measurement-refusal route table in memory, and verifies that
+the validator skeleton fails closed with the expected rule IDs.
+
+Machine-readable report:
+
+```bash
+make check-measurement-refusal-negative-safety-fixtures ARGS="--json"
+```
+
+The checker exercises synthetic bad-route states only. It does not validate
+clinical utility, interpret MRD, validate assays or specimens, review reports,
+recommend therapy, rank modalities, match a patient, or claim a cure.

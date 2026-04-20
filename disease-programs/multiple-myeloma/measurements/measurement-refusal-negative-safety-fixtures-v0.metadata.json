@@ -1,7 +1,7 @@
 {
-  "artifact_id": "measurement-refusal-validator-skeleton-report-v0",
-  "title": "Measurement Refusal Validator Skeleton Report v0",
-  "artifact_class": "dataset",
+  "artifact_id": "measurement-refusal-negative-safety-fixtures-v0",
+  "title": "Measurement Refusal Negative Safety Fixtures v0",
+  "artifact_class": "protocol",
   "blood_cancer_scope": [
     "multiple myeloma",
     "plasma-cell disease",
@@ -9,7 +9,8 @@
     "measurement state",
     "assay quality",
     "specimen quality",
-    "synthetic fixture",
+    "model-output refusal",
+    "negative safety fixture",
     "validator skeleton",
     "public safety"
   ],
@@ -17,43 +18,33 @@
   "sources": [
     {
       "label": "Measurement Refusal Validator Skeleton v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-validator-skeleton-v0.md",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Validator Skeleton Tool v0",
-      "url": "../tools/measurement_refusal_validator_skeleton.py",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Output Fixture v0",
-      "url": "./measurement-refusal-output-fixture-v0.json",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Output Route Table v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.md",
+      "url": "./measurement-refusal-validator-skeleton-v0.md",
       "accessed": "2026-04-20"
     },
     {
       "label": "Measurement Refusal Negative Safety Fixtures v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-negative-safety-fixtures-v0.md",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Negative Safety Fixtures Dataset v0",
-      "url": "./measurement-refusal-negative-safety-fixtures-v0.json",
+      "url": "../../../examples/measurement-refusal-negative-safety-fixtures-v0.json",
       "accessed": "2026-04-20"
     },
     {
       "label": "Measurement Refusal Negative Safety Fixture Check v0",
-      "url": "../tools/check_measurement_refusal_negative_safety_fixtures.py",
+      "url": "../../../tools/check_measurement_refusal_negative_safety_fixtures.py",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Output Route Table v0",
+      "url": "./measurement-refusal-output-route-table-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Validator Skeleton Report v0",
+      "url": "../../../examples/measurement-refusal-validator-skeleton-report-v0.json",
       "accessed": "2026-04-20"
     }
   ],
   "limitations": [
-    "Research-use-only validation report.",
-    "Synthetic structural validation only.",
+    "Research-use-only negative safety fixture protocol.",
+    "Synthetic fail-closed validation only.",
     "Not medical advice.",
     "Not diagnostic guidance.",
     "Not MRD interpretation.",
@@ -74,5 +65,5 @@
     "Does not clear human-review, expert-review, private-lab, clinical-team, legal, regulatory, publication, or model-governance gates.",
     "Does not claim that multiple myeloma has been cured."
   ],
-  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-validator-skeleton-report-v0.json"
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-negative-safety-fixtures-v0.md"
 }

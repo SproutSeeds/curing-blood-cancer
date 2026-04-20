@@ -67,7 +67,11 @@ quality states with synthetic inputs only, and the measurement-refusal output
 schema now turns those fixture states into checked refused output records. The
 measurement-refusal route table now routes those refused records only as
 refusal metadata, and the measurement-refusal validator skeleton now checks
-those route records as a synthetic structural report.
+those route records as a synthetic structural report. Measurement-refusal
+negative safety fixtures now prove the validator fails closed on missing
+routes, duplicated routes, unsafe contracts, unsafe route families, forbidden
+clinical fields, forbidden ranking fields, and public processing of private
+quality-review requests.
 Actual expert validation, outreach, response intake, private-lab work, clinical
 interpretation, model-governance clearance, publication, and claim upgrades
 remain human-gated.
@@ -76,7 +80,7 @@ The reusable
 now captures how to check for drift, blind spots, and the next safest
 public-source phase.
 The current no-outreach public-source successor, if selected, is
-`measurement-refusal-negative-safety-fixtures-v0`, while the live blocker stays
+`measurement-refusal-wrapper-integration-dry-run-v0`, while the live blocker stays
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
 The saved Clawdad delegation brief for that map is
 [Clawdad Frontier Delegation Packet v0](protocols/clawdad-frontier-delegation-packet-v0.md).

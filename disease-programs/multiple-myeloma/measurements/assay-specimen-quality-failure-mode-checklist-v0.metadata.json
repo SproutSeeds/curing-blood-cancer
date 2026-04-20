@@ -136,6 +136,21 @@
       "label": "Measurement Refusal Validator Skeleton Tool v0",
       "url": "../../../tools/measurement_refusal_validator_skeleton.py",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Negative Safety Fixtures v0",
+      "url": "./measurement-refusal-negative-safety-fixtures-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Negative Safety Fixtures Dataset v0",
+      "url": "../../../examples/measurement-refusal-negative-safety-fixtures-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Negative Safety Fixture Check v0",
+      "url": "../../../tools/check_measurement_refusal_negative_safety_fixtures.py",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

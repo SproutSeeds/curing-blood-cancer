@@ -78,6 +78,7 @@ class Validator:
         self.validate_measurement_refusal_outputs()
         self.validate_measurement_refusal_route_tables()
         self.validate_measurement_refusal_validator_reports()
+        self.validate_measurement_refusal_negative_safety_fixtures()
         self.validate_case_to_cure_synthetic_pipelines()
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
@@ -2274,6 +2275,168 @@ class Validator:
                     if location.startswith("$.forbidden_output_fields"):
                         continue
                     self.add_error(path, f"{location} is not allowed in public measurement-refusal validator reports")
+
+    def validate_measurement_refusal_negative_safety_fixtures(self) -> None:
+        required_false_boundary_fields = {
+            "uses_real_case_data",
+            "contains_identifiers",
+            "contains_raw_records",
+            "contains_uploads",
+            "contains_exact_person_linked_dates",
+            "contains_free_text_case_details",
+            "contains_private_correspondence",
+            "contains_model_weights",
+            "contains_predictions",
+            "contains_recommendations",
+            "contains_matching_or_ranking",
+            "contains_clinical_decisions",
+        }
+        required_clinical_boundaries = {
+            "not-medical-advice",
+            "not-diagnostic",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        required_sources = {
+            "examples/measurement-refusal-output-fixture-v0.json",
+            "disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.json",
+            "tools/measurement_refusal_validator_skeleton.py",
+        }
+        required_fixture_ids = {
+            "mrns_00_prediction_boundary_flag_v0",
+            "mrns_01_clinical_boundary_missing_v0",
+            "mrns_02_missing_route_v0",
+            "mrns_03_duplicate_route_v0",
+            "mrns_04_blocked_manifest_gap_v0",
+            "mrns_05_destination_contract_gap_v0",
+            "mrns_06_unsafe_route_family_v0",
+            "mrns_07_clinical_output_enabled_v0",
+            "mrns_08_private_review_unblocked_v0",
+            "mrns_09_forbidden_clinical_field_v0",
+            "mrns_10_forbidden_ranking_field_v0",
+        }
+        allowed_rule_ids = {
+            "mrvs_00_public_synthetic_only",
+            "mrvs_01_clinical_boundary_complete",
+            "mrvs_02_every_refused_output_has_one_route",
+            "mrvs_03_blocked_route_manifest_complete",
+            "mrvs_04_destination_contracts_present",
+            "mrvs_05_routes_preserve_refusal_metadata_only",
+            "mrvs_06_report_emits_no_forbidden_fields",
+        }
+        allowed_mutation_ops = {
+            "add_route_family",
+            "drop_route",
+            "duplicate_route",
+            "remove_blocked_manifest_entry",
+            "remove_destination_contract",
+            "remove_list_value",
+            "remove_route_blocked_route",
+            "set",
+            "set_route_field",
+        }
+        required_handoff_blocked_actions = {
+            "expert-validation execution",
+            "issue operations",
+            "outreach",
+            "response intake",
+            "real-report quality review",
+            "private-lab work",
+            "clinical interpretation",
+            "model-governance clearance",
+            "publication authorization",
+            "claim upgrade",
+        }
+
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or doc.get("fixture_set_id") != "measurement-refusal-negative-safety-fixtures-v0":
+                continue
+
+            if doc.get("target_validator_id") != "measurement-refusal-validator-skeleton-v0":
+                self.add_error(path, "target_validator_id must be measurement-refusal-validator-skeleton-v0")
+            if doc.get("fixture_status") != "negative-fail-closed-v0":
+                self.add_error(path, "fixture_status must be negative-fail-closed-v0")
+
+            clinical_boundaries = doc.get("clinical_use_boundary")
+            if isinstance(clinical_boundaries, list):
+                missing = sorted(required_clinical_boundaries - {value for value in clinical_boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+            else:
+                self.add_error(path, "negative safety fixtures must include clinical_use_boundary")
+
+            data_boundary = doc.get("data_boundary")
+            if isinstance(data_boundary, dict):
+                missing_false = sorted(field for field in required_false_boundary_fields if data_boundary.get(field) is not False)
+                if missing_false:
+                    self.add_error(path, f"data_boundary fields must be false: {', '.join(missing_false)}")
+            else:
+                self.add_error(path, "negative safety fixtures must include data_boundary")
+
+            source_artifacts = doc.get("source_artifacts")
+            if isinstance(source_artifacts, list):
+                missing_sources = sorted(required_sources - {value for value in source_artifacts if isinstance(value, str)})
+                if missing_sources:
+                    self.add_error(path, f"source_artifacts missing required values: {', '.join(missing_sources)}")
+            else:
+                self.add_error(path, "negative safety fixtures must include source_artifacts")
+
+            fixture_rows = doc.get("negative_fixtures")
+            if isinstance(fixture_rows, list):
+                fixture_ids = [row.get("fixture_id") for row in fixture_rows if isinstance(row, dict)]
+                duplicate_ids = sorted({fixture_id for fixture_id in fixture_ids if fixture_ids.count(fixture_id) > 1})
+                if duplicate_ids:
+                    self.add_error(path, f"negative_fixtures has duplicate fixture IDs: {', '.join(duplicate_ids)}")
+                missing_fixture_ids = sorted(required_fixture_ids - {value for value in fixture_ids if isinstance(value, str)})
+                if missing_fixture_ids:
+                    self.add_error(path, f"negative_fixtures missing required fixture IDs: {', '.join(missing_fixture_ids)}")
+                for index, row in enumerate(fixture_rows):
+                    if not isinstance(row, dict):
+                        self.add_error(path, f"negative_fixtures[{index}] must be an object")
+                        continue
+                    expected = row.get("expected_failed_rule_ids")
+                    if isinstance(expected, list):
+                        expected_values = {value for value in expected if isinstance(value, str)}
+                        if not expected_values:
+                            self.add_error(path, f"negative_fixtures[{index}].expected_failed_rule_ids must not be empty")
+                        unknown_rules = sorted(expected_values - allowed_rule_ids)
+                        if unknown_rules:
+                            self.add_error(path, f"negative_fixtures[{index}].expected_failed_rule_ids has unknown values: {', '.join(unknown_rules)}")
+                    else:
+                        self.add_error(path, f"negative_fixtures[{index}] must include expected_failed_rule_ids")
+                    mutations = row.get("mutations")
+                    if isinstance(mutations, list):
+                        if not mutations:
+                            self.add_error(path, f"negative_fixtures[{index}].mutations must not be empty")
+                        for mutation_index, mutation in enumerate(mutations):
+                            if not isinstance(mutation, dict):
+                                self.add_error(path, f"negative_fixtures[{index}].mutations[{mutation_index}] must be an object")
+                                continue
+                            if mutation.get("op") not in allowed_mutation_ops:
+                                self.add_error(path, f"negative_fixtures[{index}].mutations[{mutation_index}].op is not allowed")
+                    else:
+                        self.add_error(path, f"negative_fixtures[{index}] must include mutations")
+            else:
+                self.add_error(path, "negative safety fixtures must include negative_fixtures")
+
+            handoff = doc.get("handoff")
+            if isinstance(handoff, dict):
+                if handoff.get("completed_phase") != "measurement-refusal-negative-safety-fixtures-v0":
+                    self.add_error(path, "handoff.completed_phase must be measurement-refusal-negative-safety-fixtures-v0")
+                if handoff.get("next_no_outreach_successor_if_selected") != "measurement-refusal-wrapper-integration-dry-run-v0":
+                    self.add_error(path, "handoff.next_no_outreach_successor_if_selected must be measurement-refusal-wrapper-integration-dry-run-v0")
+                if handoff.get("human_gate_state") != "machine-representation-expert-validation-human-authorization-blocker-v0":
+                    self.add_error(path, "handoff.human_gate_state must preserve the expert-validation blocker")
+                blocked_actions = handoff.get("blocked_actions")
+                if isinstance(blocked_actions, list):
+                    missing_actions = sorted(required_handoff_blocked_actions - {value for value in blocked_actions if isinstance(value, str)})
+                    if missing_actions:
+                        self.add_error(path, f"handoff.blocked_actions missing required values: {', '.join(missing_actions)}")
+                else:
+                    self.add_error(path, "handoff.blocked_actions must be a list")
+            else:
+                self.add_error(path, "negative safety fixtures must include handoff")
 
     def validate_case_to_cure_synthetic_pipelines(self) -> None:
         schema_path = self.root / "schemas" / "case-to-cure-synthetic-pipeline.schema.json"
