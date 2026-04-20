@@ -77,6 +77,7 @@ class Validator:
         self.validate_review_packet_route_table_outputs()
         self.validate_measurement_refusal_outputs()
         self.validate_measurement_refusal_route_tables()
+        self.validate_measurement_refusal_validator_reports()
         self.validate_case_to_cure_synthetic_pipelines()
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
@@ -1978,6 +1979,301 @@ class Validator:
                     if location.startswith("$.forbidden_route_fields"):
                         continue
                     self.add_error(path, f"{location} is not allowed in public measurement-refusal route-table records")
+
+    def validate_measurement_refusal_validator_reports(self) -> None:
+        required_false_boundary_fields = {
+            "uses_real_case_data",
+            "contains_identifiers",
+            "contains_raw_records",
+            "contains_uploads",
+            "contains_exact_person_linked_dates",
+            "contains_free_text_case_details",
+            "contains_private_correspondence",
+            "contains_model_weights",
+            "contains_predictions",
+            "contains_recommendations",
+            "contains_matching_or_ranking",
+            "contains_clinical_decisions",
+        }
+        required_clinical_boundaries = {
+            "not-medical-advice",
+            "not-diagnostic",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        required_rule_ids = {
+            "mrvs_00_public_synthetic_only",
+            "mrvs_01_clinical_boundary_complete",
+            "mrvs_02_every_refused_output_has_one_route",
+            "mrvs_03_blocked_route_manifest_complete",
+            "mrvs_04_destination_contracts_present",
+            "mrvs_05_routes_preserve_refusal_metadata_only",
+            "mrvs_06_report_emits_no_forbidden_fields",
+        }
+        required_sources = {
+            "examples/measurement-refusal-output-fixture-v0.json",
+            "disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.json",
+        }
+        required_destination_contracts = {
+            "measurement-refusal-output-schema-v0",
+            "myeloma-state-validator-rule-map-v0",
+            "model-output-boundary-wrapper-v0",
+        }
+        allowed_route_families = {
+            "structural_validator_input",
+            "model_output_boundary_refusal_surface",
+            "public_navigation_index",
+            "synthetic_regression_fixture",
+            "private_review_blocker_notice",
+        }
+        allowed_validator_decisions = {
+            "accepted_refusal_metadata_only",
+            "blocked_private_review_notice_only",
+        }
+        allowed_route_fields = {
+            "route_id",
+            "source_output_id",
+            "source_fixture_id",
+            "source_checklist_row_id",
+            "assay_specimen_quality_state",
+            "route_status",
+            "public_processing_allowed",
+            "allowed_route_families",
+            "destination_contracts",
+            "route_boundary",
+            "clinical_output_allowed",
+            "comparison_allowed",
+            "no_interpretive_text",
+            "blocked_routes",
+            "validator_decision",
+        }
+        required_blocked_routes = {
+            "diagnosis",
+            "prognosis",
+            "endpoint_interpretation",
+            "mrd_interpretation",
+            "residual_disease_comparison",
+            "monitoring_guidance",
+            "treatment_guidance",
+            "trial_guidance",
+            "patient_matching",
+            "assay_ranking",
+            "modality_ranking",
+            "evidence_ranking",
+            "clinical_decision",
+            "publication_authorization",
+            "cure_claim",
+            "report_interpretation",
+            "lab_validity_conclusion",
+            "image_interpretation",
+            "biopsy_interpretation",
+        }
+        forbidden_keys = {
+            "accession",
+            "accession_number",
+            "actionability",
+            "actionability_score",
+            "assay_rank",
+            "biopsy_interpretation",
+            "case_id",
+            "clinical_decision",
+            "clinical_guidance",
+            "clinical_interpretation",
+            "clinical_priority",
+            "clinical_priority_score",
+            "date_of_birth",
+            "diagnosis",
+            "dose",
+            "dosing",
+            "eligibility",
+            "eligibility_guidance",
+            "endpoint_interpretation",
+            "evidence_rank",
+            "evidence_strength",
+            "evidence_strength_score",
+            "free_text_note",
+            "image_interpretation",
+            "interpretation",
+            "lab_validity_conclusion",
+            "medical_record_number",
+            "modality_rank",
+            "monitoring_guidance",
+            "monitoring_plan",
+            "mrd_interpretation",
+            "mrd_label",
+            "option_rank",
+            "patient_fit",
+            "patient_id",
+            "patient_matching",
+            "patient_relevance",
+            "probability",
+            "prognosis",
+            "prognosis_text",
+            "publication_authorization",
+            "ranking",
+            "raw_record",
+            "recommendation",
+            "residual_disease_comparison",
+            "response_category",
+            "risk_category",
+            "risk_score",
+            "score",
+            "treatment_action",
+            "treatment_choice",
+            "treatment_guidance",
+            "treatment_recommendation",
+            "trial_guidance",
+            "trial_match",
+            "trial_matching",
+            "trial_recommendation",
+            "urgency",
+            "urgency_score",
+        }
+
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or "measurement_refusal_validator_report_id" not in doc:
+                continue
+
+            if doc.get("validator_id") != "measurement-refusal-validator-skeleton-v0":
+                self.add_error(path, "validator_id must be measurement-refusal-validator-skeleton-v0")
+            if doc.get("report_status") != "pass":
+                self.add_error(path, "report_status must be pass for the public synthetic report fixture")
+            if doc.get("report_type") != "synthetic-structural-validation-only":
+                self.add_error(path, "report_type must be synthetic-structural-validation-only")
+
+            clinical_boundaries = doc.get("clinical_use_boundary")
+            if isinstance(clinical_boundaries, list):
+                missing = sorted(required_clinical_boundaries - {value for value in clinical_boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+            else:
+                self.add_error(path, "validator report must include clinical_use_boundary")
+
+            data_boundary = doc.get("data_boundary")
+            if isinstance(data_boundary, dict):
+                missing_false = sorted(field for field in required_false_boundary_fields if data_boundary.get(field) is not False)
+                if missing_false:
+                    self.add_error(path, f"data_boundary fields must be false: {', '.join(missing_false)}")
+            else:
+                self.add_error(path, "validator report must include data_boundary")
+
+            source_artifacts = doc.get("source_artifacts")
+            if isinstance(source_artifacts, list):
+                missing_sources = sorted(required_sources - {value for value in source_artifacts if isinstance(value, str)})
+                if missing_sources:
+                    self.add_error(path, f"source_artifacts missing required values: {', '.join(missing_sources)}")
+            else:
+                self.add_error(path, "validator report must include source_artifacts")
+
+            contract = doc.get("validation_contract")
+            if isinstance(contract, dict):
+                if contract.get("allowed_input_state") != "public-synthetic-fixtures-only":
+                    self.add_error(path, "validation_contract.allowed_input_state must be public-synthetic-fixtures-only")
+                if contract.get("allowed_output_type") != "structural-validation-report":
+                    self.add_error(path, "validation_contract.allowed_output_type must be structural-validation-report")
+                if contract.get("route_boundary") != "refusal-metadata-only":
+                    self.add_error(path, "validation_contract.route_boundary must be refusal-metadata-only")
+                contract_fields = contract.get("allowed_emitted_route_fields")
+                if isinstance(contract_fields, list):
+                    unknown_fields = sorted({value for value in contract_fields if isinstance(value, str)} - allowed_route_fields)
+                    missing_fields = sorted(allowed_route_fields - {value for value in contract_fields if isinstance(value, str)})
+                    if unknown_fields:
+                        self.add_error(path, f"validation_contract.allowed_emitted_route_fields has unknown values: {', '.join(unknown_fields)}")
+                    if missing_fields:
+                        self.add_error(path, f"validation_contract.allowed_emitted_route_fields missing values: {', '.join(missing_fields)}")
+                contracts = contract.get("required_destination_contracts")
+                if isinstance(contracts, list):
+                    missing_contracts = sorted(required_destination_contracts - {value for value in contracts if isinstance(value, str)})
+                    if missing_contracts:
+                        self.add_error(path, f"validation_contract.required_destination_contracts missing values: {', '.join(missing_contracts)}")
+                route_families = contract.get("allowed_route_families")
+                if isinstance(route_families, list):
+                    unknown_families = sorted({value for value in route_families if isinstance(value, str)} - allowed_route_families)
+                    missing_families = sorted(allowed_route_families - {value for value in route_families if isinstance(value, str)})
+                    if unknown_families:
+                        self.add_error(path, f"validation_contract.allowed_route_families has unknown values: {', '.join(unknown_families)}")
+                    if missing_families:
+                        self.add_error(path, f"validation_contract.allowed_route_families missing values: {', '.join(missing_families)}")
+            else:
+                self.add_error(path, "validator report must include validation_contract")
+
+            summary = doc.get("summary")
+            if isinstance(summary, dict):
+                if summary.get("clinical_output_allowed") is not False:
+                    self.add_error(path, "summary.clinical_output_allowed must be false")
+                if summary.get("comparison_allowed") is not False:
+                    self.add_error(path, "summary.comparison_allowed must be false")
+                if summary.get("no_interpretive_text") is not True:
+                    self.add_error(path, "summary.no_interpretive_text must be true")
+                if summary.get("blocked_private_review_notice_only_count") != 1:
+                    self.add_error(path, "summary.blocked_private_review_notice_only_count must be 1")
+            else:
+                self.add_error(path, "validator report must include summary")
+
+            rule_results = doc.get("rule_results")
+            if isinstance(rule_results, list):
+                rule_ids = {row.get("rule_id") for row in rule_results if isinstance(row, dict) and isinstance(row.get("rule_id"), str)}
+                missing_rules = sorted(required_rule_ids - rule_ids)
+                if missing_rules:
+                    self.add_error(path, f"rule_results missing required rule IDs: {', '.join(missing_rules)}")
+                for index, row in enumerate(rule_results):
+                    if not isinstance(row, dict):
+                        continue
+                    if row.get("status") != "pass":
+                        self.add_error(path, f"rule_results[{index}].status must be pass")
+            else:
+                self.add_error(path, "validator report must include rule_results")
+
+            route_results = doc.get("route_results")
+            if isinstance(route_results, list):
+                if isinstance(summary, dict) and summary.get("route_count") != len(route_results):
+                    self.add_error(path, "summary.route_count must equal route_results length")
+                for index, route in enumerate(route_results):
+                    if not isinstance(route, dict):
+                        continue
+                    unknown_keys = sorted(set(route) - allowed_route_fields)
+                    if unknown_keys:
+                        self.add_error(path, f"route_results[{index}] has unknown emitted fields: {', '.join(unknown_keys)}")
+                    if route.get("clinical_output_allowed") is not False:
+                        self.add_error(path, f"route_results[{index}].clinical_output_allowed must be false")
+                    if route.get("comparison_allowed") is not False:
+                        self.add_error(path, f"route_results[{index}].comparison_allowed must be false")
+                    if route.get("no_interpretive_text") is not True:
+                        self.add_error(path, f"route_results[{index}].no_interpretive_text must be true")
+                    if route.get("route_boundary") != "refusal-metadata-only":
+                        self.add_error(path, f"route_results[{index}].route_boundary must be refusal-metadata-only")
+                    if route.get("validator_decision") not in allowed_validator_decisions:
+                        self.add_error(path, f"route_results[{index}].validator_decision is not allowed")
+                    blocked_routes = route.get("blocked_routes")
+                    if isinstance(blocked_routes, list):
+                        missing_blocks = sorted(required_blocked_routes - {value for value in blocked_routes if isinstance(value, str)})
+                        if missing_blocks:
+                            self.add_error(path, f"route_results[{index}].blocked_routes missing required values: {', '.join(missing_blocks)}")
+                    route_families = route.get("allowed_route_families")
+                    if isinstance(route_families, list):
+                        unknown_families = sorted({value for value in route_families if isinstance(value, str)} - allowed_route_families)
+                        if unknown_families:
+                            self.add_error(path, f"route_results[{index}].allowed_route_families has unknown values: {', '.join(unknown_families)}")
+                    if route.get("validator_decision") == "blocked_private_review_notice_only":
+                        if route.get("public_processing_allowed") is not False:
+                            self.add_error(path, f"route_results[{index}] private-review blocker must keep public_processing_allowed false")
+                        if route.get("route_status") != "private_or_real_quality_review_blocked":
+                            self.add_error(path, f"route_results[{index}] private-review blocker has wrong route_status")
+            else:
+                self.add_error(path, "validator report must include route_results")
+
+            blocked_manifest = doc.get("blocked_output_manifest")
+            if isinstance(blocked_manifest, list):
+                missing_blocks = sorted(required_blocked_routes - {value for value in blocked_manifest if isinstance(value, str)})
+                if missing_blocks:
+                    self.add_error(path, f"blocked_output_manifest missing required values: {', '.join(missing_blocks)}")
+
+            for key in sorted(forbidden_keys):
+                for location, _value in self.find_key(doc, key):
+                    if location.startswith("$.forbidden_output_fields"):
+                        continue
+                    self.add_error(path, f"{location} is not allowed in public measurement-refusal validator reports")
 
     def validate_case_to_cure_synthetic_pipelines(self) -> None:
         schema_path = self.root / "schemas" / "case-to-cure-synthetic-pipeline.schema.json"

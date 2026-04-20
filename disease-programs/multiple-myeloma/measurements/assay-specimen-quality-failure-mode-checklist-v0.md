@@ -116,6 +116,8 @@ is also complete, so future work can route refused records without returning
 clinical meaning.
 [Measurement Refusal Output Route Table v0](measurement-refusal-output-route-table-v0.md)
 now completes that routing layer as refusal metadata only.
+The follow-on [Measurement Refusal Validator Skeleton v0](measurement-refusal-validator-skeleton-v0.md)
+is also complete as a synthetic-only structural report over those routes.
 
 ## Handoff State
 
@@ -129,7 +131,7 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-validator-skeleton-v0`.
+`measurement-refusal-negative-safety-fixtures-v0`.
 
 ## Public Safety Check
 

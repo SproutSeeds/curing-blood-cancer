@@ -194,10 +194,16 @@ only as refusal metadata into safe route families, while blocking
 interpretation, advice, ranking, clinical meaning, and private/real quality
 review.
 
+[Measurement Refusal Validator Skeleton v0](measurement-refusal-validator-skeleton-v0.md)
+now completes the first executable validator layer. Its synthetic report checks
+the routed refusal records structurally and emits no interpretation, advice,
+ranking, clinical meaning, or private-review output.
+
 The safest next public step is therefore
-`measurement-refusal-validator-skeleton-v0`: a synthetic-only executable
-skeleton that checks the routed refusal records without producing
-interpretation, advice, ranking, or clinical meaning.
+`measurement-refusal-negative-safety-fixtures-v0`: synthetic negative fixtures
+that make the validator prove it rejects missing routes, duplicated routes,
+unsafe destination contracts, clinical fields, ranking fields, and real-review
+requests.
 
 ## Handoff State
 
@@ -219,12 +225,13 @@ The following remain blocked outside this artifact:
 A later residual-disease modality-discordance update and assay/specimen quality
 checklist extend this complete shape contract without clearing any human gate.
 The later measurement-state refusal fixtures, measurement-refusal output
-schema, and measurement-refusal output route table make those extensions
-machine-checkable for synthetic inputs only.
+schema, measurement-refusal output route table, and measurement-refusal
+validator skeleton make those extensions machine-checkable for synthetic inputs
+only.
 ORP should keep
 `machine-representation-expert-validation-human-authorization-blocker-v0`
-active while treating `measurement-refusal-validator-skeleton-v0` as the next
-no-outreach public-source successor if selected.
+active while treating `measurement-refusal-negative-safety-fixtures-v0` as the
+next no-outreach public-source successor if selected.
 
 ## Public Safety Check
 

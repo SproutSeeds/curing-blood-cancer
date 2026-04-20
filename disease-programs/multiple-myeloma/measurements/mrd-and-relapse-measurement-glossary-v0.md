@@ -96,10 +96,10 @@ and follow-up duration are visible.
 
 ## Next Work
 
-Residual-disease modality-discordance extraction now adds blood mass spectrometry MRD, MRD/PET-CT discordance, spatial marrow architecture, assay/specimen quality, paired-modality timing context, and explicit discordance-state terms. The later [Assay Specimen Quality Failure Mode Checklist v0](assay-specimen-quality-failure-mode-checklist-v0.md) turns those quality requirements into fail-closed states, [Measurement State Refusal Fixtures v0](../../../examples/measurement-state-refusal-fixtures-v0.json) pressure-tests those states with synthetic inputs, [Measurement Refusal Output Schema v0](../../../schemas/measurement-refusal-output-schema-v0.md) defines the refused output shape, and [Measurement Refusal Output Route Table v0](measurement-refusal-output-route-table-v0.md) routes refused records only as refusal metadata. These terms are representation boundaries only; they do not authorize interpretation, ranking, monitoring, treatment, prognosis, or cure claims.
+Residual-disease modality-discordance extraction now adds blood mass spectrometry MRD, MRD/PET-CT discordance, spatial marrow architecture, assay/specimen quality, paired-modality timing context, and explicit discordance-state terms. The later [Assay Specimen Quality Failure Mode Checklist v0](assay-specimen-quality-failure-mode-checklist-v0.md) turns those quality requirements into fail-closed states, [Measurement State Refusal Fixtures v0](../../../examples/measurement-state-refusal-fixtures-v0.json) pressure-tests those states with synthetic inputs, [Measurement Refusal Output Schema v0](../../../schemas/measurement-refusal-output-schema-v0.md) defines the refused output shape, [Measurement Refusal Output Route Table v0](measurement-refusal-output-route-table-v0.md) routes refused records only as refusal metadata, and [Measurement Refusal Validator Skeleton v0](measurement-refusal-validator-skeleton-v0.md) checks the route/report structure without clinical meaning. These terms are representation boundaries only; they do not authorize interpretation, ranking, monitoring, treatment, prognosis, or cure claims.
 
 - Add disease-state-specific endpoint tables for frontline, relapsed, and
   post-CAR T settings.
 - Link each claim set to required measurement terms.
-- Implement the synthetic-only refusal validator skeleton without returning
-  clinical meaning.
+- Add synthetic negative safety fixtures for bad refusal routes without
+  returning clinical meaning.
