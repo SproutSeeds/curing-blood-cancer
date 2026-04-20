@@ -1,0 +1,306 @@
+{
+  "task_queue_id": "mrd-resistance-geometry-contradiction-mining-task-queue-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Resistance Geometry Contradiction Mining Task Queue v0",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "measurable residual disease",
+    "clonal evolution",
+    "therapy resistance",
+    "geometry pilot",
+    "contradiction mining",
+    "internal adversarial intelligence audit"
+  ],
+  "clinical_use_boundary": "research-use-only",
+  "gap_register_ids": [
+    "bcma-antigen-escape-evidence-gap-register-v0"
+  ],
+  "source_ids": [
+    "pubmed",
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma"
+  ],
+  "tasks": [
+    {
+      "task_id": "mrd-trajectory-contradiction-mining-task-v0",
+      "task_title": "Mine counterevidence for the MRD trajectory edge",
+      "task_type": "source-extraction-task",
+      "priority": "high",
+      "status": "ready",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "mrd-trajectory-split-v0"
+      ],
+      "measurement_term_ids": [
+        "mrd-negativity",
+        "mrd-sensitivity-threshold",
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_martinez_lopez_2020_mrd_dynamics"
+      ],
+      "public_deliverables": [
+        "One source-specific contradiction note or extraction that tests whether MRD trajectory labels remain comparable across assay method, specimen, threshold, timing, and cohort context.",
+        "A decision on whether the MRD trajectory edge should remain unified, split by assay frame, or stay provisional.",
+        "A public update to the MRD geometry audit results or axis revision if the edge needs weakening."
+      ],
+      "acceptance_checks": [
+        "The work uses public sources only and passes python3 tools/validate_public_artifacts.py.",
+        "NGS MRD, flow MRD, and single-cell residual-state observations are not treated as interchangeable.",
+        "The task records any assay, threshold, specimen, timing, or cohort mismatch that weakens comparison.",
+        "The result does not become patient-specific prognosis, monitoring guidance, or treatment guidance."
+      ],
+      "what_not_to_infer": [
+        "Do not infer relapse risk from MRD trajectory labels.",
+        "Do not rank MRD assays or thresholds.",
+        "Do not recommend treatment changes from MRD trajectory evidence."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No monitoring recommendation.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "residual-state-contradiction-mining-task-v0",
+      "task_title": "Mine counterevidence for residual biological state",
+      "task_type": "source-extraction-task",
+      "priority": "high",
+      "status": "ready",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "residual-transcriptional-adaptation-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell"
+      ],
+      "public_deliverables": [
+        "One source-specific contradiction note or extraction that tests whether resistant transcriptional-state signals are cohort-specific, treatment-specific, or assay-specific.",
+        "A decision on whether residual biological state should remain a single axis or split into narrower therapy-exposure or assay-context branches.",
+        "A public update to the axis revision if the state axis needs narrowing."
+      ],
+      "acceptance_checks": [
+        "The work uses public sources only and passes python3 tools/validate_public_artifacts.py.",
+        "Single-cell resistant-state language stays separate from MRD measurement trajectory.",
+        "Treatment exposure, sample timing, and response context are preserved.",
+        "Pathway and state signals are not converted into target or treatment guidance."
+      ],
+      "what_not_to_infer": [
+        "Do not infer clinical actionability from transcriptional-state labels.",
+        "Do not rank residual-state mechanisms.",
+        "Do not treat scRNA-seq findings as routine clinical decision support."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No monitoring recommendation.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "clone-state-coupling-contradiction-mining-task-v0",
+      "task_title": "Mine counterevidence for clone-state coupling",
+      "task_type": "source-extraction-task",
+      "priority": "high",
+      "status": "ready",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "genetic-nongenetic-coupling-v0",
+        "subclone-diversity-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0",
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "public_deliverables": [
+        "One source-specific contradiction note or extraction that tests whether clone-state coupling is over-broad, causal-sounding, or method-specific.",
+        "A decision on whether the coupling edge should remain one provisional edge or split into clone-inference and transcriptional-state subedges.",
+        "A public update if subclone diversity needs a separate branch before further axis revision."
+      ],
+      "acceptance_checks": [
+        "The work uses public sources only and passes python3 tools/validate_public_artifacts.py.",
+        "Clone identity, clone architecture, transcriptional state, therapy exposure, and sampling time remain separate.",
+        "Correlation is not converted into causality.",
+        "Review-level subclone context is not treated as cohort-level measurement without primary-source support."
+      ],
+      "what_not_to_infer": [
+        "Do not infer causality from clone-state correlation.",
+        "Do not rank genetic versus nongenetic mechanisms.",
+        "Do not infer patient-specific resistance biology."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No monitoring recommendation.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "tme-shelter-contradiction-mining-task-v0",
+      "task_title": "Mine counterevidence for tumor microenvironment shelter signals",
+      "task_type": "source-extraction-task",
+      "priority": "medium",
+      "status": "ready",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "tme-shelter-interactions-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "li-2025-single-cell-myeloma-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_li_2025_single_cell_myeloma_review"
+      ],
+      "public_deliverables": [
+        "One source-specific contradiction note or extraction that tests whether microenvironment interaction signals are source-method artifacts, review-level categories, or primary-study observations.",
+        "A decision on whether TME shelter should remain a geometry bucket or split by immune, stromal, or cell-interaction-inference context.",
+        "A public update if microenvironment language needs weakening."
+      ],
+      "acceptance_checks": [
+        "The work uses public sources only and passes python3 tools/validate_public_artifacts.py.",
+        "Cell-interaction inference is not treated as proof of patient-specific mechanism.",
+        "Review-level and primary-study evidence are separated.",
+        "Microenvironment language is not converted into treatment or target guidance."
+      ],
+      "what_not_to_infer": [
+        "Do not infer patient-specific microenvironment biology.",
+        "Do not recommend microenvironment-targeting treatment.",
+        "Do not rank immune, stromal, or cell-interaction mechanisms."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No monitoring recommendation.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    },
+    {
+      "task_id": "pathway-actionability-contradiction-mining-task-v0",
+      "task_title": "Mine counterevidence for pathway actionability overread",
+      "task_type": "source-extraction-task",
+      "priority": "medium",
+      "status": "ready",
+      "suggested_issue_form": "pull-request-only",
+      "linked_gap_ids": [
+        "non-antigen-loss-relapse-buckets-gap-v0",
+        "expert-review-readiness-gap-v0"
+      ],
+      "linked_claim_ids": [],
+      "mechanism_group_ids": [
+        "metabolic-resistance-state-v0",
+        "nfkb-selective-state-v0",
+        "residual-transcriptional-adaptation-v0"
+      ],
+      "measurement_term_ids": [
+        "bone-marrow-mrd"
+      ],
+      "extraction_record_ids": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0",
+        "cohen-2021-resistance-single-cell-geometry-v0"
+      ],
+      "source_ids": [
+        "pubmed",
+        "pubmed_cui_2024_mrd_clonal_evolution",
+        "pubmed_cohen_2021_resistance_single_cell"
+      ],
+      "public_deliverables": [
+        "One source-specific contradiction note or extraction that tests whether pathway labels are too broad, source-specific, or vulnerable to actionability overread.",
+        "A decision on whether metabolic, NF-kB, hypoxia, protein-folding, or mitochondrial-respiration signals should remain separate branches or be folded into residual-state context.",
+        "A public update if any pathway language sounds like an intervention, target, supplement, monitoring, or treatment suggestion."
+      ],
+      "acceptance_checks": [
+        "The work uses public sources only and passes python3 tools/validate_public_artifacts.py.",
+        "Pathway labels remain research-map signals.",
+        "Metabolic and NF-kB branches remain under-covered until second-source extraction is added.",
+        "No pathway is promoted to clinical actionability."
+      ],
+      "what_not_to_infer": [
+        "Do not recommend targeting any pathway.",
+        "Do not recommend metabolic interventions or supplements.",
+        "Do not infer patient-specific pathway activity."
+      ],
+      "safety_boundary": [
+        "No patient-specific interpretation.",
+        "No diagnostic guidance.",
+        "No monitoring recommendation.",
+        "No treatment recommendation.",
+        "No trial recommendation.",
+        "No cure claim."
+      ]
+    }
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Created as the concrete counterevidence route required by mrd-resistance-geometry-intelligence-audit-packet-v0.",
+      "Tasks are pull-request-only internal research tasks; no external human outreach is required or scheduled.",
+      "Tasks route uncertainty into source extraction and contradiction notes, not clinical advice."
+    ]
+  }
+}

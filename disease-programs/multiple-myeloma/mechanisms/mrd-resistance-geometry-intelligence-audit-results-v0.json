@@ -1,0 +1,176 @@
+{
+  "audit_results_id": "mrd-resistance-geometry-intelligence-audit-results-v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "title": "MRD Resistance Geometry Intelligence Audit Results v0",
+  "clinical_use_boundary": "research-use-only",
+  "human_outreach_policy": "none",
+  "parent_audit_packet_id": "mrd-resistance-geometry-intelligence-audit-packet-v0",
+  "linked_task_queue_id": "mrd-resistance-geometry-contradiction-mining-task-queue-v0",
+  "source_ids": [
+    "pubmed_cui_2024_mrd_clonal_evolution",
+    "pubmed_martinez_lopez_2020_mrd_dynamics",
+    "pubmed_cohen_2021_resistance_single_cell",
+    "pubmed_li_2025_single_cell_myeloma_review",
+    "pubmed_besliu_2025_evolving_landscape_myeloma"
+  ],
+  "extraction_record_ids": [
+    "cui-2024-mrd-clonal-evolution-geometry-v0",
+    "martinez-lopez-2020-mrd-dynamics-geometry-v0",
+    "cohen-2021-resistance-single-cell-geometry-v0",
+    "li-2025-single-cell-myeloma-geometry-v0",
+    "besliu-2025-treatment-landscape-geometry-v0"
+  ],
+  "overall_result": {
+    "audit_status": "pass",
+    "axis_revision_readiness": "ready-for-research-axis-revision",
+    "claim_upgrade_status": "blocked",
+    "clinical_use_status": "blocked",
+    "external_human_outreach_status": "skipped-by-design",
+    "summary": "All six audit items have pass statuses for research-map continuation only. The next axis revision may proceed if it keeps measurement trajectory, residual biological state, clone architecture, and clone-state coupling separate; labels clone-state coupling as source-specific and provisional; preserves contradiction-mining tasks; and does not introduce clinical guidance or claim upgrades."
+  },
+  "audit_item_results": [
+    {
+      "audit_item_id": "measurement-state-separation-audit-v0",
+      "status": "pass",
+      "result_summary": "The current artifacts separate source-specific NGS MRD trajectory, flow MRD context, and single-cell residual-state biology. No axis revision should merge measurement trajectory with residual biological state.",
+      "evidence_basis": [
+        "martinez-lopez-2020-mrd-dynamics-geometry-v0 preserves NGS MRD assay, threshold, specimen, serial timing, and source-defined trajectory labels.",
+        "cui-2024-mrd-clonal-evolution-geometry-v0 preserves single-cell RNA sequencing, next-generation flow MRD context, paired sample timing, and MRD-positive/MRD-negative contexts.",
+        "cohen-2021-resistance-single-cell-geometry-v0 preserves single-cell transcriptional state, therapy exposure, and sampling time point as a biological-state layer separate from MRD measurement trajectory."
+      ],
+      "required_guardrails": [
+        "Axis revision must keep measurement trajectory and residual biological state as separate fields.",
+        "Every cross-source comparison must carry assay method, specimen, threshold or sensitivity context when available, sampling time, cohort context, and non-advice boundary.",
+        "MRD trajectory labels must not become patient-specific interpretation."
+      ],
+      "blocked_inferences": [
+        "No patient-specific MRD interpretation.",
+        "No relapse forecast from trajectory labels.",
+        "No MRD monitoring recommendation."
+      ]
+    },
+    {
+      "audit_item_id": "clone-state-coupling-edge-audit-v0",
+      "status": "pass",
+      "result_summary": "Clone-state coupling can remain as an explicit research-map edge only if it is named as source-specific and provisional. Current artifacts do not support causal ranking or clinical actionability.",
+      "evidence_basis": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0 links genetic clone architecture and transcriptional dynamics but limits cross-study comparability.",
+        "cohen-2021-resistance-single-cell-geometry-v0 supports a narrow clone-identity-to-transcriptional-state coupling slice while keeping clone identity and transcriptional state separate.",
+        "li-2025-single-cell-myeloma-geometry-v0 keeps subclone diversity as review-level context and not a cohort-level measurement."
+      ],
+      "required_guardrails": [
+        "Axis revision must label clone-state coupling as source-specific and provisional.",
+        "Clone identity, clone architecture, transcriptional state, therapy exposure, and sampling time point must remain separate fields.",
+        "Subclone diversity remains a separate under-covered branch until second-source extraction matures it."
+      ],
+      "blocked_inferences": [
+        "No causal dominance claim.",
+        "No genetic-versus-nongenetic ranking.",
+        "No patient-specific resistance biology."
+      ]
+    },
+    {
+      "audit_item_id": "pathway-actionability-overreach-audit-v0",
+      "status": "pass",
+      "result_summary": "The current artifacts keep metabolic, NF-kB, hypoxia, protein-folding, and mitochondrial-respiration signals as research-map signals. The axis revision must not convert pathway-state observations into intervention, target, supplement, monitoring, or treatment language.",
+      "evidence_basis": [
+        "cui-2024-mrd-clonal-evolution-geometry-v0 limits fatty-acid oxidation and NF-kB signals to source-specific research extraction.",
+        "cohen-2021-resistance-single-cell-geometry-v0 limits hypoxia tolerance, protein-folding, and mitochondrial-respiration signals to source-specific resistant-state extraction.",
+        "mrd-resistance-geometry-second-source-task-queue-v0 keeps metabolic and NF-kB second-source tasks visible instead of upgrading pathway claims."
+      ],
+      "required_guardrails": [
+        "Axis revision must keep pathway nodes as descriptive research signals only.",
+        "Metabolic and NF-kB branches must remain under-covered until second-source extraction is complete.",
+        "Any pathway language that sounds actionable must be weakened or moved to a gap."
+      ],
+      "blocked_inferences": [
+        "No treatment or target recommendation.",
+        "No supplement or metabolic intervention suggestion.",
+        "No monitoring rule from pathway-state labels."
+      ]
+    },
+    {
+      "audit_item_id": "coverage-count-misuse-audit-v0",
+      "status": "pass",
+      "result_summary": "Coverage counts remain artifact-readiness metrics. The current coverage and task-queue language does not rank mechanisms by evidence strength, biological importance, frequency, or clinical readiness.",
+      "evidence_basis": [
+        "mrd-resistance-geometry-coverage-v0 labels coverage as public artifact coverage.",
+        "mrd-resistance-geometry-second-source-task-queue-v0 keeps under-covered buckets visible as extraction tasks.",
+        "The audit packet blocks mechanism ranking from covered-for-v0-navigation status."
+      ],
+      "required_guardrails": [
+        "Axis revision must not sort, rank, or prioritize mechanisms from coverage counts.",
+        "Covered-for-v0-navigation must mean only enough artifact coverage for internal map navigation.",
+        "Under-covered buckets must not be described as less biologically important."
+      ],
+      "blocked_inferences": [
+        "No mechanism-frequency estimate.",
+        "No evidence-strength ranking.",
+        "No clinical-readiness ranking."
+      ]
+    },
+    {
+      "audit_item_id": "contradiction-mining-queue-audit-v0",
+      "status": "pass",
+      "result_summary": "The contradiction-mining requirement is satisfied by a dedicated task queue. Axis revision can proceed only if these contradiction tasks remain linked as unresolved follow-up work, not as completed counterevidence review.",
+      "evidence_basis": [
+        "mrd-resistance-geometry-contradiction-mining-task-queue-v0 defines contradiction-search tasks for MRD trajectory, residual biological state, clone-state coupling, tumor microenvironment shelter, and pathway actionability.",
+        "Each task preserves source, assay, cohort, therapy, timing, and boundary mismatch checks.",
+        "No task asks for external human outreach."
+      ],
+      "required_guardrails": [
+        "Axis revision must cite the contradiction-mining queue as unresolved follow-up.",
+        "No edge may be upgraded beyond source-bounded v0 navigation before contradiction mining matures.",
+        "Any contradiction found later must split, weaken, or block the affected edge."
+      ],
+      "blocked_inferences": [
+        "No claim that contradiction search is complete.",
+        "No evidence synthesis claim.",
+        "No expert validation claim."
+      ]
+    },
+    {
+      "audit_item_id": "clinical-boundary-red-team-audit-v0",
+      "status": "pass",
+      "result_summary": "The reviewed artifacts preserve research-use-only boundaries and do not introduce prognosis, treatment selection, monitoring guidance, trial guidance, patient-specific interpretation, or cure claims.",
+      "evidence_basis": [
+        "All target artifacts state research-use-only or equivalent nonclinical boundaries.",
+        "Source extraction records include explicit what-this-does-not-support sections.",
+        "The audit packet and results both set human outreach policy to none and internal audit status to not clinical validation."
+      ],
+      "required_guardrails": [
+        "Axis revision must keep not-medical-advice, not-diagnostic, not-treatment, not-monitoring, not-trial, and not-cure boundaries.",
+        "The phrase cure-oriented may describe research direction only; it must not claim cure.",
+        "No-human-outreach mode must not reduce uncertainty language."
+      ],
+      "blocked_inferences": [
+        "No cure claim.",
+        "No patient-specific guidance.",
+        "No clinical validation claim."
+      ]
+    }
+  ],
+  "axis_revision_constraints": [
+    "Keep four explicit structures: measurement trajectory, residual biological state, clone architecture, and clone-state coupling edges.",
+    "Make clone-state coupling provisional and source-specific.",
+    "Do not rank mechanisms, pathways, therapies, assays, sources, or tasks.",
+    "Keep metabolic and NF-kB pathway branches under-covered until second-source extraction is added.",
+    "Link the contradiction-mining queue as unresolved follow-up.",
+    "Do not introduce cure, prognosis, diagnosis, treatment, monitoring, trial, or patient-specific claims."
+  ],
+  "next_outputs": [
+    "mrd-resistance-geometry-axis-revision-v0",
+    "myeloma-residual-state-object-v0"
+  ],
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "source-checked",
+    "review_notes": [
+      "Audit results are based on existing source-specific extraction records and the Phase 3 audit packet.",
+      "Results do not upgrade any scientific or clinical claim.",
+      "Contradiction mining is routed to a task queue instead of external human outreach."
+    ]
+  }
+}
