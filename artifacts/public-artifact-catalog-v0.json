@@ -156,6 +156,25 @@
       "limitation_count": 7
     },
     {
+      "artifact_id": "mrd-resistance-geometry-contradiction-mining-task-queue-v0",
+      "title": "MRD Resistance Geometry Contradiction Mining Task Queue v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "clonal evolution",
+        "therapy resistance",
+        "geometry pilot",
+        "contradiction mining",
+        "internal adversarial intelligence audit"
+      ],
+      "path": "disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-contradiction-mining-task-queue-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/public-tasks/mrd-resistance-geometry-contradiction-mining-task-queue-v0.metadata.json",
+      "source_count": 8,
+      "limitation_count": 10
+    },
+    {
       "artifact_id": "mrd-resistance-geometry-axis-revision-decision-v0",
       "title": "MRD Resistance Geometry Axis Revision Decision v0",
       "artifact_class": "protocol",
@@ -191,6 +210,26 @@
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-coverage-v0.metadata.json",
       "source_count": 4,
       "limitation_count": 8
+    },
+    {
+      "artifact_id": "mrd-resistance-geometry-intelligence-audit-results-v0",
+      "title": "MRD Resistance Geometry Intelligence Audit Results v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "measurable residual disease",
+        "clonal evolution",
+        "therapy resistance",
+        "geometry pilot",
+        "internal adversarial intelligence audit",
+        "contradiction mining",
+        "no human outreach"
+      ],
+      "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-intelligence-audit-results-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-intelligence-audit-results-v0.metadata.json",
+      "source_count": 11,
+      "limitation_count": 11
     },
     {
       "artifact_id": "mrd-resistance-geometry-second-source-task-queue-v0",
@@ -245,7 +284,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/mechanisms/mrd-resistance-geometry-phase-plan-v0.metadata.json",
-      "source_count": 10,
+      "source_count": 12,
       "limitation_count": 9
     },
     {

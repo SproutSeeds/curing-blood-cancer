@@ -20,6 +20,7 @@ Initial focus:
 | [MRD Resistance Geometry Pilot v0](mrd-resistance-geometry-pilot-v0.md) | source-checked v0 | geometry map, not patient-specific MRD interpretation |
 | [MRD Resistance Geometry Coverage Report v0](mrd-resistance-geometry-coverage-v0.md) | source-checked v0 | coverage counts, not evidence-strength rankings |
 | [MRD Resistance Geometry Intelligence Audit Packet v0](mrd-resistance-geometry-intelligence-audit-packet-v0.md) | source-checked v0 | internal audit gate, no human outreach, not clinical validation |
+| [MRD Resistance Geometry Intelligence Audit Results v0](mrd-resistance-geometry-intelligence-audit-results-v0.md) | source-checked v0 | audit statuses for research-map continuation only |
 
 ## Extraction Workflow
 

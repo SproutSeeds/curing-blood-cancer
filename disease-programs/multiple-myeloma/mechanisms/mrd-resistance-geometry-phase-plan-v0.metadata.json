@@ -62,6 +62,16 @@
       "label": "MRD Resistance Geometry Intelligence Audit Packet v0",
       "url": "mrd-resistance-geometry-intelligence-audit-packet-v0.md",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Intelligence Audit Results v0",
+      "url": "mrd-resistance-geometry-intelligence-audit-results-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "MRD Resistance Geometry Contradiction Mining Task Queue v0",
+      "url": "../public-tasks/mrd-resistance-geometry-contradiction-mining-task-queue-v0.md",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [
