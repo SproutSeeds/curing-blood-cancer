@@ -1,0 +1,80 @@
+{
+  "artifact_id": "measurement-refusal-wrapper-state-machine-check-v0",
+  "title": "Measurement Refusal Wrapper State Machine Check v0",
+  "artifact_class": "tool",
+  "blood_cancer_scope": [
+    "multiple myeloma",
+    "plasma-cell disease",
+    "measurable residual disease",
+    "measurement state",
+    "assay quality",
+    "specimen quality",
+    "model-output refusal",
+    "wrapper integration",
+    "state machine",
+    "public safety"
+  ],
+  "claim_level": "open-question",
+  "sources": [
+    {
+      "label": "Measurement Refusal Wrapper State Machine v0",
+      "url": "../examples/measurement-refusal-wrapper-state-machine-v0.json",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Measurement Refusal Wrapper State Machine Protocol v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-state-machine-v0.md",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Measurement Refusal Wrapper Integration Dry Run v0",
+      "url": "../examples/measurement-refusal-wrapper-integration-dry-run-v0.json",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Measurement Refusal Wrapper Negative Safety Fixtures v0",
+      "url": "../examples/measurement-refusal-wrapper-negative-safety-fixtures-v0.json",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Measurement Refusal Wrapper Integration Dry Run Check v0",
+      "url": "./check_measurement_refusal_wrapper_integration_dry_run.py",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Measurement Refusal Wrapper Negative Safety Fixture Check v0",
+      "url": "./check_measurement_refusal_wrapper_negative_safety_fixtures.py",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Model Output Boundary Wrapper v0",
+      "url": "../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
+      "accessed": "2026-04-21"
+    }
+  ],
+  "limitations": [
+    "Research-use-only wrapper state-machine artifact.",
+    "Synthetic wrapper transition metadata only.",
+    "Not medical advice.",
+    "Not diagnostic guidance.",
+    "Not MRD interpretation.",
+    "Not response assessment.",
+    "Not prognosis guidance.",
+    "Not monitoring guidance.",
+    "Not treatment advice.",
+    "Not trial advice.",
+    "Not eligibility guidance.",
+    "Not matching or ranking.",
+    "Not report interpretation.",
+    "Not laboratory validation.",
+    "Not imaging interpretation.",
+    "Not biopsy interpretation.",
+    "Not model output.",
+    "Not publication authorization.",
+    "Does not process real reports, raw values, scans, biopsies, exact person-linked dates, private paths, accessions, or records.",
+    "Does not implement executable clinical validation, model scoring, prediction, calibration, benchmarking, or deployment.",
+    "Does not clear human-review, expert-review, private-lab, clinical-team, legal, regulatory, publication, or model-governance gates.",
+    "Does not claim that multiple myeloma has been cured."
+  ],
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-wrapper-state-machine-check-v0.py"
+}

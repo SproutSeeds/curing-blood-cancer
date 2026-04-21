@@ -28,8 +28,8 @@ DEFAULT_REPORT = EXAMPLES / "measurement-refusal-wrapper-integration-dry-run-v0.
 
 DRY_RUN_ID = "measurement-refusal-wrapper-integration-dry-run-v0"
 WRAPPER_ID = "model-output-boundary-wrapper-v0"
-COMPLETED_SUCCESSOR = "measurement-refusal-wrapper-negative-safety-fixtures-v0"
-NEXT_SUCCESSOR = "measurement-refusal-wrapper-state-machine-v0"
+COMPLETED_SUCCESSOR = "measurement-refusal-wrapper-state-machine-v0"
+NEXT_SUCCESSOR = "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0"
 HUMAN_GATE = "machine-representation-expert-validation-human-authorization-blocker-v0"
 
 REQUIRED_FALSE_BOUNDARY_FIELDS = {

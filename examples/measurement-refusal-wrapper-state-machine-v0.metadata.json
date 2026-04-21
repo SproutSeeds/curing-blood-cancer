@@ -1,6 +1,6 @@
 {
-  "artifact_id": "measurement-refusal-wrapper-negative-safety-fixtures-dataset-v0",
-  "title": "Measurement Refusal Wrapper Negative Safety Fixtures v0",
+  "artifact_id": "measurement-refusal-wrapper-state-machine-dataset-v0",
+  "title": "Measurement Refusal Wrapper State Machine v0",
   "artifact_class": "dataset",
   "blood_cancer_scope": [
     "multiple myeloma",
@@ -11,60 +11,50 @@
     "specimen quality",
     "model-output refusal",
     "wrapper integration",
-    "negative safety fixtures",
+    "state machine",
     "public safety"
   ],
   "claim_level": "open-question",
   "sources": [
-    {
-      "label": "Measurement Refusal Wrapper Negative Safety Fixtures v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-negative-safety-fixtures-v0.md",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Wrapper Negative Safety Fixture Check v0",
-      "url": "../tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Wrapper Integration Dry Run v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-integration-dry-run-v0.md",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Wrapper Integration Dry Run Dataset v0",
-      "url": "./measurement-refusal-wrapper-integration-dry-run-v0.json",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Wrapper Integration Dry Run Check v0",
-      "url": "../tools/check_measurement_refusal_wrapper_integration_dry_run.py",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Model Output Boundary Wrapper v0",
-      "url": "../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
-      "accessed": "2026-04-20"
-    },
     {
       "label": "Measurement Refusal Wrapper State Machine v0",
       "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-state-machine-v0.md",
       "accessed": "2026-04-21"
     },
     {
-      "label": "Measurement Refusal Wrapper State Machine Dataset v0",
-      "url": "./measurement-refusal-wrapper-state-machine-v0.json",
+      "label": "Measurement Refusal Wrapper State Machine Check v0",
+      "url": "../tools/check_measurement_refusal_wrapper_state_machine.py",
       "accessed": "2026-04-21"
     },
     {
-      "label": "Measurement Refusal Wrapper State Machine Check v0",
-      "url": "../tools/check_measurement_refusal_wrapper_state_machine.py",
+      "label": "Measurement Refusal Wrapper Integration Dry Run v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-integration-dry-run-v0.md",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Measurement Refusal Wrapper Integration Dry Run Dataset v0",
+      "url": "./measurement-refusal-wrapper-integration-dry-run-v0.json",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Measurement Refusal Wrapper Negative Safety Fixtures v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-negative-safety-fixtures-v0.md",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Measurement Refusal Wrapper Negative Safety Fixtures Dataset v0",
+      "url": "./measurement-refusal-wrapper-negative-safety-fixtures-v0.json",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Model Output Boundary Wrapper v0",
+      "url": "../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
       "accessed": "2026-04-21"
     }
   ],
   "limitations": [
-    "Research-use-only wrapper negative safety fixture dataset.",
-    "Synthetic wrapper mutation fixtures only.",
+    "Research-use-only wrapper state-machine artifact.",
+    "Synthetic wrapper transition metadata only.",
     "Not medical advice.",
     "Not diagnostic guidance.",
     "Not MRD interpretation.",
@@ -86,5 +76,5 @@
     "Does not clear human-review, expert-review, private-lab, clinical-team, legal, regulatory, publication, or model-governance gates.",
     "Does not claim that multiple myeloma has been cured."
   ],
-  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-wrapper-negative-safety-fixtures-v0.json"
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-wrapper-state-machine-v0.json"
 }

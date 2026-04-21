@@ -455,3 +455,34 @@ The checker exercises synthetic wrapper mutation states only. It does not
 validate clinical utility, interpret MRD, validate assays or specimens, review
 reports, produce model output, recommend therapy, rank modalities, match a
 patient, or claim a cure.
+
+### Measurement Refusal Wrapper State Machine
+
+Run:
+
+```bash
+python3 tools/check_measurement_refusal_wrapper_state_machine.py
+```
+
+Or:
+
+```bash
+make check-measurement-refusal-wrapper-state-machine
+```
+
+The wrapper state-machine checker reads
+`examples/measurement-refusal-wrapper-state-machine-v0.json`, the wrapper dry
+run, and the wrapper negative-safety fixtures. It verifies eight safe states,
+seven safe transitions, ten wrapper-record traces, thirteen blocked unsafe
+transition rules, eight invariants, and the preserved human-gate handoff.
+
+Machine-readable report:
+
+```bash
+make check-measurement-refusal-wrapper-state-machine ARGS="--json"
+```
+
+The checker exercises synthetic wrapper transition metadata only. It does not
+validate clinical utility, interpret MRD, validate assays or specimens, review
+reports, produce model output, recommend therapy, rank modalities, match a
+patient, or claim a cure.

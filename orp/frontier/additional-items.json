@@ -905,7 +905,7 @@
             "Completed as disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md.",
             "Recommended successor assay-specimen-quality-failure-mode-checklist-v0 was selected and completed.",
             "Recommended successor measurement-state-refusal-fixture-extension-v0 was selected and completed.",
-            "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed. Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-v0."
+            "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed. Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
           ],
           "compute_hooks": [
             "python3 tools/validate_public_artifacts.py"
@@ -937,7 +937,7 @@
           "plans": [
             "Completed as disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md.",
             "Recommended successor measurement-state-refusal-fixture-extension-v0 was selected and completed.",
-            "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed. Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-v0."
+            "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed. Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
           ],
           "compute_hooks": [
             "python3 tools/validate_public_artifacts.py"
@@ -970,7 +970,7 @@
           "plans": [
             "Completed as examples/measurement-state-refusal-fixtures-v0.json.",
             "Completed checker tools/check_measurement_state_refusal_fixtures.py.",
-            "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed. Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-v0."
+            "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed. Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
           ],
           "compute_hooks": [
             "python3 tools/validate_public_artifacts.py",
@@ -1005,7 +1005,7 @@
             "Completed as schemas/measurement-refusal-output-schema-v0.md and schemas/measurement-refusal-output.schema.json.",
             "Completed synthetic output fixture examples/measurement-refusal-output-fixture-v0.json.",
             "Completed checker tools/check_measurement_refusal_output_schema.py.",
-            "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed. Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-v0."
+            "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed. Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
           ],
           "compute_hooks": [
             "python3 tools/validate_public_artifacts.py",
@@ -1041,7 +1041,7 @@
             "Completed as disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.md and disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.json.",
             "Completed checker tools/check_measurement_refusal_output_route_table.py.",
             "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed.",
-            "Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-v0."
+            "Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
           ]
         },
         {
@@ -1075,7 +1075,7 @@
             "Completed report fixture examples/measurement-refusal-validator-skeleton-report-v0.json.",
             "Completed checker tools/measurement_refusal_validator_skeleton.py.",
             "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed.",
-            "Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-v0."
+            "Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
           ],
           "compute_hooks": [
             "python3 tools/validate_public_artifacts.py",
@@ -1115,7 +1115,7 @@
             "Completed fixture pack examples/measurement-refusal-negative-safety-fixtures-v0.json.",
             "Completed checker tools/check_measurement_refusal_negative_safety_fixtures.py.",
             "Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed.",
-            "Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-v0."
+            "Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
           ],
           "compute_hooks": [
             "python3 tools/validate_public_artifacts.py",
@@ -1126,7 +1126,7 @@
           "id": "measurement-refusal-wrapper-integration-dry-run-v0",
           "label": "Measurement Refusal Wrapper Integration Dry Run v0",
           "status": "complete",
-          "goal": "Complete a no-outreach, synthetic-only dry run that maps refused measurement outputs into model-output boundary wrapper metadata before wrapper state-machine or model-output reuse.",
+          "goal": "Complete a no-outreach, synthetic-only dry run that maps refused measurement outputs into model-output boundary wrapper metadata before wrapper state-machine transition checking or model-output reuse.",
           "depends_on": [
             "measurement-refusal-negative-safety-fixtures-v0",
             "measurement-refusal-validator-skeleton-v0",
@@ -1157,7 +1157,7 @@
             "Completed checker tools/check_measurement_refusal_wrapper_integration_dry_run.py.",
             "Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed.",
             "Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed.",
-            "Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-v0."
+            "Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
           ],
           "compute_hooks": [
             "python3 tools/validate_public_artifacts.py",
@@ -1168,7 +1168,7 @@
           "id": "measurement-refusal-wrapper-negative-safety-fixtures-v0",
           "label": "Measurement Refusal Wrapper Negative Safety Fixtures v0",
           "status": "complete",
-          "goal": "Complete a no-outreach, synthetic-only negative safety fixture pack and checker for wrapper dry-run fail-closed behavior before wrapper state-machine or model-output reuse.",
+          "goal": "Complete a no-outreach, synthetic-only negative safety fixture pack and checker for wrapper dry-run fail-closed behavior before wrapper state-machine transition checking or model-output reuse.",
           "depends_on": [
             "measurement-refusal-wrapper-integration-dry-run-v0",
             "measurement-refusal-negative-safety-fixtures-v0",
@@ -1193,7 +1193,7 @@
             "A wrapper negative safety fixture protocol exists with metadata, catalog coverage, and navigation links.",
             "A public synthetic fixture pack contains the required thirteen unsafe wrapper mutations and expected failed check IDs.",
             "A public executable verifies all thirteen negative fixtures fail closed against the wrapper dry-run checker.",
-            "Handoffs point to measurement-refusal-wrapper-state-machine-v0 as the next no-outreach public-source successor if selected.",
+            "Handoffs now point through completed measurement-refusal-wrapper-state-machine-v0 and name measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0 as the next no-outreach public-source successor if selected.",
             "ORP state keeps external expert-validation execution, outreach, issue operations, response intake, real quality review, private-lab work, clinical interpretation, publication, and model-governance work blocked."
           ],
           "plans": [
@@ -1201,11 +1201,53 @@
             "Completed fixture pack examples/measurement-refusal-wrapper-negative-safety-fixtures-v0.json.",
             "Completed checker tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py.",
             "Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed.",
-            "Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-v0."
+            "Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
           ],
           "compute_hooks": [
             "python3 tools/validate_public_artifacts.py",
             "python3 tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py"
+          ]
+        },
+        {
+          "id": "measurement-refusal-wrapper-state-machine-v0",
+          "label": "Measurement Refusal Wrapper State Machine v0",
+          "status": "complete",
+          "goal": "Complete a no-outreach, synthetic-only wrapper transition state machine that makes refusal metadata movement explicit before transition negative safety fixtures or model-output reuse.",
+          "depends_on": [
+            "measurement-refusal-wrapper-negative-safety-fixtures-v0",
+            "measurement-refusal-wrapper-integration-dry-run-v0",
+            "measurement-refusal-negative-safety-fixtures-v0",
+            "measurement-refusal-validator-skeleton-v0",
+            "measurement-refusal-output-route-table-v0",
+            "measurement-refusal-output-schema-v0",
+            "measurement-state-refusal-fixture-extension-v0",
+            "measurement-normalization-contract-v0",
+            "model-output-boundary-wrapper-v0",
+            "myeloma-state-validator-rule-map-v0",
+            "machine-representation-expert-validation-human-authorization-blocker-v0"
+          ],
+          "requirements": [
+            "Use public synthetic wrapper metadata only; do not use real case data, reports, identifiers, raw records, uploads, exact person-linked dates, private correspondence, model weights, predictions, recommendations, matching, ranking, clinical decisions, or private-lab material.",
+            "Define explicit safe states, terminal states, and transitions for refused-output wrapper metadata movement, including public metadata-only terminal handling, private-or-real-review blocker handling, and unsafe wrapper reuse blocking.",
+            "Link the wrapper dry run, wrapper negative safety fixtures, model-output boundary wrapper, checker, dataset, metadata, navigation, catalog, and ORP state.",
+            "Preserve the machine-representation expert-validation human authorization blocker; do not execute outreach, issue operations, response intake, real-report review, claim upgrade, publication, clinical interpretation, or model-governance clearance."
+          ],
+          "success_criteria": [
+            "Measurement Refusal Wrapper State Machine v0 protocol, dataset, checker, metadata, navigation, catalog entries, and Make target exist.",
+            "The checker verifies eight safe states, seven safe transitions, ten wrapper-record traces, thirteen blocked negative-fixture transition rules, eight invariants, forbidden output-field absence, and human-gate handoff preservation.",
+            "Public artifact validation includes state-machine invariants and passes.",
+            "Handoffs name measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0 as the next no-outreach public-source successor if selected while the human authorization blocker remains active."
+          ],
+          "plans": [
+            "Completed as disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-state-machine-v0.md.",
+            "Completed state-machine dataset examples/measurement-refusal-wrapper-state-machine-v0.json.",
+            "Completed invariant checker tools/check_measurement_refusal_wrapper_state_machine.py.",
+            "Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed.",
+            "Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
+          ],
+          "compute_hooks": [
+            "python3 tools/validate_public_artifacts.py",
+            "python3 tools/check_measurement_refusal_wrapper_state_machine.py"
           ]
         },
         {
@@ -1251,7 +1293,8 @@
             "measurement-refusal-validator-skeleton-v0",
             "measurement-refusal-negative-safety-fixtures-v0",
             "measurement-refusal-wrapper-integration-dry-run-v0",
-            "measurement-refusal-wrapper-negative-safety-fixtures-v0"
+            "measurement-refusal-wrapper-negative-safety-fixtures-v0",
+            "measurement-refusal-wrapper-state-machine-v0"
           ],
           "requirements": [
             "Do not contact reviewers, tag people, open public issues, refresh issue metadata as an operation, copy private correspondence, or ingest expert-response content.",
@@ -1266,7 +1309,7 @@
           ],
           "plans": [
             "Residual-disease modality-discordance source extraction, assay/specimen quality failure-mode checklist, measurement-state refusal fixture extension, measurement-refusal output schema, measurement-refusal output route table, measurement-refusal validator skeleton, measurement-refusal negative safety fixtures, measurement-refusal wrapper integration dry run, and measurement-refusal wrapper negative safety fixtures are complete and did not clear the expert-validation gate.",
-            "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed. Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-v0."
+            "Recommended successor measurement-refusal-validator-skeleton-v0 was selected and completed. Recommended successor measurement-refusal-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-integration-dry-run-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-negative-safety-fixtures-v0 was selected and completed. Recommended successor measurement-refusal-wrapper-state-machine-v0 was selected and completed. Recommended next no-outreach public-source successor, if selected, is measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0."
           ]
         }
       ]

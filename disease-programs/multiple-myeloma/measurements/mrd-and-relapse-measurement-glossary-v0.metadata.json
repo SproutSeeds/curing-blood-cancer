@@ -159,6 +159,21 @@
       "label": "Measurement Refusal Wrapper Negative Safety Fixture Check v0",
       "url": "../../../tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Wrapper State Machine v0",
+      "url": "./measurement-refusal-wrapper-state-machine-v0.md",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Measurement Refusal Wrapper State Machine Dataset v0",
+      "url": "../../../examples/measurement-refusal-wrapper-state-machine-v0.json",
+      "accessed": "2026-04-21"
+    },
+    {
+      "label": "Measurement Refusal Wrapper State Machine Check v0",
+      "url": "../../../tools/check_measurement_refusal_wrapper_state_machine.py",
+      "accessed": "2026-04-21"
     }
   ],
   "limitations": [
