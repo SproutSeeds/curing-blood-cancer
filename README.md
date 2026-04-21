@@ -74,7 +74,9 @@ clinical fields, forbidden ranking fields, and public processing of private
 quality-review requests. The measurement-refusal wrapper integration dry run
 now maps those refused outputs to model-output wrapper metadata only, preserving
 the private-review blocker and keeping prediction, interpretation, ranking,
-real-review, and publication outputs blocked.
+real-review, and publication outputs blocked. Measurement-refusal wrapper
+negative safety fixtures now prove that unsafe wrapper mutations fail closed
+before wrapper state-machine or model-output reuse.
 Actual expert validation, outreach, response intake, private-lab work, clinical
 interpretation, model-governance clearance, publication, and claim upgrades
 remain human-gated.
@@ -83,7 +85,7 @@ The reusable
 now captures how to check for drift, blind spots, and the next safest
 public-source phase.
 The current no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-negative-safety-fixtures-v0`, while the live blocker stays
+`measurement-refusal-wrapper-state-machine-v0`, while the live blocker stays
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
 The saved Clawdad delegation brief for that map is
 [Clawdad Frontier Delegation Packet v0](protocols/clawdad-frontier-delegation-packet-v0.md).

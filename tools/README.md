@@ -425,3 +425,33 @@ The checker exercises synthetic wrapper metadata only. It does not validate
 clinical utility, interpret MRD, validate assays or specimens, review reports,
 produce model output, recommend therapy, rank modalities, match a patient, or
 claim a cure.
+
+### Measurement Refusal Wrapper Negative Safety Fixtures
+
+Run:
+
+```bash
+python3 tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py
+```
+
+Or:
+
+```bash
+make check-measurement-refusal-wrapper-negative-safety-fixtures
+```
+
+The wrapper negative-safety checker reads
+`examples/measurement-refusal-wrapper-negative-safety-fixtures-v0.json`, mutates
+the wrapper dry-run report in memory, and verifies that the wrapper dry-run
+checker fails closed with the expected check IDs.
+
+Machine-readable report:
+
+```bash
+make check-measurement-refusal-wrapper-negative-safety-fixtures ARGS="--json"
+```
+
+The checker exercises synthetic wrapper mutation states only. It does not
+validate clinical utility, interpret MRD, validate assays or specimens, review
+reports, produce model output, recommend therapy, rank modalities, match a
+patient, or claim a cure.

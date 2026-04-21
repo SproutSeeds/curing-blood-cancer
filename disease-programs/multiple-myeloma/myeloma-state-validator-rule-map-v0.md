@@ -68,7 +68,7 @@ before implementation.
 | `pass_condition` | Structural public condition. | A pass does not mean clinical readiness or publication approval. |
 | `fail_closed_action` | Refusal, blocker, or review-needed state. | Failure cannot fall back to inference. |
 | `blocked_use_labels` | Refusal labels that travel with the failure. | Blocks cannot be suppressed downstream. |
-| `allowed_public_successor` | `synthetic_fixture_update`, `source_extraction_task`, `expert_review_question`, `validator_implementation_plan`, or `blocked_only`. | Successor must stay public-safe and non-advisory. |
+| `allowed_public_successor` | `synthetic_fixture_update`, `source_extraction_task`, `expert_review_question`, `validator_implementation_plan`, `wrapper_integration_dry_run`, `wrapper_negative_safety_fixture_update`, `wrapper_state_machine`, or `blocked_only`. | Successor must stay public-safe and non-advisory. |
 | `review_status` | `public_shape_only`, `source_appraisal_needed`, `expert_review_needed`, `privacy_review_needed`, `publication_gate_needed`, or `model_governance_needed`. | Missing review defaults to blocked. |
 
 ## Core Rule Map
@@ -97,6 +97,7 @@ before implementation.
 | `msv_19_measurement_refusal_validator_skeleton_visible` | `measurement-refusal-validator-skeleton-v0`, `measurement-refusal-output-route-table-v0`, and `measurement-refusal-output-schema-v0` | `mob_12_assay_specimen_quality_refusal` | `validator_id`, `report_status`, `rules`, `summary`, `route_results`, `blocked_output_manifest`, `forbidden_output_fields`, `route_boundary` | `measurement-refusal-validator-skeleton-report-v0` | The executable skeleton checks the routed refusal records, passes all structural rules, emits only refusal metadata, and keeps the private/real quality-review route blocked. | Preserve validator/report metadata only; reject missing or unsafe routes and block clinical, comparison, ranking, prediction, recommendation, publication, and real-review output. | `endpoint_interpretation_blocked`, `prognosis_or_monitoring_blocked`, `treatment_guidance_blocked`, `matching_or_ranking_blocked`, `decision_authorization_blocked` | `negative_safety_fixture_update` |
 | `msv_20_measurement_refusal_negative_safety_fixtures_visible` | `measurement-refusal-negative-safety-fixtures-v0`, `measurement-refusal-validator-skeleton-v0`, and `measurement-refusal-output-route-table-v0` | `mob_12_assay_specimen_quality_refusal` | `fixture_set_id`, `target_validator_id`, `negative_fixtures`, `mutations`, `expected_failed_rule_ids`, `data_boundary`, `handoff` | `measurement-refusal-negative-safety-fixtures-v0` | Eleven synthetic negative fixtures fail closed against expected validator rules. | Preserve bad-route fixture metadata only; reject missing routes, duplicate routes, unsafe destination contracts, unsafe route families, clinical/ranking fields, and public processing of private-review routes. | `endpoint_interpretation_blocked`, `prognosis_or_monitoring_blocked`, `treatment_guidance_blocked`, `matching_or_ranking_blocked`, `decision_authorization_blocked` | `wrapper_integration_dry_run` |
 | `msv_21_measurement_refusal_wrapper_integration_dry_run_visible` | `measurement-refusal-wrapper-integration-dry-run-v0`, `model-output-boundary-wrapper-v0`, and `measurement-refusal-validator-skeleton-report-v0` | `mob_12_assay_specimen_quality_refusal` | `wrapper_integration_dry_run_id`, `target_wrapper_id`, `wrapper_records`, `head_status`, `output_family_id`, `requested_use`, `blocked_downstream_uses`, `handoff` | `measurement-refusal-wrapper-integration-dry-run-v0` | Ten refused measurement outputs map to ten wrapper metadata records; nine are public synthetic refusal records and one remains a private-review blocker. | Preserve wrapper metadata only; reject prediction, clinical, comparison, ranking, real-review, publication, and decision output. | `endpoint_interpretation_blocked`, `prognosis_or_monitoring_blocked`, `treatment_guidance_blocked`, `matching_or_ranking_blocked`, `decision_authorization_blocked` | `wrapper_negative_safety_fixture_update` |
+| `msv_22_measurement_refusal_wrapper_negative_safety_fixtures_visible` | `measurement-refusal-wrapper-negative-safety-fixtures-v0`, `measurement-refusal-wrapper-integration-dry-run-v0`, and `model-output-boundary-wrapper-v0` | `mob_12_assay_specimen_quality_refusal` | `fixture_set_id`, `target_checker_id`, `target_dry_run_id`, `negative_fixtures`, `mutations`, `expected_failed_check_ids`, `data_boundary`, `handoff` | `measurement-refusal-wrapper-negative-safety-fixtures-v0` | Thirteen synthetic negative fixtures fail closed against expected wrapper dry-run checks. | Preserve unsafe-wrapper fixture metadata only; reject boundary poisoning, missing boundaries, missing or duplicate wrapper records, wrong wrapper IDs, unsafe output families, enabled clinical or prediction output, private-review unblocking, expanded wrapper boundaries, blocked-use gaps, and forbidden clinical/ranking fields. | `endpoint_interpretation_blocked`, `prognosis_or_monitoring_blocked`, `treatment_guidance_blocked`, `matching_or_ranking_blocked`, `decision_authorization_blocked` | `wrapper_state_machine` |
 
 ## Synthetic Scenario Coverage
 
@@ -113,6 +114,7 @@ before implementation.
 | `measurement-refusal-validator-skeleton-report-v0` | `msv_10` through `msv_19`. | The validator report passes seven structural rules over ten routes, emits refusal metadata only, and preserves one private-review blocker without clinical, comparison, ranking, prediction, recommendation, publication, or real-review output. |
 | `measurement-refusal-negative-safety-fixtures-v0` | `msv_10` through `msv_20`. | Eleven negative fixtures mutate route safety and must fail closed for missing routes, duplicate routes, blocked-manifest gaps, unsafe destination contracts, unsafe route families, forbidden clinical/ranking fields, and public processing of private-review routes. |
 | `measurement-refusal-wrapper-integration-dry-run-v0` | `msv_10` through `msv_21`. | Ten wrapper metadata records preserve refused output state, keep `mrd_head` as a placeholder family only, keep the private-review row blocked, and emit no prediction, interpretation, comparison, ranking, real-review, publication, or decision output. |
+| `measurement-refusal-wrapper-negative-safety-fixtures-v0` | `msv_10` through `msv_22`. | Thirteen wrapper negative fixtures mutate wrapper metadata safety and must fail closed for boundary poisoning, missing boundaries, missing or duplicate wrapper records, wrong wrapper IDs, unsafe output families, enabled clinical or prediction output, private-review unblocking, expanded wrapper boundaries, blocked-use gaps, and forbidden clinical/ranking fields. |
 
 ## Validator Implementation Boundary
 
@@ -195,6 +197,13 @@ close `msv_21` by proving refused measurement outputs can touch the wrapper
 only as refusal metadata. The dry run carries no model weights, prediction,
 clinical interpretation, ranking, real-review output, publication
 authorization, or patient-specific decision content.
+
+The later [Measurement Refusal Wrapper Negative Safety Fixtures v0](measurements/measurement-refusal-wrapper-negative-safety-fixtures-v0.md)
+and [`measurement-refusal-wrapper-negative-safety-fixture-check-v0`](../../tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py)
+close `msv_22` by proving the wrapper dry-run surface fails closed on thirteen
+synthetic unsafe wrapper mutations. The fixture pack carries no real case data,
+model output, clinical interpretation, ranking, real-report review,
+publication authorization, or patient-specific decision content.
 
 ## Handoff State
 
