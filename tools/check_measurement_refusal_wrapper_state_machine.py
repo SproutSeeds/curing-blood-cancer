@@ -27,7 +27,8 @@ STATE_MACHINE_ID = "measurement-refusal-wrapper-state-machine-v0"
 STATE_MACHINE_STATUS = "synthetic-wrapper-transition-state-machine"
 TARGET_DRY_RUN_ID = "measurement-refusal-wrapper-integration-dry-run-v0"
 TARGET_NEGATIVE_FIXTURE_SET_ID = "measurement-refusal-wrapper-negative-safety-fixtures-v0"
-NEXT_SUCCESSOR = "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0"
+COMPLETED_SUCCESSOR = "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0"
+NEXT_SUCCESSOR = "measurement-refusal-wrapper-state-machine-falsification-audit-v0"
 HUMAN_GATE = "machine-representation-expert-validation-human-authorization-blocker-v0"
 
 REQUIRED_STATE_IDS = {
@@ -409,6 +410,8 @@ def run_checks(root: Path) -> list[CheckResult]:
             handoff_failures.append("completed_phase mismatch")
         if handoff.get("target_completed_phase") != TARGET_NEGATIVE_FIXTURE_SET_ID:
             handoff_failures.append("target_completed_phase mismatch")
+        if handoff.get("completed_successor") != COMPLETED_SUCCESSOR:
+            handoff_failures.append("completed_successor mismatch")
         if handoff.get("next_no_outreach_successor_if_selected") != NEXT_SUCCESSOR:
             handoff_failures.append("next successor mismatch")
         if handoff.get("human_gate_state") != HUMAN_GATE:

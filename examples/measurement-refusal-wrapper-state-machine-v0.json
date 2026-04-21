@@ -1094,7 +1094,7 @@
   "handoff": {
     "completed_phase": "measurement-refusal-wrapper-state-machine-v0",
     "target_completed_phase": "measurement-refusal-wrapper-negative-safety-fixtures-v0",
-    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0",
+    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-state-machine-falsification-audit-v0",
     "human_gate_state": "machine-representation-expert-validation-human-authorization-blocker-v0",
     "blocked_actions": [
       "expert-validation execution",
@@ -1108,6 +1108,7 @@
       "publication authorization",
       "claim upgrade"
     ],
-    "summary": "Wrapper state machine complete for synthetic refusal metadata only; next no-outreach successor is transition negative safety fixtures. Expert validation, outreach, private lab, clinical interpretation, model governance, publication, and claim upgrades remain blocked."
+    "summary": "Wrapper state machine complete for synthetic refusal metadata only; next no-outreach successor is transition negative safety fixtures. Expert validation, outreach, private lab, clinical interpretation, model governance, publication, and claim upgrades remain blocked.",
+    "completed_successor": "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0"
   }
 }

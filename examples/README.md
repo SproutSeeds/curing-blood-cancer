@@ -21,6 +21,7 @@ Examples should use public or synthetic data only.
 - [Measurement refusal wrapper integration dry run v0](./measurement-refusal-wrapper-integration-dry-run-v0.json)
 - [Measurement refusal wrapper negative safety fixtures v0](./measurement-refusal-wrapper-negative-safety-fixtures-v0.json)
 - [Measurement refusal wrapper state machine v0](./measurement-refusal-wrapper-state-machine-v0.json)
+- [Measurement refusal wrapper state machine negative safety fixtures v0](./measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0.json)
 - [Review-packet builder route-table placeholder fixture v0](./review-packet-builder-route-table-placeholder-fixture-v0.json)
 - [Review-packet builder forbidden input fixture v0](./review-packet-builder-forbidden-input-fixture-v0.json)
 - [Review-packet route-table output fixture v0](./review-packet-route-table-output-fixture-v0.json)

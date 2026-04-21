@@ -122,8 +122,11 @@ Actual expert-validation execution, outreach, issue operations, response
 intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
+The follow-on
+[Measurement Refusal Wrapper State Machine Negative Safety Fixtures v0](measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0.md)
+is now complete and proves that known unsafe transition mutations fail closed.
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`.
+`measurement-refusal-wrapper-state-machine-falsification-audit-v0`.
 
 ## Public Safety Check
 

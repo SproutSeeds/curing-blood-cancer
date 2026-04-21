@@ -92,13 +92,15 @@ Actual expert-validation execution, outreach, issue operations, response
 intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
-The next no-outreach public-source successor, if selected, is
+The completed successor is
 `measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`, after
 `measurement-refusal-wrapper-integration-dry-run-v0` mapped refused measurement
 outputs to wrapper metadata only and
 `measurement-refusal-wrapper-negative-safety-fixtures-v0` proved unsafe wrapper
 mutations fail closed, and `measurement-refusal-wrapper-state-machine-v0` made
 safe wrapper terminal transitions explicit.
+The next no-outreach public-source successor, if selected, is
+`measurement-refusal-wrapper-state-machine-falsification-audit-v0`.
 
 ## Public Safety Check
 

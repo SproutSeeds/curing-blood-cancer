@@ -486,3 +486,33 @@ The checker exercises synthetic wrapper transition metadata only. It does not
 validate clinical utility, interpret MRD, validate assays or specimens, review
 reports, produce model output, recommend therapy, rank modalities, match a
 patient, or claim a cure.
+
+### Measurement Refusal Wrapper State Machine Negative Safety Fixtures
+
+Run:
+
+```bash
+python3 tools/check_measurement_refusal_wrapper_state_machine_negative_safety_fixtures.py
+```
+
+Or:
+
+```bash
+make check-measurement-refusal-wrapper-state-machine-negative-safety-fixtures
+```
+
+The wrapper state-machine negative-safety checker reads
+`examples/measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0.json`,
+mutates the wrapper state machine in a temporary directory, and verifies that
+the wrapper state-machine checker fails closed with the expected check IDs.
+
+Machine-readable report:
+
+```bash
+make check-measurement-refusal-wrapper-state-machine-negative-safety-fixtures ARGS="--json"
+```
+
+The checker exercises synthetic transition-surface mutations only. It does not
+validate clinical utility, interpret MRD, validate assays or specimens, review
+reports, produce model output, recommend therapy, rank modalities, match a
+patient, or claim a cure.

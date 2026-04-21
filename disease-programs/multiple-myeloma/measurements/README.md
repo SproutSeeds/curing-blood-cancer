@@ -19,6 +19,7 @@ the multiple myeloma disease program.
 - [Measurement Refusal Wrapper Integration Dry Run v0](measurement-refusal-wrapper-integration-dry-run-v0.md)
 - [Measurement Refusal Wrapper Negative Safety Fixtures v0](measurement-refusal-wrapper-negative-safety-fixtures-v0.md)
 - [Measurement Refusal Wrapper State Machine v0](measurement-refusal-wrapper-state-machine-v0.md)
+- [Measurement Refusal Wrapper State Machine Negative Safety Fixtures v0](measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0.md)
 
 ## Boundary
 
@@ -44,6 +45,9 @@ the multiple myeloma disease program.
 - Measurement-refusal wrapper state-machine artifacts must expose refusal
   wrapper movement as safe transitions only, ending in metadata-only,
   private-or-real-review blocker, or unsafe-reuse blocked terminals.
+- Measurement-refusal wrapper state-machine negative safety artifacts must prove
+  unsafe transition-surface mutations fail closed before falsification audit,
+  model-output reuse, publication, or clinical interpretation.
 - Synthetic measurement-state refusal fixtures live in
   [`examples/measurement-state-refusal-fixtures-v0.json`](../../../examples/measurement-state-refusal-fixtures-v0.json)
   so those boundaries can be checked without real records or clinical output.
