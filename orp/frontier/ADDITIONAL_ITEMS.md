@@ -107,7 +107,9 @@
 - [x] `measurement-refusal-negative-safety-fixtures-v0` Measurement Refusal Negative Safety Fixtures v0 (`complete`)
   - goal: Complete a no-outreach, synthetic-only negative safety fixture pack and checker for measurement-refusal validator fail-closed behavior before wrapper integration or model-output reuse.
 - [x] `measurement-refusal-wrapper-integration-dry-run-v0` Measurement Refusal Wrapper Integration Dry Run v0 (`complete`)
-  - goal: Complete a no-outreach, synthetic-only dry run that maps refused measurement outputs into model-output boundary wrapper metadata before wrapper negative safety fixtures or model-output reuse.
+  - goal: Complete a no-outreach, synthetic-only dry run that maps refused measurement outputs into model-output boundary wrapper metadata before wrapper state-machine or model-output reuse.
+- [x] `measurement-refusal-wrapper-negative-safety-fixtures-v0` Measurement Refusal Wrapper Negative Safety Fixtures v0 (`complete`)
+  - goal: Complete a no-outreach, synthetic-only negative safety fixture pack and checker for wrapper dry-run fail-closed behavior before wrapper state-machine or model-output reuse.
 - [ ] `machine-representation-expert-validation-execution-v0` Machine Representation Expert Validation Execution v0 (`blocked`)
   - goal: Resume actual external machine-representation expert-validation execution only after human authorization, while keeping outreach, public issue operations, response intake, expert-review claim upgrades, private correspondence, and clinical interpretation blocked until then.
 - [ ] `machine-representation-expert-validation-human-authorization-blocker-v0` Machine Representation Expert Validation Human Authorization Blocker v0 (`blocked`)

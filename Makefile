@@ -1,4 +1,4 @@
-.PHONY: help validate list-artifacts list-public-artifacts list-claim-sets list-evidence-gaps list-mechanism-extractions list-mechanism-coverage list-public-tasks list-review-packets review-packet-route-table check-mrd-geometry-proof diff-mrd-geometry-state check-mrd-geometry-falsification check-measurement-state-refusal-fixtures check-measurement-refusal-output-schema check-measurement-refusal-output-route-table check-measurement-refusal-validator-skeleton check-measurement-refusal-negative-safety-fixtures check-measurement-refusal-wrapper-integration-dry-run
+.PHONY: help validate list-artifacts list-public-artifacts list-claim-sets list-evidence-gaps list-mechanism-extractions list-mechanism-coverage list-public-tasks list-review-packets review-packet-route-table check-mrd-geometry-proof diff-mrd-geometry-state check-mrd-geometry-falsification check-measurement-state-refusal-fixtures check-measurement-refusal-output-schema check-measurement-refusal-output-route-table check-measurement-refusal-validator-skeleton check-measurement-refusal-negative-safety-fixtures check-measurement-refusal-wrapper-integration-dry-run check-measurement-refusal-wrapper-negative-safety-fixtures
 
 help:
 	@printf '%s\n' 'Available targets:'
@@ -21,6 +21,7 @@ help:
 	@printf '  %-28s %s\n' 'check-measurement-refusal-validator-skeleton' 'Run measurement-refusal validator skeleton'
 	@printf '  %-28s %s\n' 'check-measurement-refusal-negative-safety-fixtures' 'Check measurement-refusal negative safety fixtures'
 	@printf '  %-28s %s\n' 'check-measurement-refusal-wrapper-integration-dry-run' 'Check measurement-refusal wrapper integration dry run'
+	@printf '  %-28s %s\n' 'check-measurement-refusal-wrapper-negative-safety-fixtures' 'Check measurement-refusal wrapper negative safety fixtures'
 
 validate:
 	python3 tools/validate_public_artifacts.py
@@ -78,3 +79,6 @@ check-measurement-refusal-negative-safety-fixtures:
 
 check-measurement-refusal-wrapper-integration-dry-run:
 	python3 tools/check_measurement_refusal_wrapper_integration_dry_run.py $(ARGS)
+
+check-measurement-refusal-wrapper-negative-safety-fixtures:
+	python3 tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py $(ARGS)

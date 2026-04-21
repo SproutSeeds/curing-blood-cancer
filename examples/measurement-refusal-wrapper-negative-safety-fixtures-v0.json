@@ -1,0 +1,321 @@
+{
+  "fixture_set_id": "measurement-refusal-wrapper-negative-safety-fixtures-v0",
+  "title": "Measurement Refusal Wrapper Negative Safety Fixtures v0",
+  "date": "2026-04-20",
+  "disease_program": "multiple-myeloma",
+  "clinical_boundary": "research-use-only; not medical advice",
+  "fixture_status": "synthetic-negative-safety-fixtures",
+  "target_checker_id": "measurement-refusal-wrapper-integration-dry-run-check-v0",
+  "target_dry_run_id": "measurement-refusal-wrapper-integration-dry-run-v0",
+  "source_artifacts": [
+    "disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-integration-dry-run-v0.md",
+    "examples/measurement-refusal-wrapper-integration-dry-run-v0.json",
+    "tools/check_measurement_refusal_wrapper_integration_dry_run.py",
+    "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md"
+  ],
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "data_boundary": {
+    "uses_real_case_data": false,
+    "contains_identifiers": false,
+    "contains_raw_records": false,
+    "contains_uploads": false,
+    "contains_exact_person_linked_dates": false,
+    "contains_free_text_case_details": false,
+    "contains_private_correspondence": false,
+    "contains_model_weights": false,
+    "contains_predictions": false,
+    "contains_recommendations": false,
+    "contains_matching_or_ranking": false,
+    "contains_clinical_decisions": false
+  },
+  "fixture_purpose": [
+    "Prove the wrapper dry-run checker fails closed when wrapper records drift toward model output, clinical interpretation, ranking, real-review, publication, or private-lab bypass behavior.",
+    "Keep every negative case synthetic and public-source-only.",
+    "Preserve the machine-representation expert-validation human-authorization blocker."
+  ],
+  "negative_fixtures": [
+    {
+      "fixture_id": "mrwns_00_prediction_boundary_flag_v0",
+      "description": "Intentionally unsafe because the wrapper dry-run report claims prediction content is present.",
+      "mutations": [
+        {
+          "op": "set",
+          "path": [
+            "data_boundary",
+            "contains_predictions"
+          ],
+          "value": true
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-public-synthetic-only",
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "wrapper_report_export_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_01_clinical_boundary_missing_v0",
+      "description": "Intentionally unsafe because a required no-advice clinical boundary label is missing.",
+      "mutations": [
+        {
+          "op": "remove_list_value",
+          "path": [
+            "clinical_use_boundary"
+          ],
+          "value": "not-medical-advice"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "public_export_blocked",
+        "clinical_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_02_missing_wrapper_record_v0",
+      "description": "Intentionally unsafe because one refused output loses its wrapper metadata record.",
+      "mutations": [
+        {
+          "op": "drop_wrapper_record",
+          "source_output_id": "mro_00_method_family_missing_v0"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-record-coverage",
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "wrapper_record_export_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_03_duplicate_wrapper_record_v0",
+      "description": "Intentionally unsafe because a refused output receives a duplicate wrapper metadata record.",
+      "mutations": [
+        {
+          "op": "duplicate_wrapper_record",
+          "source_output_id": "mro_01_threshold_or_detection_limit_missing_v0",
+          "new_wrapper_record_id": "mrw_duplicate_threshold_missing_v0"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-record-coverage",
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "wrapper_record_export_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_04_wrong_wrapper_id_v0",
+      "description": "Intentionally unsafe because a wrapper record no longer targets the canonical model-output boundary wrapper.",
+      "mutations": [
+        {
+          "op": "set_wrapper_field",
+          "source_output_id": "mro_02_specimen_source_or_quality_missing_v0",
+          "field": "wrapper_id",
+          "value": "experimental-output-wrapper-v0"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "wrapper_reuse_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_05_unsafe_output_family_v0",
+      "description": "Intentionally unsafe because a refused MRD wrapper record is moved to a different output family.",
+      "mutations": [
+        {
+          "op": "set_wrapper_field",
+          "source_output_id": "mro_03_timepoint_alignment_missing_v0",
+          "field": "output_family_id",
+          "value": "progression_head"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "prediction_head_reuse_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_06_clinical_output_enabled_v0",
+      "description": "Intentionally unsafe because a wrapper record enables clinical output.",
+      "mutations": [
+        {
+          "op": "set_wrapper_field",
+          "source_output_id": "mro_04_paired_modality_context_missing_v0",
+          "field": "clinical_output_allowed",
+          "value": true
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "clinical_output_blocked",
+        "patient_specific_decision_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_07_prediction_output_enabled_v0",
+      "description": "Intentionally unsafe because a wrapper record enables prediction output.",
+      "mutations": [
+        {
+          "op": "set_wrapper_field",
+          "source_output_id": "mro_05_imaging_criteria_missing_v0",
+          "field": "prediction_output_allowed",
+          "value": true
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "prediction_output_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_08_private_review_unblocked_v0",
+      "description": "Intentionally unsafe because the private or real quality-review blocker is made publicly processable.",
+      "mutations": [
+        {
+          "op": "set_wrapper_field",
+          "source_output_id": "mro_08_private_or_real_quality_review_needed_v0",
+          "field": "public_processing_allowed",
+          "value": true
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "private_lab_bypass_blocked",
+        "real_report_review_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_09_wrapper_boundary_expanded_v0",
+      "description": "Intentionally unsafe because a wrapper record expands beyond refusal metadata.",
+      "mutations": [
+        {
+          "op": "set_wrapper_field",
+          "source_output_id": "mro_06_spatial_site_sampling_missing_v0",
+          "field": "wrapper_boundary",
+          "value": "interpretive-output-allowed"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "interpretive_output_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_10_blocked_downstream_use_gap_v0",
+      "description": "Intentionally unsafe because a required blocked downstream use is removed from one wrapper record.",
+      "mutations": [
+        {
+          "op": "remove_wrapper_blocked_use",
+          "source_output_id": "mro_07_host_context_mislabeled_v0",
+          "blocked_use": "mrd_interpretation"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "mrd_interpretation_blocked",
+        "clinical_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_11_forbidden_clinical_field_v0",
+      "description": "Intentionally unsafe because a forbidden clinical interpretation field is injected into a wrapper record.",
+      "mutations": [
+        {
+          "op": "add_wrapper_field",
+          "source_output_id": "mro_09_modality_collapse_attempt_v0",
+          "field": "clinical_interpretation",
+          "value": "unsafe synthetic clinical interpretation"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "clinical_interpretation_blocked",
+        "patient_specific_decision_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrwns_12_forbidden_ranking_field_v0",
+      "description": "Intentionally unsafe because a forbidden ranking field is injected into a wrapper record.",
+      "mutations": [
+        {
+          "op": "add_wrapper_field",
+          "source_output_id": "mro_00_method_family_missing_v0",
+          "field": "ranking",
+          "value": 1
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "ranking_blocked",
+        "option_ordering_blocked"
+      ]
+    }
+  ],
+  "handoff": {
+    "completed_phase": "measurement-refusal-wrapper-negative-safety-fixtures-v0",
+    "target_completed_phase": "measurement-refusal-wrapper-integration-dry-run-v0",
+    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-state-machine-v0",
+    "human_gate_state": "machine-representation-expert-validation-human-authorization-blocker-v0",
+    "blocked_actions": [
+      "expert-validation execution",
+      "issue operations",
+      "outreach",
+      "response intake",
+      "real-report quality review",
+      "private-lab work",
+      "clinical interpretation",
+      "model-governance clearance",
+      "publication authorization",
+      "claim upgrade"
+    ]
+  },
+  "review": {
+    "created": "2026-04-20",
+    "last_reviewed": "2026-04-20",
+    "review_status": "expert-review-needed",
+    "review_notes": [
+      "Synthetic negative safety fixture pack only.",
+      "Fixture success means unsafe wrapper dry-run mutations fail closed; it does not validate real reports, model behavior, clinical utility, or publication readiness.",
+      "No real case data, private records, identifiers, raw records, model weights, predictions, recommendations, ranking, matching, or clinical decisions are included."
+    ]
+  }
+}

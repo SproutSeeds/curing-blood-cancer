@@ -1,6 +1,6 @@
 {
-  "artifact_id": "measurement-refusal-negative-safety-fixtures-dataset-v0",
-  "title": "Measurement Refusal Negative Safety Fixtures v0",
+  "artifact_id": "measurement-refusal-wrapper-negative-safety-fixtures-dataset-v0",
+  "title": "Measurement Refusal Wrapper Negative Safety Fixtures v0",
   "artifact_class": "dataset",
   "blood_cancer_scope": [
     "multiple myeloma",
@@ -9,36 +9,21 @@
     "measurement state",
     "assay quality",
     "specimen quality",
-    "synthetic fixture",
-    "negative safety fixture",
-    "validator skeleton",
+    "model-output refusal",
+    "wrapper integration",
+    "negative safety fixtures",
     "public safety"
   ],
   "claim_level": "open-question",
   "sources": [
     {
-      "label": "Measurement Refusal Negative Safety Fixtures v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-negative-safety-fixtures-v0.md",
+      "label": "Measurement Refusal Wrapper Negative Safety Fixtures v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-negative-safety-fixtures-v0.md",
       "accessed": "2026-04-20"
     },
     {
-      "label": "Measurement Refusal Negative Safety Fixture Check v0",
-      "url": "../tools/check_measurement_refusal_negative_safety_fixtures.py",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Validator Skeleton v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-validator-skeleton-v0.md",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Output Fixture v0",
-      "url": "./measurement-refusal-output-fixture-v0.json",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Output Route Table v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.md",
+      "label": "Measurement Refusal Wrapper Negative Safety Fixture Check v0",
+      "url": "../tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py",
       "accessed": "2026-04-20"
     },
     {
@@ -57,24 +42,14 @@
       "accessed": "2026-04-20"
     },
     {
-      "label": "Measurement Refusal Wrapper Negative Safety Fixtures v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-negative-safety-fixtures-v0.md",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Wrapper Negative Safety Fixtures Dataset v0",
-      "url": "./measurement-refusal-wrapper-negative-safety-fixtures-v0.json",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Wrapper Negative Safety Fixture Check v0",
-      "url": "../tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py",
+      "label": "Model Output Boundary Wrapper v0",
+      "url": "../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
       "accessed": "2026-04-20"
     }
   ],
   "limitations": [
-    "Research-use-only negative safety fixture dataset.",
-    "Synthetic fail-closed validation only.",
+    "Research-use-only wrapper negative safety fixture dataset.",
+    "Synthetic wrapper mutation fixtures only.",
     "Not medical advice.",
     "Not diagnostic guidance.",
     "Not MRD interpretation.",
@@ -89,11 +64,12 @@
     "Not laboratory validation.",
     "Not imaging interpretation.",
     "Not biopsy interpretation.",
+    "Not model output.",
     "Not publication authorization.",
     "Does not process real reports, raw values, scans, biopsies, exact person-linked dates, private paths, accessions, or records.",
     "Does not implement executable clinical validation, model scoring, prediction, calibration, benchmarking, or deployment.",
     "Does not clear human-review, expert-review, private-lab, clinical-team, legal, regulatory, publication, or model-governance gates.",
     "Does not claim that multiple myeloma has been cured."
   ],
-  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-negative-safety-fixtures-v0.json"
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-wrapper-negative-safety-fixtures-v0.json"
 }

@@ -95,6 +95,8 @@ The dry run must not emit or authorize:
 `measurement-refusal-wrapper-integration-dry-run-v0` is complete when the
 generated report, checker, metadata, catalog, inventory, ORP state, and Clawdad
 state are all wired and `make validate` passes.
+The follow-on [Measurement Refusal Wrapper Negative Safety Fixtures v0](measurement-refusal-wrapper-negative-safety-fixtures-v0.md)
+are now complete as synthetic fail-closed tests for unsafe wrapper mutations.
 
 ORP should keep the active blocker at
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
@@ -103,7 +105,7 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-negative-safety-fixtures-v0`.
+`measurement-refusal-wrapper-state-machine-v0`.
 
 ## Public Safety Check
 

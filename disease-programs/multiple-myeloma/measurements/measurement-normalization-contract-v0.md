@@ -205,11 +205,13 @@ validator rejects missing routes, duplicated routes, unsafe destination
 contracts, unsafe route families, clinical fields, ranking fields, and public
 processing of private or real quality-review routes.
 
+The later `measurement-refusal-wrapper-negative-safety-fixtures-v0` now adds
+adversarial synthetic pressure on the wrapper dry-run surface after validated
+refusal metadata reached the model-output boundary wrapper without creating
+model output, interpretation, advice, ranking, or clinical meaning.
 The safest next public step is therefore
-`measurement-refusal-wrapper-negative-safety-fixtures-v0`: adversarial
-synthetic pressure on the wrapper dry-run surface after validated refusal
-metadata reached the model-output boundary wrapper without creating model
-output, interpretation, advice, ranking, or clinical meaning.
+`measurement-refusal-wrapper-state-machine-v0`: an explicit refusal-transition
+state machine for wrapper metadata that remains non-clinical and synthetic-only.
 
 ## Handoff State
 
@@ -236,10 +238,11 @@ validator skeleton make those extensions machine-checkable for synthetic inputs
 only. The later measurement-refusal negative safety fixtures prove those
 checks fail closed under synthetic bad-route mutations. The later
 measurement-refusal wrapper integration dry run maps the refused outputs to
-wrapper metadata only.
+wrapper metadata only. The later measurement-refusal wrapper negative safety
+fixtures prove unsafe wrapper mutations fail closed.
 ORP should keep
 `machine-representation-expert-validation-human-authorization-blocker-v0`
-active while treating `measurement-refusal-wrapper-negative-safety-fixtures-v0` as
+active while treating `measurement-refusal-wrapper-state-machine-v0` as
 the next no-outreach public-source successor if selected.
 
 ## Public Safety Check

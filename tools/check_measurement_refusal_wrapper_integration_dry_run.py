@@ -28,7 +28,8 @@ DEFAULT_REPORT = EXAMPLES / "measurement-refusal-wrapper-integration-dry-run-v0.
 
 DRY_RUN_ID = "measurement-refusal-wrapper-integration-dry-run-v0"
 WRAPPER_ID = "model-output-boundary-wrapper-v0"
-NEXT_SUCCESSOR = "measurement-refusal-wrapper-negative-safety-fixtures-v0"
+COMPLETED_SUCCESSOR = "measurement-refusal-wrapper-negative-safety-fixtures-v0"
+NEXT_SUCCESSOR = "measurement-refusal-wrapper-state-machine-v0"
 HUMAN_GATE = "machine-representation-expert-validation-human-authorization-blocker-v0"
 
 REQUIRED_FALSE_BOUNDARY_FIELDS = {
@@ -342,6 +343,7 @@ def build_dry_run_report(root: Path) -> dict[str, Any]:
         "forbidden_wrapper_fields": sorted(FORBIDDEN_WRAPPER_KEYS),
         "handoff": {
             "completed_phase": DRY_RUN_ID,
+            "completed_successor": COMPLETED_SUCCESSOR,
             "next_no_outreach_successor_if_selected": NEXT_SUCCESSOR,
             "human_gate_state": HUMAN_GATE,
             "blocked_actions": BLOCKED_ACTIONS,
@@ -490,6 +492,8 @@ def validate_report(report: dict[str, Any], output_doc: dict[str, Any], route_do
     if isinstance(handoff, dict):
         if handoff.get("completed_phase") != DRY_RUN_ID:
             failures.append("handoff.completed_phase mismatch")
+        if handoff.get("completed_successor") != COMPLETED_SUCCESSOR:
+            failures.append("handoff.completed_successor mismatch")
         if handoff.get("next_no_outreach_successor_if_selected") != NEXT_SUCCESSOR:
             failures.append("handoff.next_no_outreach_successor_if_selected mismatch")
         if handoff.get("human_gate_state") != HUMAN_GATE:
