@@ -1,6 +1,6 @@
 {
-  "artifact_id": "measurement-refusal-negative-safety-fixture-check-v0",
-  "title": "Measurement Refusal Negative Safety Fixture Check v0",
+  "artifact_id": "measurement-refusal-wrapper-integration-dry-run-check-v0",
+  "title": "Measurement Refusal Wrapper Integration Dry Run Check v0",
   "artifact_class": "tool",
   "blood_cancer_scope": [
     "multiple myeloma",
@@ -9,31 +9,31 @@
     "measurement state",
     "assay quality",
     "specimen quality",
-    "synthetic fixture",
-    "negative safety fixture",
-    "validator skeleton",
+    "model-output refusal",
+    "wrapper integration",
+    "synthetic dry run",
     "public safety"
   ],
   "claim_level": "open-question",
   "sources": [
     {
-      "label": "Measurement Refusal Negative Safety Fixtures v0",
-      "url": "../examples/measurement-refusal-negative-safety-fixtures-v0.json",
+      "label": "Measurement Refusal Wrapper Integration Dry Run v0",
+      "url": "../examples/measurement-refusal-wrapper-integration-dry-run-v0.json",
       "accessed": "2026-04-20"
     },
     {
-      "label": "Measurement Refusal Negative Safety Fixture Protocol v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-negative-safety-fixtures-v0.md",
+      "label": "Measurement Refusal Wrapper Integration Dry Run Protocol v0",
+      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-integration-dry-run-v0.md",
       "accessed": "2026-04-20"
     },
     {
-      "label": "Measurement Refusal Validator Skeleton Tool v0",
-      "url": "./measurement_refusal_validator_skeleton.py",
+      "label": "Model Output Boundary Wrapper v0",
+      "url": "../disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
       "accessed": "2026-04-20"
     },
     {
-      "label": "Measurement Refusal Validator Skeleton v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-validator-skeleton-v0.md",
+      "label": "Measurement Refusal Output Fixture v0",
+      "url": "../examples/measurement-refusal-output-fixture-v0.json",
       "accessed": "2026-04-20"
     },
     {
@@ -42,24 +42,14 @@
       "accessed": "2026-04-20"
     },
     {
-      "label": "Measurement Refusal Wrapper Integration Dry Run v0",
-      "url": "../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-integration-dry-run-v0.md",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Wrapper Integration Dry Run Dataset v0",
-      "url": "../examples/measurement-refusal-wrapper-integration-dry-run-v0.json",
-      "accessed": "2026-04-20"
-    },
-    {
-      "label": "Measurement Refusal Wrapper Integration Dry Run Check v0",
-      "url": "./check_measurement_refusal_wrapper_integration_dry_run.py",
+      "label": "Measurement Refusal Validator Skeleton Report v0",
+      "url": "../examples/measurement-refusal-validator-skeleton-report-v0.json",
       "accessed": "2026-04-20"
     }
   ],
   "limitations": [
-    "Research-use-only negative safety fixture checker.",
-    "Synthetic fail-closed validation only.",
+    "Research-use-only wrapper integration dry-run checker.",
+    "Synthetic wrapper metadata only.",
     "Not medical advice.",
     "Not diagnostic guidance.",
     "Not MRD interpretation.",
@@ -74,11 +64,12 @@
     "Not laboratory validation.",
     "Not imaging interpretation.",
     "Not biopsy interpretation.",
+    "Not model output.",
     "Not publication authorization.",
     "Does not process real reports, raw values, scans, biopsies, exact person-linked dates, private paths, accessions, or records.",
     "Does not implement executable clinical validation, model scoring, prediction, calibration, benchmarking, or deployment.",
     "Does not clear human-review, expert-review, private-lab, clinical-team, legal, regulatory, publication, or model-governance gates.",
     "Does not claim that multiple myeloma has been cured."
   ],
-  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-negative-safety-fixture-check-v0.py"
+  "private_upstream": "../curing-blood-cancer-lab/export-candidates/measurement-refusal-wrapper-integration-dry-run-check-v0.py"
 }

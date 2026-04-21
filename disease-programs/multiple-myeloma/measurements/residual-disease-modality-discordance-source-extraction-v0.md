@@ -124,11 +124,11 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, and publication remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-integration-dry-run-v0`, after the
+`measurement-refusal-wrapper-negative-safety-fixtures-v0`, after the
 assay/specimen quality checklist, measurement-state refusal fixture extension,
 measurement-refusal output schema, measurement-refusal output route table,
 measurement-refusal validator skeleton, and measurement-refusal negative safety
-fixtures.
+fixtures, and measurement-refusal wrapper integration dry run.
 
 ## Public Safety Check
 

@@ -389,3 +389,39 @@ make check-measurement-refusal-negative-safety-fixtures ARGS="--json"
 The checker exercises synthetic bad-route states only. It does not validate
 clinical utility, interpret MRD, validate assays or specimens, review reports,
 recommend therapy, rank modalities, match a patient, or claim a cure.
+
+### Measurement Refusal Wrapper Integration Dry Run
+
+Run:
+
+```bash
+python3 tools/check_measurement_refusal_wrapper_integration_dry_run.py
+```
+
+Or:
+
+```bash
+make check-measurement-refusal-wrapper-integration-dry-run
+```
+
+The wrapper dry-run checker reads
+`examples/measurement-refusal-wrapper-integration-dry-run-v0.json` and verifies
+that all ten refused measurement outputs map to
+`model-output-boundary-wrapper-v0` as refusal metadata only.
+
+Regenerate the dry-run report:
+
+```bash
+make check-measurement-refusal-wrapper-integration-dry-run ARGS="--write-report"
+```
+
+Machine-readable report:
+
+```bash
+make check-measurement-refusal-wrapper-integration-dry-run ARGS="--json"
+```
+
+The checker exercises synthetic wrapper metadata only. It does not validate
+clinical utility, interpret MRD, validate assays or specimens, review reports,
+produce model output, recommend therapy, rank modalities, match a patient, or
+claim a cure.

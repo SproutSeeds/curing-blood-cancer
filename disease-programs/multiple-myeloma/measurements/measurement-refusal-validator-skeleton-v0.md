@@ -93,6 +93,8 @@ validator, report fixture, metadata, navigation, inventory, and ORP state are
 all wired and `make validate` passes.
 The follow-on [Measurement Refusal Negative Safety Fixtures v0](measurement-refusal-negative-safety-fixtures-v0.md)
 are now complete as synthetic fail-closed tests for the validator.
+The follow-on [Measurement Refusal Wrapper Integration Dry Run v0](measurement-refusal-wrapper-integration-dry-run-v0.md)
+is now complete as wrapper metadata only.
 
 ORP should keep the active blocker at
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
@@ -101,7 +103,7 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-integration-dry-run-v0`.
+`measurement-refusal-wrapper-negative-safety-fixtures-v0`.
 
 ## Public Safety Check
 

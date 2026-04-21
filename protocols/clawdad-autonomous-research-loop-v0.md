@@ -117,18 +117,19 @@ completed, validated, and explained in one delegate pass.
    internal source-gap extraction pass, frontier gap sweep, residual-disease
    modality-discordance source extraction, assay/specimen quality failure-mode
    checklist, measurement-state refusal fixtures, measurement-refusal output
-   schema, measurement-refusal output route table, and measurement-refusal
-   validator skeleton/report, and measurement-refusal negative safety
-   fixtures/checker are public-safe substrates, not expert review or
-   authorization for outreach.
+   schema, measurement-refusal output route table, measurement-refusal
+   validator skeleton/report, measurement-refusal negative safety
+   fixtures/checker, and measurement-refusal wrapper integration dry
+   run/checker are public-safe substrates, not expert review or authorization
+   for outreach.
 2. When an item completes, synthesize and activate or queue the next safe item
    before stopping. After residual-disease modality-discordance extraction, the
    assay/specimen quality checklist, measurement-state refusal fixtures,
    measurement-refusal output schema, measurement-refusal output route table,
-   measurement-refusal validator skeleton, and measurement-refusal negative
-   safety fixtures are now complete; the
-   next no-outreach successor candidate is
-   `measurement-refusal-wrapper-integration-dry-run-v0`.
+   measurement-refusal validator skeleton, measurement-refusal negative
+   safety fixtures, and measurement-refusal wrapper integration dry run are
+   now complete; the next no-outreach successor candidate is
+   `measurement-refusal-wrapper-negative-safety-fixtures-v0`.
 3. Run [ORP Frontier Gap Sweep Mode v0](../orp/modes/frontier-gap-sweep-mode-v0.md)
    when the human asks for a direction check, when a delegate sees stale state,
    or when the next public-safe item is not obvious.

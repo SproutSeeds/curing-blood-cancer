@@ -251,7 +251,7 @@
   ],
   "handoff": {
     "completed_phase": "measurement-refusal-negative-safety-fixtures-v0",
-    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-integration-dry-run-v0",
+    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-negative-safety-fixtures-v0",
     "human_gate_state": "machine-representation-expert-validation-human-authorization-blocker-v0",
     "blocked_actions": [
       "expert-validation execution",
@@ -264,7 +264,8 @@
       "model-governance clearance",
       "publication authorization",
       "claim upgrade"
-    ]
+    ],
+    "completed_successor": "measurement-refusal-wrapper-integration-dry-run-v0"
   },
   "review": {
     "created": "2026-04-20",
