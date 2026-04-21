@@ -1,0 +1,416 @@
+{
+  "fixture_set_id": "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0",
+  "title": "Measurement Refusal Wrapper State Machine Negative Safety Fixtures v0",
+  "date": "2026-04-21",
+  "disease_program": "multiple-myeloma",
+  "clinical_boundary": "research-use-only; not medical advice",
+  "fixture_status": "synthetic-state-machine-negative-safety-fixtures",
+  "target_checker_id": "measurement-refusal-wrapper-state-machine-check-v0",
+  "target_state_machine_id": "measurement-refusal-wrapper-state-machine-v0",
+  "source_artifacts": [
+    "disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-state-machine-v0.md",
+    "examples/measurement-refusal-wrapper-state-machine-v0.json",
+    "tools/check_measurement_refusal_wrapper_state_machine.py",
+    "disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-negative-safety-fixtures-v0.md",
+    "examples/measurement-refusal-wrapper-negative-safety-fixtures-v0.json",
+    "tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py",
+    "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md"
+  ],
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "data_boundary": {
+    "uses_real_case_data": false,
+    "contains_identifiers": false,
+    "contains_raw_records": false,
+    "contains_uploads": false,
+    "contains_exact_person_linked_dates": false,
+    "contains_free_text_case_details": false,
+    "contains_private_correspondence": false,
+    "contains_model_weights": false,
+    "contains_predictions": false,
+    "contains_recommendations": false,
+    "contains_matching_or_ranking": false,
+    "contains_clinical_decisions": false
+  },
+  "fixture_purpose": [
+    "Prove the wrapper state-machine checker fails closed when transition metadata drifts toward model output, clinical interpretation, ranking, real-review, publication, or gate-bypass behavior.",
+    "Pressure-test state coverage, transition coverage, trace terminals, blocked unsafe-transition rules, invariants, and handoff gates.",
+    "Keep every negative case synthetic and public-source-only.",
+    "Preserve the machine-representation expert-validation human-authorization blocker."
+  ],
+  "negative_fixtures": [
+    {
+      "fixture_id": "mrsmns_00_prediction_boundary_flag_v0",
+      "description": "Intentionally unsafe because the state-machine fixture pack claims prediction content is present.",
+      "mutations": [
+        {
+          "op": "set",
+          "path": [
+            "data_boundary",
+            "contains_predictions"
+          ],
+          "value": true
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-public-synthetic-only"
+      ],
+      "blocked_if_not_detected": [
+        "state_machine_export_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_01_clinical_boundary_missing_v0",
+      "description": "Intentionally unsafe because a required no-advice clinical boundary label is missing.",
+      "mutations": [
+        {
+          "op": "remove_list_value",
+          "path": [
+            "clinical_use_boundary"
+          ],
+          "value": "not-medical-advice"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-clinical-boundary-complete"
+      ],
+      "blocked_if_not_detected": [
+        "public_export_blocked",
+        "clinical_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_02_missing_required_state_v0",
+      "description": "Intentionally unsafe because the public-refusal-ready state is removed from the transition surface.",
+      "mutations": [
+        {
+          "op": "drop_state",
+          "state_id": "mrsms_03_public_refusal_wrapper_ready"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-required-states-safe",
+        "wrapper-state-machine-transitions-safe"
+      ],
+      "blocked_if_not_detected": [
+        "transition_surface_reuse_blocked",
+        "wrapper_metadata_public_path_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_03_duplicate_state_id_v0",
+      "description": "Intentionally unsafe because a state identifier is duplicated and the state set is no longer uniquely addressable.",
+      "mutations": [
+        {
+          "op": "duplicate_state",
+          "state_id": "mrsms_02_wrapper_metadata_assembled",
+          "new_state_id": "mrsms_02_wrapper_metadata_assembled"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-required-states-safe"
+      ],
+      "blocked_if_not_detected": [
+        "state_addressing_blocked",
+        "transition_validation_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_04_terminal_state_unmarked_v0",
+      "description": "Intentionally unsafe because the metadata-only public terminal is no longer marked terminal.",
+      "mutations": [
+        {
+          "op": "set_state_field",
+          "state_id": "mrsms_05_metadata_only_public_terminal",
+          "field": "terminal_state",
+          "value": false
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-required-states-safe"
+      ],
+      "blocked_if_not_detected": [
+        "public_terminal_reuse_blocked",
+        "metadata_export_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_05_state_permission_enabled_v0",
+      "description": "Intentionally unsafe because a state enables clinical output permission.",
+      "mutations": [
+        {
+          "op": "set_state_field",
+          "state_id": "mrsms_02_wrapper_metadata_assembled",
+          "field": "clinical_output_allowed",
+          "value": true
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-required-states-safe"
+      ],
+      "blocked_if_not_detected": [
+        "clinical_output_blocked",
+        "patient_specific_decision_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_06_missing_required_transition_v0",
+      "description": "Intentionally unsafe because the wrapper-metadata to public-refusal-ready transition is removed.",
+      "mutations": [
+        {
+          "op": "drop_transition",
+          "transition_id": "mrsmt_02_wrapper_metadata_to_public_refusal_ready"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-transitions-safe"
+      ],
+      "blocked_if_not_detected": [
+        "transition_reuse_blocked",
+        "public_refusal_path_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_07_transition_emits_output_v0",
+      "description": "Intentionally unsafe because an allowed transition is changed to emit output.",
+      "mutations": [
+        {
+          "op": "set_transition_field",
+          "transition_id": "mrsmt_01_validated_route_to_wrapper_metadata",
+          "field": "emits_output",
+          "value": true
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-transitions-safe"
+      ],
+      "blocked_if_not_detected": [
+        "model_output_reuse_blocked",
+        "transition_export_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_08_transition_unknown_destination_v0",
+      "description": "Intentionally unsafe because a transition points to an unknown destination state.",
+      "mutations": [
+        {
+          "op": "set_transition_field",
+          "transition_id": "mrsmt_04_public_refusal_ready_to_metadata_terminal",
+          "field": "to_state_id",
+          "value": "mrsms_99_clinical_output_terminal"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-transitions-safe"
+      ],
+      "blocked_if_not_detected": [
+        "transition_surface_reuse_blocked",
+        "unknown_terminal_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_09_public_trace_private_terminal_v0",
+      "description": "Intentionally unsafe because a public synthetic trace is diverted to the private-review terminal.",
+      "mutations": [
+        {
+          "op": "set_trace_field",
+          "source_output_id": "mro_00_method_family_missing_v0",
+          "field": "trace_state_ids",
+          "value": [
+            "mrsms_00_refused_output_received",
+            "mrsms_01_route_validated_refusal_only",
+            "mrsms_02_wrapper_metadata_assembled",
+            "mrsms_04_private_or_real_review_blocker_ready",
+            "mrsms_06_private_or_real_review_blocker_terminal"
+          ]
+        },
+        {
+          "op": "set_trace_field",
+          "source_output_id": "mro_00_method_family_missing_v0",
+          "field": "terminal_state_id",
+          "value": "mrsms_06_private_or_real_review_blocker_terminal"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-wrapper-traces-complete"
+      ],
+      "blocked_if_not_detected": [
+        "public_metadata_terminal_blocked",
+        "trace_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_10_private_trace_public_terminal_v0",
+      "description": "Intentionally unsafe because the private or real review trace is diverted to the public metadata terminal.",
+      "mutations": [
+        {
+          "op": "set_trace_field",
+          "source_output_id": "mro_08_private_or_real_quality_review_needed_v0",
+          "field": "trace_state_ids",
+          "value": [
+            "mrsms_00_refused_output_received",
+            "mrsms_01_route_validated_refusal_only",
+            "mrsms_02_wrapper_metadata_assembled",
+            "mrsms_03_public_refusal_wrapper_ready",
+            "mrsms_05_metadata_only_public_terminal"
+          ]
+        },
+        {
+          "op": "set_trace_field",
+          "source_output_id": "mro_08_private_or_real_quality_review_needed_v0",
+          "field": "terminal_state_id",
+          "value": "mrsms_05_metadata_only_public_terminal"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-wrapper-traces-complete"
+      ],
+      "blocked_if_not_detected": [
+        "private_lab_bypass_blocked",
+        "real_report_review_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_11_trace_blocked_use_gap_v0",
+      "description": "Intentionally unsafe because a wrapper trace loses a required blocked downstream use.",
+      "mutations": [
+        {
+          "op": "remove_trace_blocked_use",
+          "source_output_id": "mro_01_threshold_or_detection_limit_missing_v0",
+          "blocked_use": "mrd_interpretation"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-wrapper-traces-complete"
+      ],
+      "blocked_if_not_detected": [
+        "mrd_interpretation_reuse_blocked",
+        "trace_export_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_12_missing_blocked_transition_rule_v0",
+      "description": "Intentionally unsafe because one upstream wrapper negative fixture no longer routes to the unsafe terminal.",
+      "mutations": [
+        {
+          "op": "drop_blocked_transition_rule",
+          "source_negative_fixture_id": "mrwns_00_prediction_boundary_flag_v0"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-negative-fixtures-blocked"
+      ],
+      "blocked_if_not_detected": [
+        "unsafe_wrapper_mutation_reuse_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_13_wrong_blocked_terminal_v0",
+      "description": "Intentionally unsafe because an unsafe wrapper mutation is routed to the public metadata terminal.",
+      "mutations": [
+        {
+          "op": "set_blocked_transition_rule_field",
+          "source_negative_fixture_id": "mrwns_01_clinical_boundary_missing_v0",
+          "field": "blocked_terminal_state_id",
+          "value": "mrsms_05_metadata_only_public_terminal"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-negative-fixtures-blocked"
+      ],
+      "blocked_if_not_detected": [
+        "unsafe_terminal_reuse_blocked",
+        "clinical_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_14_missing_transition_invariant_v0",
+      "description": "Intentionally unsafe because the human-gate preservation invariant is removed.",
+      "mutations": [
+        {
+          "op": "drop_invariant",
+          "invariant_id": "mrsmi_07_human_gate_preserved"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-invariants-present"
+      ],
+      "blocked_if_not_detected": [
+        "invariant_reuse_blocked",
+        "gate_clearance_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_15_forbidden_output_field_v0",
+      "description": "Intentionally unsafe because a forbidden clinical interpretation key is added to the state machine.",
+      "mutations": [
+        {
+          "op": "set_state_field",
+          "state_id": "mrsms_02_wrapper_metadata_assembled",
+          "field": "clinical_interpretation",
+          "value": "unsafe synthetic mutation: generated interpretation would be blocked"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-forbidden-output-fields-absent"
+      ],
+      "blocked_if_not_detected": [
+        "clinical_interpretation_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "fixture_id": "mrsmns_16_handoff_gate_changed_v0",
+      "description": "Intentionally unsafe because the handoff no longer preserves the human authorization blocker.",
+      "mutations": [
+        {
+          "op": "set",
+          "path": [
+            "handoff",
+            "human_gate_state"
+          ],
+          "value": "human-gate-cleared-without-review-v0"
+        }
+      ],
+      "expected_failed_check_ids": [
+        "wrapper-state-machine-handoff-preserves-blocker"
+      ],
+      "blocked_if_not_detected": [
+        "human_gate_bypass_blocked",
+        "publication_authorization_blocked"
+      ]
+    }
+  ],
+  "fail_closed_requirements": [
+    "Every mutation must trigger at least one state-machine checker failure.",
+    "No mutation may create a clinical, prediction, ranking, recommendation, publication, or decision output.",
+    "No mutation may clear the human authorization blocker.",
+    "A missing expected failure is a blocker for model-output reuse, public export, publication, and clinical interpretation."
+  ],
+  "handoff": {
+    "completed_phase": "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0",
+    "target_completed_phase": "measurement-refusal-wrapper-state-machine-v0",
+    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-state-machine-falsification-audit-v0",
+    "human_gate_state": "machine-representation-expert-validation-human-authorization-blocker-v0",
+    "blocked_actions": [
+      "expert-validation execution",
+      "issue operations",
+      "outreach",
+      "response intake",
+      "real-report quality review",
+      "private-lab work",
+      "clinical interpretation",
+      "model-governance clearance",
+      "publication authorization",
+      "claim upgrade"
+    ],
+    "summary": "Wrapper state-machine negative safety fixtures are complete for synthetic transition metadata only; next no-outreach successor is a falsification audit. Expert validation, outreach, private lab, clinical interpretation, model governance, publication, and claim upgrades remain blocked."
+  }
+}

@@ -525,8 +525,8 @@
   "handoff": {
     "completed_phase": "measurement-state-refusal-fixture-extension-v0",
     "status": "complete-as-synthetic-fixture-pressure",
-    "recommended_next_no_outreach_successor": "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0",
-    "completed_successor": "measurement-refusal-wrapper-state-machine-v0",
+    "recommended_next_no_outreach_successor": "measurement-refusal-wrapper-state-machine-falsification-audit-v0",
+    "completed_successor": "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0",
     "active_blocker_remains": "machine-representation-expert-validation-human-authorization-blocker-v0",
     "summary": "Every assay/specimen quality checklist state has a public synthetic refusal fixture, refused output record, refusal route, structural validator report, negative safety fixture pressure, wrapper integration dry-run record, and wrapper negative safety fixture pressure that blocks residual-disease comparison, endpoint interpretation, prognosis, monitoring, treatment, ranking, matching, real-report review, model output, public processing of private-review routes, and cure claims."
   }

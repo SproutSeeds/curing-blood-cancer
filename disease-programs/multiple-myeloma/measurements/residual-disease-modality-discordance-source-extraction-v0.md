@@ -123,13 +123,15 @@ Actual expert-validation execution, outreach, issue operations, response
 intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, and publication remain blocked.
 
-The next no-outreach public-source successor, if selected, is
+The completed successor is
 `measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`, after the
 assay/specimen quality checklist, measurement-state refusal fixture extension,
 measurement-refusal output schema, measurement-refusal output route table,
-measurement-refusal validator skeleton, and measurement-refusal negative safety
-fixtures, measurement-refusal wrapper integration dry run, and measurement-refusal
+measurement-refusal validator skeleton, measurement-refusal negative safety
+fixtures, measurement-refusal wrapper integration dry run, measurement-refusal
 wrapper negative safety fixtures, and measurement-refusal wrapper state machine.
+The next no-outreach public-source successor, if selected, is
+`measurement-refusal-wrapper-state-machine-falsification-audit-v0`.
 
 ## Public Safety Check
 

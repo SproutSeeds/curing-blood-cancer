@@ -228,6 +228,9 @@ Required output for the next pass:
   [Measurement Refusal Wrapper State Machine v0](../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-state-machine-v0.md),
   [Measurement Refusal Wrapper State Machine Dataset v0](../examples/measurement-refusal-wrapper-state-machine-v0.json),
   [Measurement Refusal Wrapper State Machine Check v0](../tools/check_measurement_refusal_wrapper_state_machine.py),
+  [Measurement Refusal Wrapper State Machine Negative Safety Fixtures v0](../disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0.md),
+  [Measurement Refusal Wrapper State Machine Negative Safety Fixtures Dataset v0](../examples/measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0.json),
+  [Measurement Refusal Wrapper State Machine Negative Safety Fixture Check v0](../tools/check_measurement_refusal_wrapper_state_machine_negative_safety_fixtures.py),
   [MRD Geometry Falsification Matrix v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-falsification-matrix-v0.md),
   [MRD Geometry Transition Model v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-transition-model-v0.md),
   [MRD Geometry Hypothesis Candidate Ledger v0](../disease-programs/multiple-myeloma/mechanisms/mrd-geometry-hypothesis-candidate-ledger-v0.md),
@@ -261,8 +264,9 @@ Required output for the next pass:
 - preserve that measurement-state refusal fixtures, measurement-refusal output
   schema, route table, validator skeleton/report, negative safety
   fixtures/checker, wrapper integration dry run/checker, wrapper negative
-  safety fixtures/checker, and wrapper state-machine/checker are complete
-  public-safe substrates, not model validation or clinical authorization
+  safety fixtures/checker, wrapper state-machine/checker, and wrapper
+  state-machine negative safety fixtures/checker are complete public-safe
+  substrates, not model validation or clinical authorization
 - do not create another sibling schema, fixture, validator, source extraction,
   issue draft, model, dashboard, or tool by momentum; select a named
   no-outreach public-source successor before continuing
@@ -291,7 +295,7 @@ backend, credentials, private lab access, clinical interpretation, outreach, or
 publication approval. If that happens, write the blocker and move to the next
 public-safe adjacent item when one exists. The current no-outreach public-source
 successor candidate is
-`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`.
+`measurement-refusal-wrapper-state-machine-falsification-audit-v0`.
 
 ### 1. Expert Response Intake And Validation Ledger
 

@@ -24,7 +24,7 @@ NEGATIVE_FIXTURES = Path("examples/measurement-refusal-negative-safety-fixtures-
 
 FIXTURE_SET_ID = "measurement-refusal-negative-safety-fixtures-v0"
 TARGET_VALIDATOR_ID = "measurement-refusal-validator-skeleton-v0"
-NEXT_SUCCESSOR = "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0"
+NEXT_SUCCESSOR = "measurement-refusal-wrapper-state-machine-falsification-audit-v0"
 
 REQUIRED_NEGATIVE_FIXTURE_IDS = {
     "mrns_00_prediction_boundary_flag_v0",

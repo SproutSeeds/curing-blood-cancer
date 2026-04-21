@@ -349,8 +349,8 @@
   "handoff": {
     "completed_item": "assay-specimen-quality-failure-mode-checklist-v0",
     "still_blocked_item": "machine-representation-expert-validation-human-authorization-blocker-v0",
-    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0",
+    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-state-machine-falsification-audit-v0",
     "summary": "Public failure-mode checklist complete; measurement-state refusal fixtures, measurement-refusal output schema, route table, validator skeleton, negative safety fixtures, wrapper integration dry run, and wrapper negative safety fixtures now pressure method, threshold, specimen, timing, paired-modality, imaging, spatial, host-context, private-review, and modality-collapse refusal states as refused synthetic outputs that fail closed and map to wrapper metadata only. The next no-outreach successor is a wrapper state machine.",
-    "completed_successor": "measurement-refusal-wrapper-state-machine-v0"
+    "completed_successor": "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0"
   }
 }

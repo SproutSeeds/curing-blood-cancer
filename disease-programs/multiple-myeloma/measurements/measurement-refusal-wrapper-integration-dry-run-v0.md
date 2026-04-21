@@ -99,6 +99,8 @@ The follow-on [Measurement Refusal Wrapper Negative Safety Fixtures v0](measurem
 are now complete as synthetic fail-closed tests for unsafe wrapper mutations.
 The follow-on [Measurement Refusal Wrapper State Machine v0](measurement-refusal-wrapper-state-machine-v0.md)
 is now complete as synthetic wrapper transition metadata.
+The follow-on [Measurement Refusal Wrapper State Machine Negative Safety Fixtures v0](measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0.md)
+is now complete as synthetic fail-closed tests for unsafe transition mutations.
 
 ORP should keep the active blocker at
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
@@ -106,8 +108,10 @@ Actual expert-validation execution, outreach, issue operations, response
 intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
-The next no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`.
+The completed successor is
+`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`. The next
+no-outreach public-source successor, if selected, is
+`measurement-refusal-wrapper-state-machine-falsification-audit-v0`.
 
 ## Public Safety Check
 

@@ -1,19 +1,19 @@
-# Additional Frontier Items: Curing Blood Cancer
+# Additional Items: Curing Blood Cancer
 
 - active_list_id: `post-machine-representation-public-safe-research-substrate-v0`
 - active_item_id: `machine-representation-expert-validation-human-authorization-blocker-v0`
 
-## `case-intake-frontends` Human-Friendly Case Intake Front Ends (`complete`)
+## Human-Friendly Case Intake Front Ends
 
 - [x] `caregiver-friendly-case-intake-v0` caregiver-friendly case intake front end (`complete`)
   - goal: Design the first public-facing but privacy-preserving case-intake surface so a caregiver can enter a loved one's multiple myeloma details through a simple guided flow, with all real case data routed only to a private, consented, access-controlled system and with no medical advice or public PHI.
 
-## `case-intake-frontier-v0` Caregiver Case Intake Frontier v0 (`complete`)
+## Caregiver Case Intake Frontier v0
 
 - [x] `case-intake-next-public-build-slice-v0` Next public-safe caregiver intake build slice (`complete`)
   - goal: Extend the Caregiver Case Intake Product Spec v0 into one concrete public-safe next artifact: private-intake schema contract, public-safe projection validator, no-PHI/no-advice checklist, synthetic fixture expansion, or static synthetic prototype plan.
 
-## `case-to-cure-master-backlog-v0` Case-To-Cure Adaptive Master Backlog v0 (`complete`)
+## Case-To-Cure Adaptive Master Backlog v0
 
 - [x] `case-to-cure-loop-governor-v0` Case-to-cure loop governor (`complete`)
   - goal: Make the loop itself enforce next-step synthesis after each completed public-safe step.
@@ -52,14 +52,14 @@
 - [ ] `case-to-cure-public-scope-human-gate-blocker-v0` Case-to-cure public-scope human gate blocker (`blocked`)
   - goal: Record that no autonomous public-safe case-to-cure backlog item remains after the master completion audit.
 
-## `public-caregiver-intake-frontend-v0` Public Caregiver Intake Frontend v0 (`complete`)
+## Public Caregiver Intake Frontend v0
 
 - [x] `static-synthetic-caregiver-intake-frontend-v0` Static synthetic caregiver intake frontend (`complete`)
   - goal: Build the first static, synthetic-only public caregiver intake frontend prototype for multiple myeloma case organization, using existing public artifacts as boundaries and refusing real patient data.
 - [x] `static-synthetic-caregiver-intake-frontend-smoke-test-v0` Static synthetic caregiver intake frontend smoke test (`complete`)
   - goal: Document public-safety smoke checks for the static synthetic caregiver intake frontend so the prototype is auditable before any future UI iteration.
 
-## `myeloma-machine-representation-implementation-v0` Myeloma Machine Representation Implementation v0 (`complete`)
+## Myeloma Machine Representation Implementation v0
 
 - [x] `myeloma-state-object-schema-v0` Myeloma state object schema (`complete`)
   - goal: Define the first public, synthetic-only myeloma disease-state object schema derived from the machine representation stack.
@@ -80,7 +80,7 @@
 - [ ] `machine-representation-public-scope-human-gate-blocker-v0` Machine representation public-scope human gate blocker (`blocked`)
   - goal: Record that no autonomous public-safe machine-representation implementation item remains after the completion audit.
 
-## `post-machine-representation-public-safe-research-substrate-v0` Post-Machine-Representation Public-Safe Research Substrate v0 (`active`)
+## Post-Machine-Representation Public-Safe Research Substrate v0
 
 - [x] `mrd-resistance-geometry-falsification-v0` MRD Resistance Geometry Falsification v0 (`complete`)
   - goal: Record the human-selected public-safe MRD resistance geometry falsification lane after the machine-representation human gate, without clearing that gate or creating clinical claims.
@@ -112,6 +112,8 @@
   - goal: Complete a no-outreach, synthetic-only negative safety fixture pack and checker for wrapper dry-run fail-closed behavior before wrapper state-machine transition checking or model-output reuse.
 - [x] `measurement-refusal-wrapper-state-machine-v0` Measurement Refusal Wrapper State Machine v0 (`complete`)
   - goal: Complete a no-outreach, synthetic-only wrapper transition state machine that makes refusal metadata movement explicit before transition negative safety fixtures or model-output reuse.
+- [x] `measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0` Measurement Refusal Wrapper State Machine Negative Safety Fixtures v0 (`complete`)
+  - goal: Complete a no-outreach, synthetic-only negative safety fixture pack that proves unsafe wrapper state-machine transition mutations fail closed before falsification audit or model-output reuse.
 - [ ] `machine-representation-expert-validation-execution-v0` Machine Representation Expert Validation Execution v0 (`blocked`)
   - goal: Resume actual external machine-representation expert-validation execution only after human authorization, while keeping outreach, public issue operations, response intake, expert-review claim upgrades, private correspondence, and clinical interpretation blocked until then.
 - [ ] `machine-representation-expert-validation-human-authorization-blocker-v0` Machine Representation Expert Validation Human Authorization Blocker v0 (`blocked`)

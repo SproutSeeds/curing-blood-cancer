@@ -138,8 +138,10 @@ Actual expert-validation execution, outreach, issue operations, response
 intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
-The next no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`.
+The completed successor is
+`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`. The next
+no-outreach public-source successor, if selected, is
+`measurement-refusal-wrapper-state-machine-falsification-audit-v0`.
 
 ## Public Safety Check
 
