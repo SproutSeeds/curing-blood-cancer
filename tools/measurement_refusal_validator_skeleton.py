@@ -26,7 +26,7 @@ DEFAULT_REPORT = EXAMPLES / "measurement-refusal-validator-skeleton-report-v0.js
 
 VALIDATOR_ID = "measurement-refusal-validator-skeleton-v0"
 REPORT_ID = "measurement-refusal-validator-skeleton-report-v0"
-NEXT_SUCCESSOR = "measurement-refusal-wrapper-integration-dry-run-v0"
+NEXT_SUCCESSOR = "measurement-refusal-wrapper-negative-safety-fixtures-v0"
 HUMAN_GATE = "machine-representation-expert-validation-human-authorization-blocker-v0"
 
 REQUIRED_FALSE_BOUNDARY_FIELDS = {
@@ -511,7 +511,7 @@ def build_validator_report_from_docs(output_doc: dict[str, Any], route_doc: dict
         "forbidden_output_fields": sorted(FORBIDDEN_KEYS),
         "handoff": {
             "completed_phase": VALIDATOR_ID,
-            "completed_successor": "measurement-refusal-negative-safety-fixtures-v0",
+            "completed_successor": "measurement-refusal-wrapper-integration-dry-run-v0",
             "next_no_outreach_successor_if_selected": NEXT_SUCCESSOR,
             "human_gate_state": HUMAN_GATE,
             "blocked_actions": BLOCKED_ACTIONS,

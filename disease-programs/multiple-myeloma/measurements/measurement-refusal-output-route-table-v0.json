@@ -619,8 +619,8 @@
   ],
   "handoff": {
     "completed_phase": "measurement-refusal-output-route-table-v0",
-    "completed_successor": "measurement-refusal-negative-safety-fixtures-v0",
-    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-integration-dry-run-v0",
+    "completed_successor": "measurement-refusal-wrapper-integration-dry-run-v0",
+    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-negative-safety-fixtures-v0",
     "human_gate_state": "machine-representation-expert-validation-human-authorization-blocker-v0",
     "blocked_actions": [
       "expert-validation execution",

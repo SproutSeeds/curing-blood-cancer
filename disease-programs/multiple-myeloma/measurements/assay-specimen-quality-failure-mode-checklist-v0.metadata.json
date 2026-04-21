@@ -151,6 +151,21 @@
       "label": "Measurement Refusal Negative Safety Fixture Check v0",
       "url": "../../../tools/check_measurement_refusal_negative_safety_fixtures.py",
       "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Wrapper Integration Dry Run v0",
+      "url": "./measurement-refusal-wrapper-integration-dry-run-v0.md",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Wrapper Integration Dry Run Dataset v0",
+      "url": "../../../examples/measurement-refusal-wrapper-integration-dry-run-v0.json",
+      "accessed": "2026-04-20"
+    },
+    {
+      "label": "Measurement Refusal Wrapper Integration Dry Run Check v0",
+      "url": "../../../tools/check_measurement_refusal_wrapper_integration_dry_run.py",
+      "accessed": "2026-04-20"
     }
   ],
   "limitations": [

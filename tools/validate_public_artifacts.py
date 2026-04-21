@@ -79,6 +79,7 @@ class Validator:
         self.validate_measurement_refusal_route_tables()
         self.validate_measurement_refusal_validator_reports()
         self.validate_measurement_refusal_negative_safety_fixtures()
+        self.validate_measurement_refusal_wrapper_integration_dry_runs()
         self.validate_case_to_cure_synthetic_pipelines()
         self.validate_source_references(source_ids)
         self.validate_taxonomy_references(taxonomy_ids)
@@ -2424,8 +2425,8 @@ class Validator:
             if isinstance(handoff, dict):
                 if handoff.get("completed_phase") != "measurement-refusal-negative-safety-fixtures-v0":
                     self.add_error(path, "handoff.completed_phase must be measurement-refusal-negative-safety-fixtures-v0")
-                if handoff.get("next_no_outreach_successor_if_selected") != "measurement-refusal-wrapper-integration-dry-run-v0":
-                    self.add_error(path, "handoff.next_no_outreach_successor_if_selected must be measurement-refusal-wrapper-integration-dry-run-v0")
+                if handoff.get("next_no_outreach_successor_if_selected") != "measurement-refusal-wrapper-negative-safety-fixtures-v0":
+                    self.add_error(path, "handoff.next_no_outreach_successor_if_selected must be measurement-refusal-wrapper-negative-safety-fixtures-v0")
                 if handoff.get("human_gate_state") != "machine-representation-expert-validation-human-authorization-blocker-v0":
                     self.add_error(path, "handoff.human_gate_state must preserve the expert-validation blocker")
                 blocked_actions = handoff.get("blocked_actions")
@@ -2437,6 +2438,325 @@ class Validator:
                     self.add_error(path, "handoff.blocked_actions must be a list")
             else:
                 self.add_error(path, "negative safety fixtures must include handoff")
+
+    def validate_measurement_refusal_wrapper_integration_dry_runs(self) -> None:
+        required_false_boundary_fields = {
+            "uses_real_case_data",
+            "contains_identifiers",
+            "contains_raw_records",
+            "contains_uploads",
+            "contains_exact_person_linked_dates",
+            "contains_free_text_case_details",
+            "contains_private_correspondence",
+            "contains_model_weights",
+            "contains_predictions",
+            "contains_recommendations",
+            "contains_matching_or_ranking",
+            "contains_clinical_decisions",
+        }
+        required_clinical_boundaries = {
+            "not-medical-advice",
+            "not-diagnostic",
+            "not-treatment-recommendation",
+            "not-trial-recommendation",
+            "research-use-only",
+        }
+        required_blocked_uses = {
+            "diagnosis",
+            "prognosis",
+            "endpoint_interpretation",
+            "mrd_interpretation",
+            "residual_disease_comparison",
+            "monitoring_guidance",
+            "treatment_guidance",
+            "trial_guidance",
+            "patient_matching",
+            "assay_ranking",
+            "modality_ranking",
+            "evidence_ranking",
+            "clinical_decision",
+            "publication_authorization",
+            "cure_claim",
+            "report_interpretation",
+            "lab_validity_conclusion",
+            "image_interpretation",
+            "biopsy_interpretation",
+        }
+        required_source_artifacts = {
+            "disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.json",
+            "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
+            "examples/measurement-refusal-output-fixture-v0.json",
+            "examples/measurement-refusal-validator-skeleton-report-v0.json",
+        }
+        forbidden_keys = {
+            "accession",
+            "accession_number",
+            "actionability",
+            "actionability_score",
+            "assay_rank",
+            "biopsy_interpretation",
+            "case_id",
+            "clinical_decision",
+            "clinical_guidance",
+            "clinical_interpretation",
+            "clinical_priority",
+            "clinical_priority_score",
+            "date_of_birth",
+            "diagnosis",
+            "dose",
+            "dosing",
+            "eligibility",
+            "eligibility_guidance",
+            "endpoint_interpretation",
+            "evidence_rank",
+            "evidence_strength",
+            "evidence_strength_score",
+            "free_text_note",
+            "image_interpretation",
+            "interpretation",
+            "lab_validity_conclusion",
+            "medical_record_number",
+            "modality_rank",
+            "monitoring_guidance",
+            "monitoring_plan",
+            "mrd_interpretation",
+            "mrd_label",
+            "option_rank",
+            "patient_fit",
+            "patient_id",
+            "patient_matching",
+            "patient_relevance",
+            "probability",
+            "prognosis",
+            "prognosis_text",
+            "publication_authorization",
+            "ranking",
+            "raw_record",
+            "recommendation",
+            "residual_disease_comparison",
+            "response_category",
+            "risk_category",
+            "risk_score",
+            "score",
+            "treatment_action",
+            "treatment_choice",
+            "treatment_guidance",
+            "treatment_recommendation",
+            "trial_guidance",
+            "trial_match",
+            "trial_matching",
+            "trial_recommendation",
+            "urgency",
+            "urgency_score",
+        }
+        required_handoff_blocked_actions = {
+            "expert-validation execution",
+            "issue operations",
+            "outreach",
+            "response intake",
+            "real-report quality review",
+            "private-lab work",
+            "clinical interpretation",
+            "model-governance clearance",
+            "publication authorization",
+            "claim upgrade",
+        }
+
+        for path, doc in self.json_docs.items():
+            if not isinstance(doc, dict) or doc.get("wrapper_integration_dry_run_id") != "measurement-refusal-wrapper-integration-dry-run-v0":
+                continue
+
+            if doc.get("dry_run_status") != "pass":
+                self.add_error(path, "dry_run_status must be pass")
+            if doc.get("dry_run_type") != "synthetic-refusal-wrapper-integration-only":
+                self.add_error(path, "dry_run_type must be synthetic-refusal-wrapper-integration-only")
+            if doc.get("target_wrapper_id") != "model-output-boundary-wrapper-v0":
+                self.add_error(path, "target_wrapper_id must be model-output-boundary-wrapper-v0")
+            if doc.get("source_output_set_id") != "measurement-refusal-output-fixture-v0":
+                self.add_error(path, "source_output_set_id must be measurement-refusal-output-fixture-v0")
+            if doc.get("source_route_table_id") != "measurement-refusal-output-route-table-v0":
+                self.add_error(path, "source_route_table_id must be measurement-refusal-output-route-table-v0")
+            if doc.get("source_validator_report_id") != "measurement-refusal-validator-skeleton-report-v0":
+                self.add_error(path, "source_validator_report_id must be measurement-refusal-validator-skeleton-report-v0")
+            if doc.get("source_validator_report_status") != "pass":
+                self.add_error(path, "source_validator_report_status must be pass")
+
+            clinical_boundaries = doc.get("clinical_use_boundary")
+            if isinstance(clinical_boundaries, list):
+                missing = sorted(required_clinical_boundaries - {value for value in clinical_boundaries if isinstance(value, str)})
+                if missing:
+                    self.add_error(path, f"clinical_use_boundary missing required values: {', '.join(missing)}")
+            else:
+                self.add_error(path, "wrapper dry run must include clinical_use_boundary")
+
+            data_boundary = doc.get("data_boundary")
+            if isinstance(data_boundary, dict):
+                missing_false = sorted(field for field in required_false_boundary_fields if data_boundary.get(field) is not False)
+                if missing_false:
+                    self.add_error(path, f"data_boundary fields must be false: {', '.join(missing_false)}")
+            else:
+                self.add_error(path, "wrapper dry run must include data_boundary")
+
+            source_artifacts = doc.get("source_artifacts")
+            if isinstance(source_artifacts, list):
+                missing_sources = sorted(required_source_artifacts - {value for value in source_artifacts if isinstance(value, str)})
+                if missing_sources:
+                    self.add_error(path, f"source_artifacts missing required values: {', '.join(missing_sources)}")
+            else:
+                self.add_error(path, "wrapper dry run must include source_artifacts")
+
+            summary = doc.get("summary")
+            if isinstance(summary, dict):
+                if summary.get("source_output_count") != 10:
+                    self.add_error(path, "summary.source_output_count must be 10")
+                if summary.get("source_route_count") != 10:
+                    self.add_error(path, "summary.source_route_count must be 10")
+                if summary.get("wrapper_record_count") != 10:
+                    self.add_error(path, "summary.wrapper_record_count must be 10")
+                if summary.get("public_refusal_wrapper_records") != 9:
+                    self.add_error(path, "summary.public_refusal_wrapper_records must be 9")
+                if summary.get("private_review_blocker_wrapper_records") != 1:
+                    self.add_error(path, "summary.private_review_blocker_wrapper_records must be 1")
+                for field in (
+                    "clinical_output_allowed",
+                    "prediction_output_allowed",
+                    "matching_or_ranking_allowed",
+                    "real_review_output_allowed",
+                    "publication_authorization_allowed",
+                ):
+                    if summary.get(field) is not False:
+                        self.add_error(path, f"summary.{field} must be false")
+                if summary.get("no_interpretive_text") is not True:
+                    self.add_error(path, "summary.no_interpretive_text must be true")
+            else:
+                self.add_error(path, "wrapper dry run must include summary")
+
+            contract = doc.get("wrapper_contract")
+            if isinstance(contract, dict):
+                if contract.get("required_wrapper_id") != "model-output-boundary-wrapper-v0":
+                    self.add_error(path, "wrapper_contract.required_wrapper_id must be model-output-boundary-wrapper-v0")
+                if contract.get("allowed_requested_use") != "synthetic_fixture_check":
+                    self.add_error(path, "wrapper_contract.allowed_requested_use must be synthetic_fixture_check")
+                if contract.get("allowed_head_status") != "assay_specimen_quality_needed":
+                    self.add_error(path, "wrapper_contract.allowed_head_status must be assay_specimen_quality_needed")
+                if contract.get("allowed_wrapper_boundary") != "refusal-wrapper-metadata-only":
+                    self.add_error(path, "wrapper_contract.allowed_wrapper_boundary must be refusal-wrapper-metadata-only")
+                family_ids = contract.get("allowed_output_family_ids")
+                if family_ids != ["mrd_head"]:
+                    self.add_error(path, "wrapper_contract.allowed_output_family_ids must be ['mrd_head']")
+                blocked_uses = contract.get("blocked_downstream_uses")
+                if isinstance(blocked_uses, list):
+                    missing_blocks = sorted(required_blocked_uses - {value for value in blocked_uses if isinstance(value, str)})
+                    if missing_blocks:
+                        self.add_error(path, f"wrapper_contract.blocked_downstream_uses missing required values: {', '.join(missing_blocks)}")
+                else:
+                    self.add_error(path, "wrapper_contract.blocked_downstream_uses must be a list")
+            else:
+                self.add_error(path, "wrapper dry run must include wrapper_contract")
+
+            records = doc.get("wrapper_records")
+            if isinstance(records, list):
+                if len(records) != 10:
+                    self.add_error(path, "wrapper_records must contain 10 records")
+                record_ids = [record.get("wrapper_record_id") for record in records if isinstance(record, dict)]
+                duplicate_ids = sorted({record_id for record_id in record_ids if record_ids.count(record_id) > 1})
+                if duplicate_ids:
+                    self.add_error(path, f"wrapper_records has duplicate wrapper_record_id values: {', '.join(duplicate_ids)}")
+                private_review_count = 0
+                for index, record in enumerate(records):
+                    if not isinstance(record, dict):
+                        self.add_error(path, f"wrapper_records[{index}] must be an object")
+                        continue
+                    if record.get("wrapper_id") != "model-output-boundary-wrapper-v0":
+                        self.add_error(path, f"wrapper_records[{index}].wrapper_id must be model-output-boundary-wrapper-v0")
+                    if record.get("output_family_id") != "mrd_head":
+                        self.add_error(path, f"wrapper_records[{index}].output_family_id must be mrd_head")
+                    if record.get("requested_use") != "synthetic_fixture_check":
+                        self.add_error(path, f"wrapper_records[{index}].requested_use must be synthetic_fixture_check")
+                    if record.get("state_object_schema_id") != "myeloma-state-object-schema-v0":
+                        self.add_error(path, f"wrapper_records[{index}].state_object_schema_id must be myeloma-state-object-schema-v0")
+                    if record.get("head_status") != "assay_specimen_quality_needed":
+                        self.add_error(path, f"wrapper_records[{index}].head_status must be assay_specimen_quality_needed")
+                    if record.get("source_context_state") != "synthetic_source":
+                        self.add_error(path, f"wrapper_records[{index}].source_context_state must be synthetic_source")
+                    if record.get("input_missingness_state") != "unknown_visible":
+                        self.add_error(path, f"wrapper_records[{index}].input_missingness_state must be unknown_visible")
+                    if record.get("uncertainty_state") != "assay_specimen_quality_needed":
+                        self.add_error(path, f"wrapper_records[{index}].uncertainty_state must be assay_specimen_quality_needed")
+                    if record.get("allowed_public_successor") != "blocked_only":
+                        self.add_error(path, f"wrapper_records[{index}].allowed_public_successor must be blocked_only")
+                    if record.get("wrapper_boundary") != "refusal-wrapper-metadata-only":
+                        self.add_error(path, f"wrapper_records[{index}].wrapper_boundary must be refusal-wrapper-metadata-only")
+                    for field in (
+                        "clinical_output_allowed",
+                        "prediction_output_allowed",
+                        "comparison_allowed",
+                        "matching_or_ranking_allowed",
+                        "real_review_output_allowed",
+                        "publication_authorization_allowed",
+                    ):
+                        if record.get(field) is not False:
+                            self.add_error(path, f"wrapper_records[{index}].{field} must be false")
+                    if record.get("no_interpretive_text") is not True:
+                        self.add_error(path, f"wrapper_records[{index}].no_interpretive_text must be true")
+                    if record.get("assay_specimen_quality_state") == "private_lab_or_clinical_review_needed":
+                        private_review_count += 1
+                        if record.get("route_status") != "private_or_real_quality_review_blocked":
+                            self.add_error(path, f"wrapper_records[{index}] private review route_status mismatch")
+                        if record.get("public_processing_allowed") is not False:
+                            self.add_error(path, f"wrapper_records[{index}] private review public_processing_allowed must be false")
+                        if record.get("review_status") != "privacy_review_needed":
+                            self.add_error(path, f"wrapper_records[{index}] private review review_status must be privacy_review_needed")
+                        if record.get("gate_status") != "private_lab_needed":
+                            self.add_error(path, f"wrapper_records[{index}] private review gate_status must be private_lab_needed")
+                        if record.get("residual_disease_modality_state") != "private_lab_needed":
+                            self.add_error(path, f"wrapper_records[{index}] private review residual state must be private_lab_needed")
+                    else:
+                        if record.get("route_status") != "routed_refusal_only":
+                            self.add_error(path, f"wrapper_records[{index}].route_status must be routed_refusal_only")
+                        if record.get("public_processing_allowed") is not True:
+                            self.add_error(path, f"wrapper_records[{index}].public_processing_allowed must be true")
+                        if record.get("review_status") != "measurement_review_needed":
+                            self.add_error(path, f"wrapper_records[{index}].review_status must be measurement_review_needed")
+                        if record.get("gate_status") != "public_fixture_only":
+                            self.add_error(path, f"wrapper_records[{index}].gate_status must be public_fixture_only")
+                        if record.get("residual_disease_modality_state") != "assay_specimen_quality_needed":
+                            self.add_error(path, f"wrapper_records[{index}].residual_disease_modality_state must be assay_specimen_quality_needed")
+                    blocked_uses = record.get("blocked_downstream_uses")
+                    if isinstance(blocked_uses, list):
+                        missing_blocks = sorted(required_blocked_uses - {value for value in blocked_uses if isinstance(value, str)})
+                        if missing_blocks:
+                            self.add_error(path, f"wrapper_records[{index}].blocked_downstream_uses missing required values: {', '.join(missing_blocks)}")
+                    else:
+                        self.add_error(path, f"wrapper_records[{index}].blocked_downstream_uses must be a list")
+                if private_review_count != 1:
+                    self.add_error(path, "wrapper_records must include exactly one private-review blocker")
+            else:
+                self.add_error(path, "wrapper dry run must include wrapper_records")
+
+            handoff = doc.get("handoff")
+            if isinstance(handoff, dict):
+                if handoff.get("completed_phase") != "measurement-refusal-wrapper-integration-dry-run-v0":
+                    self.add_error(path, "handoff.completed_phase must be measurement-refusal-wrapper-integration-dry-run-v0")
+                if handoff.get("next_no_outreach_successor_if_selected") != "measurement-refusal-wrapper-negative-safety-fixtures-v0":
+                    self.add_error(path, "handoff.next_no_outreach_successor_if_selected must be measurement-refusal-wrapper-negative-safety-fixtures-v0")
+                if handoff.get("human_gate_state") != "machine-representation-expert-validation-human-authorization-blocker-v0":
+                    self.add_error(path, "handoff.human_gate_state must preserve the expert-validation blocker")
+                blocked_actions = handoff.get("blocked_actions")
+                if isinstance(blocked_actions, list):
+                    missing_actions = sorted(required_handoff_blocked_actions - {value for value in blocked_actions if isinstance(value, str)})
+                    if missing_actions:
+                        self.add_error(path, f"handoff.blocked_actions missing required values: {', '.join(missing_actions)}")
+                else:
+                    self.add_error(path, "handoff.blocked_actions must be a list")
+            else:
+                self.add_error(path, "wrapper dry run must include handoff")
+
+            for key in sorted(forbidden_keys):
+                for location, _value in self.find_key(doc, key):
+                    if location.startswith("$.forbidden_wrapper_fields"):
+                        continue
+                    self.add_error(path, f"{location} is not allowed in public measurement-refusal wrapper dry-run records")
 
     def validate_case_to_cure_synthetic_pipelines(self) -> None:
         schema_path = self.root / "schemas" / "case-to-cure-synthetic-pipeline.schema.json"

@@ -80,6 +80,7 @@ research directions deserve structured public tracking.
 - [Measurement Refusal Output Route Table v0](measurements/measurement-refusal-output-route-table-v0.md)
 - [Measurement Refusal Validator Skeleton v0](measurements/measurement-refusal-validator-skeleton-v0.md)
 - [Measurement Refusal Negative Safety Fixtures v0](measurements/measurement-refusal-negative-safety-fixtures-v0.md)
+- [Measurement Refusal Wrapper Integration Dry Run v0](measurements/measurement-refusal-wrapper-integration-dry-run-v0.md)
 - [Caregiver Case Intake Product Spec v0](case-intake/caregiver-case-intake-product-spec-v0.md)
 - [Caregiver Intake Public Projection Checklist v0](case-intake/caregiver-intake-public-projection-checklist-v0.md)
 - [Private Intake Schema Contract v0](case-intake/private-intake-schema-contract-v0.md)

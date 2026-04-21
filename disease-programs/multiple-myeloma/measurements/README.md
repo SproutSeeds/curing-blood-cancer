@@ -16,6 +16,7 @@ the multiple myeloma disease program.
 - [Measurement Refusal Output Route Table v0](measurement-refusal-output-route-table-v0.md)
 - [Measurement Refusal Validator Skeleton v0](measurement-refusal-validator-skeleton-v0.md)
 - [Measurement Refusal Negative Safety Fixtures v0](measurement-refusal-negative-safety-fixtures-v0.md)
+- [Measurement Refusal Wrapper Integration Dry Run v0](measurement-refusal-wrapper-integration-dry-run-v0.md)
 
 ## Boundary
 
@@ -32,6 +33,9 @@ the multiple myeloma disease program.
 - Assay/specimen quality artifacts must expose missing method, threshold,
   specimen quality, timing, paired-modality, imaging, spatial, host-context,
   private-review, and modality-collapse states as fail-closed boundaries.
+- Measurement-refusal wrapper integration artifacts must expose refused outputs
+  to the model-output wrapper as metadata only, not as prediction,
+  interpretation, ranking, real-review, publication, or decision output.
 - Synthetic measurement-state refusal fixtures live in
   [`examples/measurement-state-refusal-fixtures-v0.json`](../../../examples/measurement-state-refusal-fixtures-v0.json)
   so those boundaries can be checked without real records or clinical output.

@@ -25,7 +25,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/assay-specimen-quality-failure-mode-checklist-v0.metadata.json",
-      "source_count": 27,
+      "source_count": 30,
       "limitation_count": 24
     },
     {
@@ -211,7 +211,7 @@
       ],
       "path": "examples/measurement-refusal-negative-safety-fixtures-v0.json",
       "metadata_path": "examples/measurement-refusal-negative-safety-fixtures-v0.metadata.json",
-      "source_count": 5,
+      "source_count": 8,
       "limitation_count": 21
     },
     {
@@ -233,7 +233,7 @@
       ],
       "path": "examples/measurement-refusal-output-fixture-v0.json",
       "metadata_path": "examples/measurement-refusal-output-fixture-v0.metadata.json",
-      "source_count": 11,
+      "source_count": 14,
       "limitation_count": 24
     },
     {
@@ -254,8 +254,30 @@
       ],
       "path": "examples/measurement-refusal-validator-skeleton-report-v0.json",
       "metadata_path": "examples/measurement-refusal-validator-skeleton-report-v0.metadata.json",
-      "source_count": 7,
+      "source_count": 10,
       "limitation_count": 21
+    },
+    {
+      "artifact_id": "measurement-refusal-wrapper-integration-dry-run-dataset-v0",
+      "title": "Measurement Refusal Wrapper Integration Dry Run v0",
+      "artifact_class": "dataset",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "measurable residual disease",
+        "measurement state",
+        "assay quality",
+        "specimen quality",
+        "model-output refusal",
+        "wrapper integration",
+        "synthetic dry run",
+        "public safety"
+      ],
+      "path": "examples/measurement-refusal-wrapper-integration-dry-run-v0.json",
+      "metadata_path": "examples/measurement-refusal-wrapper-integration-dry-run-v0.metadata.json",
+      "source_count": 6,
+      "limitation_count": 22
     },
     {
       "artifact_id": "measurement-state-refusal-fixtures-v0",
@@ -276,7 +298,7 @@
       ],
       "path": "examples/measurement-state-refusal-fixtures-v0.json",
       "metadata_path": "examples/measurement-state-refusal-fixtures-v0.metadata.json",
-      "source_count": 11,
+      "source_count": 14,
       "limitation_count": 24
     },
     {
@@ -292,7 +314,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/mrd-and-relapse-measurement-glossary-v0.metadata.json",
-      "source_count": 24,
+      "source_count": 27,
       "limitation_count": 10
     },
     {
@@ -561,7 +583,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/public-inventory-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/public-inventory-v0.metadata.json",
-      "source_count": 61,
+      "source_count": 64,
       "limitation_count": 12
     },
     {
@@ -700,7 +722,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/residual-disease-modality-discordance-source-extraction-v0.metadata.json",
-      "source_count": 25,
+      "source_count": 28,
       "limitation_count": 22
     },
     {
@@ -853,7 +875,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-output-route-table-v0.metadata.json",
-      "source_count": 12,
+      "source_count": 15,
       "limitation_count": 21
     },
     {
@@ -943,7 +965,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/frontier-gap-sweep-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/frontier-gap-sweep-v0.metadata.json",
-      "source_count": 26,
+      "source_count": 29,
       "limitation_count": 24
     },
     {
@@ -981,7 +1003,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/myeloma-state-validator-rule-map-v0.metadata.json",
-      "source_count": 31,
+      "source_count": 34,
       "limitation_count": 26
     },
     {
@@ -1261,7 +1283,7 @@
       ],
       "path": "protocols/clawdad-autonomous-research-loop-v0.md",
       "metadata_path": "protocols/clawdad-autonomous-research-loop-v0.metadata.json",
-      "source_count": 26,
+      "source_count": 29,
       "limitation_count": 12
     },
     {
@@ -1278,7 +1300,7 @@
       ],
       "path": "protocols/clawdad-frontier-delegation-packet-v0.md",
       "metadata_path": "protocols/clawdad-frontier-delegation-packet-v0.metadata.json",
-      "source_count": 57,
+      "source_count": 60,
       "limitation_count": 13
     },
     {
@@ -1451,7 +1473,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-negative-safety-fixtures-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-negative-safety-fixtures-v0.metadata.json",
-      "source_count": 5,
+      "source_count": 8,
       "limitation_count": 21
     },
     {
@@ -1472,8 +1494,30 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-validator-skeleton-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-validator-skeleton-v0.metadata.json",
-      "source_count": 8,
+      "source_count": 11,
       "limitation_count": 21
+    },
+    {
+      "artifact_id": "measurement-refusal-wrapper-integration-dry-run-v0",
+      "title": "Measurement Refusal Wrapper Integration Dry Run v0",
+      "artifact_class": "protocol",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "measurable residual disease",
+        "measurement state",
+        "assay quality",
+        "specimen quality",
+        "model-output refusal",
+        "wrapper integration",
+        "synthetic dry run",
+        "public safety"
+      ],
+      "path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-integration-dry-run-v0.md",
+      "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-integration-dry-run-v0.metadata.json",
+      "source_count": 6,
+      "limitation_count": 22
     },
     {
       "artifact_id": "model-output-boundary-wrapper-v0",
@@ -1494,7 +1538,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.metadata.json",
-      "source_count": 30,
+      "source_count": 33,
       "limitation_count": 28
     },
     {
@@ -1681,7 +1725,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/frontier-roadmap-v0.metadata.json",
-      "source_count": 51,
+      "source_count": 54,
       "limitation_count": 10
     },
     {
@@ -2173,7 +2217,7 @@
       ],
       "path": "disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.md",
       "metadata_path": "disease-programs/multiple-myeloma/measurements/measurement-normalization-contract-v0.metadata.json",
-      "source_count": 31,
+      "source_count": 34,
       "limitation_count": 30
     },
     {
@@ -2439,7 +2483,7 @@
       ],
       "path": "tools/check_measurement_refusal_negative_safety_fixtures.py",
       "metadata_path": "tools/check_measurement_refusal_negative_safety_fixtures.metadata.json",
-      "source_count": 5,
+      "source_count": 8,
       "limitation_count": 21
     },
     {
@@ -2504,8 +2548,30 @@
       ],
       "path": "tools/measurement_refusal_validator_skeleton.py",
       "metadata_path": "tools/measurement_refusal_validator_skeleton.metadata.json",
-      "source_count": 9,
+      "source_count": 12,
       "limitation_count": 21
+    },
+    {
+      "artifact_id": "measurement-refusal-wrapper-integration-dry-run-check-v0",
+      "title": "Measurement Refusal Wrapper Integration Dry Run Check v0",
+      "artifact_class": "tool",
+      "claim_level": "open-question",
+      "blood_cancer_scope": [
+        "multiple myeloma",
+        "plasma-cell disease",
+        "measurable residual disease",
+        "measurement state",
+        "assay quality",
+        "specimen quality",
+        "model-output refusal",
+        "wrapper integration",
+        "synthetic dry run",
+        "public safety"
+      ],
+      "path": "tools/check_measurement_refusal_wrapper_integration_dry_run.py",
+      "metadata_path": "tools/check_measurement_refusal_wrapper_integration_dry_run.metadata.json",
+      "source_count": 6,
+      "limitation_count": 22
     },
     {
       "artifact_id": "measurement-state-refusal-fixture-check-v0",
