@@ -91,6 +91,8 @@ This phase must not emit or authorize:
 `measurement-refusal-wrapper-negative-safety-fixtures-v0` is complete when the
 fixture pack, checker, metadata, catalog, inventory, ORP state, and Clawdad
 state are all wired and `make validate` passes.
+The follow-on [Measurement Refusal Wrapper State Machine v0](measurement-refusal-wrapper-state-machine-v0.md)
+is now complete as synthetic wrapper transition metadata.
 
 ORP should keep the active blocker at
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
@@ -99,7 +101,7 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-state-machine-v0`.
+`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`.
 
 ## Public Safety Check
 

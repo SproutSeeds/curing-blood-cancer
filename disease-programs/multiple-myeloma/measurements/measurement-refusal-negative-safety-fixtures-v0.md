@@ -93,11 +93,12 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-state-machine-v0`, after
+`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`, after
 `measurement-refusal-wrapper-integration-dry-run-v0` mapped refused measurement
 outputs to wrapper metadata only and
 `measurement-refusal-wrapper-negative-safety-fixtures-v0` proved unsafe wrapper
-mutations fail closed.
+mutations fail closed, and `measurement-refusal-wrapper-state-machine-v0` made
+safe wrapper terminal transitions explicit.
 
 ## Public Safety Check
 

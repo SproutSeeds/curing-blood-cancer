@@ -26,7 +26,7 @@ NEGATIVE_FIXTURES = Path("examples/measurement-refusal-wrapper-negative-safety-f
 FIXTURE_SET_ID = "measurement-refusal-wrapper-negative-safety-fixtures-v0"
 TARGET_CHECKER_ID = "measurement-refusal-wrapper-integration-dry-run-check-v0"
 TARGET_DRY_RUN_ID = "measurement-refusal-wrapper-integration-dry-run-v0"
-NEXT_SUCCESSOR = "measurement-refusal-wrapper-state-machine-v0"
+NEXT_SUCCESSOR = "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0"
 
 REQUIRED_NEGATIVE_FIXTURE_IDS = {
     "mrwns_00_prediction_boundary_flag_v0",

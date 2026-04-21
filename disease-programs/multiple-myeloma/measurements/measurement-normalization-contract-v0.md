@@ -209,9 +209,11 @@ The later `measurement-refusal-wrapper-negative-safety-fixtures-v0` now adds
 adversarial synthetic pressure on the wrapper dry-run surface after validated
 refusal metadata reached the model-output boundary wrapper without creating
 model output, interpretation, advice, ranking, or clinical meaning.
-The safest next public step is therefore
-`measurement-refusal-wrapper-state-machine-v0`: an explicit refusal-transition
-state machine for wrapper metadata that remains non-clinical and synthetic-only.
+The later `measurement-refusal-wrapper-state-machine-v0` now makes wrapper
+metadata movement explicit as safe terminal transitions. The safest next
+public step is therefore
+`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`:
+adversarial synthetic pressure on that transition system.
 
 ## Handoff State
 
@@ -239,10 +241,13 @@ only. The later measurement-refusal negative safety fixtures prove those
 checks fail closed under synthetic bad-route mutations. The later
 measurement-refusal wrapper integration dry run maps the refused outputs to
 wrapper metadata only. The later measurement-refusal wrapper negative safety
-fixtures prove unsafe wrapper mutations fail closed.
+fixtures prove unsafe wrapper mutations fail closed. The later
+measurement-refusal wrapper state machine makes the safe terminal transitions
+explicit.
 ORP should keep
 `machine-representation-expert-validation-human-authorization-blocker-v0`
-active while treating `measurement-refusal-wrapper-state-machine-v0` as
+active while treating
+`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0` as
 the next no-outreach public-source successor if selected.
 
 ## Public Safety Check

@@ -1,0 +1,1113 @@
+{
+  "state_machine_id": "measurement-refusal-wrapper-state-machine-v0",
+  "title": "Measurement Refusal Wrapper State Machine v0",
+  "date": "2026-04-21",
+  "disease_program": "multiple-myeloma",
+  "clinical_boundary": "research-use-only; not medical advice",
+  "state_machine_status": "synthetic-wrapper-transition-state-machine",
+  "target_wrapper_id": "model-output-boundary-wrapper-v0",
+  "target_dry_run_id": "measurement-refusal-wrapper-integration-dry-run-v0",
+  "target_negative_fixture_set_id": "measurement-refusal-wrapper-negative-safety-fixtures-v0",
+  "source_artifacts": [
+    "disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-integration-dry-run-v0.md",
+    "disease-programs/multiple-myeloma/measurements/measurement-refusal-wrapper-negative-safety-fixtures-v0.md",
+    "disease-programs/multiple-myeloma/model-output-boundary-wrapper-v0.md",
+    "examples/measurement-refusal-wrapper-integration-dry-run-v0.json",
+    "examples/measurement-refusal-wrapper-negative-safety-fixtures-v0.json",
+    "tools/check_measurement_refusal_wrapper_integration_dry_run.py",
+    "tools/check_measurement_refusal_wrapper_negative_safety_fixtures.py"
+  ],
+  "clinical_use_boundary": [
+    "not-medical-advice",
+    "not-diagnostic",
+    "not-treatment-recommendation",
+    "not-trial-recommendation",
+    "research-use-only"
+  ],
+  "data_boundary": {
+    "uses_real_case_data": false,
+    "contains_identifiers": false,
+    "contains_raw_records": false,
+    "contains_uploads": false,
+    "contains_exact_person_linked_dates": false,
+    "contains_free_text_case_details": false,
+    "contains_private_correspondence": false,
+    "contains_model_weights": false,
+    "contains_predictions": false,
+    "contains_recommendations": false,
+    "contains_matching_or_ranking": false,
+    "contains_clinical_decisions": false
+  },
+  "state_machine_purpose": [
+    "Make wrapper refusal movement explicit before any model-output reuse.",
+    "Ensure every public synthetic wrapper record terminates in metadata-only refusal.",
+    "Ensure private or real quality-review routes terminate in a blocker.",
+    "Ensure unsafe wrapper mutations route to a blocked terminal state."
+  ],
+  "states": [
+    {
+      "state_id": "mrsms_00_refused_output_received",
+      "label": "Refused Output Received",
+      "state_kind": "input_boundary",
+      "terminal_state": false,
+      "public_processing_allowed": true,
+      "required_evidence": [
+        "source_output_id",
+        "output_status: refused",
+        "no_interpretive_text"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "clinical_output_allowed": false,
+      "prediction_output_allowed": false,
+      "comparison_allowed": false,
+      "matching_or_ranking_allowed": false,
+      "real_review_output_allowed": false,
+      "publication_authorization_allowed": false
+    },
+    {
+      "state_id": "mrsms_01_route_validated_refusal_only",
+      "label": "Route Validated Refusal Only",
+      "state_kind": "route_boundary",
+      "terminal_state": false,
+      "public_processing_allowed": true,
+      "required_evidence": [
+        "source_route_id",
+        "route_status",
+        "destination_contracts",
+        "blocked_routes"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "clinical_output_allowed": false,
+      "prediction_output_allowed": false,
+      "comparison_allowed": false,
+      "matching_or_ranking_allowed": false,
+      "real_review_output_allowed": false,
+      "publication_authorization_allowed": false
+    },
+    {
+      "state_id": "mrsms_02_wrapper_metadata_assembled",
+      "label": "Wrapper Metadata Assembled",
+      "state_kind": "wrapper_boundary",
+      "terminal_state": false,
+      "public_processing_allowed": true,
+      "required_evidence": [
+        "wrapper_id",
+        "wrapper_record_id",
+        "head_status",
+        "wrapper_boundary"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "clinical_output_allowed": false,
+      "prediction_output_allowed": false,
+      "comparison_allowed": false,
+      "matching_or_ranking_allowed": false,
+      "real_review_output_allowed": false,
+      "publication_authorization_allowed": false
+    },
+    {
+      "state_id": "mrsms_03_public_refusal_wrapper_ready",
+      "label": "Public Refusal Wrapper Ready",
+      "state_kind": "public_refusal_boundary",
+      "terminal_state": false,
+      "public_processing_allowed": true,
+      "required_evidence": [
+        "public_processing_allowed: true",
+        "gate_status: public_fixture_only",
+        "route_status: routed_refusal_only"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "clinical_output_allowed": false,
+      "prediction_output_allowed": false,
+      "comparison_allowed": false,
+      "matching_or_ranking_allowed": false,
+      "real_review_output_allowed": false,
+      "publication_authorization_allowed": false
+    },
+    {
+      "state_id": "mrsms_04_private_or_real_review_blocker_ready",
+      "label": "Private Or Real Review Blocker Ready",
+      "state_kind": "private_review_boundary",
+      "terminal_state": false,
+      "public_processing_allowed": false,
+      "required_evidence": [
+        "public_processing_allowed: false",
+        "gate_status: private_lab_needed",
+        "route_status: private_or_real_quality_review_blocked"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "clinical_output_allowed": false,
+      "prediction_output_allowed": false,
+      "comparison_allowed": false,
+      "matching_or_ranking_allowed": false,
+      "real_review_output_allowed": false,
+      "publication_authorization_allowed": false
+    },
+    {
+      "state_id": "mrsms_05_metadata_only_public_terminal",
+      "label": "Metadata Only Public Terminal",
+      "state_kind": "safe_terminal",
+      "terminal_state": true,
+      "public_processing_allowed": true,
+      "required_evidence": [
+        "wrapper_boundary: refusal-wrapper-metadata-only",
+        "no_interpretive_text: true"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "clinical_output_allowed": false,
+      "prediction_output_allowed": false,
+      "comparison_allowed": false,
+      "matching_or_ranking_allowed": false,
+      "real_review_output_allowed": false,
+      "publication_authorization_allowed": false
+    },
+    {
+      "state_id": "mrsms_06_private_or_real_review_blocker_terminal",
+      "label": "Private Or Real Review Blocker Terminal",
+      "state_kind": "blocked_terminal",
+      "terminal_state": true,
+      "public_processing_allowed": false,
+      "required_evidence": [
+        "private_lab_needed",
+        "public_processing_allowed: false",
+        "real_review_output_allowed: false"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "clinical_output_allowed": false,
+      "prediction_output_allowed": false,
+      "comparison_allowed": false,
+      "matching_or_ranking_allowed": false,
+      "real_review_output_allowed": false,
+      "publication_authorization_allowed": false
+    },
+    {
+      "state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "label": "Unsafe Wrapper Reuse Blocked Terminal",
+      "state_kind": "unsafe_reuse_blocked_terminal",
+      "terminal_state": true,
+      "public_processing_allowed": false,
+      "required_evidence": [
+        "wrapper negative safety fixture failed closed",
+        "unsafe transition blocked"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "clinical_output_allowed": false,
+      "prediction_output_allowed": false,
+      "comparison_allowed": false,
+      "matching_or_ranking_allowed": false,
+      "real_review_output_allowed": false,
+      "publication_authorization_allowed": false
+    }
+  ],
+  "transitions": [
+    {
+      "transition_id": "mrsmt_00_refused_output_to_validated_route",
+      "from_state_id": "mrsms_00_refused_output_received",
+      "to_state_id": "mrsms_01_route_validated_refusal_only",
+      "event": "route_record_validated",
+      "condition": "The refused output has exactly one safe route-table record and complete blocked downstream uses.",
+      "emits_output": false,
+      "clinical_or_prediction_output_allowed": false,
+      "blocked_if_missing": [
+        "route_table_reuse_blocked",
+        "wrapper_metadata_creation_blocked"
+      ]
+    },
+    {
+      "transition_id": "mrsmt_01_validated_route_to_wrapper_metadata",
+      "from_state_id": "mrsms_01_route_validated_refusal_only",
+      "to_state_id": "mrsms_02_wrapper_metadata_assembled",
+      "event": "wrapper_metadata_created",
+      "condition": "The wrapper record preserves the refused output ID, route ID, checklist row, wrapper ID, mrd_head family, and metadata-only boundary.",
+      "emits_output": false,
+      "clinical_or_prediction_output_allowed": false,
+      "blocked_if_missing": [
+        "wrapper_record_export_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "transition_id": "mrsmt_02_wrapper_metadata_to_public_refusal_ready",
+      "from_state_id": "mrsms_02_wrapper_metadata_assembled",
+      "to_state_id": "mrsms_03_public_refusal_wrapper_ready",
+      "event": "public_synthetic_refusal_ready",
+      "condition": "The wrapper record is public synthetic refusal metadata with public_processing_allowed true and all unsafe output permissions false.",
+      "emits_output": false,
+      "clinical_or_prediction_output_allowed": false,
+      "blocked_if_missing": [
+        "public_wrapper_export_blocked",
+        "model_output_reuse_blocked"
+      ]
+    },
+    {
+      "transition_id": "mrsmt_03_wrapper_metadata_to_private_blocker_ready",
+      "from_state_id": "mrsms_02_wrapper_metadata_assembled",
+      "to_state_id": "mrsms_04_private_or_real_review_blocker_ready",
+      "event": "private_or_real_review_detected",
+      "condition": "The wrapper record carries a private or real quality-review blocker and public_processing_allowed false.",
+      "emits_output": false,
+      "clinical_or_prediction_output_allowed": false,
+      "blocked_if_missing": [
+        "private_lab_bypass_blocked",
+        "real_report_review_blocked"
+      ]
+    },
+    {
+      "transition_id": "mrsmt_04_public_refusal_ready_to_metadata_terminal",
+      "from_state_id": "mrsms_03_public_refusal_wrapper_ready",
+      "to_state_id": "mrsms_05_metadata_only_public_terminal",
+      "event": "metadata_only_export_boundary_reached",
+      "condition": "The public terminal emits only refusal metadata and keeps all clinical, prediction, comparison, ranking, real-review, and publication outputs blocked.",
+      "emits_output": false,
+      "clinical_or_prediction_output_allowed": false,
+      "blocked_if_missing": [
+        "clinical_output_blocked",
+        "prediction_output_blocked",
+        "publication_authorization_blocked"
+      ]
+    },
+    {
+      "transition_id": "mrsmt_05_private_blocker_ready_to_blocker_terminal",
+      "from_state_id": "mrsms_04_private_or_real_review_blocker_ready",
+      "to_state_id": "mrsms_06_private_or_real_review_blocker_terminal",
+      "event": "private_or_real_review_blocker_reached",
+      "condition": "The private-review terminal exposes no private content and keeps public processing, real-review output, and clinical interpretation blocked.",
+      "emits_output": false,
+      "clinical_or_prediction_output_allowed": false,
+      "blocked_if_missing": [
+        "private_lab_bypass_blocked",
+        "real_report_review_blocked"
+      ]
+    },
+    {
+      "transition_id": "mrsmt_06_unsafe_wrapper_mutation_to_blocked_terminal",
+      "from_state_id": "mrsms_02_wrapper_metadata_assembled",
+      "to_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "event": "unsafe_wrapper_mutation_detected",
+      "condition": "Any wrapper mutation that changes boundary flags, record coverage, wrapper identity, output family, output permissions, private-review blocking, blocked uses, or forbidden fields routes to a blocked terminal.",
+      "emits_output": false,
+      "clinical_or_prediction_output_allowed": false,
+      "blocked_if_missing": [
+        "wrapper_reuse_blocked",
+        "model_output_reuse_blocked"
+      ]
+    }
+  ],
+  "wrapper_record_traces": [
+    {
+      "source_output_id": "mro_00_method_family_missing_v0",
+      "source_route_id": "mror_00_method_family_missing_v0",
+      "wrapper_record_id": "mrw_00_method_family_missing_v0",
+      "source_fixture_id": "msrf_00_method_family_missing_v0",
+      "source_checklist_row_id": "asq_00_method_family_missing",
+      "public_processing_allowed": true,
+      "terminal_state_id": "mrsms_05_metadata_only_public_terminal",
+      "trace_state_ids": [
+        "mrsms_00_refused_output_received",
+        "mrsms_01_route_validated_refusal_only",
+        "mrsms_02_wrapper_metadata_assembled",
+        "mrsms_03_public_refusal_wrapper_ready",
+        "mrsms_05_metadata_only_public_terminal"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "trace_boundary": "refusal-wrapper-metadata-only",
+      "no_interpretive_text": true,
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_output_id": "mro_01_threshold_or_detection_limit_missing_v0",
+      "source_route_id": "mror_01_threshold_or_detection_limit_missing_v0",
+      "wrapper_record_id": "mrw_01_threshold_or_detection_limit_missing_v0",
+      "source_fixture_id": "msrf_01_threshold_or_detection_limit_missing_v0",
+      "source_checklist_row_id": "asq_01_threshold_or_detection_limit_missing",
+      "public_processing_allowed": true,
+      "terminal_state_id": "mrsms_05_metadata_only_public_terminal",
+      "trace_state_ids": [
+        "mrsms_00_refused_output_received",
+        "mrsms_01_route_validated_refusal_only",
+        "mrsms_02_wrapper_metadata_assembled",
+        "mrsms_03_public_refusal_wrapper_ready",
+        "mrsms_05_metadata_only_public_terminal"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "trace_boundary": "refusal-wrapper-metadata-only",
+      "no_interpretive_text": true,
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_output_id": "mro_02_specimen_source_or_quality_missing_v0",
+      "source_route_id": "mror_02_specimen_source_or_quality_missing_v0",
+      "wrapper_record_id": "mrw_02_specimen_source_or_quality_missing_v0",
+      "source_fixture_id": "msrf_02_specimen_source_or_quality_missing_v0",
+      "source_checklist_row_id": "asq_02_specimen_source_or_quality_missing",
+      "public_processing_allowed": true,
+      "terminal_state_id": "mrsms_05_metadata_only_public_terminal",
+      "trace_state_ids": [
+        "mrsms_00_refused_output_received",
+        "mrsms_01_route_validated_refusal_only",
+        "mrsms_02_wrapper_metadata_assembled",
+        "mrsms_03_public_refusal_wrapper_ready",
+        "mrsms_05_metadata_only_public_terminal"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "trace_boundary": "refusal-wrapper-metadata-only",
+      "no_interpretive_text": true,
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_output_id": "mro_03_timepoint_alignment_missing_v0",
+      "source_route_id": "mror_03_timepoint_alignment_missing_v0",
+      "wrapper_record_id": "mrw_03_timepoint_alignment_missing_v0",
+      "source_fixture_id": "msrf_03_timepoint_alignment_missing_v0",
+      "source_checklist_row_id": "asq_03_timepoint_alignment_missing",
+      "public_processing_allowed": true,
+      "terminal_state_id": "mrsms_05_metadata_only_public_terminal",
+      "trace_state_ids": [
+        "mrsms_00_refused_output_received",
+        "mrsms_01_route_validated_refusal_only",
+        "mrsms_02_wrapper_metadata_assembled",
+        "mrsms_03_public_refusal_wrapper_ready",
+        "mrsms_05_metadata_only_public_terminal"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "trace_boundary": "refusal-wrapper-metadata-only",
+      "no_interpretive_text": true,
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_output_id": "mro_04_paired_modality_context_missing_v0",
+      "source_route_id": "mror_04_paired_modality_context_missing_v0",
+      "wrapper_record_id": "mrw_04_paired_modality_context_missing_v0",
+      "source_fixture_id": "msrf_04_paired_modality_context_missing_v0",
+      "source_checklist_row_id": "asq_04_paired_modality_context_missing",
+      "public_processing_allowed": true,
+      "terminal_state_id": "mrsms_05_metadata_only_public_terminal",
+      "trace_state_ids": [
+        "mrsms_00_refused_output_received",
+        "mrsms_01_route_validated_refusal_only",
+        "mrsms_02_wrapper_metadata_assembled",
+        "mrsms_03_public_refusal_wrapper_ready",
+        "mrsms_05_metadata_only_public_terminal"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "trace_boundary": "refusal-wrapper-metadata-only",
+      "no_interpretive_text": true,
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_output_id": "mro_05_imaging_criteria_missing_v0",
+      "source_route_id": "mror_05_imaging_criteria_missing_v0",
+      "wrapper_record_id": "mrw_05_imaging_criteria_missing_v0",
+      "source_fixture_id": "msrf_05_imaging_criteria_missing_v0",
+      "source_checklist_row_id": "asq_05_imaging_criteria_missing",
+      "public_processing_allowed": true,
+      "terminal_state_id": "mrsms_05_metadata_only_public_terminal",
+      "trace_state_ids": [
+        "mrsms_00_refused_output_received",
+        "mrsms_01_route_validated_refusal_only",
+        "mrsms_02_wrapper_metadata_assembled",
+        "mrsms_03_public_refusal_wrapper_ready",
+        "mrsms_05_metadata_only_public_terminal"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "trace_boundary": "refusal-wrapper-metadata-only",
+      "no_interpretive_text": true,
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_output_id": "mro_06_spatial_site_sampling_missing_v0",
+      "source_route_id": "mror_06_spatial_site_sampling_missing_v0",
+      "wrapper_record_id": "mrw_06_spatial_site_sampling_missing_v0",
+      "source_fixture_id": "msrf_06_spatial_site_sampling_missing_v0",
+      "source_checklist_row_id": "asq_06_spatial_site_sampling_missing",
+      "public_processing_allowed": true,
+      "terminal_state_id": "mrsms_05_metadata_only_public_terminal",
+      "trace_state_ids": [
+        "mrsms_00_refused_output_received",
+        "mrsms_01_route_validated_refusal_only",
+        "mrsms_02_wrapper_metadata_assembled",
+        "mrsms_03_public_refusal_wrapper_ready",
+        "mrsms_05_metadata_only_public_terminal"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "trace_boundary": "refusal-wrapper-metadata-only",
+      "no_interpretive_text": true,
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_output_id": "mro_07_host_context_mislabeled_v0",
+      "source_route_id": "mror_07_host_context_mislabeled_v0",
+      "wrapper_record_id": "mrw_07_host_context_mislabeled_v0",
+      "source_fixture_id": "msrf_07_host_context_mislabeled_v0",
+      "source_checklist_row_id": "asq_07_host_context_mislabeled_as_residual_disease",
+      "public_processing_allowed": true,
+      "terminal_state_id": "mrsms_05_metadata_only_public_terminal",
+      "trace_state_ids": [
+        "mrsms_00_refused_output_received",
+        "mrsms_01_route_validated_refusal_only",
+        "mrsms_02_wrapper_metadata_assembled",
+        "mrsms_03_public_refusal_wrapper_ready",
+        "mrsms_05_metadata_only_public_terminal"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "trace_boundary": "refusal-wrapper-metadata-only",
+      "no_interpretive_text": true,
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_output_id": "mro_08_private_or_real_quality_review_needed_v0",
+      "source_route_id": "mror_08_private_or_real_quality_review_needed_v0",
+      "wrapper_record_id": "mrw_08_private_or_real_quality_review_needed_v0",
+      "source_fixture_id": "msrf_08_private_or_real_quality_review_needed_v0",
+      "source_checklist_row_id": "asq_08_private_or_real_quality_review_needed",
+      "public_processing_allowed": false,
+      "terminal_state_id": "mrsms_06_private_or_real_review_blocker_terminal",
+      "trace_state_ids": [
+        "mrsms_00_refused_output_received",
+        "mrsms_01_route_validated_refusal_only",
+        "mrsms_02_wrapper_metadata_assembled",
+        "mrsms_04_private_or_real_review_blocker_ready",
+        "mrsms_06_private_or_real_review_blocker_terminal"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "trace_boundary": "refusal-wrapper-metadata-only",
+      "no_interpretive_text": true,
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_output_id": "mro_09_modality_collapse_attempt_v0",
+      "source_route_id": "mror_09_modality_collapse_attempt_v0",
+      "wrapper_record_id": "mrw_09_modality_collapse_attempt_v0",
+      "source_fixture_id": "msrf_09_modality_collapse_attempt_v0",
+      "source_checklist_row_id": "asq_09_modality_collapse_attempt",
+      "public_processing_allowed": true,
+      "terminal_state_id": "mrsms_05_metadata_only_public_terminal",
+      "trace_state_ids": [
+        "mrsms_00_refused_output_received",
+        "mrsms_01_route_validated_refusal_only",
+        "mrsms_02_wrapper_metadata_assembled",
+        "mrsms_03_public_refusal_wrapper_ready",
+        "mrsms_05_metadata_only_public_terminal"
+      ],
+      "blocked_downstream_uses": [
+        "assay_ranking",
+        "biopsy_interpretation",
+        "clinical_decision",
+        "cure_claim",
+        "diagnosis",
+        "endpoint_interpretation",
+        "evidence_ranking",
+        "image_interpretation",
+        "lab_validity_conclusion",
+        "modality_ranking",
+        "monitoring_guidance",
+        "mrd_interpretation",
+        "patient_matching",
+        "prognosis",
+        "publication_authorization",
+        "report_interpretation",
+        "residual_disease_comparison",
+        "treatment_guidance",
+        "trial_guidance"
+      ],
+      "trace_boundary": "refusal-wrapper-metadata-only",
+      "no_interpretive_text": true,
+      "clinical_or_prediction_output_allowed": false
+    }
+  ],
+  "blocked_transition_rules": [
+    {
+      "source_negative_fixture_id": "mrwns_00_prediction_boundary_flag_v0",
+      "unsafe_event": "Intentionally unsafe because the wrapper dry-run report claims prediction content is present.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-public-synthetic-only",
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "wrapper_report_export_blocked",
+        "model_output_reuse_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_01_clinical_boundary_missing_v0",
+      "unsafe_event": "Intentionally unsafe because a required no-advice clinical boundary label is missing.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "public_export_blocked",
+        "clinical_reuse_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_02_missing_wrapper_record_v0",
+      "unsafe_event": "Intentionally unsafe because one refused output loses its wrapper metadata record.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-record-coverage",
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "wrapper_record_export_blocked",
+        "model_output_reuse_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_03_duplicate_wrapper_record_v0",
+      "unsafe_event": "Intentionally unsafe because a refused output receives a duplicate wrapper metadata record.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-record-coverage",
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "wrapper_record_export_blocked",
+        "model_output_reuse_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_04_wrong_wrapper_id_v0",
+      "unsafe_event": "Intentionally unsafe because a wrapper record no longer targets the canonical model-output boundary wrapper.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "wrapper_reuse_blocked",
+        "model_output_reuse_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_05_unsafe_output_family_v0",
+      "unsafe_event": "Intentionally unsafe because a refused MRD wrapper record is moved to a different output family.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "prediction_head_reuse_blocked",
+        "model_output_reuse_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_06_clinical_output_enabled_v0",
+      "unsafe_event": "Intentionally unsafe because a wrapper record enables clinical output.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "clinical_output_blocked",
+        "patient_specific_decision_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_07_prediction_output_enabled_v0",
+      "unsafe_event": "Intentionally unsafe because a wrapper record enables prediction output.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "prediction_output_blocked",
+        "model_output_reuse_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_08_private_review_unblocked_v0",
+      "unsafe_event": "Intentionally unsafe because the private or real quality-review blocker is made publicly processable.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "private_lab_bypass_blocked",
+        "real_report_review_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_09_wrapper_boundary_expanded_v0",
+      "unsafe_event": "Intentionally unsafe because a wrapper record expands beyond refusal metadata.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "interpretive_output_blocked",
+        "model_output_reuse_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_10_blocked_downstream_use_gap_v0",
+      "unsafe_event": "Intentionally unsafe because a required blocked downstream use is removed from one wrapper record.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "mrd_interpretation_blocked",
+        "clinical_reuse_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_11_forbidden_clinical_field_v0",
+      "unsafe_event": "Intentionally unsafe because a forbidden clinical interpretation field is injected into a wrapper record.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "clinical_interpretation_blocked",
+        "patient_specific_decision_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    },
+    {
+      "source_negative_fixture_id": "mrwns_12_forbidden_ranking_field_v0",
+      "unsafe_event": "Intentionally unsafe because a forbidden ranking field is injected into a wrapper record.",
+      "blocked_terminal_state_id": "mrsms_07_unsafe_wrapper_reuse_blocked_terminal",
+      "required_detected_by": [
+        "wrapper-dry-run-preserves-refusal-boundaries"
+      ],
+      "blocked_if_not_detected": [
+        "ranking_blocked",
+        "option_ordering_blocked"
+      ],
+      "clinical_or_prediction_output_allowed": false
+    }
+  ],
+  "transition_invariants": [
+    {
+      "invariant_id": "mrsmi_00_public_synthetic_only",
+      "statement": "The state machine, traces, and transition rules use only public synthetic metadata and carry no real case payload.",
+      "enforcement": "All required data-boundary fields remain false."
+    },
+    {
+      "invariant_id": "mrsmi_01_state_coverage_complete",
+      "statement": "All required wrapper refusal states are explicit.",
+      "enforcement": "The checker requires eight state IDs."
+    },
+    {
+      "invariant_id": "mrsmi_02_transition_terminal_safety",
+      "statement": "Every allowed path terminates in metadata-only public output, private-review blocker output, or unsafe-reuse blocker output.",
+      "enforcement": "The checker requires all transitions to target known safe states and emit no output."
+    },
+    {
+      "invariant_id": "mrsmi_03_wrapper_trace_coverage",
+      "statement": "Every wrapper dry-run record has exactly one state trace.",
+      "enforcement": "The checker matches traces to the ten dry-run wrapper records."
+    },
+    {
+      "invariant_id": "mrsmi_04_private_review_routes_block_public_processing",
+      "statement": "Private or real quality-review rows terminate in the private-review blocker state.",
+      "enforcement": "The checker requires the private row to keep public_processing_allowed false."
+    },
+    {
+      "invariant_id": "mrsmi_05_negative_fixtures_route_to_blocked_terminal",
+      "statement": "Every wrapper negative safety fixture routes to the unsafe wrapper reuse blocked terminal.",
+      "enforcement": "The checker requires all thirteen negative fixtures in blocked_transition_rules."
+    },
+    {
+      "invariant_id": "mrsmi_06_forbidden_outputs_absent",
+      "statement": "No transition, state, or trace can contain clinical, prediction, ranking, recommendation, real-review, publication, or patient-specific output fields.",
+      "enforcement": "The checker scans forbidden public wrapper keys and unsafe permission fields."
+    },
+    {
+      "invariant_id": "mrsmi_07_human_gate_preserved",
+      "statement": "The state machine does not clear expert-validation, private-lab, clinical, model-governance, publication, or outreach gates.",
+      "enforcement": "The handoff keeps the machine-representation expert-validation human-authorization blocker active."
+    }
+  ],
+  "blocked_output_manifest": [
+    "assay_ranking",
+    "biopsy_interpretation",
+    "clinical_decision",
+    "cure_claim",
+    "diagnosis",
+    "endpoint_interpretation",
+    "evidence_ranking",
+    "image_interpretation",
+    "lab_validity_conclusion",
+    "modality_ranking",
+    "monitoring_guidance",
+    "mrd_interpretation",
+    "patient_matching",
+    "prognosis",
+    "publication_authorization",
+    "report_interpretation",
+    "residual_disease_comparison",
+    "treatment_guidance",
+    "trial_guidance"
+  ],
+  "handoff": {
+    "completed_phase": "measurement-refusal-wrapper-state-machine-v0",
+    "target_completed_phase": "measurement-refusal-wrapper-negative-safety-fixtures-v0",
+    "next_no_outreach_successor_if_selected": "measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0",
+    "human_gate_state": "machine-representation-expert-validation-human-authorization-blocker-v0",
+    "blocked_actions": [
+      "expert-validation execution",
+      "issue operations",
+      "outreach",
+      "response intake",
+      "real-report quality review",
+      "private-lab work",
+      "clinical interpretation",
+      "model-governance clearance",
+      "publication authorization",
+      "claim upgrade"
+    ],
+    "summary": "Wrapper state machine complete for synthetic refusal metadata only; next no-outreach successor is transition negative safety fixtures. Expert validation, outreach, private lab, clinical interpretation, model governance, publication, and claim upgrades remain blocked."
+  }
+}

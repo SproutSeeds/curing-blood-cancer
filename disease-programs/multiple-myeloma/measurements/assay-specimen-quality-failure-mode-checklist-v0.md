@@ -124,6 +124,8 @@ The follow-on [Measurement Refusal Wrapper Integration Dry Run v0](measurement-r
 is complete as wrapper metadata only.
 The follow-on [Measurement Refusal Wrapper Negative Safety Fixtures v0](measurement-refusal-wrapper-negative-safety-fixtures-v0.md)
 are complete as synthetic fail-closed checks for unsafe wrapper mutations.
+The follow-on [Measurement Refusal Wrapper State Machine v0](measurement-refusal-wrapper-state-machine-v0.md)
+is complete as synthetic wrapper transition metadata.
 
 ## Handoff State
 
@@ -137,7 +139,7 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-state-machine-v0`.
+`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`.
 
 ## Public Safety Check
 

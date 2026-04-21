@@ -84,6 +84,8 @@ The follow-on [Measurement Refusal Validator Skeleton v0](measurement-refusal-va
 is also complete as a structural, synthetic-only report over the route table.
 The follow-on [Measurement Refusal Negative Safety Fixtures v0](measurement-refusal-negative-safety-fixtures-v0.md)
 are complete as fail-closed tests for unsafe route mutations.
+The follow-on [Measurement Refusal Wrapper State Machine v0](measurement-refusal-wrapper-state-machine-v0.md)
+is complete as synthetic wrapper transition metadata.
 
 ORP should keep the active blocker at
 `machine-representation-expert-validation-human-authorization-blocker-v0`.
@@ -92,11 +94,12 @@ intake, private-lab work, model validation, clinical interpretation, claim
 upgrade, publication, and real quality review remain blocked.
 
 The next no-outreach public-source successor, if selected, is
-`measurement-refusal-wrapper-state-machine-v0`, after
+`measurement-refusal-wrapper-state-machine-negative-safety-fixtures-v0`, after
 `measurement-refusal-wrapper-integration-dry-run-v0` mapped refused measurement
 outputs to wrapper metadata only and
 `measurement-refusal-wrapper-negative-safety-fixtures-v0` proved unsafe wrapper
-mutations fail closed.
+mutations fail closed, and `measurement-refusal-wrapper-state-machine-v0` made
+safe wrapper terminal transitions explicit.
 
 ## Public Safety Check
 
